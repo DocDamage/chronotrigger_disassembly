@@ -1,0 +1,15 @@
+$00:0500  NMI_RamTrampoline
+$00:0504  IRQ_RamTrampoline
+$00:FF00  Reset_Stub_Emu
+$FD:C000  HwInit_Bootstrap
+$C0:000E  MainBoot_Stage1
+$C0:00F4  EngineInit_GroupA
+$C0:0B4E  DisableDisplayAndInterrupts
+$C0:0B64  Install_NMI_RamTrampoline
+$C0:0B75  Install_IRQ_RamTrampoline
+$C0:0B86  Init_DirectPageState
+$C0:2DF1  WramZeroFill_M7Result_DMA7
+$C0:2E1F  BootErrorColorHang
+$C0:B1B2  Process_VramUploadQueue
+$C0:EA63  Native_NMI_Handler_Entry
+$C0:ECCC  Native_IRQ_Handler_Entry

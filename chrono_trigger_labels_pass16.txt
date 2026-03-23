@@ -1,0 +1,16 @@
+$C0:B2A0  Traverse_SlotBucketsDescending_AndBuildOamShadow
+$C0:B309  Emit_CurrentSlotOam_ByRenderClass
+$C0:B701  Prepare_CurrentSlotRenderState_ByClass_AndSkipIfHidden
+$dp:DB    OamShadowCursor_A
+$dp:DD    OamShadowCursor_B
+$dp:DF    OamShadowCursor_C
+$dp:7B    OamShadowPrevEnd_A
+$dp:7D    OamShadowPrevEnd_B
+$dp:7F    OamShadowPrevEnd_C
+$dp:81    OamShadowHiCursor_A
+$dp:85    OamShadowHiCursor_B
+$dp:89    OamShadowHiCursor_C
+$1201,X   SlotRenderClassFlags
+$1B00,X   SlotRenderPrepState
+$7F:4F00  SlotScreenSpritePlacementTable
+$7F:4BC0  MetaspriteTemplateTable

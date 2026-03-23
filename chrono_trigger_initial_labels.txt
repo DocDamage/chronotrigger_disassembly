@@ -1,0 +1,6 @@
+$00:FF00  Reset_Stub_Emu
+$FD:C000  HwInit_Bootstrap
+$C0:000E  MainBoot_Stage1
+$00:FF10  Native_NMI_VectorStub
+$00:FF14  Native_IRQ_VectorStub
+$00:FF18  Native_BRK_COP_VectorStub
