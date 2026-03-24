@@ -1,0 +1,245 @@
+# Dispatcher / Family Report
+
+- This report is the fast lane for veneers, packet families, and opcode dispatchers.
+- It combines the newest label nouns with hot xref-cache call counts where exact single-address targets already exist.
+
+- `C7:037B..C7:04B0` pass 95 [strong] :: **ct_c7_emit_staged_special_path_blocks_from_1f80_with_apu_command_02**
+  - xref cache: calls=0, word_refs=0
+  - Seeds exact pointer `12 = 1F80`. Walks candidate strip `1F00..1F1E` and writes paired output words into `1F80..`. Uses exact long table `C7:0BA4` for the paired-output build when entries are already present in live `1E20..`. Sends an exact command-`0x02` block header through APU ports: `$2143 = 0x1E` `$2142 = 0x80` `$2141 = 0x02` Streams the exact staged `1F80..1FBF` block. Sends two more exact command-`0x02` blocks rooted at: `1F40..` using exact table `C7:0C20` `1FC0..` using exact table `C7:0C9C` Repeatedly updates exact local byte `84` through `JSR 09DA` and normalizes it back to `0xE0`. Strongest safe reading: staged command-`0x02` emit phase of the negative-`1E05` special sound-command path.
+- `C7:01A1..C7:0216` pass 95 [strong] :: **ct_c7_negative_1e05_special_path_rebuild_candidate_slot_strips_at_1f00_and_1f20_before_reconcile**
+  - xref cache: calls=0, word_refs=0
+  - Validates exact selector byte `1E01` against exact long value at `C7:0AE9`. Calls exact local helpers `0734` and `0A39`. Copies `1E01 -> 1E05`. Clears two exact 0x20-byte strips through the loop over `1EFE..1F1E` and `1F1E..1F3E`. Scans backward through exact live strip `1E20..1E3E` to seed the last-active index in `0C`. Seeds exact staging pointers: `12 = 1F00` `14 = 1F20` Walks the exact long table rooted at `C7:0E11`: writes nonzero entries into `[12]` / `1F00..` writes entries not already present in `1E20..1E3E` into `[14]` / `1F20..` If `1F20 == 0`, jumps directly to `037B`. Strongest safe reading: candidate rebuild / staging gate for the negative-`1E05` special sound-command path.
+- `C2:5D1D..C2:5D55` pass 95 [strong] :: **ct_c2_scan_active_long_stream_for_exact_ef_or_00_sentinels_with_bounded_lengths**
+  - xref cache: calls=0, word_refs=0
+  - Contains three exact bounded scanners over `[0237],Y`: scan for `0xEF` up to `Y == 0x000A` scan for `0xEF` up to `Y == 0x000B` scan for `0x00` up to `Y == 0x0005` Each returns the exact `Y` position. Strongest safe reading: local bounded sentinel-scan helper cluster used to derive inner counts from the active long stream.
+- `C2:5C77..C2:5CBF` pass 95 [strong] :: **ct_c2_consume_terminal_downstream_long_stream_family_and_self_loop_while_both_counters_remain_live**
+  - xref cache: calls=0, word_refs=0
+  - Reuses the same exact long pointer `[0237]`, exact `0235` materialization, exact `JSR $5DC4`, and exact decrement pair `023A` / `0213`. Dispatches through the exact four-entry jump table at `5CAA`. Exact outcomes now frozen: case 0 -> clears `0230`, forces `0215 = 0x10`, returns case 1 -> forces `0215 = 0x10`, returns case 2 -> clears `0230`, jumps back to `58B2` case 3 -> branches back into `5C77` itself Strongest safe reading: terminal self-looping downstream family in the chained C2 long-stream stage.
+- `C2:5C3E..C2:5C76` pass 95 [strong] :: **ct_c2_consume_second_downstream_long_stream_family_with_exact_c2d4_rebase_before_shared_materializer**
+  - xref cache: calls=0, word_refs=0
+  - Consumes the next entry from the same exact long pointer `[0237]`. Adds exact base `C2:D4` before storing the word into `0235`. Calls the same exact shared helper `JSR $5DC4`. Decrements the same exact counters `023A` and `0213`. Dispatches through the exact four-entry jump table at `5C61`. Exact outcomes now frozen: case 0 -> clears `0230`, forces `0215 = 0x10`, returns case 1 -> forces `0215 = 0x10`, returns case 2 -> clears `0230`, jumps back to `58B2` case 3 -> branches directly into the third family at `5C77` Strongest safe reading: second downstream long-stream family with an exact `+C2D4` rebasing step before the shared materializer runs.
+- `C2:5BF5..C2:5C3D` pass 95 [strong] :: **ct_c2_consume_first_downstream_long_stream_family_into_0235_then_route_by_023a_0213_exhaustion**
+  - xref cache: calls=0, word_refs=0
+  - Consumes the active long-pointer stream through exact direct-page indirect-long reads from `[0237]`. Advances the live pointer by exact `INC 0237` steps. Materializes the consumed entry into exact local word `0235`. Calls exact shared helper `JSR $5DC4`. Decrements exact counters `023A` and `0213`. Reduces their post-decrement zero/nonzero state to a four-way indexed jump through the exact table at `5C28`. Exact four-way outcomes now frozen: both exhausted -> force `0215 = 0x10`, return `023A` remains but `0213` exhausted -> store the live tail state directly into `0215`, return `023A` exhausted but `0213` remains -> jump back to `58B2` both remain -> enter the next downstream family at `5C3C/5C3E` Strongest safe reading: first downstream long-stream family behind `58B2`, routing by the exact exhaustion state of `023A` and `0213`.
+- `7E:0237..7E:023A` pass 95 [provisional] :: **ct_c2_active_long_stream_cursor_and_inner_counter_family_for_downstream_chained_handlers**
+  - xref cache: calls=0, word_refs=0
+  - Pass 94 already proved `58B2` seeds this family from the exact table rooted at `DE:FA00`. Pass 95 proves more of the exact consumer contract: `0237..0239` is the active long stream cursor consumed by `5BF5 / 5C3E / 5C77` `023A` is decremented by all three downstream families and participates in the exact four-way tail routing Strongest safe reading: active long stream cursor + inner counter family for the chained downstream C2 handlers.
+- `00:1F00..00:1FC0` pass 95 [provisional] :: **ct_c7_negative_1e05_special_path_candidate_unmatched_and_emit_staging_strips**
+  - xref cache: calls=0, word_refs=0
+  - Pass 95 proves this low-bank workspace is not generic scratch. Exact proven roles now include: `1F00..1F1E` = candidate strip rebuilt from exact table `C7:0E11` `1F20..1F3E` = unmatched/new candidate strip not already present in live `1E20..` `1F80..1FBF` = staged paired output block later sent with exact APU command `0x02` `1FC0..` = later exact command-`0x02` table-backed emit source Strongest safe reading: candidate/unmatched/emit staging workspace for the negative-`1E05` special sound-command path.  I have **not** frozen the final gameplay-facing noun of the broader C2 stream language behind `58B2 / 5BF5 / 5C3E / 5C77`. I have **not** frozen the exact semantic meaning of helpers `0734`, `0A39`, `0655`, and the later `04B1..061B` tail of the `01A1` path. I have **not** returned to the first exact clean-code external reader of `CE0F` yet. I **have** crossed an important structural threshold: the `01A1` side is no longer honestly describable as just “the active branch of the early C7 gate”.
+- `C7:0AD9..C7:0AE8` pass 94 [strong] :: **ct_c7_packet_opcode_10_17_gate_table_to_active_handler_or_common_exit**
+  - xref cache: calls=0, word_refs=0
+  - Exact eight-entry 16-bit table for packet opcodes `0x10..0x17`: `0x10 -> 01A1` `0x11 -> 01A1` `0x12 -> 0192` `0x13 -> 0192` `0x14 -> 01A1` `0x15 -> 01A1` `0x16 -> 0192` `0x17 -> 0192` Strongest safe reading: exact two-target early gate for the `0x10..0x17` family, splitting to either the active handler (`01A1`) or the immediate common exit (`0192`).
+- `C7:08E3..C7:09D8` pass 94 [strong] :: **ct_c7_handle_opcode_70_as_apu_handshake_and_triplet_packet_sender**
+  - xref cache: calls=0, word_refs=0
+  - Exact opening behavior: reads `1E01` compares against the latched pair at `1E10 / 1E11` Exact hardware-facing behavior: performs handshake traffic through `2140` using `0xFE` later uses exact `2140` handshake/reset traffic with `0xE0` performs repeated command/data triplets through `2141 / 2142 / 2143` selects exact command byte `0x05` when `1E00 == 0x70` otherwise uses exact command byte `0x03` on the shared internal path Exact table-backed send behavior: sources repeated triplet payloads from exact tables rooted at `C7:430B` and `C7:5B0D` clears exact local latch byte `F3` before returning in the table-send paths Strongest safe reading: exact opcode-`0x70` APU handshake / packet-send handler behind the `1E00` sound-command dispatcher.
+- `C7:0755..C7:08E2` pass 94 [strong] :: **ct_c7_handle_opcode_71_as_table_driven_apu_triplet_burst_sender**
+  - xref cache: calls=0, word_refs=0
+  - Exact opening behavior: checks exact per-slot/state byte `1E20` if that state is active and `1E01 == 0`, exits through `0192` Exact setup behavior: computes `(1E01 - 1) * 3` indexes the exact table rooted at `C7:0AEA` Exact hardware-facing behavior: performs repeated three-byte burst writes through `2141 / 2142 / 2143` issues exact fixed follow-up command writes including `2141 = 0x05` later issues exact `2141 = 0x02` with paired `2142/2143` values Exact tail behavior: caches the current `1E01` value into the per-slot strip at `1E20 + X` exits through the common cleanup path at `0192` Strongest safe reading: exact opcode-`0x71` table-driven APU burst sender / uploader over the `1E00..` sound-command workspace.
+- `C7:0192..C7:01A0` pass 94 [strong] :: **ct_c7_common_dispatch_exit_and_register_restore_epilogue**
+  - xref cache: calls=0, word_refs=0
+  - Exact body: `SEP #$20` `STZ $00` `REP #$20` `REP #$10` restores `Y`, `X`, `A`, flags, direct page, and bank returns with `RTL` Strongest safe reading: exact common dispatcher exit / cleanup epilogue used by the low-bank C7 sound-command side.
+- `C7:0140..C7:019D` pass 94 [strong] :: **ct_c7_dispatch_1e00_sound_command_opcode_families_into_apu_port_handlers**
+  - xref cache: calls=0, word_refs=0
+  - Pass 93 already froze this range as the exact `1E00` opcode-family dispatcher. Pass 94 upgrades the subsystem noun with downstream proof: opcode `0x70` lands at `08E3`, which performs exact traffic through `2140..2143` opcode `0x71` lands at `0755`, which also performs exact repeated writes through `2141..2143` the `0x10..0x17` gate table at `0AD9` is now exact Strongest safe reading: exact low-bank **sound/APU command** opcode-family dispatcher over the `1E00..` workspace.
+- `C2:58B2..C2:5902` pass 94 [strong] :: **ct_c2_consume_next_stream_token_and_dispatch_primary_token_families**
+  - xref cache: calls=0, word_refs=0
+  - Exact opening behavior: reads the next byte through direct-indirect pointer `[0231]` increments the live stream pointer at `0231` then splits on the token value Exact family split now frozen: `token >= 0xA0` stores token into `0235` calls exact local helper `JSR $5DC4` decrements `0213` loops this path while `0213` remains nonzero then sets `0215 = 0x10` and returns `0x21 <= token < 0xA0` stores raw token into `023B` indexes the exact long table rooted at `DE:FA00` seeds `0237/0239/023A` sets `0230 = 0x01` jumps directly into `5BF5` `token < 0x21` dispatches through the exact local jump table rooted at `5903` Strongest safe reading: exact primary stream-token consumer / dispatcher behind the `57DF -> 5823` chain.
+- `C2:584A..C2:58B1` pass 94 [strong] :: **ct_c2_dispatch_0215_substate_through_micro_jump_gate_before_main_token_family_split**
+  - xref cache: calls=0, word_refs=0
+  - Exact opening body: loads `0215` doubles it uses exact indexed indirect jump `JMP ($5851,X)` Therefore this range is a **pure substate jump gate**, not generic arithmetic. The table collapses to a small exact set of entry bodies: `5893` = `SEC ; RTS` `5895` = immediate clear-carry continue path via `BRA` into `CLC ; RTS` `5897` / `589B` = two entry points into the same seed/update body that: seed `0234` with `08` or `14` clear `0217` subtract `08` from `0234` when `(0214 & 0x0F) == 0x02` return with clear carry Strongest safe reading: exact `0215`-driven pre-dispatch micro-gate that either forces early exit by carry or prepares local state and returns “continue”.
+- `00:1E00..00:1E10` pass 94 [provisional] :: **ct_c7_low_bank_sound_apu_command_packet_workspace**
+  - xref cache: calls=0, word_refs=0
+  - Pass 93 already proved this workspace is the live header family consumed by `C7:0140`. Pass 94 upgrades the noun with hardware-facing proof from `0755` and `08E3`. Exact proven fields now include: `1E00` = sound/APU command opcode / opcode-family selector `1E01` = active selector / payload byte consumed by the `0x70` and `0x71` handlers `1E10 / 1E11` = exact latch pair consumed by the `0x70` handshake path Strongest safe reading: low-bank sound/APU command packet workspace consumed by the `C7:0140` dispatcher and its exact downstream handlers.  I have **not** frozen the final gameplay-facing noun of the broader C2 stream language behind `58B2 / 5BF5 / 5C3E / 5C77`. I have **not** frozen the final user-facing meaning of each opcode family in the C7 sound/APU command set. I have **not** returned to the first exact clean-code external reader of `CE0F` yet. I **have** crossed an important noun threshold: the C7 packet side is no longer honestly describable as “generic low-bank packet machinery”.
+- `C7:0140..C7:019D` pass 93 [strong] :: **ct_c7_dispatch_1e00_packet_opcode_families_into_low_bank_handlers**
+  - xref cache: calls=0, word_refs=0
+  - Exact prologue saves `B`, `D`, flags, `A`, `X`, and `Y`. Sets exact direct page to `D = 0x1E00`. Forces `DB = 0x00`. Reads exact packet header bytes from the `1E00..` workspace, including `1E00` and `1E05`. If `1E05` is negative, diverts into the special path at `01A1`. If `1E00 == 00`, exits immediately. Exact opcode-family split from `1E00` is now frozen: `0x10..0x17` -> indexed indirect jump through table `0AD9` `0x18..0x2F` -> `JMP $061C` `0x30..0x3F` -> `JMP $071D` `0x70` -> `JMP $08E3` `0x71` -> `JMP $0755` Unsupported / finished paths clear exact byte `1E00` before restoring state and returning with `RTL`. Strongest safe reading: exact low-bank packet opcode-family dispatcher over the `1E00..` command packet workspace.
+- `C7:0004..C7:0006` pass 93 [strong] :: **ct_c7_branch_to_0140_low_bank_packet_dispatcher_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body: `JMP $0140`. Lands at exact target `C7:0140`. Strongest safe reading: veneer for the low-bank packet opcode-family dispatcher behind all the `1E00..` command-packet submit helpers.
+- `C2:5823..C2:5841` pass 93 [strong] :: **ct_c2_dispatch_prepared_stream_state_into_four_handler_families**
+  - xref cache: calls=0, word_refs=0
+  - Exact prologue saves flags and direct page, then sets `D = 0x0200`. Calls exact local helper `JSR $584A`. If that helper returns carry set, exits immediately. Otherwise reads exact local mode/state byte `0230`. Doubles that byte and dispatches through the exact four-entry table at `5842`: `58B2` `5BF5` `5C3E` `5C77` Clears `A` on the common exit path, restores state, then returns with `RTL`. Strongest safe reading: exact token/stream dispatch stage over the state seeded by `57DF`, with four concrete downstream handler families.
+- `C2:57DF..C2:5822` pass 93 [strong] :: **ct_c2_init_stream_state_from_020c_0214_packet_workspace**
+  - xref cache: calls=0, word_refs=0
+  - Exact prologue saves flags and direct page, then sets `D = 0x0200`. Treats `020C` as an index/selector: masks it to `00FF` doubles it uses it as `Y` Reads a **16-bit entry** through exact long-indirect pointer `[020D],Y` and stores that into `0231`. Copies exact byte `020F -> 0233`. Therefore proves the live `020D..020F` packet family is consumed as a long pointer base for the selected stream/table entry. Seeds exact local state: `0230 = 00` `0234 = 00` or `08` depending on exact comparison of `0214` with `02` if `0214` is negative, forcibly clears `0234` `0215 = 04` `023D = 0200` `023F = 00` `0217 = 00` Returns immediately with `RTL` after the seed. Strongest safe reading: exact stream-state initializer behind the `020C..0214` packet/workspace family used by `CD:025E` before `C2:0009` runs.
+- `C2:0009..C2:000B` pass 93 [strong] :: **ct_c2_branch_to_5823_stream_token_dispatch_stage_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body: `JMP $5823`. Lands at exact target `C2:5823`. Strongest safe reading: veneer for the token/stream dispatch stage immediately following `C2:0003` in the `CD:025E` follow-up chain.
+- `C2:0003..C2:0005` pass 93 [strong] :: **ct_c2_branch_to_57df_stream_state_initializer_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body: `JMP $57DF`. Lands at exact target `C2:57DF`. Strongest safe reading: veneer for the stream-state initializer behind the `CD:025E` dual-call tail.
+- `7E:020C..7E:0214` pass 93 [provisional] :: **ct_cd_shared_c2_dual_call_packet_workspace_seeded_by_025e**
+  - xref cache: calls=0, word_refs=0
+  - Pass 92 proved `CD:025E..0295` seeds this exact packet/workspace family before calling `C2:0003` and `C2:0009`. Pass 93 now proves more of the exact consumer contract: `020C` is used as a masked/doubled selector index `020D..020F` are consumed as a long pointer base by `C2:57DF` `0214` controls the seed of exact local byte `0234` Strongest safe reading: shared C2 dual-call packet workspace whose selector/pointer family is consumed directly by the `57DF -> 5823` chain.
+- `00:1E00..00:1E05` pass 93 [provisional] :: **ct_c7_low_bank_command_packet_header_workspace**
+  - xref cache: calls=0, word_refs=0
+  - Pass 93 proves `C7:0140..019D` sets `D = 0x1E00` and consumes exact header bytes from this low-bank workspace. Exact proven fields now include: `1E00` = packet opcode / opcode family selector `1E05` = signed control byte that can divert into the special path at `01A1` Strongest safe reading: low-bank command-packet header workspace consumed by the `C7:0004 -> 0140` dispatcher.  I have **not** frozen the final high-level noun of the downstream `58B2 / 5BF5 / 5C3E / 5C77` handler families. I have **not** frozen the final gameplay-facing noun of the broader pass-88/89 lane+raster workspace. I have **not** returned to the first exact clean-code external reader of `CE0F` yet. I do now have enough exact structure to stop calling `C2:0003`, `C2:0009`, and `C7:0004` generic mystery addresses.
+- `CD:025E..CD:0295` pass 92 [strong] :: **ct_cd_seed_020c_0214_call_packet_clear_b400_b7ff_and_run_c2_dual_call_tail**
+  - xref cache: calls=0, word_refs=0
+  - Entry writes exact local packet/workspace fields: caller `A` into `020C` clears `CCED` clears `02A1` seeds `0210 = B400` seeds `0212 = 007E` clears `0214` Then runs exact clear helper `JSR $0239`. Then calls exact external helper `JSL C2:0003`. Then seeds exact `0213 = 0x6040`. Then calls exact external helper `JSL C2:0009`. Then runs exact local tail `JSR $3E7D ; JSR $3E7D ; LDA #$0010 ; STA $CCEC ; INC $CA24 ; RTS`. Clean in-bank shared callsites include `CD:01D2`, `CD:0222`, `CD:02AD`, `CD:02FF`, and `CD:032F`. Strongest safe reading: shared selector/workspace setup helper for the `020C..0214` packet plus the `0239 -> C2:0003 -> C2:0009` follow-up chain.
+- `C0:1BE6..C0:1CFB` pass 92 [strong] :: **ct_c0_submit_gated_multi_packet_c70004_sequence_by_7f01ec_and_2a1f_bits**
+  - xref cache: calls=0, word_refs=0
+  - Saves `B` and `D`, sets `D = 0x0100`, and sets `DB = 0x00`. Reads exact byte `7F:01EC` and only treats exact value `1` specially. The alternate long-branch packet body at `1C90` is selected **only when** `7F:01EC == 1` and `2A1F.bit5 == 0`. Otherwise control continues to the default path at `1C09`. The default path branches on exact mask `2A1F.bit6`. If `2A1F.bit6 != 0`, it collapses to the exact one-packet path: `1E01 = 0x00` `1E00 = 0x70` `JSL C7:0004` If `2A1F.bit6 == 0`, the default path submits the following exact 5-packet sequence through repeated `JSL C7:0004`: The alternate path at `1C90` preserves the same surrounding structure but changes the second packet to: `1E01=26, 1E00=14` Restores `D` and `B`, then returns with `RTL`. Strongest safe reading: gated multi-packet `C7:0004` submit helper with one exact alternate second-packet path selected by `7F:01EC` and `2A1F.bit5`, plus the same `2A1F.bit6` one-packet collapse already seen at `1BAB`.
+- `C0:000B..C0:000D` pass 92 [strong] :: **ct_c0_branch_long_to_1be6_gated_multi_packet_c70004_submitter_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body: `BRL $1BD8`. Lands at exact target `C0:1BE6`. Strongest safe reading: veneer for the sibling gated multi-packet submit helper in the same low-bank packet/submit cluster as `0008 -> 1BAB`.
+- `7F:01EC` pass 92 [provisional] :: **ct_c0_multi_packet_submit_special_case_selector_byte**
+  - xref cache: calls=0, word_refs=0
+  - Pass 92 proves `C0:1BE6..1CFB` only treats exact value `1` specially. That exact special case then still requires `2A1F.bit5 == 0` before selecting the alternate packet body at `1C90`. Strongest safe reading: special-case selector byte for the sibling gated multi-packet submit helper.
+- `7E:29AE` pass 92 [provisional] :: **ct_c0_multi_packet_submit_default_second_packet_byte**
+  - xref cache: calls=0, word_refs=0
+  - Pass 92 proves the default `bit6 == 0` packet sequence at `C0:1BE6` reads this exact byte into `1E01` before submitting packet `1E00 = 0x11`. Strongest safe reading: live byte consumed as the default second-packet payload in the sibling multi-packet submit path.  I have **not** frozen the final engine-facing noun of `C2:0003`. I have **not** frozen the final engine-facing noun of `C2:0009`. I have **not** frozen the final engine-facing noun of `C7:0004`; pass 91 + pass 92 now freeze multiple exact local packet builders and submit sequences around it, not the final subsystem name. I have **not** frozen the final gameplay-facing noun of the broader pass-88/89 lane+raster workspace. I have **not** returned to the first exact clean-code external reader of `CE0F` yet.
+- `CD:0235..CD:0238` pass 91 [strong] :: **ct_cd_clear_b400_b7ff_eight_strip_workspace_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body: `JSR $0239 ; RTL`. Strongest safe reading: veneer for the exact `B400..B7FF` clear helper immediately upstream of the final low-bank follow-up stage.
+- `C0:1BAB..C0:1BE5` pass 91 [strong] :: **ct_c0_submit_one_of_two_c70004_command_packets_by_2a1f_bit6**
+  - xref cache: calls=0, word_refs=0
+  - Saves `B` and `D`, sets `D = 0x0100`, and sets `DB = 0x00`. Reads `7E:2A1F` and branches on exact mask `0x40`. If `2A1F.bit6 == 0`: writes `1E10 = 0xFF` writes `1E01` from exact direct-page byte `$FA` after `D = 0x0100` writes `1E00 = 0x14` then calls `JSL C7:0004` If `2A1F.bit6 != 0`: writes `1E01 = 0x01` writes `1E00 = 0x70` then calls `JSL C7:0004` Restores `D` and `B`, then returns with `RTL`. Strongest safe reading: conditional one-packet `C7:0004` submit helper behind `C0:0008`.
+- `C0:0008..C0:000A` pass 91 [strong] :: **ct_c0_branch_long_to_1bab_conditional_c70004_packet_submitter_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body: `BRL $1BA0`. Lands at exact target `C0:1BAB`. Strongest safe reading: veneer for the conditional packet-submit helper behind the pass-90 follow-up tail.
+- `D1:F47C..D1:F4BF` pass 90 [strong] :: **ct_d1_stage_negated_masked_pair_into_ca5a_ca5c_from_stream_and_c0fe00_lookup**
+  - xref cache: calls=0, word_refs=0
+  - Reads two exact stream-side bytes through `[$40]` / `[$40],Y`. Uses `D1:F474` to fetch lookup bytes from `C0:FE00` indexed by `A + 7C`. Applies `AND` with the saved stream byte, then adds the corresponding base stream byte. Stores exact negated 16-bit results into `CA5A,X` and `CA5C,X` for the runtime slot selected by `43`. Advances the stream pointer by 2 before returning. Strongest safe reading: masked-pair staging helper for the `CA5A / CA5C` center-offset seed words.
+- `7E:C030..7E:C14F` pass 90 [provisional] :: **ct_d1_local_quartet_table_family_upstream_of_cd0235_c00008**
+  - xref cache: calls=0, word_refs=0
+  - Pass 90 proves `D1:F83D..F8EA` clears and seeds exact quartets at `C030/C031`, `C090/C091`, `C0F0/C0F1`, and `C120/C121`, plus the exact tail bytes near `C0EB..C0EE` and `C14B..C14E`. `D1:F331..F410` calls this helper immediately before `CD:0235` and `C0:0008`. Strongest safe reading: local quartet-table family immediately upstream of the final follow-up tail.
+- `7E:C15D..7E:C4AB` pass 89 [provisional] :: **ct_d1_primary_curve_written_lane_family_upstream_of_raster_target_workspace**
+  - xref cache: calls=0, word_refs=0
+  - Pass 89 proves `D1:EEC5..F107` writes four exact primary lanes rooted at `C15D / C15F / C161 / C163` over a `0x350` span. Those lanes sit immediately upstream of the pass-88 raster-target workspace and are part of the same local D1-side write pipeline. Final gameplay-facing noun still open.
+- `D1:F9AF..D1:F9E6` pass 87 [strong] :: **ct_d1_load_cd0d_fourpoint_bundle_set_cc64_target_selector_sort_and_dispatch_column_rasterizer**
+  - xref cache: calls=0, word_refs=0
+  - Saves `X` into `CC64`, loads `CD0D..CD1B` into `12..19`, calls `F8EB`, temporarily sets `DB=00`, then calls `F9E7`. Strongest safe reading: wrapper/dispatcher for rasterizing one four-point work bundle into the selected column target family.
+- `CD:2A51..CD:2A89` pass 81 [strong] :: **ct_cd_auxiliary_token_80_extended_subopcode_ptr_table_29_live_entries**
+  - xref cache: calls=0, word_refs=0
+  - The table reached from token `0x80` does **not** expose a clean 32-entry live namespace. Straight ROM parsing gives live sub-op targets for `0x00..0x1C` only. After that, the bytes are ordinary code, not more valid pointer entries. Strongest safe reading: 29-entry live extended sub-op family.
+- `CD:2A4A..CD:2A8E` pass 80 [strong] :: **ct_cd_auxiliary_token_80_extended_subopcode_dispatcher_32way**
+  - xref cache: calls=0, word_refs=0
+  - Token `0x80` reads the following stream byte, doubles it, and dispatches through the local table at `2A51`. Strongest safe reading: extended/meta command family with 32 secondary sub-opcodes.
+- `CD:1813..CD:1829` pass 80 [strong] :: **ct_cd_auxiliary_token_f2_conditional_stream_rewind_by_immediate_when_cd44_allows**
+  - xref cache: calls=0, word_refs=0
+  - Structural sibling of token `0xF6`. Uses `CD44` as the latch/gate and subtracts the immediate byte from the stream pointer when active.
+- `CD:17E5..CD:17FE` pass 80 [strong] :: **ct_cd_auxiliary_token_f6_conditional_stream_rewind_by_immediate_when_ce10_allows**
+  - xref cache: calls=0, word_refs=0
+  - Uses `CE10` as a one-shot latch/gate. If the gate condition passes, subtracts the immediate byte from the stream pointer and then clears `CE10`.
+- `CD:16A6..CD:16B4` pass 80 [strong] :: **ct_cd_dispatch_one_auxiliary_command_token_80_ff_by_low7_id**
+  - xref cache: calls=0, word_refs=0
+  - Saves the active slot base in `$43`. Advances the stream pointer by one byte. Dispatches command tokens `0x80..0xFF` through `16B5` using the token's low 7 bits.
+- `CD:1654..CD:169F` pass 80 [strong] :: **ct_cd_interpret_one_auxiliary_stream_token_and_derive_d0_tile_block_request_or_dispatch_command**
+  - xref cache: calls=0, word_refs=0
+  - Pulls one byte from the current active auxiliary runtime-slot stream. `0x7F` increments the stream pointer only. `< 0x7F` biases the token by `CA3A,X`, derives a `D0`-rooted tile-block source pointer into `CA18`, and increments `CA17`. `>= 0x80` dispatches through the command-token table at `16B5`. Strongest safe reading: one-token interpreter for the auxiliary stream VM.
+- `7E:CA3A..7E:CA49` pass 80 [provisional] :: **ct_cd_auxiliary_runtime_slot_stream_bias_or_iteration_bytes_2x16**
+  - xref cache: calls=0, word_refs=0
+  - `1654` adds `CA3A,X` to raw data-token values before deriving the `D0`-side source pointer. Token `0x86` increments `CA3A,X` per loop iteration and clears it on termination. Strongest safe reading: slot-local stream bias / iteration side-effect bytes.
+- `CD:16B5..CD:17A6` pass 79 [strong] :: **ct_cd_auxiliary_descriptor_token_dispatch_table**
+  - xref cache: calls=0, word_refs=0
+  - Large local dispatch table reached from `16A6` for command bytes `>= 0x80`. Exact handler nouns remain open, but the dispatch-table role is now settled.
+- `CD:002A..CD:002C` pass 78 [strong] :: **ct_cd_build_last_two_packed_fragment_row_sections_into_2d00_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body is `JMP $1314`. Called unconditionally from `C1:4833` with `A = 987B`.
+- `CD:0018..CD:001A` pass 78 [strong] :: **ct_cd_optional_selector_driven_auxiliary_fragment_stage_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body is `JMP $0D28`. Called conditionally from `C1:4833` only when `AE94 == 0`, `987C != FF`, and `AE93 != 37`.
+- `CD:0015..CD:0017` pass 78 [strong] :: **ct_cd_build_first_four_packed_fragment_row_sections_into_2d00_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body is `JMP $1323`. Called unconditionally from `C1:4833` with `A = 987A`.
+- `C3:0557..C3:08A8` pass 78 [strong] :: **ct_c3_unpack_packed_stream_to_wram_via_2180_and_return_output_size**
+  - xref cache: calls=0, word_refs=0
+  - Writes destination address through `$2181/$2183` and output bytes through `$2180`, proving it materializes directly into caller-selected WRAM. Contains multiple inner packed decode variants, but all branches are output materializers in the same family. Exit path stores `Y - start_dest_offset` into `0306`, so the returned value is output byte count / destination advance.
+- `C3:0002..C3:0004` pass 78 [strong] :: **ct_c3_unpack_stream_to_caller_selected_wram_buffer_veneer**
+  - xref cache: calls=0, word_refs=0
+  - Exact body is `JMP $0557`. Used by service-04 and many other callers as the standard packed-stream-to-WRAM entry. Caller passes source pointer in `0300..0302`, destination pointer in `0303..0305`, and receives output size in `0306`.
+- `7E:2D00..7E:2DFF` pass 78 [strong] :: **ct_c1_service04_packed_fragment_row_stream_workspace**
+  - xref cache: calls=0, word_refs=0
+  - Pass 77 proved this is a packed stream consumed by `4943`. Pass 78 tightens that noun: `CD:0015/002A` populate six fixed row-sections at offsets `000C/000E/0010/0012/0014/0016`, and `C3:0002` materializes packed bytes into the same workspace. Strongest safe reading: packed fragment-row stream workspace for the service-04 decode path.
+- `C1:48EC..C1:493F` pass 77 [strong] :: **ct_c1_service04_parse_segmented_ce_fragment_group_stream_into_a280_starts_and_a2a0_counts**
+  - xref cache: calls=0, word_refs=0
+  - Seeds `A280[0] = 9885`, clears local counters, then parses control classes from the top bits of the `CE:0000,X` stream. `0x00..0x1F` high-bit class ends the stream. Negative/high-bit tokens open new groups and seed their first counted 4-byte unit. `0x20`-class tokens commit a zero count to `A2A0[current_group]`. `0x40/0x60`-class tokens commit the accumulated 4-byte-unit count to `A2A0[current_group]`. Builds up to `0x10` group start pointers in `A280` and per-group counts in `A2A0`. Strongest safe reading: segmented CE fragment-group stream parser.
+- `7E:A652` pass 77 [strong] :: **ct_c1_service04_current_packed_fragment_stream_cursor**
+  - xref cache: calls=0, word_refs=0
+  - The active `2D00..` cursor used by `4943`. Advanced repeatedly as compact fragment data and emitted-record payload bytes are consumed.
+- `C1:48EC..C1:493F` pass 76 [provisional] :: **ct_c1_service04_parse_ce_profile_stream_into_a280_a2a0_work_vectors**
+  - xref cache: calls=0, word_refs=0
+  - Consumes `9885` as the source index. Walks a bank-`CE` byte stream and partitions entries into the `A280..` and `A2A0..` work-vector families. This is clearly a service-04-local stream/parser helper for the shared output tail, not unrelated scratch logic.
+- `C1:431D..C1:432A` pass 76 [strong] :: **ct_c1_service04_mode_dispatcher_by_ae92**
+  - xref cache: calls=0, word_refs=0
+  - Loads `AE92`, clamps any value `>= 4` to mode `0`, then dispatches through the jump table at `C1:7A63`. Proven table entries: mode `0` -> `475A` mode `1` -> `432C` mode `2` -> `45A0` mode `3` -> `475B` This is the real local mode dispatcher behind service `04`.
+- `FD:ACEE..FD:ACFC` pass 74 [strong] :: **ct_fd_clear_ad9b_and_transient_ad9c_packet_workspace**
+  - xref cache: calls=0, word_refs=0
+  - Clears `AD9B`. Clears exactly `0xB0` bytes starting at `AD9C`. This proves the transient packet workspace spans `AD9C..AE4B`.
+- `C1:8B10..C1:8BB8` pass 74 [strong] :: **ct_global_opcode_99_update_lane_b019_b0a8_and_on_expiry_queue_secondary_plus5_packet_with_followup_7f_tail**
+  - xref cache: calls=0, word_refs=0
+  - Uses `B179[9]` or `AEC7` through the `B163` lane mapping. Updates `B019/AF8A/B0A8` on the mapped lane with the already-proved timer front end. On expiry and lane/block gate success, seeds `AD89 = 5`, `B1FD = lane`, mirrors the amount into transient packet workspace mode `2`, sets `B202 = 0xC0`, then runs `EBF8`. The `0xC0` flag byte gives the queued live packet signed-negate + secondary-route behavior. Finishes through `A=0x7F ; JSR 895B ; JSL FD:ACEE`. Strongest safe reading: timed secondary-route packet caller with the same shared `7F` follow-up/apply tail used by global `91`.
+- `C1:8A9F..C1:8B0F` pass 74 [strong] :: **ct_global_opcode_98_capture_lane_b12c_variant_into_af7f_and_optionally_apply_one_point_primary_delta**
+  - xref cache: calls=0, word_refs=0
+  - Uses `B179[8]` or `AEC7` through the `B163` lane mapping. Captures `B12C[lane] -> AF7F[lane]` with status-based halve/double transforms. When `5E4B.bit4` is set, seeds `AD89 = 1`, `B1FD = lane`, `B202 = 0`, then runs `EBF8 -> EC7F` directly. Because the packet is primary-route and unsigned, this is the direct one-point primary-stat decrement fast path.
+- `C1:88C5..C1:8974` pass 74 [strong] :: **ct_global_opcode_91_compute_scaled_lane_delta_queue_live_packet_and_run_followup_7f_tail**
+  - xref cache: calls=0, word_refs=0
+  - Uses `B179[1]` or `AEC7` through the `B163` lane mapping. Requires `5E4A.bit7` set and `5E4B.bit6` clear for the packet path. Sets `AFC1[lane] = 1` and `AF32[lane] = B0DF[lane] + 5E64[lane_block]`. Computes a scaled amount through `5E32/33`, a `5E64`-derived scale, and `C92A`. Mirrors that amount into transient packet workspace at `AD9C[offset]` with mode `3` in `AD9E[offset]`. Clears `B202`, queues the live packet through `EBF8`, then runs `A=0x7F ; JSR 895B ; JSL FD:ACEE`. Strongest safe reading: scaled lane-derived dual-path packet caller with shared `7F` follow-up/apply tail.
+- `7E:B202` pass 74 [strong] :: **ct_c1_pending_stat_delta_packet_flag_byte**
+  - xref cache: calls=0, word_refs=0
+  - Packet flag source mirrored into `B203` by `EBF8`. Bit `7` = signed-negate before queue write. Bit `6` = secondary-route packet path. Bit `5` = persistent / do-not-auto-clear channel behavior.
+- `7E:B1FD` pass 74 [strong] :: **ct_c1_pending_stat_delta_packet_target_slot**
+  - xref cache: calls=0, word_refs=0
+  - Per-slot selector used by packet offset helpers like `E89F` and by `EBF8` queue writes. Seeded directly from the mapped lane in globals `98` and `99`.
+- `7E:AD9C..7E:AE4B` pass 74 [strong] :: **ct_c1_transient_packet_workspace_records_4x11x4**
+  - xref cache: calls=0, word_refs=0
+  - Transient packet workspace proven by the `0x2C` record stride and the `0xB0`-byte clear size in `FD:ACEE`. Strongest safe structure: 4 records × 11 slots × 4 bytes.
+- `7E:AD9B` pass 74 [strong] :: **ct_c1_transient_packet_workspace_record_index**
+  - xref cache: calls=0, word_refs=0
+  - Record selector used by the `0x2C * record + 4 * slot` packet-workspace addressing formula. Explicitly cleared by `FD:ACEE`.
+- `7E:AD89..7E:AD8A` pass 74 [strong] :: **ct_c1_pending_stat_delta_packet_amount_seed**
+  - xref cache: calls=0, word_refs=0
+  - 16-bit amount consumed by `EBF8` before queue write. Negated first when `B202.bit7` is set.
+- `C1:EBF8..C1:EC38` pass 73 [strong] :: **ct_c1_queue_signed_pending_stat_delta_packet_into_b328_family**
+  - xref cache: calls=0, word_refs=0
+  - Mirrors `B202 -> B203` and negates `AD89` when `B202.bit7` is set. Computes a 4-byte packet slot offset from `B2C7` and the `0x2C` record stride. Writes the signed 16-bit amount into `B328[offset]` and the packet flag byte into `B32B[offset]`. Strongest safe reading: queue one signed pending HP/secondary-stat delta packet.
+- `C1:E8C0..C1:E8E0` pass 73 [strong] :: **ct_c1_compute_ad9c_packet_offset_from_ad9b_and_b18b**
+  - xref cache: calls=0, word_refs=0
+  - Computes `DP10 = 0x2C * AD9B + 4 * B18B`. Companion packet-slot offset calculator using `B18B` instead of `B1FD`.
+- `C1:E89F..C1:E8BE` pass 73 [strong] :: **ct_c1_compute_ad9c_packet_offset_from_ad9b_and_b1fd**
+  - xref cache: calls=0, word_refs=0
+  - Computes `DP0E = 0x2C * AD9B + 4 * B1FD`. Uses the already-locked `C90B` 16-bit multiply helper. This is the exact packet-slot offset calculator for one 4-byte entry inside a `0x2C`-byte record family.
+- `C1:8CF9..C1:8EA6` pass 73 [strong] :: **ct_c1_run_tail_lane_selector_control_stream_and_materialize_head_state**
+  - xref cache: calls=0, word_refs=0
+  - Initializes current-tail context from `AEC8`, `B252`, and `B18B` and clears selection/result scratch. Chooses the command-stream pointer from the saved per-tail pointer pair `B1D4/B1E4` or the continuation pointer in `B273`. Fetches the current `CC` byte into `AEE3` and dispatches through the selector-control table at `B88D`. Uses `AD8E/AECC/AECB/AE91` and visible-head vacancy scans to materialize or update head-slot assignment/state. Maintains saved continuation state such as `B1D4`, `B2C0`, and `AE55`.
+- `C1:8461..C1:883B` pass 73 [strong] :: **ct_global_opcode_9C_service7_tail_lane_admission_reseat_and_readiness_refresh_controller**
+  - xref cache: calls=0, word_refs=0
+  - Walks the tail-lane band through `B315/B252/B18B` and the `B179/B163` mapping. Services eligible occupied tail lanes, invoking `8CF9` to run the tail selector-control/materialization stream. On the follow-up path mirrors `B158 -> AFAB`, applies `BD6F` readiness modifiers, and sets `B03A = 1`. Then runs canonical/head-visible reconciliation and readiness-gauge export refresh through helpers such as `B575` and `B725`. Strongest safe reading: service-7 tail-lane admission/reseat plus readiness-refresh controller.
+- `C1:B03A..C1:B08E` pass 72 [strong] :: **ct_global_opcode_A9_late_pack_executor_internal_alias_nonzero_af24_path**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias into the nonzero-result handling and FE/FF continuation logic. Includes the path that marks `B242`, advances FE-delimited segments, and increments or clears `B263`.
+- `C1:B02F..C1:B039` pass 72 [strong] :: **ct_global_opcode_A8_late_pack_executor_internal_alias_special_case_af24_eq_02**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias inside the result-capture tail. Special-cases `AF24 == 2` before the broader nonzero-result path.
+- `C1:B024..C1:B02E` pass 72 [strong] :: **ct_global_opcode_A7_late_pack_executor_internal_alias_capture_af24_result**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias at the result-capture start. Mirrors `AF24` into `B24A[tail]` and enters the special-case / nonzero-result logic.
+- `C1:B019..C1:B023` pass 72 [strong] :: **ct_global_opcode_A6_late_pack_executor_internal_alias_dispatch_second_subop**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias after the chained second-subop reload. Dispatches the second `B239` opcode and falls into result capture.
+- `C1:B00E..C1:B018` pass 72 [strong] :: **ct_global_opcode_A5_late_pack_executor_internal_alias_advance_to_second_subop**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias for the chained second-subop advance path. Advances `B1D2` by `+4`, reloads `B239`, and falls back into the shared dispatch.
+- `C1:B003..C1:B00D` pass 72 [strong] :: **ct_global_opcode_A4_late_pack_executor_internal_alias_dispatch_current_b239_opcode**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias that dispatches the current `B239` opcode through the master table.
+- `C1:AFF8..C1:B002` pass 72 [strong] :: **ct_global_opcode_A3_late_pack_executor_internal_alias_after_segment_select**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias after `B4AA` segment selection. Fetches the current opcode byte into `B239` and falls into the shared dispatch path.
+- `C1:AFED..C1:AFF7` pass 72 [strong] :: **ct_global_opcode_A2_late_pack_executor_internal_alias_arm_second_subop_flag**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias in the same common path. Lives inside the `CMP #$FE` / `B1CF` second-subop arming logic.
+- `C1:AFE2..C1:AFEC` pass 72 [strong] :: **ct_global_opcode_A1_late_pack_executor_internal_alias_clear_af24_and_probe_second_subop**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias in the common late-pack executor path. Clears `AF24`, probes byte `+4` for the `FE` chained-subop case, and falls into the shared segment selector path.
+- `C1:AFD7..C1:AFE1` pass 72 [strong] :: **ct_global_opcode_A0_late_pack_executor_internal_alias_after_cc_record_load**
+  - xref cache: calls=0, word_refs=0
+  - The master pointer lands two bytes inside the real `CC:8B08` pointer-load sequence. Keep as an internal late-pack executor alias, not as the clean top-level initializer.
+- `C1:AFCC..C1:AFD4` pass 72 [strong] :: **ct_global_opcode_9F_late_pack_helper_internal_alias_plx_return**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias that lands directly in the `PLX` return tail ahead of the late-pack blob. Not a clean standalone top-level command body.
+- `C1:AFC1..C1:AFCB` pass 72 [strong] :: **ct_global_opcode_9E_late_pack_helper_internal_alias_call_c92a_and_plx_return**
+  - xref cache: calls=0, word_refs=0
+  - Internal alias into the same helper tail used by `9D`. Falls through to `PLX ; STX $2C ; RTS`. Not a clean standalone top-level command body.
