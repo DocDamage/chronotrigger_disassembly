@@ -1,0 +1,76 @@
+# Current Seam Candidate Starts
+
+- Latest pass: **142**
+- Target seam: **`C2:E34A..C2:E5F0`**
+- Candidate count: **18**
+
+## Top candidates
+- `C2:E34A` | score=16.0 | offset=+0x0000 | calls=2 | seed=yes | after RTS
+  - head bytes: `08 E2 20 AD 06 0F C9 05 90 02`
+  - incoming ops: `{"JMP abs": 1, "JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E28D", "op": "JSR abs"}, {"caller": "C2:E53B", "op": "JMP abs"}]`
+  - nearby labels:
+    - pass 142 [strong] `C2:E316..C2:E349` :: ct_c2_lookup_backed_0f00_fill_helper_using_0f08_0f09_4216_and_ff_c9ac
+  - note mentions: `["chrono_trigger_disasm_pass142.md", "chrono_trigger_labels_pass142.md"]`
+- `C2:E40E` | score=11.0 | offset=+0x00C4 | calls=1 | seed=yes | after RTS
+  - head bytes: `08 E2 20 64 54 A2 BC C3 20 31`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E201", "op": "JSR abs"}]`
+- `C2:E576` | score=11.0 | offset=+0x022C | calls=1 | seed=yes | after RTS
+  - head bytes: `08 C2 30 A2 08 F0 A0 00 36 A9`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E1F7", "op": "JSR abs"}]`
+- `C2:E545` | score=8.0 | offset=+0x01FB | calls=1 | seed=yes | prev_byte=08
+  - head bytes: `E2 20 A6 51 9B A9 08 85 01 A9`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E419", "op": "JSR abs"}]`
+- `C2:E363` | score=6.0 | offset=+0x0019 | calls=1 | seed=no | after RTS
+  - head bytes: `08 E2 20 AE 0C 0F 9E 00 00 20`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E22C", "op": "JSR abs"}]`
+- `C2:E390` | score=6.0 | offset=+0x0046 | calls=1 | seed=no | after RTS
+  - head bytes: `08 C2 30 9C 90 98 A2 90 98 A0`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E36C", "op": "JSR abs"}]`
+- `C2:E3E0` | score=6.0 | offset=+0x0096 | calls=1 | seed=no | after RTS
+  - head bytes: `A6 51 86 00 A6 51 A4 00 BD 90`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E36F", "op": "JSR abs"}]`
+- `C2:E5D3` | score=6.0 | offset=+0x0289 | calls=1 | seed=no | after RTS
+  - head bytes: `08 E2 20 A5 54 1A CD 77 0D F0`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:E239", "op": "JSR abs"}]`
+- `C2:E362` | score=5.0 | offset=+0x0018 | calls=0 | seed=yes | prev_byte=28
+  - head bytes: `60 08 E2 20 AE 0C 0F 9E 00 00`
+- `C2:E38E` | score=5.0 | offset=+0x0044 | calls=0 | seed=yes | prev_byte=7B
+  - head bytes: `28 60 08 C2 30 9C 90 98 A2 90`
+- `C2:E3DE` | score=5.0 | offset=+0x0094 | calls=0 | seed=yes | prev_byte=EB
+  - head bytes: `28 60 A6 51 86 00 A6 51 A4 00`
+- `C2:E5CC` | score=5.0 | offset=+0x0282 | calls=0 | seed=yes | prev_byte=A2
+  - head bytes: `61 FC 20 85 83 28 60 08 E2 20`
+- `C2:E34C` | score=3.0 | offset=+0x0002 | calls=1 | seed=no | prev_byte=E2
+  - head bytes: `20 AD 06 0F C9 05 90 02 A9 04`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:C0BB", "op": "JSR abs"}]`
+  - nearby labels:
+    - pass 142 [strong] `C2:E316..C2:E349` :: ct_c2_lookup_backed_0f00_fill_helper_using_0f08_0f09_4216_and_ff_c9ac
+- `C2:E4A2` | score=3.0 | offset=+0x0158 | calls=1 | seed=no | prev_byte=FF
+  - head bytes: `61 8D 40 4E A2 40 4E A0 42 4E`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:AF44", "op": "JSR abs"}]`
+- `C2:E4D0` | score=3.0 | offset=+0x0186 | calls=1 | seed=no | prev_byte=86
+  - head bytes: `E2 20 A2 3B CF 8E 0D 02 A9 FF`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:D7CF", "op": "JSR abs"}]`
+- `C2:E57B` | score=3.0 | offset=+0x0231 | calls=1 | seed=no | prev_byte=08
+  - head bytes: `F0 A0 00 36 A9 7F 04 54 7E FF`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:EF7C", "op": "JSR abs"}]`
+- `C2:E5A5` | score=3.0 | offset=+0x025B | calls=1 | seed=no | prev_byte=86
+  - head bytes: `7B A2 9A CE A0 00 95 A9 1F 54`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:F559", "op": "JSR abs"}]`
+- `C2:E5A9` | score=3.0 | offset=+0x025F | calls=1 | seed=no | prev_byte=CE
+  - head bytes: `A0 00 95 A9 1F 54 7E FF A2 01`
+  - incoming ops: `{"JSR abs": 1}`
+  - sample callers: `[{"caller": "C2:A90E", "op": "JSR abs"}]`
