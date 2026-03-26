@@ -1,0 +1,26 @@
+{
+  "pass_number": 168,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v1-scaffold",
+  "live_seam_after_pass": "C3:1300..C3:1816",
+  "completion_estimate": 71.4,
+  "closed_ranges": [
+    {
+      "range": "C3:10D0..C3:12FF",
+      "kind": "data",
+      "label": "ct_c3_post_code_end_inline_data_padding_block_with_zero_spacer_and_short_control_tail_before_next_callable_lane",
+      "confidence": "high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_post_code_end_inline_data_padding_block_with_zero_spacer_and_short_control_tail_before_next_callable_lane"
+  ],
+  "confidence": {
+    "structural": "medium-high",
+    "semantic": "medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Froze immediate post-marker gap as inline data/padding instead of forcing fake code."
+  ]
+}
