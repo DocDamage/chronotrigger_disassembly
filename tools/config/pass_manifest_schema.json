@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chrono Trigger Disassembly Pass Manifest",
+  "type": "object",
+  "required": [
+    "pass_number",
+    "branch",
+    "toolkit_version",
+    "live_seam_after_pass",
+    "completion_estimate",
+    "closed_ranges",
+    "new_labels",
+    "confidence",
+    "notes"
+  ],
+  "properties": {
+    "pass_number": { "type": "integer", "minimum": 1 },
+    "branch": { "type": "string" },
+    "toolkit_version": { "type": "string" },
+    "live_seam_after_pass": { "type": "string" },
+    "completion_estimate": { "type": "number", "minimum": 0, "maximum": 100 },
+    "closed_ranges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["range", "kind", "label", "confidence"],
+        "properties": {
+          "range": { "type": "string" },
+          "kind": { "type": "string", "enum": ["code_owner", "code_helper", "data", "wrapper", "veneer", "tail_fragment", "text_marker"] },
+          "label": { "type": "string" },
+          "confidence": { "type": "string", "enum": ["high", "medium-high", "medium", "low"] }
+        }
+      }
+    },
+    "new_labels": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["structural", "semantic", "rebuild"],
+      "properties": {
+        "structural": { "type": "string" },
+        "semantic": { "type": "string" },
+        "rebuild": { "type": "string" }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}
