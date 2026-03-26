@@ -1,0 +1,23 @@
+version: 1
+rules:
+  - id: owner_overlap_check
+    description: Top-level owners must not overlap unless one side is explicitly marked as a tail fragment pending reattachment.
+    severity: error
+  - id: helper_external_caller_check
+    description: Helpers with external callers must not be buried inside a parent owner without an explicit split.
+    severity: error
+  - id: weak_as_strong_check
+    description: Labels with low semantic certainty should not be marked as strong structural labels.
+    severity: warn
+  - id: terminal_boundary_check
+    description: Closed ranges should terminate at a real RTS/RTL/data boundary unless the pass note documents why not.
+    severity: error
+  - id: code_data_boundary_check
+    description: Inline text, tables, and marker bytes must not be left inside executable owners.
+    severity: error
+  - id: duplicate_semantic_label_check
+    description: Near-identical labels on unrelated ranges should be reviewed for drift.
+    severity: warn
+  - id: marker_followup_check
+    description: Bytes after CODE END markers should be down-ranked as callable starts until proven otherwise.
+    severity: warn
