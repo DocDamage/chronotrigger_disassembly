@@ -1,0 +1,44 @@
+{
+  "pass_number": 166,
+  "branch": "repo-bootstrap-pass163",
+  "toolkit_version": "v6.8-pass161-upgraded",
+  "live_seam_after_pass": "C3:0EFA..C3:10B6",
+  "completion_estimate": 71.0,
+  "closed_ranges": [
+    {"range":"C3:0A90..C3:0AFE","kind":"code_owner","label":"ct_c3_nmi_gated_input_display_blackout_check_with_alternating_7e377a_service_dispatch","confidence":"medium-high"},
+    {"range":"C3:0AFF..C3:0B02","kind":"wrapper","label":"ct_c3_stream_interpreter_jsr_rtl_veneer","confidence":"high"},
+    {"range":"C3:0B03..C3:0C91","kind":"code_owner","label":"ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words","confidence":"medium-high"},
+    {"range":"C3:0C92..C3:0CB0","kind":"code_helper","label":"ct_c3_nibble_slot_update_helper_with_pointer_advance_path","confidence":"medium-high"},
+    {"range":"C3:0CB1..C3:0CB7","kind":"code_helper","label":"ct_c3_stream_word_fetch_helper_advancing_20_and_caching_fetched_word","confidence":"high"},
+    {"range":"C3:0CB8..C3:0CCC","kind":"code_helper","label":"ct_c3_first_free_slot_clear_helper_for_table_0920","confidence":"high"},
+    {"range":"C3:0CCD..C3:0CE1","kind":"code_helper","label":"ct_c3_first_free_slot_clear_helper_for_table_0940","confidence":"high"},
+    {"range":"C3:0CE2..C3:0CF7","kind":"code_helper","label":"ct_c3_first_free_slot_write_helper_for_table_0920","confidence":"high"},
+    {"range":"C3:0CF8..C3:0D0C","kind":"code_helper","label":"ct_c3_first_free_slot_write_helper_for_table_0940","confidence":"high"},
+    {"range":"C3:0D0D..C3:0D5B","kind":"code_owner","label":"ct_c3_wram_data_quad_writer_to_0700_with_duplicated_sample_bytes_and_shift_decay_update","confidence":"medium-high"},
+    {"range":"C3:0D5C..C3:0DBB","kind":"code_owner","label":"ct_c3_wram_data_quad_writer_variant_with_clamped_first_coordinate_and_rotate_decay_update","confidence":"medium-high"},
+    {"range":"C3:0DBC..C3:0DF1","kind":"code_owner","label":"ct_c3_7e_pointer_quad_writer_to_0700_with_shift_update_through_13","confidence":"medium-high"},
+    {"range":"C3:0DF2..C3:0E27","kind":"code_owner","label":"ct_c3_7e_pointer_quad_writer_to_0700_with_rotate_update_through_13","confidence":"medium-high"},
+    {"range":"C3:0E2A..C3:0E37","kind":"code_helper","label":"ct_c3_increment_compare_tail_helper_looping_until_14_falls_below_00f4","confidence":"medium-high"}
+  ],
+  "new_labels": [
+    "ct_c3_nmi_gated_input_display_blackout_check_with_alternating_7e377a_service_dispatch",
+    "ct_c3_stream_interpreter_jsr_rtl_veneer",
+    "ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words",
+    "ct_c3_nibble_slot_update_helper_with_pointer_advance_path",
+    "ct_c3_stream_word_fetch_helper_advancing_20_and_caching_fetched_word",
+    "ct_c3_first_free_slot_clear_helper_for_table_0920",
+    "ct_c3_first_free_slot_clear_helper_for_table_0940",
+    "ct_c3_first_free_slot_write_helper_for_table_0920",
+    "ct_c3_first_free_slot_write_helper_for_table_0940",
+    "ct_c3_wram_data_quad_writer_to_0700_with_duplicated_sample_bytes_and_shift_decay_update",
+    "ct_c3_wram_data_quad_writer_variant_with_clamped_first_coordinate_and_rotate_decay_update",
+    "ct_c3_7e_pointer_quad_writer_to_0700_with_shift_update_through_13",
+    "ct_c3_7e_pointer_quad_writer_to_0700_with_rotate_update_through_13",
+    "ct_c3_increment_compare_tail_helper_looping_until_14_falls_below_00f4"
+  ],
+  "confidence": {"structural":"high","semantic":"medium-high","rebuild":"medium"},
+  "notes": [
+    "Closed the remaining 0A90..0E38 seam as one owner, one veneer, helper cluster, four writers, and one tail helper.",
+    "Helper 0CB1..0CB7 remains separate because it has an external caller."
+  ]
+}
