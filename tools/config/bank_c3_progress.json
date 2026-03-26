@@ -1,0 +1,24 @@
+{
+  "bank": "C3",
+  "status": "active",
+  "notes": [
+    "Low-bank executable cluster is closed through the CODE END C3 marker.",
+    "Post-marker gap 10D0..12FF is frozen as inline data/padding.",
+    "Next higher unresolved callable lane is 1300..1816."
+  ],
+  "closed_executable_ranges": [
+    {"range":"C3:0EFA..C3:1024","label":"ct_c3_selected_bank_four_edge_scanline_owner_ordering_four_xy_pairs_and_materializing_row_spans_to_7e_or_7f","pass":167},
+    {"range":"C3:1025..C3:10BF","label":"ct_c3_selected_bank_edge_rasterizer_storing_one_x_intercept_byte_per_scanline_with_common_epilogue","pass":167}
+  ],
+  "closed_data_ranges": [
+    {"range":"C3:10C0..C3:10CF","label":"ct_c3_inline_ascii_code_end_c3_marker","pass":167},
+    {"range":"C3:10D0..C3:12FF","label":"ct_c3_post_code_end_inline_data_padding_block_with_zero_spacer_and_short_control_tail_before_next_callable_lane","pass":168}
+  ],
+  "externally_anchored_entries": [
+    {"range":"C3:0EFA..C3:1024","anchor":"C3:0011 -> JMP $0EFA"}
+  ],
+  "open_lanes": [
+    {"range":"C3:1300..C3:1816","reason":"next higher unresolved callable lane above low-bank CODE END marker"},
+    {"range":"C3:1817..","reason":"separate externally anchored entry kept isolated from current lane"}
+  ]
+}
