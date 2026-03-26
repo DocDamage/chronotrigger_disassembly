@@ -1,0 +1,27 @@
+{
+  "pass_number": 164,
+  "branch": "repo-bootstrap-pass163",
+  "toolkit_version": "v6.8-pass161-upgraded",
+  "live_seam_after_pass": "C3:08A9..C3:0EF9",
+  "completion_estimate": 70.2,
+  "closed_ranges": [
+    {
+      "range": "C3:0307..C3:0528",
+      "kind": "code_owner",
+      "label": "ct_c3_7f_tile_strip_builder_with_regenerate_reuse_blank_fast_paths_and_sampled_byte_to_planar_4bpp_pack_core",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_7f_tile_strip_builder_with_regenerate_reuse_blank_fast_paths_and_sampled_byte_to_planar_4bpp_pack_core"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "medium-high",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Refused to split at 034C because control flow folds back into the shared owner and exits only through the shared RTL.",
+    "Fixed stale workspace state so reports reflect pass 164 instead of pass 163."
+  ]
+}
