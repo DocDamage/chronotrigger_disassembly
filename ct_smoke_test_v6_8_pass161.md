@@ -1,0 +1,45 @@
+# Toolkit Smoke Test
+
+- Latest pass: **161**
+- Health score: **100.0%**
+- Inspect target used: `C3:0077..C3:01E3`
+- Low-bank inspect target used: `C3:0008..C3:0008`
+- Parent-dir harness: `(cleaned automatically; staged via symlink)`
+
+## Cases
+- **root_doctor**: ok
+  - cwd: `/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work`
+  - cmd: `["python3", "scripts/ct_toolkit_doctor.py", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc", "--output-json", "reports/ct_toolkit_doctor.json", "--output-md", "reports/ct_toolkit_doctor.md"]`
+  - stdout tail: `["/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work/reports/ct_toolkit_doctor.json", "/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work/reports/ct_toolkit_doctor.md"]`
+- **root_build_manifest**: ok
+  - cwd: `/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work`
+  - cmd: `["python3", "scripts/ct_generate_build_manifest.py", "--root", ".", "--output-json", "build/rebuild/build_manifest.json", "--output-md", "build/rebuild/build_manifest.md"]`
+  - stdout tail: `["/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work/build/rebuild/build_manifest.json", "/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work/build/rebuild/build_manifest.md"]`
+- **root_session_packet**: ok
+  - cwd: `/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work`
+  - cmd: `["python3", "scripts/ct_generate_session_packet.py", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc", "--db", "data/ct_label_db.sqlite", "--xref-json", "data/ct_hot_xref_cache.json", "--state-json", "state/current_state.json", "--output-json", "reports/session/current_session_packet.json", "--output-md", "reports/session/current_session_packet.md"]`
+  - stdout tail: `["/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work/reports/session/current_session_packet.json", "/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work/reports/session/current_session_packet.md"]`
+- **root_inspect_target**: ok
+  - cwd: `/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work`
+  - cmd: `["python3", "scripts/ct_inspect_target.py", "C3:0077..C3:01E3", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc"]`
+  - stdout tail: `["OVERLAPPING LABELS:", "- none", "", "NEARBY LABELS:", "- none", "", "XREFS:", "- no cached hot-xref targets inside span", "", "NOTE MENTIONS:", "- chrono_trigger_disasm_pass161.md", "- chrono_trigger_labels_pass161.md"]`
+- **root_inspect_low_bank_target**: ok
+  - cwd: `/mnt/data/ctpass161_toolkit_v6_8_work/ct_pass150_toolkit_v6_7_release_work`
+  - cmd: `["python3", "scripts/ct_inspect_target.py", "C3:0008..C3:0008", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc"]`
+  - stdout tail: `["- pass 161 [alias] C3:0000..C3:0001 :: ct_c3_bank_head_branch_over_low_bank_veneer_cluster_into_0014_launcher", "- pass 161 [alias] C3:0011..C3:0013 :: ct_c3_low_bank_direct_entry_veneer_jumping_to_0efa_worker", "- pass 161 [strong] C3:0014..C3:0076 :: ct_c3_bank_head_launcher_installing_c3_ram_trampolines_staging_fe0003_pointer_unpack_to_7e3000_and_jumping_there", "", "XREFS:", "- C3:0008 :: 11 cached call hits", "  - C0:225C JSL long long -> C3:0008", "  - C0:22B7 JSL long long -> C3:0008", "  - C0:237D JSL long long -> C3:0008", "", "NOTE MENTIONS:", "- none"]`
+- **parent_doctor_autodetect**: ok
+  - cwd: `/tmp/ct_smoke_parent_juyt0956`
+  - cmd: `["python3", "workspace/scripts/ct_toolkit_doctor.py", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc", "--output-json", "reports/ct_toolkit_doctor.json", "--output-md", "reports/ct_toolkit_doctor.md"]`
+  - stdout tail: `["/tmp/ct_smoke_parent_juyt0956/workspace/reports/ct_toolkit_doctor.json", "/tmp/ct_smoke_parent_juyt0956/workspace/reports/ct_toolkit_doctor.md"]`
+- **parent_session_packet_autodetect**: ok
+  - cwd: `/tmp/ct_smoke_parent_juyt0956`
+  - cmd: `["python3", "workspace/scripts/ct_generate_session_packet.py", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc", "--db", "data/ct_label_db.sqlite", "--xref-json", "data/ct_hot_xref_cache.json", "--state-json", "state/current_state.json", "--output-json", "reports/session/current_session_packet.json", "--output-md", "reports/session/current_session_packet.md"]`
+  - stdout tail: `["/tmp/ct_smoke_parent_juyt0956/workspace/reports/session/current_session_packet.json", "/tmp/ct_smoke_parent_juyt0956/workspace/reports/session/current_session_packet.md"]`
+- **parent_inspect_target_autodetect**: ok
+  - cwd: `/tmp/ct_smoke_parent_juyt0956`
+  - cmd: `["python3", "workspace/scripts/ct_inspect_target.py", "C3:0077..C3:01E3", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc"]`
+  - stdout tail: `["OVERLAPPING LABELS:", "- none", "", "NEARBY LABELS:", "- none", "", "XREFS:", "- no cached hot-xref targets inside span", "", "NOTE MENTIONS:", "- chrono_trigger_disasm_pass161.md", "- chrono_trigger_labels_pass161.md"]`
+- **parent_inspect_low_bank_target_autodetect**: ok
+  - cwd: `/tmp/ct_smoke_parent_juyt0956`
+  - cmd: `["python3", "workspace/scripts/ct_inspect_target.py", "C3:0008..C3:0008", "--root", ".", "--rom", "/mnt/data/Chrono Trigger (USA).sfc"]`
+  - stdout tail: `["- pass 161 [alias] C3:0000..C3:0001 :: ct_c3_bank_head_branch_over_low_bank_veneer_cluster_into_0014_launcher", "- pass 161 [alias] C3:0011..C3:0013 :: ct_c3_low_bank_direct_entry_veneer_jumping_to_0efa_worker", "- pass 161 [strong] C3:0014..C3:0076 :: ct_c3_bank_head_launcher_installing_c3_ram_trampolines_staging_fe0003_pointer_unpack_to_7e3000_and_jumping_there", "", "XREFS:", "- C3:0008 :: 11 cached call hits", "  - C0:225C JSL long long -> C3:0008", "  - C0:22B7 JSL long long -> C3:0008", "  - C0:237D JSL long long -> C3:0008", "", "NOTE MENTIONS:", "- none"]`
