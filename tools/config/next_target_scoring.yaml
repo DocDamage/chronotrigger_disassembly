@@ -1,0 +1,17 @@
+version: 1
+weights:
+  external_call_anchor: 30
+  full_prologue: 20
+  shared_epilogue: 6
+  terminal_rtl_rts: 12
+  internal_jump_table_owner: 8
+  zero_padding_penalty: -25
+  ascii_marker_penalty: -30
+  post_marker_penalty: -18
+  inline_text_penalty: -20
+  weak_mid_function_entry_penalty: -15
+heuristics:
+  prefer_externally_anchored_starts: true
+  downrank_after_code_end_markers: true
+  separate_data_lanes_before_callable_search: true
+  require_reason_strings: true
