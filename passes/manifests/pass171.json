@@ -1,0 +1,27 @@
+{
+  "pass_number": 171,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:1318..C3:1816",
+  "completion_estimate": 71.7,
+  "closed_ranges": [
+    {
+      "range": "C3:1300..C3:1317",
+      "kind": "data",
+      "label": "ct_c3_inline_control_dispatch_data_block_preceding_higher_c3_execution_body",
+      "confidence": "high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_control_dispatch_data_block_preceding_higher_c3_execution_body"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Cautious forward pass: froze the small data/control prefix before the larger unresolved body rather than forcing a shaky owner across 1300..1816.",
+    "Next real executable target is 1318..1816."
+  ]
+}
