@@ -38,7 +38,7 @@ Final labels, subsystem ownership, rebuild claims, and handoff claims still need
 ## Start state
 This session started from the end of session 8:
 - latest pass: **150**
-- current best toolkit snapshot at start: **`ct_disasm_toolkit_v6_7_pass150_upgraded.zip`**
+- current best toolkit snapshot at start: **`toolkits/v6/ct_disasm_toolkit_v6_7_pass150_upgraded.zip`**
 - current live seam at start: **`C2:F2F3..C2:F360`**
 - completion estimate at start: **70.6%**
 - label rows at start: **1237**
@@ -49,7 +49,7 @@ This session started from the end of session 8:
 ## End state
 This session ends at:
 - latest pass: **161**
-- current best toolkit snapshot: **`ct_disasm_toolkit_v6_8_pass161_upgraded.zip`**
+- current best toolkit snapshot: **`toolkits/v6/ct_disasm_toolkit_v6_8_pass161_upgraded.zip`**
 - current toolkit version: **v6.8**
 - current completion estimate: **69.8%**
 - label rows: **1310**
@@ -392,17 +392,17 @@ Still needed:
 # 8) Current artifact map
 
 ## Primary current files
-- `chrono_trigger_disasm_pass161.md`
-- `chrono_trigger_labels_pass161.md`
-- `chrono_trigger_next_session_start_here_pass161.md`
-- `ct_completion_score_after_pass161.json`
-- `ct_consistency_report_after_pass161.md`
-- `ct_current_session_packet_after_pass161.md`
-- `ct_toolkit_doctor_after_pass161.md`
-- `ct_workspace_report_after_pass161.md`
+- `disassembly/passes_155-200/chrono_trigger_disasm_pass161.md`
+- `labels/passes_155-200/chrono_trigger_labels_pass161.md`
+- `docs/sessions/chrono_trigger_next_session_start_here_pass161.md`
+- `docs/reports/ct_completion_score_after_pass161.json`
+- `docs/reports/ct_consistency_report_after_pass161.md`
+- `docs/reports/ct_current_session_packet_after_pass161.md`
+- `docs/reports/ct_toolkit_doctor_after_pass161.md`
+- `docs/reports/ct_workspace_report_after_pass161.md`
 
 ## Current packaged toolkit
-- `ct_disasm_toolkit_v6_8_pass161_upgraded.zip`
+- `toolkits/v6/ct_disasm_toolkit_v6_8_pass161_upgraded.zip`
 
 ## Previous handoff this one continues from
 - `chrono_trigger_master_handoff_session8.md`
