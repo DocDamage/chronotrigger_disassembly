@@ -1,0 +1,35 @@
+{
+  "pass_number": 173,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:15E9..C3:1816",
+  "completion_estimate": 72.0,
+  "closed_ranges": [
+    {
+      "range": "C3:13FC..C3:15E3",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_table_and_helper_blob_before_c302dd_wrapper",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:15E4..C3:15E8",
+      "kind": "veneer",
+      "label": "ct_c3_tiny_long_wrapper_calling_c302dd_then_returning",
+      "confidence": "high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_control_table_and_helper_blob_before_c302dd_wrapper",
+    "ct_c3_tiny_long_wrapper_calling_c302dd_then_returning"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Cautious forward split again: 13FC..15E3 still refuses to stabilize as one credible owner under linear sweep and contains repeated mixed control/data-looking stretches before the next clean veneer.",
+    "15E4..15E8 resolves cleanly as JSL $C302DD ; RTS.",
+    "Next seam advances to 15E9..1816, where 15E9 itself looks more code-like than the preceding blob and should be examined before freezing more bytes."
+  ]
+}
