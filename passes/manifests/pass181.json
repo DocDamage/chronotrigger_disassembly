@@ -1,0 +1,29 @@
+{
+  "pass_number": 181,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:1C00..",
+  "completion_estimate": 73.6,
+  "closed_ranges": [
+    {
+      "range": "C3:1AF0..C3:1BFF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_opcode_cluster_with_weak_rtl_stub_and_unstable_multi_target_pocket_before_1c00_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_opcode_cluster_with_weak_rtl_stub_and_unstable_multi_target_pocket_before_1c00_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass again used the upgraded flow: tiny-veneer scan first, then bank-aware caller checks across 1AF0..1BFF before choosing the next seam.",
+    "The leading byte at 1AF0 is RTL, but unlike the earlier 1880 stub it only has weak caller context from unresolved higher-bank C3, so it is not promoted into a real return stub label.",
+    "The busiest raw target in this pocket is 1BF7, which receives multiple same-bank JMP hits from later unresolved C3 regions; however the local bytes around 1BF7 still do not stabilize into a trustworthy entry body under cautious inspection, so that pocket is not promoted.",
+    "1C00 is the next better candidate seam: it has an incoming same-bank raw caller and the local byte structure beginning at 1C00 reads more coherently than the noisy 1AF0..1BFF lead-in, so the seam is advanced there rather than forcing a shaky split earlier."
+  ]
+}
