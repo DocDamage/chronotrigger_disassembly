@@ -1,0 +1,29 @@
+{
+  "pass_number": 179,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:1A60..",
+  "completion_estimate": 73.2,
+  "closed_ranges": [
+    {
+      "range": "C3:18FD..C3:1A5F",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass was led with the new flow: tiny-veneer scan first, then bank-aware target checks on the strongest raw candidates inside 18FD..1A5F.",
+    "The eye-catching JSR/RTS pattern at 1989..198C is not promoted: it targets C3:11BA, which lies inside the already frozen post-marker data block, so it is treated as a false wrapper signature inside mixed content rather than a real veneer.",
+    "C3:1A1A has a raw same-bank caller from C3:0C7D and C3:1A60 has one from C3:0CAA, making them better candidate seams than the earlier raw targets; however the 1A1A pocket still does not stabilize into a trustworthy owner/helper start under cautious byte inspection.",
+    "The next live seam is moved to 1A60 because it is the next better-supported candidate pocket after freezing the unstable lead-in cluster from 18FD..1A5F."
+  ]
+}
