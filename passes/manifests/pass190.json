@@ -1,0 +1,31 @@
+{
+  "pass_number": 190,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2800..",
+  "completion_estimate": 79.0,
+  "closed_ranges": [
+    {
+      "range": "C3:2700..C3:27FF",
+      "kind": "data",
+      "label": "ct_c3_inline_branch_heavy_mixed_control_arithmetic_blob_with_false_data_side_2709_target_and_no_caller_backed_true_start_before_2800_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_branch_heavy_mixed_control_arithmetic_blob_with_false_data_side_2709_target_and_no_caller_backed_true_start_before_2800_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2700 using the same caller-plus-local-structure discipline as the recent conservative C3 pages.",
+    "The page produces only one visible raw target, C3:A1B7 -> C3:2709, and that apparent support is rejected because the caller neighborhood at A1B7 reads as obvious byte-soup / inline-data material rather than trustworthy code.",
+    "A tiny-veneer scan does not rescue the page; it only surfaces unsupported BRA-style landings at 2714, 2771, 2787, 27A8, and 27BF, all of which sit inside unstable mixed byte streams rather than defining a defendable true start.",
+    "There is no clean RTS, RTL, RTI, JSR-RTS, or JSL-RTS executable splinter anywhere inside 2700..27FF.",
+    "The middle/late portion of the page looks denser and more control/arithmetic-like than some of the immediately previous pointer-heavy freezes, but that apparent coherence still breaks repeatedly on inline 00 bytes and unsupported interior branch landings.",
+    "Because the only visible raw target is caller-invalid and the more code-looking local regions still have no caller-backed true start, the whole 2700..27FF page is frozen honestly as mixed inline content before the next 2800 seam."
+  ]
+}
