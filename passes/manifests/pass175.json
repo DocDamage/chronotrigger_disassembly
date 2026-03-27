@@ -1,0 +1,35 @@
+{
+  "pass_number": 175,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:17BD..C3:1816",
+  "completion_estimate": 72.5,
+  "closed_ranges": [
+    {
+      "range": "C3:16AC..C3:16B9",
+      "kind": "helper",
+      "label": "ct_c3_small_local_looping_helper_returning_after_backward_branch",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:16BA..C3:17BC",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry",
+      "confidence": "medium"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_small_local_looping_helper_returning_after_backward_branch",
+    "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry"
+  ],
+  "confidence": {
+    "structural": "medium-high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "16AC sits immediately after the prior RTS boundary at 16AB and forms a small self-contained code-looking loop ending in RTS at 16B9, making it more defensible as a tiny local helper than as part of the surrounding mixed blob.",
+    "16BA..17BC remains unstable under cautious inspection and is better treated as inline mixed control/table/code-fragment content rather than forced into a fake owner.",
+    "A same-bank caller at C4:CE36 targets C3:17BD, making 17BD the first strong externally anchored start inside the remaining seam and the correct next place to resume executable analysis."
+  ]
+}
