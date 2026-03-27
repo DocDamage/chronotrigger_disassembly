@@ -1,0 +1,43 @@
+{
+  "pass_number": 180,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:1AF0..",
+  "completion_estimate": 73.4,
+  "closed_ranges": [
+    {
+      "range": "C3:1A60..C3:1AD5",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:1AD6..C3:1ADA",
+      "kind": "veneer",
+      "label": "ct_c3_tiny_long_wrapper_calling_c30d0e_then_returning",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:1ADB..C3:1AEF",
+      "kind": "data",
+      "label": "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper",
+    "ct_c3_tiny_long_wrapper_calling_c30d0e_then_returning",
+    "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass again used the upgraded flow: tiny-veneer detection first, then caller-quality checks on the surviving targets inside 1A60..1AEF.",
+    "C3:1A60 and C3:1A7B both have same-bank raw callers from already closed low-bank C3 code (C3:0CAA and C3:0232 respectively), but the local byte structure before 1AD6 still does not stabilize into a trustworthy owner/helper split, so that lead-in is frozen as mixed opcode-looking content rather than promoted prematurely.",
+    "C3:1AD6..1ADA is a confirmed veneer: JSL $C30D0E ; RTS. The target lies inside the already closed C3:0D0D..0D5B owner, making this wrapper structurally stronger than the surrounding bytes.",
+    "C3:1ADB..1AEF shifts immediately into table-like inline data after the wrapper, so the next live seam is reduced to 1AF0, whose RTL byte remains only a weak candidate until caller context improves."
+  ]
+}
