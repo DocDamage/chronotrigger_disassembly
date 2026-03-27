@@ -1,0 +1,29 @@
+{
+  "pass_number": 176,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:1817..",
+  "completion_estimate": 72.7,
+  "closed_ranges": [
+    {
+      "range": "C3:17BD..C3:1816",
+      "kind": "data",
+      "label": "ct_c3_mixed_opcode_looking_inline_blob_without_valid_c3_callers_before_isolated_1817_entry_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_mixed_opcode_looking_inline_blob_without_valid_c3_callers_before_isolated_1817_entry_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Re-audit of 17BD invalidates the prior C4:CE36 anchor claim: that byte pattern is a same-bank JSR inside bank C4 and therefore targets C4:17BD, not C3:17BD.",
+    "Direct pattern search finds no JSL/JML hits to C3:17BD and no same-bank C3 JSR/JMP hits either, so 17BD currently lacks a valid caller anchor.",
+    "Linear inspection across 17BD..1816 remains opcode-looking but does not stabilize into one trustworthy executable owner under cautious analysis, so the span is better frozen as mixed inline code-looking data than forced into fake code.",
+    "The next live seam is the already-isolated 1817 lane, but its external-entry story should be re-validated from real caller context rather than trusting raw byte-pattern matches alone."
+  ]
+}
