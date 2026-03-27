@@ -1,0 +1,35 @@
+{
+  "pass_number": 174,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:16AC..C3:1816",
+  "completion_estimate": 72.2,
+  "closed_ranges": [
+    {
+      "range": "C3:15E9..C3:16A7",
+      "kind": "data",
+      "label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:16A8..C3:16AB",
+      "kind": "veneer",
+      "label": "ct_c3_tiny_local_wrapper_calling_2629_then_returning",
+      "confidence": "high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper",
+    "ct_c3_tiny_local_wrapper_calling_2629_then_returning"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "15E9 opens with bytes that initially look more code-like than the earlier mixed blobs, but the region still does not stabilize into one trustworthy owner/helper body under cautious linear inspection.",
+    "The first fully crisp executable splinter after that opening is 16A8..16AB, which resolves cleanly as JSR $2629 ; RTS.",
+    "Next seam advances to 16AC..1816. The bytes immediately after 16AB should be tested for another local owner start rather than assuming the entire remainder is data or one giant routine."
+  ]
+}
