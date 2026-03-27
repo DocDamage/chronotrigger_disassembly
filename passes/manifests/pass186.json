@@ -1,0 +1,31 @@
+{
+  "pass_number": 186,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2400..",
+  "completion_estimate": 76.6,
+  "closed_ranges": [
+    {
+      "range": "C3:2300..C3:23FF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_brk_heavy_arithmetic_like_cluster_and_false_table_entry_targets_before_2400_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_brk_heavy_arithmetic_like_cluster_and_false_table_entry_targets_before_2400_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2300 using the same caller-plus-local-structure discipline as the recent conservative C3 pages.",
+    "The visible late raw targets at 2380, 2386, 238E, and 23A3 all land inside an obvious table-like repeated-value cluster rather than a believable owner/helper body.",
+    "At least one of those late hits is clearly caller-side overlap rather than a true opcode start: the apparent C3:0B27 -> C3:2380 relationship is an interior-byte false positive.",
+    "The tempting RTS byte at 2322 was checked as a possible one-byte stub, but its only visible raw caller does not remain trustworthy after caller-context review and is not promoted.",
+    "The middle pocket beginning around 2323 reads more coherently than the table-like tail, but it still degrades into BRK-heavy mixed content and has no caller-backed true start.",
+    "Because the caller-backed hits are structurally bad and the more coherent local middle pocket is unsupported, the whole 2300..23FF page is frozen honestly as mixed inline content before the next 2400 seam."
+  ]
+}
