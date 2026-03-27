@@ -1,0 +1,30 @@
+{
+  "pass_number": 184,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2200..",
+  "completion_estimate": 75.4,
+  "closed_ranges": [
+    {
+      "range": "C3:2100..C3:21FF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_xref_bait_with_untrusted_single_call_targets_and_unsupported_local_helper_pocket_before_2200_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_xref_bait_with_untrusted_single_call_targets_and_unsupported_local_helper_pocket_before_2200_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2100 using the upgraded tiny-veneer plus caller-context workflow.",
+    "Every visible raw entry target in 2100..21FF is only a single-hit target and none survives local byte-level sanity checks strongly enough to earn promotion.",
+    "The veneer scan only surfaced two BRA-looking signatures, at 2109 and 214D, and both were rejected as interior mixed-stream false positives rather than real executable boundaries.",
+    "The strongest local coherence in the page is a later helper-like pocket beginning around 2191, but it has no caller-quality support and the visible raw target at 21A0 lands inside that sequence instead of at its true start.",
+    "Because the supported targets are structurally bad and the structurally better pocket is unsupported, the whole 2100..21FF page is frozen honestly as mixed inline content before the next 2200 seam."
+  ]
+}
