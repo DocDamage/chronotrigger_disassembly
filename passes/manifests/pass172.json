@@ -1,0 +1,35 @@
+{
+  "pass_number": 172,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:13FC..C3:1816",
+  "completion_estimate": 71.9,
+  "closed_ranges": [
+    {
+      "range": "C3:1318..C3:13F7",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_dispatch_and_dma_setup_blob_preceding_tiny_eb7b_wrapper",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:13F8..C3:13FB",
+      "kind": "veneer",
+      "label": "ct_c3_tiny_local_wrapper_calling_eb7b_then_returning",
+      "confidence": "high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_control_dispatch_and_dma_setup_blob_preceding_tiny_eb7b_wrapper",
+    "ct_c3_tiny_local_wrapper_calling_eb7b_then_returning"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Cautious mixed-content split: 1318..13F7 does not hold up as one clean owner under linear sweep and instead behaves like an inline control/dispatch plus hardware-setup blob.",
+    "13F8..13FB resolves cleanly as a tiny local wrapper veneer: JSR $EB7B ; RTS.",
+    "Next seam advances to 13FC..1816, but 13FC..148B still looks table-heavy and should be approached conservatively."
+  ]
+}
