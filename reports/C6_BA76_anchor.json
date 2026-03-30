@@ -1,0 +1,25 @@
+{
+  "target": "C6:BA76",
+  "call_count": 1,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 0,
+  "suspect_anchor_count": 1,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JMP",
+      "caller": "C6:8A94",
+      "target": "C6:BA76",
+      "validity": "valid",
+      "anchor_strength": "suspect",
+      "caller_status": "resolved_data",
+      "caller_range": "C6:8A00..C6:8AFF",
+      "caller_kind_family": "data",
+      "caller_label": "ct_note_backed_frozen_page_c6_8a00_mixed_command_data_local_control_only",
+      "caller_confidence": "medium-high",
+      "notes": [
+        "caller sits inside a closed data range, so this hit is suspect"
+      ]
+    }
+  ]
+}
