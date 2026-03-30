@@ -7,7 +7,8 @@ from pathlib import Path
 
 from snes_utils_hirom_v2 import format_offset_as_snes, iter_all_call_patterns, parse_snes_address
 
-from manifest_xref_utils import anchor_strength, classify_caller_context, load_closed_ranges
+from manifest_xref_utils import anchor_strength, classify_caller_context
+from xref_index_utils_v1 import choose_closed_ranges
 
 
 def main() -> int:
@@ -17,13 +18,15 @@ def main() -> int:
     parser.add_argument('--rom', required=True)
     parser.add_argument('--target', required=True, help='Exact entry address like C3:1817')
     parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--sessions-dir', default='docs/sessions')
+    parser.add_argument('--closed-ranges-snapshot', default='tools/cache/closed_ranges_snapshot_v1.json')
     parser.add_argument('--only-valid', action='store_true')
     parser.add_argument('--json', action='store_true')
     args = parser.parse_args()
 
     bank, addr = parse_snes_address(args.target)
     rom_bytes = Path(args.rom).read_bytes()
-    closed_ranges = load_closed_ranges(args.manifests_dir)
+    closed_ranges = choose_closed_ranges(args.manifests_dir, args.closed_ranges_snapshot, args.sessions_dir)
 
     hits: list[dict[str, object]] = []
     for kind, offset in iter_all_call_patterns(rom_bytes, bank, addr):

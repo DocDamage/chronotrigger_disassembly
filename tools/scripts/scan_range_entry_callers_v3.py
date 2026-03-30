@@ -26,6 +26,7 @@ def main() -> int:
     parser.add_argument('--rom', required=True)
     parser.add_argument('--range', dest='range_text', required=True)
     parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--sessions-dir', default='docs/sessions')
     parser.add_argument('--closed-ranges-snapshot', default='')
     parser.add_argument('--xref-index', default='')
     parser.add_argument('--min-strength', choices=['strong', 'weak', 'suspect', 'invalid', 'any'], default='any')
@@ -34,7 +35,7 @@ def main() -> int:
 
     bank, start, end = parse_snes_range(args.range_text)
     rom_bytes = Path(args.rom).read_bytes()
-    closed_ranges = choose_closed_ranges(args.manifests_dir, args.closed_ranges_snapshot)
+    closed_ranges = choose_closed_ranges(args.manifests_dir, args.closed_ranges_snapshot, args.sessions_dir)
 
     rank = {'strong': 0, 'weak': 1, 'suspect': 2, 'invalid': 3}
     ceiling = 99 if args.min_strength == 'any' else rank[args.min_strength]
