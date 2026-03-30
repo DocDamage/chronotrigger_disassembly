@@ -21,9 +21,11 @@ def format_backtracks(items: list[dict[str, object]]) -> str:
         return 'none'
     parts = []
     for item in items[:3]:
-        owner = item.get('owner_start', '') or item.get('range', '')
+        start = item.get('candidate_start', '') or item.get('owner_start', '') or item.get('range', '')
+        target = item.get('target', '')
         score = item.get('score', 0)
-        parts.append(f'{owner} (score={score})')
+        label = f'{start}->{target}' if start and target else str(start or target)
+        parts.append(f'{label} (score={score})')
     return '; '.join(parts)
 
 
