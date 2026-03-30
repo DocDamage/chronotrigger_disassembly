@@ -12,12 +12,12 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_53.md`
-- Latest closed block: **`C6:C200..C6:CBFF`**
-- Current live seam: **`C6:CC00..`**
-- Continuation run closed so far: **40 ten-page blocks / 400 pages**
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_54.md`
+- Latest closed block: **`C6:CC00..C6:D5FF`**
+- Current live seam: **`C6:D600..`**
+- Continuation run closed so far: **41 ten-page blocks / 410 pages**
 - Promotion count across that continuation run: **0**
-- Effective closed-range snapshot after repair: **705 ranges** = **65** manifest-backed + **640** note-backed frozen pages across `C3/C4/C5/C6`
+- Effective closed-range snapshot after repair: **715 ranges** = **65** manifest-backed + **650** note-backed frozen pages across `C3/C4/C5/C6`
 
 That sounds harsh, but it is the correct read.
 The repo has now preserved a long mixed-content corridor honestly instead of polluting the label set with caller-backed bait entries.
@@ -30,9 +30,9 @@ Session 15 handoff ended with:
 - live seam **`C5:6300..`**
 - latest continuation note **`17`**
 
-Since then, the repo has closed **notes 18 through 53**:
-- **36 additional ten-page seam blocks**
-- range covered: **`C5:6300..C6:CBFF`**
+Since then, the repo has closed **notes 18 through 54**:
+- **37 additional ten-page seam blocks**
+- range covered: **`C5:6300..C6:D5FF`**
 - net result: **zero promotions**
 
 Important structural events in that run:
@@ -45,7 +45,7 @@ Important structural events in that run:
 ## What the latest work proves
 
 ### 1. This is a real mixed-content dead zone, not a missed easy win
-From `C5:3B00` through `C6:CBFF`, the project has not found one candidate where:
+From `C5:3B00` through `C6:D5FF`, the project has not found one candidate where:
 - caller quality held up
 - start-byte quality held up
 - local body structure held up
@@ -82,24 +82,24 @@ Use the repaired snapshot layer for seam and anchor work meanwhile.
 
 ---
 
-## Latest closed block: `C6:C200..C6:CBFF`
+## Latest closed block: `C6:CC00..C6:D5FF`
 
-This is the current frontier block from `docs/sessions/chrono_trigger_session15_continue_notes_53.md`.
+This is the current frontier block from `docs/sessions/chrono_trigger_session15_continue_notes_54.md`.
 
 Block result:
 - **10 pages processed**
 - **0 promotions**
-- new live seam: **`C6:CC00..`**
+- new live seam: **`C6:D600..`**
 
 Most important page outcomes:
-- `C6:C700` was the strongest honest near-miss in the block, but `C720` still had only weak unresolved callers
-- `C6:CA00` carried the strongest reject pressure in the block because hard-bad zero-start targets dominated the page
-- `C6:C400` had some mixed-lane traffic, but it never escalated to manual-owner review and still froze honestly
+- `C6:C400` was the strongest honest near-miss in the block, but it still never escaped mixed-lane/suspect-heavy territory
+- `C6:D400` carried the strongest reject pressure in the block because hard-bad `D409` dominated the page
+- no page in this block survived into `manual_owner_boundary_review`
 
 Read these artifacts first if you need the exact evidence:
-- `docs/sessions/chrono_trigger_session15_continue_notes_53.md`
-- `reports/c6_c200_cbff_seam_block.json`
-- `reports/c6_c200_cbff_seam_block.md`
+- `docs/sessions/chrono_trigger_session15_continue_notes_54.md`
+- `reports/c6_cc00_d5ff_seam_block.json`
+- `reports/c6_cc00_d5ff_seam_block.md`
 
 ---
 
@@ -107,13 +107,13 @@ Read these artifacts first if you need the exact evidence:
 
 ### Immediate next block
 Process exactly one ten-page seam block:
-- **`C6:CC00..C6:D5FF`**
+- **`C6:D600..C6:DFFF`**
 
 Start with:
 ```bash
 python3 tools/scripts/audit_branch_state_v1.py
-python3 tools/scripts/run_seam_block_v1.py --rom 'rom/Chrono Trigger (USA).sfc' --start C6:CC00 --pages 10 --json > reports/c6_cc00_d5ff_seam_block.json
-python3 tools/scripts/render_seam_block_report_v1.py --input reports/c6_cc00_d5ff_seam_block.json --output reports/c6_cc00_d5ff_seam_block.md
+python3 tools/scripts/run_seam_block_v1.py --rom 'rom/Chrono Trigger (USA).sfc' --start C6:D600 --pages 10 --json > reports/c6_d600_dfff_seam_block.json
+python3 tools/scripts/render_seam_block_report_v1.py --input reports/c6_d600_dfff_seam_block.json --output reports/c6_d600_dfff_seam_block.md
 ```
 
 Then:
@@ -121,7 +121,7 @@ Then:
 2. identify only the pages marked `manual_owner_boundary_review`
 3. run owner-backtrack scans for those pages
 4. run anchor reports only for targets that still look worth defending after byte review; `build_call_anchor_report_v3.py` now uses the rebuilt `tools/cache/closed_ranges_snapshot_v1.json` by default
-5. write `docs/sessions/chrono_trigger_session15_continue_notes_54.md`
+5. write `docs/sessions/chrono_trigger_session15_continue_notes_55.md`
 
 ### Promotion rule
 Only promote if all three converge:
@@ -142,16 +142,16 @@ If any of those fail, freeze and advance the seam.
 
 1. `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 2. `docs/handoffs/chrono_trigger_master_handoff_session16.md`
-3. `docs/sessions/chrono_trigger_session15_continue_notes_53.md`
-4. `docs/handoffs/chrono_trigger_resume_checklist_c6_cc00_d5ff.md`
+3. `docs/sessions/chrono_trigger_session15_continue_notes_54.md`
+4. `docs/handoffs/chrono_trigger_resume_checklist_c6_d600_dfff.md`
 5. `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md` (only if new caller-quality evidence appears)
-6. `reports/c6_c200_cbff_seam_block.md`
+6. `reports/c6_cc00_d5ff_seam_block.md`
 
 ---
 
 ## Bottom line
 
 The repo is current and internally consistent.
-The live frontier is **`C6:CC00..`**.
-The honest interpretation of the last 400 seam pages is still: **mixed-content corridor, zero safe promotions, keep moving conservatively**.
+The live frontier is **`C6:D600..`**.
+The honest interpretation of the last 410 seam pages is still: **mixed-content corridor, zero safe promotions, keep moving conservatively**.
 The important difference now is that the seam tools are no longer blind to the already closed note-backed pages behind that frontier.
