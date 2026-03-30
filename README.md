@@ -5,11 +5,11 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 ## Current live state
 - working branch: `live-work-from-pass166`
 - latest manifest-backed pass: `191`
-- latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_59.md`
-- latest closed block: `C6:FE00..C7:07FF`
-- current forward seam: `C7:0800..`
-- note-backed continuation run closed `46` ten-page blocks from `C5:3B00` through `C7:07FF` with `0` promotions
-- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now refreshes from manifests plus session-15 continuation notes and currently carries `765` closed ranges (`65` manifest-backed + `700` note-backed page freezes)
+- latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
+- latest closed block: `C7:3000..C7:39FF`
+- current forward seam: `C7:3A00..`
+- note-backed continuation run closed `51` ten-page blocks from `C5:3B00` through `C7:39FF` with `0` promotions
+- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now refreshes from manifests plus session-15 continuation notes and currently carries `815` closed ranges (`65` manifest-backed + `750` note-backed page freezes)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
 - continuation notes are the operative state-of-record from pass 191 onward, and their frozen pages now feed caller-context scoring through the seam snapshot layer (see `docs/sessions/chrono_trigger_session15_continue_notes_*.md`)
@@ -74,22 +74,25 @@ Recent `C3` work exposed three recurring problems:
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
 ## Current no-BS status
-The project has now pushed a long conservative seam run from `C5:3B00` through `C7:07FF` without a single defensible owner/helper promotion.
-That is not stalled work. It is strong negative evidence that this corridor is mixed command/data territory dominated by weak-only anchors, invalid companion targets, and dead/no-ingress pages.
+The project has now pushed a long conservative seam run from `C5:3B00` through `C7:39FF` without a single defensible owner/helper promotion.
+That is not stalled work. It is strong negative evidence that this corridor is mixed command/data territory dominated by weak-only anchors, invalid companion targets, dead/no-ingress pages, and later patterned control/data pockets that still fail byte-level review.
+The recent `C7` work sharpened that read:
+- `C7:0E00..C7:1BFF` now reads as an extended dead-zero / low-ingress corridor
+- `C7:1C00..C7:39FF` adds candidate-code bait and branch-fed/control pockets that still collapse under byte-structure review
 The current job is still to preserve label quality, not to manufacture code out of hot mixed-content pages.
 The high-priority tooling repair before the next block is now done: callers from already frozen note-backed pages no longer masquerade as unresolved weak support by default.
 
 ## Start here next session
-- read the latest handoff in `docs/handoffs/` - currently `chrono_trigger_master_handoff_session16.md`
+- read the latest handoff in `docs/handoffs/` - currently `chrono_trigger_master_handoff_session17.md`
 - read the repo authority map - `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
-- read the latest continuation notes - currently `docs/sessions/chrono_trigger_session15_continue_notes_59.md`
-- read the current resume checklist - `docs/handoffs/chrono_trigger_resume_checklist_c7_0800_11ff.md`
+- read the latest continuation notes - currently `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
+- read the current resume checklist - `docs/handoffs/chrono_trigger_resume_checklist_c7_3a00_43ff.md`
 - read the short revisit backlog only if new caller-quality evidence appears - `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md`
 - stay on `live-work-from-pass166`
-- run `python3 tools/scripts/audit_branch_state_v1.py` first to confirm the effective seam is still `C7:0800..`
-- resume from `C7:0800..`
-- run `run_seam_block_v1.py --start C7:0800 --pages 10` first; it now auto-refreshes `tools/cache/closed_ranges_snapshot_v1.json` from manifests plus continuation notes before scanning
+- run `python3 tools/scripts/audit_branch_state_v1.py` first to confirm the effective seam is still `C7:3A00..`
+- resume from `C7:3A00..`
+- run `run_seam_block_v1.py --start C7:3A00 --pages 10` first; it now auto-refreshes `tools/cache/closed_ranges_snapshot_v1.json` from manifests plus continuation notes before scanning
 - only run owner-backtrack and anchor reports for pages that the new block marks `manual_owner_boundary_review`
-- write `docs/sessions/chrono_trigger_session15_continue_notes_60.md` after the block closes
+- write `docs/sessions/chrono_trigger_session15_continue_notes_65.md` after the block closes
 - do not backfill manifests during seam work; the manifest layer is still frozen at pass `191`, but the seam snapshot now bridges the closed note-backed pages automatically
 - promotion standard: caller quality + start-byte quality + local structure must all converge

@@ -6,9 +6,10 @@ This directory mixes:
 - archival handoff material
 
 Current start files:
-- `chrono_trigger_master_handoff_session16.md`
-- `chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
+- `chrono_trigger_master_handoff_session17.md`
+- `chrono_trigger_resume_checklist_c7_3a00_43ff.md`
 - `chrono_trigger_repo_authority_map_2026-03-30.md`
+- `../sessions/chrono_trigger_session15_continue_notes_64.md`
 
 Historical but still useful:
 - older `chrono_trigger_master_handoff_session*.md`

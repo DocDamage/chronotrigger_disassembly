@@ -100,4 +100,4 @@ Do **not** treat these as current tasks:
 - reopening pages just because they were “the cleanest” in a bad block
 - revisiting unsupported islands without new inbound caller evidence
 
-Current priority remains the live seam at `C6:9A00..`.
+Current priority remains the live seam at `C7:0800..`.

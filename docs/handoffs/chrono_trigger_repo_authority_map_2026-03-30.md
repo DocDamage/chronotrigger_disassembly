@@ -9,7 +9,7 @@ Use it to answer:
 - what should be treated as archive material
 - which old files are most likely to confuse the next worker
 
-This file is current for the live seam at `C6:9A00..`.
+This file is current for the live seam at `C7:3A00..`.
 
 ---
 
@@ -17,9 +17,9 @@ This file is current for the live seam at `C6:9A00..`.
 
 Read these first for any new seam session:
 - `README.md`
-- `docs/handoffs/chrono_trigger_master_handoff_session16.md`
-- `docs/handoffs/chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
-- `docs/sessions/chrono_trigger_session15_continue_notes_48.md`
+- `docs/handoffs/chrono_trigger_master_handoff_session17.md`
+- `docs/handoffs/chrono_trigger_resume_checklist_c7_3a00_43ff.md`
+- `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
 - `tools/`
 - `reports/` for the current block and manual-page artifacts
 
@@ -101,13 +101,13 @@ These are the files or directories most likely to waste time if treated as curre
 ## Repo Status Summary
 
 Current directory counts from the audit:
-- `repo_sync/`: `41` files
-- `disassembly/`: `163` files
-- `labels/`: `164` files
-- `passes/`: `70` files
-- `docs/handoffs/`: `19` files
-- `docs/sessions/`: `94` files
-- `toolkits/`: `80` files
+- `repo_sync/`: `42` files
+- `disassembly/`: `164` files
+- `labels/`: `165` files
+- `passes/`: `71` files
+- `docs/handoffs/`: `35` files
+- `docs/sessions/`: `111` files
+- `toolkits/`: `81` files
 
 Interpretation:
 - the repo contains a large amount of valuable history
@@ -119,10 +119,10 @@ Interpretation:
 
 If the next worker wants the minimum correct context:
 1. `README.md`
-2. `docs/handoffs/chrono_trigger_master_handoff_session16.md`
-3. `docs/handoffs/chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
+2. `docs/handoffs/chrono_trigger_master_handoff_session17.md`
+3. `docs/handoffs/chrono_trigger_resume_checklist_c7_3a00_43ff.md`
 4. `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md`
-5. `docs/sessions/chrono_trigger_session15_continue_notes_48.md`
+5. `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
 
 If the next worker needs historical context after that:
 1. older `docs/sessions/chrono_trigger_session15_continue_notes_*.md`

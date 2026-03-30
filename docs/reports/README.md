@@ -13,6 +13,8 @@ What it is **not**:
 
 Use instead for live seam work:
 - `reports/` for current generated seam-block, anchor, backtrack, and flow artifacts
-- `docs/sessions/chrono_trigger_session15_continue_notes_48.md` for the current note-backed seam state
+- `docs/handoffs/chrono_trigger_master_handoff_session17.md` for the current top-line state
+- `docs/handoffs/chrono_trigger_resume_checklist_c7_3a00_43ff.md` for the active next block
+- `docs/sessions/chrono_trigger_session15_continue_notes_64.md` for the current note-backed seam state
 
 Use this directory as historical reference and toolkit history.
