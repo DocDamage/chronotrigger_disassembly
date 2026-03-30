@@ -1,0 +1,40 @@
+{
+  "target": "C6:E74E",
+  "call_count": 2,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 2,
+  "suspect_anchor_count": 0,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JSL",
+      "caller": "C2:4E6D",
+      "target": "C6:E74E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSL",
+      "caller": "C6:E7EE",
+      "target": "C6:E74E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    }
+  ]
+}

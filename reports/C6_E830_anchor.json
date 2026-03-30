@@ -1,0 +1,25 @@
+{
+  "target": "C6:E830",
+  "call_count": 1,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 0,
+  "suspect_anchor_count": 1,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C6:4B79",
+      "target": "C6:E830",
+      "validity": "valid",
+      "anchor_strength": "suspect",
+      "caller_status": "resolved_data",
+      "caller_range": "C6:4B00..C6:4BFF",
+      "caller_kind_family": "data",
+      "caller_label": "ct_note_backed_frozen_page_c6_4b00_candidate_code_lane_local_control_only",
+      "caller_confidence": "medium-high",
+      "notes": [
+        "caller sits inside a closed data range, so this hit is suspect"
+      ]
+    }
+  ]
+}
