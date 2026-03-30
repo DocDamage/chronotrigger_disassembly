@@ -1,0 +1,5 @@
+target: C7:062C
+call_count: 1
+strong=0 weak=1 suspect=0 invalid=0
+  JMP from C7:6EBD -> valid / weak / unresolved
+    note: caller lives in unresolved bytes, so this is weak anchor evidence
