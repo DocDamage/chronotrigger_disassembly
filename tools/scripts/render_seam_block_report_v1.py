@@ -11,7 +11,8 @@ def format_targets(targets: list[dict[str, object]]) -> str:
         return 'none'
     parts = []
     for item in targets[:3]:
-        parts.append(f"{item['target']} ({item['best_strength']}, hits={item['hit_count']})")
+        tag = ' [boundary_bait]' if item.get('boundary_bait') else ''
+        parts.append(f"{item['target']} ({item['best_strength']}, hits={item['hit_count']}){tag}")
     return '; '.join(parts)
 
 

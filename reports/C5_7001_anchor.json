@@ -1,0 +1,145 @@
+{
+  "target": "C5:7001",
+  "call_count": 9,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 1,
+  "suspect_anchor_count": 0,
+  "invalid_count": 8,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C5:52F0",
+      "target": "C5:7001",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "CE:2730",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at CE:2730 resolves to CE:7001, not C5:7001"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "CE:7C48",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at CE:7C48 resolves to CE:7001, not C5:7001"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "CE:D734",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at CE:D734 resolves to CE:7001, not C5:7001"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "E5:14AA",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at E5:14AA resolves to E5:7001, not C5:7001"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "F0:0654",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at F0:0654 resolves to F0:7001, not C5:7001"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "FB:E7DB",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at FB:E7DB resolves to FB:7001, not C5:7001"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "FE:BCDC",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at FE:BCDC resolves to FE:7001, not C5:7001"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "FF:BC56",
+      "target": "C5:7001",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at FF:BC56 resolves to FF:7001, not C5:7001"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "range": "C5:DA00..C5:DAFF",
+  "page_family": {
+    "range": "C5:DA00..C5:DAFF",
+    "page_family": "branch_fed_control_pocket",
+    "reasons": [
+      "branch_dense",
+      "return_anchored"
+    ],
+    "metrics": {
+      "ascii_ratio": 0.195,
+      "zero_ratio": 0.086,
+      "zero_ff_ratio": 0.145,
+      "repeated_pair_score": 0.242,
+      "branch_ratio": 0.223,
+      "call_ratio": 0.027,
+      "return_count": 4
+    }
+  },
+  "tiny_veneers": {
+    "range": "C5:DA00..C5:DAFF",
+    "candidate_count": 6,
+    "candidates": [
+      {
+        "range": "C5:DA07..C5:DA08",
+        "pattern": "bra_landing_pad",
+        "target": "C5:DA7B",
+        "confidence": "medium"
+      },
+      {
+        "range": "C5:DA49..C5:DA4A",
+        "pattern": "bra_landing_pad",
+        "target": "C5:DA49",
+        "confidence": "medium"
+      },
+      {
+        "range": "C5:DA96..C5:DA97",
+        "pattern": "bra_landing_pad",
+        "target": "C5:DA99",
+        "confidence": "medium"
+      },
+      {
+        "range": "C5:DAD6..C5:DAD7",
+        "pattern": "bra_landing_pad",
+        "target": "C5:DB13",
+        "confidence": "medium"
+      },
+      {
+        "range": "C5:DAE8..C5:DAE9",
+        "pattern": "bra_landing_pad",
+        "target": "C5:DA79",
+        "confidence": "medium"
+      },
+      {
+        "range": "C5:DAF6..C5:DAF7",
+        "pattern": "bra_landing_pad",
+        "target": "C5:DAF7",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "entry_callers": {
+    "range": "C5:DA00..C5:DAFF",
+    "target_count": 2,
+    "targets": [
+      {
+        "target": "C5:DA12",
+        "strong_anchor_count": 0,
+        "weak_anchor_count": 1,
+        "suspect_anchor_count": 0,
+        "invalid_count": 0,
+        "hits": [
+          {
+            "target": "C5:DA12",
+            "kind": "JSR",
+            "caller": "C5:719C",
+            "validity": "valid",
+            "anchor_strength": "weak",
+            "caller_status": "unresolved",
+            "caller_range": "",
+            "caller_kind_family": "unknown",
+            "caller_label": "",
+            "caller_confidence": "unknown"
+          }
+        ]
+      },
+      {
+        "target": "C5:DA3F",
+        "strong_anchor_count": 0,
+        "weak_anchor_count": 1,
+        "suspect_anchor_count": 0,
+        "invalid_count": 0,
+        "hits": [
+          {
+            "target": "C5:DA3F",
+            "kind": "JSR",
+            "caller": "C5:2394",
+            "validity": "valid",
+            "anchor_strength": "weak",
+            "caller_status": "unresolved",
+            "caller_range": "",
+            "caller_kind_family": "unknown",
+            "caller_label": "",
+            "caller_confidence": "unknown"
+          }
+        ]
+      }
+    ]
+  },
+  "xref_context": {
+    "range": "C5:DA00..C5:DAFF",
+    "page_family": "branch_fed_control_pocket",
+    "hit_count": 2,
+    "dead_lane_suppressed_count": 0,
+    "hard_bad_start_hit_count": 1,
+    "soft_bad_start_hit_count": 0,
+    "hits": [
+      {
+        "target": "C5:DA12",
+        "caller": "C5:719C",
+        "kind": "JSR",
+        "validity": "valid",
+        "anchor_strength": "weak",
+        "effective_strength": "suspect",
+        "caller_risk": "high",
+        "target_risk": "high",
+        "start_byte": "F0",
+        "start_class": "clean_start",
+        "start_reason": "",
+        "dead_range": "",
+        "dead_range_reason": "",
+        "flags": [],
+        "page_family": "branch_fed_control_pocket",
+        "page_family_reasons": [
+          "branch_dense",
+          "return_anchored"
+        ],
+        "caller_ascii_ratio": 0.364,
+        "caller_zero_ff_ratio": 0.091,
+        "caller_repeated_pair_score": 0.0,
+        "target_ascii_ratio": 0.03,
+        "target_zero_ff_ratio": 0.121,
+        "target_repeated_pair_score": 0.5,
+        "caller_status": "unresolved",
+        "caller_range": "",
+        "caller_kind_family": "unknown",
+        "caller_label": "",
+        "caller_confidence": "unknown"
+      },
+      {
+        "target": "C5:DA3F",
+        "caller": "C5:2394",
+        "kind": "JSR",
+        "validity": "valid",
+        "anchor_strength": "weak",
+        "effective_strength": "invalid",
+        "caller_risk": "medium",
+        "target_risk": "medium",
+        "start_byte": "02",
+        "start_class": "hard_bad_start",
+        "start_reason": "cop_barrier",
+        "dead_range": "",
+        "dead_range_reason": "",
+        "flags": [
+          "cop_barrier"
+        ],
+        "page_family": "branch_fed_control_pocket",
+        "page_family_reasons": [
+          "branch_dense",
+          "return_anchored"
+        ],
+        "caller_ascii_ratio": 0.152,
+        "caller_zero_ff_ratio": 0.242,
+        "caller_repeated_pair_score": 0.0,
+        "target_ascii_ratio": 0.121,
+        "target_zero_ff_ratio": 0.091,
+        "target_repeated_pair_score": 0.25,
+        "caller_status": "unresolved",
+        "caller_range": "",
+        "caller_kind_family": "unknown",
+        "caller_label": "",
+        "caller_confidence": "unknown"
+      }
+    ]
+  },
+  "owner_backtrack": {
+    "range": "C5:DA00..C5:DAFF",
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "candidate_start": "C5:DA3E",
+        "target": "C5:DA3F",
+        "score": 4,
+        "distance_to_target": 1,
+        "start_byte": "08",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.231,
+        "zero_ff_ratio": 0.077,
+        "repeated_pair_score": 0.0,
+        "candidate_range": "C5:DA3E..C5:DA57"
+      },
+      {
+        "candidate_start": "C5:DA0C",
+        "target": "C5:DA12",
+        "score": 0,
+        "distance_to_target": 6,
+        "start_byte": "F0",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.0,
+        "zero_ff_ratio": 0.032,
+        "repeated_pair_score": 0.8,
+        "candidate_range": "C5:DA0C..C5:DA2A"
+      }
+    ]
+  },
+  "local_islands": {
+    "range": "C5:DA00..C5:DAFF",
+    "island_count": 2,
+    "cluster_count": 2,
+    "islands": [
+      {
+        "range": "C5:DAB2..C5:DABC",
+        "score": 6,
+        "width": 11,
+        "call_count": 1,
+        "branch_count": 3,
+        "stackish_count": 0,
+        "return_count": 1,
+        "first_return_address": "C5:DABC",
+        "ascii_ratio": 0.273,
+        "repeated_pair_score": 0.0,
+        "data_misread_flags": []
+      },
+      {
+        "range": "C5:DA9F..C5:DAA8",
+        "score": 2,
+        "width": 10,
+        "call_count": 0,
+        "branch_count": 1,
+        "stackish_count": 0,
+        "return_count": 2,
+        "first_return_address": "C5:DAA0",
+        "ascii_ratio": 0.6,
+        "repeated_pair_score": 0.0,
+        "data_misread_flags": []
+      }
+    ],
+    "clusters": [
+      {
+        "range": "C5:DAB2..C5:DABC",
+        "cluster_score": 6,
+        "child_count": 1,
+        "child_ranges": [
+          "C5:DAB2..C5:DABC"
+        ],
+        "width": 11,
+        "call_count": 1,
+        "branch_count": 3,
+        "stackish_count": 0,
+        "return_count": 1,
+        "ascii_ratio": 0.273,
+        "repeated_pair_score": 0.0,
+        "data_misread_flags": []
+      },
+      {
+        "range": "C5:DA9F..C5:DAA8",
+        "cluster_score": 2,
+        "child_count": 1,
+        "child_ranges": [
+          "C5:DA9F..C5:DAA8"
+        ],
+        "width": 10,
+        "call_count": 0,
+        "branch_count": 1,
+        "stackish_count": 0,
+        "return_count": 2,
+        "ascii_ratio": 0.6,
+        "repeated_pair_score": 0.0,
+        "data_misread_flags": []
+      }
+    ]
+  },
+  "wrapper_target_quality": {
+    "range": "C5:DA00..C5:DAFF",
+    "wrapper_count": 0,
+    "wrapper_bad_target_count": 0,
+    "wrappers": []
+  },
+  "summary": {
+    "raw_target_count": 2,
+    "xref_hit_count": 2,
+    "effective_strong_or_weak_hits": 0,
+    "dead_lane_suppressed_hits": 0,
+    "hard_bad_start_hits": 1,
+    "soft_bad_start_hits": 0,
+    "owner_backtrack_candidates": 1,
+    "local_island_count": 2,
+    "local_cluster_count": 2,
+    "tiny_veneer_count": 6,
+    "wrapper_bad_target_count": 0,
+    "review_posture": "bad_start_or_dead_lane_reject"
+  }
+}

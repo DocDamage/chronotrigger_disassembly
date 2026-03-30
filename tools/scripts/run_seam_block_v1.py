@@ -44,6 +44,10 @@ def best_targets(xref_hits: list[dict[str, object]], limit: int = 5) -> list[dic
         bucket['callers'].append(str(hit['caller']))
         if STRENGTH_RANK[str(hit['effective_strength'])] < STRENGTH_RANK[str(bucket['best_strength'])]:
             bucket['best_strength'] = str(hit['effective_strength'])
+    for bucket in grouped.values():
+        # flag targets in the last 3 bytes of their page — instruction would span the page boundary
+        _, addr_hex = str(bucket['target']).split(':')
+        bucket['boundary_bait'] = (int(addr_hex, 16) & 0xFF) >= 0xFD
     items = list(grouped.values())
     items.sort(key=lambda item: (STRENGTH_RANK[str(item['best_strength'])], -int(item['hit_count']), str(item['target'])))
     return items[:limit]

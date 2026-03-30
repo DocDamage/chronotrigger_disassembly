@@ -1,0 +1,54 @@
+{
+  "range": "C6:3A00..C6:3AFF",
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "candidate_start": "C6:3A36",
+      "target": "C6:3A3A",
+      "score": 4,
+      "distance_to_target": 4,
+      "start_byte": "08",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.276,
+      "zero_ff_ratio": 0.0,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:3A36..C6:3A52"
+    },
+    {
+      "candidate_start": "C6:3A08",
+      "target": "C6:3A13",
+      "score": 2,
+      "distance_to_target": 11,
+      "start_byte": "0C",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.056,
+      "zero_ff_ratio": 0.028,
+      "repeated_pair_score": 0.222,
+      "candidate_range": "C6:3A08..C6:3A2B"
+    },
+    {
+      "candidate_start": "C6:3AC6",
+      "target": "C6:3ACE",
+      "score": 2,
+      "distance_to_target": 8,
+      "start_byte": "3B",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.394,
+      "zero_ff_ratio": 0.03,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:3AC6..C6:3AE6"
+    },
+    {
+      "candidate_start": "C6:3A08",
+      "target": "C6:3A08",
+      "score": 1,
+      "distance_to_target": 0,
+      "start_byte": "0C",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.08,
+      "zero_ff_ratio": 0.04,
+      "repeated_pair_score": 0.333,
+      "candidate_range": "C6:3A08..C6:3A20"
+    }
+  ]
+}

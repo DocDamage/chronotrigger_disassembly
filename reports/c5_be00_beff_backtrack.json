@@ -1,0 +1,42 @@
+{
+  "range": "C5:BE00..C5:BEFF",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "candidate_start": "C5:BE09",
+      "target": "C5:BE12",
+      "score": 4,
+      "distance_to_target": 9,
+      "start_byte": "93",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.235,
+      "zero_ff_ratio": 0.0,
+      "repeated_pair_score": 0.294,
+      "candidate_range": "C5:BE09..C5:BE2A"
+    },
+    {
+      "candidate_start": "C5:BE7D",
+      "target": "C5:BE7F",
+      "score": 4,
+      "distance_to_target": 2,
+      "start_byte": "2F",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.333,
+      "zero_ff_ratio": 0.074,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C5:BE7D..C5:BE97"
+    },
+    {
+      "candidate_start": "C5:BE7D",
+      "target": "C5:BE8C",
+      "score": 4,
+      "distance_to_target": 15,
+      "start_byte": "2F",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.35,
+      "zero_ff_ratio": 0.125,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C5:BE7D..C5:BEA4"
+    }
+  ]
+}

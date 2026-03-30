@@ -1,0 +1,201 @@
+{
+  "range": "C5:D900..C5:D9FF",
+  "page_family": {
+    "range": "C5:D900..C5:D9FF",
+    "page_family": "mixed_command_data",
+    "reasons": [
+      "mixed_metrics"
+    ],
+    "metrics": {
+      "ascii_ratio": 0.305,
+      "zero_ratio": 0.031,
+      "zero_ff_ratio": 0.094,
+      "repeated_pair_score": 0.664,
+      "branch_ratio": 0.355,
+      "call_ratio": 0.273,
+      "return_count": 0
+    }
+  },
+  "tiny_veneers": {
+    "range": "C5:D900..C5:D9FF",
+    "candidate_count": 0,
+    "candidates": []
+  },
+  "entry_callers": {
+    "range": "C5:D900..C5:D9FF",
+    "target_count": 2,
+    "targets": [
+      {
+        "target": "C5:D905",
+        "strong_anchor_count": 0,
+        "weak_anchor_count": 1,
+        "suspect_anchor_count": 0,
+        "invalid_count": 0,
+        "hits": [
+          {
+            "target": "C5:D905",
+            "kind": "JSR",
+            "caller": "C5:A05E",
+            "validity": "valid",
+            "anchor_strength": "weak",
+            "caller_status": "unresolved",
+            "caller_range": "",
+            "caller_kind_family": "unknown",
+            "caller_label": "",
+            "caller_confidence": "unknown"
+          }
+        ]
+      },
+      {
+        "target": "C5:D982",
+        "strong_anchor_count": 0,
+        "weak_anchor_count": 1,
+        "suspect_anchor_count": 0,
+        "invalid_count": 0,
+        "hits": [
+          {
+            "target": "C5:D982",
+            "kind": "JSR",
+            "caller": "C5:26EF",
+            "validity": "valid",
+            "anchor_strength": "weak",
+            "caller_status": "unresolved",
+            "caller_range": "",
+            "caller_kind_family": "unknown",
+            "caller_label": "",
+            "caller_confidence": "unknown"
+          }
+        ]
+      }
+    ]
+  },
+  "xref_context": {
+    "range": "C5:D900..C5:D9FF",
+    "page_family": "mixed_command_data",
+    "hit_count": 2,
+    "dead_lane_suppressed_count": 0,
+    "hard_bad_start_hit_count": 0,
+    "soft_bad_start_hit_count": 0,
+    "hits": [
+      {
+        "target": "C5:D905",
+        "caller": "C5:A05E",
+        "kind": "JSR",
+        "validity": "valid",
+        "anchor_strength": "weak",
+        "effective_strength": "suspect",
+        "caller_risk": "low",
+        "target_risk": "very_high",
+        "start_byte": "20",
+        "start_class": "clean_start",
+        "start_reason": "",
+        "dead_range": "",
+        "dead_range_reason": "",
+        "flags": [],
+        "page_family": "mixed_command_data",
+        "page_family_reasons": [
+          "mixed_metrics"
+        ],
+        "caller_ascii_ratio": 0.212,
+        "caller_zero_ff_ratio": 0.061,
+        "caller_repeated_pair_score": 0.0,
+        "target_ascii_ratio": 0.455,
+        "target_zero_ff_ratio": 0.061,
+        "target_repeated_pair_score": 0.75,
+        "caller_status": "unresolved",
+        "caller_range": "",
+        "caller_kind_family": "unknown",
+        "caller_label": "",
+        "caller_confidence": "unknown"
+      },
+      {
+        "target": "C5:D982",
+        "caller": "C5:26EF",
+        "kind": "JSR",
+        "validity": "valid",
+        "anchor_strength": "weak",
+        "effective_strength": "suspect",
+        "caller_risk": "medium",
+        "target_risk": "very_high",
+        "start_byte": "F0",
+        "start_class": "clean_start",
+        "start_reason": "",
+        "dead_range": "",
+        "dead_range_reason": "",
+        "flags": [],
+        "page_family": "mixed_command_data",
+        "page_family_reasons": [
+          "mixed_metrics"
+        ],
+        "caller_ascii_ratio": 0.333,
+        "caller_zero_ff_ratio": 0.091,
+        "caller_repeated_pair_score": 0.0,
+        "target_ascii_ratio": 0.485,
+        "target_zero_ff_ratio": 0.061,
+        "target_repeated_pair_score": 0.75,
+        "caller_status": "unresolved",
+        "caller_range": "",
+        "caller_kind_family": "unknown",
+        "caller_label": "",
+        "caller_confidence": "unknown"
+      }
+    ]
+  },
+  "owner_backtrack": {
+    "range": "C5:D900..C5:D9FF",
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "candidate_start": "C5:D901",
+        "target": "C5:D905",
+        "score": 0,
+        "distance_to_target": 4,
+        "start_byte": "20",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.483,
+        "zero_ff_ratio": 0.069,
+        "repeated_pair_score": 0.714,
+        "candidate_range": "C5:D901..C5:D91D"
+      },
+      {
+        "candidate_start": "C5:D982",
+        "target": "C5:D982",
+        "score": -1,
+        "distance_to_target": 0,
+        "start_byte": "F0",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.32,
+        "zero_ff_ratio": 0.04,
+        "repeated_pair_score": 0.667,
+        "candidate_range": "C5:D982..C5:D99A"
+      }
+    ]
+  },
+  "local_islands": {
+    "range": "C5:D900..C5:D9FF",
+    "island_count": 0,
+    "cluster_count": 0,
+    "islands": [],
+    "clusters": []
+  },
+  "wrapper_target_quality": {
+    "range": "C5:D900..C5:D9FF",
+    "wrapper_count": 0,
+    "wrapper_bad_target_count": 0,
+    "wrappers": []
+  },
+  "summary": {
+    "raw_target_count": 2,
+    "xref_hit_count": 2,
+    "effective_strong_or_weak_hits": 0,
+    "dead_lane_suppressed_hits": 0,
+    "hard_bad_start_hits": 0,
+    "soft_bad_start_hits": 0,
+    "owner_backtrack_candidates": 0,
+    "local_island_count": 0,
+    "local_cluster_count": 0,
+    "tiny_veneer_count": 0,
+    "wrapper_bad_target_count": 0,
+    "review_posture": "mixed_lane_continue"
+  }
+}

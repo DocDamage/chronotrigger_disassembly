@@ -17,7 +17,12 @@ from seam_triage_utils_v1 import (
 )
 from manifest_xref_utils import iter_raw_callers
 
-LIKELY_PROLOG = {0xA9, 0xA2, 0xA0, 0x08, 0x48, 0xDA, 0x5A, 0x20, 0x22}
+# Opcodes that are strong function-entry signals in 65816 SNES code.
+# Push/save ops: PHP(08), PHA(48), PHX(DA), PHY(5A), PHD(0B), PHK(4B), PHB(8B)
+# Mode-set ops: REP(C2) — set 16-bit mode, very common prologue
+# Call ops: JSR(20), JSL(22)
+# Load-immediate ops: LDA#(A9), LDX#(A2), LDY#(A0) — common register initialisation
+LIKELY_PROLOG = {0xA9, 0xA2, 0xA0, 0x08, 0x48, 0xDA, 0x5A, 0x20, 0x22, 0x0B, 0x4B, 0x8B, 0xC2}
 
 def score_candidate(blob: bytes, start_byte: int, target_inside_offset: int) -> int:
     score = 0

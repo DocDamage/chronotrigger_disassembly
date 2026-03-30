@@ -39,6 +39,7 @@ BAD_START_HARD = {
     0x00: 'brk_or_barrier',
     0x02: 'cop_barrier',
     0x03: 'or_indirect_stack_start',
+    0x40: 'rti_return_stub',
     0x60: 'rts_return_stub',
     0x6B: 'rtl_return_stub',
     0x80: 'bra_landing_pad',
@@ -48,7 +49,9 @@ BAD_START_HARD = {
 BAD_START_SOFT = {
     0x01: 'ora_indirect_start',
     0x09: 'ora_immediate_start',
+    0x2B: 'pld_epilogue_pull',
     0x30: 'branch_opcode_start',
+    0xAB: 'plb_epilogue_pull',
 }
 
 BRANCHES = {0x10, 0x30, 0x50, 0x70, 0x80, 0x82, 0x90, 0xB0, 0xD0, 0xF0}
@@ -201,3 +204,55 @@ def dead_range_match(dead_ranges: Iterable[dict[str, str]], bank: int, addr: int
         if range_contains(item['range'], bank, addr):
             return item
     return None
+
+def check_data_misread_patterns(blob: bytes) -> list[str]:
+    """Return a list of data-misread signature labels found in blob.
+
+    Patterns detected:
+    - consecutive_identical_branch: same branch opcode+operand appears at offset i and i+2
+    - consecutive_rts: two 0x60 bytes in a row (back-to-back RTS)
+    - rti_rts_proximity: RTI (0x40) and RTS (0x60) within 3 bytes of each other
+    - tight_loop_branch: any branch opcode with operand 0xFF (branch to self-minus-one)
+    - sed_decimal_mode: SED (0xF8) in first 16 bytes — SNES production code never uses decimal mode
+    """
+    flags: list[str] = []
+    n = len(blob)
+
+    # consecutive identical branch: branch opcode at i and i+2 with same operand
+    for i in range(n - 3):
+        if blob[i] in BRANCHES and blob[i] == blob[i + 2] and blob[i + 1] == blob[i + 3]:
+            flags.append(f'consecutive_identical_branch_at_{i:02X}')
+            break
+
+    # consecutive RTS (60 60)
+    for i in range(n - 1):
+        if blob[i] == 0x60 and blob[i + 1] == 0x60:
+            flags.append(f'consecutive_rts_at_{i:02X}')
+            break
+
+    # RTI + RTS within 3 bytes of each other
+    rti_pos = [i for i, b in enumerate(blob) if b == 0x40]
+    rts_pos = [i for i, b in enumerate(blob) if b == 0x60]
+    reported_proximity = False
+    for ri in rti_pos:
+        for si in rts_pos:
+            if abs(ri - si) <= 3:
+                flags.append(f'rti_rts_proximity_at_{min(ri, si):02X}')
+                reported_proximity = True
+                break
+        if reported_proximity:
+            break
+
+    # tight-loop backward branch: branch opcode followed by 0xFF (-1 offset = branch to self-minus-one)
+    for i in range(n - 1):
+        if blob[i] in BRANCHES and blob[i + 1] == 0xFF:
+            flags.append(f'tight_loop_branch_at_{i:02X}')
+            break
+
+    # SED (0xF8) in first 16 bytes — decimal mode never used in SNES production code
+    for i in range(min(16, n)):
+        if blob[i] == 0xF8:
+            flags.append(f'sed_decimal_mode_at_{i:02X}')
+            break
+
+    return flags

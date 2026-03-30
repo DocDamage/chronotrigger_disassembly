@@ -1,0 +1,205 @@
+{
+  "target": "C6:3003",
+  "call_count": 13,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 1,
+  "suspect_anchor_count": 0,
+  "invalid_count": 12,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C6:D2EA",
+      "target": "C6:3003",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C2:604A",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at C2:604A resolves to C2:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "CD:E469",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at CD:E469 resolves to CD:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "D9:5491",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at D9:5491 resolves to D9:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "D9:67F7",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at D9:67F7 resolves to D9:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "E0:20E1",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at E0:20E1 resolves to E0:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "E1:5B56",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at E1:5B56 resolves to E1:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "EA:445A",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at EA:445A resolves to EA:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "EC:DCA2",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at EC:DCA2 resolves to EC:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "F0:3509",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at F0:3509 resolves to F0:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "F2:5657",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at F2:5657 resolves to F2:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "F2:7DB2",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at F2:7DB2 resolves to F2:3003, not C6:3003"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "F9:9210",
+      "target": "C6:3003",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at F9:9210 resolves to F9:3003, not C6:3003"
+      ]
+    }
+  ]
+}
