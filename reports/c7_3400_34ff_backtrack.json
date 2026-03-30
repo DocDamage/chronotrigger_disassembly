@@ -1,0 +1,42 @@
+{
+  "range": "C7:3400..C7:34FF",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "candidate_start": "C7:34D8",
+      "target": "C7:34DE",
+      "score": 4,
+      "distance_to_target": 6,
+      "start_byte": "DA",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.161,
+      "zero_ff_ratio": 0.097,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:34D8..C7:34F6"
+    },
+    {
+      "candidate_start": "C7:3401",
+      "target": "C7:3402",
+      "score": 2,
+      "distance_to_target": 1,
+      "start_byte": "E1",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.192,
+      "zero_ff_ratio": 0.0,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:3401..C7:341A"
+    },
+    {
+      "candidate_start": "C7:34DE",
+      "target": "C7:34EE",
+      "score": 2,
+      "distance_to_target": 16,
+      "start_byte": "28",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.195,
+      "zero_ff_ratio": 0.073,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:34DE..C7:34FF"
+    }
+  ]
+}

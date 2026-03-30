@@ -10,7 +10,8 @@ For the live repo state, read instead:
 - `README.md`
 - `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 - `docs/handoffs/chrono_trigger_master_handoff_session16.md`
-- `docs/handoffs/chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
+- `docs/handoffs/chrono_trigger_resume_checklist_c7_0800_11ff.md`
+- `docs/sessions/chrono_trigger_session15_continue_notes_59.md`
 
 ## Purpose
 This document is a **topic-based master index** for the work completed in this session, intended to sit beside the chronological handoff and the per-pass markdown files.
