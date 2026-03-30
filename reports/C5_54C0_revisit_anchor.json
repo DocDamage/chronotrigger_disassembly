@@ -1,0 +1,25 @@
+{
+  "target": "C5:54C0",
+  "call_count": 1,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 0,
+  "suspect_anchor_count": 1,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C5:DE7C",
+      "target": "C5:54C0",
+      "validity": "valid",
+      "anchor_strength": "suspect",
+      "caller_status": "resolved_data",
+      "caller_range": "C5:DE00..C5:DEFF",
+      "caller_kind_family": "data",
+      "caller_label": "ct_note_backed_frozen_page_c5_de00_branch_fed_control_pocket_manual_owner_boundary_review",
+      "caller_confidence": "medium-high",
+      "notes": [
+        "caller sits inside a closed data range, so this hit is suspect"
+      ]
+    }
+  ]
+}
