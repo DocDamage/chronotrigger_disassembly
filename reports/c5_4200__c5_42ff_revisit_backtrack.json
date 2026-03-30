@@ -1,0 +1,30 @@
+{
+  "range": "C5:4200..C5:42FF",
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "candidate_start": "C5:4206",
+      "target": "C5:4208",
+      "score": 6,
+      "distance_to_target": 2,
+      "start_byte": "08",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.222,
+      "zero_ff_ratio": 0.074,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C5:4206..C5:4220"
+    },
+    {
+      "candidate_start": "C5:4200",
+      "target": "C5:4200",
+      "score": 1,
+      "distance_to_target": 0,
+      "start_byte": "0F",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.16,
+      "zero_ff_ratio": 0.08,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C5:4200..C5:4218"
+    }
+  ]
+}

@@ -6,6 +6,14 @@ This is the short backlog extracted from older note-backed seam work so nobody h
 This is **not** a “reopen everything” list.
 These pages should only be revisited if new caller-quality evidence appears.
 
+Latest tighter audit:
+- `docs/reports/chrono_trigger_tier1_revisit_audit_2026-03-30.md`
+
+Current audit result:
+- no Tier-1 page earned reopening
+- repaired caller-context scoring downgraded every caller-backed Tier-1 target to **suspect / resolved_data**
+- exact unsupported islands (`C5:4387..438E`, `C5:4821..482A`) still have zero direct callers
+
 ---
 
 ## Tier 1: Highest-Value Revisit Candidates

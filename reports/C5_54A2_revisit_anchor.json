@@ -1,0 +1,25 @@
+{
+  "target": "C5:54A2",
+  "call_count": 1,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 0,
+  "suspect_anchor_count": 1,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C5:D573",
+      "target": "C5:54A2",
+      "validity": "valid",
+      "anchor_strength": "suspect",
+      "caller_status": "resolved_data",
+      "caller_range": "C5:D500..C5:D5FF",
+      "caller_kind_family": "data",
+      "caller_label": "ct_note_backed_frozen_page_c5_d500_branch_fed_control_pocket_local_control_only",
+      "caller_confidence": "medium-high",
+      "notes": [
+        "caller sits inside a closed data range, so this hit is suspect"
+      ]
+    }
+  ]
+}

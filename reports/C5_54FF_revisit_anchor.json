@@ -1,0 +1,40 @@
+{
+  "target": "C5:54FF",
+  "call_count": 2,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 0,
+  "suspect_anchor_count": 2,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JMP",
+      "caller": "C5:18D3",
+      "target": "C5:54FF",
+      "validity": "valid",
+      "anchor_strength": "suspect",
+      "caller_status": "resolved_data",
+      "caller_range": "C5:1800..C5:18FF",
+      "caller_kind_family": "data",
+      "caller_label": "ct_note_backed_frozen_page_c5_1800_coarse_zero_promotion_note_12_block_01_page_06",
+      "caller_confidence": "medium",
+      "notes": [
+        "caller sits inside a closed data range, so this hit is suspect"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C5:5293",
+      "target": "C5:54FF",
+      "validity": "valid",
+      "anchor_strength": "suspect",
+      "caller_status": "resolved_data",
+      "caller_range": "C5:5200..C5:52FF",
+      "caller_kind_family": "data",
+      "caller_label": "ct_note_backed_frozen_page_c5_5200_coarse_zero_promotion_note_16_block_01_page_04",
+      "caller_confidence": "medium",
+      "notes": [
+        "caller sits inside a closed data range, so this hit is suspect"
+      ]
+    }
+  ]
+}
