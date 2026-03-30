@@ -35,6 +35,13 @@ If you need to know what is active vs historical vs archive-only, read:
 If you need the short backlog of older note-backed near-miss pages worth revisiting only on new evidence, read:
 - `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md`
 
+If you are browsing subdirectories directly, the local status guides now live in:
+- `docs/handoffs/README.md`
+- `docs/sessions/README.md`
+- `docs/reports/README.md`
+- `reports/README.md`
+- `passes/README.md`
+
 ## Current workflow
 1. treat the repo branch as canonical
 2. identify the next honest seam
