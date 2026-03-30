@@ -1,0 +1,40 @@
+{
+  "target": "C6:BD7D",
+  "call_count": 2,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 2,
+  "suspect_anchor_count": 0,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JML",
+      "caller": "CC:2B10",
+      "target": "C6:BD7D",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JML",
+      "caller": "CC:2CA2",
+      "target": "C6:BD7D",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    }
+  ]
+}
