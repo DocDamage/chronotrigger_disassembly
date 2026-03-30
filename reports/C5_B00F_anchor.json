@@ -1,0 +1,25 @@
+{
+  "target": "C5:B00F",
+  "call_count": 1,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 1,
+  "suspect_anchor_count": 0,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C5:8116",
+      "target": "C5:B00F",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    }
+  ]
+}

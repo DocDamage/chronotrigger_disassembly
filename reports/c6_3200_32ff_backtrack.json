@@ -1,0 +1,78 @@
+{
+  "range": "C6:3200..C6:32FF",
+  "candidate_count": 6,
+  "candidates": [
+    {
+      "candidate_start": "C6:32FC",
+      "target": "C6:32FF",
+      "score": 6,
+      "distance_to_target": 3,
+      "start_byte": "48",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.143,
+      "zero_ff_ratio": 0.143,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:32FC..C6:32FF"
+    },
+    {
+      "candidate_start": "C6:3230",
+      "target": "C6:3231",
+      "score": 2,
+      "distance_to_target": 1,
+      "start_byte": "F0",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.192,
+      "zero_ff_ratio": 0.154,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:3230..C6:3249"
+    },
+    {
+      "candidate_start": "C6:3230",
+      "target": "C6:3232",
+      "score": 2,
+      "distance_to_target": 2,
+      "start_byte": "F0",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.185,
+      "zero_ff_ratio": 0.148,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:3230..C6:324A"
+    },
+    {
+      "candidate_start": "C6:3230",
+      "target": "C6:3236",
+      "score": 2,
+      "distance_to_target": 6,
+      "start_byte": "F0",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.226,
+      "zero_ff_ratio": 0.129,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:3230..C6:324E"
+    },
+    {
+      "candidate_start": "C6:32C4",
+      "target": "C6:32C4",
+      "score": 1,
+      "distance_to_target": 0,
+      "start_byte": "10",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.24,
+      "zero_ff_ratio": 0.2,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:32C4..C6:32DC"
+    },
+    {
+      "candidate_start": "C6:32BA",
+      "target": "C6:32BA",
+      "score": -1,
+      "distance_to_target": 0,
+      "start_byte": "3F",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.32,
+      "zero_ff_ratio": 0.28,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C6:32BA..C6:32D2"
+    }
+  ]
+}

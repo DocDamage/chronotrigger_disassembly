@@ -1,0 +1,55 @@
+{
+  "target": "C5:C1FF",
+  "call_count": 3,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 1,
+  "suspect_anchor_count": 0,
+  "invalid_count": 2,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C5:79DB",
+      "target": "C5:C1FF",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C7:CDC6",
+      "target": "C5:C1FF",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at C7:CDC6 resolves to C7:C1FF, not C5:C1FF"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "E6:A1D0",
+      "target": "C5:C1FF",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at E6:A1D0 resolves to E6:C1FF, not C5:C1FF"
+      ]
+    }
+  ]
+}

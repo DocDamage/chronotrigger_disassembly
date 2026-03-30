@@ -16,6 +16,7 @@ from seam_triage_utils_v1 import (
     BARRIERS,
     printable_ascii_ratio,
     repeated_pair_score,
+    check_data_misread_patterns,
 )
 
 def score_blob(blob: bytes) -> dict[str, object]:
@@ -24,6 +25,7 @@ def score_blob(blob: bytes) -> dict[str, object]:
     calls = sum(1 for b in blob if b in CALLS)
     stackish = sum(1 for b in blob if b in STACKISH)
     bad = sum(1 for b in blob if b in BARRIERS)
+    misread_flags = check_data_misread_patterns(blob)
     score = 0
     if returns:
         score += 3
@@ -41,6 +43,8 @@ def score_blob(blob: bytes) -> dict[str, object]:
         score -= 2
     if r_score >= 0.45:
         score -= 2
+    # penalise clusters that exhibit data-misread signatures
+    score -= len(misread_flags) * 2
     return {
         'score': score,
         'branch_count': branches,
@@ -50,6 +54,7 @@ def score_blob(blob: bytes) -> dict[str, object]:
         'barrier_count': bad,
         'ascii_ratio': round(a_ratio, 3),
         'repeated_pair_score': round(r_score, 3),
+        'data_misread_flags': misread_flags,
     }
 
 def find_return_anchored_windows(data: bytes, max_back: int, min_width: int) -> list[tuple[int, int]]:
@@ -113,6 +118,7 @@ def main() -> int:
             'first_return_address': f'{bank:02X}:{start + rel_start + first_return:04X}' if first_return is not None else '',
             'ascii_ratio': scored['ascii_ratio'],
             'repeated_pair_score': scored['repeated_pair_score'],
+            'data_misread_flags': scored['data_misread_flags'],
             'rel_start': rel_start,
             'rel_end': rel_end,
         })
@@ -137,6 +143,7 @@ def main() -> int:
             'return_count': len(scored['return_offsets']),
             'ascii_ratio': scored['ascii_ratio'],
             'repeated_pair_score': scored['repeated_pair_score'],
+            'data_misread_flags': scored['data_misread_flags'],
         })
 
     candidates = [{k:v for k,v in item.items() if k not in {'rel_start','rel_end'}} for item in sorted(candidates, key=lambda item: (-int(item['score']), -int(item['width']), item['range']))]
@@ -149,7 +156,8 @@ def main() -> int:
         print(f'island_count: {len(candidates)}')
         print(f'cluster_count: {len(clusters)}')
         for item in clusters:
-            print(f"  cluster {item['range']}: score={item['cluster_score']} width={item['width']} children={item['child_count']}")
+            flags_str = f" flags={item['data_misread_flags']}" if item['data_misread_flags'] else ''
+            print(f"  cluster {item['range']}: score={item['cluster_score']} width={item['width']} children={item['child_count']}{flags_str}")
             for child in item['child_ranges']:
                 print(f"    child: {child}")
     return 0
