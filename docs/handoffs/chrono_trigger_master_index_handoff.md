@@ -1,5 +1,17 @@
 # Chrono Trigger (USA) ROM Disassembly — Master Index Handoff
 
+## Historical Status Note
+This file is an **early-session historical index**, not the current master handoff.
+
+It reflects a much earlier project state centered on pass-61-era work.
+Do **not** use it as the current start point for seam work.
+
+For the live repo state, read instead:
+- `README.md`
+- `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
+- `docs/handoffs/chrono_trigger_master_handoff_session16.md`
+- `docs/handoffs/chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
+
 ## Purpose
 This document is a **topic-based master index** for the work completed in this session, intended to sit beside the chronological handoff and the per-pass markdown files.
 

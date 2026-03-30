@@ -21,9 +21,19 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - `tools/` — repo-native toolkit scripts, config, and workflow docs
 - `reports/` — generated bank progress, seam-block, anchor, and toolkit-status artifacts
 - `repo_sync/` — earlier sync packets from the repo-first transition phase
+- `disassembly/` — legacy disassembly-note mirror through pass `163` (historical)
+- `labels/` — legacy label-note mirror through pass `163` (historical)
+- `toolkits/` — archived toolkit zip bundles; not the active tooling tree
 - `docs/handoffs/` — master handoff snapshots and resume checklists
 - `docs/sessions/` — continuation notes and next-session starting documents
 - `docs/reports/raw_seams/` — long-form seam-facing raw report markdown
+
+## Authority map
+If you need to know what is active vs historical vs archive-only, read:
+- `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
+
+If you need the short backlog of older note-backed near-miss pages worth revisiting only on new evidence, read:
+- `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md`
 
 ## Current workflow
 1. treat the repo branch as canonical
@@ -64,8 +74,10 @@ The high-priority tooling repair before the next block is now done: callers from
 
 ## Start here next session
 - read the latest handoff in `docs/handoffs/` - currently `chrono_trigger_master_handoff_session16.md`
+- read the repo authority map - `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 - read the latest continuation notes - currently `docs/sessions/chrono_trigger_session15_continue_notes_48.md`
 - read the current resume checklist - `docs/handoffs/chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
+- read the short revisit backlog only if new caller-quality evidence appears - `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md`
 - stay on `live-work-from-pass166`
 - run `python3 tools/scripts/audit_branch_state_v1.py` first to confirm the effective seam is still `C6:9A00..`
 - resume from `C6:9A00..`

@@ -141,10 +141,12 @@ If any of those fail, freeze and advance the seam.
 
 ## Read order for the next worker
 
-1. `docs/handoffs/chrono_trigger_master_handoff_session16.md`
-2. `docs/sessions/chrono_trigger_session15_continue_notes_48.md`
-3. `docs/handoffs/chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
-4. `reports/c6_9000_99ff_seam_block.md`
+1. `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
+2. `docs/handoffs/chrono_trigger_master_handoff_session16.md`
+3. `docs/sessions/chrono_trigger_session15_continue_notes_48.md`
+4. `docs/handoffs/chrono_trigger_resume_checklist_c6_9a00_a3ff.md`
+5. `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md` (only if new caller-quality evidence appears)
+6. `reports/c6_9000_99ff_seam_block.md`
 
 ---
 
