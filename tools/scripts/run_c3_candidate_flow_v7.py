@@ -21,14 +21,15 @@ def main() -> int:
     parser.add_argument('--rom', required=True)
     parser.add_argument('--range', dest='range_text', required=True)
     parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--sessions-dir', default='docs/sessions')
     parser.add_argument('--closed-ranges-snapshot', default='')
     parser.add_argument('--xref-index', default='')
     parser.add_argument('--dead-ranges-config', default='tools/config/c3_dead_ranges_v1.json')
     parser.add_argument('--json', action='store_true')
     args = parser.parse_args()
 
-    callers_args = ['--rom', args.rom, '--range', args.range_text, '--manifests-dir', args.manifests_dir]
-    xref_args = ['--rom', args.rom, '--range', args.range_text, '--manifests-dir', args.manifests_dir, '--dead-ranges-config', args.dead_ranges_config]
+    callers_args = ['--rom', args.rom, '--range', args.range_text, '--manifests-dir', args.manifests_dir, '--sessions-dir', args.sessions_dir]
+    xref_args = ['--rom', args.rom, '--range', args.range_text, '--manifests-dir', args.manifests_dir, '--sessions-dir', args.sessions_dir, '--dead-ranges-config', args.dead_ranges_config]
     if args.closed_ranges_snapshot:
         callers_args.extend(['--closed-ranges-snapshot', args.closed_ranges_snapshot])
         xref_args.extend(['--closed-ranges-snapshot', args.closed_ranges_snapshot])

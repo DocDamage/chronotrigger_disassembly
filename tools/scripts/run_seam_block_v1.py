@@ -64,6 +64,7 @@ def main() -> int:
     parser.add_argument('--start', required=True, help='Page-aligned SNES address like C4:2300')
     parser.add_argument('--pages', type=int, default=10)
     parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--sessions-dir', default='docs/sessions')
     parser.add_argument('--cache-dir', default='tools/cache')
     parser.add_argument('--dead-ranges-config', default='tools/config/c3_dead_ranges_v1.json')
     parser.add_argument('--json', action='store_true')
@@ -78,6 +79,7 @@ def main() -> int:
         'ensure_seam_cache_v1.py',
         '--rom', args.rom,
         '--manifests-dir', args.manifests_dir,
+        '--sessions-dir', args.sessions_dir,
         '--cache-dir', args.cache_dir,
     )
     xref_index = str(cache['xref_index_path'])

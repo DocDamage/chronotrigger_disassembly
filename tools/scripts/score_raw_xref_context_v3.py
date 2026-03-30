@@ -59,6 +59,7 @@ def main() -> int:
     parser.add_argument('--rom', required=True)
     parser.add_argument('--range', dest='range_text', required=True)
     parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--sessions-dir', default='docs/sessions')
     parser.add_argument('--closed-ranges-snapshot', default='')
     parser.add_argument('--xref-index', default='')
     parser.add_argument('--dead-ranges-config', default='tools/config/c3_dead_ranges_v1.json')
@@ -68,7 +69,7 @@ def main() -> int:
 
     bank, start, end = parse_snes_range(args.range_text)
     rom_bytes = Path(args.rom).read_bytes()
-    closed_ranges = choose_closed_ranges(args.manifests_dir, args.closed_ranges_snapshot)
+    closed_ranges = choose_closed_ranges(args.manifests_dir, args.closed_ranges_snapshot, args.sessions_dir)
     dead_ranges = load_dead_ranges(args.dead_ranges_config)
     page_family, page_reasons, _ = classify_page_family(rom_bytes, args.range_text)
 

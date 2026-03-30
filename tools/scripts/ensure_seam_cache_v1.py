@@ -16,10 +16,11 @@ from xref_index_utils_v1 import (
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description='Ensure reusable seam caches exist for the current ROM and manifests.'
+        description='Ensure reusable seam caches exist for the current ROM, manifest state, and note-backed continuation closures.'
     )
     parser.add_argument('--rom', required=True)
     parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--sessions-dir', default='docs/sessions')
     parser.add_argument('--cache-dir', default='tools/cache')
     parser.add_argument('--xref-index-name', default='chrono_trigger_raw_xref_index_v1.json')
     parser.add_argument('--closed-ranges-name', default='closed_ranges_snapshot_v1.json')
@@ -51,10 +52,9 @@ def main() -> int:
         write_xref_index(xref_index_path, rom_bytes, entries)
         xref_rebuilt = True
 
-    snapshot_rebuilt = False
-    if not closed_ranges_path.exists():
-        export_closed_ranges_snapshot(closed_ranges_path, args.manifests_dir)
-        snapshot_rebuilt = True
+    previous_snapshot = closed_ranges_path.read_text(encoding='utf-8') if closed_ranges_path.exists() else ''
+    payload = export_closed_ranges_snapshot(closed_ranges_path, args.manifests_dir, args.sessions_dir)
+    snapshot_rebuilt = closed_ranges_path.read_text(encoding='utf-8') != previous_snapshot
 
     result = {
         'rom': str(rom_path),
@@ -64,6 +64,9 @@ def main() -> int:
         'closed_ranges_snapshot_path': str(closed_ranges_path),
         'xref_index_rebuilt': xref_rebuilt,
         'closed_ranges_snapshot_rebuilt': snapshot_rebuilt,
+        'closed_ranges_snapshot_range_count': int(payload.get('range_count', 0)),
+        'closed_ranges_snapshot_manifest_range_count': int(payload.get('manifest_range_count', 0)),
+        'closed_ranges_snapshot_continuation_range_count': int(payload.get('continuation_range_count', 0)),
     }
 
     if args.json:
