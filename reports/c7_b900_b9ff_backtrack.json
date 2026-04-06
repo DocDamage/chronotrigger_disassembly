@@ -1,0 +1,30 @@
+﻿{
+  "range": "C7:B900..C7:B9FF",
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "candidate_start": "C7:B961",
+      "target": "C7:B963",
+      "score": 4,
+      "distance_to_target": 2,
+      "start_byte": "20",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.037,
+      "zero_ff_ratio": 0.0,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B961..C7:B97B"
+    },
+    {
+      "candidate_start": "C7:B900",
+      "target": "C7:B900",
+      "score": 3,
+      "distance_to_target": 0,
+      "start_byte": "DF",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.12,
+      "zero_ff_ratio": 0.04,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B900..C7:B918"
+    }
+  ]
+}
