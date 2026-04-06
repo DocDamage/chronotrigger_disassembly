@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_87.md`
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_88.md`
 - Latest closed block: **`C7:EE00..C7:F7FF`**
 - Current live seam: **`C7:F800..`**
 - Continuation run closed so far: **72 ten-page blocks / 720 pages**
-- Promotion count across that continuation run: **5** (passes 192-196: C7:B000-B1FF, C7:C300-C4FF, C7:C5AC-C5D0, C7:D363-D37C, C7:C193-C1B2)
+- Promotion count across that continuation run: **6** (passes 192-197: B000-B1FF, C300-C4FF, C5AC-C5D0, D363-D37C, C193-C1B2, C1B6-C1CE)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -162,6 +162,23 @@ C7:C193 promoted based on **strongest cluster evidence in upper C7**:
 **Strategic value:** Creates foothold in C100 region, bridges toward B000-B1FF
 
 See `docs/sessions/chrono_trigger_session15_continue_notes_87.md` for full analysis.
+
+---
+
+## 🎉 PROMOTION: Pass 197 — C7:C1B6..C7:C1CE
+
+**Extension promotion — C193 cluster chain extended!**
+
+C1B6-C1CE promoted as **extension of pass 196** (C193):
+- **Score 6 cluster** (25 bytes)
+- **Only 3-byte gap** to C193 (C1B3-C1B5: CA 06 C3 — valid instructions)
+- **Combined region:** C193-C1CE = **52 bytes contiguous code** (largest in upper C7!)
+
+**New extension precedent:** Adjacent cluster (score ≥ 6) + small gap (< 16 bytes) + gap contains valid code = extension promotion
+
+**Major discovery:** C02A calls B111 (promoted) — **strong anchor for C000-C100 region!**
+
+See `docs/sessions/chrono_trigger_session15_continue_notes_88.md` for full analysis.
 
 ---
 
