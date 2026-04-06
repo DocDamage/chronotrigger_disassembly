@@ -1,0 +1,37 @@
+{
+  "pass_number": 195,
+  "pass_name": "threshold_promotion_c7_d363_phd_prologue",
+  "closed_ranges": [
+    {
+      "range": "C7:D363..C7:D37C",
+      "kind": "owner",
+      "label": "ct_c7_d363_unknown_function_phd_prologue",
+      "confidence": "high",
+      "evidence": {
+        "backtrack_score": 6,
+        "start_byte": "0x0B",
+        "prologue_type": "PHD_push_direct_page",
+        "local_clusters": ["C7:D3A8..C7:D3C3", "C7:D3E7..C7:D3F9"],
+        "cluster_scores": [4, 4],
+        "ascii_ratio": 0.269,
+        "zero_ff_ratio": 0.0
+      }
+    }
+  ],
+  "promotion_reason": "Threshold promotion - score 6 with PHD prologue, second strongest candidate after C5AC. Upper C7 code boundary confirmed at E300, D363 is in executable region.",
+  "previous_status": "frozen_no_anchors",
+  "risks": [
+    "No external anchors (caller chain unresolved)",
+    "PHD prologue less definitive than REP/JSR",
+    "Threshold promotion - requires monitoring"
+  ],
+  "promoted_by": "session_18_threshold_decision_d363",
+  "date": "2026-04-05",
+  "notes": [
+    "Score 6: Perfect backtrack from D363 to target D364",
+    "PHD (0x0B) prologue: Push Direct Page register - valid 65816 code",
+    "Local clusters: D3A8-D3C3 (score 4, width 28), D3E7-D3F9 (score 4, width 19)",
+    "Part of D300-D3FF candidate_code_lane page",
+    "Creates anchor chain: B000-B1FF -> C300-C4FF -> C5AC-C5D0 -> D363-D37C"
+  ]
+}
