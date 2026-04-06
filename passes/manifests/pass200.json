@@ -1,0 +1,39 @@
+{
+  "pass_number": 200,
+  "pass_name": "dual_evidence_c7_3c04_cluster_plus_anchor",
+  "closed_ranges": [
+    {
+      "range": "C7:3C00..C7:3C16",
+      "kind": "owner",
+      "label": "ct_c7_3c00_unknown_function_cluster_jsr_c4f3",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 4,
+        "cluster_width": 23,
+        "strong_anchor": "C7:3C04 calls C4F3",
+        "anchor_target_status": "promoted_pass_192",
+        "anchor_instruction": "JSR $C4F3",
+        "anchor_bytes": "20 F3 C4",
+        "dual_evidence": "cluster + strong anchor",
+        "note": "3C04 inside score-4 cluster, calls promoted C300-C4FF"
+      }
+    }
+  ],
+  "promotion_reason": "Dual evidence promotion - 3C04 inside score-4 cluster (3C00-3C16) AND calls C4F3 (promoted C300-C4FF). Strong anchor plus cluster support.",
+  "previous_status": "frozen_no_context",
+  "risks": [
+    "Cluster score only 4 (below threshold-6)",
+    "No other external anchors",
+    "Entry point may not be at 3C00"
+  ],
+  "promoted_by": "session_18_dual_evidence_3c04",
+  "date": "2026-04-05",
+  "notes": [
+    "Pass 200 milestone!",
+    "Cluster 3C00-3C16: score 4, width 23",
+    "3C04: JSR $C4F3 (20 F3 C4)",
+    "C4F3 is in promoted C300-C4FF (pass 192)",
+    "Near promoted C300-C4FF region",
+    "Extends coverage toward C400"
+  ]
+}
