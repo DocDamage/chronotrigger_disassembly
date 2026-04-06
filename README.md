@@ -4,12 +4,12 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 
 ## Current live state
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `191`
-- latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_74.md`
-- latest closed block: `C7:9400..C7:9DFF`
-- current forward seam: `C7:9E00..`
-- note-backed continuation run closed `61` ten-page blocks from `C5:3B00` through `C7:9DFF` with `0` promotions
-- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now refreshes from manifests plus session-15 continuation notes and currently carries `915` closed ranges (`65` manifest-backed + `850` note-backed page freezes)
+- latest manifest-backed pass: `193`
+- latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_78.md`
+- latest closed block: **C7:C300..C7:CCFF (BREAKTHROUGH - 2 promotions!)**
+- current forward seam: `C7:B200..` (strategic analysis ongoing)
+- note-backed continuation run closed `64` ten-page blocks from `C5:3B00` through `C7:C300+` with `0` promotions
+- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now refreshes from manifests plus session-15 continuation notes and currently carries `947` closed ranges (`67` manifest-backed + `880` note-backed)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
 - continuation notes are the operative state-of-record from pass 191 onward, and their frozen pages now feed caller-context scoring through the seam snapshot layer (see `docs/sessions/chrono_trigger_session15_continue_notes_*.md`)
@@ -86,13 +86,13 @@ The high-priority tooling repair before the next block is now done: callers from
 - read the latest handoff in `docs/handoffs/` - currently `chrono_trigger_master_handoff_session17.md`
 - read the repo authority map - `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 - read the latest continuation notes - currently `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
-- read the current resume checklist - `docs/handoffs/chrono_trigger_resume_checklist_c7_9e00_a7ff.md`
+- read the current resume checklist - `docs/handoffs/chrono_trigger_resume_checklist_c7_b200_or_c300.md`
 - read the short revisit backlog only if new caller-quality evidence appears - `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md`
 - stay on `live-work-from-pass166`
-- run `python3 tools/scripts/audit_branch_state_v1.py` first to confirm the effective seam is still `C7:9E00..`
-- resume from `C7:9E00..`
-- run `run_seam_block_v1.py --start C7:9E00 --pages 10` first; it now auto-refreshes `tools/cache/closed_ranges_snapshot_v1.json` from manifests plus continuation notes before scanning
+- run `python3 tools/scripts/audit_branch_state_v1.py` first to confirm the effective seam is still `C7:B200..`
+- resume from `C7:B200..` (or promote C7:C300 first)
+- run `run_seam_block_v1.py --start C7:B200 --pages 10 (or C7:C300 for promotion)` first; it now auto-refreshes `tools/cache/closed_ranges_snapshot_v1.json` from manifests plus continuation notes before scanning
 - only run owner-backtrack and anchor reports for pages that the new block marks `manual_owner_boundary_review`
-- write `docs/sessions/chrono_trigger_session15_continue_notes_75.md` after the block closes
+- write `docs/sessions/chrono_trigger_session15_continue_notes_79.md` after the block closes
 - do not backfill manifests during seam work; the manifest layer is still frozen at pass `191`, but the seam snapshot now bridges the closed note-backed pages automatically
 - promotion standard: caller quality + start-byte quality + local structure must all converge

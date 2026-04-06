@@ -1,0 +1,54 @@
+﻿{
+  "range": "C7:B100..C7:B1FF",
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "candidate_start": "C7:B110",
+      "target": "C7:B111",
+      "score": 4,
+      "distance_to_target": 1,
+      "start_byte": "22",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.308,
+      "zero_ff_ratio": 0.0,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B110..C7:B129"
+    },
+    {
+      "candidate_start": "C7:B110",
+      "target": "C7:B115",
+      "score": 4,
+      "distance_to_target": 5,
+      "start_byte": "22",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.3,
+      "zero_ff_ratio": 0.033,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B110..C7:B12D"
+    },
+    {
+      "candidate_start": "C7:B17E",
+      "target": "C7:B188",
+      "score": 4,
+      "distance_to_target": 10,
+      "start_byte": "DF",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.229,
+      "zero_ff_ratio": 0.029,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B17E..C7:B1A0"
+    },
+    {
+      "candidate_start": "C7:B18D",
+      "target": "C7:B195",
+      "score": 2,
+      "distance_to_target": 8,
+      "start_byte": "F0",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.091,
+      "zero_ff_ratio": 0.061,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B18D..C7:B1AD"
+    }
+  ]
+}

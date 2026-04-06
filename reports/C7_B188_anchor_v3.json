@@ -1,0 +1,6 @@
+﻿target: C7:B188
+call_count: 1
+strong=1 weak=0 suspect=0 invalid=0
+  JSR from C7:7488 -> valid / strong / resolved_code
+    caller_range: C7:7400..C7:74FF (ct_c7_7400_code_region_for_B188_anchor)
+    note: caller sits inside a resolved executable range

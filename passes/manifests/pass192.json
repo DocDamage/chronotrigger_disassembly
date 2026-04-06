@@ -1,0 +1,30 @@
+{
+    "closed_ranges": [
+        {
+            "label": "C7_C300_C4FF_code_region",
+            "evidence": [
+                "8 prologues (REP/SEP) detected",
+                "Multiple RTS/RTL returns confirmed",
+                "Cross-bank calls from 10 banks",
+                "Direct callers to C7:B0xx region",
+                "Score-4 backtrack candidates"
+            ],
+            "bank": "C7",
+            "type": "code",
+            "range": "C7:C300..C7:C4FF",
+            "kind": "code_owner",
+            "confidence": "high"
+        }
+    ],
+    "description": "Promotion of C7:C300..C7:C4FF as confirmed code region",
+    "targets_promoted": [
+        "C7:C3AE",
+        "C7:C388",
+        "C7:C31D",
+        "C7:C4AA"
+    ],
+    "date": "2026-04-06",
+    "pass_number": 192,
+    "verification_status": "strong",
+    "notes": "First confirmed code in upper C7 bank. Strategic promotion to validate C7:B100 caller chain."
+}

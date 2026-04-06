@@ -1,0 +1,6 @@
+﻿target: C7:B188
+call_count: 1
+strong=0 weak=0 suspect=1 invalid=0
+  JSR from C7:7488 -> valid / suspect / resolved_data
+    caller_range: C7:7400..C7:74FF (ct_note_backed_frozen_page_c7_7400_candidate_code_lane_mixed_lane_continue)
+    note: caller sits inside a closed data range, so this hit is suspect
