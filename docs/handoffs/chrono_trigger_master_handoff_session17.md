@@ -12,10 +12,10 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_81.md`
-- Latest closed block: **`C7:C600..C7:CFFF`**
-- Current live seam: **`C7:D000..`**
-- Continuation run closed so far: **68 ten-page blocks / 680 pages**
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_82.md`
+- Latest closed block: **`C7:D000..C7:D9FF`**
+- Current live seam: **`C7:DA00..`**
+- Continuation run closed so far: **69 ten-page blocks / 690 pages**
 - Promotion count across that continuation run: **2** (passes 192-193: C7:B000-B1FF, C7:C300-C4FF)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
@@ -111,36 +111,40 @@ Use the repaired snapshot layer for seam and anchor work meanwhile.
 
 ---
 
-## Latest closed block: `C7:C600..C7:CFFF`
+## Latest closed block: `C7:D000..C7:D9FF`
 
-Extended C7 coverage through CFFF, found second REP prologue!
+Extended C7 coverage through D9FF, found **third score-6 candidate** and **JSR prologue pattern**!
 
 Block result:
 - **10 pages processed**
 - **0 promotions**
-- new live seam: **`C7:D000..`**
+- new live seam: **`C7:DA00..`**
 
 **Major findings:**
-- **C7:C8B6**: Score-4 candidate (A0 start), weak anchor from CC:0D16
-- **C7:CEEB**: Score-4 candidate with **REP #$20 prologue** — second REP found in upper C7!
-- **C7:CE1B cluster**: Score 6, 2 calls, 1 return — excellent code indicators
-- **C7:CD00**: Rejected (bad_start_or_dead_lane) — breaks C600-CFFF contiguity
+- **C7:D363**: Score-6 candidate (0x0B = PHD start) — third score-6 in upper C7!
+- **C7:D1ED**: Score-4 candidate with **JSR prologue** (0x20) — subroutine call structure
+- **C7:D000**: Rejected despite **19 xref hits** — structure validation failure
 
-**Pattern: REP Prologues in Upper C7**
-| Address | Score | Prologue | Status |
-|---------|-------|----------|--------|
-| C7:C5AC | **6** | REP #$20 | Strongest candidate (notes_80) |
-| C7:CEE9 | 4 | REP #$20 | Weak anchor from E32F |
+**Score-6 Candidates in Upper C7:**
+| Address | Score | Start Byte | Instruction | Anchor |
+|---------|-------|------------|-------------|--------|
+| C7:C5AC | **6** | 0xC2 | REP #$20 | Weak |
+| C7:D363 | **6** | 0x0B | PHD | Suspect |
+
+**JSR Prologue Discovery:**
+- C7:D1DF starts with `JSR $15EE` (0x20 0xEE 0x15)
+- Indicates callable subroutine structure
+- Suspect anchor from C7:985A (closed data range)
 
 **Contiguity status:**
-- C600-CCFF: candidate/mixed pages
-- CD00: **REJECTED** — gap in potential code region
-- CE00-CFFF: candidate pages with strong clusters
+- D000: **REJECTED** (19 hits but bad structure) — another gap
+- D100-D3FF: Strong candidates but suspect anchors
+- D400-D9FF: Mixed/control pockets
 
 Read these artifacts:
-- `docs/sessions/chrono_trigger_session15_continue_notes_81.md`
-- `reports/c7_c600_cfff_seam_block.json`
-- `reports/c7_ce00_ceff_backtrack.json`
+- `docs/sessions/chrono_trigger_session15_continue_notes_82.md`
+- `reports/c7_d000_d9ff_seam_block.json`
+- `reports/c7_d300_d3ff_backtrack.json`
 
 ---
 
@@ -148,15 +152,15 @@ Read these artifacts:
 
 ### Immediate next block
 Process exactly one ten-page seam block:
-- **`C7:D000..C7:D9FF`**
+- **`C7:DA00..C7:E3FF`**
 
 Start with:
 ```bash
 python tools/scripts/audit_branch_state_v1.py
 python tools/scripts/audit_pass_manifests_v1.py
 python tools/scripts/ensure_seam_cache_v1.py --rom 'rom/Chrono Trigger (USA).sfc'
-python tools/scripts/run_seam_block_v1.py --rom 'rom/Chrono Trigger (USA).sfc' --start C7:D000 --pages 10 --json > reports/c7_d000_d9ff_seam_block.json
-python tools/scripts/render_seam_block_report_v1.py --input reports/c7_d000_d9ff_seam_block.json --output reports/c7_d000_d9ff_seam_block.md
+python tools/scripts/run_seam_block_v1.py --rom 'rom/Chrono Trigger (USA).sfc' --start C7:DA00 --pages 10 --json > reports/c7_da00_e3ff_seam_block.json
+python tools/scripts/render_seam_block_report_v1.py --input reports/c7_da00_e3ff_seam_block.json --output reports/c7_da00_e3ff_seam_block.md
 ```
 
 Then:
@@ -164,8 +168,8 @@ Then:
 2. Identify pages marked `manual_owner_boundary_review`
 3. Run owner-backtrack scans for those pages
 4. Run anchor reports for targets worth defending
-5. Look for anchors to existing strong candidates (C5AC, CEEB)
-6. Write `docs/sessions/chrono_trigger_session15_continue_notes_82.md`
+5. Look for **strong anchors** to backlog candidates: C5AC, D363, D1ED, CEEB
+6. Write `docs/sessions/chrono_trigger_session15_continue_notes_83.md`
 
 ### Promotion rule
 Only promote if all three converge:
