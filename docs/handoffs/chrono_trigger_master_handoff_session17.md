@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_90.md`
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_91.md`
 - Latest closed block: **`C7:EE00..C7:F7FF`**
 - Current live seam: **`C7:F800..`**
 - Continuation run closed so far: **72 ten-page blocks / 720 pages**
-- Promotion count across that continuation run: **8** (passes 192-199: B000-B1FF, C300-C4FF, C5AC-C5D0, D363-D37C, C193-C1B2, C1B6-C1CE, C028-C02C, 924D-9265)
+- Promotion count across that continuation run: **9** (passes 192-200: adds 3C00-3C16)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -216,6 +216,22 @@ See `docs/sessions/chrono_trigger_session15_continue_notes_89.md` for full analy
 **Strategic value:** First promotion in C900 region, extends coverage!
 
 See `docs/sessions/chrono_trigger_session15_continue_notes_90.md` for full analysis.
+
+---
+
+## 🎉🎉🎉 PROMOTION: Pass 200 — C7:3C00..C7:3C16
+
+**MILESTONE: 200th pass! Dual evidence promotion!**
+
+Pass 200 promotes 3C00-3C16:
+- **Score 4 cluster** (23 bytes)
+- **Strong anchor** (3C04 calls C4F3 in promoted C300-C4FF)
+- **Dual evidence:** Cluster + anchor convergence
+
+**Session 18 milestone:** 7 promotions (194-200) in one session!
+**Upper C7 total:** 9 promotions!
+
+See `docs/sessions/chrono_trigger_session15_continue_notes_91.md` for full analysis.
 
 ---
 
