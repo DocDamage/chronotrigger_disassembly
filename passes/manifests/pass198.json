@@ -1,0 +1,37 @@
+{
+  "pass_number": 198,
+  "pass_name": "strong_anchor_promotion_c7_c02a_calls_b111",
+  "closed_ranges": [
+    {
+      "range": "C7:C028..C7:C02C",
+      "kind": "owner",
+      "label": "ct_c7_c02a_jsr_to_b111",
+      "confidence": "high",
+      "evidence": {
+        "instruction": "JSR $B111",
+        "bytes": "20 11 B1",
+        "anchor_target": "C7:B111",
+        "anchor_status": "promoted_pass_193",
+        "anchor_quality": "strong",
+        "note": "Definitive evidence - calls promoted code region"
+      }
+    }
+  ],
+  "promotion_reason": "Strong anchor promotion - C02A calls B111 which is in promoted region (pass 193). The JSR instruction is definitive evidence that C02A is executable code.",
+  "previous_status": "frozen_no_context",
+  "risks": [
+    "Minimal range (5 bytes) - function boundaries unknown",
+    "No local clusters identified",
+    "Low backtrack scores in surrounding region"
+  ],
+  "promoted_by": "session_18_strong_anchor_c02a",
+  "date": "2026-04-05",
+  "notes": [
+    "C02A: JSR $B111 (20 11 B1)",
+    "B111 is in promoted B000-B1FF region (pass 193)",
+    "Strong anchor = caller to promoted code",
+    "First promotion in C000-C100 region",
+    "Bridges gap between C000 and B000-B1FF",
+    "Conservative 5-byte range around JSR instruction"
+  ]
+}
