@@ -1,0 +1,5 @@
+﻿target: C7:3C12
+call_count: 1
+strong=0 weak=1 suspect=0 invalid=0
+  JSL from E7:11FD -> valid / weak / unresolved
+    note: caller lives in unresolved bytes, so this is weak anchor evidence

@@ -1,0 +1,21 @@
+﻿target: C7:418D
+call_count: 6
+strong=0 weak=0 suspect=6 invalid=0
+  JSR from C7:0441 -> valid / suspect / resolved_data
+    caller_range: C7:0400..C7:04FF (ct_note_backed_frozen_page_c7_0400_mixed_command_data_manual_owner_boundary_review)
+    note: caller sits inside a closed data range, so this hit is suspect
+  JSR from C7:048F -> valid / suspect / resolved_data
+    caller_range: C7:0400..C7:04FF (ct_note_backed_frozen_page_c7_0400_mixed_command_data_manual_owner_boundary_review)
+    note: caller sits inside a closed data range, so this hit is suspect
+  JSR from C7:0846 -> valid / suspect / resolved_data
+    caller_range: C7:0800..C7:08FF (ct_note_backed_frozen_page_c7_0800_mixed_command_data_manual_owner_boundary_review)
+    note: caller sits inside a closed data range, so this hit is suspect
+  JSR from C7:0861 -> valid / suspect / resolved_data
+    caller_range: C7:0800..C7:08FF (ct_note_backed_frozen_page_c7_0800_mixed_command_data_manual_owner_boundary_review)
+    note: caller sits inside a closed data range, so this hit is suspect
+  JSR from C7:088B -> valid / suspect / resolved_data
+    caller_range: C7:0800..C7:08FF (ct_note_backed_frozen_page_c7_0800_mixed_command_data_manual_owner_boundary_review)
+    note: caller sits inside a closed data range, so this hit is suspect
+  JSR from C7:08B5 -> valid / suspect / resolved_data
+    caller_range: C7:0800..C7:08FF (ct_note_backed_frozen_page_c7_0800_mixed_command_data_manual_owner_boundary_review)
+    note: caller sits inside a closed data range, so this hit is suspect

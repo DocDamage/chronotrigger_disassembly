@@ -1,0 +1,5 @@
+﻿target: C7:7DC2
+call_count: 1
+strong=0 weak=1 suspect=0 invalid=0
+  JML from FF:0809 -> valid / weak / unresolved
+    note: caller lives in unresolved bytes, so this is weak anchor evidence
