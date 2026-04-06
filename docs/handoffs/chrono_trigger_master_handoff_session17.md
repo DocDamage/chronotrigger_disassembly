@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_88.md`
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_89.md`
 - Latest closed block: **`C7:EE00..C7:F7FF`**
 - Current live seam: **`C7:F800..`**
 - Continuation run closed so far: **72 ten-page blocks / 720 pages**
-- Promotion count across that continuation run: **6** (passes 192-197: B000-B1FF, C300-C4FF, C5AC-C5D0, D363-D37C, C193-C1B2, C1B6-C1CE)
+- Promotion count across that continuation run: **7** (passes 192-198: B000-B1FF, C300-C4FF, C5AC-C5D0, D363-D37C, C193-C1B2, C1B6-C1CE, C028-C02C)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -179,6 +179,24 @@ C1B6-C1CE promoted as **extension of pass 196** (C193):
 **Major discovery:** C02A calls B111 (promoted) — **strong anchor for C000-C100 region!**
 
 See `docs/sessions/chrono_trigger_session15_continue_notes_88.md` for full analysis.
+
+---
+
+## 🎉 PROMOTION: Pass 198 — C7:C028..C7:C02C
+
+**Strong anchor promotion — C02A calls promoted B111!**
+
+C028-C02C promoted based on **definitive strong anchor**:
+- **C02A: JSR $B111** (20 11 B1)
+- **B111 is PROMOTED** (pass 193: B000-B1FF)
+- **Circular proof:** C02A calls promoted code → C02A is code
+
+**New strong anchor precedent:** Any address that calls/jumps to promoted code is itself promotable.
+
+**Promoted range:** C028-C02C (5 bytes, conservative)
+**Strategic value:** First promotion in C000-C100 region, bridges to B000-B1FF!
+
+See `docs/sessions/chrono_trigger_session15_continue_notes_89.md` for full analysis.
 
 ---
 
