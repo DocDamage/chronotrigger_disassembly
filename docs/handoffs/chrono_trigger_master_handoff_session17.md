@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_89.md`
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_90.md`
 - Latest closed block: **`C7:EE00..C7:F7FF`**
 - Current live seam: **`C7:F800..`**
 - Continuation run closed so far: **72 ten-page blocks / 720 pages**
-- Promotion count across that continuation run: **7** (passes 192-198: B000-B1FF, C300-C4FF, C5AC-C5D0, D363-D37C, C193-C1B2, C1B6-C1CE, C028-C02C)
+- Promotion count across that continuation run: **8** (passes 192-199: B000-B1FF, C300-C4FF, C5AC-C5D0, D363-D37C, C193-C1B2, C1B6-C1CE, C028-C02C, 924D-9265)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -197,6 +197,25 @@ C028-C02C promoted based on **definitive strong anchor**:
 **Strategic value:** First promotion in C000-C100 region, bridges to B000-B1FF!
 
 See `docs/sessions/chrono_trigger_session15_continue_notes_89.md` for full analysis.
+
+---
+
+## 🎉 PROMOTION: Pass 199 — C7:924D..C7:9265
+
+**Dual evidence promotion — score-7 cluster + strong anchor!**
+
+924D-9265 promoted based on **two independent evidence sources**:
+- **Score 7 cluster** (25 bytes, definitive code structure)
+- **Strong anchor** (9258 calls C3FA in promoted C300-C4FF)
+
+**New dual evidence precedent:** When cluster score ≥ 7 AND strong anchor present = highest confidence promotion.
+
+**Discovery:** 8 addresses found calling promoted regions — all potential promotion candidates!
+
+**Promoted range:** 924D-9265 (25 bytes)
+**Strategic value:** First promotion in C900 region, extends coverage!
+
+See `docs/sessions/chrono_trigger_session15_continue_notes_90.md` for full analysis.
 
 ---
 
