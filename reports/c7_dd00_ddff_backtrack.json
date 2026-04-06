@@ -1,0 +1,90 @@
+{
+  "range": "C7:DD00..C7:DDFF",
+  "candidate_count": 7,
+  "candidates": [
+    {
+      "candidate_start": "C7:DDEE",
+      "target": "C7:DDF4",
+      "score": 6,
+      "distance_to_target": 6,
+      "start_byte": "20",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.323,
+      "zero_ff_ratio": 0.065,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:DDEE..C7:DDFF"
+    },
+    {
+      "candidate_start": "C7:DD03",
+      "target": "C7:DD0D",
+      "score": 4,
+      "distance_to_target": 10,
+      "start_byte": "48",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.4,
+      "zero_ff_ratio": 0.057,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:DD03..C7:DD25"
+    },
+    {
+      "candidate_start": "C7:DD03",
+      "target": "C7:DD0F",
+      "score": 4,
+      "distance_to_target": 12,
+      "start_byte": "48",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.405,
+      "zero_ff_ratio": 0.054,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:DD03..C7:DD27"
+    },
+    {
+      "candidate_start": "C7:DD1E",
+      "target": "C7:DD20",
+      "score": 4,
+      "distance_to_target": 2,
+      "start_byte": "48",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.333,
+      "zero_ff_ratio": 0.111,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:DD1E..C7:DD38"
+    },
+    {
+      "candidate_start": "C7:DD39",
+      "target": "C7:DD43",
+      "score": 4,
+      "distance_to_target": 10,
+      "start_byte": "48",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.343,
+      "zero_ff_ratio": 0.057,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:DD39..C7:DD5B"
+    },
+    {
+      "candidate_start": "C7:DDF5",
+      "target": "C7:DDFD",
+      "score": 4,
+      "distance_to_target": 8,
+      "start_byte": "32",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.273,
+      "zero_ff_ratio": 0.061,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:DDF5..C7:DDFF"
+    },
+    {
+      "candidate_start": "C7:DD2B",
+      "target": "C7:DD2F",
+      "score": 2,
+      "distance_to_target": 4,
+      "start_byte": "CD",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.345,
+      "zero_ff_ratio": 0.0,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:DD2B..C7:DD47"
+    }
+  ]
+}
