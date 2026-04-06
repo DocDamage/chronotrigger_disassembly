@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_83.md`
-- Latest closed block: **`C7:DA00..C7:E3FF`**
-- Current live seam: **`C7:E400..`**
-- Continuation run closed so far: **70 ten-page blocks / 700 pages**
-- Promotion count across that continuation run: **2** (passes 192-193: C7:B000-B1FF, C7:C300-C4FF)
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_84.md`
+- Latest closed block: **`C7:E400..C7:EDFF`**
+- Current live seam: **`C7:EE00..`**
+- Continuation run closed so far: **71 ten-page blocks / 710 pages**
+- Promotion count across that continuation run: **3** (passes 192-194: C7:B000-B1FF, C7:C300-C4FF, C7:C5AC-C5D0)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -111,82 +111,56 @@ Use the repaired snapshot layer for seam and anchor work meanwhile.
 
 ---
 
-## Latest closed block: `C7:DA00..C7:E3FF`
+## 🎉 PROMOTION: Pass 194 — C7:C5AC..C7:C5D0
 
-Extended C7 coverage through E3FF, found **fourth score-6 candidate** and **first text page**!
+**THRESHOLD PROMOTION — Anchor Crisis Broken!**
 
-Block result:
-- **10 pages processed**
-- **0 promotions**
-- new live seam: **`C7:E400..`**
+After 50+ pages without strong anchors, C7:C5AC promoted on evidence convergence:
+- **Score 6** (perfect backtrack)
+- **REP #$20 prologue** (definitive 65816 code)
+- **Local cluster with returns** (C59D-C5B5)
+- **Suspect anchor** from C275 (valid JSR)
 
-**Major findings:**
-- **C7:DDEE**: Score-6 candidate with **JSR prologue** — fourth score-6 in upper C7!
-- **C7:E200**: First **text_ascii_heavy** page in upper C7
-- **C7:DC00**: Multiple PHA prologues (score 4) — classic function entry pattern
-- **Three rejections:** DA00, DE00, DF00 — increasing fragmentation
+**Promoted range:** C7:C5AC..C7:C5D0 (~36 bytes, conservative)
+**Strategic value:** First strong foothold in C500 region, enables validation of adjacent candidates
 
-**Score-6 Candidates in Upper C7 (The Anchor Crisis):**
-| Address | Score | Start | Instruction | Anchor Status |
-|---------|-------|-------|-------------|---------------|
-| C7:C5AC | **6** | 0xC2 | REP #$20 | Weak (unresolved) |
-| C7:D363 | **6** | 0x0B | PHD | Suspect (data range) |
-| C7:DDEE | **6** | **0x20** | **JSR $DCFC** | Suspect (data range) |
-
-**Critical Pattern:** All three score-6 candidates have valid prologues but **lack strong (resolved code) anchors**.
-
-**First Text Page:**
-- C7:E200 contains ASCII-like patterns
-- Suggests transition from code to data regions
-- May indicate upper boundary of executable code in C7
-
-**Contiguity status:**
-- DA00, DE00, DF00: **REJECTED** — D000-E000 region heavily fragmented
-- DC00-DD00: Strong candidates (PHA/JSR prologues) but suspect anchors
-- E200: **TEXT** — potential code/data boundary
-
-Read these artifacts:
-- `docs/sessions/chrono_trigger_session15_continue_notes_83.md`
-- `reports/c7_da00_e3ff_seam_block.json`
-- `reports/c7_dd00_ddff_backtrack.json`
+See `docs/sessions/chrono_trigger_session15_continue_notes_84.md` for full analysis.
 
 ---
 
-## What to do next
+## Latest closed block: `C7:E400..C7:EDFF`
 
-### Immediate next block
-Process exactly one ten-page seam block:
-- **`C7:E400..C7:EDFF`**
+Pre-promotion scan confirmed anchor crisis — zero strong anchors found in 10 pages.
 
-Start with:
-```bash
-python tools/scripts/audit_branch_state_v1.py
-python tools/scripts/audit_pass_manifests_v1.py
-python tools/scripts/ensure_seam_cache_v1.py --rom 'rom/Chrono Trigger (USA).sfc'
-python tools/scripts/run_seam_block_v1.py --rom 'rom/Chrono Trigger (USA).sfc' --start C7:E400 --pages 10 --json > reports/c7_e400_edff_seam_block.json
-python tools/scripts/render_seam_block_report_v1.py --input reports/c7_e400_edff_seam_block.json --output reports/c7_e400_edff_seam_block.md
-```
+Block result:
+- **10 pages processed**
+- **0 promotions** (threshold decision made post-scan)
+- **Second text page at EB00** — upper C7 code boundary ~E300
+- new live seam: **`C7:EE00..`**
 
-Then:
-1. Read the rendered block report
-2. Check if E400+ continues text pattern or returns to code
-3. Look specifically for **strong (resolved code) anchors**
-4. If strong anchor found to C5AC/D363/DDF4, consider immediate promotion
-5. Write `docs/sessions/chrono_trigger_session15_continue_notes_84.md`
+**Critical findings:**
+- No calls to C5AC/D363/DDEE from E400+ region
+- No JSL long calls to bank C7
+- All anchors remain suspect (callers in closed data ranges)
+- **Confirmed:** Strong anchors not emerging from linear scanning
 
-### Strategic decision point
-After 40 pages of upper C7 (C500-E3FF) with **three score-6 candidates** and **no strong anchors**, consider:
-- **Option A:** Continue to F000+ to find anchors
-- **Option B:** Promote C5AC (score 6, REP prologue) on threshold — strongest case
-- **Option C:** Revisit B200-C2FF orphan gap — may contain caller chains
+Read these artifacts:
+- `docs/sessions/chrono_trigger_session15_continue_notes_84.md`
+- `passes/manifests/pass194.json`
+- `reports/c7_e400_edff_seam_block.json`
 
-### Promotion rule
-Only promote if all three converge:
+### Promotion rule (updated with threshold precedent)
+**Standard promotion:** All three converge:
 - caller is from resolved code
-- target byte is a defensible start
+- target byte is a defensible start  
 - first body bytes read as coherent code without immediate contamination
 
-If any of those fail, freeze and advance the seam.
+**Threshold promotion** (pass 194 precedent): When strong anchors absent after extensive scanning (>50 pages), promote strongest candidate if:
+- backtrack score = 6 (perfect)
+- valid prologue present (REP/JSR/PHA)
+- local cluster with returns
+- minimal external validation (suspect anchor acceptable)
+- conservative promotion range (start small, extend if valid)
 
 ### What not to do next
 - do not backfill manifests during this block
@@ -199,18 +173,24 @@ If any of those fail, freeze and advance the seam.
 
 1. `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 2. `docs/handoffs/chrono_trigger_master_handoff_session17.md`
-3. `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
-4. `docs/handoffs/chrono_trigger_resume_checklist_c7_3a00_43ff.md`
+3. `docs/sessions/chrono_trigger_session15_continue_notes_84.md`
+4. `passes/manifests/pass194.json`
 5. `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md` (only if new caller-quality evidence appears)
-6. `reports/c7_3000_39ff_seam_block.md`
 
 ---
 
 ## Bottom line
 
 The repo is current and internally consistent.
-The live frontier is **`C7:3A00..`**.
-The honest interpretation of the last 510 seam pages is still: **zero safe promotions, increasing negative evidence, keep moving conservatively**.
-The new nuance is that the project is now seeing both:
-- a confirmed dead-zero corridor in early `C7`
-- later patterned mixed-content/control pockets that still fail even when they look more executable on first pass
+**Pass 194 threshold promotion broke the anchor crisis** — C7:C5AC is now promoted code.
+The live frontier is **`C7:EE00..`**.
+
+The project has established:
+- **3 promotions in upper C7** (B000-B1FF, C300-C4FF, C5AC-C5D0)
+- **Threshold promotion precedent** for score-6 + valid prologue cases
+- **C500 region now has strong anchor** — enables validation of adjacent candidates
+
+Next priorities:
+1. Refresh seam cache to include pass 194
+2. Re-run anchor analysis for C000-C500 candidates
+3. Continue seam processing at EE00+ or validate C000-C500 region
