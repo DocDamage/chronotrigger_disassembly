@@ -1,0 +1,34 @@
+{
+  "pass_number": 202,
+  "pass_name": "strong_anchor_c7_aede_calls_c302",
+  "closed_ranges": [
+    {
+      "range": "C7:AEDE..C7:AEE0",
+      "kind": "owner",
+      "label": "ct_c7_aede_jsr_to_c302",
+      "confidence": "high",
+      "evidence": {
+        "instruction": "JSR $C302",
+        "bytes": "20 02 C3",
+        "anchor_target": "C7:C302",
+        "anchor_target_status": "promoted_pass_192",
+        "note": "Strong anchor - calls entry point of promoted C300-C4FF"
+      }
+    }
+  ],
+  "promotion_reason": "Strong anchor promotion - AEDE calls C302 which is entry point of promoted C300-C4FF region (pass 192). Definitive evidence.",
+  "previous_status": "frozen_no_context",
+  "risks": [
+    "Minimal range (3 bytes)",
+    "No cluster support in AE00 region",
+    "Function boundaries unknown"
+  ],
+  "promoted_by": "session_18_strong_anchor_aede",
+  "date": "2026-04-05",
+  "notes": [
+    "AEDE: JSR $C302 (20 02 C3)",
+    "C302 is entry point of C300-C4FF (pass 192)",
+    "Strong anchor to original C7 promotion",
+    "AE00 region now has code foothold"
+  ]
+}

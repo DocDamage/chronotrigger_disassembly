@@ -1,0 +1,36 @@
+{
+  "pass_number": 201,
+  "pass_name": "strong_anchor_c7_c275_calls_c5b0",
+  "closed_ranges": [
+    {
+      "range": "C7:C275..C7:C277",
+      "kind": "owner",
+      "label": "ct_c7_c275_jsr_to_c5b0",
+      "confidence": "high",
+      "evidence": {
+        "instruction": "JSR $C5B0",
+        "bytes": "20 B0 C5",
+        "anchor_target": "C7:C5B0",
+        "anchor_target_status": "promoted_pass_194",
+        "note": "Definitive strong anchor - calls promoted code",
+        "proximity": "Near promoted C5AC-C5D0 region"
+      }
+    }
+  ],
+  "promotion_reason": "Strong anchor promotion - C275 calls C5B0 which is in promoted region (pass 194: C5AC-C5D0). Circular proof: caller of promoted code is code.",
+  "previous_status": "frozen_no_context",
+  "risks": [
+    "Minimal range (3 bytes) - function boundaries unknown",
+    "No local cluster support",
+    "111 bytes from nearest cluster (C200-C206)"
+  ],
+  "promoted_by": "session_18_strong_anchor_c275",
+  "date": "2026-04-05",
+  "notes": [
+    "C275: JSR $C5B0 (20 B0 C5)",
+    "C5B0 is in promoted C5AC-C5D0 (pass 194)",
+    "Near promoted C5AC region - potential extension",
+    "Conservative 3-byte promotion around JSR instruction",
+    "Strong anchor precedent applies"
+  ]
+}

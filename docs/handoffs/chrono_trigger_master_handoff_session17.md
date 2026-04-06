@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_91.md`
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_92.md`
 - Latest closed block: **`C7:EE00..C7:F7FF`**
 - Current live seam: **`C7:F800..`**
 - Continuation run closed so far: **72 ten-page blocks / 720 pages**
-- Promotion count across that continuation run: **9** (passes 192-200: adds 3C00-3C16)
+- Promotion count across that continuation run: **11** (passes 192-202: 9 in this session)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -232,6 +232,18 @@ Pass 200 promotes 3C00-3C16:
 **Upper C7 total:** 9 promotions!
 
 See `docs/sessions/chrono_trigger_session15_continue_notes_91.md` for full analysis.
+
+---
+
+## Passes 201 & 202: More Strong Anchors!
+
+- **Pass 201:** C275-C277 (JSR $C5B0, calls pass 194)
+- **Pass 202:** AEDE-AEE0 (JSR $C302, calls pass 192 entry point)
+
+**Session 18 total:** 9 promotions (194-202)!
+**Upper C7 total:** 11 promotions!
+
+See `docs/sessions/chrono_trigger_session15_continue_notes_92.md` for full analysis.
 
 ---
 
