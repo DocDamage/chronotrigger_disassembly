@@ -1,0 +1,7 @@
+﻿target: C7:9010
+call_count: 2
+strong=0 weak=2 suspect=0 invalid=0
+  JSR from C7:ACDA -> valid / weak / unresolved
+    note: caller lives in unresolved bytes, so this is weak anchor evidence
+  JMP from C7:BB34 -> valid / weak / unresolved
+    note: caller lives in unresolved bytes, so this is weak anchor evidence
