@@ -1,0 +1,30 @@
+{
+  "pass_number": 211,
+  "pass_name": "extension_cluster_c7_c59d_score_4_adjacent_to_c5ac",
+  "closed_ranges": [
+    {
+      "range": "C7:C59D..C7:C5AB",
+      "kind": "owner",
+      "label": "ct_c7_c59d_unknown_function_score_4_extension",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 4,
+        "cluster_width": 25,
+        "distance_to_c5ac": 1,
+        "relation": "Immediately before C5AC-C5D0 (pass 194)",
+        "note": "Score-4 cluster 1 byte from promoted C5AC"
+      }
+    }
+  ],
+  "promotion_reason": "Extension promotion - C59D-C5AB is score-4 cluster immediately adjacent to promoted C5AC-C5D0 (pass 194). Effectively contiguous.",
+  "previous_status": "frozen_adjacent_to_promoted",
+  "risks": ["C5AB-C5AC gap is 1 byte"],
+  "promoted_by": "session_19_extension",
+  "date": "2026-04-05",
+  "notes": [
+    "Score 4 cluster: 25 bytes",
+    "1 byte from C5AC (pass 194)",
+    "Effectively extends C5AC-C5D0 to C59D-C5D0",
+    "Contiguous code region"
+  ]
+}
