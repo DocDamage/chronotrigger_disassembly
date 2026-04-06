@@ -1,0 +1,42 @@
+{
+  "range": "C7:E100..C7:E1FF",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "candidate_start": "C7:E188",
+      "target": "C7:E198",
+      "score": 4,
+      "distance_to_target": 16,
+      "start_byte": "1F",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.317,
+      "zero_ff_ratio": 0.024,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:E188..C7:E1B0"
+    },
+    {
+      "candidate_start": "C7:E110",
+      "target": "C7:E113",
+      "score": 2,
+      "distance_to_target": 3,
+      "start_byte": "78",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.321,
+      "zero_ff_ratio": 0.071,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:E110..C7:E12B"
+    },
+    {
+      "candidate_start": "C7:E1F9",
+      "target": "C7:E1FF",
+      "score": 2,
+      "distance_to_target": 6,
+      "start_byte": "DB",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.419,
+      "zero_ff_ratio": 0.065,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:E1F9..C7:E1FF"
+    }
+  ]
+}
