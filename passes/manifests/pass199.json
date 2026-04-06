@@ -1,0 +1,38 @@
+{
+  "pass_number": 199,
+  "pass_name": "strong_anchor_plus_cluster_c7_924d_score_7",
+  "closed_ranges": [
+    {
+      "range": "C7:924D..C7:9265",
+      "kind": "owner",
+      "label": "ct_c7_924d_unknown_function_score_7_cluster",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 7,
+        "cluster_width": 25,
+        "strong_anchor": "C7:9258 calls C3FA",
+        "anchor_target_status": "promoted_pass_192",
+        "anchor_instruction": "JSR $C3FA",
+        "anchor_bytes": "20 FA C3",
+        "note": "Dual evidence: score-7 cluster AND strong anchor to promoted code"
+      }
+    }
+  ],
+  "promotion_reason": "Strong anchor + cluster promotion - 9258 inside score-7 cluster (924D-9265) AND calls C3FA (promoted C300-C4FF). Dual evidence convergence.",
+  "previous_status": "frozen_no_context",
+  "risks": [
+    "No other external anchors",
+    "9258 is inside cluster, not at entry point",
+    "Gap to other promoted regions"
+  ],
+  "promoted_by": "session_18_dual_evidence_924d",
+  "date": "2026-04-05",
+  "notes": [
+    "Cluster score 7: 25 bytes, strongest evidence",
+    "9258: JSR $C3FA (20 FA C3) - calls promoted region",
+    "C3FA is in C300-C4FF (pass 192)",
+    "Dual evidence: cluster quality + strong anchor",
+    "First promotion in C900 region",
+    "Extends code coverage to C900-CA00"
+  ]
+}
