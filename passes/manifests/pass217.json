@@ -1,0 +1,30 @@
+{
+  "pass_number": 217,
+  "pass_name": "extension_promotion_c7_bd2d_plus_bd36_cluster",
+  "closed_ranges": [
+    {
+      "range": "C7:BD2D..C7:BD4E",
+      "kind": "owner",
+      "label": "ct_c7_bd2d_extended_with_bd36_cluster",
+      "confidence": "high",
+      "evidence": {
+        "original": "BD2D-BD2F (pass 205, 3 bytes, strong anchor)",
+        "extension": "BD36-BD4E (score 4 cluster, 25 bytes)",
+        "gap": "9 bytes (BD2F-BD36)",
+        "combined_width": 34,
+        "note": "Extended minimal promotion with adjacent cluster"
+      }
+    }
+  ],
+  "promotion_reason": "Extension promotion - combines pass 205 (BD2D, strong anchor) with adjacent BD36-BD4E cluster (score 4). 9-byte gap is small enough for contiguous code assumption.",
+  "previous_status": "partial_promotion",
+  "risks": ["9-byte gap may contain data"],
+  "promoted_by": "session_19_extension",
+  "date": "2026-04-05",
+  "notes": [
+    "Pass 205: BD2D (3 bytes) strong anchor to D363",
+    "BD36-BD4E: score 4 cluster (25 bytes)",
+    "Combined: BD2D-BD4E (34 bytes)",
+    "9-byte gap between anchor and cluster"
+  ]
+}
