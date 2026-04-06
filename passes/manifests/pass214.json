@@ -1,0 +1,28 @@
+{
+  "pass_number": 214,
+  "pass_name": "cluster_promotion_c7_cf61_score_6",
+  "closed_ranges": [
+    {
+      "range": "C7:CF61..C7:CF6F",
+      "kind": "owner",
+      "label": "ct_c7_cf61_unknown_function_score_6_cluster",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 6,
+        "cluster_width": 15,
+        "region": "CF00",
+        "note": "Score-6 cluster near CE1B-CE33 (pass 212)"
+      }
+    }
+  ],
+  "promotion_reason": "Cluster promotion - score 6 with 15 bytes width. Located in CF00 region, near promoted CE1B-CE33 (pass 212).",
+  "previous_status": "frozen_no_anchors",
+  "risks": ["No external anchors", "Small cluster (15 bytes)"],
+  "promoted_by": "session_19_cluster_scan",
+  "date": "2026-04-05",
+  "notes": [
+    "Score 6 cluster: 15 bytes",
+    "Near CE1B-CE33 (pass 212)",
+    "CF00 region coverage"
+  ]
+}
