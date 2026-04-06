@@ -1,0 +1,24 @@
+{
+  "pass_number": 206,
+  "pass_name": "strong_anchor_c7_cb1a_calls_b01f",
+  "closed_ranges": [
+    {
+      "range": "C7:CB1A..C7:CB1C",
+      "kind": "owner",
+      "label": "ct_c7_cb1a_jsr_to_b01f",
+      "confidence": "high",
+      "evidence": {
+        "instruction": "JSR $B01F",
+        "bytes": "20 1F B0",
+        "anchor_target": "C7:B01F",
+        "anchor_target_status": "promoted_pass_193",
+        "note": "Strong anchor to promoted B000-B1FF"
+      }
+    }
+  ],
+  "promotion_reason": "Strong anchor promotion - CB1A calls B01F (promoted B000-B1FF, pass 193).",
+  "previous_status": "frozen_no_context",
+  "risks": ["Minimal range", "Near CBAF cluster"],
+  "promoted_by": "session_18_strong_anchor_batch",
+  "date": "2026-04-05"
+}

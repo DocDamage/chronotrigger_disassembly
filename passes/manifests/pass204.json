@@ -1,0 +1,24 @@
+{
+  "pass_number": 204,
+  "pass_name": "strong_anchor_c7_7488_calls_b188",
+  "closed_ranges": [
+    {
+      "range": "C7:7488..C7:748A",
+      "kind": "owner",
+      "label": "ct_c7_7488_jsr_to_b188",
+      "confidence": "high",
+      "evidence": {
+        "instruction": "JSR $B188",
+        "bytes": "20 88 B1",
+        "anchor_target": "C7:B188",
+        "anchor_target_status": "promoted_pass_193",
+        "note": "Strong anchor to promoted B000-B1FF"
+      }
+    }
+  ],
+  "promotion_reason": "Strong anchor promotion - 7488 calls B188 (promoted B000-B1FF, pass 193).",
+  "previous_status": "frozen_no_context",
+  "risks": ["Minimal range", "No cluster support"],
+  "promoted_by": "session_18_strong_anchor_batch",
+  "date": "2026-04-05"
+}
