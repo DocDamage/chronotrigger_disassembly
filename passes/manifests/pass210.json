@@ -1,0 +1,28 @@
+{
+  "pass_number": 210,
+  "pass_name": "extension_cluster_c7_c22a_score_4",
+  "closed_ranges": [
+    {
+      "range": "C7:C22A..C7:C230",
+      "kind": "owner",
+      "label": "ct_c7_c22a_unknown_function_score_4_extension",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 4,
+        "cluster_width": 7,
+        "gap_to_c21a": 16,
+        "relation": "Extension of C20F-C21A",
+        "note": "Score-4 cluster extends C200 region"
+      }
+    }
+  ],
+  "promotion_reason": "Extension promotion - C22A-C230 score-4 cluster extends C200 region coverage. 16 bytes from C20F-C21A.",
+  "previous_status": "frozen_adjacent_to_promoted",
+  "risks": ["16-byte gap", "Small cluster (7 bytes)"],
+  "promoted_by": "session_19_extension",
+  "date": "2026-04-05",
+  "notes": [
+    "Score 4 cluster: 7 bytes",
+    "Extends C200 region toward C300"
+  ]
+}
