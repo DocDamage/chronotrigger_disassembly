@@ -1,0 +1,36 @@
+{
+    "notes":  "Strategic promotion of C7:C300 (pass 192) unlocked strong anchors for C7:B100. Breakthrough after 170-page freeze streak.",
+    "milestone":  "FIRST promotion in C7 bank after 170+ pages of analysis",
+    "description":  "FIRST promotion in upper C7 bank - C7:B000..C7:B1FF code region validated by strong anchors",
+    "targets_promoted":  [
+                             "C7:B111",
+                             "C7:B188",
+                             "C7:B0B4",
+                             "C7:B0DF",
+                             "C7:B09E",
+                             "C7:B0F2",
+                             "C7:B115",
+                             "C7:B195"
+                         ],
+    "pass_number":  193,
+    "anchor_evidence":  [
+                            "C7:B111: strong anchor from C7:C000..C7:C2FF (code)",
+                            "C7:B188: strong anchor from C7:7400..C7:74FF (code)",
+                            "C7:B0B4: strong anchor from C7:C300..C7:C4FF (code, pass 192)",
+                            "C7:B0DF: strong anchor from C7:C300..C7:C4FF (code, pass 192)"
+                        ],
+    "verification_status":  "strong",
+    "date":  "2026-04-06",
+    "closed_ranges":  [
+                          {
+                              "start":  "C7:B000",
+                              "confidence":  "high",
+                              "pass":  193,
+                              "kind":  "owner",
+                              "bank":  "C7",
+                              "label":  "C7_B000_B1FF_code_region",
+                              "end":  "C7:B1FF",
+                              "range":  "C7:B000..C7:B1FF"
+                          }
+                      ]
+}

@@ -1,0 +1,78 @@
+﻿{
+  "range": "C7:B000..C7:B0FF",
+  "candidate_count": 6,
+  "candidates": [
+    {
+      "candidate_start": "C7:B092",
+      "target": "C7:B09E",
+      "score": 4,
+      "distance_to_target": 12,
+      "start_byte": "22",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.378,
+      "zero_ff_ratio": 0.054,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B092..C7:B0B6"
+    },
+    {
+      "candidate_start": "C7:B0DF",
+      "target": "C7:B0DF",
+      "score": 3,
+      "distance_to_target": 0,
+      "start_byte": "22",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.16,
+      "zero_ff_ratio": 0.0,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B0DF..C7:B0F7"
+    },
+    {
+      "candidate_start": "C7:B00F",
+      "target": "C7:B01F",
+      "score": 2,
+      "distance_to_target": 16,
+      "start_byte": "84",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.244,
+      "zero_ff_ratio": 0.024,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B00F..C7:B037"
+    },
+    {
+      "candidate_start": "C7:B09F",
+      "target": "C7:B0A1",
+      "score": 2,
+      "distance_to_target": 2,
+      "start_byte": "74",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.37,
+      "zero_ff_ratio": 0.074,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B09F..C7:B0B9"
+    },
+    {
+      "candidate_start": "C7:B0AC",
+      "target": "C7:B0B4",
+      "score": 2,
+      "distance_to_target": 8,
+      "start_byte": "ED",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.242,
+      "zero_ff_ratio": 0.03,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B0AC..C7:B0CC"
+    },
+    {
+      "candidate_start": "C7:B0F0",
+      "target": "C7:B0F2",
+      "score": 2,
+      "distance_to_target": 2,
+      "start_byte": "84",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.259,
+      "zero_ff_ratio": 0.111,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:B0F0..C7:B0FF"
+    }
+  ]
+}

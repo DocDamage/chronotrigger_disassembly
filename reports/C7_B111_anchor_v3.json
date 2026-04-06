@@ -1,0 +1,6 @@
+﻿target: C7:B111
+call_count: 1
+strong=1 weak=0 suspect=0 invalid=0
+  JSR from C7:C02A -> valid / strong / resolved_code
+    caller_range: C7:C000..C7:C2FF (ct_c7_c000_c2ff_code_region_for_B111_anchor)
+    note: caller sits inside a resolved executable range
