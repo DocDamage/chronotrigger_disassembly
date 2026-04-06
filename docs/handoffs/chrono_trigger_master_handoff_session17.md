@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_86.md`
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_87.md`
 - Latest closed block: **`C7:EE00..C7:F7FF`**
 - Current live seam: **`C7:F800..`**
 - Continuation run closed so far: **72 ten-page blocks / 720 pages**
-- Promotion count across that continuation run: **4** (passes 192-195: C7:B000-B1FF, C7:C300-C4FF, C7:C5AC-C5D0, C7:D363-D37C)
+- Promotion count across that continuation run: **5** (passes 192-196: C7:B000-B1FF, C7:C300-C4FF, C7:C5AC-C5D0, C7:D363-D37C, C7:C193-C1B2)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -143,6 +143,25 @@ C7:D363 promoted following pass 194 precedent:
 **Strategic value:** Extends contiguous promoted chain C300→C5AC→D363
 
 See `docs/sessions/chrono_trigger_session15_continue_notes_86.md` for full analysis.
+
+---
+
+## 🎉 PROMOTION: Pass 196 — C7:C193..C7:C1B2
+
+**NEW PRECEDENT: Cluster-based threshold promotion!**
+
+C7:C193 promoted based on **strongest cluster evidence in upper C7**:
+- **Score 7 cluster** (exceeds backtrack scores!)
+- **5 branches, 2 returns** (definitive subroutine structure)
+- **32 bytes width** (substantial code region)
+- **2 child clusters** (C193-C1AB, C19A-C1B2)
+
+**New threshold precedent:** Cluster score ≥ 7 + multiple returns = defensible promotion, even without external anchors or high backtrack scores.
+
+**Promoted range:** C7:C193..C7:C1B2 (~32 bytes)
+**Strategic value:** Creates foothold in C100 region, bridges toward B000-B1FF
+
+See `docs/sessions/chrono_trigger_session15_continue_notes_87.md` for full analysis.
 
 ---
 

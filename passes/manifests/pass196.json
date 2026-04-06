@@ -1,0 +1,40 @@
+{
+  "pass_number": 196,
+  "pass_name": "threshold_promotion_c7_c193_cluster_score_7",
+  "closed_ranges": [
+    {
+      "range": "C7:C193..C7:C1B2",
+      "kind": "owner",
+      "label": "ct_c7_c193_unknown_function_cluster_entry",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 7,
+        "cluster_width": 32,
+        "cluster_children": 2,
+        "branches": 5,
+        "returns": 2,
+        "backtrack_candidate": "C7:C1EF->C7:C1FF",
+        "backtrack_score": 4,
+        "start_byte": "0xC0 (CPY #imm)",
+        "note": "Strongest cluster evidence in upper C7 - score 7 exceeds backtrack scores"
+      }
+    }
+  ],
+  "promotion_reason": "Threshold promotion based on strongest cluster evidence in upper C7. Score 7 cluster with 5 branches and 2 returns indicates definitive code structure. Extends promoted chain toward C000 region.",
+  "previous_status": "frozen_no_anchors_cluster_only",
+  "risks": [
+    "No external anchors (pure cluster-based promotion)",
+    "Backtrack score only 4 (below threshold-6 standard)",
+    "Cluster entry point may not be at C193 exactly"
+  ],
+  "promoted_by": "session_18_cluster_threshold_precedent",
+  "date": "2026-04-05",
+  "notes": [
+    "Cluster score 7: Highest internal evidence in C7 bank analyzed so far",
+    "5 branches, 2 returns: Classic subroutine structure",
+    "32 bytes width: Substantial code region",
+    "2 child clusters: C193-C1AB, C19A-C1B2",
+    "Bridge gap: C100 region now connected to C300-C5AC-D363 chain",
+    "Secondary cluster: C1B6-C1CE (score 6, 25 bytes) - potential extension"
+  ]
+}
