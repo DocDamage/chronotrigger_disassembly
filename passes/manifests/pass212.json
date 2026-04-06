@@ -1,0 +1,28 @@
+{
+  "pass_number": 212,
+  "pass_name": "cluster_promotion_c7_ce1b_score_6",
+  "closed_ranges": [
+    {
+      "range": "C7:CE1B..C7:CE33",
+      "kind": "owner",
+      "label": "ct_c7_ce1b_unknown_function_score_6_cluster",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 6,
+        "cluster_width": 25,
+        "region": "CE00 (near promoted C300-C5D0-D363)",
+        "note": "Score-6 cluster in CE00 region"
+      }
+    }
+  ],
+  "promotion_reason": "Cluster promotion - score 6 with 25 bytes width. Located in CE00 region, extends upper C7 coverage.",
+  "previous_status": "frozen_no_anchors",
+  "risks": ["No external anchors", "Gap to other promoted regions"],
+  "promoted_by": "session_19_cluster",
+  "date": "2026-04-05",
+  "notes": [
+    "Score 6 cluster: 25 bytes",
+    "CE00 region coverage",
+    "Strong internal evidence"
+  ]
+}
