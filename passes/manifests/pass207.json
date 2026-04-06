@@ -1,0 +1,38 @@
+{
+  "pass_number": 207,
+  "pass_name": "cluster_promotion_c7_c1ed_score_5_strategic_gap",
+  "closed_ranges": [
+    {
+      "range": "C7:C1ED..C7:C206",
+      "kind": "owner",
+      "label": "ct_c7_c1ed_unknown_function_score_5_cluster",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 5,
+        "cluster_width": 26,
+        "cluster_children": 2,
+        "gap_context": "Between C193-C1CE (promoted) and C300-C4FF (promoted)",
+        "distance_to_c1ce": 31,
+        "distance_to_c300": 249,
+        "strategic_value": "Fills gap in promoted chain",
+        "note": "Score-5 cluster bridges promoted regions"
+      }
+    }
+  ],
+  "promotion_reason": "Cluster promotion - score 5 with 26 bytes width, strategically located between two promoted regions (C193-C1CE and C300-C4FF). Fills critical gap in upper C7 code coverage.",
+  "previous_status": "frozen_no_anchors",
+  "risks": [
+    "No external anchors",
+    "Score 5 (below threshold-6)",
+    "31-byte gap to nearest promoted region"
+  ],
+  "promoted_by": "session_19_cluster_gap_fill",
+  "date": "2026-04-05",
+  "notes": [
+    "First promotion of Session 19",
+    "Score 5 cluster: 26 bytes, 2 children",
+    "Between C193-C1CE (pass 196-197) and C300-C4FF (pass 192)",
+    "Extends contiguous promoted coverage",
+    "Cluster-based precedent applies"
+  ]
+}
