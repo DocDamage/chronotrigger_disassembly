@@ -12,10 +12,10 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_84.md`
-- Latest closed block: **`C7:E400..C7:EDFF`**
-- Current live seam: **`C7:EE00..`**
-- Continuation run closed so far: **71 ten-page blocks / 710 pages**
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_85.md`
+- Latest closed block: **`C7:EE00..C7:F7FF`**
+- Current live seam: **`C7:F800..`**
+- Continuation run closed so far: **72 ten-page blocks / 720 pages**
 - Promotion count across that continuation run: **3** (passes 192-194: C7:B000-B1FF, C7:C300-C4FF, C7:C5AC-C5D0)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
