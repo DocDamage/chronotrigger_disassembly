@@ -12,11 +12,11 @@
 
 ## Current top-line state
 
-- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_85.md`
+- Latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_86.md`
 - Latest closed block: **`C7:EE00..C7:F7FF`**
 - Current live seam: **`C7:F800..`**
 - Continuation run closed so far: **72 ten-page blocks / 720 pages**
-- Promotion count across that continuation run: **3** (passes 192-194: C7:B000-B1FF, C7:C300-C4FF, C7:C5AC-C5D0)
+- Promotion count across that continuation run: **4** (passes 192-195: C7:B000-B1FF, C7:C300-C4FF, C7:C5AC-C5D0, C7:D363-D37C)
 - Effective closed-range snapshot after refresh: **967 ranges** = **67** manifest-backed + **900** note-backed frozen pages across `C3/C4/C5/C6/C7`
 
 That remains harsh, but it is still the correct read.
@@ -125,6 +125,24 @@ After 50+ pages without strong anchors, C7:C5AC promoted on evidence convergence
 **Strategic value:** First strong foothold in C500 region, enables validation of adjacent candidates
 
 See `docs/sessions/chrono_trigger_session15_continue_notes_84.md` for full analysis.
+
+---
+
+## 🎉 PROMOTION: Pass 195 — C7:D363..C7:D37C
+
+**Second threshold promotion — anchor chain extended!**
+
+C7:D363 promoted following pass 194 precedent:
+- **Score 6** (perfect backtrack)
+- **PHD prologue** (0x0B — Push Direct Page, valid 65816)
+- **Local clusters** (D3A8-D3C3, D3E7-D3F9, both score 4)
+- **Low ASCII ratio** — 26.9% (code-like)
+- **Upper C7 boundary known** — D363 is in executable region
+
+**Promoted range:** C7:D363..C7:D37C (~26 bytes)
+**Strategic value:** Extends contiguous promoted chain C300→C5AC→D363
+
+See `docs/sessions/chrono_trigger_session15_continue_notes_86.md` for full analysis.
 
 ---
 
