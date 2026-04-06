@@ -1,46 +1,43 @@
 {
-  "pass": 194,
-  "owner": "C7:C5AC..C7:C5D0",
-  "targets": [
+  "pass_number": 194,
+  "pass_name": "threshold_promotion_c7_c5ac_rep_prologue",
+  "closed_ranges": [
     {
-      "addr": "C7:C5AC",
+      "range": "C7:C5AC..C7:C5D0",
+      "kind": "owner",
       "label": "ct_c7_c5ac_unknown_function_rep_prologue",
+      "confidence": "high",
       "evidence": {
         "backtrack_score": 6,
-        "start_byte": "0xC2 (REP #\\)",
-        "prologue_type": "65816_16bit_mode_setup",
+        "start_byte": "0xC2",
+        "prologue_type": "REP_20_16bit_mode",
         "local_cluster": "C7:C59D..C7:C5B5",
         "cluster_score": 4,
-        "cluster_calls": 2,
-        "cluster_branches": 4,
-        "cluster_returns": 1
+        "cluster_returns": 1,
+        "caller": "C7:C275",
+        "caller_status": "suspect_resolved_data"
       }
     },
     {
-      "addr": "C7:C5B0",
+      "range": "C7:C5B0..C7:C5B1",
+      "kind": "entry_stub",
       "label": "ct_c7_c5b0_subroutine_entry",
-      "evidence": {
-        "xref_hits": 1,
-        "caller": "C7:C275 (JSR)",
-        "caller_status": "suspect_resolved_data",
-        "note": "Primary validation anchor for C5AC region"
-      }
+      "confidence": "high"
     }
   ],
-  "promotion_reason": "Threshold promotion - score-6 backtrack with REP prologue, strongest candidate after 50+ pages of upper C7 analysis",
+  "promotion_reason": "Threshold promotion - score 6 backtrack with REP prologue after 50+ pages without strong anchors",
   "previous_status": "frozen_pending_anchor",
-  "verification_notes": [
-    "Score 6: Perfect backtrack from C5AC to target C5B0",
-    "REP #\\ prologue: Classic 65816 16-bit accumulator setup",
-    "Local cluster C59D-C5B5: Score 4, 2 calls, 4 branches, 1 return",
-    "Suspect anchor from C275: Caller in closed data range but valid JSR",
-    "Cross-bank reference: F4:E3DA attempts JSR to C5B0 (bank mismatch indicates long call pattern)"
-  ],
   "risks": [
     "Anchor from C275 is suspect (caller in closed data range)",
-    "Minimal external validation (only 1 suspect caller)",
-    "Threshold promotion - should be monitored for consistency"
+    "Minimal external validation",
+    "Threshold promotion - monitoring required"
   ],
   "promoted_by": "session_18_threshold_decision",
-  "date": "2026-04-05"
+  "date": "2026-04-05",
+  "notes": [
+    "Score 6: Perfect backtrack from C5AC to target C5B0",
+    "REP #$20 prologue: Classic 65816 16-bit accumulator setup",
+    "Local cluster C59D-C5B5: Score 4, 2 calls, 4 branches, 1 return",
+    "Cross-bank interest: F4:E3DA bank mismatch indicates long call pattern"
+  ]
 }
