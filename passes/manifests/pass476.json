@@ -1,0 +1,19 @@
+{
+  "pass_num": 476,
+  "pass_name": "C0_7F43_GraphicsHandler_Score6",
+  "region": "C0:7F43-7F60",
+  "targets": [
+    {
+      "addr": "C0:7F43",
+      "label": "CT_C0_7F43_GFX_HANDLER_SC6",
+      "score": 6,
+      "callers": 2,
+      "start_byte": "20",
+      "start_type": "JSR",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 30,
+  "notes": "Graphics/Scroll handler. Score 6 backtrack with JSR entry. Targets C0:7F48/C0:7F4C. Part of C0:7F00 graphics region."
+}

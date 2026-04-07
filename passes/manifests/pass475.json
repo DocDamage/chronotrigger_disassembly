@@ -1,0 +1,19 @@
+{
+  "pass_num": 475,
+  "pass_name": "C0_7D66_GraphicsHandler_7Callers",
+  "region": "C0:7D64-7D7E",
+  "targets": [
+    {
+      "addr": "C0:7D66",
+      "label": "CT_C0_7D66_GFX_HANDLER_7CALLERS",
+      "score": 4,
+      "callers": 7,
+      "start_byte": "86",
+      "start_type": "STX",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 27,
+  "notes": "HIGH-CALLER Graphics/Scroll handler. 7 callers including C0:82BD, C0:833D. Part of scroll system control flow."
+}

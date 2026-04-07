@@ -1,0 +1,12 @@
+{
+  "pass_number": 448,
+  "closed_ranges": [
+    {
+      "range": "C0:E87F..C0:E886",
+      "kind": "owner",
+      "label": "ct_c0_e87f_jump_handler_score6",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, 24 callers (weak), jump/trampoline handler. RTS at E886. E800 region highest-caller target."
+}

@@ -1,0 +1,3 @@
+; HIGH CALLER TARGET: 4 callers (C0:F082, C0:F091, C0:F0D6, C0:F0F6)
+; clean start A2 (LDX), function at C0:F106..C0:F128
+CT_C0_F106_4CALLERS: EQU $C0F106

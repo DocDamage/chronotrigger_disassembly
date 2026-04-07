@@ -1,0 +1,19 @@
+{
+  "pass_num": 467,
+  "pass_name": "C0_74C7_GraphicsHandler_Score6",
+  "region": "C0:74C7-74EC",
+  "targets": [
+    {
+      "addr": "C0:74C7",
+      "label": "CT_C0_74C7_GFX_HANDLER_SC6",
+      "score": 6,
+      "callers": 4,
+      "start_byte": "C2",
+      "start_type": "REP",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 38,
+  "notes": "Graphics/Scroll handler. Score 6 backtrack with REP entry. Target C0:74D4 with 4 callers (scroll-related)."
+}

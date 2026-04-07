@@ -1,0 +1,19 @@
+{
+  "pass_num": 463,
+  "pass_name": "C0_7162_GraphicsHandler_Score6",
+  "region": "C0:7162-7188",
+  "targets": [
+    {
+      "addr": "C0:7162",
+      "label": "CT_C0_7162_GFX_HANDLER_SC6",
+      "score": 6,
+      "callers": 2,
+      "start_byte": "0B",
+      "start_type": "PHD",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 39,
+  "notes": "Graphics/Scroll handler. Score 6 backtrack with PHD entry. Target C0:7170 with 2 weak callers (C0:A905, C0:B188)."
+}
