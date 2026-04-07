@@ -4,11 +4,12 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 
 ## Current live state
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `306`
+- latest manifest-backed pass: `348`
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
-- latest closed block: C0:77DB..C0:77E3 (Bank C0, score-6 cluster)
-- current forward seam: `C0:7800..` (Bank C0 mapping ongoing)
+- latest closed block: C0:DA52..C0:DA68 (Bank C0, score-6 cluster)
+- current forward seam: `C0:DC00..` (Bank C0 mapping ongoing)
 - **Session 23 completed 30 promotions in Bank C0 (passes 277-306)**, increasing C0 coverage from 0 to 55 documented ranges
+- **Session 24 completed 42 promotions in Bank C0 (passes 307-348)**, increasing C0 coverage from 55 to 97 documented ranges
 - Session 20 completed 30 promotions in Bank C3 (passes 218-247), increasing C3 coverage from 10% to 17.6%
 - effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1081+ closed ranges (181 manifest-backed + 900 continuation)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
@@ -94,10 +95,10 @@ Systematically mapped Bank C0 score-6 clusters:
 ### Cumulative Progress
 | Bank | Ranges | Status |
 |------|--------|--------|
-| C0 | 55 | Actively mapping |
+| C0 | 97 | Actively mapping |
 | C3 | 99 | 17.6% coverage |
 | C7 | 27 | ~95% mapped |
-| **Total** | **181** | 144 manifests |
+| **Total** | **202** | 165 manifests |
 
 ### Remaining Work
 - Bank C0: Continue mapping 7800-FFFF region (upper half largely unexplored)

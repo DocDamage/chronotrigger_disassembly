@@ -1,0 +1,19 @@
+{
+  "pass_num": 404,
+  "pass_name": "C0_3800_GameLogic_Consolidated",
+  "region": "C0:3800-3900",
+  "targets": [
+    {
+      "addr": "C0:3885",
+      "label": "CT_C0_3885_CROSS_BANK_LOADER_SCORE26",
+      "existing_label": true,
+      "callers": 26,
+      "start_byte": "22",
+      "start_type": "JSL",
+      "end_marker": "RTS",
+      "notes": "Already labeled, included for coverage tracking"
+    }
+  ],
+  "coverage_bytes": 64,
+  "notes": "Consolidated pass including existing high-caller function"
+}
