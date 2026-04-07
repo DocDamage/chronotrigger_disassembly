@@ -1,0 +1,19 @@
+{
+  "pass_num": 403,
+  "pass_name": "C0_3400_GameLogic_Functions",
+  "region": "C0:3400-3500",
+  "targets": [
+    {
+      "addr": "C0:34EE",
+      "label": "CT_C0_34EE_MVN_HANDLER",
+      "score": 6,
+      "callers": 1,
+      "start_byte": "A9",
+      "start_type": "LDA",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 20,
+  "notes": "Block move (MVN) handler function"
+}
