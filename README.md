@@ -5,7 +5,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 ## Current live state
 - working branch: `live-work-from-pass166`
 - latest manifest-backed pass: `306`
-- latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_98.md`
+- latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
 - latest closed block: C0:77DB..C0:77E3 (Bank C0, score-6 cluster)
 - current forward seam: `C0:7800..` (Bank C0 mapping ongoing)
 - **Session 23 completed 30 promotions in Bank C0 (passes 277-306)**, increasing C0 coverage from 0 to 55 documented ranges
@@ -13,7 +13,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1081+ closed ranges (181 manifest-backed + 900 continuation)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
-- continuation notes are the operative state-of-record from pass 191 onward, and their frozen pages now feed caller-context scoring through the seam snapshot layer (see `docs/sessions/chrono_trigger_session15_continue_notes_*.md`)
+- continuation notes remain important historical context for the earlier C7 seam, and their frozen pages still feed caller-context scoring through the seam snapshot layer
 
 ## What this repo contains
 - `passes/manifests/` — machine-readable pass history
