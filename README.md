@@ -4,12 +4,12 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 
 ## Current live state
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `193`
+- latest manifest-backed pass: `247`
 - latest continuation note: `docs/sessions/chrono_trigger_session15_continue_notes_79.md`
-- latest closed block: C7:B200..C7:B9FF (bridge region, strong candidates)
-- current forward seam: `C7:B200..` (strategic analysis ongoing)
-- note-backed continuation run closed `65` ten-page blocks from `C5:3B00` through `C7:B200+` with `0` promotions
-- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now refreshes from manifests plus session-15 continuation notes and currently carries `957` closed ranges (`67` manifest-backed + `890` note-backed)
+- latest closed block: C3:B16F..C3:B1D0 (B100 region, score-6 cluster)
+- current forward seam: `C3:B1D0..` (Bank C3 gap-filling ongoing)
+- Session 20 completed 30 promotions in Bank C3 (passes 218-247), increasing C3 coverage from 10% to 17.6%
+- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 987+ closed ranges (85 manifest-backed + 900+ continuation)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
 - continuation notes are the operative state-of-record from pass 191 onward, and their frozen pages now feed caller-context scoring through the seam snapshot layer (see `docs/sessions/chrono_trigger_session15_continue_notes_*.md`)
@@ -73,26 +73,38 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current no-BS status
-The project has now pushed a long conservative seam run from `C5:3B00` through `C7:39FF` without a single defensible owner/helper promotion.
-That is not stalled work. It is strong negative evidence that this corridor is mixed command/data territory dominated by weak-only anchors, invalid companion targets, dead/no-ingress pages, and later patterned control/data pockets that still fail byte-level review.
-The recent `C7` work sharpened that read:
-- `C7:0E00..C7:1BFF` now reads as an extended dead-zero / low-ingress corridor
-- `C7:1C00..C7:39FF` adds candidate-code bait and branch-fed/control pockets that still collapse under byte-structure review
-The current job is still to preserve label quality, not to manufacture code out of hot mixed-content pages.
-The high-priority tooling repair before the next block is now done: callers from already frozen note-backed pages no longer masquerade as unresolved weak support by default.
+## Current status (Session 20 Complete)
+
+### Major Achievement: Bank C3 Expansion
+Session 20 achieved the largest single-session mapping effort to date:
+- **30 new promotions** in Bank C3 (passes 218-247)
+- **Bank C3 coverage: 17.6%** (up from ~10%)
+- **95 total ranges** now documented in C3
+- **11.5KB** of code mapped in Bank C3
+
+### Session 20 Summary
+Targeted the largest remaining gaps in Bank C3:
+- Filled 0528-08A1 gap (partially)
+- Mapped high-density 1900-1C00 block
+- Major progress in 2800-4C00 region (13 promotions)
+- Partially filled 4CFF-A396 gap (6 promotions)
+- Partially filled A3FF-C244 gap (5 promotions)
+
+### Remaining Work
+- Bank C3: Several large gaps remain (5600-80C4: 10.9KB, 8CFF-A396: 5.8KB)
+- Bank C7: ~95% mapped, minor gaps remain
+- Banks C0, C1, C2, C4-C6, CF: Largely unexplored
+
+See detailed report: `docs/session_20_progress_report.md`
 
 ## Start here next session
-- read the latest handoff in `docs/handoffs/` - currently `chrono_trigger_master_handoff_session17.md`
-- read the repo authority map - `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
-- read the latest continuation notes - currently `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
-- read the current resume checklist - `docs/handoffs/chrono_trigger_resume_checklist_c7_b200_or_c300.md`
-- read the short revisit backlog only if new caller-quality evidence appears - `docs/handoffs/chrono_trigger_revisit_backlog_from_session15_notes.md`
+- read the Session 20 progress report: `docs/session_20_progress_report.md`
+- read the repo authority map: `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 - stay on `live-work-from-pass166`
-- run `python3 tools/scripts/audit_branch_state_v1.py` first to confirm the effective seam is still `C7:B200..`
-- resume from `C7:B200..` (or promote C7:C300 first)
-- run `run_seam_block_v1.py --start C7:B200 --pages 10 (or C7:C300 for promotion)` first; it now auto-refreshes `tools/cache/closed_ranges_snapshot_v1.json` from manifests plus continuation notes before scanning
-- only run owner-backtrack and anchor reports for pages that the new block marks `manual_owner_boundary_review`
-- write `docs/sessions/chrono_trigger_session15_continue_notes_80.md` after the block closes
-- do not backfill manifests during seam work; the manifest layer is still frozen at pass `191`, but the seam snapshot now bridges the closed note-backed pages automatically
-- promotion standard: caller quality + start-byte quality + local structure must all converge
+- options for next work:
+  1. Continue Bank C3 gap-filling (target 5600-80C4, 8CFF-A396, or small gaps)
+  2. Switch to new bank (C0, C1, C2 recommended for fresh targets)
+  3. Complete Bank C7 to 100% coverage
+- promotion standard: score >= 6 + internal evidence (RTS/PHP/JSR) + regional context
+- run `python tools/scripts/score_target_owner_backtrack_v1.py` for candidate identification
+- run `build_call_anchor_report_v3.py` for caller validation when needed
