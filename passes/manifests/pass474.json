@@ -1,0 +1,19 @@
+{
+  "pass_num": 474,
+  "pass_name": "C0_7BA0_GraphicsHandler_Score6",
+  "region": "C0:7BA0-7BC1",
+  "targets": [
+    {
+      "addr": "C0:7BA0",
+      "label": "CT_C0_7BA0_GFX_HANDLER_SC6",
+      "score": 6,
+      "callers": 4,
+      "start_byte": "20",
+      "start_type": "JSR",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 34,
+  "notes": "Graphics/Scroll handler. Score 6 backtrack with JSR entry. Target C0:7BA9 with 4 weak callers (C0:837D, C0:839D, C0:83FD, C0:841D)."
+}

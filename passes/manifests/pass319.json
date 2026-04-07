@@ -1,0 +1,12 @@
+{
+  "pass_number": 319,
+  "closed_ranges": [
+    {
+      "range": "C0:8A92..C0:8AAB",
+      "kind": "owner",
+      "label": "ct_c0_8a92_unknown_function_score6_cluster",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, starts with PHP/SEC pattern, ends at RTS (C0:8AAB). Calls C0:9AA1 and C0:9AD3 internally."
+}

@@ -1,0 +1,19 @@
+{
+  "pass_num": 473,
+  "pass_name": "C0_79CF_GraphicsHandler_10Callers",
+  "region": "C0:79CD-79E7",
+  "targets": [
+    {
+      "addr": "C0:79CF",
+      "label": "CT_C0_79CF_GFX_HANDLER_10CALLERS",
+      "score": 4,
+      "callers": 10,
+      "start_byte": "85",
+      "start_type": "STA",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 27,
+  "notes": "HIGH-CALLER Graphics/Scroll handler. 10 callers - MAJOR HUB. Called from C0:827D, C0:829D, C0:82FD, C0:831D and internal locations. Critical scroll utility."
+}

@@ -1,0 +1,19 @@
+{
+  "pass_num": 466,
+  "pass_name": "C0_749B_GraphicsHandler_Score6",
+  "region": "C0:749B-74BE",
+  "targets": [
+    {
+      "addr": "C0:749B",
+      "label": "CT_C0_749B_GFX_HANDLER_SC6",
+      "score": 6,
+      "callers": 1,
+      "start_byte": "0B",
+      "start_type": "PHD",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 36,
+  "notes": "Graphics/Scroll handler. Score 6 backtrack with PHD entry. Targets C0:74A5/C0:74A6 (dual target region)."
+}

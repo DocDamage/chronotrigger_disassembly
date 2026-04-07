@@ -1,0 +1,3 @@
+; HIGH CALLER TARGET: 4 callers (C0:6D43, C0:6D79, C0:6DB0, C0:6DE9)
+; clean start 22 (JSL), function at C0:F615..C0:F63A
+CT_C0_F615_4CALLERS: EQU $C0F615

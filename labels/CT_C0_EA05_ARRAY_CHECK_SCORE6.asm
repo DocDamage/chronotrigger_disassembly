@@ -1,0 +1,2 @@
+; Score-6 cluster, LDA/CMP/FBEQ/BNE loop, 2 RTS points
+CT_C0_EA05_ARRAY_CHECK_SCORE6: EQU $C0EA05

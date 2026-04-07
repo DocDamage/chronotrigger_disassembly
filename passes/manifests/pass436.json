@@ -1,0 +1,12 @@
+{
+  "pass_number": 436,
+  "closed_ranges": [
+    {
+      "range": "C0:DB99..C0:DC89",
+      "kind": "owner",
+      "label": "ct_c0_db99_table_dispatcher_12callers",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-4 backtrack candidate with 12 callers, clean PHA start, ends at JML $xxxxxx (C0:DC89). Jump table dispatcher pattern."
+}

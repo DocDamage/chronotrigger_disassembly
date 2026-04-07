@@ -1,0 +1,19 @@
+{
+  "pass_num": 471,
+  "pass_name": "C0_7604_GraphicsHandler_Score6",
+  "region": "C0:7604-762A",
+  "targets": [
+    {
+      "addr": "C0:7604",
+      "label": "CT_C0_7604_GFX_HANDLER_SC6",
+      "score": 6,
+      "callers": 3,
+      "start_byte": "A9",
+      "start_type": "LDA",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 39,
+  "notes": "Graphics/Scroll handler. Score 6 backtrack with LDA entry. Target C0:7612 with 3 weak callers."
+}
