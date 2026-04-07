@@ -8,9 +8,9 @@ Subdirectories:
 - `labels/` — manifest-backed pass label notes
 
 Current boundary:
-- manifest-backed canonical state stops at pass `191`
-- continuation work after pass `191` lives under `docs/sessions/`
-- active seam tooling bridges that gap through `tools/cache/closed_ranges_snapshot_v1.json`
+- manifest-backed canonical state currently reaches pass `306`
+- continuation notes under `docs/sessions/` remain historical seam context, especially for the earlier C7 work summarized through note `100`
+- active seam tooling still folds those frozen note-backed pages into `tools/cache/closed_ranges_snapshot_v1.json`
 
 Use this directory for manifest-backed history and structured pass records.
-Do not assume it alone captures the current live seam.
+For the current frontier, pair it with `README.md` and `docs/session_23_progress_report.md`.

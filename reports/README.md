@@ -1,22 +1,24 @@
 # `reports/` Status
 
-This directory is the **active generated-artifact lane** for seam work.
+This directory is the active generated-artifact lane for seam work.
 
 Typical current outputs:
 - `*_seam_block.json` and `*_seam_block.md`
 - `*_backtrack.json`
 - `*_flow.json`
 - `*_anchor.json`
+- toolkit release manifests
 
 Working rule:
-- current reports here support the active note-backed seam workflow
-- older files in this directory are still useful evidence, but the current frontier is the latest block named in the active handoff and continuation note
+- current reports here mix historical seam evidence with newer repo-native generated artifacts
+- older files in this directory are still useful evidence, but the current frontier should be taken from `README.md` and the latest manifest-backed work
 
 Current frontier:
-- latest closed block: `C7:3000..C7:39FF`
-- current live seam: `C7:3A00..`
+- current manifest-backed frontier: `C0:7800..`
+- latest toolkit release manifest: `reports/toolkit_release_manifest_pass306_note100.md`
 
 Use this directory together with:
-- `docs/handoffs/chrono_trigger_master_handoff_session17.md`
-- `docs/handoffs/chrono_trigger_resume_checklist_c7_3a00_43ff.md`
-- `docs/sessions/chrono_trigger_session15_continue_notes_64.md`
+- `README.md`
+- `docs/session_23_progress_report.md`
+- `passes/manifests/`
+- older C7 handoffs / continuation notes only when that historical seam is relevant
