@@ -1,2 +1,2 @@
-; Score-7 cluster, math utility with LDA $A599/LDX #$05/JSR, RTS at 089F
-CT_C0_0887_MATH_UTIL_SCORE7: EQU $C08887
+; Math utility function (score-7 island)
+CT_C0_0887_MATH_UTIL_SCORE7: EQU $C000887

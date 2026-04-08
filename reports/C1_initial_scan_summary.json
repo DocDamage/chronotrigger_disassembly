@@ -1,0 +1,71 @@
+{
+  "scan_date": "2026-04-08",
+  "bank": "C1",
+  "regions": [
+    {"range": "C1:0000-3FFF", "size": "16KB", "islands": 159, "clusters": 125},
+    {"range": "C1:4000-7FFF", "size": "16KB", "islands": 114, "clusters": 78},
+    {"range": "C1:C000-FFFF", "size": "16KB", "islands": 199, "clusters": 126}
+  ],
+  "score_6_plus_summary": {
+    "C1:0000-3FFF": {
+      "score_7_count": 12,
+      "score_6_count": 27,
+      "top_clusters": [
+        {"addr": "C1:0551", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:058E", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:08B9", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:0E62", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:1035", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:1569", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:2814", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:3722", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:3AF3", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:3C7D", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:3F8B", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:3FC5", "score": 7, "width": 25, "type": "subroutine"}
+      ]
+    },
+    "C1:4000-7FFF": {
+      "score_7_count": 11,
+      "score_6_count": 22,
+      "top_clusters": [
+        {"addr": "C1:4008", "score": 7, "width": 25, "type": "hub_candidate"},
+        {"addr": "C1:4ED8", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:51D5", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:5FBA", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:6AEE", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:6B44", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:6BEF", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:7435", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:4744", "score": 7, "width": 23, "type": "subroutine"},
+        {"addr": "C1:798A", "score": 7, "width": 23, "type": "subroutine"},
+        {"addr": "C1:57F0", "score": 7, "width": 22, "type": "subroutine"},
+        {"addr": "C1:434A..C1:43B7", "cluster_score": 17, "width": 110, "children": 11, "type": "mega_cluster"}
+      ]
+    },
+    "C1:C000-FFFF": {
+      "score_7_count": 15,
+      "score_6_count": 24,
+      "top_clusters": [
+        {"addr": "C1:D8B8", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:D9BE", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:E0A2", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:E99F", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:E9BC", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:EDA0", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:EF67", "score": 7, "width": 25, "type": "subroutine"},
+        {"addr": "C1:EE10", "score": 7, "width": 23, "type": "subroutine"},
+        {"addr": "C1:D35D", "score": 7, "width": 19, "type": "subroutine"},
+        {"addr": "C1:CDEE", "score": 7, "width": 17, "type": "subroutine"},
+        {"addr": "C1:D73E", "score": 7, "width": 17, "type": "subroutine"},
+        {"addr": "C1:F8FA", "score": 7, "width": 14, "type": "subroutine"}
+      ]
+    }
+  },
+  "total_code_density": {
+    "score_7_islands": 38,
+    "score_6_islands": 73,
+    "score_6_plus_total": 111,
+    "mega_clusters_10_plus": 4
+  }
+}
