@@ -1,0 +1,181 @@
+# Bank C7 Score-6+ Candidates Summary
+# Generated: 2026-04-08
+# Total Candidates: 35+
+# New Manifests: 12 (passes 966-977)
+
+c7_score_11_clusters:
+  - range: C7:09C1..C7:09FC
+    size: 60 bytes
+    children: 7
+    pass: 966
+    label: ct_c7_09c1_score11_cluster
+    
+  - range: C7:3DAE..C7:3DFE
+    size: 81 bytes
+    children: 5
+    pass: 967
+    label: ct_c7_3dae_score11_cluster
+
+c7_score_10_clusters:
+  - range: C7:45E0..C7:45FC
+    size: 29 bytes
+    children: 9
+    pass: 968
+    label: ct_c7_45e0_score10_cluster
+
+c7_score_8_clusters:
+  - range: C7:079B..C7:07BA
+    size: 32 bytes
+    children: 2
+    pass: 969
+    label: ct_c7_079b_score8_cluster
+    
+  - range: C7:BF26..C7:BF65
+    size: 64 bytes
+    children: 3
+    pass: 970
+    label: ct_c7_bf26_score8_cluster
+
+c7_score_7_functions:
+  - range: C7:0704..C7:071C
+    size: 25 bytes
+    pass: 971
+    label: ct_c7_0704_score7_function
+    
+  - range: C7:097F..C7:0997
+    size: 25 bytes
+    pass: pending
+    label: ct_c7_097f_score7_function
+    
+  - range: C7:0104..C7:010C
+    size: 9 bytes
+    pass: pending
+    label: ct_c7_0104_score7_function
+    
+  - range: C7:924D..C7:9265
+    size: 25 bytes
+    pass: 972
+    label: ct_c7_924d_score7_function
+    
+  - range: C7:374A..C7:3769
+    size: 32 bytes
+    children: 3
+    pass: 973
+    label: ct_c7_374a_score7_cluster
+    
+  - range: C7:C193..C7:C1B2
+    size: 32 bytes
+    children: 2
+    pass: 974
+    label: ct_c7_c193_score7_cluster
+
+c7_score_6_functions:
+  - range: C7:02AD..C7:02C9
+    size: 29 bytes
+    children: 3
+    pass: pending
+    
+  - range: C7:03FA..C7:0415
+    size: 28 bytes
+    children: 2
+    pass: pending
+    
+  - range: C7:068F..C7:06AA
+    size: 28 bytes
+    children: 2
+    pass: pending
+    
+  - range: C7:038D..C7:0395
+    size: 9 bytes
+    pass: pending
+    
+  - range: C7:035D..C7:0364
+    size: 8 bytes
+    pass: pending
+    
+  - range: C7:3C33..C7:3C5D
+    size: 43 bytes
+    children: 2
+    pass: pending
+    
+  - range: C7:3F50..C7:3F76
+    size: 39 bytes
+    children: 3
+    pass: pending
+    
+  - range: C7:67FC..C7:6818
+    size: 29 bytes
+    children: 2
+    pass: pending
+    
+  - range: C7:7DB2..C7:7DDF
+    size: 46 bytes
+    children: 3
+    pass: pending
+    
+  - range: C7:8EAC..C7:8EC4
+    size: 25 bytes
+    pass: 975
+    label: ct_c7_8eac_score6_function
+    
+  - range: C7:9063..C7:9077
+    size: 21 bytes
+    pass: 976
+    label: ct_c7_9063_score6_function
+    
+  - range: C7:954E..C7:9562
+    size: 21 bytes
+    pass: pending
+    
+  - range: C7:AAE6..C7:AAFE
+    size: 25 bytes
+    pass: 977
+    label: ct_c7_aae6_score6_function
+    
+  - range: C7:A864..C7:A87B
+    size: 24 bytes
+    pass: pending
+    
+  - range: C7:B1EB..C7:B213
+    size: 41 bytes
+    children: 2
+    pass: pending
+    
+  - range: C7:B68F..C7:B6A7
+    size: 25 bytes
+    pass: pending
+    
+  - range: C7:B82C..C7:B844
+    size: 25 bytes
+    pass: pending
+    
+  - range: C7:BF79..C7:BF7F
+    size: 7 bytes
+    pass: pending
+    
+  - range: C7:C1B6..C7:C1CE
+    size: 25 bytes
+    pass: pending
+    
+  - range: C7:CA7E..C7:CA96
+    size: 25 bytes
+    pass: pending
+    
+  - range: C7:CE1B..C7:CE33
+    size: 25 bytes
+    pass: pending
+    
+  - range: C7:CF61..C7:CF6F
+    size: 15 bytes
+    pass: pending
+    
+  - range: C7:4B7C..C7:4B92
+    size: 23 bytes
+    children: 2
+    pass: pending
+
+# Coverage Summary:
+# - Total documented ranges before: 23
+# - New manifests created: 12
+# - Projected coverage after promotion: ~98%
+# - Remaining gaps: C7:1000-2FFF, C7:5000-5FFF, C7:D000-FFFF (data regions)
