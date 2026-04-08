@@ -1,0 +1,18 @@
+{
+  "pass": 685,
+  "range": "C3:8074..C3:8094",
+  "label": "ct_c3_8074_jsr_entry",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:8000-8FFF region. JSR ($20) entry point following mapped C3:80C4 region.",
+  "scan": {
+    "score": 6,
+    "start_byte": "20",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.152,
+    "zero_ff_ratio": 0.091,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

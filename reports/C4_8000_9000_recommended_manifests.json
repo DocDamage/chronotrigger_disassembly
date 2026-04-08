@@ -1,0 +1,201 @@
+{
+  "scan_region": "C4:8000..C4:8FFF",
+  "scan_date": "2026-04-08",
+  "total_candidates": 15,
+  "manifests": [
+    {
+      "bank": "C4",
+      "start": "0x8010",
+      "end": "0x8038",
+      "kind": "code",
+      "label": "ct_c4_8010_hub_entry",
+      "confidence": "high",
+      "evidence": "score-6 trio with internal callers C4:7FF5 and C4:81CD",
+      "score": 6,
+      "targets": ["C4:8012", "C4:801F", "C4:8020"]
+    },
+    {
+      "bank": "C4",
+      "start": "0x807A",
+      "end": "0x8080",
+      "kind": "code",
+      "label": "ct_c4_807A_subroutine",
+      "confidence": "high",
+      "evidence": "score-5 island with RTS, 1 external call",
+      "score": 5,
+      "width": 7
+    },
+    {
+      "bank": "C4",
+      "start": "0x846B",
+      "end": "0x8476",
+      "kind": "code",
+      "label": "ct_c4_846b_handler",
+      "confidence": "high",
+      "evidence": "score-5 island with stack manipulation and RTS",
+      "score": 5,
+      "width": 12
+    },
+    {
+      "bank": "C4",
+      "start": "0x8A0F",
+      "end": "0x8A1A",
+      "kind": "code",
+      "label": "ct_c4_8a0f_branch_handler",
+      "confidence": "high",
+      "evidence": "score-5 island with 2 branches and RTS",
+      "score": 5,
+      "width": 12
+    },
+    {
+      "bank": "C4",
+      "start": "0x8718",
+      "end": "0x872A",
+      "kind": "code",
+      "label": "ct_c4_8718_subroutine",
+      "confidence": "medium",
+      "evidence": "score-4 island with branch and RTS, 19 bytes",
+      "score": 4,
+      "width": 19
+    },
+    {
+      "bank": "C4",
+      "start": "0x87DA",
+      "end": "0x87EB",
+      "kind": "code",
+      "label": "ct_c4_87da_stack_handler",
+      "confidence": "medium",
+      "evidence": "score-4 island with PLX/PHY stack ops and RTS",
+      "score": 4,
+      "width": 18
+    },
+    {
+      "bank": "C4",
+      "start": "0x883A",
+      "end": "0x884B",
+      "kind": "code",
+      "label": "ct_c4_883a_multi_return",
+      "confidence": "medium",
+      "evidence": "score-4 island with 2 returns, 18 bytes",
+      "score": 4,
+      "width": 18
+    },
+    {
+      "bank": "C4",
+      "start": "0x891A",
+      "end": "0x8925",
+      "kind": "code",
+      "label": "ct_c4_891a_jsr_handler",
+      "confidence": "medium",
+      "evidence": "score-4 island with JSR, branch, and RTS",
+      "score": 4,
+      "width": 12
+    },
+    {
+      "bank": "C4",
+      "start": "0x8A5A",
+      "end": "0x8A60",
+      "kind": "code",
+      "label": "ct_c4_8a5a_branch_pair",
+      "confidence": "medium",
+      "evidence": "score-4 island with 2 branches and RTS",
+      "score": 4,
+      "width": 7
+    },
+    {
+      "bank": "C4",
+      "start": "0x84AA",
+      "end": "0x84AF",
+      "kind": "code",
+      "label": "ct_c4_84aa_branch_handler",
+      "confidence": "medium",
+      "evidence": "score-4 island with 2 branches and RTS",
+      "score": 4,
+      "width": 6
+    },
+    {
+      "bank": "C4",
+      "start": "0x86A4",
+      "end": "0x86A9",
+      "kind": "code",
+      "label": "ct_c4_86a9_simple_branch",
+      "confidence": "medium",
+      "evidence": "score-4 island with branch and RTS",
+      "score": 4,
+      "width": 6
+    },
+    {
+      "bank": "C4",
+      "start": "0x8FDE",
+      "end": "0x8FE2",
+      "kind": "code",
+      "label": "ct_c4_8fde_small_handler",
+      "confidence": "medium",
+      "evidence": "score-4 island with branch and RTS",
+      "score": 4,
+      "width": 5
+    },
+    {
+      "bank": "C4",
+      "start": "0x84C1",
+      "end": "0x84DC",
+      "kind": "code",
+      "label": "ct_c4_84c1_score6_candidate",
+      "confidence": "medium",
+      "evidence": "score-6 candidate with PHP start, no valid callers",
+      "score": 6,
+      "width": 28
+    },
+    {
+      "bank": "C4",
+      "start": "0x8C0D",
+      "end": "0x8C2C",
+      "kind": "code",
+      "label": "ct_c4_8c0d_score6_candidate",
+      "confidence": "low",
+      "evidence": "score-6 candidate with LDX start, no callers found",
+      "score": 6,
+      "width": 32
+    },
+    {
+      "bank": "C4",
+      "start": "0x808B",
+      "end": "0x8092",
+      "kind": "code",
+      "label": "ct_c4_808b_dual_call",
+      "confidence": "low",
+      "evidence": "score-3 island with 2 calls and RTS",
+      "score": 3,
+      "width": 8
+    }
+  ],
+  "score_6_analysis": {
+    "c4_8010": {
+      "status": "confirmed_hub",
+      "targets": ["C4:8012", "C4:801F", "C4:8020"],
+      "internal_callers": ["C4:7FF5", "C4:81CD"],
+      "cross_bank_valid": false,
+      "notes": "Multi-entry hub with internal validation"
+    },
+    "c4_84c1": {
+      "status": "candidate",
+      "target": "C4:84C4",
+      "internal_callers": [],
+      "cross_bank_valid": false,
+      "notes": "Score-6 but no valid callers, needs verification"
+    },
+    "c4_8c0d": {
+      "status": "candidate",
+      "target": "C4:8C14",
+      "internal_callers": [],
+      "cross_bank_valid": false,
+      "notes": "Score-6 but orphaned, may be branch target"
+    }
+  },
+  "validation_summary": {
+    "fake_cross_bank_callers": 22,
+    "valid_internal_callers": 2,
+    "local_islands_found": 25,
+    "pages_analyzed": 16
+  }
+}

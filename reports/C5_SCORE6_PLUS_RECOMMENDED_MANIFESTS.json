@@ -1,0 +1,365 @@
+{
+  "bank": "C5",
+  "report_date": "2026-04-08",
+  "total_score_6_plus": 20,
+  "previously_documented": 4,
+  "remaining_mapped": 16,
+  "coverage_improvement": "0.99% -> 2.8%",
+  "manifests": [
+    {
+      "pass_number": 710,
+      "address": "C5:C036",
+      "score": 6,
+      "prologue": "JSR (20)",
+      "range": "C5:C036..C5:C050",
+      "label": "ct_c5_c036_jsr_prologue",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "analysis": {
+        "target": "C5:C038",
+        "distance_to_target": 2,
+        "start_byte": "20",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.333,
+        "zero_ff_ratio": 0.222
+      }
+    },
+    {
+      "pass_number": 711,
+      "address": "C5:C0EA",
+      "score": 6,
+      "prologue": "PHP (08)",
+      "range": "C5:C0EA..C5:C10C",
+      "label": "ct_c5_c0ea_php_prologue",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "analysis": {
+        "target": "C5:C0F4",
+        "distance_to_target": 10,
+        "start_byte": "08",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.371,
+        "zero_ff_ratio": 0.0
+      }
+    },
+    {
+      "pass_number": 712,
+      "address": "C5:C1E6",
+      "score": 6,
+      "prologue": "JSR (20)",
+      "range": "C5:C1E6..C5:C207",
+      "label": "ct_c5_c1e6_jsr_prologue",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "analysis": {
+        "target": "C5:C1EF",
+        "distance_to_target": 9,
+        "start_byte": "20",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.382,
+        "zero_ff_ratio": 0.029
+      }
+    },
+    {
+      "pass_number": 713,
+      "address": "C5:CEF2",
+      "score": 6,
+      "prologue": "PHP (08)",
+      "range": "C5:CEF2..C5:CF18",
+      "label": "ct_c5_cef2_php_prologue",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "analysis": {
+        "target": "C5:CF00",
+        "distance_to_target": 14,
+        "start_byte": "08",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.333,
+        "zero_ff_ratio": 0.0
+      }
+    },
+    {
+      "pass_number": 720,
+      "address": "C5:4206",
+      "score": 6,
+      "prologue": "PHP (08)",
+      "range": "C5:4206..C5:4220",
+      "label": "ct_c5_4206_php_prologue",
+      "confidence": "high",
+      "region": "4000-4FFF",
+      "status": "NEW",
+      "gap": "C5:4000-4205",
+      "analysis": {
+        "target": "C5:4208",
+        "distance_to_target": 2,
+        "start_byte": "08",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.222,
+        "zero_ff_ratio": 0.074
+      }
+    },
+    {
+      "pass_number": 721,
+      "address": "C5:804F",
+      "score": 6,
+      "prologue": "JSR (20)",
+      "range": "C5:804F..C5:8068",
+      "label": "ct_c5_804f_jsr_prologue",
+      "confidence": "high",
+      "region": "8000-8FFF",
+      "status": "NEW",
+      "analysis": {
+        "target": "C5:8050",
+        "distance_to_target": 1,
+        "start_byte": "20",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.423,
+        "zero_ff_ratio": 0.115
+      }
+    },
+    {
+      "pass_number": 722,
+      "address": "C5:80DE",
+      "score": 6,
+      "prologue": "PHP (08)",
+      "range": "C5:80DE..C5:80F7",
+      "label": "ct_c5_80de_php_prologue",
+      "confidence": "high",
+      "region": "8000-8FFF",
+      "status": "NEW",
+      "analysis": {
+        "target": "C5:80DF",
+        "distance_to_target": 1,
+        "start_byte": "08",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.308,
+        "zero_ff_ratio": 0.231
+      }
+    },
+    {
+      "pass_number": 723,
+      "address": "C5:CB70",
+      "cluster_score": 7,
+      "prologue": "local_cluster",
+      "range": "C5:CB70..C5:CB7A",
+      "label": "ct_c5_cb70_local_cluster",
+      "confidence": "highest",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "stats": {
+        "calls": 1,
+        "branches": 4,
+        "stackish": 2,
+        "returns": 1,
+        "width": 11
+      },
+      "data_misread_flags": []
+    },
+    {
+      "pass_number": 724,
+      "address": "C5:C947",
+      "cluster_score": 6,
+      "prologue": "local_cluster",
+      "range": "C5:C947..C5:C95F",
+      "label": "ct_c5_c947_local_cluster",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "stats": {
+        "calls": 1,
+        "branches": 4,
+        "stackish": 0,
+        "returns": 2,
+        "width": 25
+      },
+      "data_misread_flags": []
+    },
+    {
+      "pass_number": 725,
+      "address": "C5:C64E",
+      "cluster_score": 6,
+      "prologue": "local_cluster",
+      "range": "C5:C64E..C5:C655",
+      "label": "ct_c5_c64e_local_cluster",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "stats": {
+        "calls": 1,
+        "branches": 4,
+        "stackish": 0,
+        "returns": 1,
+        "width": 8
+      },
+      "data_misread_flags": []
+    },
+    {
+      "pass_number": 726,
+      "address": "C5:C1E2",
+      "cluster_score": 6,
+      "prologue": "local_cluster",
+      "range": "C5:C1E2..C5:C1E8",
+      "label": "ct_c5_c1e2_local_cluster",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "stats": {
+        "calls": 1,
+        "branches": 1,
+        "stackish": 0,
+        "returns": 1,
+        "width": 7
+      },
+      "data_misread_flags": []
+    },
+    {
+      "pass_number": 727,
+      "address": "C5:4FBD",
+      "cluster_score": 6,
+      "prologue": "return_anchored",
+      "range": "C5:4FBD..C5:4FC4",
+      "label": "ct_c5_4fbd_return_anchored",
+      "confidence": "high",
+      "region": "4000-4FFF",
+      "status": "NEW",
+      "stats": {
+        "calls": 0,
+        "branches": 1,
+        "stackish": 1,
+        "returns": 2,
+        "width": 8
+      },
+      "notes": "Return-anchored cluster, existing manifest candidate"
+    },
+    {
+      "pass_number": 728,
+      "address": "C5:8BAC",
+      "cluster_score": 6,
+      "prologue": "local_cluster",
+      "range": "C5:8BAC..C5:8BB7",
+      "label": "ct_c5_8bac_local_cluster",
+      "confidence": "high",
+      "region": "8000-8FFF",
+      "status": "NEW",
+      "stats": {
+        "calls": 1,
+        "branches": 1,
+        "stackish": 0,
+        "returns": 1,
+        "width": 12
+      },
+      "data_misread_flags": []
+    },
+    {
+      "pass_number": 729,
+      "address": "C5:C0DD",
+      "score": 6,
+      "prologue": "PHY (5A)",
+      "range": "C5:C0DD..C5:C10C",
+      "label": "ct_c5_c0dd_stack_prologue",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "analysis": {
+        "target": "C5:C0E0",
+        "distance_to_target": 3,
+        "start_byte": "5A",
+        "start_class": "clean_start",
+        "ascii_ratio": 0.321,
+        "zero_ff_ratio": 0.0
+      }
+    },
+    {
+      "pass_number": 730,
+      "address": "C5:C481",
+      "cluster_score": 6,
+      "prologue": "local_cluster",
+      "range": "C5:C47F..C5:C499",
+      "label": "ct_c5_c481_local_cluster",
+      "confidence": "high",
+      "region": "C000-CFFF",
+      "status": "NEW",
+      "stats": {
+        "calls": 3,
+        "branches": 2,
+        "stackish": 3,
+        "returns": 2,
+        "width": 27
+      },
+      "child_ranges": ["C5:C47F..C5:C483", "C5:C481..C5:C499"],
+      "notes": "Merged cluster, 2 islands combined"
+    }
+  ],
+  "previously_documented_reference": [
+    {
+      "pass_number": 577,
+      "address": "C5:C030",
+      "score": 6,
+      "prologue": "PHP (08)",
+      "label": "ct_c5_c030_php_prologue",
+      "status": "existing_confirmed"
+    },
+    {
+      "pass_number": 578,
+      "address": "C5:C0B7",
+      "score": 6,
+      "prologue": "JSL (22)",
+      "label": "ct_c5_c0b7_jsl_prologue",
+      "status": "existing_confirmed"
+    },
+    {
+      "pass_number": 707,
+      "address": "C5:C0EA",
+      "score": 6,
+      "prologue": "PHP (08)",
+      "label": "ct_c5_c0ea_php_handler",
+      "status": "mapped"
+    }
+  ],
+  "summary": {
+    "total_new_manifests": 16,
+    "by_region": {
+      "4000-4FFF": 2,
+      "8000-8FFF": 3,
+      "C000-CFFF": 11
+    },
+    "by_score": {
+      "score_7": 1,
+      "score_6": 15
+    },
+    "by_prologue": {
+      "PHP (08)": 4,
+      "JSR (20)": 3,
+      "local_cluster": 7,
+      "PHY (5A)": 1,
+      "return_anchored": 1
+    }
+  },
+  "coverage_projection": {
+    "current": "0.99%",
+    "after_implementation": "2.8%",
+    "improvement": "+1.81%",
+    "new_ranges": 16
+  },
+  "gap_analysis": {
+    "gap_4000_4205": {
+      "size": "517 bytes",
+      "candidates_found": ["C5:4206"],
+      "coverage_potential": "0.3%"
+    },
+    "gap_4300_44FF": {
+      "size": "512 bytes",
+      "candidates_found": ["C5:43DB (suspect)", "C5:4387 (cluster)"],
+      "coverage_potential": "0.2%"
+    },
+    "gap_4500_47FF": {
+      "size": "768 bytes",
+      "candidates_found": ["C5:4767 (cluster score 4)"],
+      "coverage_potential": "0.3%"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pass": 717,
+  "range": "C3:8074..C3:8094",
+  "label": "ct_c3_8074_jsr_entry_b",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. JSR ($20) entry with clean start class. Region C3:8000-8FFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "20",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

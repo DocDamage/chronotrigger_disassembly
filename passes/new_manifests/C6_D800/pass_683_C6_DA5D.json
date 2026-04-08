@@ -1,0 +1,12 @@
+{
+  "pass_number": 683,
+  "closed_ranges": [
+    {
+      "range": "C6:DA5D..C6:DA64",
+      "kind": "owner",
+      "label": "ct_c6_da5d_stack_return",
+      "confidence": "low"
+    }
+  ],
+  "promotion_reason": "Score-2 cluster, 8 bytes, stackish return. DA00 region utility with PLP/RTS pattern."
+}

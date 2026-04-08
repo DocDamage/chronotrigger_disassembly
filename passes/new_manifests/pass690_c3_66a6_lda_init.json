@@ -1,0 +1,18 @@
+{
+  "pass": 690,
+  "range": "C3:66A6..C3:66C8",
+  "label": "ct_c3_66a6_lda_init",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. LDA immediate ($A9) prologue with clean start class. Target C3:66B0. Newly discovered region C3:6000-6FFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "A9",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.371,
+    "zero_ff_ratio": 0.086,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

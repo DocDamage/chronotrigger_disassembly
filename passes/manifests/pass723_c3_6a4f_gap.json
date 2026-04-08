@@ -1,0 +1,21 @@
+{
+  "pass_number": 723,
+  "bank": "C3",
+  "start_address": "C3:6A4F",
+  "end_address": "C3:6A6B",
+  "label": "ct_c3_6a4f_gap_handler",
+  "kind": "owner",
+  "confidence": "medium-high",
+  "source": "backtrack_score_4",
+  "target": "C3:6A53",
+  "prologue_byte": "22",
+  "prologue_mnemonic": "JSL",
+  "backtrack_distance": 4,
+  "score": 4,
+  "promotion_reason": "Score-4 candidate in C3:6A00 page. JSL prologue for long subroutine.",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6A53",
+    "JSL indicates this function calls into other banks",
+    "Part of C3:6000-6FFF high-density unexplored region"
+  ]
+}

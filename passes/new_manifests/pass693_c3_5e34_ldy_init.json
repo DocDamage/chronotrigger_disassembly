@@ -1,0 +1,18 @@
+{
+  "pass": 693,
+  "range": "C3:5E34..C3:5E54",
+  "label": "ct_c3_5e34_ldy_init",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. LDY immediate ($A0) prologue with clean start class. Target in C3:5000-5FFF game logic region.",
+  "scan": {
+    "score": 6,
+    "start_byte": "A0",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

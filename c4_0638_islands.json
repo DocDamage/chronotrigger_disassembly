@@ -1,0 +1,38 @@
+﻿{
+  "range": "C4:0638..C4:080F",
+  "island_count": 1,
+  "cluster_count": 1,
+  "islands": [
+    {
+      "range": "C4:073C..C4:074C",
+      "score": 3,
+      "width": 17,
+      "call_count": 0,
+      "branch_count": 0,
+      "stackish_count": 0,
+      "return_count": 1,
+      "first_return_address": "C4:074C",
+      "ascii_ratio": 0.235,
+      "repeated_pair_score": 0.0,
+      "data_misread_flags": []
+    }
+  ],
+  "clusters": [
+    {
+      "range": "C4:073C..C4:074C",
+      "cluster_score": 3,
+      "child_count": 1,
+      "child_ranges": [
+        "C4:073C..C4:074C"
+      ],
+      "width": 17,
+      "call_count": 0,
+      "branch_count": 0,
+      "stackish_count": 0,
+      "return_count": 1,
+      "ascii_ratio": 0.235,
+      "repeated_pair_score": 0.0,
+      "data_misread_flags": []
+    }
+  ]
+}

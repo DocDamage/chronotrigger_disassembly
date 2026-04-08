@@ -1,0 +1,22 @@
+{
+  "pass_number": 715,
+  "closed_ranges": [
+    {
+      "range": "C5:CD33..C5:CD4B",
+      "kind": "owner",
+      "label": "ct_c5_cd33_ldy_prologue",
+      "confidence": "medium"
+    }
+  ],
+  "promotion_reason": "Score-5 cluster, LDY# prologue (A0). Register initialization pattern.",
+  "analysis": {
+    "candidate_start": "C5:CD33",
+    "target": "C5:CD33",
+    "score": 5,
+    "distance_to_target": 0,
+    "start_byte": "A0",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.4,
+    "zero_ff_ratio": 0.04
+  }
+}

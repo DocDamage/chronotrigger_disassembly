@@ -1,0 +1,22 @@
+{
+  "pass": "c3_2e31_score6",
+  "live_seam_after_pass": "C3:2E56..C3:3058",
+  "new_ranges": [
+    {
+      "range": "C3:2E31..C3:2E55",
+      "label": "ct_c3_function_2e31_phd_prologue_score6",
+      "notes": "Score-6 candidate from gap 2900-3058. PHD prologue, RTS epilogue. Owner backtrack validated."
+    }
+  ],
+  "promoted_labels": [
+    "ct_c3_function_2e31_phd_prologue_score6"
+  ],
+  "criteria": {
+    "score": 6,
+    "start_byte": "0B",
+    "start_class": "clean_start",
+    "prologue": "PHD",
+    "epilogue": "RTS",
+    "validation": "owner_backtrack_v1"
+  }
+}
