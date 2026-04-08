@@ -1,0 +1,2 @@
+; Mode switch with REP #$20/C2 start
+CT_C0_916C_MODE_SWITCH_SCORE6: EQU $C00916C

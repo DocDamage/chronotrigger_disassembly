@@ -1,0 +1,2 @@
+; HDMA chain handler with PHB
+CT_C0_F8B0_HDMA_CHAIN_SCORE6: EQU $C00F8B0

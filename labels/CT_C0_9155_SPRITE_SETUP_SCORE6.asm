@@ -1,0 +1,2 @@
+; Sprite setup with JSR chain
+CT_C0_9155_SPRITE_SETUP_SCORE6: EQU $C009155

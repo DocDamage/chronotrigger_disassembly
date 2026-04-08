@@ -1,0 +1,2 @@
+; Stack-based handler with PHA/PHY/PHX
+CT_C0_9ABD_PHA_HANDLER_SCORE6: EQU $C009ABD
