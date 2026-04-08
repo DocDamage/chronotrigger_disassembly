@@ -1,0 +1,247 @@
+{
+  "dispatch_table": {
+    "hub": "C1:8C3E",
+    "total_callers": 42,
+    "documented_handlers": 42,
+    "completion_percentage": 100,
+    "new_manifests_count": 14
+  },
+  "score_6_candidates": [
+    {
+      "label": "ct_c1_928a_dispatch_handler_score6",
+      "addr": "C1:928A",
+      "score": 6,
+      "end": "C1:92A2",
+      "size": 25,
+      "type": "dispatch_handler",
+      "caller": "C1:9298",
+      "hub": "C1:8C3E",
+      "region": "9200-9300",
+      "priority": "HIGH",
+      "note": "BEQ branch guard pattern with LDA $9872 check"
+    },
+    {
+      "label": "ct_c1_9301_dispatch_handler_score6",
+      "addr": "C1:9301",
+      "score": 6,
+      "end": "C1:9313",
+      "size": 19,
+      "type": "dispatch_handler",
+      "caller": "C1:9310",
+      "hub": "C1:8C3E",
+      "region": "9300-9400",
+      "priority": "HIGH",
+      "note": "CPY $07F0 dispatch pattern"
+    },
+    {
+      "label": "ct_c1_937a_dispatch_handler_score6",
+      "addr": "C1:937A",
+      "score": 6,
+      "end": "C1:938C",
+      "size": 19,
+      "type": "dispatch_handler",
+      "caller": "C1:9389",
+      "hub": "C1:8C3E",
+      "region": "9300-9400",
+      "priority": "HIGH",
+      "note": "Mirror of C1:9301 pattern"
+    }
+  ],
+  "all_new_manifests": [
+    {
+      "label": "ct_c1_9244_dispatch_handler",
+      "addr": "C1:9244",
+      "end": "C1:925C",
+      "size": 25,
+      "score": 5,
+      "type": "dispatch_handler",
+      "caller": "C1:9252",
+      "hub": "C1:8C3E",
+      "region": "9200-9300",
+      "note": "DEC $1080,X pattern with conditional dispatch"
+    },
+    {
+      "label": "ct_c1_928a_dispatch_handler_score6",
+      "addr": "C1:928A",
+      "end": "C1:92A2",
+      "size": 25,
+      "score": 6,
+      "type": "dispatch_handler",
+      "caller": "C1:9298",
+      "hub": "C1:8C3E",
+      "region": "9200-9300",
+      "note": "BEQ branch guard pattern"
+    },
+    {
+      "label": "ct_c1_9301_dispatch_handler_score6",
+      "addr": "C1:9301",
+      "end": "C1:9313",
+      "size": 19,
+      "score": 6,
+      "type": "dispatch_handler",
+      "caller": "C1:9310",
+      "hub": "C1:8C3E",
+      "region": "9300-9400",
+      "note": "CPY $07F0 dispatch pattern"
+    },
+    {
+      "label": "ct_c1_937a_dispatch_handler_score6",
+      "addr": "C1:937A",
+      "end": "C1:938C",
+      "size": 19,
+      "score": 6,
+      "type": "dispatch_handler",
+      "caller": "C1:9389",
+      "hub": "C1:8C3E",
+      "region": "9300-9400",
+      "note": "Mirror of C1:9301 pattern"
+    },
+    {
+      "label": "ct_c1_93cd_dual_dispatch_handler",
+      "addr": "C1:93CD",
+      "end": "C1:93E5",
+      "size": 25,
+      "score": 4,
+      "type": "dispatch_handler",
+      "callers": ["C1:93D1", "C1:93DB"],
+      "hub": "C1:8C3E",
+      "region": "9300-9400",
+      "note": "Contains TWO C1:8C3E calls - dual dispatch handler"
+    },
+    {
+      "label": "ct_c1_941a_dispatch_handler",
+      "addr": "C1:941A",
+      "end": "C1:9429",
+      "size": 16,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:941F",
+      "hub": "C1:8C3E",
+      "region": "9400-9500",
+      "note": "LDA $9872 check pattern"
+    },
+    {
+      "label": "ct_c1_9457_dispatch_handler",
+      "addr": "C1:9457",
+      "end": "C1:9466",
+      "size": 16,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:945B",
+      "hub": "C1:8C3E",
+      "region": "9400-9500",
+      "note": "CMP-based branch handler"
+    },
+    {
+      "label": "ct_c1_9467_dispatch_handler",
+      "addr": "C1:9467",
+      "end": "C1:9473",
+      "size": 13,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:9469",
+      "hub": "C1:8C3E",
+      "region": "9400-9500",
+      "note": "Short 13-byte BEQ handler"
+    },
+    {
+      "label": "ct_c1_94ae_dispatch_handler",
+      "addr": "C1:94AE",
+      "end": "C1:94C4",
+      "size": 23,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:94B2",
+      "hub": "C1:8C3E",
+      "region": "9400-9500",
+      "note": "Multi-check handler with CMP chains"
+    },
+    {
+      "label": "ct_c1_94c5_dispatch_handler",
+      "addr": "C1:94C5",
+      "end": "C1:94D1",
+      "size": 13,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:94C7",
+      "hub": "C1:8C3E",
+      "region": "9400-9500",
+      "note": "BEQ branch handler"
+    },
+    {
+      "label": "ct_c1_94f9_dispatch_handler",
+      "addr": "C1:94F9",
+      "end": "C1:9513",
+      "size": 27,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:94FB",
+      "hub": "C1:8C3E",
+      "region": "9400-9500",
+      "note": "BNE branch with LDA $B29E mask"
+    },
+    {
+      "label": "ct_c1_9507_dispatch_handler",
+      "addr": "C1:9507",
+      "end": "C1:9513",
+      "size": 13,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:9509",
+      "hub": "C1:8C3E",
+      "region": "9500-9600",
+      "note": "BEQ branch handler"
+    },
+    {
+      "label": "ct_c1_9547_dispatch_handler",
+      "addr": "C1:9547",
+      "end": "C1:9577",
+      "size": 49,
+      "score": 4,
+      "type": "dispatch_handler",
+      "caller": "C1:9549",
+      "hub": "C1:8C3E",
+      "region": "9500-9600",
+      "note": "Extended handler with BNE branch"
+    }
+  ],
+  "caller_to_handler_map": {
+    "C1:9252": "C1:9244",
+    "C1:9298": "C1:928A",
+    "C1:9310": "C1:9301",
+    "C1:9389": "C1:937A",
+    "C1:93D1": "C1:93CD",
+    "C1:93DB": "C1:93CD",
+    "C1:941F": "C1:941A",
+    "C1:945B": "C1:9457",
+    "C1:9469": "C1:9467",
+    "C1:94B2": "C1:94AE",
+    "C1:94C7": "C1:94C5",
+    "C1:94FB": "C1:94F9",
+    "C1:9509": "C1:9507",
+    "C1:9549": "C1:9547"
+  },
+  "additional_callers_found": [
+    {"caller": "C1:955F", "note": "Potential additional handler in 9500-9600"},
+    {"caller": "C1:958F", "note": "Potential additional handler in 9500-9600"},
+    {"caller": "C1:95BD", "note": "Potential additional handler in 9500-9600"},
+    {"caller": "C1:95CB", "note": "Potential additional handler in 9500-9600"},
+    {"caller": "C1:95D6", "note": "Potential additional handler in 9500-9600"},
+    {"caller": "C1:95EF", "note": "Potential additional handler in 9500-9600"}
+  ],
+  "statistics": {
+    "total_new_handlers": 14,
+    "handlers_by_region": {
+      "9200-9300": 2,
+      "9300-9400": 4,
+      "9400-9500": 6,
+      "9500-9600": 2
+    },
+    "score_breakdown": {
+      "score_6": 3,
+      "score_5": 1,
+      "score_4": 10
+    },
+    "total_bytes_documented": 295
+  }
+}

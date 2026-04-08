@@ -1,0 +1,12 @@
+{
+  "pass_number": 680,
+  "closed_ranges": [
+    {
+      "range": "C6:D976..C6:D97B",
+      "kind": "owner",
+      "label": "ct_c6_d976_stack_util",
+      "confidence": "medium"
+    }
+  ],
+  "promotion_reason": "Score-5 cluster, JSL to $400810, RTL terminator. 6-byte stack-manipulation utility. 2 stackish ops (PLX/PHY pattern)."
+}

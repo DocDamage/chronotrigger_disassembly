@@ -1,0 +1,147 @@
+{
+  "bank": "C2",
+  "analysis_date": "2026-04-08",
+  "recommended_manifests": [
+    {
+      "pass_number": 579,
+      "closed_ranges": [
+        {
+          "range": "C2:032C..C2:0350",
+          "kind": "owner",
+          "label": "ct_c2_032c_handler_score8",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-8 cluster in vector table region. RTS-terminated at C2:034C. Multiple internal JSR calls. Clean function boundaries."
+    },
+    {
+      "pass_number": 580,
+      "closed_ranges": [
+        {
+          "range": "C2:000F..C2:0050",
+          "kind": "owner",
+          "label": "ct_c2_000f_init_entry",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Main initialization entry point from vector table (JMP at C2:0000). SNES standard prologue: SEI/SEP/REP. Calls 5 subroutines."
+    },
+    {
+      "pass_number": 581,
+      "closed_ranges": [
+        {
+          "range": "C2:B7B3..C2:B7CB",
+          "kind": "owner",
+          "label": "ct_c2_b7b3_sub_handler",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster adjacent to documented B716 function. RTS-terminated at C2:B7CB. Cross-bank caller at C2:B7C8."
+    },
+    {
+      "pass_number": 582,
+      "closed_ranges": [
+        {
+          "range": "C2:B7E3..C2:B7E8",
+          "kind": "owner",
+          "label": "ct_c2_b7e3_tiny_utility",
+          "confidence": "medium"
+        }
+      ],
+      "promotion_reason": "Small 5-byte utility function. RTS-terminated. Located in high-scoring B700-B800 cluster region."
+    },
+    {
+      "pass_number": 583,
+      "closed_ranges": [
+        {
+          "range": "C2:0465..C2:0477",
+          "kind": "owner",
+          "label": "ct_c2_0465_handler_score6",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster. RTS at C2:046D. Clean function boundaries in 0400 region."
+    },
+    {
+      "pass_number": 584,
+      "closed_ranges": [
+        {
+          "range": "C2:04D7..C2:04E8",
+          "kind": "owner",
+          "label": "ct_c2_04d7_handler_score6",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster with REP prologue. Part of 0400-0500 code region."
+    },
+    {
+      "pass_number": 585,
+      "closed_ranges": [
+        {
+          "range": "C2:0582..C2:059A",
+          "kind": "owner",
+          "label": "ct_c2_0582_handler_score6",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster. RTS-terminated at C2:059A. LDA/SEP/E2 pattern."
+    },
+    {
+      "pass_number": 586,
+      "closed_ranges": [
+        {
+          "range": "C2:0686..C2:069E",
+          "kind": "owner",
+          "label": "ct_c2_0686_handler_score6",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster. RTS-terminated at C2:069E. Similar pattern to C2:0582."
+    },
+    {
+      "pass_number": 587,
+      "closed_ranges": [
+        {
+          "range": "C2:8249..C2:82D5",
+          "kind": "owner",
+          "label": "ct_c2_8249_php_handler",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster near documented C2:823C function. PHP prologue, RTS return."
+    },
+    {
+      "pass_number": 588,
+      "closed_ranges": [
+        {
+          "range": "C2:8006..C2:8090",
+          "kind": "owner",
+          "label": "ct_c2_8006_jsl_entry",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster in 8000 region. JSL/RTL long call pattern. Cross-bank entry point."
+    },
+    {
+      "pass_number": 589,
+      "closed_ranges": [
+        {
+          "range": "C2:5319..C2:539D",
+          "kind": "owner",
+          "label": "ct_c2_5319_handler_score6",
+          "confidence": "high"
+        }
+      ],
+      "promotion_reason": "Score-6 cluster in 5000-6000 region. JSR prologue, multiple internal calls."
+    }
+  ],
+  "statistics": {
+    "total_recommended": 11,
+    "score_8": 1,
+    "score_7": 0,
+    "score_6": 10,
+    "vector_table_region": 2,
+    "b700_cluster_region": 2,
+    "other_regions": 7
+  }
+}

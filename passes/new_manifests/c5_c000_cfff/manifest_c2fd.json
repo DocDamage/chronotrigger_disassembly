@@ -1,0 +1,22 @@
+{
+  "pass_number": 714,
+  "closed_ranges": [
+    {
+      "range": "C5:C2FD..C5:C315",
+      "kind": "owner",
+      "label": "ct_c5_c2fd_phd_prologue",
+      "confidence": "medium"
+    }
+  ],
+  "promotion_reason": "Score-5 cluster, PHD prologue (0B). Stack frame setup with clean start.",
+  "analysis": {
+    "candidate_start": "C5:C2FD",
+    "target": "C5:C2FD",
+    "score": 5,
+    "distance_to_target": 0,
+    "start_byte": "0B",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.24,
+    "zero_ff_ratio": 0.12
+  }
+}

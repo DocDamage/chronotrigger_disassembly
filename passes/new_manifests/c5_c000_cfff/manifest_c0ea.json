@@ -1,0 +1,22 @@
+{
+  "pass_number": 711,
+  "closed_ranges": [
+    {
+      "range": "C5:C0EA..C5:C10C",
+      "kind": "owner",
+      "label": "ct_c5_c0ea_php_prologue",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, PHP prologue (08). High confidence function entry point with clean start classification.",
+  "analysis": {
+    "candidate_start": "C5:C0EA",
+    "target": "C5:C0F4",
+    "score": 6,
+    "distance_to_target": 10,
+    "start_byte": "08",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.371,
+    "zero_ff_ratio": 0.0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "pass_number": 719,
+  "closed_ranges": [
+    {
+      "range": "C5:C2A9..C5:C2C8",
+      "kind": "owner",
+      "label": "ct_c5_c2a9_phb_prologue",
+      "confidence": "medium"
+    }
+  ],
+  "promotion_reason": "Score-4 cluster, PHB prologue (8B). Stack register preservation pattern.",
+  "analysis": {
+    "candidate_start": "C5:C2A9",
+    "target": "C5:C2B0",
+    "score": 4,
+    "distance_to_target": 7,
+    "start_byte": "8B",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.219,
+    "zero_ff_ratio": 0.031
+  }
+}

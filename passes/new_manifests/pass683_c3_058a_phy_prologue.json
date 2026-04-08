@@ -1,0 +1,18 @@
+{
+  "pass": 683,
+  "range": "C3:058A..C3:05AA",
+  "label": "ct_c3_058a_phy_prologue",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from gap C3:0529-08A0. PHY ($5A) prologue with strong stack operation sequence. Related to existing C3:058B candidate.",
+  "scan": {
+    "score": 6,
+    "start_byte": "5A",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.303,
+    "zero_ff_ratio": 0.152,
+    "repeated_pair_score": 0.062
+  },
+  "continues_from": null,
+  "next": null
+}

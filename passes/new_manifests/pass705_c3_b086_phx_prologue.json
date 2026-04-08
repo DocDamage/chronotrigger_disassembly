@@ -1,0 +1,18 @@
+{
+  "pass": 705,
+  "range": "C3:B086..C3:B0AA",
+  "label": "ct_c3_b086_phx_prologue",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. PHX ($DA) X-register push prologue with clean start class. Region C3:B000-BFFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "DA",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

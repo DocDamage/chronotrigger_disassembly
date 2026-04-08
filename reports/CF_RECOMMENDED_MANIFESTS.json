@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "bank": "CF",
+    "analysis_date": "2026-04-08",
+    "scan_type": "Deep Backtrack Analysis",
+    "starting_pass": 716
+  },
+  "priority_1_score_6_plus": [
+    {
+      "pass": 716,
+      "range": "CF:A2B4..CF:A31C",
+      "score": 6,
+      "prologue": "LDY#",
+      "start_byte": "8B",
+      "region": "A000-B000"
+    },
+    {
+      "pass": 717,
+      "range": "CF:C06D..CF:C0C0",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "C000-D000"
+    },
+    {
+      "pass": 718,
+      "range": "CF:C06D..CF:C0E0",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "C000-D000"
+    },
+    {
+      "pass": 719,
+      "range": "CF:C637..CF:C6A5",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "C000-D000"
+    },
+    {
+      "pass": 720,
+      "range": "CF:C637..CF:C6A6",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "C000-D000"
+    },
+    {
+      "pass": 721,
+      "range": "CF:CEA1..CF:CF16",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "C000-D000"
+    },
+    {
+      "pass": 722,
+      "range": "CF:E777..CF:E781",
+      "score": 6,
+      "prologue": "LDY#",
+      "start_byte": "A0",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 723,
+      "range": "CF:E7D4..CF:E7D7",
+      "score": 6,
+      "prologue": "PHY",
+      "start_byte": "5A",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 724,
+      "range": "CF:E837..CF:E83A",
+      "score": 6,
+      "prologue": "REP",
+      "start_byte": "C2",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 725,
+      "range": "CF:E8F1..CF:E906",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 726,
+      "range": "CF:E8F1..CF:E926",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 727,
+      "range": "CF:E94D..CF:E99C",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 728,
+      "range": "CF:EAC3..CF:EAC5",
+      "score": 6,
+      "prologue": "JSR",
+      "start_byte": "20",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 729,
+      "range": "CF:ECE0..CF:ECEB",
+      "score": 6,
+      "prologue": "LDX#",
+      "start_byte": "A2",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 730,
+      "range": "CF:ECE0..CF:ED18",
+      "score": 6,
+      "prologue": "LDX#",
+      "start_byte": "A2",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 731,
+      "range": "CF:EDB5..CF:EDB8",
+      "score": 6,
+      "prologue": "REP",
+      "start_byte": "C2",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 732,
+      "range": "CF:EE99..CF:EE9A",
+      "score": 6,
+      "prologue": "LDY#",
+      "start_byte": "A0",
+      "region": "E000-F000"
+    },
+    {
+      "pass": 733,
+      "range": "CF:EE9C..CF:EE9F",
+      "score": 6,
+      "prologue": "PHY",
+      "start_byte": "5A",
+      "region": "E000-F000"
+    }
+  ],
+  "priority_2_cross_bank": [
+    {
+      "pass": 750,
+      "range": "CF:8AB0..CF:8AC1",
+      "caller": "CA:1C69",
+      "kind": "JML",
+      "note": "Cross-bank long jump from bank CA"
+    },
+    {
+      "pass": 751,
+      "range": "CF:D9E0..CF:DA2F",
+      "caller": "C7:E005",
+      "kind": "JSL",
+      "note": "Cross-bank long call from bank C7"
+    },
+    {
+      "pass": 752,
+      "range": "CF:DBD0..CF:DC0F",
+      "caller": "C9:71FB",
+      "kind": "JSL",
+      "note": "Cross-bank long call from bank C9"
+    },
+    {
+      "pass": 753,
+      "range": "CF:DCA0..CF:DCAE",
+      "caller": "FD:3331",
+      "kind": "JSL",
+      "note": "Cross-bank long call from bank FD"
+    },
+    {
+      "pass": 754,
+      "range": "CF:DCB0..CF:DCC9",
+      "caller": "C8:8DA7",
+      "kind": "JSL",
+      "note": "Cross-bank long call from bank C8"
+    },
+    {
+      "pass": 755,
+      "range": "CF:DF70..CF:DFA6",
+      "caller": "FF:0C31",
+      "kind": "JML",
+      "note": "Cross-bank long jump from bank FF"
+    }
+  ],
+  "priority_3_cf_8000_9000_score_4": [
+    {
+      "pass": 760,
+      "range": "CF:804F..CF:80A9",
+      "score": 4,
+      "callers": ["CF:E43E", "CF:E470", "CF:E550", "CF:E582"],
+      "note": "4 same-bank JSR callers"
+    },
+    {
+      "pass": 761,
+      "range": "CF:8059..CF:80D8",
+      "score": 4,
+      "callers": ["CF:4FFA"],
+      "note": "1 JSR caller"
+    },
+    {
+      "pass": 762,
+      "range": "CF:8061..CF:80E0",
+      "score": 4,
+      "callers": ["CF:78D4", "CF:7F8C"],
+      "note": "2 JSR callers"
+    },
+    {
+      "pass": 763,
+      "range": "CF:81FF..CF:827F",
+      "score": 4,
+      "callers": ["CF:74EB"],
+      "note": "1 JMP caller"
+    },
+    {
+      "pass": 764,
+      "range": "CF:839B..CF:83FF",
+      "score": 4,
+      "callers": ["CF:1EE9"],
+      "note": "1 JMP caller"
+    },
+    {
+      "pass": 765,
+      "range": "CF:84CF..CF:8500",
+      "score": 4,
+      "callers": ["CF:E69E"],
+      "note": "1 JSR caller"
+    },
+    {
+      "pass": 766,
+      "range": "CF:84CF..CF:850A",
+      "score": 4,
+      "callers": ["CF:E677"],
+      "note": "1 JSR caller"
+    }
+  ],
+  "statistics": {
+    "total_score_6_plus_clusters": 51,
+    "cf_8000_9000_entry_points": 17,
+    "cf_8000_9000_score_6_plus": 0,
+    "true_cross_bank_callers": 6,
+    "richest_region": "CF:F000-FF00 (29 score-6+ clusters)",
+    "total_recommended_manifests": 27
+  }
+}

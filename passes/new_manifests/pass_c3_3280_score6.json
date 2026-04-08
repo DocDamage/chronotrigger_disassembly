@@ -1,0 +1,23 @@
+{
+  "pass": "c3_3280_score6",
+  "live_seam_after_pass": "C3:329B..C3:34FF",
+  "new_ranges": [
+    {
+      "range": "C3:3280..C3:329A",
+      "label": "ct_c3_function_3280_php_rtl_score6",
+      "notes": "Score-6 candidate from gap 30B1-34FF. PHP prologue, RTL epilogue. Contains JSL $003000. Owner backtrack validated."
+    }
+  ],
+  "promoted_labels": [
+    "ct_c3_function_3280_php_rtl_score6"
+  ],
+  "criteria": {
+    "score": 6,
+    "start_byte": "08",
+    "start_class": "clean_start",
+    "prologue": "PHP",
+    "epilogue": "RTL",
+    "long_calls": ["$003000"],
+    "validation": "owner_backtrack_v1"
+  }
+}

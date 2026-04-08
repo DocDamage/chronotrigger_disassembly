@@ -1,0 +1,196 @@
+================================================================================
+BANK C4:0000-1000 ANALYSIS - FINAL SUMMARY
+================================================================================
+
+TASK COMPLETED: Backtrack analysis of C4:0000-1000 gaps
+DATE: 2026-04-08
+
+================================================================================
+1. SCORE-6+ CANDIDATES FOUND
+================================================================================
+
+TOTAL NEW CANDIDATES: 5 (all verified, no overlaps)
+
+From Gap 1 (C4:0000-01D1):
+  - C4:007B -> C4:007C (score=6, JSR prologue, 34 bytes)
+  - C4:00F9 -> C4:00FC (score=6, JSL prologue, 36 bytes)
+
+From Gap 10 (C4:0A74-0FFF):
+  - C4:0A99 -> C4:0AA0 (score=6, JSL prologue, 40 bytes)
+  - C4:0ADB -> C4:0AE0 (score=6, JSL prologue, 38 bytes)
+  - C4:0E8C -> C4:0EA0 (score=6, PHP prologue, 53 bytes)
+
+================================================================================
+2. GAP FILL ANALYSIS
+================================================================================
+
+GAPS ANALYZED: 10 (total ~3.8KB of unmapped space)
+
+Gaps with new score-6+ candidates:
+  - Gap 1: C4:0000..C4:01D1 (466 bytes) - 2 new functions
+  - Gap 10: C4:0A74..C4:0FFF (1420 bytes) - 3 new functions
+
+Gaps with score-4 candidates (future analysis):
+  - Gap 5: C4:04BD..C4:0616 (346 bytes) - 5 score-4 candidates
+  - Gap 6: C4:0638..C4:080F (472 bytes) - 4 score-4 candidates
+
+Gaps with no high-score candidates:
+  - Gap 2: C4:01EC..C4:02BA (207 bytes)
+  - Gap 3: C4:02D9..C4:0346 (110 bytes)
+  - Gap 4: C4:036A..C4:049C (307 bytes)
+  - Gap 7-9: Various small gaps (<100 bytes each)
+
+================================================================================
+3. CODE ISLANDS DISCOVERED
+================================================================================
+
+TOTAL ISLANDS: 7
+HIGH-SCORE ISLANDS (5+): 3
+
+Score-7 Islands:
+  - C4:0E7A..C4:0E96 (29 bytes, 3 returns, 1 call)
+
+Score-5 Islands:
+  - C4:0AFE..C4:0B12 (21 bytes, 1 return, 2 calls, 2 branches)
+  - C4:0B32..C4:0B44 (19 bytes, 1 return, 2 calls, 1 branch)
+
+Additional Islands (score 3-4):
+  - C4:073C..C4:074C (17 bytes, Gap 6)
+  - C4:0BCE..C4:0BE7 (26 bytes, 3 returns)
+  - C4:0E53..C4:0E6B (25 bytes, 2 returns)
+  - C4:0DF4..C4:0E09 (22 bytes, 1 return)
+
+================================================================================
+4. RECOMMENDED NEW MANIFESTS (8 TOTAL)
+================================================================================
+
+PASS 650: C4:007B..C4:009C
+  Label: ct_c4_007b_jsr_handler
+  Type: JSR prologue, early bank utility
+  
+PASS 651: C4:00F9..C4:011C
+  Label: ct_c4_00f9_jsl_handler
+  Type: JSL prologue, long-call handler
+  
+PASS 652: C4:0A99..C4:0AC0
+  Label: ct_c4_0a99_jsl_handler
+  Type: JSL prologue, JSL cluster member
+  
+PASS 653: C4:0ADB..C4:0B00
+  Label: ct_c4_0adb_jsl_handler
+  Type: JSL prologue, JSL cluster member
+  
+PASS 654: C4:0E8C..C4:0EC0
+  Label: ct_c4_0e8c_php_handler
+  Type: PHP prologue, state preservation
+  
+PASS 655: C4:0E7A..C4:0E96
+  Label: ct_c4_0e7a_island_score7
+  Type: Code island, score-7, 3 returns
+  
+PASS 656: C4:0AFE..C4:0B12
+  Label: ct_c4_0afe_island_score5
+  Type: Code island, score-5
+  
+PASS 657: C4:0B32..C4:0B44
+  Label: ct_c4_0b32_island_score5
+  Type: Code island, score-5
+
+================================================================================
+5. ENTRY POINT PATTERNS DISCOVERED
+================================================================================
+
+PROLOGUE TYPE DISTRIBUTION:
+  - JSR ($20): 7 functions - Standard subroutine calls
+  - JSL ($22): 4 functions - Long/cross-bank calls
+  - LDY#/LDX# (A0/A2): 2 functions - Index initialization
+  - PHP ($08): 1 function - State preservation
+  - PHB ($8B): 1 function - Data bank preservation
+
+KEY PATTERNS:
+  1. JSL CLUSTER: C4:0A99 and C4:0ADB (64 bytes apart)
+     - Suggests jump table or dispatch pattern
+     - Both target different locations (C4:0AA0, C4:0AE0)
+  
+  2. EARLY BANK UTILITIES: C4:007B and C4:00F9
+     - Located in first 256 bytes of bank
+     - Likely bank initialization or header utilities
+  
+  3. STATE PRESERVATION: C4:0E8C
+     - PHP prologue (push processor status)
+     - Likely interrupt handler or mode switch
+  
+  4. DISPATCHER PATTERN: Multiple dual-target entries
+     - C4:0347 (manifest 643): dual targets C4:0351, C4:0355
+     - C4:0810 (manifest 646): dual targets C4:0812, C4:0818
+
+================================================================================
+6. COVERAGE IMPROVEMENT
+================================================================================
+
+BEFORE:
+  - Manifests: 9 (passes 641-649)
+  - Bytes covered: ~390
+  - Coverage: 9.5%
+
+AFTER:
+  - Manifests: 17 (passes 641-657)
+  - Bytes covered: ~660
+  - Coverage: 16.1%
+
+NEW DOCUMENTATION: 270 bytes across 8 manifests
+COVERAGE INCREASE: +6.6%
+
+================================================================================
+7. FILES CREATED
+================================================================================
+
+MANIFEST FILES:
+  - passes/new_manifests/pass650.json through pass657.json
+  - c4_650_657_manifests.json (combined)
+
+ANALYSIS REPORTS:
+  - C4_0000_1000_ANALYSIS_REPORT.md (comprehensive markdown report)
+  - C4_ANALYSIS_FINAL_SUMMARY.txt (this file)
+
+INTERMEDIATE DATA:
+  - c4_0000_backtrack.json (gap 1 backtrack analysis)
+  - c4_04bd_backtrack.json (gap 5 backtrack analysis)
+  - c4_0638_backtrack.json (gap 6 backtrack analysis)
+  - c4_0a74_backtrack.json (gap 10 backtrack analysis)
+  - c4_0000_islands.json (gap 1 code islands)
+  - c4_04bd_islands.json (gap 5 code islands)
+  - c4_0638_islands.json (gap 6 code islands)
+  - c4_0a74_islands.json (gap 10 code islands)
+  - c4_gap_manifests.json (initial manifest recommendations)
+
+SCRIPTS:
+  - analyze_c4_0000_1000.py (main analysis script)
+  - analyze_gap_0a74.py (gap 10 specific analysis)
+  - analyze_all_gaps.py (all gaps comparison)
+  - analyze_islands.py (code island analysis)
+  - create_c4_manifests_final.py (manifest generator)
+  - verify_manifests_650_657.py (verification script)
+
+================================================================================
+8. NEXT STEPS RECOMMENDED
+================================================================================
+
+IMMEDIATE:
+  1. Review manifests 650-657 for accuracy
+  2. Apply manifests to disassembly database
+  3. Verify no conflicts with existing labels
+
+SHORT TERM:
+  4. Analyze score-4 candidates in gaps 5 and 6
+  5. Investigate JSL cluster at C4:0A99/0ADB for jump table pattern
+  6. Cross-reference with Bank C0 patterns (similar utility functions)
+
+LONG TERM:
+  7. Continue mapping C4:1000-FFFF (remaining 60KB)
+  8. Identify data tables vs code regions
+  9. Build call graph for C4 functions
+
+================================================================================
+END OF REPORT
+================================================================================

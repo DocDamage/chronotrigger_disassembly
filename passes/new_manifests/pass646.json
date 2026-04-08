@@ -1,0 +1,12 @@
+{
+  "pass_number": 646,
+  "closed_ranges": [
+    {
+      "range": "C4:0810..C4:082A",
+      "kind": "owner",
+      "label": "ct_c4_0810_jsr_dispatch",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, JSR prologue. Dual-target: C4:0812, C4:0818. Dispatcher pattern."
+}

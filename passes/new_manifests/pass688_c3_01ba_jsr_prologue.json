@@ -1,0 +1,18 @@
+{
+  "pass": 688,
+  "range": "C3:01BA..C3:01DE",
+  "label": "ct_c3_01ba_jsr_prologue",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. JSR ($20) prologue with clean start class. Target C3:01C6 has multiple callers. Contains RTS evidence.",
+  "scan": {
+    "score": 6,
+    "start_byte": "20",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.378,
+    "zero_ff_ratio": 0.081,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

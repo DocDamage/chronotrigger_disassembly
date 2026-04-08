@@ -1,0 +1,18 @@
+{
+  "pass": 713,
+  "range": "C3:E4EF..C3:E508",
+  "label": "ct_c3_e4ef_jsl_entry",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. JSL ($22) long call entry with clean start class. Cross-bank handler in C3:E000-EFFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "22",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

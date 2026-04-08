@@ -1,0 +1,18 @@
+{
+  "pass": 689,
+  "range": "C3:0540..C3:0559",
+  "label": "ct_c3_0540_lda_init",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. LDA immediate ($A9) prologue with clean start class. Target C3:0541 has multiple callers. Gap fill C3:0529-08A0.",
+  "scan": {
+    "score": 6,
+    "start_byte": "A9",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.346,
+    "zero_ff_ratio": 0.192,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

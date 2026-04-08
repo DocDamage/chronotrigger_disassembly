@@ -1,0 +1,21 @@
+{
+  "pass_number": 721,
+  "bank": "C3",
+  "start_address": "C3:6454",
+  "end_address": "C3:6472",
+  "label": "ct_c3_6454_gap_handler",
+  "kind": "owner",
+  "confidence": "medium-high",
+  "source": "backtrack_score_4",
+  "target": "C3:645A",
+  "prologue_byte": "20",
+  "prologue_mnemonic": "JSR",
+  "backtrack_distance": 6,
+  "score": 4,
+  "promotion_reason": "Score-4 candidate in C3:6400 page. JSR prologue with caller from C3:0A0C.",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:645A",
+    "Weak caller C3:0A0C with single hit",
+    "Local clusters C3:6445..C3:6449 and C3:648A..C3:6490 show return evidence"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "pass_number": 710,
+  "closed_ranges": [
+    {
+      "range": "C5:C036..C5:C050",
+      "kind": "owner",
+      "label": "ct_c5_c036_jsr_prologue",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, JSR prologue (20). Part of C5:C000 region code cluster. Adjacent to existing C5:C030 manifest. High code density area.",
+  "analysis": {
+    "candidate_start": "C5:C036",
+    "target": "C5:C038",
+    "score": 6,
+    "distance_to_target": 2,
+    "start_byte": "20",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.333,
+    "zero_ff_ratio": 0.222
+  }
+}

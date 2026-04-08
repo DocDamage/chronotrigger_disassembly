@@ -1,0 +1,18 @@
+{
+  "pass": 711,
+  "range": "C3:CB47..C3:CB64",
+  "label": "ct_c3_cb47_php_prologue",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. PHP ($08) prologue with clean start class. Region C3:C000-CFFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "08",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

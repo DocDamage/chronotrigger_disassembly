@@ -1,0 +1,22 @@
+{
+  "pass_number": 720,
+  "bank": "C3",
+  "start_address": "C3:600C",
+  "end_address": "C3:6028",
+  "label": "ct_c3_600c_gap_handler",
+  "kind": "owner",
+  "confidence": "medium-high",
+  "source": "backtrack_score_4",
+  "target": "C3:6010",
+  "prologue_byte": "20",
+  "prologue_mnemonic": "JSR",
+  "backtrack_distance": 4,
+  "score": 4,
+  "promotion_reason": "Score-4 candidate in C3:6000-6FFF. JSR prologue with weak caller evidence.",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6010",
+    "JSR instruction indicates subroutine behavior",
+    "Callers: C3:2F41, C3:68CE (suspect strength)",
+    "Local cluster shows branch and return evidence"
+  ]
+}

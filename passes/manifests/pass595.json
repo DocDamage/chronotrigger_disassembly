@@ -1,0 +1,12 @@
+{
+  "pass_number": 595,
+  "closed_ranges": [
+    {
+      "range": "C2:000F..C2:0050",
+      "kind": "owner",
+      "label": "ct_c2_000f_init_entry",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Initialization entry point from vector table. SNES standard prologue: SEI/SEP/REP. Calls 5 subroutines."
+}

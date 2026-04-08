@@ -1,0 +1,12 @@
+{
+  "pass_number": 682,
+  "closed_ranges": [
+    {
+      "range": "C6:DB38..C6:DB4E",
+      "kind": "owner",
+      "label": "ct_c6_db38_branch_handler",
+      "confidence": "low"
+    }
+  ],
+  "promotion_reason": "Score-3 cluster, 23 bytes, 4 branches, 2 returns. Branch-heavy handler in mixed-command-data page. DB00 region."
+}

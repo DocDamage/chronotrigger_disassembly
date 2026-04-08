@@ -1,0 +1,22 @@
+{
+  "pass_number": 718,
+  "closed_ranges": [
+    {
+      "range": "C5:CB2B..C5:CB47",
+      "kind": "owner",
+      "label": "ct_c5_cb2b_entry",
+      "confidence": "medium"
+    }
+  ],
+  "promotion_reason": "Score-4 cluster with clean start. Part of C5:CB00 page code lane.",
+  "analysis": {
+    "candidate_start": "C5:CB2B",
+    "target": "C5:CB2F",
+    "score": 4,
+    "distance_to_target": 4,
+    "start_byte": "39",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.207,
+    "zero_ff_ratio": 0.138
+  }
+}

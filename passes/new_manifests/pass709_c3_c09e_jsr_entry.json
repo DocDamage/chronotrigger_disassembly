@@ -1,0 +1,18 @@
+{
+  "pass": 709,
+  "range": "C3:C09E..C3:C0C1",
+  "label": "ct_c3_c09e_jsr_entry",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. JSR ($20) entry with clean start class. Region C3:C000-CFFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "20",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

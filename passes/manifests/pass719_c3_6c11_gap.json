@@ -1,0 +1,23 @@
+{
+  "pass_number": 719,
+  "bank": "C3",
+  "start_address": "C3:6C11",
+  "end_address": "C3:6C38",
+  "label": "ct_c3_6c11_gap_handler",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:6C20",
+  "prologue_byte": "22",
+  "prologue_mnemonic": "JSL",
+  "backtrack_distance": 15,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:6000-6FFF high-density region. JSL prologue for long subroutine call.",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6C20",
+    "JSL (jump subroutine long) indicates this function calls external bank routines",
+    "Larger backtrack distance suggests internal setup before first external call",
+    "Local cluster C3:6C00..C3:6C14 shows multiple calls and returns",
+    "Candidate identified in previously unmapped high-density region C3:6000-6FFF"
+  ]
+}

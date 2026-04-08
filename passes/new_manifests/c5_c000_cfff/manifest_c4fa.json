@@ -1,0 +1,22 @@
+{
+  "pass_number": 717,
+  "closed_ranges": [
+    {
+      "range": "C5:C4FA..C5:C518",
+      "kind": "owner",
+      "label": "ct_c5_c4fa_php_prologue",
+      "confidence": "medium"
+    }
+  ],
+  "promotion_reason": "Score-4 cluster, PHP prologue (08). Function entry in C5:C500 region.",
+  "analysis": {
+    "candidate_start": "C5:C4FA",
+    "target": "C5:C500",
+    "score": 4,
+    "distance_to_target": 6,
+    "start_byte": "08",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.355,
+    "zero_ff_ratio": 0.097
+  }
+}

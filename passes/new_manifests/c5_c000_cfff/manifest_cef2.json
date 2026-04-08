@@ -1,0 +1,22 @@
+{
+  "pass_number": 713,
+  "closed_ranges": [
+    {
+      "range": "C5:CEF2..C5:CF18",
+      "kind": "owner",
+      "label": "ct_c5_cef2_php_prologue",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, PHP prologue (08). End of C5:CF00 region. High confidence function boundary.",
+  "analysis": {
+    "candidate_start": "C5:CEF2",
+    "target": "C5:CF00",
+    "score": 6,
+    "distance_to_target": 14,
+    "start_byte": "08",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.333,
+    "zero_ff_ratio": 0.0
+  }
+}

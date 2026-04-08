@@ -1,0 +1,22 @@
+{
+  "pass_number": 717,
+  "bank": "C3",
+  "start_address": "C3:6A29",
+  "end_address": "C3:6A47",
+  "label": "ct_c3_6a29_gap_handler",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:6A2F",
+  "prologue_byte": "20",
+  "prologue_mnemonic": "JSR",
+  "backtrack_distance": 6,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:6000-6FFF high-density region. JSR prologue indicating subroutine.",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6A2F",
+    "JSR instruction suggests this is a wrapper or dispatcher function",
+    "Local cluster C3:6A2F..C3:6A34 shows return evidence",
+    "Candidate identified in previously unmapped high-density region C3:6000-6FFF"
+  ]
+}
