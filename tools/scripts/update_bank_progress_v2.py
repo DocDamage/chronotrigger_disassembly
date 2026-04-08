@@ -5,7 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
-from snes_utils import iter_manifest_paths
+from snes_utils import iter_manifest_paths, load_manifest, manifest_pass_number
 
 
 def main() -> int:
@@ -22,16 +22,17 @@ def main() -> int:
     latest_pass = 0
 
     for path in iter_manifest_paths(args.manifests_dir):
-        data = json.loads(Path(path).read_text(encoding='utf-8'))
-        latest_pass = max(latest_pass, int(data['pass_number']))
-        latest_seam = data.get('live_seam_after_pass', latest_seam)
+        data = load_manifest(path)
+        pass_number = manifest_pass_number(data, path)
+        latest_pass = max(latest_pass, pass_number)
+        latest_seam = data.get('live_seam_after_pass', data.get('region', latest_seam))
         for item in data.get('closed_ranges', []):
             if not item['range'].startswith(f'{bank}:'):
                 continue
             entry = {
                 'range': item['range'],
                 'label': item['label'],
-                'pass': data['pass_number'],
+                'pass': pass_number,
                 'confidence': item['confidence'],
                 'kind': item['kind'],
             }

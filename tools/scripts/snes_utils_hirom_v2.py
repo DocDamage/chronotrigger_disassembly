@@ -7,6 +7,8 @@ from typing import Iterator
 
 RANGE_RE = re.compile(r'^(?P<bank>[0-9A-Fa-f]{2}):(?P<start>[0-9A-Fa-f]{4})\.\.(?P=bank):(?P<end>[0-9A-Fa-f]{4})$')
 ADDR_RE = re.compile(r'^(?P<bank>[0-9A-Fa-f]{2}):(?P<addr>[0-9A-Fa-f]{4})$')
+OPEN_RANGE_RE = re.compile(r'^(?P<bank>[0-9A-Fa-f]{2}):(?P<start>[0-9A-Fa-f]{4})\.\.$')
+CANONICAL_PASS_RE = re.compile(r'^pass\d+\.json$', re.IGNORECASE)
 
 
 class RangeParseError(ValueError):
@@ -21,8 +23,14 @@ def parse_snes_address(text: str) -> tuple[int, int]:
 
 
 def parse_snes_range(text: str) -> tuple[int, int, int]:
-    m = RANGE_RE.match(text.strip())
+    text = text.strip()
+    m = RANGE_RE.match(text)
     if not m:
+        open_match = OPEN_RANGE_RE.match(text)
+        if open_match:
+            bank = int(open_match.group('bank'), 16)
+            start = int(open_match.group('start'), 16)
+            return bank, start, 0xFFFF
         raise RangeParseError(f'invalid SNES range: {text}')
     bank = int(m.group('bank'), 16)
     start = int(m.group('start'), 16)
@@ -54,7 +62,7 @@ def slice_rom_range(rom_bytes: bytes, range_text: str) -> bytes:
 
 def iter_manifest_paths(manifests_dir: str | Path) -> Iterator[Path]:
     for path in sorted(Path(manifests_dir).glob('pass*.json')):
-        if path.is_file():
+        if path.is_file() and CANONICAL_PASS_RE.match(path.name):
             yield path
 
 

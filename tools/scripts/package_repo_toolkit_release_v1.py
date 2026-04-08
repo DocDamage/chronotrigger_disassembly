@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from continuation_note_utils_v1 import latest_continuation_note_summary
-from snes_utils import iter_manifest_paths
+from snes_utils import iter_manifest_paths, load_manifest, manifest_pass_number
 
 
 README_BRANCH_RE = re.compile(r"working branch:\s*`([^`]+)`", re.IGNORECASE)
@@ -89,8 +89,8 @@ def sha256_path(path: Path) -> str:
 def max_manifest_pass(manifests_dir: Path) -> int:
     max_pass = 0
     for path in iter_manifest_paths(manifests_dir):
-        data = json.loads(path.read_text(encoding="utf-8"))
-        max_pass = max(max_pass, int(data.get("pass_number", 0)))
+        data = load_manifest(path)
+        max_pass = max(max_pass, manifest_pass_number(data, path))
     return max_pass
 
 

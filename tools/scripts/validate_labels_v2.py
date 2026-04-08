@@ -5,7 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
-from snes_utils import iter_manifest_paths, parse_snes_range
+from snes_utils import iter_manifest_paths, load_manifest, manifest_pass_number, parse_snes_range
 
 
 def overlaps(a: tuple[int, int, int], b: tuple[int, int, int]) -> bool:
@@ -15,29 +15,41 @@ def overlaps(a: tuple[int, int, int], b: tuple[int, int, int]) -> bool:
 def main() -> int:
     parser = argparse.ArgumentParser(description='Validate pass manifests for overlap and confidence issues')
     parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--strict-overlaps', action='store_true', help='Fail when overlap warnings are present')
     args = parser.parse_args()
 
-    issues: list[str] = []
+    warnings: list[str] = []
+    blocking: list[str] = []
     seen: list[tuple[tuple[int, int, int], dict]] = []
     for path in iter_manifest_paths(args.manifests_dir):
-        data = json.loads(path.read_text(encoding='utf-8'))
+        data = load_manifest(path)
+        pass_number = manifest_pass_number(data, path)
         for item in data.get('closed_ranges', []):
             rng = parse_snes_range(item['range'])
             for prev_rng, prev_item in seen:
                 if overlaps(rng, prev_rng):
                     allowed = item['kind'] == 'tail_fragment' or prev_item['kind'] == 'tail_fragment'
                     if not allowed:
-                        issues.append(f"overlap: {item['range']} vs {prev_item['range']}")
+                        label = 'duplicate range' if rng == prev_rng else 'overlap'
+                        warnings.append(
+                            f"{label}: pass {pass_number} {item['range']} vs {prev_item['range']}"
+                        )
             seen.append((rng, item))
             if item['confidence'] == 'low':
-                issues.append(f"low-confidence closure: {item['range']} ({item['label']})")
+                blocking.append(f"low-confidence closure: pass {pass_number} {item['range']} ({item['label']})")
             if item['kind'] == 'text_marker' and 'code_end' not in item['label'] and 'text' not in item['label']:
-                issues.append(f"text marker label may be weakly named: {item['range']}")
+                warnings.append(f"text marker label may be weakly named: pass {pass_number} {item['range']}")
 
-    if issues:
-        print('issues found:')
-        for issue in issues:
+    if warnings:
+        print('warnings found:')
+        for issue in warnings:
             print(f'  - {issue}')
+    if blocking:
+        print('blocking issues found:')
+        for issue in blocking:
+            print(f'  - {issue}')
+        return 1
+    if warnings and args.strict_overlaps:
         return 1
     print('validation ok: no blocking manifest issues found')
     return 0

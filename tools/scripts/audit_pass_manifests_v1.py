@@ -2,10 +2,8 @@
 from __future__ import annotations
 
 import argparse
-import json
-from pathlib import Path
 
-from snes_utils import iter_manifest_paths
+from snes_utils import iter_manifest_paths, load_manifest, manifest_closed_ranges, manifest_pass_number
 
 
 def main() -> int:
@@ -15,9 +13,9 @@ def main() -> int:
 
     revisit: list[str] = []
     for path in iter_manifest_paths(args.manifests_dir):
-        data = json.loads(path.read_text(encoding='utf-8'))
-        pn = data['pass_number']
-        for item in data.get('closed_ranges', []):
+        data = load_manifest(path)
+        pn = manifest_pass_number(data, path)
+        for item in manifest_closed_ranges(data):
             kind = item['kind']
             conf = item['confidence']
             label = item['label']

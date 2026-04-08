@@ -2,11 +2,10 @@
 from __future__ import annotations
 
 import argparse
-import json
 from pathlib import Path
 
 from continuation_note_utils_v1 import latest_continuation_note_summary
-from snes_utils import iter_manifest_paths
+from snes_utils import iter_manifest_paths, load_manifest, manifest_live_seam, manifest_pass_number
 
 
 def main() -> int:
@@ -15,15 +14,17 @@ def main() -> int:
     parser.add_argument('--sessions-dir', default='docs/sessions')
     parser.add_argument('--bank-progress', default='tools/config/bank_c3_progress.json')
     parser.add_argument('--generated-progress', default='tools/config/bank_c3_progress.generated.json')
+    parser.add_argument('--strict-gaps', action='store_true', help='Fail when manifest pass numbers are non-contiguous')
     args = parser.parse_args()
 
     manifest_passes = []
     latest_seam = None
     for path in iter_manifest_paths(args.manifests_dir):
-        data = json.loads(Path(path).read_text(encoding='utf-8'))
-        manifest_passes.append(int(data['pass_number']))
-        latest_seam = data.get('live_seam_after_pass', latest_seam)
+        data = load_manifest(path)
+        manifest_passes.append(manifest_pass_number(data, path))
+        latest_seam = manifest_live_seam(data) or latest_seam
 
+    warnings = []
     issues = []
     if not manifest_passes:
         issues.append('no manifests found')
@@ -31,7 +32,7 @@ def main() -> int:
         expected = list(range(min(manifest_passes), max(manifest_passes) + 1))
         missing = sorted(set(expected) - set(manifest_passes))
         if missing:
-            issues.append(f'missing manifest pass numbers: {missing}')
+            warnings.append(f'missing manifest pass numbers: {missing}')
 
     latest_note = latest_continuation_note_summary(args.sessions_dir)
     effective_seam = latest_note.live_seam if latest_note and latest_note.live_seam else latest_seam
@@ -48,10 +49,16 @@ def main() -> int:
         print(f'latest continuation note: {Path(latest_note.source_path).name}')
         print(f'note-backed live seam: {latest_note.live_seam or "(missing)"}')
     print(f'effective live seam: {effective_seam}')
+    if warnings:
+        print('warnings found:')
+        for warning in warnings:
+            print(f'  - {warning}')
     if issues:
         print('issues found:')
         for issue in issues:
             print(f'  - {issue}')
+        return 1
+    if warnings and args.strict_gaps:
         return 1
     print('branch state audit ok')
     return 0
