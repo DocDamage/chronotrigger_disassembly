@@ -4,7 +4,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 
 ## Current live state
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `833`
+- latest manifest-backed pass: `848`
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
 - latest closed block: CF:F3DC..CF:F404 (Bank CF, score-8 cluster)
 - current forward seam: `CF:D000..` (Bank CF mapping ongoing)
@@ -29,7 +29,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - continuation notes remain important historical context for the earlier C7 seam, and their frozen pages still feed caller-context scoring through the seam snapshot layer
 
 ## What this repo contains
-- `passes/manifests/` — machine-readable pass history (833 manifests)
+- `passes/manifests/` — machine-readable pass history (848 manifests)
 - `passes/disasm/` — per-pass disassembly notes
 - `passes/labels/` — per-pass label notes
 - `tools/` — repo-native toolkit scripts, config, and workflow docs
