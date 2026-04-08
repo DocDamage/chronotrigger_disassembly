@@ -1,0 +1,2 @@
+; Math helper function
+CT_C0_0895_MATH_HELPER_SCORE6: EQU $C000895

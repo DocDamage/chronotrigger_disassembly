@@ -1,0 +1,22 @@
+{
+  "pass_number": 702,
+  "label": "CT_C1_0E62_HIGH_CALL_SUB",
+  "addr": "C1:0E62",
+  "range": "C1:0E62..C1:0E7A",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7 with 4 calls - high activity subroutine with 3 branches",
+  "features": {
+    "calls": 4,
+    "branches": 3,
+    "stackish": 1,
+    "returns": 1,
+    "ascii_ratio": 0.24,
+    "data_misread_flags": []
+  },
+  "note": "High call density suggests utility or dispatcher function"
+}

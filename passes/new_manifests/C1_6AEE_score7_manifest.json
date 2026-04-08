@@ -1,0 +1,22 @@
+{
+  "pass_number": 707,
+  "label": "CT_C1_6AEE_SUBROUTINE",
+  "addr": "C1:6AEE",
+  "range": "C1:6AEE..C1:6B06",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7: 2 calls, 3 branches, stack ops - good structural integrity",
+  "features": {
+    "calls": 2,
+    "branches": 3,
+    "stackish": 1,
+    "returns": 1,
+    "ascii_ratio": 0.24,
+    "data_misread_flags": []
+  },
+  "note": "Mid-bank subroutine in C1:6000 range"
+}

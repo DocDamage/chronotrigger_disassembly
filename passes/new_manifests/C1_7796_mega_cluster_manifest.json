@@ -1,0 +1,33 @@
+{
+  "pass_number": 708,
+  "label": "CT_C1_7796_MULTI_RETURN_CLUSTER",
+  "addr": "C1:7796",
+  "range": "C1:7796..C1:780A",
+  "score": 6,
+  "cluster_score": 11,
+  "type": "cluster",
+  "bank": "C1",
+  "width": 117,
+  "child_count": 8,
+  "confidence": "medium",
+  "evidence": "Cluster score 11 with 8 children, 4 calls, 12 branches, 8 returns - multi-exit pattern",
+  "child_ranges": [
+    "C1:7796..C1:77AE",
+    "C1:77AE..C1:77C6",
+    "C1:77B8..C1:77D0",
+    "C1:77C1..C1:77D9",
+    "C1:77D3..C1:77EB",
+    "C1:77DD..C1:77F5",
+    "C1:77E0..C1:77F8",
+    "C1:77F2..C1:780A"
+  ],
+  "features": {
+    "calls": 4,
+    "branches": 12,
+    "stackish": 0,
+    "returns": 8,
+    "ascii_ratio": 0.26,
+    "data_misread_flags": ["rti_rts_proximity_at_5F"]
+  },
+  "note": "117-byte cluster with 8 returns - complex multi-exit function or switch dispatch"
+}

@@ -1,0 +1,22 @@
+{
+  "pass_number": 705,
+  "label": "CT_C1_4008_MID_BANK_HUB",
+  "addr": "C1:4008",
+  "range": "C1:4008..C1:4020",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7 at C1:4000 boundary - 4 branches, 2 stack ops, hub candidate",
+  "features": {
+    "calls": 1,
+    "branches": 4,
+    "stackish": 2,
+    "returns": 1,
+    "ascii_ratio": 0.28,
+    "data_misread_flags": []
+  },
+  "note": "C1:4000 region entry point - potential hub for mid-bank functions"
+}

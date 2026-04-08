@@ -1,0 +1,2 @@
+; Index register setup
+CT_C0_0B7A_INDEX_SETUP_SCORE6: EQU $C000B7A

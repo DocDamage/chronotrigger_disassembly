@@ -1,0 +1,22 @@
+{
+  "pass_number": 703,
+  "label": "CT_C1_2814_SUBROUTINE",
+  "addr": "C1:2814",
+  "range": "C1:2814..C1:282C",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7 island: 1 call, 3 branches, stack ops, RTS",
+  "features": {
+    "calls": 1,
+    "branches": 3,
+    "stackish": 1,
+    "returns": 1,
+    "ascii_ratio": 0.20,
+    "data_misread_flags": []
+  },
+  "note": "Mid-bank subroutine in C1:2000-3000 range"
+}

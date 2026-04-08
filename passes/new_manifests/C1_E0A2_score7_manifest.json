@@ -1,0 +1,22 @@
+{
+  "pass_number": 710,
+  "label": "CT_C1_E0A2_BRANCH_HEAVY",
+  "addr": "C1:E0A2",
+  "range": "C1:E0A2..C1:E0BA",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7: 5 branches indicates complex logic, 1 call",
+  "features": {
+    "calls": 1,
+    "branches": 5,
+    "stackish": 1,
+    "returns": 1,
+    "ascii_ratio": 0.16,
+    "data_misread_flags": []
+  },
+  "note": "C1:E000 range - branch-heavy function, possible state handler"
+}

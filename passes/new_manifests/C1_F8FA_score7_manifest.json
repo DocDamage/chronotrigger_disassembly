@@ -1,0 +1,22 @@
+{
+  "pass_number": 712,
+  "label": "CT_C1_F8FA_TINY_BRANCHER",
+  "addr": "C1:F8FA",
+  "range": "C1:F8FA..C1:F907",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 14,
+  "confidence": "high",
+  "evidence": "Score-7 compact function: 4 branches in 14 bytes - dense control flow",
+  "features": {
+    "calls": 2,
+    "branches": 4,
+    "stackish": 1,
+    "returns": 1,
+    "ascii_ratio": 0.29,
+    "data_misread_flags": []
+  },
+  "note": "Compact high-branch function at C1:F800 - possible inline decision logic"
+}

@@ -1,0 +1,22 @@
+{
+  "pass_number": 701,
+  "label": "CT_C1_0551_SUBROUTINE",
+  "addr": "C1:0551",
+  "range": "C1:0551..C1:0569",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7 island: 1 call, 2 branches, stack ops, RTS. Clean signature.",
+  "features": {
+    "calls": 1,
+    "branches": 2,
+    "stackish": 1,
+    "returns": 1,
+    "ascii_ratio": 0.20,
+    "data_misread_flags": []
+  },
+  "note": "Early bank C1 subroutine - possible initialization or helper function"
+}
