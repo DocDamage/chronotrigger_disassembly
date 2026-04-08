@@ -1,0 +1,312 @@
+{
+  "scan_date": "2026-04-08",
+  "bank": "DF",
+  "bank_range": "DF:0000..DF:FFFF",
+  "file_offset": "0x1F0000-0x1FFFFF",
+  "summary": {
+    "total_islands": 892,
+    "total_clusters": 648,
+    "total_backtrack_candidates": 1165,
+    "score_7_functions": 28,
+    "score_6_functions": 52,
+    "score_5_functions": 89,
+    "recommended_manifests": 20
+  },
+  "regions": {
+    "df_0000_4000": {
+      "range": "DF:0000..DF:4000",
+      "island_count": 228,
+      "cluster_count": 171,
+      "backtrack_candidates": 590,
+      "score_7_clusters": 3,
+      "score_6_clusters": 8,
+      "notes": "Lower region with scattered code islands, many data-misread flagged"
+    },
+    "df_4000_8000": {
+      "range": "DF:4000..DF:8000",
+      "island_count": 170,
+      "cluster_count": 127,
+      "backtrack_candidates": 218,
+      "score_7_clusters": 1,
+      "score_6_clusters": 7,
+      "notes": "Mid region containing the score-12 cluster at DF:6497 - HIGH PRIORITY"
+    },
+    "df_8000_c000": {
+      "range": "DF:8000..DF:C000",
+      "island_count": 231,
+      "cluster_count": 165,
+      "backtrack_candidates": 140,
+      "score_7_clusters": 3,
+      "score_6_clusters": 8,
+      "notes": "Upper region with many code islands, potential graphics/audio handlers"
+    },
+    "df_c000_ffff": {
+      "range": "DF:C000..DF:FFFF",
+      "island_count": 263,
+      "cluster_count": 185,
+      "backtrack_candidates": 217,
+      "score_7_clusters": 5,
+      "score_6_clusters": 13,
+      "notes": "Bank end region with highest density of functions - END OF ROM!"
+    }
+  },
+  "priority_candidates": [
+    {
+      "addr": "DF:6497",
+      "score": 12,
+      "cluster_range": "DF:6497..DF:64B0",
+      "type": "score-12-cluster",
+      "notes": "Session 13 discovery - highest priority target in bank"
+    },
+    {
+      "addr": "DF:35A6",
+      "score": 7,
+      "range": "DF:35A6..DF:35BE",
+      "region": "df_0000_4000",
+      "calls": 1,
+      "branches": 2,
+      "returns": 1
+    },
+    {
+      "addr": "DF:3EAD",
+      "score": 7,
+      "range": "DF:3EAD..DF:3EC4",
+      "region": "df_0000_4000",
+      "calls": 1,
+      "branches": 1,
+      "returns": 1
+    },
+    {
+      "addr": "DF:7CF3",
+      "score": 7,
+      "range": "DF:7CF3..DF:7D0B",
+      "region": "df_4000_8000",
+      "calls": 1,
+      "branches": 2,
+      "returns": 1
+    },
+    {
+      "addr": "DF:A343",
+      "score": 7,
+      "range": "DF:A343..DF:A35B",
+      "region": "df_8000_c000",
+      "calls": 1,
+      "branches": 3,
+      "returns": 1
+    },
+    {
+      "addr": "DF:AC77",
+      "score": 7,
+      "range": "DF:AC77..DF:AC8F",
+      "region": "df_8000_c000",
+      "calls": 2,
+      "branches": 4,
+      "returns": 1
+    },
+    {
+      "addr": "DF:B9BF",
+      "score": 7,
+      "range": "DF:B9BF..DF:B9CE",
+      "region": "df_8000_c000",
+      "calls": 1,
+      "branches": 2,
+      "returns": 2
+    },
+    {
+      "addr": "DF:E168",
+      "score": 7,
+      "range": "DF:E168..DF:E180",
+      "region": "df_c000_ffff",
+      "calls": 2,
+      "branches": 3,
+      "returns": 2
+    },
+    {
+      "addr": "DF:E599",
+      "score": 7,
+      "range": "DF:E599..DF:E5B1",
+      "region": "df_c000_ffff",
+      "calls": 1,
+      "branches": 2,
+      "returns": 3
+    },
+    {
+      "addr": "DF:E59B",
+      "score": 7,
+      "range": "DF:E59B..DF:E5B3",
+      "region": "df_c000_ffff",
+      "calls": 1,
+      "branches": 2,
+      "returns": 4
+    },
+    {
+      "addr": "DF:F8CF",
+      "score": 7,
+      "range": "DF:F8CF..DF:F8E7",
+      "region": "df_c000_ffff",
+      "calls": 1,
+      "branches": 1,
+      "returns": 1
+    },
+    {
+      "addr": "DF:D7DB",
+      "score": 7,
+      "range": "DF:D7DB..DF:D7EC",
+      "region": "df_c000_ffff",
+      "calls": 1,
+      "branches": 4,
+      "returns": 2
+    }
+  ],
+  "recommended_manifests": [
+    {
+      "pass_num": 842,
+      "region": "DF:6497..DF:64AD",
+      "name": "DF_6497_Score12Cluster",
+      "priority": "CRITICAL",
+      "score": 12,
+      "notes": "Session 13 discovery - highest confidence function in final bank"
+    },
+    {
+      "pass_num": 843,
+      "region": "DF:35A6..DF:35BE",
+      "name": "DF_35A6_Handler_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 844,
+      "region": "DF:3EAD..DF:3EC4",
+      "name": "DF_3EAD_Utils_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 845,
+      "region": "DF:7CF3..DF:7D0B",
+      "name": "DF_7CF3_MidRegion_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 846,
+      "region": "DF:A343..DF:A35B",
+      "name": "DF_A343_UpperRegion_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 847,
+      "region": "DF:AC77..DF:AC8F",
+      "name": "DF_AC77_Handler_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 848,
+      "region": "DF:B9BF..DF:B9CE",
+      "name": "DF_B9BF_Utils_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 849,
+      "region": "DF:E168..DF:E180",
+      "name": "DF_E168_BankEnd_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 850,
+      "region": "DF:E599..DF:E5B3",
+      "name": "DF_E599_FinalBank_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 851,
+      "region": "DF:F8CF..DF:F8E7",
+      "name": "DF_F8CF_EndRegion_Score7",
+      "priority": "HIGH",
+      "score": 7
+    },
+    {
+      "pass_num": 852,
+      "region": "DF:3052..DF:3063",
+      "name": "DF_3052_Lower_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 853,
+      "region": "DF:1A52..DF:1A60",
+      "name": "DF_1A52_Lower_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 854,
+      "region": "DF:4F18..DF:4F30",
+      "name": "DF_4F18_Mid_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 855,
+      "region": "DF:6353..DF:6368",
+      "name": "DF_6353_Mid_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 856,
+      "region": "DF:90BC..DF:90D4",
+      "name": "DF_90BC_Upper_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 857,
+      "region": "DF:A359..DF:A371",
+      "name": "DF_A359_Upper_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 858,
+      "region": "DF:CA6D..DF:CA85",
+      "name": "DF_CA6D_BankEnd_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 859,
+      "region": "DF:DA05..DF:DA21",
+      "name": "DF_DA05_Final_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 860,
+      "region": "DF:FA77..DF:FA8D",
+      "name": "DF_FA77_Endgame_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    },
+    {
+      "pass_num": 861,
+      "region": "DF:C230..DF:C23E",
+      "name": "DF_C230_EndRegion_Score6",
+      "priority": "MEDIUM",
+      "score": 6
+    }
+  ],
+  "statistics": {
+    "total_coverage_bytes": 8920,
+    "avg_function_size": 18.5,
+    "total_functions_identified": 169,
+    "data_misread_flags": 23,
+    "clean_starts": 1165,
+    " suspected_data_regions": ["DF:8420..DF:8438", "DF:A84E..DF:A866", "DF:B0B3..DF:B0CB"]
+  }
+}
