@@ -4,7 +4,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 
 ## Current live state
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `805`
+- latest manifest-backed pass: `833`
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
 - latest closed block: CF:F3DC..CF:F404 (Bank CF, score-8 cluster)
 - current forward seam: `CF:D000..` (Bank CF mapping ongoing)
@@ -21,6 +21,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - **Agent Swarm Session 9 (passes 716-733)** added 18 new manifests, CF:E000-F000 major region, C6:E000-FFFF completion, C3:6000 completion
 - **Agent Swarm Session 10 (passes 734-763)** added 30 new manifests, CF:F000-FFFF highest density, C4:4000-5000, **D1 bank discovered!**
 - **Agent Swarm Session 11 (passes 764-805)** added 42 new manifests, CF:D000-E000 complete, **D2-D9 banks discovered!**, C5 score-9 cluster, D1 expansion
+- **Agent Swarm Session 12 (passes 806-833)** added 28 new manifests, D6 deep scan (22 score-6+), D4 expansion (20+ score-6+), C5:9000 region, D1:1000 region
 - **C1:8C3E Dispatch Hub COMPLETE**: All 42 handler functions documented (C1:8E00-9800)
 - effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1081+ closed ranges (181 manifest-backed + 900 continuation)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
@@ -28,7 +29,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - continuation notes remain important historical context for the earlier C7 seam, and their frozen pages still feed caller-context scoring through the seam snapshot layer
 
 ## What this repo contains
-- `passes/manifests/` — machine-readable pass history (805 manifests)
+- `passes/manifests/` — machine-readable pass history (833 manifests)
 - `passes/disasm/` — per-pass disassembly notes
 - `passes/labels/` — per-pass label notes
 - `tools/` — repo-native toolkit scripts, config, and workflow docs
@@ -90,7 +91,28 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 11 Complete)
+## Current status (Agent Swarm Session 12 Complete)
+
+### Major Achievement: D6 and D4 Deep Scanned!
+Session 12 completed deep scans of the highest-priority new banks:
+- **28 new promotions** across D6, D4, C5, D1, and CF (pass806-833)
+- **Bank D6: 22 score-6+ candidates** in 6000-7FFF region (49 cross-bank callers)
+- **Bank D4: 20+ score-6+ candidates** in 4000-5FFF region (near score-9 cluster)
+- **Bank CF: C000-CFFF mapped** - Bank CF now 80%+ complete
+- **Bank C5: 9000-AFFF expanded** (8 score-6+ near score-9 at C5:9BC1)
+- **Bank D1: 1000-3FFF expanded** (13 score-6+ candidates)
+
+### Session 12 Coverage Updates
+| Bank | New Ranges | Coverage Change |
+|------|------------|-----------------|
+| D4 | +3 | 0.08% → 0.20% |
+| D6 | +4 | 0.04% → 0.20% |
+| C5 | +3 | 3.85% → 4.10% |
+| D1 | +3 | 1.85% → 2.05% |
+| CF | +1 | 2.14% → 2.20% |
+| **Total** | **+28** | **5.25% → 5.40%** |
+
+### Previous Session (Agent Swarm Session 11 Complete)
 
 ### Major Achievement: Banks D2-D9 Discovered!
 Session 11 achieved the biggest bank discovery yet - **8 new code banks (D2-D9)**:
@@ -134,7 +156,7 @@ Systematically mapped priority regions:
 | **D7** | **1** | **0.04%** | **NEW BANK!** |
 | **D8** | **1** | **0.04%** | **NEW BANK!** |
 | **D9** | **1** | **0.04%** | **NEW BANK!** |
-| **Total** | **479** | **5.25%** | **805 manifests** |
+| **Total** | **507** | **5.40%** | **833 manifests** |
 
 ### Toolkit Health: 100%
 All upgraded toolkit scripts verified working:
