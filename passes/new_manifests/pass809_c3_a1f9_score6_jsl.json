@@ -1,0 +1,15 @@
+{
+  "pass": "809",
+  "bank": "C3",
+  "start_address": "C3:A1F9",
+  "end_address": "C3:A218",
+  "label": "ct_c3_a1f9_jsl_entry_score6",
+  "target": "C3:A200",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. JSL ($22) long call entry with clean start class. Cross-bank call handler in C3:A000-AFFF.",
+  "score": 6,
+  "start_byte": "22",
+  "start_class": "clean_start",
+  "region": "C3:A000-AFFF upper bank code",
+  "promotion_reason": "Score-6 JSL entry. Cross-bank handler with strong evidence."
+}

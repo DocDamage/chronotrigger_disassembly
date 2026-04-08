@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate
+# DB:0813 - detected via owner backtracking
+# Score: 6
+# Reason: JSR prologue, cluster candidate
+
+source: score_target_owner_backtrack_v1.py
+target: DB:0819
+best_start: DB:0813
+score: 6
+distance: 6
+start_byte: 20  # JSR
+start_class: clean_start
+candidate_range: DB:0813..DB:082A

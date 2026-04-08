@@ -1,0 +1,15 @@
+{
+  "pass": "806",
+  "bank": "C3",
+  "start_address": "C3:5E34",
+  "end_address": "C3:5E54",
+  "label": "ct_c3_5e34_ldy_init_score6",
+  "target": "C3:5E3C",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. LDY immediate ($A0) prologue with clean start class. Target in C3:5000-5FFF game logic region.",
+  "score": 6,
+  "start_byte": "A0",
+  "start_class": "clean_start",
+  "region": "C3:5000-5FFF game logic",
+  "promotion_reason": "Score-6 LDY# init function. Game logic bank region."
+}

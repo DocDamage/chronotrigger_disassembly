@@ -1,0 +1,16 @@
+{
+  "pass": "808",
+  "bank": "C3",
+  "start_address": "C3:6ACB",
+  "end_address": "C3:6AE5",
+  "label": "ct_c3_6acb_php_prologue_score6",
+  "target": "C3:6ACD",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. PHP ($08) prologue with clean start class. Target C3:6ACD. Region C3:6000-6FFF event logic.",
+  "score": 6,
+  "start_byte": "08",
+  "start_class": "clean_start",
+  "distance_to_target": 2,
+  "region": "C3:6000-6FFF event logic",
+  "promotion_reason": "Score-6 PHP prologue. Discovered via owner backtrack from raw caller target."
+}

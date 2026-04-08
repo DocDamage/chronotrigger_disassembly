@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate
+# DB:39B3 - detected via owner backtracking
+# Score: 6
+# Reason: LDX# prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:39BB
+best_start: DB:39B3
+score: 6
+distance: 8
+start_byte: A2  # LDX #
+start_class: clean_start
+candidate_range: DB:39B3..DB:39CA

@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate (DB:4000-8000 region)
+# DB:58C1 - detected via owner backtracking
+# Score: 6
+# Reason: JSR prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:58C2
+best_start: DB:58C1
+score: 6
+distance: 1
+start_byte: 20  # JSR
+start_class: clean_start
+candidate_range: DB:58C1..DB:58D8

@@ -1,0 +1,15 @@
+{
+  "pass": "807",
+  "bank": "C3",
+  "start_address": "C3:65AB",
+  "end_address": "C3:65C6",
+  "label": "ct_c3_65ab_phd_prologue_score6",
+  "target": "C3:65AE",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:6000-6FFF high-density region. PHD ($0B) prologue with clean stack behavior. Target has multiple callers.",
+  "score": 6,
+  "start_byte": "0B",
+  "start_class": "clean_start",
+  "region": "C3:6000-6FFF high-density code",
+  "promotion_reason": "Score-6 PHD prologue. Event logic function in unexplored region."
+}

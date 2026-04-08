@@ -1,0 +1,15 @@
+# Bank DB Verified Function
+# DB:5E2B - detected via owner backtracking
+# Cross-bank: C4:D185 calls DB:5E2B via JML
+# Score: 4 but VERIFIED via cross-bank call
+
+source: score_target_owner_backtrack_v1.py + cross_bank_verification
+target: DB:5E2B
+best_start: DB:5E26
+score: 4
+distance: 5
+start_byte: 4C  # JMP
+start_class: clean_start
+candidate_range: DB:5E26..DB:5E3D
+cross_bank_caller: C4:D185 (JML)
+status: VERIFIED_ENTRY
