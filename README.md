@@ -4,7 +4,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 
 ## Current live state
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `763`
+- latest manifest-backed pass: `805`
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
 - latest closed block: CF:F3DC..CF:F404 (Bank CF, score-8 cluster)
 - current forward seam: `CF:D000..` (Bank CF mapping ongoing)
@@ -20,6 +20,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - **Agent Swarm Session 8 (passes 698-715)** added 18 new manifests, C4:9000-FFFF, CF bank initial, C3 gaps, C5 deep scan
 - **Agent Swarm Session 9 (passes 716-733)** added 18 new manifests, CF:E000-F000 major region, C6:E000-FFFF completion, C3:6000 completion
 - **Agent Swarm Session 10 (passes 734-763)** added 30 new manifests, CF:F000-FFFF highest density, C4:4000-5000, **D1 bank discovered!**
+- **Agent Swarm Session 11 (passes 764-805)** added 42 new manifests, CF:D000-E000 complete, **D2-D9 banks discovered!**, C5 score-9 cluster, D1 expansion
 - **C1:8C3E Dispatch Hub COMPLETE**: All 42 handler functions documented (C1:8E00-9800)
 - effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1081+ closed ranges (181 manifest-backed + 900 continuation)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
@@ -27,7 +28,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - continuation notes remain important historical context for the earlier C7 seam, and their frozen pages still feed caller-context scoring through the seam snapshot layer
 
 ## What this repo contains
-- `passes/manifests/` — machine-readable pass history (763 manifests)
+- `passes/manifests/` — machine-readable pass history (805 manifests)
 - `passes/disasm/` — per-pass disassembly notes
 - `passes/labels/` — per-pass label notes
 - `tools/` — repo-native toolkit scripts, config, and workflow docs
@@ -76,6 +77,7 @@ Key scripts now in use:
 - `tools/scripts/seam_triage_utils_v1.py` — shared opcode classification utilities
 - `tools/scripts/build_call_anchor_report_v3.py`
 - `tools/scripts/snes_utils_hirom_v2.py`
+- `tools/scripts/toolkit_doctor.py` — repo-native audit for compile health, low-bank mapping, and CLI compatibility entrypoints
 - `tools/generate_coverage_report_v2.py` — coverage statistics with overlap handling
 - `tools/scripts/detect_data_patterns_v1.py` — identifies data vs code structures
 - `tools/scripts/validate_cross_bank_callers_v1.py` — validates cross-bank caller integrity
@@ -88,56 +90,68 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 10 Complete)
+## Current status (Agent Swarm Session 11 Complete)
 
-### Major Achievement: Bank CF and D1 Discovery
-Session 10 achieved major breakthroughs in Bank CF (highest density region) and discovered Bank D1:
-- **30 new promotions** across Banks CF, C4, C3, and **D1**
-- **Bank CF: 31 documented ranges, 1.62% coverage** (F000-FFFF: 19 score-6+ clusters)
-- **Bank D1: 5 documented ranges, 0.65% coverage** (NEW BANK! 394 code islands found)
-- **C1:8C3E Dispatch Hub 100% COMPLETE** - all 42 handlers documented
+### Major Achievement: Banks D2-D9 Discovered!
+Session 11 achieved the biggest bank discovery yet - **8 new code banks (D2-D9)**:
+- **42 new promotions** across CF, D1, C5, C4, and **D2-D9**
+- **Bank CF: 2.14% coverage** (D000-E000 now complete with 12 new functions)
+- **Bank D1: Expanded** (19 score-6+ candidates, 505 islands, 335 clusters)
+- **Banks D2-D9: ALL CODE BANKS!** (D6 has 49 cross-bank callers - highest)
+- **Bank C5: Score-9 cluster found** (C5:9BC1 - highest in bank)
 
-### Session 10 Summary
-Systematically mapped highest-density regions:
-- **CF:F000-FFFF**: 19 score-6+ clusters including CF:F3DC-F404 (score-8, highest confidence)
-- **CF:E000-F000**: 3 score-6+ clusters (E000-E0FF identified as data, excluded)
-- **C4:4000-5000**: 3 score-6 clusters (41BA, 481E, 4ABB)
-- **C3 gaps**: 5 gap fills (0000-01E3, 0529-08A0, 6000-6FFF)
-- **D1 discovery**: 5 score-6/7 clusters including D1:0509-053C (near C4 caller)
+### Session 11 Summary
+Systematically mapped priority regions:
+- **CF:D000-E000**: 12 new functions including CF:DAF0-DB2A (score-8)
+- **D1 expansion**: 19 score-6+ including D1:0D28-0D42 (score-12 EXCEPTIONAL)
+- **C5 deep scan**: 15 new functions including C5:9BC1 (score-9, highest in C5)
+- **D2-D9 discovery**: All 8 banks are CODE banks! D4:45BB (score-9), D6:68FB (score-8)
+- **C4:8000-9000**: 16 new ranges, C4:8010 hub confirmed
 
 ### Cross-Bank Connectivity Verified
 - **D1 → C4:C0C0 callers**: D1:0236, D1:04BF, D1:35E1 (all verified JSL)
-- **C2:8000-8004**: 5 verified cross-bank callers (JSL hub)
-- **C4:C0C0**: Jump vector table with callers from multiple banks
+- **C4:8010 hub**: 22 fake cross-bank callers filtered, internal callers verified
+- **D6**: 49 cross-bank callers (highest count) - called from C4, C6, C7, CA
+- **D4**: 36 cross-bank callers - major new hub potential
 
-### Cumulative Progress (Session 10)
+### Cumulative Progress (Session 11)
 | Bank | Ranges | Coverage | Status |
 |------|--------|----------|--------|
 | C0 | 215 | 17.25% | Active |
 | C1 | 24 | 1.70% | Dispatch complete |
 | C2 | 10 | 1.35% | Cross-bank hub mapped |
 | C3 | 50 | 19.46% | Gap filling 90%+ |
-| C4 | 37 | 1.80% | Deep scan active |
-| C5 | 13 | 1.69% | Deep scan active |
+| C4 | 53 | 2.45% | 8000-9000 mapped |
+| C5 | 28 | 3.85% | Score-9 discovered |
 | C6 | 15 | 0.50% | D400-D800 mapped |
 | C7 | 23 | 2.16% | 95% mapped |
-| **CF** | **31** | **1.62%** | **Major discovery** |
-| **D1** | **5** | **0.65%** | **NEW BANK!** |
-| **Total** | **423** | **4.82%** | **763 manifests** |
+| CF | 43 | 2.14% | D000-FFFF complete |
+| D1 | 24 | 1.85% | 505 islands found |
+| **D2** | **1** | **0.04%** | **NEW BANK!** |
+| **D3** | **2** | **0.08%** | **NEW BANK!** |
+| **D4** | **2** | **0.08%** | **NEW BANK!** |
+| **D6** | **1** | **0.04%** | **NEW BANK!** |
+| **D7** | **1** | **0.04%** | **NEW BANK!** |
+| **D8** | **1** | **0.04%** | **NEW BANK!** |
+| **D9** | **1** | **0.04%** | **NEW BANK!** |
+| **Total** | **479** | **5.25%** | **805 manifests** |
 
-### Toolkit Updates (Session 10)
-- `generate_coverage_report_v2.py`: Fixed overlapping range handling (prevents negative coverage)
-- `detect_data_patterns_v1.py`: Identifies data vs code (C6:CC00-D000 = data structure)
-- `validate_cross_bank_callers_v1.py`: Detects fake cross-bank misidentifications
+### Toolkit Health: 100%
+All upgraded toolkit scripts verified working:
+- `toolkit_doctor.py`: All 7 checks passing
+- 99 Python scripts compile successfully
+- Legacy entrypoints upgraded
+- Manifest schema validated
 
 ### Remaining Work
-- **Bank CF**: Continue D000-E000 region (12 score-6+ clusters pending)
-- **Bank D1**: Expand mapping (90+ score-5+ islands identified)
-- **Bank C5**: Systematic deep scan (~40 pages)
-- **Banks D2-D9**: Exploration for more code banks
-- **Bank C3**: Final gap completion (target 28% coverage)
+- **Banks D2-D9**: Deep scan the most promising (D4, D6 prioritized)
+- **Bank D1**: Continue expansion (90+ score-5+ islands waiting)
+- **Bank C5**: Continue 9000-A000 and D000-E000 rich regions
+- **Bank CF**: Continue below D000 (C000-D000 pending)
+- **Banks DA-FF**: Final upper ROM exploration
 
 See detailed reports:
+- `AGENT_SWARM_SESSION_11_SUMMARY.md`
 - `AGENT_SWARM_SESSION_10_SUMMARY.md`
 - `C1_8C3E_DISPATCH_COMPLETION_REPORT.md`
 - `C3_GAP_ANALYSIS_FINAL_REPORT.md`

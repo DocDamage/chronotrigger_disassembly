@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Iterable, Iterator, Optional
 
 from snes_utils_hirom_v2 import file_offset_to_snes, iter_manifest_paths, parse_snes_address, parse_snes_range
+from snes_utils import load_manifest, manifest_closed_ranges, manifest_pass_number
 
 
 EXECUTABLE_KINDS = {
@@ -66,9 +67,9 @@ def classify_kind(kind: str) -> str:
 def load_closed_ranges(manifests_dir: str | Path) -> list[ClosedRange]:
     ranges: list[ClosedRange] = []
     for path in iter_manifest_paths(manifests_dir):
-        data = json.loads(Path(path).read_text(encoding='utf-8'))
-        pass_number = int(data.get('pass_number', 0))
-        for item in data.get('closed_ranges', []):
+        data = load_manifest(path)
+        pass_number = manifest_pass_number(data, path)
+        for item in manifest_closed_ranges(data):
             bank, start, end = parse_snes_range(item['range'])
             ranges.append(
                 ClosedRange(

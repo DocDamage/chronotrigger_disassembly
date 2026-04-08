@@ -10,6 +10,10 @@ This file exists so friction turns into concrete upgrades instead of being forgo
 - next-target scoring config
 - repo-first workflow docs
 - script stubs for publishing, next-lane finding, code/data classification, xref reporting, validation, and progress refresh
+- shared low-bank-aware SNES mapping in `tools/scripts/snes_utils.py`
+- compatibility entrypoints that forward old workflow commands to maintained implementations
+- repo-native `tools/scripts/toolkit_doctor.py` health audit
+- mixed manifest-schema compatibility across audit, packaging, and checker scripts
 
 ## Still incomplete / future work
 - real byte parser integration instead of config-first stubs
@@ -21,7 +25,6 @@ This file exists so friction turns into concrete upgrades instead of being forgo
 - rebuild-readiness validation tied to assembler output
 
 ## Pain points observed so far
-- manual next-lane derivation after code-end markers
-- multi-file repo publish friction
-- occasional connector block/timeouts on tiny snapshot files
-- too much manual code-vs-data judgment in mixed banks
+- manual next-lane derivation after code-end markers still exists outside the C3-focused scorer
+- multi-file repo publish friction still exists because the publish lane does not yet update every tracked index
+- too much manual code-vs-data judgment remains in mixed banks even with the current classifier family

@@ -3,9 +3,12 @@ from __future__ import annotations
 import re
 from pathlib import Path
 from typing import Iterable, Iterator, Tuple
+import json
 
 RANGE_RE = re.compile(r'^(?P<bank>[0-9A-Fa-f]{2}):(?P<start>[0-9A-Fa-f]{4})\.\.(?P=bank):(?P<end>[0-9A-Fa-f]{4})$')
 ADDR_RE = re.compile(r'^(?P<bank>[0-9A-Fa-f]{2}):(?P<addr>[0-9A-Fa-f]{4})$')
+OPEN_RANGE_RE = re.compile(r'^(?P<bank>[0-9A-Fa-f]{2}):(?P<start>[0-9A-Fa-f]{4})\.\.$')
+CANONICAL_PASS_RE = re.compile(r'^pass\d+\.json$', re.IGNORECASE)
 
 
 class RangeParseError(ValueError):
@@ -20,8 +23,14 @@ def parse_snes_address(text: str) -> tuple[int, int]:
 
 
 def parse_snes_range(text: str) -> tuple[int, int, int]:
-    m = RANGE_RE.match(text.strip())
+    text = text.strip()
+    m = RANGE_RE.match(text)
     if not m:
+        open_match = OPEN_RANGE_RE.match(text)
+        if open_match:
+            bank = int(open_match.group('bank'), 16)
+            start = int(open_match.group('start'), 16)
+            return bank, start, 0xFFFF
         raise RangeParseError(f'invalid SNES range: {text}')
     bank = int(m.group('bank'), 16)
     start = int(m.group('start'), 16)
@@ -36,9 +45,9 @@ def format_snes_range(bank: int, start: int, end: int) -> str:
 
 
 def hirom_to_file_offset(bank: int, addr: int) -> int:
-    if addr < 0x8000:
-        raise RangeParseError(f'address is not in HiROM mapped region: {bank:02X}:{addr:04X}')
-    return ((bank & 0x3F) << 16) | (addr & 0xFFFF)
+    if not (0 <= bank <= 0xFF and 0 <= addr <= 0xFFFF):
+        raise RangeParseError(f'invalid SNES address: {bank:02X}:{addr:04X}')
+    return ((bank & 0x3F) << 16) | addr
 
 
 def range_file_offsets(range_text: str) -> tuple[int, int]:
@@ -57,8 +66,72 @@ def slice_rom_range(rom_bytes: bytes, range_text: str) -> bytes:
 
 def iter_manifest_paths(manifests_dir: str | Path) -> Iterator[Path]:
     for path in sorted(Path(manifests_dir).glob('pass*.json')):
-        if path.is_file():
+        if path.is_file() and CANONICAL_PASS_RE.match(path.name):
             yield path
+
+
+def manifest_pass_number(data: dict, path: str | Path | None = None) -> int:
+    raw = data.get('pass_number', data.get('pass_num'))
+    if raw is not None:
+        return int(raw)
+    if path is not None:
+        match = re.match(r'^pass(\d+)\.json$', Path(path).name, re.IGNORECASE)
+        if match:
+            return int(match.group(1))
+    return 0
+
+
+def load_manifest(path: str | Path) -> dict:
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+
+
+def manifest_schema_name(data: dict) -> str:
+    if 'closed_ranges' in data:
+        return 'canonical_closed_ranges'
+    if 'targets' in data:
+        return 'legacy_targets'
+    return 'unknown'
+
+
+def manifest_live_seam(data: dict) -> str:
+    return str(data.get('live_seam_after_pass') or data.get('region') or '')
+
+
+def score_to_confidence(score: object) -> str:
+    try:
+        value = int(score)
+    except Exception:
+        return 'unknown'
+    if value >= 8:
+        return 'high'
+    if value >= 6:
+        return 'medium-high'
+    if value >= 4:
+        return 'medium'
+    return 'low'
+
+
+def manifest_closed_ranges(data: dict) -> list[dict]:
+    closed_ranges = data.get('closed_ranges')
+    if isinstance(closed_ranges, list):
+        return [item for item in closed_ranges if isinstance(item, dict) and item.get('range')]
+
+    normalized: list[dict] = []
+    for item in data.get('targets', []):
+        if not isinstance(item, dict):
+            continue
+        range_text = item.get('range')
+        if not range_text:
+            continue
+        normalized.append(
+            {
+                'range': range_text,
+                'kind': item.get('kind') or 'owner',
+                'label': item.get('label') or data.get('pass_name') or 'legacy_target',
+                'confidence': item.get('confidence') or score_to_confidence(item.get('score')),
+            }
+        )
+    return normalized
 
 
 def ascii_ratio(data: bytes) -> float:
@@ -107,10 +180,10 @@ def iter_all_call_patterns(rom_bytes: bytes, target_bank: int, target_addr: int)
 
 
 def file_offset_to_snes(offset: int) -> tuple[int, int]:
+    if offset < 0:
+        raise RangeParseError(f'invalid file offset: {offset}')
     bank = 0xC0 | ((offset >> 16) & 0x3F)
     addr = offset & 0xFFFF
-    if addr < 0x8000:
-        addr |= 0x8000
     return bank, addr
 
 
