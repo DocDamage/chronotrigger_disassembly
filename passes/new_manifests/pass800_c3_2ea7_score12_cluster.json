@@ -1,0 +1,16 @@
+{
+  "pass": "800",
+  "bank": "C3",
+  "start_address": "C3:2EA7",
+  "end_address": "C3:2EBF",
+  "label": "ct_c3_2ea7_multi_return_handler_score12",
+  "target": "C3:2EA7",
+  "confidence": "high",
+  "reasoning": "Score-12 cluster - highest score found in C3:2900-3058 gap. Multi-return function with 12 return points, 4 callers. 25-byte width with 11 child islands.",
+  "cluster_score": 12,
+  "child_count": 11,
+  "return_count": 12,
+  "call_count": 4,
+  "gap_context": "C3:2900-3058 major gap fill",
+  "promotion_reason": "Score-12 cluster with exceptional multi-return pattern. Clean start class, strong caller evidence."
+}

@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate
+# DB:0290 - detected via owner backtracking
+# Score: 6
+# Reason: JSR prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:0291
+best_start: DB:0290
+score: 6
+distance: 1
+start_byte: 20  # JSR
+start_class: clean_start
+candidate_range: DB:0290..DB:02A7

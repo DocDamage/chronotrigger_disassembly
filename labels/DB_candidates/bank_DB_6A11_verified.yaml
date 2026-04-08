@@ -1,0 +1,15 @@
+# Bank DB Verified Function (DB:4000-8000 region)
+# DB:6A11 - detected via owner backtracking
+# Cross-bank: FE:D966 calls DB:6A11 via JML
+# Score: 5 but VERIFIED via cross-bank call
+
+source: score_target_owner_backtrack_v1.py + cross_bank_verification
+target: DB:6A11
+best_start: DB:6A11
+score: 5
+distance: 0
+start_byte: C2  # REP #
+start_class: clean_start
+candidate_range: DB:6A11..DB:6A28
+cross_bank_caller: FE:D966 (JML)
+status: HIGH_CONFIDENCE

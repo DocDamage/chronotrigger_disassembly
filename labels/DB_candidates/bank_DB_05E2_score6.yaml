@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate
+# DB:05E2 - detected via owner backtracking
+# Score: 6
+# Reason: LDY# prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:05E8
+best_start: DB:05E2
+score: 6
+distance: 6
+start_byte: A0  # LDY #
+start_class: clean_start
+candidate_range: DB:05E2..DB:05F9

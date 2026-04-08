@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate (DB:4000-8000 region)
+# DB:6015 - detected via owner backtracking
+# Score: 6
+# Reason: PHA prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:6018
+best_start: DB:6015
+score: 6
+distance: 3
+start_byte: 48  # PHA
+start_class: clean_start
+candidate_range: DB:6015..DB:602C

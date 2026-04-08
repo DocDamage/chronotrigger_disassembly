@@ -1,0 +1,17 @@
+{
+  "pass": "801",
+  "bank": "C3",
+  "start_address": "C3:2B3A",
+  "end_address": "C3:2B6E",
+  "label": "ct_c3_2b3a_branch_handler_score8",
+  "target": "C3:2B3A",
+  "confidence": "high",
+  "reasoning": "Score-8 cluster in C3:2900-3058 gap. Branch-heavy code region with 10 branches, 7 returns, 53 bytes width. 6 child islands.",
+  "cluster_score": 8,
+  "child_count": 6,
+  "branch_count": 10,
+  "return_count": 7,
+  "width": 53,
+  "gap_context": "C3:2900-3058 major gap fill",
+  "promotion_reason": "Score-8 cluster with dense branch pattern. Game logic handler candidate."
+}

@@ -1,0 +1,16 @@
+{
+  "pass": "804",
+  "bank": "C3",
+  "start_address": "C3:052A",
+  "end_address": "C3:0543",
+  "label": "ct_c3_052a_jsr_entry_score6",
+  "target": "C3:052B",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from gap C3:0529-08A0 backtrack analysis. JSR ($20) entry with strong caller evidence from C3:4DFD.",
+  "score": 6,
+  "start_byte": "20",
+  "start_class": "clean_start",
+  "distance_to_target": 1,
+  "gap_context": "C3:0529-08A0 gap fill priority",
+  "promotion_reason": "Score-6 JSR entry. Gap fill priority with caller validation."
+}

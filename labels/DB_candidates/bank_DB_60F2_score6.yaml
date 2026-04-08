@@ -1,0 +1,15 @@
+# Bank DB Score-6 Candidate (DB:4000-8000 region)
+# DB:60F2 - detected via owner backtracking
+# Cross-bank: F2:A57F calls DB:60FB via JML
+# Score: 6
+# Reason: PHB prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:60FB
+best_start: DB:60F2
+score: 6
+distance: 9
+start_byte: 8B  # PHB
+start_class: clean_start
+candidate_range: DB:60F2..DB:6109
+cross_bank_caller: F2:A57F (JML)
