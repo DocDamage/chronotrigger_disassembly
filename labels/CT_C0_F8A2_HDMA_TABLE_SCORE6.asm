@@ -1,0 +1,2 @@
+; HDMA table processing
+CT_C0_F8A2_HDMA_TABLE_SCORE6: EQU $C00F8A2

@@ -1,0 +1,2 @@
+; NMI utility with REP #$20
+CT_C0_EC18_NMI_UTIL_SCORE6: EQU $C00EC18

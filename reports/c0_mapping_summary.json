@@ -1,0 +1,34 @@
+{
+  "bank": "C0",
+  "region": "8000-FFFF",
+  "candidates_processed": 20,
+  "focus_areas": [
+    "DMA/HDMA",
+    "Graphics Engine",
+    "Input Handling",
+    "NMI/IRQ"
+  ],
+  "labels": [
+    "CT_C0_8756_DMA_UTIL_SCORE6",
+    "CT_C0_8805_GRAPHICS_INIT_SCORE6",
+    "CT_C0_882B_DMA_CHAIN_SCORE6",
+    "CT_C0_9155_SPRITE_SETUP_SCORE6",
+    "CT_C0_916C_MODE_SWITCH_SCORE6",
+    "CT_C0_98A6_WINDOW_CONFIG_SCORE6",
+    "CT_C0_98D7_LAYER_MASK_SCORE6",
+    "CT_C0_9908_EFFECT_CTRL_SCORE6",
+    "CT_C0_9A29_STATE_COPY_SCORE6",
+    "CT_C0_9ABD_PHA_HANDLER_SCORE6",
+    "CT_C0_A372_COORD_MATH_SCORE6",
+    "CT_C0_A46C_FLAG_TEST_SCORE6",
+    "CT_C0_A598_DATA_OP_SCORE6",
+    "CT_C0_CAA1_SCRIPT_DISPATCH_SCORE6",
+    "CT_C0_CBA6_EVENT_HANDLER_SCORE6",
+    "CT_C0_CE34_PHK_HANDLER_SCORE6",
+    "CT_C0_EC18_NMI_UTIL_SCORE6",
+    "CT_C0_F860_HDMA_INIT_SCORE6",
+    "CT_C0_F8A2_HDMA_TABLE_SCORE6",
+    "CT_C0_F8B0_HDMA_CHAIN_SCORE6"
+  ],
+  "estimated_coverage_increase": "6.0%"
+}

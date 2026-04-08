@@ -1,0 +1,282 @@
+[
+  {
+    "addr": "DB:00AC",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 5,
+      "hex_preview": "08 CD 01 7F 9A 00 DF 01 7F 80 30 56 00 57 00 8D"
+    }
+  },
+  {
+    "addr": "DB:00AC",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 5,
+      "hex_preview": "08 CD 01 7F 9A 00 DF 01 7F 80 30 56 00 57 00 8D"
+    }
+  },
+  {
+    "addr": "DB:024E",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": false,
+      "has_branch": true,
+      "barrier_count": 6,
+      "hex_preview": "08 4A 01 04 7F 01 10 02 06 07 08 00 00 16 5A 08"
+    }
+  },
+  {
+    "addr": "DB:027D",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 4,
+      "hex_preview": "08 45 08 55 16 5A 40 06 00 03 10 1F 12 08 07 04"
+    }
+  },
+  {
+    "addr": "DB:027D",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 4,
+      "hex_preview": "08 45 08 55 16 5A 40 06 00 03 10 1F 12 08 07 04"
+    }
+  },
+  {
+    "addr": "DB:0290",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "20",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": false,
+      "barrier_count": 7,
+      "hex_preview": "20 C0 E3 00 04 06 33 40 E7 00 06 04 16 33 26 00"
+    }
+  },
+  {
+    "addr": "DB:03A7",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "20",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": false,
+      "barrier_count": 3,
+      "hex_preview": "20 AA 00 2A AD 40 B7 3E 04 AA 24 00 96 08 0F 17"
+    }
+  },
+  {
+    "addr": "DB:05E2",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "A0",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": false,
+      "has_branch": true,
+      "barrier_count": 6,
+      "hex_preview": "A0 03 6D 05 6D 05 6E 11 02 B0 7D 05 95 02 00 96"
+    }
+  },
+  {
+    "addr": "DB:0813",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "20",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 4,
+      "hex_preview": "20 20 11 10 B1 1A 03 20 00 45 10 00 01 10 18 A1"
+    }
+  },
+  {
+    "addr": "DB:0813",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "20",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 4,
+      "hex_preview": "20 20 11 10 B1 1A 03 20 00 45 10 00 01 10 18 A1"
+    }
+  },
+  {
+    "addr": "DB:084F",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 2,
+      "hex_preview": "08 0E 5F 0A 10 12 10 40 10 05 04 4F 20 10 1D 01"
+    }
+  },
+  {
+    "addr": "DB:0AFE",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "A0",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 6,
+      "hex_preview": "A0 AD 10 04 04 35 27 30 01 78 20 00 17 26 AA 01"
+    }
+  },
+  {
+    "addr": "DB:0C38",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": false,
+      "has_branch": true,
+      "barrier_count": 1,
+      "hex_preview": "08 BB 1A 71 50 0A DA 1E 09 4F 40 8D F0 17 F0 2E"
+    }
+  },
+  {
+    "addr": "DB:0D80",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "8B",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": false,
+      "has_branch": true,
+      "barrier_count": 6,
+      "hex_preview": "8B 09 99 02 00 9A 40 09 A6 09 AD 09 C3 02 80 D6"
+    }
+  },
+  {
+    "addr": "DB:1B7E",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "8B",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": false,
+      "has_branch": true,
+      "barrier_count": 1,
+      "hex_preview": "8B 0A 0C 7A 01 50 09 0F 54 01 63 08 40 08 0F 17"
+    }
+  },
+  {
+    "addr": "DB:210B",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "8B",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 3,
+      "hex_preview": "8B 1E 14 DB 78 D9 18 11 A8 B2 12 11 D9 40 0D D9"
+    }
+  },
+  {
+    "addr": "DB:2190",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "8B",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 6,
+      "hex_preview": "8B 1D 17 91 0D 02 40 F7 02 20 15 A0 02 4A 03 02"
+    }
+  },
+  {
+    "addr": "DB:2382",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": true,
+      "has_branch": true,
+      "barrier_count": 4,
+      "hex_preview": "08 9C 60 20 20 9C 20 20 AC 00 2C 10 9C 10 10 E0"
+    }
+  },
+  {
+    "addr": "DB:320C",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": false,
+      "has_branch": true,
+      "barrier_count": 7,
+      "hex_preview": "08 08 08 04 78 E1 02 E6 8B 02 00 60 08 E7 02 90"
+    }
+  },
+  {
+    "addr": "DB:3303",
+    "score": 6,
+    "is_cross_bank": false,
+    "analysis": {
+      "first_byte": "08",
+      "is_prolog": true,
+      "has_return": true,
+      "has_call": false,
+      "has_branch": true,
+      "barrier_count": 3,
+      "hex_preview": "08 12 09 01 00 11 01 15 00 8A 94 88 95 86 97 D8"
+    }
+  }
+]

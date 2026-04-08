@@ -1,0 +1,2 @@
+; HDMA initialization with PHY/PHX
+CT_C0_F860_HDMA_INIT_SCORE6: EQU $C00F860
