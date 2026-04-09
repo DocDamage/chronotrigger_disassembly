@@ -2,7 +2,7 @@
 
 **Last Updated**: 2026-04-09 (Session 41 Complete)  
 **Working Branch**: `live-work-from-pass166`  
-**Latest Manifest Pass**: 1224 (Session 42: C4:714E promotion)
+**Latest Manifest Pass**: 1225 (Session 43: C4:7FAC clamp routine)
 
 ---
 
@@ -10,8 +10,8 @@
 
 The Chrono Trigger SNES ROM disassembly project has reached significant milestones:
 
-- **1,836 closed ranges** documented (917 manifest-backed + 919 continuation)
-- **42 Agent Swarm Sessions** completed
+- **1,837 closed ranges** documented (918 manifest-backed + 919 continuation)
+- **43 Agent Swarm Sessions** completed
 - **Bank C0**: 31.90% coverage (30% target exceeded)
 - **Bank C3**: ~35.8% coverage (30% target exceeded)
 - **Bank C4**: ~12.8% coverage (approaching 15% target)
@@ -27,7 +27,7 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 | C1 | 89 | 7.60% | In Progress | 434A mega-cluster mapped |
 | C2 | 75 | 8.00% | ✅ Target Achieved | Score-14 functions discovered |
 | C3 | 356 | ~35.9% | ✅ Target Exceeded | +1 function in Session 41 |
-| C4 | 155 | ~12.9% | In Progress | C4:714E promoted, path to 15% |
+| C4 | 156 | ~13.0% | In Progress | C4:7FAC promoted, 2% to 15% |
 | C5 | 28 | 4.10% | In Progress | Score-9 cluster at 9BC1 |
 | C6 | 15 | 0.50% | Initial | D400-D800 mapped |
 | C7 | 23 | 2.16% | In Progress | 95% mapped |
@@ -39,6 +39,14 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 ---
 
 ## Recent Major Achievements
+
+### Session 43: C4 Bank Push to 15% (2026-04-09)
+Focused on C4:7800-7FFF to push toward 15% coverage target:
+- **16 pages scanned** (C3:A800-AFFF, C4:7800-7FFF)
+- **1 function promoted**: C4:7FAC (score-6, clamped value update routine)
+- **Major discovery**: C4:7F00 page has 7 verified entry callers
+- **C4 bank**: ~13.0% coverage, 2.0% to 15% target
+- **Current seam**: C3:B000.. / C4:8000..
 
 ### Session 42: High Bank + C4 Deep Scan (2026-04-09)
 Continued high bank exploration and C4 bank deep scan:
