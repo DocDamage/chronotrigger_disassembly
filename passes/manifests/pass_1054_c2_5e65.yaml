@@ -1,0 +1,13 @@
+pass: 1054
+address: 025E65
+bank: 2
+label: ct_c2_5e65_multi_exit_cluster
+range: C2:5E65-C2:5E8A
+score: 8
+width: 38
+call_count: 7
+branch_count: 1
+stackish_count: 3
+return_count: 4
+session: 26
+rationale: Score-8 mega-cluster from C2:5800-6000 scan. 38 bytes with 4 returns, 7 calls, 3 stack ops. Multi-exit subroutine with rich call sites.

@@ -1,0 +1,25 @@
+# Bank C4 Session 26 Manifest
+# Generated: 2026-04-08
+
+candidate:
+  address: C4:FE11
+  score: 5
+  width: 25
+  region: C4:C000-FFFF
+  
+analysis:
+  calls: 0
+  branches: 6
+  type: branch_heavy
+  session: 26
+  
+status:
+  state: candidate
+  confidence: medium
+  
+notes: >
+  Score-5 candidate from C4:C000-FFFF region.
+  Branches: 6.
+  Discovered via automated island scan.
+  
+  High branch count - potential handler.

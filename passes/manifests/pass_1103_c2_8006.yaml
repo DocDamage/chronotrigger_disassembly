@@ -1,0 +1,13 @@
+pass: 1103
+address: 028006
+bank: 2
+label: ct_c2_8006_hub_entry_s29
+range: C2:8006-C2:8090
+score: 6
+width: 139
+call_count: 6
+branch_count: 4
+stackish_count: 2
+return_count: 2
+session: 29
+rationale: C2:8000 hub area - Major entry point candidate. 6 calls, strong boundaries. Cross-bank accessible service function.

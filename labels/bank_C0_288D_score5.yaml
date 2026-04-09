@@ -1,0 +1,27 @@
+# Bank C0 - Score 5 Function Candidate
+# Session 21 Pass 1026 - Auto-generated from C0:2800-4000 scan
+
+range:
+  start: "C0:288D"
+  end: "C0:28A5"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 25
+  
+features:
+  calls: 8
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.72
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  High call count (8) in C0:2800-3000 region suggests popular utility function.
+  Contains stack operation (PHP/PLP pattern). Higher ASCII ratio may indicate
+  mixed code/data or string processing. Worth investigation due to call volume.

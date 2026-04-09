@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 26,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:51D5",
+    "end_addr": "C1:51F0",
+    "name": "ct_c1_51d5_handler_s26"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 1,
+    "branch_count": 3,
+    "return_count": 1,
+    "width": 27,
+    "region": "5000-6000",
+    "selection_reason": "Score-7 candidate. Strong subroutine in mid-bank region."
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

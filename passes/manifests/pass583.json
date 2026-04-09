@@ -2,11 +2,11 @@
   "pass_number": 583,
   "closed_ranges": [
     {
-      "range": "C1:178E..C1:1800",
+      "range": "C1:1B55..C1:1B66",
       "kind": "owner",
-      "label": "ct_c1_178e_hub_entry_25_callers",
+      "label": "ct_c1_1b55_utility_hub",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, LDA# prologue. Entry point for C1:179C hub with 25 callers."
+  "promotion_reason": "Primary utility hub. Score-6 cluster with 29 callers via JSR. JSL to C7:0004. 18 bytes."
 }

@@ -1,0 +1,14 @@
+{
+  "pass": 1200,
+  "bank": "C3",
+  "start_address": "C3:0026",
+  "end_address": "C3:003D",
+  "label": "ct_c3_0026_php_handler",
+  "target": "C3:0026",
+  "confidence": "high",
+  "reasoning": "Score-6 PHP prologue handler at bank start. Clean start class with prologue indicator. Gap fill for C3:0000-01E3 region.",
+  "score": 6,
+  "gap_context": "C3:0000-01E3 bank start gap",
+  "promotion_reason": "Score-6 PHP prologue handler. Fills gap in bank start region.",
+  "session": "30"
+}

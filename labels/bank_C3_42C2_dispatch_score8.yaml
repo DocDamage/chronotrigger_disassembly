@@ -1,0 +1,53 @@
+# Bank C3 - Score 8 Dispatch Handler (SESSION 23)
+# C3:42C2-42D4 - High-confidence dispatch function
+
+range:
+  start: "C3:42C2"
+  end: "C3:42D4"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 8
+  cluster_score: 8
+  width: 19
+  child_count: 2
+  children:
+    - "C3:42C2-C3:42D0"
+    - "C3:42C2-C3:42D4"
+
+features:
+  - "Score 8 cluster"
+  - "Dispatch handler candidate"
+  - "2 child paths"
+  - "Located pre-supercluster (C3:4000-4400)"
+  
+stats:
+  calls: 1
+  branches: 1
+  stackish: 2
+  returns: 2
+  ascii_ratio: 0.263
+
+confidence: 8
+status: "candidate"
+verified: false
+priority: "high"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:4000-4400 region
+  
+  Score 8 dispatch handler located just before the C3:4548 supercluster.
+  This function may be part of the dispatch chain leading to the supercluster.
+  
+  Features:
+  - 19 bytes, 2 child paths
+  - 1 call, 1 branch
+  - 2 stack operations, 2 returns
+  - Low ASCII ratio (0.263) = clean code
+  
+  Likely prepares state and dispatches to handlers in the
+  nearby supercluster region.
+  
+  RECOMMENDATION: Disassemble to understand its relationship
+  to the C3:4548 supercluster.

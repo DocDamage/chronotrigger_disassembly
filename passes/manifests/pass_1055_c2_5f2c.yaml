@@ -1,0 +1,13 @@
+pass: 1055
+address: 025F2C
+bank: 2
+label: ct_c2_5f2c_dispatch_cluster
+range: C2:5F2C-C2:5F5B
+score: 8
+width: 48
+call_count: 8
+branch_count: 3
+stackish_count: 5
+return_count: 4
+session: 26
+rationale: Score-8 cluster from C2:5000-6000 scan. 48 bytes with 4 returns, 8 calls, 5 stack ops. Dispatch pattern cluster adjacent to 5F7E mega-cluster.

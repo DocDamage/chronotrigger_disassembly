@@ -1,0 +1,14 @@
+{
+  "pass": 1202,
+  "bank": "C3",
+  "start_address": "C3:05B0",
+  "end_address": "C3:05CD",
+  "label": "ct_c3_05b0_bra_handler",
+  "target": "C3:05B0",
+  "confidence": "high",
+  "reasoning": "Score-6 BRA (branch) handler with control flow. Gap fill for C3:0529-08A0 region.",
+  "score": 6,
+  "gap_context": "C3:0529-08A0 early gap",
+  "promotion_reason": "Score-6 branch handler. Control flow function with verified entry.",
+  "session": "30"
+}

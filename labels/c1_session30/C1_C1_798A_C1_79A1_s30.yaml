@@ -1,0 +1,25 @@
+# Session 30 Manifest - Pass 1101
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1101
+
+target:
+  bank: "C1"
+  range: "C1:798A..C1:79A1"
+  label: "ct_c1_798a_score7_subroutine"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 7
+  source: "C1_initial_scan_summary.json"
+  promotion_reason: "Score-7 candidate. 23 bytes width. Subroutine with strong prologue pattern. Loca..."
+
+promotion_reason: |
+  Score-7 candidate. 23 bytes width. Subroutine with strong prologue pattern. Located in C1:7900-7A00 region.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

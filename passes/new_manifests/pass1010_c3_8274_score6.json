@@ -1,0 +1,18 @@
+{
+  "pass": 1010,
+  "range": "C3:8274..C3:8290",
+  "label": "ct_c3_8274_jsr_helper_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from gap analysis. JSR entry with clean start class. Session 25 final push.",
+  "scan": {
+    "score": 6,
+    "start_class": "clean_start",
+    "validation": "owner_backtrack_v1"
+  },
+  "coverage": {
+    "bytes": 28,
+    "bank": "C3"
+  },
+  "session": 25
+}

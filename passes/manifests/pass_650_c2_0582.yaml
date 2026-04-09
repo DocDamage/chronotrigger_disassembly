@@ -1,0 +1,13 @@
+pass: 650
+address: 020582
+bank: 2
+label: ct_c2_0582_early_handler
+range: C2:0582-C2:059A
+score: 6
+width: 25
+call_count: 4
+branch_count: 3
+stackish_count: 0
+return_count: 1
+session: 25
+rationale: Score-6 island from C2:0000-1000 vector region. 25 bytes with 4 calls, 3 branches. Early bank handler function.

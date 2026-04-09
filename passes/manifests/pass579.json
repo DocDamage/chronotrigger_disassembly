@@ -2,11 +2,11 @@
   "pass_number": 579,
   "closed_ranges": [
     {
-      "range": "C5:4206..C5:4280",
+      "range": "C1:179C..C1:17A0",
       "kind": "owner",
-      "label": "ct_c5_4206_php_prologue",
+      "label": "ct_c1_179c_dispatch_hub",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, PHP prologue (08). Seam validated. Priority candidate from C5:4000-4FFF deep scan."
+  "promotion_reason": "Primary dispatch hub. Score-6 cluster with 25 callers via JMP. STZ/STZ/RTS pattern. 5 bytes."
 }

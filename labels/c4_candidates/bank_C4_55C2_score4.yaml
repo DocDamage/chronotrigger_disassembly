@@ -1,0 +1,32 @@
+# Bank C4 - Score 4 Function Candidate
+# Session 23 - C4:5000-6000 Region Deep Scan
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:55C2"
+  end: "C4:55D2"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 4
+  width: 17
+  call_count: 0
+  branch_count: 2
+  stackish_count: 0
+  return_count: 1
+  
+features:
+  - "Score 4 function"
+  - "17-byte width"
+  - "2 branches for conditional logic"
+  - "Single return point"
+  - "Low ASCII ratio (0.118)"
+  
+confidence: 4
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5400-6000 region.
+  17-byte function with 2 branches.
+  Low ASCII ratio suggests legitimate code.

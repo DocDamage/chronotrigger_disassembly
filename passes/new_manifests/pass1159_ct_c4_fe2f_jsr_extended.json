@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1159,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:FE2F",
+      "mode": "known_code",
+      "label": "ct_c4_fe2f_jsr_extended",
+      "reason": "Extended score-6 JSR function. End-of-bank."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 31
+    }
+  }
+}

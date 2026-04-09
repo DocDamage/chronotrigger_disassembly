@@ -1,0 +1,28 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 24 Pass 1040 - Auto-generated from C0:0000-2000 scan
+
+range:
+  start: "C0:0887"
+  end: "C0:089F"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 3
+  branches: 1
+  stackish: 2
+  returns: 1
+  ascii_ratio: 0.24
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  High-score candidate in low bank C0:0000-2000 region.
+  3 calls indicate multiple users, 2 stack operations (PHP/PLP pattern).
+  Low ASCII ratio (0.24) strongly suggests code.
+  Entry point for utility function in system initialization area.

@@ -1,0 +1,17 @@
+{
+  "pass": 1050,
+  "label": "CT_C0_F468_HDMAHelper_Score6",
+  "address": "C0:F468",
+  "snes_address": "$C0$F468",
+  "score": 6,
+  "description": "HDMA helper function",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "F000-FFFF",
+  "features": {
+    "category": "hdma"
+  },
+  "session": 30,
+  "connected_to": ["C0:F488"]
+}

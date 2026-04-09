@@ -1,0 +1,46 @@
+# Bank C4 - Score 5 Cluster (SESSION 25)
+# C4:3D5F-3D65 - C4:3000-4000 gap region
+
+range:
+  start: "C4:3D5F"
+  end: "C4:3D65"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 5
+  cluster_score: 5
+  width: 7
+
+features:
+  - "Score 5 cluster (compact!)"
+  - "0 calls, 4 branches, 2 returns"
+  - "1 stack operation"
+  
+stats:
+  calls: 0
+  branches: 4
+  stackish: 1
+  returns: 2
+  ascii_ratio: 0.286
+
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  Compact high-density candidate in C4:3000-4000 region.
+  
+  Features:
+  - NO calls (entry point unknown - internal?)
+  - 4 branches in only 7 bytes! (extremely dense)
+  - 2 returns
+  - 1 stack operation
+  - ASCII ratio 0.286 (suggests code)
+  
+  This compact function has extremely high branch density.
+  Likely a small conditional dispatcher or bitmask handler.
+  
+  Part of C4:3000-4000 gap exploration.

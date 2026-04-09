@@ -1,0 +1,14 @@
+pass: 1049
+address: 02BFAC
+bank: 2
+label: ct_c2_bfac_terminal_handler
+range: C2:BFAC-C2:BFC4
+score: 6
+width: 25
+call_count: 4
+branch_count: 1
+stackish_count: 0
+return_count: 1
+session: 24
+parent_hub: C2:B716
+rationale: Score 6 terminal handler near end of B800-C000 region, 4 calls, final pipeline stage

@@ -1,0 +1,17 @@
+{
+  "pass": 1030,
+  "label": "CT_C0_CABA_ScriptHandler_Score6",
+  "address": "C0:CABA",
+  "snes_address": "$C0$CABA",
+  "score": 6,
+  "description": "Script event handler with LDA# prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 40,
+  "region": "C000-CFFF",
+  "features": {
+    "start_byte": "A9"
+  },
+  "session": 30,
+  "connected_to": ["C0:CA4D"]
+}

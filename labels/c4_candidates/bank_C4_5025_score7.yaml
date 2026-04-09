@@ -1,0 +1,31 @@
+# Bank C4 - Score 7 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:5025"
+  end: "C4:5039"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 21
+  call_count: 2
+  branch_count: 2
+  stackish_count: 1
+  return_count: 1
+  
+features:
+  - "High score function (score 7)"
+  - "21-byte substantial width"
+  - "2 external calls suggests utility function"
+  - "2 branches indicates control flow"
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5000-6000 hot zone region.
+  Score 7 candidate with 2 calls and 2 branches.
+  Part of the highest-scoring region in Bank C4.

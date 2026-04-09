@@ -1,0 +1,14 @@
+{
+  "pass": 1219,
+  "bank": "C3",
+  "start_address": "C3:8400",
+  "end_address": "C3:841A",
+  "label": "ct_c3_8400_jsr_entry",
+  "target": "C3:8400",
+  "confidence": "high",
+  "reasoning": "Score-6 JSR entry point. Subroutine call target with 27-byte span. C3:8000-8FFF region candidate.",
+  "score": 6,
+  "gap_context": "C3:8000-8FFF region",
+  "promotion_reason": "Score-6 JSR entry. 27 bytes, subroutine pattern in 8000-8FFF region.",
+  "session": "30"
+}

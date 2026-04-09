@@ -1,0 +1,30 @@
+{
+  "pass": 1045,
+  "bank": "C1",
+  "session": 23,
+  "range": "C1:4212..C1:431A",
+  "score": 0,
+  "width": 264,
+  "type": "data_region",
+  "source": "C1:4200-4300_gap_analysis",
+  "reason": "264-byte gap between C1:4200 score-6 cluster and C1:432C dispatch trampoline. Contains data table, not code.",
+  "analysis": {
+    "total_bytes": 264,
+    "non_zero_bytes": 254,
+    "structure": "data_table",
+    "evidence": [
+      "Bytes do not form valid SNES addresses (low-high pattern check failed)",
+      "Irregular byte patterns (00 7E A6 BE A7 BF FF FF...) unlike jump tables",
+      "Contains scattered bits/flags rather than pointers",
+      "Bookended by code: C1:4200-4211 (score 6) and C1:432C-4349 (trampoline)"
+    ],
+    "likely_purpose": "Lookup table or bit flags accessed by C1:4200 function and/or dispatch trampoline",
+    "embedded_code_possibility": "C1:4221-4239 may contain small code island (score 4 from scan)"
+  },
+  "related_to": [
+    "C1:4200_score6_cluster",
+    "C1:432C_dispatch_trampoline"
+  ],
+  "recommendation": "DO NOT disassemble as code. Treat as data region. May contain bit flags, lookup tables, or packed structures.",
+  "timestamp": "2026-04-08T15:30:00-04:00"
+}

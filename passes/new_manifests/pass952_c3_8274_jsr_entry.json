@@ -1,0 +1,22 @@
+{
+  "pass": 952,
+  "range": "C3:8274..C3:8291",
+  "label": "ct_c3_8274_jsr_entry",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:8000-9000 scan. JSR entry with multiple branches and returns. Session 26.",
+  "scan": {
+    "score": 6,
+    "width": 29,
+    "call_count": 2,
+    "branch_count": 2,
+    "stackish_count": 1,
+    "return_count": 2,
+    "first_return_address": "C3:8281",
+    "ascii_ratio": 0.207,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

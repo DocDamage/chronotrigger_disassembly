@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 25,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:D8B8",
+    "end_addr": "C1:D8D0",
+    "name": "ct_c1_d8b8_hub_s25"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 2,
+    "branch_count": 2,
+    "return_count": 1,
+    "width": 25,
+    "ascii_ratio": 0.2,
+    "source_file": "c1_d000_scan.json"
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

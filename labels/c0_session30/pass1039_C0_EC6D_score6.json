@@ -1,0 +1,17 @@
+{
+  "pass": 1039,
+  "label": "CT_C0_EC6D_WaitLoop_Score6",
+  "address": "C0:EC6D",
+  "snes_address": "$C0$EC6D",
+  "score": 6,
+  "description": "Wait loop/NMI synchronization function",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "20"
+  },
+  "session": 30,
+  "connected_to": ["C0:EC58"]
+}

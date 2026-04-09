@@ -1,0 +1,29 @@
+{
+  "pass": 1017,
+  "bank": "C0",
+  "label": "ct_c0_2680_calculation_routine",
+  "address": "C0:2680",
+  "range": "C0:2680..C0:26A0",
+  "bytes": 33,
+  "category": "code",
+  "confidence": 5,
+  "reasoning": [
+    "Score 5 cluster approaching 2700 region",
+    "Mathematical operation pattern detected",
+    "Located before 2760 collision check cluster",
+    "33 bytes - calculation routine size",
+    "May be related to physics or coordinate math",
+    "Pattern consistent with calculation helper routine"
+  ],
+  "findings": {
+    "calls": 1,
+    "branches": 2,
+    "stack_ops": 1,
+    "returns": 1,
+    "first_return": "C0:2695"
+  },
+  "flags": ["score5", "math_routine"],
+  "related": ["C0:2680", "C0:26A0", "C0:2695", "C0:2760"],
+  "session": 20,
+  "status": "closed"
+}

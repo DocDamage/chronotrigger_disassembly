@@ -34,6 +34,16 @@ HELP_SMOKE_TARGETS = [
     'tools/scripts/update_bank_progress.py',
 ]
 
+DUPLICATE_HELPER_TARGETS = [
+    'tools/scripts/detect_data_patterns_v1.py',
+    'tools/scripts/validate_cross_bank_callers_v1.py',
+    'tools/scripts/page_range_mixedness_v1.py',
+    'tools/scripts/score_owner_boundary_risk_v1.py',
+    'tools/scripts/find_local_code_islands_v1.py',
+    'tools/scripts/score_raw_xref_context_v1.py',
+    'tools/scripts/seam_triage_utils_v1.py',
+]
+
 
 def repo_root() -> Path:
     return Path(__file__).resolve().parents[2]
@@ -188,6 +198,22 @@ def branch_state_smoke_check(root: Path) -> tuple[bool, dict[str, object]]:
     )
 
 
+def duplicate_helper_check(root: Path) -> tuple[bool, dict[str, object]]:
+    helper_defs = (
+        'def hirom_to_file_offset',
+        'def file_offset_to_snes',
+        'def parse_snes_range',
+        'def slice_rom_range',
+    )
+    offenders: list[dict[str, object]] = []
+    for rel in DUPLICATE_HELPER_TARGETS:
+        text = (root / rel).read_text(encoding='utf-8')
+        found = [helper for helper in helper_defs if helper in text]
+        if found:
+            offenders.append({'script': rel, 'duplicate_helpers': found})
+    return (not offenders, {'targets': DUPLICATE_HELPER_TARGETS, 'offenders': offenders})
+
+
 def render_markdown(data: dict[str, object]) -> str:
     lines = [
         '# Toolkit Doctor',
@@ -232,6 +258,9 @@ def main() -> int:
 
     ok, details = branch_state_smoke_check(root)
     add_check(checks, 'branch_state_audit', ok, details)
+
+    ok, details = duplicate_helper_check(root)
+    add_check(checks, 'duplicate_helper_drift', ok, details)
 
     passed = sum(1 for item in checks if item['ok'])
     total = len(checks)

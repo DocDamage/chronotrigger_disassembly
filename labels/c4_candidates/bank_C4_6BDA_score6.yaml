@@ -1,0 +1,31 @@
+# Bank C4 - Score 6 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:6BDA"
+  end: "C4:6BE1"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 8
+  call_count: 1
+  branch_count: 0
+  stackish_count: 1
+  return_count: 1
+  
+features:
+  - "Score 6 function candidate"
+  - "8-byte compact function"
+  - "1 external call"
+  - "Stack manipulation detected"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:6000-7000 region.
+  Score 6 candidate - compact 8-byte function.
+  Stackish operations suggest parameter handling.

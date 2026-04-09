@@ -1,0 +1,17 @@
+{
+  "pass": 1211,
+  "bank": "C3",
+  "start_address": "C3:6334",
+  "end_address": "C3:6345",
+  "label": "ct_c3_6334_function",
+  "target": "C3:6334",
+  "confidence": "high",
+  "reasoning": "Score-6 function with excellent indicators. 18 bytes, very low ASCII ratio (0.167). Single call with return suggests complete function.",
+  "score": 6,
+  "call_count": 1,
+  "return_count": 1,
+  "ascii_ratio": 0.167,
+  "gap_context": "C3:6000-7000 region",
+  "promotion_reason": "Score-6 function. Excellent code indicators, very low ASCII ratio.",
+  "session": "30"
+}

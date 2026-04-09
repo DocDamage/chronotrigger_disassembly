@@ -1,0 +1,26 @@
+# Session 30 Manifest - Pass 1109
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1109
+
+target:
+  bank: "C1"
+  range: "C1:1B06..C1:1B18"
+  label: "ct_c1_1b06_utility_prologue"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 6
+  source: "c1_hub_manifests.py"
+  promotion_reason: "Score-6 candidate. LDA# F0 prologue. Clean entry point for utility hub. Initiali..."
+  associated_hub: "C1:1B55"
+
+promotion_reason: |
+  Score-6 candidate. LDA# F0 prologue. Clean entry point for utility hub. Initialization function.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

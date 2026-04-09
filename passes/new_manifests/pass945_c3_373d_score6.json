@@ -1,0 +1,22 @@
+{
+  "pass": 945,
+  "range": "C3:373D..C3:374E",
+  "label": "ct_c3_373d_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:3000-4000 scan. Clean code island with call, branch, and return. Session 26.",
+  "scan": {
+    "score": 6,
+    "width": 17,
+    "call_count": 1,
+    "branch_count": 1,
+    "stackish_count": 0,
+    "return_count": 1,
+    "first_return_address": "C3:374D",
+    "ascii_ratio": 0.176,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

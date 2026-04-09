@@ -1,0 +1,26 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 26 Pass 3 - Final push to 22% coverage target
+
+range:
+  start: "C0:0240"
+  end: "C0:024B"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 12
+  
+features:
+  start_byte: "20"
+  start_class: "clean_start"
+  target: "C0:024C"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score-6 candidate from c0_all_score6_candidates_v2.json.
+  Near existing coverage at C0:0233.
+  Part of Session 26 final push to 22% coverage target.
+  Estimated contribution: ~12 bytes.

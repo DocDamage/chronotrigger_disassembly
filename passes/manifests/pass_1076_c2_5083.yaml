@@ -1,0 +1,13 @@
+pass: 1076
+address: 025083
+bank: 2
+label: ct_c2_5083_compact
+range: C2:5083-C2:508E
+score: 5
+width: 12
+call_count: 2
+branch_count: 1
+stackish_count: 1
+return_count: 1
+session: 27
+rationale: Score-5 cluster from C2:5000 scan. 12 bytes with 2 calls, 1 branch, 1 stack op. Compact but dense subroutine in sparsely populated 5000-5100 region.

@@ -1,0 +1,13 @@
+pass: 1056
+address: 02594D
+bank: 2
+label: ct_c2_594d_multi_return
+range: C2:594D-C2:5965
+score: 5
+width: 25
+call_count: 4
+branch_count: 1
+stackish_count: 1
+return_count: 2
+session: 26
+rationale: Score-5 island from C2:5800-6000 scan. 25 bytes with 2 returns, 4 calls. Multi-exit subroutine with branch-fed control flow.

@@ -1,0 +1,30 @@
+# Bank C2 - Score 7 Function Candidate
+# Session 22 - C2:A000-B000 scan
+
+range:
+  start: "C2:AB24"
+  end: "C2:AB3A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 23
+  
+features:
+  calls: 1
+  branches: 3
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.13
+  first_return: "C2:AB3A"
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Score 7 candidate in AB00 region (AB24-AB3A).
+  Low ASCII ratio (0.13) strongly indicates code.
+  Multiple branches suggest conditional processing.
+  Positioned in dense code cluster region.
+  Related to settlement service helpers in B716 area.

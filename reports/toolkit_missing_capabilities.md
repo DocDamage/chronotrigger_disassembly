@@ -14,6 +14,7 @@ This file exists so friction turns into concrete upgrades instead of being forgo
 - compatibility entrypoints that forward old workflow commands to maintained implementations
 - repo-native `tools/scripts/toolkit_doctor.py` health audit
 - mixed manifest-schema compatibility across audit, packaging, and checker scripts
+- shared-helper consolidation across active analysis scripts plus duplicate-helper drift detection
 
 ## Still incomplete / future work
 - real byte parser integration instead of config-first stubs

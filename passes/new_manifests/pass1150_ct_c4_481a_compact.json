@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1150,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:481A",
+      "mode": "known_code",
+      "label": "ct_c4_481a_compact",
+      "reason": "Score-5, 1 call 1 branch. Compact function."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 7
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1125,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:7F8F",
+      "mode": "known_code",
+      "label": "ct_c4_7f8f_branch_heavy",
+      "reason": "Score-5, 6 branches. Branch-heavy handler."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 25
+    }
+  }
+}

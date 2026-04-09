@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 29
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:1C3E"
+  end_addr: "C1:1C66"
+  name: "ct_c1_1c3e_score8_s29"
+  type: "cluster"
+
+evidence:
+  score: 8
+  scan_width: 40
+  region: "C1:1000-2FFF"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-8 candidate in 1000-2FFF region. Cluster."
+      confidence: high
+
+provenance:
+  source: "Session 29 analysis"
+  pass_number: 1016
+  selection_reason: "Score-8 candidate from hub_analysis."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

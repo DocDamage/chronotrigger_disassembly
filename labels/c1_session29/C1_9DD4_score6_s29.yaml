@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 29
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:9DD4"
+  end_addr: "C1:9DE0"
+  name: "ct_c1_9dd4_score6_s29"
+  type: "subroutine"
+
+evidence:
+  score: 6
+  scan_width: 12
+  region: "C1:9000-AFFF"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-6 candidate in 9000-AFFF region. Subroutine."
+      confidence: medium
+
+provenance:
+  source: "Session 29 analysis"
+  pass_number: 1014
+  selection_reason: "Score-6 candidate from hub_analysis."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

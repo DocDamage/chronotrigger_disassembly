@@ -1,0 +1,27 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 26 Pass 5 - Final push to 22% coverage target
+
+range:
+  start: "C0:0C7C"
+  end: "C0:0C8A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 15
+  
+features:
+  start_byte: "20"
+  start_class: "clean_start"
+  target: "C0:0C8B"
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Score-7 candidate from c0_all_score6_candidates_v2.json.
+  HIGH CONFIDENCE candidate near C0:0C81.
+  Part of Session 26 final push to 22% coverage target.
+  Estimated contribution: ~15 bytes.
+  Target reached: 22% coverage!

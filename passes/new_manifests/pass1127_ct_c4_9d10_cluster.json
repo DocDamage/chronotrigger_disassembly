@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1127,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:9D10",
+      "mode": "known_code",
+      "label": "ct_c4_9d10_cluster",
+      "reason": "Score-6 cluster at 9DE6 region. Strong candidate."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 27
+    }
+  }
+}

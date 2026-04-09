@@ -2,11 +2,12 @@
   "pass_number": 1002,
   "closed_ranges": [
     {
-      "range": "C3:A8BA..C3:A8D3",
+      "range": "C0:38B3..C0:38E7",
       "kind": "owner",
-      "label": "ct_c3_a8ba_jsr_entry",
+      "label": "ct_c0_38b3_sprite_handler_score8_cluster",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, JSR entry pattern. C3:A000-AFFF region. Target: C3:A8BB, 6 branch feeders."
+  "session": 21,
+  "promotion_reason": "Score-8 cluster, 3 children, 5 calls, 2 branches, 3 returns. 53 bytes. Sprite-related handler. Session 21."
 }

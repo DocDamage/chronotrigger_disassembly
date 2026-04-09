@@ -1,0 +1,16 @@
+{
+  "pass": 1213,
+  "bank": "C3",
+  "start_address": "C3:74F5",
+  "end_address": "C3:7508",
+  "label": "ct_c3_74f5_function",
+  "target": "C3:74F5",
+  "confidence": "medium",
+  "reasoning": "Score-5 function with balanced indicators. 20 bytes with 2 stackish operations suggesting register preservation. Single call and return.",
+  "score": 5,
+  "call_count": 1,
+  "return_count": 1,
+  "gap_context": "C3:7000-8000 region (currently ~9% coverage)",
+  "promotion_reason": "Score-5 function in underexplored 7000-8000 region. 20 bytes, stack preservation pattern.",
+  "session": "30"
+}

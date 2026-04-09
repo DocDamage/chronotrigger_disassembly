@@ -1,0 +1,45 @@
+# Bank C4 - Score 6 Function Candidate (SESSION 25)
+# C4:3F45-3F52 - Alternate variant of 3F45 cluster
+
+range:
+  start: "C4:3F45"
+  end: "C4:3F52"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 6
+  width: 14
+
+features:
+  - "Score 6 candidate"
+  - "1 call, 2 branches, 1 return"
+  - "Variant of 3F45 supercluster"
+  
+stats:
+  calls: 1
+  branches: 2
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.214
+
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  Candidate in C4:3000-4000 region (near 3F boundary).
+  This is a child variant of the 3F45-3F54 cluster.
+  
+  Features:
+  - 1 call
+  - 2 branches
+  - 1 return
+  - ASCII ratio 0.214 (strongly suggests code)
+  
+  Shorter 14-byte variant of the main 3F45 function.
+  May be an alternate entry point.
+  
+  Part of C4:3000-4000 gap exploration.

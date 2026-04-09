@@ -1,0 +1,36 @@
+# Bank C4 - Score 4 Call-Heavy Function Candidate
+# Session 23 - C4:5000-6000 Region Deep Scan
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:5AF2"
+  end: "C4:5B03"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 4
+  width: 18
+  call_count: 3
+  branch_count: 4
+  stackish_count: 0
+  return_count: 1
+  
+features:
+  - "Score 4 call-heavy function"
+  - "18-byte width"
+  - "3 external calls - high activity"
+  - "4 branches indicates complex control flow"
+  - "Likely a coordinator/dispatcher function"
+  
+confidence: 4
+status: "candidate"
+verified: false
+
+data_misread_flags:
+  - "sed_decimal_mode_at_06"
+
+notes: |
+  Located in C4:5400-6000 region.
+  HIGH PRIORITY: 3 calls + 4 branches.
+  Likely an important utility or dispatcher.
+  Note: Uses SED (decimal mode) - rare operation.

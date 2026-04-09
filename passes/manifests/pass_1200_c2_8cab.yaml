@@ -1,0 +1,13 @@
+pass: 1200
+address: 028CAB
+bank: 2
+label: ct_c2_8cab_handler_s30
+range: C2:8CAB-C2:8D11
+score: 9
+width: 102
+call_count: 7
+branch_count: 5
+stackish_count: 2
+return_count: 1
+session: 30
+rationale: Score-9 function in 8C00-9000 region. 102 bytes, 7 internal calls. High-value handler.

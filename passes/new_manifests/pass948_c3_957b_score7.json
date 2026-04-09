@@ -1,0 +1,22 @@
+{
+  "pass": 948,
+  "range": "C3:957B..C3:9589",
+  "label": "ct_c3_957b_score7",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-7 candidate from C3:9000-A000 scan. Clean function entry with call, branch, stackish op, and return. Session 26.",
+  "scan": {
+    "score": 7,
+    "width": 14,
+    "call_count": 1,
+    "branch_count": 1,
+    "stackish_count": 1,
+    "return_count": 1,
+    "first_return_address": "C3:9588",
+    "ascii_ratio": 0.286,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

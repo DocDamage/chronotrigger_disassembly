@@ -1,0 +1,13 @@
+pass: 1084
+address: 022DDA
+bank: 2
+label: ct_c2_2dda_mid_handler
+range: C2:2DDA-C2:2DE9
+score: 7
+width: 16
+call_count: 1
+branch_count: 2
+stackish_count: 0
+return_count: 1
+session: 28
+rationale: Score-7 island from C2:2000-3000 region. 16 bytes with clean entry/exit pattern. Exported function called from other banks.

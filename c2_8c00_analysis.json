@@ -1,0 +1,90 @@
+{
+  "page_stats": [
+    {
+      "addr": 35840,
+      "prologues": 31,
+      "epilogues": 13,
+      "jsr": 7,
+      "jsl": 2,
+      "status": "CODE"
+    },
+    {
+      "addr": 36096,
+      "prologues": 33,
+      "epilogues": 8,
+      "jsr": 7,
+      "jsl": 1,
+      "status": "CODE"
+    },
+    {
+      "addr": 36352,
+      "prologues": 36,
+      "epilogues": 14,
+      "jsr": 12,
+      "jsl": 2,
+      "status": "CODE"
+    },
+    {
+      "addr": 36608,
+      "prologues": 41,
+      "epilogues": 8,
+      "jsr": 16,
+      "jsl": 2,
+      "status": "CODE"
+    }
+  ],
+  "gaps": [
+    {
+      "start": 35840,
+      "end": 36011,
+      "size": 171
+    },
+    {
+      "start": 36113,
+      "end": 36231,
+      "size": 118
+    },
+    {
+      "start": 36314,
+      "end": 36542,
+      "size": 228
+    },
+    {
+      "start": 36857,
+      "end": 36864,
+      "size": 7
+    }
+  ],
+  "known_functions": [
+    {
+      "start": 36011,
+      "end": 36113,
+      "name": "C2:8CAB Score-9 Hub",
+      "score": 9
+    },
+    {
+      "start": 36231,
+      "end": 36314,
+      "name": "C2:8D87 Score-9 Hub",
+      "score": 9
+    },
+    {
+      "start": 36542,
+      "end": 36656,
+      "name": "C2:8EBE Score-9 Hub",
+      "score": 9
+    },
+    {
+      "start": 36656,
+      "end": 36750,
+      "name": "C2:8F30 Score-9 Hub",
+      "score": 9
+    },
+    {
+      "start": 36750,
+      "end": 36857,
+      "name": "C2:8F8E Score-9 Hub",
+      "score": 9
+    }
+  ]
+}

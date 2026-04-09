@@ -1,0 +1,28 @@
+{
+  "pass": 1012,
+  "bank": "C3",
+  "label": "ct_c3_164a_branch_dispatcher",
+  "address": "C3:164A",
+  "range": "C3:164A..C3:1658",
+  "bytes": 15,
+  "category": "code",
+  "confidence": 5,
+  "reasoning": [
+    "Cluster score 5 - solid dispatcher pattern",
+    "2 call references, 2 branches, 2 returns",
+    "15-byte dual-entry branch dispatcher",
+    "ASCII ratio 0.4 - moderate but acceptable",
+    "2 child islands merged indicating coherent structure"
+  ],
+  "findings": {
+    "calls": 2,
+    "branches": 2,
+    "stack_ops": 0,
+    "returns": 2,
+    "first_return": "C3:1654"
+  },
+  "flags": [],
+  "related": ["C3:164A", "C3:1654", "C3:1658"],
+  "session": 20,
+  "status": "closed"
+}

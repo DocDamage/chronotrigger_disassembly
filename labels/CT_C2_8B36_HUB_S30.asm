@@ -1,0 +1,20 @@
+; C2:8B36-C2:8CA7 - ct_c2_8b36_complex_s30
+; Score: 7
+; Size: 369 bytes
+; Session: 30
+;
+; C2:8000-9000 hub region expansion
+; 15 internal calls
+;
+; Characteristics:
+; - Part of 8000-region service network
+; - Strong function boundaries
+; - Call-rich handler
+
+ct_c2_8b36_complex_s30:
+    ; Function entry point
+    .addr $8B36
+
+ct_c2_8b36_complex_s30_end:
+    ; Function boundary end
+    .addr $8CA6

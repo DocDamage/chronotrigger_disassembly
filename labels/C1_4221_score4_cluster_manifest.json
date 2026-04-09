@@ -1,0 +1,18 @@
+{
+  "pass": 1043,
+  "bank": "C1",
+  "session": 23,
+  "range": "C1:4221..C1:4239",
+  "score": 4,
+  "width": 25,
+  "call_count": 0,
+  "branch_count": 5,
+  "stackish_count": 0,
+  "return_count": 1,
+  "ascii_ratio": 0.12,
+  "source": "C1:4200-4300_mega_cluster_context",
+  "reason": "Score-4 cluster with 5 branches, return. Embedded within C1:4212-431A data region - may be data or tightly packed code.",
+  "related_to": "C1:4212_gap",
+  "note": "Located within C1:4212-431A gap. Byte patterns suggest this may be data misread as code, or specialized dispatch logic.",
+  "timestamp": "2026-04-08T15:30:00-04:00"
+}

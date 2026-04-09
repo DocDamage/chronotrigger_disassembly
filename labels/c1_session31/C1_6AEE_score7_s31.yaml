@@ -1,0 +1,27 @@
+# Pass 1206: C1:6AEE Score-7 Subroutine (Session 31 - Final Batch)
+bank: C1
+address: 0x6AEE
+range: C1:6AEE..C1:6B07
+label: ct_c1_6aee_score7_handler_s31
+score: 7
+width: 25
+type: subroutine
+region: 6000-7FFF
+description: |
+  Score-7 subroutine in C1:6A00-6B00 region.
+  PHP prologue, RTS exit.
+  Part of 6000-7FFF function cluster.
+  
+properties:
+  entry_pattern: PHP
+  exit_pattern: RTS
+  call_count: 0
+  branch_count: 2
+  
+promotion_reason: |
+  Score-7 candidate, 25 bytes.
+  Strong function boundaries.
+  Gap filler for 6000-7FFF region.
+  
+session: 31
+created: 2026-04-08

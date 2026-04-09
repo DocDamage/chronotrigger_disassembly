@@ -1,0 +1,27 @@
+# Bank C0 - Score 4 Function Candidate
+# Session 24 Pass 1508 - Final push to 21%
+
+range:
+  start: "C0:7F3E"
+  end: "C0:7F56"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 4
+  width: 25
+  
+features:
+  calls: 1
+  branches: 3
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.4
+  
+confidence: 4
+status: "candidate"
+verified: false
+
+notes: |
+  Score-4 candidate from full C0 bank scan.
+  Calls: 1, Branches: 3, Returns: 1
+  Part of Session 24 final push to reach 21% coverage target.

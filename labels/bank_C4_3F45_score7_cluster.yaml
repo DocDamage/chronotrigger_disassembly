@@ -1,0 +1,51 @@
+# Bank C4 - Score 7 Cluster (SESSION 25)
+# C4:3F45-3F54 - High scorer in C4:3000-4000 region (near end)
+
+range:
+  start: "C4:3F45"
+  end: "C4:3F54"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 7
+  cluster_score: 7
+  width: 16
+  child_count: 2
+  children:
+    - "C4:3F45-C4:3F52"
+    - "C4:3F45-C4:3F54"
+
+features:
+  - "Score 7 cluster"
+  - "1 call, 3 branches, 2 returns"
+  - "2 overlapping child islands"
+  
+stats:
+  calls: 1
+  branches: 3
+  stackish: 0
+  returns: 2
+  ascii_ratio: 0.25
+
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  High-scoring cluster in C4:3000-4000 region (near 3F boundary).
+  
+  Features:
+  - 1 call indicates callable function
+  - 3 branches suggest conditional logic
+  - 2 returns (multiple exit points)
+  - No stack operations
+  - ASCII ratio 0.25 (strongly suggests code)
+  
+  Located at C4:3F45-3F54, near the end of the gap region.
+  This may be a boundary function or utility routine
+  used by code on both sides of the 3000-4000 gap.
+  
+  Part of C4:3000-4000 gap exploration.

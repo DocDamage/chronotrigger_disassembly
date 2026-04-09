@@ -1,0 +1,18 @@
+{
+  "pass": 1033,
+  "label": "CT_C0_E682_EngineInit_Score6",
+  "address": "C0:E682",
+  "snes_address": "$C0$E682",
+  "score": 6,
+  "description": "Engine initialization with REP prologue (E000 region)",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "C2",
+    "pattern": "REP_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

@@ -1,0 +1,22 @@
+{
+  "pass": 943,
+  "range": "C3:2CF8..C3:2D0A",
+  "label": "ct_c3_2cf8_score7",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-7 candidate from C3:2000-3000 scan. High-confidence code island with calls, branches, stackish operations, and returns. Session 26.",
+  "scan": {
+    "score": 7,
+    "width": 18,
+    "call_count": 1,
+    "branch_count": 1,
+    "stackish_count": 2,
+    "return_count": 1,
+    "first_return_address": "C3:2D09",
+    "ascii_ratio": 0.222,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

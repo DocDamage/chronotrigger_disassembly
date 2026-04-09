@@ -1,0 +1,16 @@
+{
+  "pass": 1207,
+  "bank": "C3",
+  "start_address": "C3:3B8E",
+  "end_address": "C3:3BA1",
+  "label": "ct_c3_3b8e_function",
+  "target": "C3:3B8E",
+  "confidence": "medium",
+  "reasoning": "Score-5 function with 2 calls and balanced indicators. 20-byte compact function. Multiple calls indicate active usage.",
+  "score": 5,
+  "call_count": 2,
+  "return_count": 1,
+  "gap_context": "C3:3000-4000 region",
+  "promotion_reason": "Score-5 function. 2 external calls, 20 bytes. Active usage confirmed.",
+  "session": "30"
+}

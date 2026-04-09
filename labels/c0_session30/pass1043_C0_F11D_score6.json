@@ -1,0 +1,19 @@
+{
+  "pass": 1043,
+  "label": "CT_C0_F11D_HDMAConfig_Score6",
+  "address": "C0:F11D",
+  "snes_address": "$C0$F11D",
+  "score": 6,
+  "description": "HDMA configuration function with LDX# prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 40,
+  "region": "F000-FFFF",
+  "features": {
+    "start_byte": "A2",
+    "pattern": "LDX_prologue",
+    "category": "hdma"
+  },
+  "session": 30,
+  "connected_to": ["C0:F0B9"]
+}

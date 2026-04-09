@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 28
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:F120"
+  end_addr: "C1:F138"
+  name: "ct_c1_f120_handler_s28"
+  type: "subroutine"
+
+evidence:
+  score: 6
+  scan_width: 24
+  region: "C1:E000-F000"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-6 candidate in E000-F000 region. Near end of bank."
+      confidence: high
+
+provenance:
+  source: "Session 28 targeted analysis"
+  pass_number: 600
+  selection_reason: "Score-6 candidate in E000-F000 region. Near end of bank."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

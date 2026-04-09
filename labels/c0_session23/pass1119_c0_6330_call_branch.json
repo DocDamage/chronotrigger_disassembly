@@ -1,0 +1,22 @@
+{
+  "pass": 1119,
+  "label": "CT_C0_6330_Call_Branch",
+  "address": "C0:6330",
+  "snes_address": "$C06330",
+  "score": 6,
+  "description": "Call-branch function with 2 calls, 3 branches",
+  "type": "function",
+  "size": 25,
+  "status": "mapped",
+  "region": "60AC-6EF8 gap",
+  "scan_data": {
+    "width": 25,
+    "call_count": 2,
+    "branch_count": 3,
+    "return_count": 1,
+    "ascii_ratio": 0.24,
+    "cluster_score": 6
+  },
+  "session": 23,
+  "created": "2026-04-08T15:14:44"
+}

@@ -1,0 +1,24 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1173 - Generated for 21% coverage push
+
+range:
+  start: "C0:B8C5"
+  end: "C0:B8DE"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  start_byte: "4B"
+  start_class: "clean_start"
+  target: "C0:B8CA"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score-6 candidate from c0_all_score6_candidates_v2.json.
+  Part of Session 24 push toward 21% coverage target.

@@ -1,0 +1,19 @@
+{
+  "pass": 1044,
+  "label": "CT_C0_F198_HDMACtrl_Score6",
+  "address": "C0:F198",
+  "snes_address": "$C0$F198",
+  "score": 6,
+  "description": "HDMA control function with LDX# prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 40,
+  "region": "F000-FFFF",
+  "features": {
+    "start_byte": "A2",
+    "pattern": "LDX_prologue",
+    "category": "hdma"
+  },
+  "session": 30,
+  "connected_to": ["C0:F11D"]
+}

@@ -1,0 +1,18 @@
+{
+  "pass": 1017,
+  "label": "CT_C0_82FF_MusicControl_Score6",
+  "address": "C0:82FF",
+  "snes_address": "$C0$82FF",
+  "score": 6,
+  "description": "Music control and sequencing function",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "8000-C000",
+  "features": {
+    "start_byte": "20",
+    "category": "audio"
+  },
+  "session": 30,
+  "connected_to": ["C0:82E5"]
+}

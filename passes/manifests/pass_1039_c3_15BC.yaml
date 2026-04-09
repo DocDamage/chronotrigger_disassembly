@@ -1,0 +1,13 @@
+pass: 1039
+address: 0395BC
+bank: 3
+label: ct_c3_15bc_handler
+range: C3:15BC-C3:15DC
+score: 6
+width: 33
+call_count: 1
+branch_count: 5
+stackish_count: 2
+return_count: 2
+session: 21
+rationale: Score 6 cluster from C3:1300-1816 open lane scan. 33 bytes, 5 branches, 2 returns. Handler function in partially mapped region.

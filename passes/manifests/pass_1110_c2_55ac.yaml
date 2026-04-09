@@ -1,0 +1,13 @@
+pass: 1110
+address: 0255AC
+bank: 2
+label: ct_c2_55ac_mode_handler_s29
+range: C2:55AC-C2:562D
+score: 6
+width: 130
+call_count: 3
+branch_count: 4
+stackish_count: 2
+return_count: 1
+session: 29
+rationale: C2:5000-6000 region - Score-6 with REP/SEP mode switching. Complex handler with multiple branch targets.

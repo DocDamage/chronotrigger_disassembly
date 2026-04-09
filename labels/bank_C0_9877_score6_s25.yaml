@@ -1,0 +1,28 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 25 - Generated for 22% coverage push
+
+range:
+  start: "C0:9877"
+  end: "C0:9890"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  start_byte: "??"
+  start_class: "island"
+  target: ""
+  call_count: 1
+  branch_count: 3
+  return_count: 1
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score-6 candidate from C0:9000-A000 scan.
+  3 branches with 1 call - structured function pattern.
+  Part of Session 25 push toward 22% coverage target.

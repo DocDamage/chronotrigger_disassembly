@@ -1,0 +1,13 @@
+pass: 1080
+address: 025160
+bank: 2
+label: ct_c2_5160_rich_subroutine
+range: C2:5160-C2:5173
+score: 5
+width: 20
+call_count: 5
+branch_count: 3
+stackish_count: 0
+return_count: 1
+session: 27
+rationale: Score-4 cluster (elevated to 5) from C2:5100 scan. 20 bytes with 5 calls, 3 branches. Exceptionally rich call density in mixed-command-data region. Cross-bank callers from C2:D158, C2:E074.

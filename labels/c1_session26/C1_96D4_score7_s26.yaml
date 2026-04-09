@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 26,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:96D4",
+    "end_addr": "C1:9727",
+    "name": "ct_c1_96d4_dispatch_handler_s26"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 1,
+    "branch_count": 5,
+    "return_count": 1,
+    "width": 83,
+    "region": "9000-A000",
+    "selection_reason": "Large dispatch handler. Multiple internal branches, good structure."
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

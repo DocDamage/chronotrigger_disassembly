@@ -1,0 +1,14 @@
+{
+  "pass": 1201,
+  "bank": "C3",
+  "start_address": "C3:058B",
+  "end_address": "C3:05AF",
+  "label": "ct_c3_058b_phd_handler",
+  "target": "C3:058B",
+  "confidence": "high",
+  "reasoning": "Score-6 PHD prologue handler. Direct page register preservation pattern. Gap fill for C3:0529-08A0 region.",
+  "score": 6,
+  "gap_context": "C3:0529-08A0 early gap",
+  "promotion_reason": "Score-6 PHD handler. Stack preservation pattern with high confidence.",
+  "session": "30"
+}

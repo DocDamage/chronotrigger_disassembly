@@ -1,0 +1,35 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 28
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:928A"
+  end_addr: "C1:92A2"
+  name: "ct_c1_928a_dispatch_handler_s28"
+  type: "dispatch_handler"
+
+evidence:
+  score: 6
+  scan_width: 25
+  region: "C1:9000-A000"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-6 dispatch handler. BEQ branch guard pattern. Linked to 8C3E hub."
+      confidence: high
+
+references:
+  called_from: "C1:9298"
+  hub_function: "C1:8C3E"
+
+provenance:
+  source: "Session 28 targeted analysis"
+  pass_number: 595
+  selection_reason: "Score-6 dispatch handler. BEQ branch guard pattern. Linked to 8C3E hub."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

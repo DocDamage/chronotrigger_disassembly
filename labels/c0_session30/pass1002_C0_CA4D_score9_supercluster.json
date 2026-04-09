@@ -1,0 +1,20 @@
+{
+  "pass": 1002,
+  "label": "CT_C0_CA4D_MajorFunction_Score9",
+  "address": "C0:CA4D",
+  "snes_address": "$C0$CA4D",
+  "score": 9,
+  "description": "HIGHEST SCORE in B000-FFFF region - Major system function with 6 branches, 5 returns",
+  "type": "function",
+  "status": "verified",
+  "size": 47,
+  "region": "C000-CFFF",
+  "features": {
+    "calls": 0,
+    "branches": 6,
+    "returns": 5
+  },
+  "session": 30,
+  "priority": "critical",
+  "connected_to": ["C0:CABD", "C0:CAC0"]
+}

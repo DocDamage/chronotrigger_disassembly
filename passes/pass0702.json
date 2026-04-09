@@ -1,0 +1,30 @@
+{
+  "pass_number": 702,
+  "closed_ranges": [
+    {
+      "range": "C1:432C..C1:4349",
+      "kind": "owner",
+      "label": "ct_c1_432c_dispatch_trampoline",
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "score": 6,
+    "width": 29,
+    "instructions": [
+      "LDA $AE91",
+      "CMP #$03",
+      "BCC +3",
+      "JMP $4497",
+      "JSL $CC:F110",
+      "JSR $49FF",
+      "LDA $AE91",
+      "TAX",
+      "LDA $CC:F83F,X",
+      "TAX",
+      "LDA $1C48,X"
+    ],
+    "type": "dispatch_trampoline"
+  },
+  "promotion_reason": "DISPATCH TRAMPOLINE: 29 bytes. Validates index, calls JSL to bank CC, loads function pointer from table at CC:F83F. Critical gap-filling code between entry and mega-cluster."
+}

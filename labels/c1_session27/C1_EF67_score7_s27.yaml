@@ -1,0 +1,33 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 27
+  author: "Kimi Code CLI"
+  
+target:
+  bank: "C1"
+  address: "C1:EF67"
+  name: "ct_c1_ef67_handler_s27"
+  type: "subroutine"
+  
+evidence:
+  score: 7
+  scan_width: 25
+  region: "C1:E000-F000"
+  features:
+    - type: "instruction_pattern"
+      description: "High-confidence code island in EF00 range"
+      confidence: high
+    - type: "call_pattern"
+      description: "2 calls, 2 branches"
+      confidence: high
+  
+provenance:
+  source: "Session 27 candidate selection"
+  previous_session: "C1_SESSION25/26"
+  selection_reason: "Score-7 candidate in E000-F000 region, extends E-region coverage beyond E99F/E9BC/EDA0"
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

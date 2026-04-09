@@ -1,0 +1,55 @@
+# Bank C3 - Score 5 Function (SESSION 23)
+# C3:4A5E-4A77 - High-traffic handler
+
+range:
+  start: "C3:4A5E"
+  end: "C3:4A77"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 5
+  cluster_score: 5
+  width: 26
+  child_count: 4
+  children:
+    - "C3:4A5E-C3:4A6A"
+    - "C3:4A5E-C3:4A70"
+    - "C3:4A5E-C3:4A73"
+    - "C3:4A5F-C3:4A77"
+
+features:
+  - "Score 5 cluster"
+  - "4 calls (high traffic)"
+  - "4 child variants"
+  - "Near C3:4A2A supercluster"
+  
+stats:
+  calls: 4
+  branches: 2
+  stackish: 0
+  returns: 5
+  ascii_ratio: 0.423
+
+confidence: 5
+status: "candidate"
+verified: false
+priority: "medium"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:4800-5000 region
+  
+  Score 5 function near the C3:4A2A supercluster.
+  4 calls indicate this is a frequently-used handler.
+  
+  Features:
+  - 26 bytes, 4 entry variants
+  - 4 calls = high-traffic function
+  - 5 returns, 2 branches
+  - RTI/RTS proximity flag (possible dispatch)
+  
+  Likely works with the nearby C3:4A2A supercluster as
+  part of the dispatch architecture.
+  
+  RECOMMENDATION: Disassemble and cross-reference with
+  C3:4A2A supercluster callers.

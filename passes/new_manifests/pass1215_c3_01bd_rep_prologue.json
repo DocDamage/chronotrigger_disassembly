@@ -1,0 +1,14 @@
+{
+  "pass": 1215,
+  "bank": "C3",
+  "start_address": "C3:01BD",
+  "end_address": "C3:01E3",
+  "label": "ct_c3_01bd_rep_prologue",
+  "target": "C3:01BD",
+  "confidence": "high",
+  "reasoning": "Score-6 REP prologue handler. Processor status setup with 16-bit mode initialization. Bank start region candidate.",
+  "score": 6,
+  "gap_context": "C3:0000-01E3 bank start gap",
+  "promotion_reason": "Score-6 REP prologue. 16-bit mode initialization pattern.",
+  "session": "30"
+}

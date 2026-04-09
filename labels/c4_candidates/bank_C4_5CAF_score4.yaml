@@ -1,0 +1,31 @@
+# Bank C4 - Score 4 Function Candidate
+# Session 23 - C4:5000-6000 Region Deep Scan
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:5CAF"
+  end: "C4:5CB4"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 4
+  width: 6
+  call_count: 1
+  branch_count: 1
+  stackish_count: 0
+  return_count: 1
+  
+features:
+  - "Score 4 compact function"
+  - "6-byte minimal width"
+  - "1 call suggests utility wrapper"
+  - "1 branch for conditional logic"
+  
+confidence: 4
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5400-6000 region.
+  Minimal 6-byte function with call and branch.
+  Likely a simple wrapper or conditional caller.

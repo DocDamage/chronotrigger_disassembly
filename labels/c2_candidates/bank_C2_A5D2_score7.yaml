@@ -1,0 +1,30 @@
+# Bank C2 - Score 7 Function Candidate
+# Session 22 - C2:A000-B000 scan
+
+range:
+  start: "C2:A5D2"
+  end: "C2:A5E6"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 21
+  
+features:
+  calls: 2
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.238
+  first_return: "C2:A5E6"
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Score 7 candidate in A500 region (A5D2-A5E6).
+  Compact function (21 bytes) with 2 internal calls.
+  Low ASCII ratio suggests code.
+  May be a small utility or helper function.
+  Positioned between A4FF and A6D7 clusters.

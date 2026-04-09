@@ -1,0 +1,18 @@
+{
+  "pass": 1016,
+  "label": "CT_C0_82E5_SoundEngine_Score6",
+  "address": "C0:82E5",
+  "snes_address": "$C0$82E5",
+  "score": 6,
+  "description": "Sound engine core function",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "8000-C000",
+  "features": {
+    "start_byte": "20",
+    "category": "audio"
+  },
+  "session": 30,
+  "connected_to": ["C0:82C5"]
+}

@@ -1,0 +1,20 @@
+{
+  "pass_number": 1004,
+  "bank": "C3",
+  "start_address": "C3:E4EF",
+  "end_address": "C3:E508",
+  "label": "ct_c3_e4ef_jsl_entry",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:E4F8",
+  "prologue_byte": "22",
+  "prologue_mnemonic": "JSL",
+  "backtrack_distance": 9,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:E400 region. JSL long call prologue, 26 bytes.",
+  "notes": [
+    "26-byte function with JSL long call",
+    "Cross-bank call capability"
+  ]
+}

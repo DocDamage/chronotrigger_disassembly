@@ -1,0 +1,13 @@
+pass: 1091
+address: 02925C
+bank: 2
+label: ct_c2_925c_jsr_target
+range: C2:925C-C2:926D
+score: 6
+width: 18
+call_count: 3
+branch_count: 1
+stackish_count: 0
+return_count: 1
+session: 28
+rationale: Score-6 routine from C2:9000-A000 region. 18 bytes with 3 calls. JSR-targeted subroutine with clean prologue.

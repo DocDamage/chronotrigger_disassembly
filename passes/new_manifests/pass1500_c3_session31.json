@@ -1,0 +1,19 @@
+{
+  "pass": 1500,
+  "range": "C3:0C50..C3:0C6A",
+  "label": "ct_c3_0c50_handler_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:0878-1300 gap. PHP prologue handler, 27 bytes, session 31 final push.",
+  "scan": {
+    "score": 6,
+    "width": 27,
+    "call_count": 1,
+    "branch_count": 2,
+    "stackish_count": 2,
+    "return_count": 1,
+    "first_return_address": "C3:0C69",
+    "ascii_ratio": 0.15,
+    "zero_ff_ratio": 0.0
+  }
+}

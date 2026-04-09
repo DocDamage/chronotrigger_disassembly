@@ -3,14 +3,14 @@
   "label": "CT_C1_434A_MEGA_CLUSTER",
   "addr": "C1:434A",
   "range": "C1:434A..C1:43B7",
-  "score": 6,
+  "score": 7,
   "cluster_score": 17,
   "type": "cluster",
   "bank": "C1",
   "width": 110,
   "child_count": 11,
-  "confidence": "high",
-  "evidence": "Mega cluster with cluster_score 17 - 11 child islands merged, 4 calls, 7 branches",
+  "confidence": 7,
+  "evidence": "MEGA CLUSTER score 17 - HIGHEST in Bank C1: 11 child islands merged, 4 calls, 7 branches, 11 returns, ASCII ratio 0.282",
   "child_ranges": [
     "C1:434A..C1:4362",
     "C1:4351..C1:4369",
@@ -32,5 +32,7 @@
     "ascii_ratio": 0.28,
     "data_misread_flags": []
   },
-  "note": "MAJOR FIND: 110-byte mega cluster in C1:4000 range - likely multi-function zone or complex dispatch table"
+  "note": "PRIORITY TARGET: 110-byte mega cluster in C1:4000 range - highest scoring cluster in Bank C1. Likely multi-function zone, complex dispatch table, or jump table region. 11 child islands indicate overlapping function candidates or extensive branching logic. Adjacent to C1:43C6 secondary cluster (score 10).",
+  "category": "code",
+  "kind": "owner"
 }

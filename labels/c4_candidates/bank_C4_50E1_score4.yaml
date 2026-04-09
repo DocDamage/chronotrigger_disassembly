@@ -1,0 +1,31 @@
+# Bank C4 - Score 4 Function Candidate
+# Session 23 - C4:5000-6000 Region Deep Scan
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:50E1"
+  end: "C4:50E8"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 4
+  width: 8
+  call_count: 0
+  branch_count: 1
+  stackish_count: 0
+  return_count: 1
+  
+features:
+  - "Score 4 compact function"
+  - "8-byte width"
+  - "1 branch indicates conditional logic"
+  - "Clean return point"
+  
+confidence: 4
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5000-6000 hot zone region.
+  Part of cluster with 50E1-50EB variant.
+  Near score-7 candidate at 5025.

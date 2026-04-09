@@ -1,0 +1,13 @@
+pass: 1205
+address: 0281A2
+bank: 2
+label: ct_c2_81a2_interrupt_s30
+range: C2:81A2-C2:81EF
+score: 7
+width: 77
+call_count: 9
+branch_count: 6
+stackish_count: 2
+return_count: 1
+session: 30
+rationale: Score-7 interrupt handler. 77 bytes, 9 calls, RTI return. 8100 region.

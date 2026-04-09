@@ -1,0 +1,17 @@
+{
+  "pass": 1031,
+  "label": "CT_C0_D3A5_DataProc_Score6",
+  "address": "C0:D3A5",
+  "snes_address": "$C0$D3A5",
+  "score": 6,
+  "description": "Data processor in D000 region with LDY# prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "D000-DFFF",
+  "features": {
+    "start_byte": "A0"
+  },
+  "session": 30,
+  "connected_to": []
+}

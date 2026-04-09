@@ -1,0 +1,55 @@
+# Bank C4 - Score 8 Cluster (SESSION 25)
+# C4:3901-3914 - High scorer in C4:3000-4000 gap region
+
+range:
+  start: "C4:3901"
+  end: "C4:3914"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 8
+  cluster_score: 8
+  width: 20
+  child_count: 4
+  children:
+    - "C4:3901-C4:390B"
+    - "C4:3901-C4:390C"
+    - "C4:3901-C4:3913"
+    - "C4:3901-C4:3914"
+
+features:
+  - "Score 8 cluster (HIGH in gap region)"
+  - "1 call, 1 branch, 6 returns"
+  - "1 stack operation"
+  - "4 overlapping child islands"
+  
+stats:
+  calls: 1
+  branches: 1
+  stackish: 1
+  returns: 6
+  ascii_ratio: 0.60
+
+confidence: 8
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  High-scoring cluster in C4:3000-4000 gap region.
+  
+  Features:
+  - 1 call indicates callable function
+  - 1 branch (minimal control flow)
+  - 6 returns (many exit points!)
+  - 1 stack operation
+  - ASCII ratio 0.60 (higher than typical code)
+  
+  The high return count with single call suggests this
+  may be a state handler or dispatch table.
+  
+  Part of C4:3000-4000 gap exploration.
+  Multiple overlapping variants suggest this is a
+  frequently-called utility routine.

@@ -1,0 +1,19 @@
+{
+  "pass": 1014,
+  "label": "CT_C0_8260_MusicDriver_Score6",
+  "address": "C0:8260",
+  "snes_address": "$C0$8260",
+  "score": 6,
+  "description": "Music driver function - part of audio system cluster",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "8000-C000",
+  "features": {
+    "start_byte": "20",
+    "pattern": "JSR_prologue",
+    "category": "audio"
+  },
+  "session": 30,
+  "connected_to": ["C0:8206"]
+}

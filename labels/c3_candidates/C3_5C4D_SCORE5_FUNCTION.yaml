@@ -1,0 +1,36 @@
+# Bank C3 - Score 5 Function Candidate (Session 24)
+# Range: C3:5C4D..C3:5C65
+# 25-byte function
+
+candidate:
+  bank: "C3"
+  start: "C3:5C4D"
+  end: "C3:5C65"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  score: 5
+  width: 25
+  
+features:
+  calls: 1
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.56
+
+analysis:
+  type: "function"
+  description: |
+    25-byte score-5 function with balanced indicators.
+    Single call/return suggests complete function.
+    Stackish operation indicates state preservation.
+
+confidence: 5
+status: "candidate"
+verified: false
+coverage_gain: 25
+
+notes: |
+  Score-5 candidate from C3:5000-6000 scan.

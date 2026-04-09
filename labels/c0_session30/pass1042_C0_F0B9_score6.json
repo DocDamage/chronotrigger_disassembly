@@ -1,0 +1,19 @@
+{
+  "pass": 1042,
+  "label": "CT_C0_F0B9_HDMASetup_Score6",
+  "address": "C0:F0B9",
+  "snes_address": "$C0$F0B9",
+  "score": 6,
+  "description": "HDMA setup function with LDX# prologue (F000 region)",
+  "type": "function",
+  "status": "candidate",
+  "size": 40,
+  "region": "F000-FFFF",
+  "features": {
+    "start_byte": "A2",
+    "pattern": "LDX_prologue",
+    "category": "hdma"
+  },
+  "session": 30,
+  "connected_to": []
+}

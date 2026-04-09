@@ -1,0 +1,18 @@
+{
+  "pass": 1023,
+  "label": "CT_C0_B8C5_BankHandler_Score6",
+  "address": "C0:B8C5",
+  "snes_address": "$C0$B8C5",
+  "score": 6,
+  "description": "Cross-bank handler with PHK prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "B000-BFFF",
+  "features": {
+    "start_byte": "4B",
+    "pattern": "PHK_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

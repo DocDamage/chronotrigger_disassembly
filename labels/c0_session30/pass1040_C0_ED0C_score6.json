@@ -1,0 +1,18 @@
+{
+  "pass": 1040,
+  "label": "CT_C0_ED0C_PreExit_Score6",
+  "address": "C0:ED0C",
+  "snes_address": "$C0$ED0C",
+  "score": 6,
+  "description": "Pre-exit handler with REP prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 34,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "C2",
+    "pattern": "REP_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

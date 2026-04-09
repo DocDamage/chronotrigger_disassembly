@@ -1,0 +1,22 @@
+{
+  "pass": 949,
+  "range": "C3:960C..C3:9625",
+  "label": "ct_c3_960c_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:9000-A000 scan. Function with call, multiple branches, and returns. Session 26.",
+  "scan": {
+    "score": 6,
+    "width": 25,
+    "call_count": 1,
+    "branch_count": 3,
+    "stackish_count": 0,
+    "return_count": 2,
+    "first_return_address": "C3:961F",
+    "ascii_ratio": 0.24,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.083
+  },
+  "continues_from": null,
+  "next": null
+}

@@ -1,0 +1,31 @@
+# Bank C4 - Score 5 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:59FE"
+  end: "C4:5A07"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 10
+  call_count: 3
+  branch_count: 1
+  stackish_count: 2
+  return_count: 1
+  
+features:
+  - "Score 5 function candidate"
+  - "10-byte function"
+  - "3 external calls - heavily used"
+  - "High ASCII ratio (0.7)"
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5000-6000 hot zone region.
+  Score 5 candidate with 3 calls - heavily referenced utility.
+  May be a small helper/wrapper function.

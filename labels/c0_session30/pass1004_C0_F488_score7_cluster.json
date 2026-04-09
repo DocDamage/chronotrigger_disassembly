@@ -1,0 +1,19 @@
+{
+  "pass": 1004,
+  "label": "CT_C0_F488_HDMAUtility_Score7",
+  "address": "C0:F488",
+  "snes_address": "$C0$F488",
+  "score": 7,
+  "description": "Score-7 HDMA utility function in F000 region with 3 branches",
+  "type": "function",
+  "status": "verified",
+  "size": 25,
+  "region": "F000-FFFF",
+  "features": {
+    "calls": 1,
+    "branches": 3,
+    "returns": 1
+  },
+  "session": 30,
+  "connected_to": ["C0:F408", "C0:F428", "C0:F448", "C0:F468"]
+}

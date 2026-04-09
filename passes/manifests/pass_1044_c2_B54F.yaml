@@ -1,0 +1,14 @@
+pass: 1044
+address: 02B54F
+bank: 2
+label: ct_c2_b54f_dispatch_routine
+range: C2:B54F-C2:B567
+score: 5
+width: 25
+call_count: 4
+branch_count: 1
+stackish_count: 1
+return_count: 1
+session: 24
+parent_hub: C2:B716
+rationale: Score 5 dispatch routine, 4 calls, rich call site, pipeline stage toward B716 settlement hub

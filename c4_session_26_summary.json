@@ -1,0 +1,92 @@
+{
+  "session": 26,
+  "bank": "C4",
+  "manifest_count": 10,
+  "candidates": [
+    {
+      "addr": "C4:0E7A",
+      "score": 6,
+      "calls": 1,
+      "branches": 0,
+      "width": 25,
+      "region": "0000-3000"
+    },
+    {
+      "addr": "C4:1701",
+      "score": 6,
+      "calls": 1,
+      "branches": 2,
+      "width": 8,
+      "region": "0000-3000"
+    },
+    {
+      "addr": "C4:24F6",
+      "score": 6,
+      "calls": 1,
+      "branches": 0,
+      "width": 8,
+      "region": "0000-3000"
+    },
+    {
+      "addr": "C4:46B7",
+      "score": 6,
+      "calls": 1,
+      "branches": 3,
+      "width": 25,
+      "region": "4000-5000"
+    },
+    {
+      "addr": "C4:607A",
+      "score": 6,
+      "calls": 1,
+      "branches": 1,
+      "width": 12,
+      "region": "6000-7000"
+    },
+    {
+      "addr": "C4:6BDA",
+      "score": 6,
+      "calls": 1,
+      "branches": 0,
+      "width": 8,
+      "region": "6000-7000"
+    },
+    {
+      "addr": "C4:9DE6",
+      "score": 6,
+      "calls": 1,
+      "branches": 1,
+      "width": 17,
+      "region": "8000-C000"
+    },
+    {
+      "addr": "C4:9E50",
+      "score": 6,
+      "calls": 1,
+      "branches": 2,
+      "width": 7,
+      "region": "8000-C000"
+    },
+    {
+      "addr": "C4:C771",
+      "score": 6,
+      "calls": 1,
+      "branches": 1,
+      "width": 12,
+      "region": "C000-FFFF"
+    },
+    {
+      "addr": "C4:DEBB",
+      "score": 5,
+      "calls": 1,
+      "branches": 7,
+      "width": 22,
+      "region": "C000-FFFF"
+    }
+  ],
+  "coverage_estimate": {
+    "bytes_added": 144,
+    "total_c4_bytes": 65536,
+    "coverage_percent": 0.22
+  }
+}

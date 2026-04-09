@@ -1,0 +1,19 @@
+{
+  "session": 31,
+  "pass_number": 758,
+  "closed_ranges": [
+    {
+      "range": "C4:10FE..C4:1120",
+      "kind": "owner",
+      "label": "ct_c4_10ff_jsr_handler",
+      "confidence": "high"
+    }
+  ],
+  "properties": {
+    "target": "C4:10FF",
+    "prologue_type": "JSR ($20)",
+    "region": "C4:1000-2000",
+    "score": 6
+  },
+  "promotion_reason": "Score-6 JSR prologue, entry point handler"
+}

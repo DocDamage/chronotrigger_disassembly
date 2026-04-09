@@ -1,0 +1,17 @@
+{
+  "pass": "1111",
+  "bank": "C3",
+  "start_address": "C3:5C4D",
+  "end_address": "C3:5C65",
+  "label": "ct_c3_5c4d_region_utility_score5",
+  "target": "C3:5C4D",
+  "confidence": "medium",
+  "reasoning": "Score-5 utility in C3:5000-6000 region. 25 bytes with 1 call and 1 branch. 1 stack operation, 1 return. ASCII ratio 0.56.",
+  "cluster_score": 5,
+  "child_count": 1,
+  "return_count": 1,
+  "call_count": 1,
+  "gap_context": "C3:5C00-5D00 region",
+  "promotion_reason": "Score-5 candidate - Standard disassembly target in C3:5000-6000 extended region.",
+  "session": "27"
+}

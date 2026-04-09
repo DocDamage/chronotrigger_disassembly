@@ -1,0 +1,17 @@
+{
+  "pass": "1108",
+  "bank": "C3",
+  "start_address": "C3:5364",
+  "end_address": "C3:5375",
+  "label": "ct_c3_5364_dual_return_handler_score6",
+  "target": "C3:5364",
+  "confidence": "high",
+  "reasoning": "Score-6 dual-return handler. 18 bytes with 2 entry variants. No direct calls suggest callback or interrupt-style handler. 2 branches and 2 returns indicate conditional exit paths. Very low ASCII ratio (0.278).",
+  "cluster_score": 6,
+  "child_count": 2,
+  "return_count": 2,
+  "call_count": 0,
+  "gap_context": "C3:5300-5400 region",
+  "promotion_reason": "Score-6 callback candidate - Dual returns with early exit logic. Check for jump table references.",
+  "session": "27"
+}

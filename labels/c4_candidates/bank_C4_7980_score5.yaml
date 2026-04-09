@@ -1,0 +1,32 @@
+# Bank C4 - Score 5 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:7980"
+  end: "C4:7992"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 19
+  call_count: 3
+  branch_count: 4
+  stackish_count: 2
+  return_count: 2
+  
+features:
+  - "Score 5 function candidate"
+  - "19-byte function"
+  - "3 external calls - heavily used"
+  - "4 branches indicates complex control flow"
+  - "2 returns - multi-exit"
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:7000-8000 hot zone region.
+  Score 5 candidate with 3 calls and 4 branches.
+  Complex function with multiple paths and exits.

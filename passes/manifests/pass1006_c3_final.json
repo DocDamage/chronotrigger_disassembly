@@ -1,0 +1,20 @@
+{
+  "pass_number": 1006,
+  "bank": "C3",
+  "start_address": "C3:30B6",
+  "end_address": "C3:30BE",
+  "label": "ct_c3_30b6_score6_function",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:30B6",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 6,
+  "promotion_reason": "Score-6 function in C3:3000 region. 9 bytes with 1 call, 1 return.",
+  "notes": [
+    "Compact 9-byte function",
+    "Balanced call and return indicate complete function",
+    "Low ASCII ratio (0.222) confirms code"
+  ]
+}

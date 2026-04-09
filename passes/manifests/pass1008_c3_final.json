@@ -1,0 +1,20 @@
+{
+  "pass_number": 1008,
+  "bank": "C3",
+  "start_address": "C3:3DE2",
+  "end_address": "C3:3DF0",
+  "label": "ct_c3_3de2_score6_dispatch",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:3DE2",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 6,
+  "promotion_reason": "Score-6 dispatch in C3:3D00 region. 15 bytes with 3 stackish ops, 2 returns.",
+  "notes": [
+    "Stack-heavy dispatch pattern (3 ops in 15 bytes)",
+    "2 returns indicate multiple exit paths",
+    "Possible interrupt handler or state preservation"
+  ]
+}

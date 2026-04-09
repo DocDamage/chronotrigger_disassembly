@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 26,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:A8F0",
+    "end_addr": "C1:A910",
+    "name": "ct_c1_a8f0_handler_s26"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 1,
+    "branch_count": 4,
+    "return_count": 1,
+    "width": 32,
+    "region": "A000-B000",
+    "selection_reason": "Score-7 candidate with high branch count. Good code density."
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

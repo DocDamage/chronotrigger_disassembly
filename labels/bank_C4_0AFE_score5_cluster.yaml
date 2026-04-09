@@ -1,0 +1,44 @@
+# Bank C4 - Score 5 Cluster (SESSION 25)
+# C4:0AFE-0B12 - C4:0000-1000 region
+
+range:
+  start: "C4:0AFE"
+  end: "C4:0B12"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 5
+  cluster_score: 5
+  width: 21
+
+features:
+  - "Score 5 cluster"
+  - "2 calls, 2 branches, 1 return"
+  - "1 stack operation"
+  
+stats:
+  calls: 2
+  branches: 2
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.333
+
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  Candidate in C4:0000-1000 region.
+  
+  Features:
+  - 2 calls (multiple users!)
+  - 2 branches suggest conditional logic
+  - 1 return
+  - 1 stack operation
+  - ASCII ratio 0.333 (moderate)
+  
+  The multiple calls suggest this is a shared
+  utility function in the unmapped low region.

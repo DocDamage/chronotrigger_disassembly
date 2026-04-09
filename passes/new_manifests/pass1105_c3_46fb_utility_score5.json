@@ -1,0 +1,17 @@
+{
+  "pass": "1105",
+  "bank": "C3",
+  "start_address": "C3:46FB",
+  "end_address": "C3:4709",
+  "label": "ct_c3_46fb_multi_call_utility_score5",
+  "target": "C3:46FB",
+  "confidence": "medium",
+  "reasoning": "Score-5 utility function near C3:4548 supercluster. 15 bytes with 2 entry variants. 2 calls indicate shared subroutine. 2 returns suggest early exit paths.",
+  "cluster_score": 5,
+  "child_count": 2,
+  "return_count": 2,
+  "call_count": 2,
+  "gap_context": "C3:4600-4800 supercluster-adjacent",
+  "promotion_reason": "Score-5 shared helper - Supercluster-adjacent utility with 2 callers.",
+  "session": "27"
+}

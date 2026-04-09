@@ -1,0 +1,27 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 21 Pass 1027 - Auto-generated from C0:3000-3800 scan
+
+range:
+  start: "C0:3067"
+  end: "C0:3078"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 18
+  
+features:
+  calls: 1
+  branches: 7
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.222
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Extremely high branch density (7 branches in 18 bytes) in C0:3000-3800 region.
+  Suggests tight switch/case or jump table pattern. Single return.
+  Low ASCII ratio strongly indicates executable code.

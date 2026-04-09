@@ -1,0 +1,13 @@
+pass: 1119
+address: 028D45
+bank: 2
+label: ct_c2_8d45_dispatch
+range: C2:8D45-C2:8D63
+score: 10
+width: 30
+call_count: 2
+branch_count: 2
+return_count: 1
+session: 31
+parent_hub: C2:8D87
+rationale: Score-10 dispatch function preceding 8D87 score-9 hub, REP prologue, bridge to hub

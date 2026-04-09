@@ -1,0 +1,17 @@
+{
+  "pass": "1101",
+  "bank": "C3",
+  "start_address": "C3:4A2A",
+  "end_address": "C3:4A53",
+  "label": "ct_c3_4a2a_supercluster_score11_handler",
+  "target": "C3:4A2A",
+  "confidence": "high",
+  "reasoning": "Score-11 SUPERCLUSTER - Secondary dispatch hub. 42-byte span with 7 child functions. 5 active calls (unlike C3:4548) indicates operational dispatch handler. Coordinates with C3:4548 for full state machine implementation.",
+  "cluster_score": 11,
+  "child_count": 7,
+  "return_count": 7,
+  "call_count": 5,
+  "gap_context": "C3:4A00-4B00 supercluster region",
+  "promotion_reason": "Score-11 SUPERCLUSTER - Active dispatch handler with 5 callers. Complements C3:4548 architecture. High ASCII ratio (0.619) suggests text/UI integration.",
+  "session": "27"
+}

@@ -1,0 +1,31 @@
+# Bank C4 - Score 7 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:7732"
+  end: "C4:774A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  call_count: 1
+  branch_count: 5
+  stackish_count: 2
+  return_count: 4
+  
+features:
+  - "High score function (score 7)"
+  - "25-byte substantial width"
+  - "5 branches indicates complex control flow"
+  - "4 returns - multi-exit function"
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:7000-8000 hot zone region.
+  Score 7 candidate with 5 branches and 4 returns.
+  Adjacent to C4:7730 - possible related functions or entry points.

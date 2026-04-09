@@ -1,0 +1,17 @@
+{
+  "pass": "1110",
+  "bank": "C3",
+  "start_address": "C3:5B22",
+  "end_address": "C3:5B3A",
+  "label": "ct_c3_5b22_region_handler_score5",
+  "target": "C3:5B22",
+  "confidence": "medium",
+  "reasoning": "Score-5 handler in C3:5000-6000 region. 25 bytes with 2 calls and 2 branches. 1 stack operation, 1 return. ASCII ratio 0.4.",
+  "cluster_score": 5,
+  "child_count": 1,
+  "return_count": 1,
+  "call_count": 2,
+  "gap_context": "C3:5B00-5C00 region",
+  "promotion_reason": "Score-5 candidate - Standard disassembly target in C3:5000-6000 extended region.",
+  "session": "27"
+}

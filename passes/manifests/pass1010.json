@@ -1,0 +1,28 @@
+{
+  "pass": 1010,
+  "bank": "C3",
+  "label": "ct_c3_1627_multi_return_handler",
+  "address": "C3:1627",
+  "range": "C3:1627..C3:1642",
+  "bytes": 28,
+  "category": "code",
+  "confidence": 6,
+  "reasoning": [
+    "Cluster score 6 - highest confidence in remaining candidates",
+    "1 call reference, 4 branches, 3 returns",
+    "28-byte multi-path function with complex flow",
+    "ASCII ratio 0.286 - low data content",
+    "3 child islands merged - well-structured routine"
+  ],
+  "findings": {
+    "calls": 1,
+    "branches": 4,
+    "stack_ops": 0,
+    "returns": 3,
+    "first_return": "C3:162F"
+  },
+  "flags": ["rti_rts_proximity_at_08"],
+  "related": ["C3:1627", "C3:162F", "C3:1632", "C3:1642"],
+  "session": 20,
+  "status": "closed"
+}

@@ -1,0 +1,19 @@
+{
+  "pass": 1503,
+  "range": "C3:2500..C3:2519",
+  "label": "ct_c3_2500_handler_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:1E1B-28E6 gap. PHX/PLX stack handler, 26 bytes, session 31 final push.",
+  "scan": {
+    "score": 6,
+    "width": 26,
+    "call_count": 1,
+    "branch_count": 1,
+    "stackish_count": 3,
+    "return_count": 1,
+    "first_return_address": "C3:2518",
+    "ascii_ratio": 0.15,
+    "zero_ff_ratio": 0.0
+  }
+}

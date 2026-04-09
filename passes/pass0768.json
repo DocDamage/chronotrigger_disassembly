@@ -1,0 +1,19 @@
+{
+  "session": 31,
+  "pass_number": 768,
+  "closed_ranges": [
+    {
+      "range": "C4:84C1..C4:84E8",
+      "kind": "owner",
+      "label": "ct_c4_84c4_php_util",
+      "confidence": "high"
+    }
+  ],
+  "properties": {
+    "target": "C4:84C4",
+    "prologue_type": "PHP ($08)",
+    "region": "C4:8000-C000",
+    "score": 6
+  },
+  "promotion_reason": "Score-6 PHP prologue, utility function"
+}

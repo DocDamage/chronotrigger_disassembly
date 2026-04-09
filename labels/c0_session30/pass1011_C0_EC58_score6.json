@@ -1,0 +1,18 @@
+{
+  "pass": 1011,
+  "label": "CT_C0_EC58_NMIHandler_Score6",
+  "address": "C0:EC58",
+  "snes_address": "$C0$EC58",
+  "score": 6,
+  "description": "NMI-related handler with REP prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 33,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "C2",
+    "pattern": "REP_prologue"
+  },
+  "session": 30,
+  "connected_to": ["C0:EC6D"]
+}

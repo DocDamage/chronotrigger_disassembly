@@ -1,0 +1,26 @@
+# Session 30 Manifest - Pass 1110
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1110
+
+target:
+  bank: "C1"
+  range: "C1:4A6B..C1:4A70"
+  label: "ct_c1_4a6b_library_init"
+  confidence: "medium"
+  kind: "owner"
+
+metadata:
+  score: 6
+  source: "c1_hub_manifests.py"
+  promotion_reason: "Score-6 candidate. Library init stub. LDA# 01 / STA $9930 / RTS pattern. Clean e..."
+  associated_hub: "C1:4AEB"
+
+promotion_reason: |
+  Score-6 candidate. Library init stub. LDA# 01 / STA $9930 / RTS pattern. Clean entry point for C1:4AEB library hub.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

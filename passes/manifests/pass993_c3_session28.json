@@ -1,0 +1,20 @@
+{
+  "pass_number": 993,
+  "bank": "C3",
+  "start_address": "C3:A3F1",
+  "end_address": "C3:A419",
+  "label": "ct_c3_a3f1_jsr_entry",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:A3F8",
+  "prologue_byte": "20",
+  "prologue_mnemonic": "JSR",
+  "backtrack_distance": 7,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:A000 region. JSR prologue with RTS evidence.",
+  "notes": [
+    "41-byte function with complex control flow",
+    "Adjacent to C3:A3E2, suggests functional grouping"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "session": 31,
+  "pass_number": 763,
+  "closed_ranges": [
+    {
+      "range": "C4:62D8..C4:6300",
+      "kind": "owner",
+      "label": "ct_c4_62df_phd_handler",
+      "confidence": "high"
+    }
+  ],
+  "properties": {
+    "target": "C4:62DF",
+    "prologue_type": "PHD ($0B)",
+    "region": "C4:6000-7000",
+    "score": 6
+  },
+  "promotion_reason": "Score-6 PHD prologue, direct page handler"
+}

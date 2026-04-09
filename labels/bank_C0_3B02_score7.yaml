@@ -1,0 +1,27 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 21 Pass 1029 - Auto-generated from C0:3800-4000 scan
+
+range:
+  start: "C0:3B02"
+  end: "C0:3B1A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 2
+  branches: 1
+  stackish: 2
+  returns: 1
+  ascii_ratio: 0.28
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Score 7 candidate in C0:3800-4000 region with 2 stack operations.
+  2 calls suggest multiple entry points. PHP/PLP patterns present
+  indicate state preservation - likely interrupt handler or callback.

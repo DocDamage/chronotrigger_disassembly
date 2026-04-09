@@ -1,0 +1,21 @@
+{
+  "pass_number": 1009,
+  "bank": "C3",
+  "start_address": "C3:3E53",
+  "end_address": "C3:3E69",
+  "label": "ct_c3_3e53_score7_dispatch",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:3E53",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 7,
+  "promotion_reason": "Score-7 HIGH VALUE dispatch in C3:3E00 region. 23 bytes with 2 calls, 3 returns.",
+  "notes": [
+    "HIGHEST SCORE in final batch (score-7)",
+    "23-byte cluster with multiple calls and returns",
+    "Child count of 3 suggests nested functions",
+    "Strong code indicators with low ASCII ratio"
+  ]
+}

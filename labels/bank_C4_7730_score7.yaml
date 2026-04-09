@@ -1,0 +1,44 @@
+# Bank C4 - Score 7 Function Candidate (SESSION 25)
+# C4:7730-7748 - Child of 772E supercluster
+
+range:
+  start: "C4:7730"
+  end: "C4:7748"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 7
+  width: 25
+
+features:
+  - "Score 7 candidate"
+  - "1 call, 6 branches, 3 returns"
+  - "2 stack operations"
+  - "Child of 772E supercluster"
+  
+stats:
+  calls: 1
+  branches: 6
+  stackish: 2
+  returns: 3
+  ascii_ratio: 0.20
+
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  High-scoring candidate in C4:7700-7800 region.
+  Part of the 772E supercluster.
+  
+  Features:
+  - 1 call indicates callable function
+  - 6 branches suggest complex control flow
+  - 2 stack operations (PHP/PLP pattern)
+  - Low ASCII ratio (0.20) strongly suggests code
+  
+  This appears to be an entry variant or alternate path
+  within the 772E supercluster.

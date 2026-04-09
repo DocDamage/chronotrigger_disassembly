@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1145,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:FE2F",
+      "mode": "known_code",
+      "label": "ct_c4_fe2f_jsr_strong",
+      "reason": "Score-6, JSR prologue. Strong end-of-bank candidate."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 26
+    }
+  }
+}

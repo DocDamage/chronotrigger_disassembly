@@ -1,0 +1,14 @@
+{
+  "pass": 1218,
+  "bank": "C3",
+  "start_address": "C3:5E47",
+  "end_address": "C3:5E6C",
+  "label": "ct_c3_5e47_lda_init",
+  "target": "C3:5E47",
+  "confidence": "high",
+  "reasoning": "Score-6 LDA initialization function. Accumulator setup with extended validation. C3:5000-5FFF game logic region.",
+  "score": 6,
+  "gap_context": "C3:5000-5FFF game logic region",
+  "promotion_reason": "Score-6 LDA init. Game logic region with high confidence.",
+  "session": "30"
+}

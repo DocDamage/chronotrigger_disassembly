@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1143,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:7DA7",
+      "mode": "known_code",
+      "label": "ct_c4_7da7_branch_handler",
+      "reason": "Score-5, 2 branches. Handler function."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 15
+    }
+  }
+}

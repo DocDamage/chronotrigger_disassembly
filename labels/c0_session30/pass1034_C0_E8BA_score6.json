@@ -1,0 +1,17 @@
+{
+  "pass": 1034,
+  "label": "CT_C0_E8BA_SysHelper_Score6",
+  "address": "C0:E8BA",
+  "snes_address": "$C0$E8BA",
+  "score": 6,
+  "description": "System helper function with JSR prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "20"
+  },
+  "session": 30,
+  "connected_to": ["C0:E970"]
+}

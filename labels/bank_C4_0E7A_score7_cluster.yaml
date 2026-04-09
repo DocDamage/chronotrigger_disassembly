@@ -1,0 +1,51 @@
+# Bank C4 - Score 7 Cluster (SESSION 25)
+# C4:0E7A-0E96 - High scorer in C4:0000-1000 region
+
+range:
+  start: "C4:0E7A"
+  end: "C4:0E96"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 7
+  cluster_score: 7
+  width: 29
+  child_count: 2
+  children:
+    - "C4:0E7A-C4:0E92"
+    - "C4:0E7E-C4:0E96"
+
+features:
+  - "Score 7 cluster"
+  - "1 call, 0 direct branches, 3 returns"
+  - "2 stack operations"
+  - "2 overlapping child islands"
+  
+stats:
+  calls: 1
+  branches: 0
+  stackish: 2
+  returns: 3
+  ascii_ratio: 0.276
+
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  High-scoring cluster in C4:0000-1000 region (unmapped area).
+  
+  Features:
+  - 1 call indicates callable function
+  - NO direct branches (rare - straight-line code)
+  - 3 returns (multiple exit points)
+  - 2 stack operations (PHP/PLP patterns)
+  - ASCII ratio 0.276 (suggests code)
+  
+  The lack of branches with multiple returns suggests
+  this may be a switch-style dispatch or error handler.
+  
+  Located in previously unmapped C4:0000-1000 region.

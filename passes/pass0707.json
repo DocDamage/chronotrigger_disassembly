@@ -1,0 +1,19 @@
+{
+  "pass_number": 707,
+  "closed_ranges": [
+    {
+      "range": "C1:44FA..C1:4512",
+      "kind": "owner",
+      "label": "ct_c1_44fa_array_handler",
+      "confidence": "medium"
+    }
+  ],
+  "metadata": {
+    "score": 3,
+    "width": 25,
+    "call_count": 1,
+    "return_count": 1,
+    "ascii_ratio": 0.32
+  },
+  "promotion_reason": "Array handler function. Score 3, 25 bytes. Has 1 caller, 1 return. Post-gap region function."
+}

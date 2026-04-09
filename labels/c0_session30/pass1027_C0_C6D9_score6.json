@@ -1,0 +1,18 @@
+{
+  "pass": 1027,
+  "label": "CT_C0_C6D9_SaveManager_Score6",
+  "address": "C0:C6D9",
+  "snes_address": "$C0$C6D9",
+  "score": 6,
+  "description": "Save game manager with PHA prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 38,
+  "region": "C000-CFFF",
+  "features": {
+    "start_byte": "48",
+    "pattern": "PHA_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

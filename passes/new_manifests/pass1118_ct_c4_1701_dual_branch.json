@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1118,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:1701",
+      "mode": "known_code",
+      "label": "ct_c4_1701_dual_branch",
+      "reason": "Score-6 cluster, 2 branches. Early bank function."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 8
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "pass_number": 998,
+  "bank": "C3",
+  "start_address": "C3:559F",
+  "end_address": "C3:55C1",
+  "label": "ct_c3_559f_score6_cluster",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:559F",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 6,
+  "promotion_reason": "Score-6 cluster in C3:5500 region. 35 bytes with 6 branches, 2 returns.",
+  "notes": [
+    "35-byte branch-heavy function",
+    "6 branches indicate complex control flow",
+    "2 returns for multiple exit conditions"
+  ]
+}

@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 29
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:4008"
+  end_addr: "C1:4021"
+  name: "ct_c1_4008_score7_s29"
+  type: "hub_candidate"
+
+evidence:
+  score: 7
+  scan_width: 25
+  region: "C1:4000-5FFF"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-7 candidate in 4000-5FFF region. Hub Candidate."
+      confidence: high
+
+provenance:
+  source: "Session 29 analysis"
+  pass_number: 1021
+  selection_reason: "Score-7 candidate from initial_scan."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

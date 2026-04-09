@@ -1,0 +1,29 @@
+{
+  "pass": 1018,
+  "bank": "C0",
+  "label": "ct_c0_206d_logic_handler",
+  "address": "C0:206D",
+  "range": "C0:206D..C0:2095",
+  "bytes": 41,
+  "category": "code",
+  "confidence": 7,
+  "reasoning": [
+    "Score 7 cluster - highest confidence in C0:2000-2800 region",
+    "6 branch instructions indicating complex control flow",
+    "3 return instructions suggesting function boundaries",
+    "41 bytes - substantial function size for SNES code",
+    "Located in high-activity 2000-2800 region of Bank C0",
+    "Pattern consistent with game logic or state handler"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 6,
+    "stack_ops": 0,
+    "returns": 3,
+    "first_return": "C0:2089"
+  },
+  "flags": ["score7", "multi_branch"],
+  "related": ["C0:206D", "C0:2095", "C0:2089"],
+  "session": 20,
+  "status": "closed"
+}

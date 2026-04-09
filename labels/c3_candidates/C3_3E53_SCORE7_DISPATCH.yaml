@@ -1,0 +1,45 @@
+# Bank C3 - Score 7 Dispatch Pattern (Session 24)
+# Range: C3:3E53..C3:3E69
+# DISCOVERY: High-value cluster with 3 returns, 2 calls
+
+candidate:
+  bank: "C3"
+  start: "C3:3E53"
+  end: "C3:3E69"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  cluster_score: 7
+  width: 23
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 2
+  returns: 3
+  ascii_ratio: 0.304
+  child_count: 3
+  child_ranges:
+    - "C3:3E53..C3:3E57"
+    - "C3:3E53..C3:3E5D"
+    - "C3:3E53..C3:3E69"
+
+analysis:
+  type: "dispatch_table"
+  pattern: "call_branch_return"
+  description: |
+    High-value 23-byte cluster with 3 returns and 2 calls.
+    Strong code indicators: multiple stackish ops (2), low ASCII ratio (0.304).
+    The 3 returns give +3 to score, indicating function epilogues.
+    Child count of 3 suggests nested or related functions.
+
+confidence: 7
+status: "candidate"
+verified: false
+coverage_gain: 23
+
+notes: |
+  Score-7 cluster from C3:3000-4000 scan.
+  2 calls indicate external usage, increasing confidence.
+  Target for 28% coverage milestone in Bank C3.

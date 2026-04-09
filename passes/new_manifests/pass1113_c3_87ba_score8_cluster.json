@@ -1,0 +1,17 @@
+{
+  "pass": "1113",
+  "bank": "C3",
+  "start_address": "C3:87BA",
+  "end_address": "C3:87E1",
+  "label": "ct_c3_87ba_six_call_handler_score8",
+  "target": "C3:87BA",
+  "confidence": "high",
+  "reasoning": "Score-8 cluster from C3_BANK_MAPPING_REPORT. 40 bytes with 6 calls indicating high-activity region. Located in C3:8000-8FFF. Strong traffic suggests central utility or game state handler.",
+  "cluster_score": 8,
+  "child_count": 2,
+  "return_count": 3,
+  "call_count": 6,
+  "gap_context": "C3:8700-8800 high-activity region",
+  "promotion_reason": "Score-8 high-activity cluster - 6 callers indicates heavily-used game function.",
+  "session": "27"
+}

@@ -1,0 +1,32 @@
+# Bank C2 - Score 6 Hub Helper (B7B3)
+# Session 23 - B716 Hub Extension
+
+range:
+  start: "C2:B7B3"
+  end: "C2:B7CB"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.24
+  first_return: "C2:B7CB"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 helper function directly adjacent to B716 cross-bank hub.
+  Located immediately after B716 (44 bytes offset from B716 start).
+  JSR/SEP pattern with RTS at B7CB.
+  Part of documented B716 hub cluster (pass 595).
+  Likely a continuation or helper for cross-bank settlement service.
+  May be called as secondary entry from B716 dispatch.
+  Distance: 28 bytes from B716 end - tightly coupled.

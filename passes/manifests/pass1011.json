@@ -1,0 +1,28 @@
+{
+  "pass": 1011,
+  "bank": "C3",
+  "label": "ct_c3_14bd_branch_utility",
+  "address": "C3:14BD",
+  "range": "C3:14BD..C3:14C6",
+  "bytes": 10,
+  "category": "code",
+  "confidence": 6,
+  "reasoning": [
+    "Cluster score 6 - high confidence branch utility",
+    "1 call reference, 3 branches, 1 return",
+    "Compact 10-byte conditional branch routine",
+    "ASCII ratio 0.2 - very low data content",
+    "Clean code candidate with balanced flow control"
+  ],
+  "findings": {
+    "calls": 1,
+    "branches": 3,
+    "stack_ops": 0,
+    "returns": 1,
+    "first_return": "C3:14C6"
+  },
+  "flags": [],
+  "related": ["C3:14BD", "C3:14C6"],
+  "session": 20,
+  "status": "closed"
+}

@@ -1,0 +1,23 @@
+# Bank C4 Session 26 Manifest
+# Generated: 2026-04-08
+
+candidate:
+  address: C4:DEBB
+  score: 5
+  width: 22
+  region: C4:C000-FFFF
+  
+analysis:
+  calls: 1
+  branches: 7
+  type: call_branch_heavy
+  session: 26
+  
+status:
+  state: candidate
+  confidence: medium
+  
+notes: >
+  Score-5 candidate from C4:C000-FFFF region.
+  Calls: 1, Branches: 7.
+  Discovered via automated island scan.

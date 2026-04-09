@@ -1,0 +1,22 @@
+{
+  "pass": 947,
+  "range": "C3:97B1..C3:97CA",
+  "label": "ct_c3_97b1_score7",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-7 candidate from C3:9000-A000 scan. High-activity region with multiple calls, branches, stackish ops, and returns. Session 26.",
+  "scan": {
+    "score": 7,
+    "width": 25,
+    "call_count": 2,
+    "branch_count": 3,
+    "stackish_count": 2,
+    "return_count": 1,
+    "first_return_address": "C3:97C9",
+    "ascii_ratio": 0.28,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

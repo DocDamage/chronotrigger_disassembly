@@ -1,0 +1,31 @@
+# Bank C4 - Score 4 Function Candidate
+# Session 23 - C4:5000-6000 Region Deep Scan
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:568E"
+  end: "C4:5699"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 4
+  width: 12
+  call_count: 1
+  branch_count: 3
+  stackish_count: 0
+  return_count: 1
+  
+features:
+  - "Score 4 function with external call"
+  - "12-byte width"
+  - "1 call suggests utility function"
+  - "3 branches indicates control flow"
+  
+confidence: 4
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5400-6000 region.
+  Call-heavy function with 3 branches.
+  May be a conditional dispatcher.

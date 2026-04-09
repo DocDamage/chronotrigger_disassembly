@@ -1,0 +1,13 @@
+pass: 1109
+address: 025793
+bank: 2
+label: ct_c2_5793_mode_switcher_s29
+range: C2:5793-C2:5818
+score: 6
+width: 134
+call_count: 4
+branch_count: 3
+stackish_count: 2
+return_count: 1
+session: 29
+rationale: C2:5000-6000 rich region - Score-6 with REP/SEP mode switching. Non-overlapping with 5319 cluster. Clean function boundaries.

@@ -1,0 +1,30 @@
+# Bank C4 - Score 5 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:54F5"
+  end: "C4:5503"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 15
+  call_count: 0
+  branch_count: 2
+  stackish_count: 1
+  return_count: 1
+  
+features:
+  - "Score 5 function candidate"
+  - "15-byte function"
+  - "2 branches indicates conditional logic"
+  - "Stack manipulation detected"
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5000-6000 hot zone region.
+  Score 5 candidate with 2 branches and stack operations.

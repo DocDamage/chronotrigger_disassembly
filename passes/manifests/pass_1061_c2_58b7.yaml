@@ -1,0 +1,13 @@
+pass: 1061
+address: 0258B7
+bank: 2
+label: ct_c2_58b7_branch_handler
+range: C2:58B7-C2:58CF
+score: 4
+width: 25
+call_count: 4
+branch_count: 3
+stackish_count: 0
+return_count: 1
+session: 26
+rationale: Score-4 island from C2:5800-6000 scan. 25 bytes with 4 calls, 3 branches. Branch-heavy utility in 5800 region.

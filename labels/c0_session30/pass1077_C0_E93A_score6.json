@@ -1,0 +1,15 @@
+{
+  "pass": 1077,
+  "label": "CT_C0_E93A_Clear_Score6",
+  "address": "C0:E93A",
+  "snes_address": "$C0$E93A",
+  "score": 6,
+  "description": "Clear/memory zero function in E900 region",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "E000-EFFF",
+  "features": {"cluster": true},
+  "session": 30,
+  "connected_to": ["C0:E970"]
+}

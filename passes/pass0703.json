@@ -1,0 +1,34 @@
+{
+  "pass_number": 703,
+  "closed_ranges": [
+    {
+      "range": "C1:434A..C1:43B7",
+      "kind": "owner",
+      "label": "ct_c1_434a_mega_cluster",
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "cluster_score": 17,
+    "width": 110,
+    "child_count": 11,
+    "child_ranges": [
+      "C1:434A..C1:4362",
+      "C1:4351..C1:4369",
+      "C1:4358..C1:4370",
+      "C1:435F..C1:4377",
+      "C1:4366..C1:437E",
+      "C1:4375..C1:438D",
+      "C1:4383..C1:439B",
+      "C1:438A..C1:43A2",
+      "C1:4391..C1:43A9",
+      "C1:4398..C1:43B0",
+      "C1:439F..C1:43B7"
+    ],
+    "call_count": 4,
+    "branch_count": 7,
+    "return_count": 11,
+    "ascii_ratio": 0.282
+  },
+  "promotion_reason": "MEGA CLUSTER: Score 17, 110 bytes, 11 children. Primary game logic cluster. 4 calls, 7 branches, 11 returns. Core function group in Bank C1."
+}

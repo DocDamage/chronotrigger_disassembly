@@ -1,0 +1,19 @@
+{
+  "pass": 1010,
+  "label": "CT_C0_E9A0_MultiTarget_Score6",
+  "address": "C0:E9A0",
+  "snes_address": "$C0$E9A0",
+  "score": 6,
+  "description": "Multi-target dispatch function with multiple entry points",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "20",
+    "pattern": "JSR_dispatch",
+    "multi_target": true
+  },
+  "session": 30,
+  "connected_to": ["C0:E9A5", "C0:E9A6", "C0:E9A9", "C0:E9AA"]
+}

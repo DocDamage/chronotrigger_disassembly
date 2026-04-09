@@ -1,0 +1,28 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1047 - Auto-generated from C0:4000-5000 scan
+
+range:
+  start: "C0:4E75"
+  end: "C0:4E8D"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 1
+  branches: 4
+  stackish: 0
+  returns: 2
+  ascii_ratio: 0.2
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Adjacent to C0:4E5A candidate - part of function cluster.
+  4 branches with 2 returns indicate complex conditional logic.
+  Low ASCII ratio (0.2) confirms code nature.
+  May be companion function to C0:4E5A in same subsystem.

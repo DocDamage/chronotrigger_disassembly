@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1115,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:7730",
+      "mode": "known_code",
+      "label": "ct_c4_7730_supercluster",
+      "reason": "Score-7 supercluster, 6 branches, 1 call. High-density code region."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 25
+    }
+  }
+}

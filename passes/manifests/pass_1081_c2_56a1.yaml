@@ -1,0 +1,13 @@
+pass: 1081
+address: 0256A1
+bank: 2
+label: ct_c2_56a1_mode_switch
+range: C2:56A1-C2:56BD
+score: 6
+width: 29
+call_count: 3
+branch_count: 0
+stackish_count: 1
+return_count: 1
+session: 27
+rationale: Score-6 backtrack candidate from C2:5600 scan. REP prologue (C2) targeting C2:56A5. Mode-switch pattern with 3 internal calls. Cross-bank callers from C2:693B, C2:778A, C2:7ADB, C2:6CEA.

@@ -1,0 +1,18 @@
+{
+  "pass": 1028,
+  "label": "CT_C0_C71B_ConfigLoader_Score6",
+  "address": "C0:C71B",
+  "snes_address": "$C0$C71B",
+  "score": 6,
+  "description": "Configuration loader with REP prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 37,
+  "region": "C000-CFFF",
+  "features": {
+    "start_byte": "C2",
+    "pattern": "REP_prologue"
+  },
+  "session": 30,
+  "connected_to": ["C0:C6D9"]
+}

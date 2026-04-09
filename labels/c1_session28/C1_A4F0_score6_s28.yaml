@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 28
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:A4F0"
+  end_addr: "C1:A507"
+  name: "ct_c1_a4f0_handler_s28"
+  type: "subroutine"
+
+evidence:
+  score: 6
+  scan_width: 23
+  region: "C1:A000-B000"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-6 candidate in A000-B000 target region. Extends coverage."
+      confidence: high
+
+provenance:
+  source: "Session 28 targeted analysis"
+  pass_number: 598
+  selection_reason: "Score-6 candidate in A000-B000 target region. Extends coverage."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

@@ -1,0 +1,16 @@
+{
+  "pass": 1208,
+  "bank": "C3",
+  "start_address": "C3:3BBD",
+  "end_address": "C3:3BD1",
+  "label": "ct_c3_3bbd_stack_function",
+  "target": "C3:3BBD",
+  "confidence": "medium",
+  "reasoning": "Score-5 function with stack prologue/epilogue pattern. 21 bytes with low ASCII ratio (0.286). State preservation routine.",
+  "score": 5,
+  "return_count": 1,
+  "ascii_ratio": 0.286,
+  "gap_context": "C3:3000-4000 region",
+  "promotion_reason": "Score-5 stack function. Low ASCII ratio, state preservation pattern.",
+  "session": "30"
+}

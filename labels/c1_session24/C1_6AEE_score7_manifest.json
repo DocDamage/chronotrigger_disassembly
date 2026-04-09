@@ -1,0 +1,17 @@
+{
+  "pass": 1047,
+  "bank": "C1",
+  "session": 24,
+  "range": "C1:6AEE..C1:6B06",
+  "score": 7,
+  "width": 25,
+  "call_count": 2,
+  "branch_count": 3,
+  "stackish_count": 1,
+  "return_count": 1,
+  "ascii_ratio": 0.24,
+  "source": "C1:6000-8000_upper_bank_scan",
+  "reason": "Score-7 cluster with 2 calls, 3 branches, stack operation. Upper bank code region with multiple callers.",
+  "related_to": "C1:6A00-6C00_region",
+  "timestamp": "2026-04-08T15:20:00-04:00"
+}

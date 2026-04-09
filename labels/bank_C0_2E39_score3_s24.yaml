@@ -1,0 +1,24 @@
+# Bank C0 - Score 3 Function Candidate
+# Session 24 Pass 1574 - Push to 21% coverage
+
+range:
+  start: "C0:2E39"
+  end: "C0:2E51"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 3
+  width: 25
+  
+features:
+  calls: 4
+  branches: 0
+  returns: 2
+  
+confidence: 3
+status: "candidate"
+verified: false
+
+notes: |
+  Score-3 candidate - final push to reach 21% coverage target.
+  Part of Session 24 completion batch.

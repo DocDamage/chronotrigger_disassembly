@@ -1,0 +1,18 @@
+{
+  "pass": 1024,
+  "label": "CT_C0_B996_CrossBank_Score6",
+  "address": "C0:B996",
+  "snes_address": "$C0$B996",
+  "score": 6,
+  "description": "Cross-bank utility with PHK prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 40,
+  "region": "B000-BFFF",
+  "features": {
+    "start_byte": "4B",
+    "pattern": "PHK_prologue"
+  },
+  "session": 30,
+  "connected_to": ["C0:B8C5"]
+}

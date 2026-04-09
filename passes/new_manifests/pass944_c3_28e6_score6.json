@@ -1,0 +1,22 @@
+{
+  "pass": 944,
+  "range": "C3:28E6..C3:28F4",
+  "label": "ct_c3_28e6_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:2000-3000 scan. Clean start with JSR entry pattern, returns, and branches. Session 26.",
+  "scan": {
+    "score": 6,
+    "width": 14,
+    "call_count": 2,
+    "branch_count": 1,
+    "stackish_count": 0,
+    "return_count": 1,
+    "first_return_address": "C3:28F3",
+    "ascii_ratio": 0.286,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

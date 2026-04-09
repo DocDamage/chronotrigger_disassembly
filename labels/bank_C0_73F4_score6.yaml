@@ -1,0 +1,29 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1049 - Auto-generated from C0:7000-8000 scan
+
+range:
+  start: "C0:73F4"
+  end: "C0:740C"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 4
+  branches: 4
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.28
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  High call count (4) in C0:7300-7400 region.
+  4 branches with no stack operations (register-based).
+  Multiple callers suggest popular utility function.
+  Located in emerging C0:7000-8000 function cluster.
+  May be data processing or transformation routine.

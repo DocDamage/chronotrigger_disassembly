@@ -1,0 +1,13 @@
+pass: 1069
+address: 025793
+bank: 2
+label: ct_c2_5793_vector_routine
+range: C2:5793-C2:57B0
+score: 6
+width: 30
+call_count: 3
+branch_count: 0
+stackish_count: 1
+return_count: 1
+session: 27
+rationale: Score-6 backtrack candidate from C2:5700 scan. REP prologue targeting C2:5798. Near vector target C2:57DF. Cross-bank callers from C2:5707, C2:5719, C2:6965.

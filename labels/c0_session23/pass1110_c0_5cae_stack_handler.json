@@ -1,0 +1,23 @@
+{
+  "pass": 1110,
+  "label": "CT_C0_5CAE_Stack_Handler",
+  "address": "C0:5CAE",
+  "snes_address": "$C05CAE",
+  "score": 7,
+  "description": "Stack-heavy handler with 5 branches, 3 returns",
+  "type": "handler",
+  "size": 25,
+  "status": "mapped",
+  "region": "5B96-60AA gap",
+  "scan_data": {
+    "width": 25,
+    "call_count": 1,
+    "branch_count": 5,
+    "return_count": 3,
+    "stackish_count": 1,
+    "ascii_ratio": 0.4,
+    "cluster_score": 7
+  },
+  "session": 23,
+  "created": "2026-04-08T15:14:44"
+}

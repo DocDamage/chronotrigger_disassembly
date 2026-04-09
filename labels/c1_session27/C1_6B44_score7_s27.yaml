@@ -1,0 +1,30 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 27
+  author: "Kimi Code CLI"
+  
+target:
+  bank: "C1"
+  address: "C1:6B44"
+  name: "ct_c1_6b44_handler_s27"
+  type: "subroutine"
+  
+evidence:
+  score: 7
+  scan_width: 25
+  region: "C1:6000-7000"
+  features:
+    - type: "instruction_pattern"
+      description: "High-confidence code island"
+      confidence: high
+  
+provenance:
+  source: "Session 27 candidate selection"
+  previous_session: "C1_SESSION25/26"
+  selection_reason: "Score-7 candidate in 6000 region, adjacent to 6AEE and 6BEF"
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

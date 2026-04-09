@@ -1,0 +1,28 @@
+# Bank C2 - Score 7 Function Candidate
+# Session 21 - C2:B000-C000 scan
+
+range:
+  start: "C2:BFE6"
+  end: "C2:BFFE"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 4
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.24
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Score 7 candidate near end of B000-C000 region (BFE6-BFFE).
+  High call count (4) indicates this is a utility function called from multiple locations.
+  Positioned just before C000 boundary - possible data/service boundary.
+  Part of high-activity code cluster in BF00-C000 region.

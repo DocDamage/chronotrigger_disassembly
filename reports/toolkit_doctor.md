@@ -1,13 +1,13 @@
 # Toolkit Doctor
 
 - overall health: **100.0%**
-- passing checks: **7 / 7**
+- passing checks: **8 / 8**
 
 ## Checks
 
 - **python_script_compile_health**: ok
   {
-    "script_count": 99,
+    "script_count": 102,
     "failures": []
   }
 - **legacy_entrypoints_upgraded**: ok
@@ -93,4 +93,17 @@
       "branch state audit ok"
     ],
     "stderr_tail": []
+  }
+- **duplicate_helper_drift**: ok
+  {
+    "targets": [
+      "tools/scripts/detect_data_patterns_v1.py",
+      "tools/scripts/validate_cross_bank_callers_v1.py",
+      "tools/scripts/page_range_mixedness_v1.py",
+      "tools/scripts/score_owner_boundary_risk_v1.py",
+      "tools/scripts/find_local_code_islands_v1.py",
+      "tools/scripts/score_raw_xref_context_v1.py",
+      "tools/scripts/seam_triage_utils_v1.py"
+    ],
+    "offenders": []
   }

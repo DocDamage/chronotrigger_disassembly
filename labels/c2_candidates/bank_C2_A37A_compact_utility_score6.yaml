@@ -1,0 +1,32 @@
+# Bank C2 - Score 6 Compact Utility
+# Session 23 - A300 Region Analysis
+
+range:
+  start: "C2:A37A"
+  end: "C2:A38A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 17
+  
+features:
+  calls: 1
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.24
+  first_return: "C2:A38A"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 compact utility in A300 region (A37A-A38A).
+  Small 17-byte function with balanced features.
+  Located in early A000-region code.
+  4,290 bytes before B716 hub.
+  May be initialization or early-stage helper.
+  Part of A000-A400 sparse but present code region.
+  Clean function boundaries with single return.

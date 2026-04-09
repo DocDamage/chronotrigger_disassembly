@@ -1,0 +1,13 @@
+pass: 1083
+address: 020686
+bank: 2
+label: ct_c2_0686_vector_helper
+range: C2:0686-C2:069E
+score: 6
+width: 25
+call_count: 4
+branch_count: 3
+stackish_count: 0
+return_count: 1
+session: 28
+rationale: Score-6 cluster from C2:0000-1000 region. 25 bytes with 4 calls, 3 branches. Vector table adjacent helper function. Cross-bank caller candidate.

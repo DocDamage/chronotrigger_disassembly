@@ -1,0 +1,13 @@
+pass: 1044
+address: 038A2A
+bank: 3
+label: ct_c3_4a2a_dispatch_handlers
+range: C3:4A2A-C3:4A53
+score: 11
+width: 42
+call_count: 5
+branch_count: 3
+stackish_count: 1
+return_count: 7
+session: 22
+rationale: Score 11 SUPERCLUSTER from C3:4800-5000 scan. 42 bytes with 7 returns, 5 calls - major dispatch table or state handler cluster. Related to C3:4548 dispatch pattern.

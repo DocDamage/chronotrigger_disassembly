@@ -1,0 +1,28 @@
+{
+  "pass": 1013,
+  "bank": "C3",
+  "label": "ct_c3_1498_stack_helper",
+  "address": "C3:1498",
+  "range": "C3:1498..C3:14A5",
+  "bytes": 14,
+  "category": "code",
+  "confidence": 5,
+  "reasoning": [
+    "Cluster score 5 - stack-focused utility",
+    "1 call reference, 1 branch, 2 returns",
+    "2 stack operations indicate stack manipulation",
+    "14-byte helper with dual return paths",
+    "ASCII ratio 0.429 - within code range"
+  ],
+  "findings": {
+    "calls": 1,
+    "branches": 1,
+    "stack_ops": 2,
+    "returns": 2,
+    "first_return": "C3:1499"
+  },
+  "flags": [],
+  "related": ["C3:1498", "C3:1499", "C3:14A5"],
+  "session": 20,
+  "status": "closed"
+}

@@ -1,0 +1,17 @@
+{
+  "pass": "1114",
+  "bank": "C3",
+  "start_address": "C3:B979",
+  "end_address": "C3:B9AC",
+  "label": "ct_c3_b979_large_block_score9",
+  "target": "C3:B979",
+  "confidence": "high",
+  "reasoning": "Score-9 cluster from C3_BANK_MAPPING_REPORT. 52-byte large function block in C3:B000-BFFF region. Significant coverage potential with 1 caller. Complex function with substantial logic.",
+  "cluster_score": 9,
+  "child_count": 4,
+  "return_count": 5,
+  "call_count": 1,
+  "gap_context": "C3:B900-BA00 large function region",
+  "promotion_reason": "Score-9 large block - 52 bytes provides significant coverage. Complex multi-path function.",
+  "session": "27"
+}

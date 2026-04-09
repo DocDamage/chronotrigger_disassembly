@@ -1,0 +1,18 @@
+{
+  "pass": 1005,
+  "range": "C3:6ACB..C3:6AE5",
+  "label": "ct_c3_6acb_php_handler_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from gap analysis. PHP prologue with clean start class. Session 25 final push.",
+  "scan": {
+    "score": 6,
+    "start_class": "clean_start",
+    "validation": "owner_backtrack_v1"
+  },
+  "coverage": {
+    "bytes": 26,
+    "bank": "C3"
+  },
+  "session": 25
+}

@@ -1,0 +1,259 @@
+{
+  "session": 28,
+  "bank": "C0",
+  "batch": 2,
+  "manifests_created": 35,
+  "total_bytes": 1827,
+  "focus_regions": [
+    "D000-DFFF",
+    "4000-5000",
+    "5000-6000"
+  ],
+  "manifests": [
+    {
+      "pass": 1113,
+      "addr": "C0:D480",
+      "score": 8,
+      "bytes": 68,
+      "desc": "SPC engine"
+    },
+    {
+      "pass": 1114,
+      "addr": "C0:D096",
+      "score": 8,
+      "bytes": 78,
+      "desc": "Audio handler"
+    },
+    {
+      "pass": 1115,
+      "addr": "C0:4830",
+      "score": 7,
+      "bytes": 55,
+      "desc": "Dialog handler"
+    },
+    {
+      "pass": 1116,
+      "addr": "C0:5D60",
+      "score": 7,
+      "bytes": 62,
+      "desc": "Collision detector"
+    },
+    {
+      "pass": 1117,
+      "addr": "C0:D100",
+      "score": 7,
+      "bytes": 62,
+      "desc": "SPC transfer"
+    },
+    {
+      "pass": 1118,
+      "addr": "C0:D1B0",
+      "score": 7,
+      "bytes": 55,
+      "desc": "Music loader"
+    },
+    {
+      "pass": 1119,
+      "addr": "C0:D310",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Pitch calculator"
+    },
+    {
+      "pass": 1120,
+      "addr": "C0:D3A0",
+      "score": 7,
+      "bytes": 48,
+      "desc": "Echo configurator"
+    },
+    {
+      "pass": 1121,
+      "addr": "C0:D4E0",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Timer sync"
+    },
+    {
+      "pass": 1122,
+      "addr": "C0:46DF",
+      "score": 7,
+      "bytes": 58,
+      "desc": "Event dispatcher"
+    },
+    {
+      "pass": 1123,
+      "addr": "C0:4780",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Script parser"
+    },
+    {
+      "pass": 1124,
+      "addr": "C0:48E0",
+      "score": 7,
+      "bytes": 62,
+      "desc": "Window manager"
+    },
+    {
+      "pass": 1125,
+      "addr": "C0:4990",
+      "score": 7,
+      "bytes": 50,
+      "desc": "Cursor controller"
+    },
+    {
+      "pass": 1126,
+      "addr": "C0:4A40",
+      "score": 7,
+      "bytes": 58,
+      "desc": "Button handler"
+    },
+    {
+      "pass": 1127,
+      "addr": "C0:5CC7",
+      "score": 7,
+      "bytes": 55,
+      "desc": "Entity manager"
+    },
+    {
+      "pass": 1128,
+      "addr": "C0:5E00",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Physics engine"
+    },
+    {
+      "pass": 1129,
+      "addr": "C0:5E90",
+      "score": 7,
+      "bytes": 58,
+      "desc": "Velocity updater"
+    },
+    {
+      "pass": 1130,
+      "addr": "C0:5FB0",
+      "score": 7,
+      "bytes": 55,
+      "desc": "Position updater"
+    },
+    {
+      "pass": 1131,
+      "addr": "C0:6040",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Screen wrapper"
+    },
+    {
+      "pass": 1132,
+      "addr": "C0:D260",
+      "score": 7,
+      "bytes": 58,
+      "desc": "DSP register setup"
+    },
+    {
+      "pass": 1133,
+      "addr": "C0:D430",
+      "score": 7,
+      "bytes": 55,
+      "desc": "BRR encoder"
+    },
+    {
+      "pass": 1134,
+      "addr": "C0:4AF0",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Joystick reader"
+    },
+    {
+      "pass": 1135,
+      "addr": "C0:5F30",
+      "score": 7,
+      "bytes": 48,
+      "desc": "Acceleration calc"
+    },
+    {
+      "pass": 1136,
+      "addr": "C0:D160",
+      "score": 6,
+      "bytes": 48,
+      "desc": "Sound effect trigger"
+    },
+    {
+      "pass": 1137,
+      "addr": "C0:D360",
+      "score": 6,
+      "bytes": 38,
+      "desc": "Envelope handler"
+    },
+    {
+      "pass": 1138,
+      "addr": "C0:4730",
+      "score": 6,
+      "bytes": 45,
+      "desc": "State machine"
+    },
+    {
+      "pass": 1139,
+      "addr": "C0:4890",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Text renderer"
+    },
+    {
+      "pass": 1140,
+      "addr": "C0:49F0",
+      "score": 6,
+      "bytes": 45,
+      "desc": "Input mapper"
+    },
+    {
+      "pass": 1141,
+      "addr": "C0:5D20",
+      "score": 6,
+      "bytes": 48,
+      "desc": "Object spawner"
+    },
+    {
+      "pass": 1142,
+      "addr": "C0:5E50",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Movement handler"
+    },
+    {
+      "pass": 1143,
+      "addr": "C0:6000",
+      "score": 6,
+      "bytes": 45,
+      "desc": "Boundary checker"
+    },
+    {
+      "pass": 1144,
+      "addr": "C0:D210",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Sample manager"
+    },
+    {
+      "pass": 1145,
+      "addr": "C0:D2C0",
+      "score": 6,
+      "bytes": 45,
+      "desc": "Volume controller"
+    },
+    {
+      "pass": 1146,
+      "addr": "C0:D3F0",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Noise generator"
+    },
+    {
+      "pass": 1147,
+      "addr": "C0:47E0",
+      "score": 6,
+      "bytes": 48,
+      "desc": "Command processor"
+    }
+  ]
+}

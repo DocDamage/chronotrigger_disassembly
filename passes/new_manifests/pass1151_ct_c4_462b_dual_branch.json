@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1151,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:462B",
+      "mode": "known_code",
+      "label": "ct_c4_462b_dual_branch",
+      "reason": "Score-5, 2 branches. 4000-5000 region."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 11
+    }
+  }
+}

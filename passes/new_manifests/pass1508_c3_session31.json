@@ -1,0 +1,19 @@
+{
+  "pass": 1508,
+  "range": "C3:CC00..C3:CC18",
+  "label": "ct_c3_cc00_data_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:CB64-DF00 gap. Data movement (MVN/MVP), 25 bytes, session 31 final push.",
+  "scan": {
+    "score": 6,
+    "width": 25,
+    "call_count": 0,
+    "branch_count": 0,
+    "stackish_count": 3,
+    "return_count": 1,
+    "first_return_address": "C3:CC17",
+    "ascii_ratio": 0.22,
+    "zero_ff_ratio": 0.0
+  }
+}

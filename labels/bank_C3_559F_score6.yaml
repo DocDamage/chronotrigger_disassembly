@@ -1,0 +1,53 @@
+# Bank C3 - Score 6 Function (SESSION 23)
+# C3:559F-55C1 - Multi-branch state handler
+
+range:
+  start: "C3:559F"
+  end: "C3:55C1"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 6
+  cluster_score: 6
+  width: 35
+  child_count: 2
+  children:
+    - "C3:559F-C3:55B1"
+    - "C3:55A9-C3:55C1"
+
+features:
+  - "Score 6 cluster"
+  - "6 branches (state machine)"
+  - "2 child variants"
+  - "Located in C3:5000-6000"
+  
+stats:
+  calls: 1
+  branches: 6
+  stackish: 2
+  returns: 2
+  ascii_ratio: 0.429
+
+confidence: 6
+status: "candidate"
+verified: false
+priority: "high"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:5000-6000 region
+  
+  Score 6 state handler with exceptional branch density.
+  6 branches in 35 bytes suggests a compact state machine.
+  
+  Features:
+  - 35 bytes, 2 entry variants
+  - 6 branches = state dispatch logic
+  - 2 stack operations
+  - 2 returns (two exit paths)
+  
+  Likely a state handler or small jump table that
+  processes multiple conditions.
+  
+  RECOMMENDATION: Priority disassembly - high branch count
+  makes this an interesting control flow target.

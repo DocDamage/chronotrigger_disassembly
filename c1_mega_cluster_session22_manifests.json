@@ -1,0 +1,253 @@
+{
+  "session": 22,
+  "region": "C1:4300-4500",
+  "mega_cluster": "C1:434A-43B7",
+  "secondary_cluster": "C1:43C6-43FA",
+  "manifests": [
+    {
+      "pass": 701,
+      "pass_number": 701,
+      "range": "C1:431B..C1:432B",
+      "closed_ranges": [
+        {
+          "range": "C1:431B..C1:432B",
+          "kind": "owner",
+          "label": "ct_c1_431b_entry_helper",
+          "confidence": "high"
+        }
+      ],
+      "metadata": {
+        "score": 5,
+        "width": 17,
+        "call_count": 0,
+        "branch_count": 1,
+        "return_count": 1,
+        "ascii_ratio": 0.294
+      },
+      "promotion_reason": "Pre-cluster entry point with score 5. 17 bytes. Single branch and return. Entry to mega-cluster region."
+    },
+    {
+      "pass": 702,
+      "pass_number": 702,
+      "range": "C1:432C..C1:4349",
+      "closed_ranges": [
+        {
+          "range": "C1:432C..C1:4349",
+          "kind": "owner",
+          "label": "ct_c1_432c_dispatch_trampoline",
+          "confidence": "high"
+        }
+      ],
+      "metadata": {
+        "score": 6,
+        "width": 29,
+        "instructions": [
+          "LDA $AE91",
+          "CMP #$03",
+          "BCC +3",
+          "JMP $4497",
+          "JSL $CC:F110",
+          "JSR $49FF",
+          "LDA $AE91",
+          "TAX",
+          "LDA $CC:F83F,X",
+          "TAX",
+          "LDA $1C48,X"
+        ],
+        "type": "dispatch_trampoline"
+      },
+      "promotion_reason": "DISPATCH TRAMPOLINE: 29 bytes. Validates index, calls JSL to bank CC, loads function pointer from table at CC:F83F. Critical gap-filling code between entry and mega-cluster."
+    },
+    {
+      "pass": 703,
+      "pass_number": 703,
+      "range": "C1:434A..C1:43B7",
+      "closed_ranges": [
+        {
+          "range": "C1:434A..C1:43B7",
+          "kind": "owner",
+          "label": "ct_c1_434a_mega_cluster",
+          "confidence": "high"
+        }
+      ],
+      "metadata": {
+        "cluster_score": 17,
+        "width": 110,
+        "child_count": 11,
+        "child_ranges": [
+          "C1:434A..C1:4362",
+          "C1:4351..C1:4369",
+          "C1:4358..C1:4370",
+          "C1:435F..C1:4377",
+          "C1:4366..C1:437E",
+          "C1:4375..C1:438D",
+          "C1:4383..C1:439B",
+          "C1:438A..C1:43A2",
+          "C1:4391..C1:43A9",
+          "C1:4398..C1:43B0",
+          "C1:439F..C1:43B7"
+        ],
+        "call_count": 4,
+        "branch_count": 7,
+        "return_count": 11,
+        "ascii_ratio": 0.282
+      },
+      "promotion_reason": "MEGA CLUSTER: Score 17, 110 bytes, 11 children. Primary game logic cluster. 4 calls, 7 branches, 11 returns. Core function group in Bank C1."
+    },
+    {
+      "pass": 704,
+      "pass_number": 704,
+      "range": "C1:43C6..C1:43FA",
+      "closed_ranges": [
+        {
+          "range": "C1:43C6..C1:43FA",
+          "kind": "owner",
+          "label": "ct_c1_43c6_secondary_cluster",
+          "confidence": "high"
+        }
+      ],
+      "metadata": {
+        "cluster_score": 10,
+        "width": 53,
+        "child_count": 6,
+        "child_ranges": [
+          "C1:43C6..C1:43CF",
+          "C1:43C6..C1:43D6",
+          "C1:43C6..C1:43DD",
+          "C1:43CC..C1:43E4",
+          "C1:43D3..C1:43EB",
+          "C1:43E2..C1:43FA"
+        ],
+        "branch_count": 2,
+        "return_count": 7,
+        "ascii_ratio": 0.245
+      },
+      "promotion_reason": "SECONDARY CLUSTER: Score 10, 53 bytes, 6 children. Companion to mega-cluster. 2 branches, 7 returns."
+    },
+    {
+      "pass": 705,
+      "pass_number": 705,
+      "range": "C1:43FB..C1:4440",
+      "closed_ranges": [
+        {
+          "range": "C1:43FB..C1:4440",
+          "kind": "owner",
+          "label": "ct_c1_43fb_table_loader",
+          "confidence": "medium"
+        }
+      ],
+      "metadata": {
+        "score": 5,
+        "width": 70,
+        "instructions": [
+          "CMP $778D",
+          "TYA",
+          "BRA +0",
+          "REP #$20",
+          "LDA $987E",
+          "ASL",
+          "TAX",
+          "LDA $D1:0000,X",
+          "STA $987F",
+          "LDA $987E",
+          "ASL",
+          "TAX",
+          "LDA $D1:0000,X",
+          "STA $987F"
+        ],
+        "type": "data_loader"
+      },
+      "promotion_reason": "TABLE LOADER: 70 bytes. Loads values from bank D1 via indexed table lookups. Multiple LDA long (BF) instructions. Fills gap after secondary cluster."
+    },
+    {
+      "pass": 706,
+      "pass_number": 706,
+      "range": "C1:4200..C1:4211",
+      "closed_ranges": [
+        {
+          "range": "C1:4200..C1:4211",
+          "kind": "owner",
+          "label": "ct_c1_4200_helper",
+          "confidence": "medium"
+        }
+      ],
+      "metadata": {
+        "score": 6,
+        "width": 18,
+        "call_count": 1,
+        "branch_count": 1,
+        "return_count": 1,
+        "ascii_ratio": 0.111
+      },
+      "promotion_reason": "Helper function in C1:4200 region. Score 6, 18 bytes. Has 1 caller."
+    },
+    {
+      "pass": 707,
+      "pass_number": 707,
+      "range": "C1:44FA..C1:4512",
+      "closed_ranges": [
+        {
+          "range": "C1:44FA..C1:4512",
+          "kind": "owner",
+          "label": "ct_c1_44fa_array_handler",
+          "confidence": "medium"
+        }
+      ],
+      "metadata": {
+        "score": 3,
+        "width": 25,
+        "call_count": 1,
+        "return_count": 1,
+        "ascii_ratio": 0.32
+      },
+      "promotion_reason": "Array handler function. Score 3, 25 bytes. Has 1 caller, 1 return. Post-gap region function."
+    },
+    {
+      "pass": 708,
+      "pass_number": 708,
+      "range": "C1:45DC..C1:45F4",
+      "closed_ranges": [
+        {
+          "range": "C1:45DC..C1:45F4",
+          "kind": "owner",
+          "label": "ct_c1_45dc_helper",
+          "confidence": "medium"
+        }
+      ],
+      "metadata": {
+        "score": 5,
+        "width": 25,
+        "call_count": 1,
+        "return_count": 1,
+        "ascii_ratio": 0.24
+      },
+      "promotion_reason": "Helper function. Score 5, 25 bytes. Has 1 caller, 1 return."
+    }
+  ],
+  "gap_analysis": {
+    "C1:432C-4349": {
+      "bytes": 29,
+      "content": "dispatch_trampoline",
+      "fills_gap": true,
+      "description": "Index validation and dispatch logic. JSL to CC:F110, loads function pointer from table at CC:F83F"
+    },
+    "C1:43FB-4450": {
+      "bytes": 85,
+      "content": "table_loader_functions",
+      "fills_gap": true,
+      "description": "Multiple table lookup functions loading data from bank D1. Uses LDA long (BF) instructions."
+    },
+    "C1:4212-431A": {
+      "bytes": 264,
+      "content": "unscanned_data_or_code",
+      "fills_gap": false,
+      "description": "Large gap with 254 non-zero bytes. Needs further analysis."
+    }
+  },
+  "summary": {
+    "total_manifests": 8,
+    "total_bytes_covered": 347,
+    "gaps_filled": 2,
+    "mega_cluster_context": "complete"
+  }
+}

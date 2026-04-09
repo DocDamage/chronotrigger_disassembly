@@ -1,0 +1,35 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 28
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:937A"
+  end_addr: "C1:938C"
+  name: "ct_c1_937a_dispatch_handler_s28"
+  type: "dispatch_handler"
+
+evidence:
+  score: 6
+  scan_width: 19
+  region: "C1:9000-A000"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-6 dispatch handler. Mirror of 9301 pattern."
+      confidence: high
+
+references:
+  called_from: "C1:9389"
+  hub_function: "C1:8C3E"
+
+provenance:
+  source: "Session 28 targeted analysis"
+  pass_number: 597
+  selection_reason: "Score-6 dispatch handler. Mirror of 9301 pattern."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

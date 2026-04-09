@@ -1,0 +1,13 @@
+pass: 1068
+address: 02535F
+bank: 2
+label: ct_c2_535f_subroutine
+range: C2:535F-C2:5379
+score: 6
+width: 27
+call_count: 1
+branch_count: 0
+stackish_count: 1
+return_count: 1
+session: 27
+rationale: Score-6 backtrack candidate from C2:5300 scan. JSR entry at C2:535F targeting C2:5361. Called from C2:51C5. 27 bytes with clean instruction sequence.

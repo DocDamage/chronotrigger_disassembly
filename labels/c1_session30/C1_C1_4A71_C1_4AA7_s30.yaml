@@ -1,0 +1,26 @@
+# Session 30 Manifest - Pass 1111
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1111
+
+target:
+  bank: "C1"
+  range: "C1:4A71..C1:4AA7"
+  label: "ct_c1_4a71_library_calc_xy"
+  confidence: "medium"
+  kind: "owner"
+
+metadata:
+  score: 6
+  source: "c1_hub_manifests.py"
+  promotion_reason: "Score-6 candidate. X/Y coordinate calculation function. TDC/TAX/TAY pattern. Ass..."
+  associated_hub: "C1:4AEB"
+
+promotion_reason: |
+  Score-6 candidate. X/Y coordinate calculation function. TDC/TAX/TAY pattern. Associated with library hub.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

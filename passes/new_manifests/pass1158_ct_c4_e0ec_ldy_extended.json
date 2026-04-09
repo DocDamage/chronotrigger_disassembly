@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1158,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:E0EC",
+      "mode": "known_code",
+      "label": "ct_c4_e0ec_ldy_extended",
+      "reason": "Extended score-6 LDY# function. Multiple callers."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 37
+    }
+  }
+}

@@ -11,9 +11,7 @@ Identifies:
 import argparse
 from pathlib import Path
 
-def hirom_to_file_offset(bank, addr):
-    """Convert HiROM SNES address to file offset."""
-    return ((bank - 0xC0) * 0x10000) + addr
+from snes_utils import format_snes_range, slice_rom_range
 
 def detect_repeating_pattern(data, pattern_length=4, min_repeats=4):
     """Detect repeating byte patterns."""
@@ -42,11 +40,8 @@ def detect_ascii_text(data, threshold=0.7):
 def analyze_region(rom_path, bank, start, end):
     """Analyze a ROM region for data patterns."""
     rom = Path(rom_path).read_bytes()
-    
-    file_start = hirom_to_file_offset(bank, start)
-    file_end = hirom_to_file_offset(bank, end)
-    
-    data = rom[file_start:file_end]
+
+    data = slice_rom_range(rom, format_snes_range(bank, start, end))
     
     results = {
         'bank': f"{bank:02X}",

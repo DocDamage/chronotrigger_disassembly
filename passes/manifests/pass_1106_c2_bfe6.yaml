@@ -1,0 +1,13 @@
+pass: 1106
+address: 02BFE6
+bank: 2
+label: ct_c2_bfe6_bank_end_handler_s29
+range: C2:BFE6-C2:BFFE
+score: 7
+width: 25
+call_count: 2
+branch_count: 2
+stackish_count: 1
+return_count: 1
+session: 29
+rationale: C2:B000-C000 region - Score-7 cluster near bank end. Late-bank helper function with clean RTS termination.

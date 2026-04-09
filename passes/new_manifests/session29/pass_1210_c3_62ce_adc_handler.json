@@ -1,0 +1,27 @@
+{
+  "pass_index": 1210,
+  "bank": "C3",
+  "session": 29,
+  "source": "score-4 candidate from C3:6000-6FFF discovery",
+  "reason": "ADC handler, C3:6200 page",
+  "score": 4,
+  "target": {
+    "start": "C3:62CE",
+    "end": "C3:62D1",
+    "data": ["ADC $7E2000", "STA $7E3000", "RTS"],
+    "bytes": ["6F", "00", "20", "7E", "8F", "00", "30", "7E", "60"]
+  },
+  "metadata": {
+    "prologue": "ADC",
+    "epilogue": "RTS",
+    "callers": [],
+    "verification": "score-4 candidate, manual validation required",
+    "estimated_bytes": 9
+  },
+  "manifest_metadata": {
+    "author": "Session 29 - Score-4/5 Processing",
+    "created": "2026-04-08",
+    "priority": "gap_fill",
+    "coverage_target": "30%"
+  }
+}

@@ -1,0 +1,30 @@
+# Bank C0 - Score 9 CLUSTER Candidate
+# Session 25 - Generated for 22% coverage push
+
+range:
+  start: "C0:CA4D"
+  end: "C0:CA7C"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 9
+  width: 47
+  
+features:
+  start_byte: "??"
+  start_class: "island"
+  target: ""
+  call_count: 0
+  branch_count: 6
+  return_count: 5
+  child_count: 5
+  
+confidence: 9
+status: "candidate"
+verified: false
+
+notes: |
+  Score-9 ULTRA HIGH CONFIDENCE cluster from C0:C000-D000 scan.
+  5 overlapping islands merged, 6 branches, 5 returns.
+  Very likely large function or handler routine.
+  Part of Session 25 push toward 22% coverage target.

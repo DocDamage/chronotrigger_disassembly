@@ -1,0 +1,27 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1242 - Full bank scan
+
+range:
+  start: "C0:3A6A"
+  end: "C0:3A82"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 3
+  branches: 1
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.2
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score-6 candidate from full C0 bank scan.
+  Calls: 3, Branches: 1, Returns: 1
+  Part of Session 24 push toward 21% coverage target.

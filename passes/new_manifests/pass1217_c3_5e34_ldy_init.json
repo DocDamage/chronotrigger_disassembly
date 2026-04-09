@@ -1,0 +1,14 @@
+{
+  "pass": 1217,
+  "bank": "C3",
+  "start_address": "C3:5E34",
+  "end_address": "C3:5E54",
+  "label": "ct_c3_5e34_ldy_init",
+  "target": "C3:5E34",
+  "confidence": "high",
+  "reasoning": "Score-6 LDY initialization function. Index register setup with validation. C3:5000-5FFF game logic region.",
+  "score": 6,
+  "gap_context": "C3:5000-5FFF game logic region",
+  "promotion_reason": "Score-6 LDY init. Game logic region candidate with validation.",
+  "session": "30"
+}

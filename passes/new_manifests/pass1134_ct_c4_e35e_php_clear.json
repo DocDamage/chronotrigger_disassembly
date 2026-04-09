@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1134,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:E35E",
+      "mode": "known_code",
+      "label": "ct_c4_e35e_php_clear",
+      "reason": "Score-6, PHP prologue. Clear pattern."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 29
+    }
+  }
+}

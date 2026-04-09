@@ -1,0 +1,26 @@
+# Session 30 Manifest - Pass 1104
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1104
+
+target:
+  bank: "C1"
+  range: "C1:CDEE..C1:CDFF"
+  label: "ct_c1_cdee_score7_handler_s30"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 7
+  source: "C1_initial_scan_summary.json"
+  promotion_reason: "Score-7 candidate update. 17 bytes width. Handler function in C1:C000-CFFF regio..."
+  previous_sessions: [25]
+
+promotion_reason: |
+  Score-7 candidate update. 17 bytes width. Handler function in C1:C000-CFFF region. Validated in session 25.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

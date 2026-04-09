@@ -1,0 +1,18 @@
+{
+  "pass": 1005,
+  "label": "CT_C0_B0E4_SystemFunc_Score6",
+  "address": "C0:B0E4",
+  "snes_address": "$C0$B0E4",
+  "score": 6,
+  "description": "System function with JSR prologue in B000 region",
+  "type": "function",
+  "status": "candidate",
+  "size": 27,
+  "region": "B000-BFFF",
+  "features": {
+    "start_byte": "20",
+    "pattern": "JSR_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

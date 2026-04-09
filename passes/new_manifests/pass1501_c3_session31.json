@@ -1,0 +1,19 @@
+{
+  "pass": 1501,
+  "range": "C3:1200..C3:1218",
+  "label": "ct_c3_1200_utility_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:0878-1300 gap. JSR prologue utility, 25 bytes, session 31 final push.",
+  "scan": {
+    "score": 6,
+    "width": 25,
+    "call_count": 2,
+    "branch_count": 1,
+    "stackish_count": 1,
+    "return_count": 1,
+    "first_return_address": "C3:1217",
+    "ascii_ratio": 0.12,
+    "zero_ff_ratio": 0.0
+  }
+}

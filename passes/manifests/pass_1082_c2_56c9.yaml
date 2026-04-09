@@ -1,0 +1,13 @@
+pass: 1082
+address: 0256C9
+bank: 2
+label: ct_c2_56c9_jsr_routine
+range: C2:56C9-C2:56E8
+score: 6
+width: 32
+call_count: 2
+branch_count: 0
+stackish_count: 1
+return_count: 1
+session: 27
+rationale: Score-6 backtrack candidate from C2:5600 scan. JSR prologue targeting C2:56D0. 32 bytes with 2 calls, clean start. Cross-bank caller from C2:3100.

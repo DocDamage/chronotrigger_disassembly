@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1161,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:FDFE",
+      "mode": "known_code",
+      "label": "ct_c4_fdfe_php_handler",
+      "reason": "Score-6, PHP prologue. High-page handler."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 28
+    }
+  }
+}

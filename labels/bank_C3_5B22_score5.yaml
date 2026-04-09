@@ -1,0 +1,45 @@
+# Bank C3 - Score 5 Function (SESSION 23)
+# C3:5B22-5B3A - C3:5000-6000 region handler
+
+range:
+  start: "C3:5B22"
+  end: "C3:5B3A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 5
+  cluster_score: 5
+  width: 25
+  child_count: 1
+
+features:
+  - "Score 5 function"
+  - "2 calls"
+  - "2 branches"
+  - "C3:5000-6000 region"
+  
+stats:
+  calls: 2
+  branches: 2
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.4
+
+confidence: 5
+status: "candidate"
+verified: false
+priority: "medium"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:5000-6000 region
+  
+  Score 5 function in the C3:5000-6000 extended region.
+  
+  Features:
+  - 25 bytes
+  - 2 calls, 2 branches
+  - 1 stack operation
+  - ASCII ratio 0.4
+  
+  RECOMMENDATION: Standard disassembly candidate.

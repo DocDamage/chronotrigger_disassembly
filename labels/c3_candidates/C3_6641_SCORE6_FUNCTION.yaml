@@ -1,0 +1,36 @@
+# Bank C3 - Score 6 Function Candidate (Session 24)
+# Range: C3:6641..C3:6649
+
+candidate:
+  bank: "C3"
+  start: "C3:6641"
+  end: "C3:6649"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  score: 6
+  width: 9
+  
+features:
+  calls: 1
+  branches: 1
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.222
+
+analysis:
+  type: "function"
+  description: |
+    Compact 9-byte score-6 function.
+    Balanced call, branch, and return indicators.
+    Low ASCII ratio (0.222) suggests code over data.
+
+confidence: 6
+status: "candidate"
+verified: false
+coverage_gain: 9
+
+notes: |
+  Score-6 candidate from C3:6000-7000 scan.
+  Small but high-confidence function candidate.

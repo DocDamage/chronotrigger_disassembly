@@ -1,0 +1,27 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 21 Pass 1024 - Auto-generated from C0:2800-4000 scan
+
+range:
+  start: "C0:2B5F"
+  end: "C0:2B77"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 3
+  branches: 6
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.2
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  High-score candidate with 6 branches in C0:2800-3000 region.
+  3 calls suggest multiple callers, 1 stack operation (PHP/PLP pattern).
+  Candidate for subroutine with complex internal control flow.

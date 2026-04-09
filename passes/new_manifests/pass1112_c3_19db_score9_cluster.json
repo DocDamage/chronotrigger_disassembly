@@ -1,0 +1,17 @@
+{
+  "pass": "1112",
+  "bank": "C3",
+  "start_address": "C3:19DB",
+  "end_address": "C3:1A05",
+  "label": "ct_c3_19db_high_density_score9",
+  "target": "C3:19DB",
+  "confidence": "high",
+  "reasoning": "Score-9 cluster from C3_BANK_MAPPING_REPORT. 43 bytes with high function density and 4 callers. Located in C3:1800-2000 region. Strong candidate for game logic function.",
+  "cluster_score": 9,
+  "child_count": 3,
+  "return_count": 4,
+  "call_count": 4,
+  "gap_context": "C3:1800-2000 high-density region",
+  "promotion_reason": "Score-9 high-density cluster - 4 callers, 43 bytes. Tier 1 target from mapping report.",
+  "session": "27"
+}

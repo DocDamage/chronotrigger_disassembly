@@ -1,0 +1,14 @@
+pass: 1033
+address: 02B475
+bank: 2
+label: ct_c2_b475_jsr_handler
+range: C2:B475-C2:B49B
+score: 7
+width: 39
+call_count: 4
+branch_count: 3
+stackish_count: 1
+return_count: 2
+session: 24
+parent_hub: C2:B12A
+rationale: Score 7 cluster in B400 region, 4 calls, 2 returns, dispatch handler with multiple entry points

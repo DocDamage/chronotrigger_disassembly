@@ -1,0 +1,18 @@
+{
+  "pass": 1519,
+  "range": "C3:F000..C3:F028",
+  "label": "ct_c3_f000_final_score7",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-7 final handler from C3:F000 region, session 31 final push.",
+  "scan": {
+    "score": 7,
+    "width": 41,
+    "call_count": 1,
+    "branch_count": 2,
+    "stackish_count": 2,
+    "return_count": 1,
+    "ascii_ratio": 0.15,
+    "zero_ff_ratio": 0.0
+  }
+}

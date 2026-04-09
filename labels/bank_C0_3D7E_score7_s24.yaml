@@ -1,0 +1,27 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 24 Pass 1233 - Full bank scan
+
+range:
+  start: "C0:3D7E"
+  end: "C0:3D96"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 1
+  branches: 2
+  stackish: 1
+  returns: 2
+  ascii_ratio: 0.24
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Score-7 candidate from full C0 bank scan.
+  Calls: 1, Branches: 2, Returns: 2
+  Part of Session 24 push toward 21% coverage target.

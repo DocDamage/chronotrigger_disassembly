@@ -1,0 +1,33 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 27
+  author: "Kimi Code CLI"
+  
+target:
+  bank: "C1"
+  address: "C1:4744"
+  name: "ct_c1_4744_handler_s27"
+  type: "subroutine"
+  
+evidence:
+  score: 7
+  scan_width: 23
+  region: "C1:4000-5000"
+  features:
+    - type: "instruction_pattern"
+      description: "Post-ecosystem region beyond C1:4600 mega-cluster boundary"
+      confidence: high
+    - type: "call_pattern"
+      description: "2 calls, 5 branches, stack operation"
+      confidence: high
+  
+provenance:
+  source: "Session 27 candidate selection"
+  previous_session: "C1_SESSION24"
+  selection_reason: "Score-7 cluster, high-value target in 4000 region"
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

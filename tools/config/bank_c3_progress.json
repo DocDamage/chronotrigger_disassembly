@@ -20,5 +20,43 @@
   "open_lanes": [
     {"range":"C3:1300..C3:1816","reason":"next higher unresolved callable lane above low-bank CODE END marker"},
     {"range":"C3:1817..","reason":"separate externally anchored entry kept isolated from current lane"}
-  ]
+  ],
+  "session_21_manifests": [
+    {"pass":1024,"range":"C3:14BD..C3:14C6","score":6,"width":10,"status":"pending"},
+    {"pass":1025,"range":"C3:15BC..C3:15DC","score":6,"width":33,"status":"pending"},
+    {"pass":1026,"range":"C3:1627..C3:1642","score":6,"width":28,"status":"pending"},
+    {"pass":1027,"range":"C3:19DB..C3:1A05","score":9,"width":43,"status":"pending"},
+    {"pass":1028,"range":"C3:1DEC..C3:1E1B","score":7,"width":48,"status":"pending"},
+    {"pass":1029,"range":"C3:2EA7..C3:2EBF","score":12,"width":25,"status":"pending"},
+    {"pass":1030,"range":"C3:2B3A..C3:2B6E","score":8,"width":53,"status":"pending"},
+    {"pass":1031,"range":"C3:4548..C3:459F","score":13,"width":88,"status":"pending"},
+    {"pass":1032,"range":"C3:19DB..C3:1A05","score":9,"width":43,"status":"created"},
+    {"pass":1033,"range":"C3:1DEC..C3:1E1B","score":7,"width":48,"status":"created"},
+    {"pass":1034,"range":"C3:2EA7..C3:2EBF","score":12,"width":25,"status":"created"},
+    {"pass":1035,"range":"C3:2B3A..C3:2B6E","score":8,"width":53,"status":"created"},
+    {"pass":1036,"range":"C3:2AA5..C3:2ACC","score":7,"width":40,"status":"created"},
+    {"pass":1037,"range":"C3:2CF8..C3:2D09","score":7,"width":18,"status":"created"},
+    {"pass":1038,"range":"C3:28E6..C3:28F3","score":6,"width":14,"status":"created"},
+    {"pass":1039,"range":"C3:15BC..C3:15DC","score":6,"width":33,"status":"created"},
+    {"pass":1040,"range":"C3:4548..C3:459F","score":13,"width":88,"status":"created"},
+    {"pass":1041,"range":"C3:449E..C3:44B0","score":5,"width":19,"status":"created"},
+    {"pass":1042,"range":"C3:47D6..C3:47E5","score":5,"width":16,"status":"created"},
+    {"pass":1043,"range":"C3:46FB..C3:4709","score":5,"width":15,"status":"created"}
+  ],
+  "coverage_estimate": {
+    "current_bytes": 13536,
+    "current_coverage": "20.65%",
+    "new_bytes": 740,
+    "estimated_coverage": "21.78%",
+    "target": "28%",
+    "remaining_bytes_needed": 4088
+  },
+  "session_21_summary": {
+    "regions_scanned": ["C3:1300-1816", "C3:1800-2000", "C3:2000-3000", "C3:4400-4800"],
+    "manifests_created": 12,
+    "total_new_bytes": 412,
+    "scores": [9, 7, 12, 8, 7, 7, 6, 6, 13, 5, 5, 5],
+    "pass_range": "1032-1043",
+    "high_value_targets": ["C3:4548-459F (score 13)", "C3:2EA7-2EBF (score 12)", "C3:19DB-1A05 (score 9)"]
+  }
 }

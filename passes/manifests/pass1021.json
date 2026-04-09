@@ -1,0 +1,29 @@
+{
+  "pass": 1021,
+  "bank": "C0",
+  "label": "ct_c0_243b_stack_utility",
+  "address": "C0:243B",
+  "range": "C0:243B..C0:2450",
+  "bytes": 22,
+  "category": "code",
+  "confidence": 6,
+  "reasoning": [
+    "Score 6 cluster with stack operations",
+    "Stack push/pull pattern detected",
+    "22 bytes - compact utility function",
+    "Located in mid-2000 region of Bank C0",
+    "Pattern consistent with register preservation utility",
+    "Common prologue/epilogue pattern for function calls"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 0,
+    "stack_ops": 2,
+    "returns": 1,
+    "first_return": "C0:2450"
+  },
+  "flags": ["score6", "stack_operation"],
+  "related": ["C0:243B", "C0:2450"],
+  "session": 20,
+  "status": "closed"
+}

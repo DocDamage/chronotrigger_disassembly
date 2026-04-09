@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1157,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:FF0F",
+      "mode": "known_code",
+      "label": "ct_c4_ff0f_php_extended",
+      "reason": "Extended score-6 PHP function. End-of-bank."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 40
+    }
+  }
+}

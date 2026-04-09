@@ -1,0 +1,13 @@
+pass: 1092
+address: 026221
+bank: 2
+label: ct_c2_6221_multi_return
+range: C2:6221-C2:6232
+score: 6
+width: 18
+call_count: 1
+branch_count: 2
+stackish_count: 0
+return_count: 3
+session: 28
+rationale: Score-6 cluster from C2:6000-7000 region. 18 bytes with 3 returns (multi-exit pattern). Exception handler or switch dispatch function.

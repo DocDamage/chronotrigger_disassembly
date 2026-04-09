@@ -1,0 +1,22 @@
+{
+  "pass": 1114,
+  "label": "CT_C0_64FD_High_Caller",
+  "address": "C0:64FD",
+  "snes_address": "$C064FD",
+  "score": 7,
+  "description": "HIGH USAGE: 11 callers - shared utility function",
+  "type": "utility",
+  "size": 62,
+  "status": "mapped",
+  "region": "60AC-6EF8 gap",
+  "scan_data": {
+    "width": 62,
+    "call_count": 11,
+    "branch_count": 7,
+    "return_count": 6,
+    "ascii_ratio": 0.371,
+    "cluster_score": 7
+  },
+  "session": 23,
+  "created": "2026-04-08T15:14:44"
+}

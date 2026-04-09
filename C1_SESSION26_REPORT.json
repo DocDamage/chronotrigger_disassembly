@@ -1,0 +1,127 @@
+{
+  "session": 26,
+  "bank": "C1",
+  "total_manifests": 12,
+  "total_bytes": 444,
+  "score_distribution": {
+    "8": 1,
+    "7": 11
+  },
+  "region_distribution": {
+    "9000-A000": 3,
+    "A000-B000": 2,
+    "3000-4000": 3,
+    "E000-F000": 3,
+    "5000-6000": 1
+  },
+  "manifests": [
+    {
+      "filepath": "labels/c1_session26\\C1_9792_score8_s26.yaml",
+      "name": "ct_c1_9792_score8_cluster_s26",
+      "range": "C1:9792..C1:97D4",
+      "score": 8,
+      "region": "9000-A000",
+      "width": 66
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_96D4_score7_s26.yaml",
+      "name": "ct_c1_96d4_dispatch_handler_s26",
+      "range": "C1:96D4..C1:9727",
+      "score": 7,
+      "region": "9000-A000",
+      "width": 83
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_97D5_score7_s26.yaml",
+      "name": "ct_c1_97d5_dispatch_handler_s26",
+      "range": "C1:97D5..C1:980F",
+      "score": 7,
+      "region": "9000-A000",
+      "width": 58
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_A8F0_score7_s26.yaml",
+      "name": "ct_c1_a8f0_handler_s26",
+      "range": "C1:A8F0..C1:A910",
+      "score": 7,
+      "region": "A000-B000",
+      "width": 32
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_3AF3_score7_s26.yaml",
+      "name": "ct_c1_3af3_handler_s26",
+      "range": "C1:3AF3..C1:3B0C",
+      "score": 7,
+      "region": "3000-4000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_3C7D_score7_s26.yaml",
+      "name": "ct_c1_3c7d_handler_s26",
+      "range": "C1:3C7D..C1:3C92",
+      "score": 7,
+      "region": "3000-4000",
+      "width": 21
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_3F8B_score7_s26.yaml",
+      "name": "ct_c1_3f8b_handler_s26",
+      "range": "C1:3F8B..C1:3FA4",
+      "score": 7,
+      "region": "3000-4000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_A130_score7_s26.yaml",
+      "name": "ct_c1_a130_handler_s26",
+      "range": "C1:A130..C1:A14A",
+      "score": 7,
+      "region": "A000-B000",
+      "width": 26
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_E99F_score7_s26.yaml",
+      "name": "ct_c1_e99f_handler_s26",
+      "range": "C1:E99F..C1:E9BB",
+      "score": 7,
+      "region": "E000-F000",
+      "width": 28
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_E9BC_score7_s26.yaml",
+      "name": "ct_c1_e9bc_handler_s26",
+      "range": "C1:E9BC..C1:E9D5",
+      "score": 7,
+      "region": "E000-F000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_EDA0_score7_s26.yaml",
+      "name": "ct_c1_eda0_handler_s26",
+      "range": "C1:EDA0..C1:EDBC",
+      "score": 7,
+      "region": "E000-F000",
+      "width": 28
+    },
+    {
+      "filepath": "labels/c1_session26\\C1_51D5_score7_s26.yaml",
+      "name": "ct_c1_51d5_handler_s26",
+      "range": "C1:51D5..C1:51F0",
+      "score": 7,
+      "region": "5000-6000",
+      "width": 27
+    }
+  ],
+  "target_regions": [
+    "3000-4000",
+    "9000-A000",
+    "A000-B000",
+    "E000-F000"
+  ],
+  "selection_criteria": [
+    "Score-7+ prioritized",
+    "Score-6 with multiple calls/branches",
+    "High-density region focus",
+    "Maximum 3 per region for distribution"
+  ]
+}

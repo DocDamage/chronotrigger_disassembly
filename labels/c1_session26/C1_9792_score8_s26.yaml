@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 26,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:9792",
+    "end_addr": "C1:97D4",
+    "name": "ct_c1_9792_score8_cluster_s26"
+  },
+  "metadata": {
+    "score": 8,
+    "call_count": 3,
+    "branch_count": 4,
+    "return_count": 1,
+    "width": 66,
+    "region": "9000-A000",
+    "selection_reason": "SCORE-8 MEGA CANDIDATE. 3 callers, high branch count. Priority target."
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

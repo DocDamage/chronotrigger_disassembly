@@ -1,0 +1,14 @@
+{
+  "pass": 1203,
+  "bank": "C3",
+  "start_address": "C3:06CE",
+  "end_address": "C3:06F5",
+  "label": "ct_c3_06ce_ply_handler",
+  "target": "C3:06CE",
+  "confidence": "high",
+  "reasoning": "Score-6 PLY (pull Y) handler. Stack restoration pattern. Gap fill for C3:0529-08A0 region.",
+  "score": 6,
+  "gap_context": "C3:0529-08A0 early gap",
+  "promotion_reason": "Score-6 PLY handler. Stack restoration epilogue pattern.",
+  "session": "30"
+}

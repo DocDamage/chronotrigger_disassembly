@@ -1,0 +1,36 @@
+# Bank C2 - Score 6 Multi-Return Function
+# Session 23 - A500 Region Analysis
+
+range:
+  start: "C2:A5A8"
+  end: "C2:A5C2"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 27
+  cluster: true
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.26
+  child_count: 2
+  child_ranges:
+    - "C2:A5A8..C2:A5B5"
+    - "C2:A5AA..C2:A5C2"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 multi-return function in A500 region (A5A8-A5C2).
+  27 bytes with 2 overlapping children.
+  Adjacent to A5D2 score-7 cluster.
+  Part of A500-A600 dense code region.
+  Multiple returns suggest conditional early exit pattern.
+  May coordinate between A4FF and A6D7 clusters.
+  Located 4,874 bytes before B716 hub.

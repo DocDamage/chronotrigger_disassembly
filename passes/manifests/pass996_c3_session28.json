@@ -1,0 +1,20 @@
+{
+  "pass_number": 996,
+  "bank": "C3",
+  "start_address": "C3:AF42",
+  "end_address": "C3:AF60",
+  "label": "ct_c3_af42_ldy_init",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:AF4A",
+  "prologue_byte": "A0",
+  "prologue_mnemonic": "LDY#",
+  "backtrack_distance": 8,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:AF00 region. LDY immediate prologue.",
+  "notes": [
+    "31-byte function with Y-register initialization",
+    "Paired with C3:ADF8 in same memory page"
+  ]
+}

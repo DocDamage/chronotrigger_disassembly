@@ -1,0 +1,34 @@
+{
+  "pass_number": 943,
+  "label": "CT_C1_43C6_SECONDARY_CLUSTER",
+  "addr": "C1:43C6",
+  "range": "C1:43C6..C1:43FA",
+  "score": 7,
+  "cluster_score": 10,
+  "type": "cluster",
+  "bank": "C1",
+  "width": 53,
+  "child_count": 6,
+  "confidence": 7,
+  "evidence": "SECONDARY cluster score 10: 6 child islands merged, 2 branches, 7 returns, ASCII ratio 0.30 - adjacent to mega cluster",
+  "child_ranges": [
+    "C1:43C6..C1:43DE",
+    "C1:43CD..C1:43E5",
+    "C1:43D4..C1:43EC",
+    "C1:43DB..C1:43F3",
+    "C1:43E2..C1:43FA",
+    "C1:43E9..C1:43FA"
+  ],
+  "features": {
+    "calls": 2,
+    "branches": 2,
+    "stackish": 1,
+    "returns": 7,
+    "ascii_ratio": 0.30,
+    "data_misread_flags": []
+  },
+  "note": "53-byte secondary cluster immediately following C1:434A mega cluster - likely helper functions or continuation of dispatch logic",
+  "category": "code",
+  "kind": "helper",
+  "related_to": "C1:434A"
+}

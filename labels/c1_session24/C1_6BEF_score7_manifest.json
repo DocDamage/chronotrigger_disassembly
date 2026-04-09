@@ -1,0 +1,17 @@
+{
+  "pass": 1048,
+  "bank": "C1",
+  "session": 24,
+  "range": "C1:6BEF..C1:6C07",
+  "score": 7,
+  "width": 25,
+  "call_count": 1,
+  "branch_count": 3,
+  "stackish_count": 2,
+  "return_count": 1,
+  "ascii_ratio": 0.28,
+  "source": "C1:6000-8000_upper_bank_scan",
+  "reason": "Score-7 cluster with call, 3 branches, 2 stack operations. PHP/PLP pattern with multiple branches suggests state machine handler.",
+  "related_to": "C1:6B00-6C00_region",
+  "timestamp": "2026-04-08T15:20:00-04:00"
+}

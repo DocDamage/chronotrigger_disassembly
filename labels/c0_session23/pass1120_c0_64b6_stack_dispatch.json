@@ -1,0 +1,23 @@
+{
+  "pass": 1120,
+  "label": "CT_C0_64B6_Stack_Dispatch",
+  "address": "C0:64B6",
+  "snes_address": "$C064B6",
+  "score": 5,
+  "description": "Stack dispatch with 4 callers, BCD pattern",
+  "type": "dispatcher",
+  "size": 49,
+  "status": "mapped",
+  "region": "60AC-6EF8 gap",
+  "scan_data": {
+    "width": 49,
+    "call_count": 4,
+    "branch_count": 6,
+    "return_count": 5,
+    "stackish_count": 1,
+    "ascii_ratio": 0.347,
+    "cluster_score": 5
+  },
+  "session": 23,
+  "created": "2026-04-08T15:14:44"
+}
