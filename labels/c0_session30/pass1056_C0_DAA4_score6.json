@@ -1,0 +1,17 @@
+{
+  "pass": 1056,
+  "label": "CT_C0_DAA4_MemInit_Score6",
+  "address": "C0:DAA4",
+  "snes_address": "$C0$DAA4",
+  "score": 6,
+  "description": "Memory initialization with LDY# prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "D000-DFFF",
+  "features": {
+    "start_byte": "A0"
+  },
+  "session": 30,
+  "connected_to": ["C0:DA52"]
+}

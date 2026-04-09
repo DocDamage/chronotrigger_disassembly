@@ -1,0 +1,18 @@
+{
+  "pass": 1042,
+  "bank": "C1",
+  "session": 23,
+  "range": "C1:4200..C1:4211",
+  "score": 6,
+  "width": 18,
+  "call_count": 1,
+  "branch_count": 1,
+  "stackish_count": 0,
+  "return_count": 1,
+  "ascii_ratio": 0.111,
+  "source": "C1:4200-4300_mega_cluster_context",
+  "reason": "Score-6 cluster immediately before gap. Call + branch + return, likely entry helper for gap data.",
+  "related_to": "C1:4212_gap",
+  "note": "Immediately precedes C1:4212-431A data region. May load/process data from gap.",
+  "timestamp": "2026-04-08T15:30:00-04:00"
+}

@@ -1,0 +1,18 @@
+{
+  "pass": 1037,
+  "label": "CT_C0_EA11_ContextMgr_Score6",
+  "address": "C0:EA11",
+  "snes_address": "$C0$EA11",
+  "score": 6,
+  "description": "Context manager with REP prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 38,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "C2",
+    "pattern": "REP_prologue"
+  },
+  "session": 30,
+  "connected_to": ["C0:E9F4"]
+}

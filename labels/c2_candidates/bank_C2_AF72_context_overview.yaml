@@ -1,0 +1,39 @@
+# Bank C2 - AF72 Cluster Context Overview
+# Session 23 - AF72-B716 Relationship Analysis
+
+primary_cluster:
+  range: "C2:AF72..C2:AFB4"
+  score: 8
+  width: 67
+  type: "dispatch_cluster"
+  
+context:
+  preceding_functions:
+    - { range: "C2:AE5E..C2:AE74", distance: 20, relationship: "immediate_context" }
+    - { range: "C2:AE9D..C2:AEB5", distance: 61, relationship: "nearby_helper" }
+    - { range: "C2:ACE8..C2:AD00", distance: 643, relationship: "same_region" }
+    
+  following_gap:
+    start: "C2:AFB4"
+    end: "C2:B716"
+    size: 3234
+    
+  major_intermediate_hub:
+    range: "C2:B12A..C2:B17E"
+    distance_from_af72: 1290
+    distance_from_b716: 1494
+    score: 11
+    
+relationship_to_b716:
+  direct_connection: false
+  gap_size: 3234
+  gap_content: "sparse code islands, score-6/7 functions, B12A mega-cluster"
+  service_relationship: "pipeline_stage"
+  
+analysis:
+  af72_role: "Secondary dispatch cluster in AF00 region"
+  b716_role: "Primary cross-bank settlement hub"
+  b12a_role: "Intermediate mega-cluster (possible coordinator)"
+  
+confidence: 8
+status: "context_documentation"

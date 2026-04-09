@@ -1,0 +1,52 @@
+# Bank C4 - Score 7 Cluster (SESSION 25)
+# C4:3149-315A - High scorer in C4:3000-4000 region
+
+range:
+  start: "C4:3149"
+  end: "C4:315A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 7
+  cluster_score: 7
+  width: 18
+  child_count: 4
+  children:
+    - "C4:3149-C4:314E"
+    - "C4:3149-C4:3154"
+    - "C4:3149-C4:3156"
+    - "C4:3149-C4:315A"
+
+features:
+  - "Score 7 cluster"
+  - "1 call, 3 branches, 5 returns"
+  - "4 overlapping child islands"
+  
+stats:
+  calls: 1
+  branches: 3
+  stackish: 0
+  returns: 5
+  ascii_ratio: 0.389
+
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  High-scoring cluster in C4:3000-4000 region.
+  
+  Features:
+  - 1 call indicates callable function
+  - 3 branches suggest conditional logic
+  - 5 returns (many exit points!)
+  - No stack operations
+  - ASCII ratio 0.389 (moderate)
+  
+  The high return count suggests this may be
+  a switch-style dispatcher or lookup table handler.
+  
+  Part of C4:3000-4000 gap exploration.

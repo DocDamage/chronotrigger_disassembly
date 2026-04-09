@@ -1,0 +1,18 @@
+{
+  "pass": 1007,
+  "label": "CT_C0_C475_StateManager_Score6",
+  "address": "C0:C475",
+  "snes_address": "$C0$C475",
+  "score": 6,
+  "description": "State manager function with PHA prologue in C000 region",
+  "type": "function",
+  "status": "candidate",
+  "size": 38,
+  "region": "C000-CFFF",
+  "features": {
+    "start_byte": "48",
+    "pattern": "PHA_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

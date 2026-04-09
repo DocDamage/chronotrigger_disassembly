@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 25,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:F8FA",
+    "end_addr": "C1:F907",
+    "name": "ct_c1_f8fa_hub_s25"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 2,
+    "branch_count": 4,
+    "return_count": 1,
+    "width": 14,
+    "ascii_ratio": 0.286,
+    "region": "F000-FFFF"
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "pass": 1015,
+  "bank": "C3",
+  "label": "ct_c3_1507_stack_micro_util",
+  "address": "C3:1507",
+  "range": "C3:1507..C3:150C",
+  "bytes": 6,
+  "category": "code",
+  "confidence": 3,
+  "reasoning": [
+    "Cluster score 3 - micro utility function",
+    "0 calls, 1 branch, 3 stack operations, 1 return",
+    "6-byte tiny stack manipulation helper",
+    "ASCII ratio 0.5 - moderate",
+    "High stack operation density suggests stack cleanup"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 1,
+    "stack_ops": 3,
+    "returns": 1,
+    "first_return": "C3:150C"
+  },
+  "flags": [],
+  "related": ["C3:1507", "C3:150C"],
+  "session": 20,
+  "status": "closed"
+}

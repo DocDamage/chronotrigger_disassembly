@@ -1,0 +1,19 @@
+{
+  "pass": 1012,
+  "label": "CT_C0_813D_AudioHandler_Score6",
+  "address": "C0:813D",
+  "snes_address": "$C0$813D",
+  "score": 6,
+  "description": "Audio system handler in 8000 region (audio control cluster)",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "8000-C000",
+  "features": {
+    "start_byte": "20",
+    "pattern": "JSR_prologue",
+    "category": "audio"
+  },
+  "session": 30,
+  "connected_to": []
+}

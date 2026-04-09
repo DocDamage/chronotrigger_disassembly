@@ -1,0 +1,33 @@
+{
+  "pass_number": 705,
+  "closed_ranges": [
+    {
+      "range": "C1:43FB..C1:4440",
+      "kind": "owner",
+      "label": "ct_c1_43fb_table_loader",
+      "confidence": "medium"
+    }
+  ],
+  "metadata": {
+    "score": 5,
+    "width": 70,
+    "instructions": [
+      "CMP $778D",
+      "TYA",
+      "BRA +0",
+      "REP #$20",
+      "LDA $987E",
+      "ASL",
+      "TAX",
+      "LDA $D1:0000,X",
+      "STA $987F",
+      "LDA $987E",
+      "ASL",
+      "TAX",
+      "LDA $D1:0000,X",
+      "STA $987F"
+    ],
+    "type": "data_loader"
+  },
+  "promotion_reason": "TABLE LOADER: 70 bytes. Loads values from bank D1 via indexed table lookups. Multiple LDA long (BF) instructions. Fills gap after secondary cluster."
+}

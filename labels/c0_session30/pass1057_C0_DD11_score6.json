@@ -1,0 +1,17 @@
+{
+  "pass": 1057,
+  "label": "CT_C0_DD11_FileOp_Score6",
+  "address": "C0:DD11",
+  "snes_address": "$C0$DD11",
+  "score": 6,
+  "description": "File operation handler with PHA prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 40,
+  "region": "D000-DFFF",
+  "features": {
+    "start_byte": "48"
+  },
+  "session": 30,
+  "connected_to": []
+}

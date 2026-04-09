@@ -1,0 +1,13 @@
+pass: 1073
+address: 025432
+bank: 2
+label: ct_c2_5432_helper
+range: C2:5432-C2:543B
+score: 5
+width: 10
+call_count: 2
+branch_count: 1
+stackish_count: 0
+return_count: 1
+session: 27
+rationale: Score-4 cluster (elevated to 5) from C2:5400 scan. 10 bytes compact helper. 2 calls with branch. Cross-bank callers from C2:E410, C2:A366. Small but dense function.

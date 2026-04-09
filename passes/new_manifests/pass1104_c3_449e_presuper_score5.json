@@ -1,0 +1,17 @@
+{
+  "pass": "1104",
+  "bank": "C3",
+  "start_address": "C3:449E",
+  "end_address": "C3:44B0",
+  "label": "ct_c3_449e_presuper_handler_score5",
+  "target": "C3:449E",
+  "confidence": "medium",
+  "reasoning": "Score-5 pre-supercluster handler. Located just before C3:4548 supercluster. May be setup function or entry point to supercluster. 19 bytes with 1 call, 2 branches.",
+  "cluster_score": 5,
+  "child_count": 1,
+  "return_count": 1,
+  "call_count": 1,
+  "gap_context": "C3:4400-4500 pre-supercluster region",
+  "promotion_reason": "Score-5 candidate - Pre-supercluster setup function. Part of C3:4548 dispatch architecture.",
+  "session": "27"
+}

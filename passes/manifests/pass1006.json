@@ -2,11 +2,12 @@
   "pass_number": 1006,
   "closed_ranges": [
     {
-      "range": "C3:CB47..C3:CB64",
+      "range": "C0:3D6B..C0:3D83",
       "kind": "owner",
-      "label": "ct_c3_cb47_php_prologue",
+      "label": "ct_c0_3d6b_subhandler_score7",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, PHP prologue. C3:C000-CFFF region. Target: C3:CB4C, 6 branch feeders."
+  "session": 21,
+  "promotion_reason": "Score-7 island, 1 call, 1 branch, 2 returns. 25 bytes. Subhandler within 3D52 cluster. Session 21."
 }

@@ -1,12 +1,27 @@
 {
-  "pass_number": 1008,
-  "closed_ranges": [
-    {
-      "range": "C3:E4EF..C3:E508",
-      "kind": "owner",
-      "label": "ct_c3_e4ef_jsl_entry",
-      "confidence": "high"
-    }
+  "pass": 1008,
+  "bank": "C3",
+  "label": "ct_c3_1753_branch_util",
+  "address": "C3:1753",
+  "range": "C3:1753..C3:175B",
+  "bytes": 9,
+  "category": "code",
+  "confidence": 4,
+  "reasoning": [
+    "Cluster score 4",
+    "2 branches, 2 returns - balanced flow",
+    "ASCII ratio 0.222 - low data content",
+    "Clean code candidate"
   ],
-  "promotion_reason": "Score-6 cluster, JSL long jump pattern. C3:E000-EFFF region. Target: C3:E4F0, 6 branch feeders."
+  "findings": {
+    "calls": 0,
+    "branches": 2,
+    "stack_ops": 0,
+    "returns": 2,
+    "first_return": "C3:1755"
+  },
+  "flags": [],
+  "related": ["C3:1753", "C3:1755", "C3:175B"],
+  "session": 19,
+  "status": "closed"
 }

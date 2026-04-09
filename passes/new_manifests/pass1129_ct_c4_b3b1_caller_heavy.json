@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1129,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:B3B1",
+      "mode": "known_code",
+      "label": "ct_c4_b3b1_caller_heavy",
+      "reason": "Score-6, strong caller from C4:09C9. High-value target."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 36
+    }
+  }
+}

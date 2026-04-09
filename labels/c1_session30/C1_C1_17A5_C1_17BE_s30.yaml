@@ -1,0 +1,26 @@
+# Session 30 Manifest - Pass 1108
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1108
+
+target:
+  bank: "C1"
+  range: "C1:17A5..C1:17BE"
+  label: "ct_c1_17a5_dispatch_handler"
+  confidence: "medium"
+  kind: "owner"
+
+metadata:
+  score: 6
+  source: "c1_hub_manifests.py"
+  promotion_reason: "Score-6 candidate. Dispatch handler for decrement operation. PHD/BEQ pattern. As..."
+  associated_hub: "C1:178E"
+
+promotion_reason: |
+  Score-6 candidate. Dispatch handler for decrement operation. PHD/BEQ pattern. Associated with C1:178E hub.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

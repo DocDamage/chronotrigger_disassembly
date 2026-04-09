@@ -1,0 +1,13 @@
+pass: 1089
+address: 02785B
+bank: 2
+label: ct_c2_785b_data_handler
+range: C2:785B-C2:786E
+score: 6
+width: 20
+call_count: 1
+branch_count: 3
+stackish_count: 0
+return_count: 2
+session: 28
+rationale: Score-6 routine from C2:7000-8000 region. 20 bytes with 3 branches, 2 returns. Multi-exit data processing function.

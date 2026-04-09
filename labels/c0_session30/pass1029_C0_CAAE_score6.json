@@ -1,0 +1,17 @@
+{
+  "pass": 1029,
+  "label": "CT_C0_CAAE_Dispatcher_Score6",
+  "address": "C0:CAAE",
+  "snes_address": "$C0$CAAE",
+  "score": 6,
+  "description": "Function dispatcher connected to CA4D supercluster",
+  "type": "function",
+  "status": "candidate",
+  "size": 42,
+  "region": "C000-CFFF",
+  "features": {
+    "start_byte": "20"
+  },
+  "session": 30,
+  "connected_to": ["C0:CA4D", "C0:CABD", "C0:CACA"]
+}

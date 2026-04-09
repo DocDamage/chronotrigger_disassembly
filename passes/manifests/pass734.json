@@ -2,11 +2,12 @@
   "pass_number": 734,
   "closed_ranges": [
     {
-      "range": "CF:F005..CF:F01D",
+      "range": "C4:1701..C4:1717",
       "kind": "owner",
-      "label": "ct_cf_f005_php_handler",
+      "label": "ct_c4_1701_cluster_score6",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, PHP prologue. CF:F000 region, 25 bytes. Part of 19 score-6+ clusters in CF:F000-FFFF."
+  "session": 24,
+  "promotion_reason": "Score-6 candidate from C4:1000-2000. 2 calls, 5 branches, 2 returns. 23 bytes."
 }

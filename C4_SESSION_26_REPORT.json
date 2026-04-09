@@ -1,0 +1,247 @@
+{
+  "session": 26,
+  "date": "2026-04-08",
+  "bank": "C4",
+  "manifest_count": 22,
+  "score_breakdown": {
+    "6+": 10,
+    "5": 11,
+    "4": 1
+  },
+  "total_bytes": 418,
+  "coverage": {
+    "previous_percent": 5.800000000000001,
+    "new_percent": 6.44,
+    "previous_bytes": 3801,
+    "new_bytes": 4219
+  },
+  "regions_explored": [
+    "C4:0000-3000",
+    "C4:4000-5000",
+    "C4:6000-7000",
+    "C4:8000-C000",
+    "C4:C000-FFFF"
+  ],
+  "candidates": [
+    {
+      "file": "bank_C4_0E7A_score6_s26.yaml",
+      "addr": "C4:0E7A",
+      "score": 6,
+      "width": 25,
+      "calls": 1,
+      "branches": 0,
+      "region": "C4:0000-3000",
+      "type": "call_heavy"
+    },
+    {
+      "file": "bank_C4_0E7E_score6_s26.yaml",
+      "addr": "C4:0E7E",
+      "score": 6,
+      "width": 25,
+      "calls": 1,
+      "branches": 0,
+      "region": "C4:0000-3000",
+      "type": "standard"
+    },
+    {
+      "file": "bank_C4_1701_score6_s26.yaml",
+      "addr": "C4:1701",
+      "score": 6,
+      "width": 8,
+      "calls": 1,
+      "branches": 2,
+      "region": "C4:0000-3000",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_1B9B_score5_s26.yaml",
+      "addr": "C4:1B9B",
+      "score": 5,
+      "width": 15,
+      "calls": 1,
+      "branches": 5,
+      "region": "C4:0000-3000",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_24F6_score6_s26.yaml",
+      "addr": "C4:24F6",
+      "score": 6,
+      "width": 8,
+      "calls": 1,
+      "branches": 0,
+      "region": "C4:0000-3000",
+      "type": "call_heavy"
+    },
+    {
+      "file": "bank_C4_28B9_score5_s26.yaml",
+      "addr": "C4:28B9",
+      "score": 5,
+      "width": 25,
+      "calls": 0,
+      "branches": 5,
+      "region": "C4:0000-3000",
+      "type": "branch_heavy"
+    },
+    {
+      "file": "bank_C4_46B7_score6_s26.yaml",
+      "addr": "C4:46B7",
+      "score": 6,
+      "width": 25,
+      "calls": 1,
+      "branches": 3,
+      "region": "C4:4000-5000",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_607A_score6_s26.yaml",
+      "addr": "C4:607A",
+      "score": 6,
+      "width": 12,
+      "calls": 1,
+      "branches": 1,
+      "region": "C4:6000-7000",
+      "type": "call_heavy"
+    },
+    {
+      "file": "bank_C4_6BDA_score6_s26.yaml",
+      "addr": "C4:6BDA",
+      "score": 6,
+      "width": 8,
+      "calls": 1,
+      "branches": 0,
+      "region": "C4:6000-7000",
+      "type": "call_heavy"
+    },
+    {
+      "file": "bank_C4_9DE6_score6_s26.yaml",
+      "addr": "C4:9DE6",
+      "score": 6,
+      "width": 17,
+      "calls": 1,
+      "branches": 1,
+      "region": "C4:8000-C000",
+      "type": "call_heavy"
+    },
+    {
+      "file": "bank_C4_9E50_score6_s26.yaml",
+      "addr": "C4:9E50",
+      "score": 6,
+      "width": 7,
+      "calls": 1,
+      "branches": 2,
+      "region": "C4:8000-C000",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_A2B1_score5_s26.yaml",
+      "addr": "C4:A2B1",
+      "score": 5,
+      "width": 25,
+      "calls": 2,
+      "branches": 1,
+      "region": "C4:8000-C000",
+      "type": "call_heavy"
+    },
+    {
+      "file": "bank_C4_A368_score5_s26.yaml",
+      "addr": "C4:A368",
+      "score": 5,
+      "width": 25,
+      "calls": 0,
+      "branches": 5,
+      "region": "C4:8000-C000",
+      "type": "branch_heavy"
+    },
+    {
+      "file": "bank_C4_BA10_score5_s26.yaml",
+      "addr": "C4:BA10",
+      "score": 5,
+      "width": 25,
+      "calls": 1,
+      "branches": 5,
+      "region": "C4:8000-C000",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_BA13_score5_s26.yaml",
+      "addr": "C4:BA13",
+      "score": 5,
+      "width": 25,
+      "calls": 1,
+      "branches": 5,
+      "region": "C4:8000-C000",
+      "type": "branch_heavy"
+    },
+    {
+      "file": "bank_C4_BB77_score5_s26.yaml",
+      "addr": "C4:BB77",
+      "score": 5,
+      "width": 24,
+      "calls": 1,
+      "branches": 4,
+      "region": "C4:8000-C000",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_C771_score6_s26.yaml",
+      "addr": "C4:C771",
+      "score": 6,
+      "width": 12,
+      "calls": 1,
+      "branches": 1,
+      "region": "C4:C000-FFFF",
+      "type": "call_heavy"
+    },
+    {
+      "file": "bank_C4_D773_score4_s26.yaml",
+      "addr": "C4:D773",
+      "score": 4,
+      "width": 13,
+      "calls": 0,
+      "branches": 8,
+      "region": "C4:C000-FFFF",
+      "type": "branch_heavy"
+    },
+    {
+      "file": "bank_C4_DEBB_score5_s26.yaml",
+      "addr": "C4:DEBB",
+      "score": 5,
+      "width": 22,
+      "calls": 1,
+      "branches": 7,
+      "region": "C4:C000-FFFF",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_E0C4_score5_s26.yaml",
+      "addr": "C4:E0C4",
+      "score": 5,
+      "width": 22,
+      "calls": 3,
+      "branches": 2,
+      "region": "C4:C000-FFFF",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_F9F7_score5_s26.yaml",
+      "addr": "C4:F9F7",
+      "score": 5,
+      "width": 25,
+      "calls": 2,
+      "branches": 4,
+      "region": "C4:C000-FFFF",
+      "type": "call_branch_heavy"
+    },
+    {
+      "file": "bank_C4_FE11_score5_s26.yaml",
+      "addr": "C4:FE11",
+      "score": 5,
+      "width": 25,
+      "calls": 0,
+      "branches": 6,
+      "region": "C4:C000-FFFF",
+      "type": "branch_heavy"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 21 Pass 1028 - Auto-generated from C0:3000-3800 scan
+
+range:
+  start: "C0:375B"
+  end: "C0:3773"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 0
+  returns: 3
+  returns: 3
+  ascii_ratio: 0.24
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  3 returns in C0:3000-3800 region suggest multiple exit conditions.
+  2 calls and 2 branches indicate moderate complexity.
+  Part of larger cluster at C0:374D-377C.

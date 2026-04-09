@@ -1,0 +1,29 @@
+{
+  "pass": 1023,
+  "bank": "C0",
+  "label": "ct_c0_20a0_data_processor",
+  "address": "C0:20A0",
+  "range": "C0:20A0..C0:20C0",
+  "bytes": 33,
+  "category": "code",
+  "confidence": 5,
+  "reasoning": [
+    "Score 5 cluster following high-confidence 206D region",
+    "Multiple branch instructions detected",
+    "Located immediately after score-7 cluster at 206D",
+    "33 bytes - suggests related processing function",
+    "May be continuation or related handler to 206D",
+    "Pattern consistent with data processing routine"
+  ],
+  "findings": {
+    "calls": 1,
+    "branches": 3,
+    "stack_ops": 0,
+    "returns": 2,
+    "first_return": "C0:20B8"
+  },
+  "flags": ["score5", "related_cluster"],
+  "related": ["C0:20A0", "C0:20C0", "C0:206D"],
+  "session": 20,
+  "status": "closed"
+}

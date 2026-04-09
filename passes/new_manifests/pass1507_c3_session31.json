@@ -1,0 +1,19 @@
+{
+  "pass": 1507,
+  "range": "C3:9200..C3:9218",
+  "label": "ct_c3_9200_math_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:8939-957B gap. 16-bit math utility (ADC/SBC), 25 bytes, session 31 final push.",
+  "scan": {
+    "score": 6,
+    "width": 25,
+    "call_count": 1,
+    "branch_count": 1,
+    "stackish_count": 2,
+    "return_count": 1,
+    "first_return_address": "C3:9217",
+    "ascii_ratio": 0.14,
+    "zero_ff_ratio": 0.0
+  }
+}

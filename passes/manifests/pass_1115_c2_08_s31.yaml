@@ -1,0 +1,13 @@
+pass: 1115
+address: 028C08
+bank: 2
+label: ct_c2_8c08_prelude_hub
+range: C2:8C08-C2:8C5B
+score: 14
+width: 83
+call_count: 5
+branch_count: 3
+return_count: 2
+session: 31
+parent_hub: C2:8CAB
+rationale: Score-14 mega-function preceding 8CAB score-9 hub, 5 internal calls, PHP prologue, hub network connector

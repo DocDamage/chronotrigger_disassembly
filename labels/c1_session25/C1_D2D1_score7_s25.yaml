@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 25,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:D2D1",
+    "end_addr": "C1:D2DD",
+    "name": "ct_c1_d2d1_handler_s25"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 1,
+    "branch_count": 1,
+    "return_count": 1,
+    "width": 13,
+    "ascii_ratio": 0.154,
+    "region": "D000-E000"
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

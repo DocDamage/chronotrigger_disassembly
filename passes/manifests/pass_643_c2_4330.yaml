@@ -1,0 +1,13 @@
+pass: 643
+address: 024330
+bank: 2
+label: ct_c2_4330_rich_subroutine
+range: C2:4330-C2:4344
+score: 7
+width: 21
+call_count: 4
+branch_count: 2
+stackish_count: 2
+return_count: 1
+session: 25
+rationale: Score-7 island from C2:4000-5000 scan. 21 bytes with 4 calls, 2 branches, 2 stack ops. Rich call site with stack operations.

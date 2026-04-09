@@ -1,0 +1,27 @@
+# Session 30 Manifest - Pass 1105
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1105
+
+target:
+  bank: "C1"
+  range: "C1:178E..C1:17A0"
+  label: "ct_c1_178e_dispatch_hub"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 6
+  source: "c1_hub_manifests.py"
+  promotion_reason: "Hub function candidate. 25 callers via JMP dispatch. Score-6 cluster with LDA# p..."
+  callers: 25
+  hub_type: dispatch
+
+promotion_reason: |
+  Hub function candidate. 25 callers via JMP dispatch. Score-6 cluster with LDA# prologue. Primary dispatch hub for C1:1700-1800 region.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

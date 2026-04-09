@@ -5,26 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
-try:
-    from snes_utils_hirom_v2 import parse_snes_range, format_snes_range, slice_rom_range
-except Exception:
-    def parse_snes_range(text: str):
-        left, right = text.split('..')
-        bank_s, start_s = left.split(':')
-        bank2_s, end_s = right.split(':')
-        if bank_s != bank2_s:
-            raise ValueError('cross-bank ranges not supported')
-        return int(bank_s, 16), int(start_s, 16), int(end_s, 16)
-
-    def format_snes_range(bank: int, start: int, end: int) -> str:
-        return f'{bank:02X}:{start:04X}..{bank:02X}:{end:04X}'
-
-    def slice_rom_range(rom_bytes: bytes, range_text: str) -> bytes:
-        bank, start, end = parse_snes_range(range_text)
-        if bank < 0xC0:
-            raise ValueError('unsupported bank')
-        base = (bank - 0xC0) * 0x10000
-        return rom_bytes[base + start: base + end + 1]
+from snes_utils import format_snes_range, parse_snes_range, slice_rom_range
 
 BRANCHES = {0x10, 0x30, 0x50, 0x70, 0x80, 0x82, 0x90, 0xB0, 0xD0, 0xF0}
 RETURNS = {0x60, 0x6B, 0x40}

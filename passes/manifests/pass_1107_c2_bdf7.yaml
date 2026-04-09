@@ -1,0 +1,13 @@
+pass: 1107
+address: 02BDF7
+bank: 2
+label: ct_c2_bdf7_be00_service_s29
+range: C2:BDF7-C2:BE15
+score: 6
+width: 31
+call_count: 2
+branch_count: 3
+stackish_count: 0
+return_count: 1
+session: 29
+rationale: C2:B000-C000 region - Score-6 cluster at BE00 boundary. A2/LDX prologue, index setup pattern. Hub support function.

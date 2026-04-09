@@ -1,0 +1,13 @@
+pass: 1049
+address: 0385A9
+bank: 3
+label: ct_c3_45a9_post_dispatch_handler
+range: C3:45A9-C3:45C1
+score: 4
+width: 25
+call_count: 1
+branch_count: 2
+stackish_count: 0
+return_count: 1
+session: 22
+rationale: Score 4 cluster from C3:4400-4600 scan. Post-supercluster function at C3:45A9. 1 call, 2 branches, 1 return. Follow-up handler to C3:4548 dispatch.

@@ -1,14 +1,14 @@
 {
   "generated_from": "C:\\Users\\Doc\\Desktop\\chronotrigger_disassembly",
   "health_percent": 100.0,
-  "passed_checks": 7,
-  "total_checks": 7,
+  "passed_checks": 8,
+  "total_checks": 8,
   "checks": [
     {
       "name": "python_script_compile_health",
       "ok": true,
       "details": {
-        "script_count": 99,
+        "script_count": 102,
         "failures": []
       }
     },
@@ -112,6 +112,22 @@
           "branch state audit ok"
         ],
         "stderr_tail": []
+      }
+    },
+    {
+      "name": "duplicate_helper_drift",
+      "ok": true,
+      "details": {
+        "targets": [
+          "tools/scripts/detect_data_patterns_v1.py",
+          "tools/scripts/validate_cross_bank_callers_v1.py",
+          "tools/scripts/page_range_mixedness_v1.py",
+          "tools/scripts/score_owner_boundary_risk_v1.py",
+          "tools/scripts/find_local_code_islands_v1.py",
+          "tools/scripts/score_raw_xref_context_v1.py",
+          "tools/scripts/seam_triage_utils_v1.py"
+        ],
+        "offenders": []
       }
     }
   ]

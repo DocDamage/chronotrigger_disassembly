@@ -1,0 +1,28 @@
+{
+  "pass_number": 704,
+  "closed_ranges": [
+    {
+      "range": "C1:43C6..C1:43FA",
+      "kind": "owner",
+      "label": "ct_c1_43c6_secondary_cluster",
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "cluster_score": 10,
+    "width": 53,
+    "child_count": 6,
+    "child_ranges": [
+      "C1:43C6..C1:43CF",
+      "C1:43C6..C1:43D6",
+      "C1:43C6..C1:43DD",
+      "C1:43CC..C1:43E4",
+      "C1:43D3..C1:43EB",
+      "C1:43E2..C1:43FA"
+    ],
+    "branch_count": 2,
+    "return_count": 7,
+    "ascii_ratio": 0.245
+  },
+  "promotion_reason": "SECONDARY CLUSTER: Score 10, 53 bytes, 6 children. Companion to mega-cluster. 2 branches, 7 returns."
+}

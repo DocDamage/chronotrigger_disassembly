@@ -1,0 +1,22 @@
+{
+  "pass": 946,
+  "range": "C3:30B6..C3:30BF",
+  "label": "ct_c3_30b6_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:3000-4000 scan. Compact function with call, branch, and return. Session 26.",
+  "scan": {
+    "score": 6,
+    "width": 9,
+    "call_count": 1,
+    "branch_count": 1,
+    "stackish_count": 0,
+    "return_count": 1,
+    "first_return_address": "C3:30BE",
+    "ascii_ratio": 0.222,
+    "zero_ff_ratio": 0.0,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

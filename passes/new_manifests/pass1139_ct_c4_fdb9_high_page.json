@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1139,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:FDB9",
+      "mode": "known_code",
+      "label": "ct_c4_fdb9_high_page",
+      "reason": "Score-6, LDX# prologue. High page candidate."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 32
+    }
+  }
+}

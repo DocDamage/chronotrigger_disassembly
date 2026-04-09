@@ -1,0 +1,28 @@
+{
+  "pass": 1014,
+  "bank": "C3",
+  "label": "ct_c3_147d_compare_branch_util",
+  "address": "C3:147D",
+  "range": "C3:147D..C3:148B",
+  "bytes": 15,
+  "category": "code",
+  "confidence": 3,
+  "reasoning": [
+    "Cluster score 3 - moderate confidence",
+    "0 calls but 2 branches, 2 stack operations, 1 return",
+    "15-byte compare-and-branch utility",
+    "ASCII ratio 0.533 - slightly elevated",
+    "May be internal helper reached by direct jump"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 2,
+    "stack_ops": 2,
+    "returns": 1,
+    "first_return": "C3:148B"
+  },
+  "flags": [],
+  "related": ["C3:147D", "C3:148B"],
+  "session": 20,
+  "status": "closed"
+}

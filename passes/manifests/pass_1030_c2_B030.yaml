@@ -1,0 +1,14 @@
+pass: 1030
+address: 02B030
+bank: 2
+label: ct_c2_b030_dispatch
+range: C2:B030-C2:B044
+score: 7
+width: 21
+call_count: 1
+branch_count: 1
+stackish_count: 1
+return_count: 1
+session: 24
+parent_hub: C2:B12A
+rationale: Score 7 island in B000 region, entry point to B12A mega-cluster network, JSR prologue with clean returns

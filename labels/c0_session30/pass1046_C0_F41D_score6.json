@@ -1,0 +1,19 @@
+{
+  "pass": 1046,
+  "label": "CT_C0_F41D_HDMAChain_Score6",
+  "address": "C0:F41D",
+  "snes_address": "$C0$F41D",
+  "score": 6,
+  "description": "HDMA chain setup with PHD prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 42,
+  "region": "F000-FFFF",
+  "features": {
+    "start_byte": "0B",
+    "pattern": "PHD_prologue",
+    "category": "hdma"
+  },
+  "session": 30,
+  "connected_to": ["C0:F3A5", "C0:F488"]
+}

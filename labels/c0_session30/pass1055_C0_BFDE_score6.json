@@ -1,0 +1,17 @@
+{
+  "pass": 1055,
+  "label": "CT_C0_BFDE_BankEnd_Score6",
+  "address": "C0:BFDE",
+  "snes_address": "$C0$BFDE",
+  "score": 6,
+  "description": "Bank end handler with PHA prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "B000-BFFF",
+  "features": {
+    "start_byte": "48"
+  },
+  "session": 30,
+  "connected_to": ["C0:BFD8", "C0:BFE4"]
+}

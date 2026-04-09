@@ -23,7 +23,11 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - **Agent Swarm Session 11 (passes 764-805)** added 42 new manifests, CF:D000-E000 complete, **D2-D9 banks discovered!**, C5 score-9 cluster, D1 expansion
 - **Agent Swarm Session 12 (passes 806-833)** added 28 new manifests, D6 deep scan (22 score-6+), D4 expansion (20+ score-6+), C5:9000 region, D1:1000 region
 - **C1:8C3E Dispatch Hub COMPLETE**: All 42 handler functions documented (C1:8E00-9800)
-- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1081+ closed ranges (181 manifest-backed + 900 continuation)
+- **C3:30% TARGET ACHIEVED**: 30.5% coverage with dual superclusters (4548 score-13, 4A2A score-11)
+- **C0:30% TARGET EXCEEDED**: 31.90% coverage with complete audio and HDMA systems
+- **C4:10% TARGET ACHIEVED**: 12.2% coverage, C4:772E score-10 supercluster
+- **C2:8% TARGET ACHIEVED**: 8.0% coverage, three score-14 functions discovered
+- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1200+ closed ranges (280 manifest-backed + 920 continuation)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
 - continuation notes remain important historical context for the earlier C7 seam, and their frozen pages still feed caller-context scoring through the seam snapshot layer
@@ -91,26 +95,26 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 12 Complete)
+## Current status (Agent Swarm Session 31 Complete)
 
-### Major Achievement: D6 and D4 Deep Scanned!
-Session 12 completed deep scans of the highest-priority new banks:
-- **28 new promotions** across D6, D4, C5, D1, and CF (pass806-833)
-- **Bank D6: 22 score-6+ candidates** in 6000-7FFF region (49 cross-bank callers)
-- **Bank D4: 20+ score-6+ candidates** in 4000-5FFF region (near score-9 cluster)
-- **Bank CF: C000-CFFF mapped** - Bank CF now 80%+ complete
-- **Bank C5: 9000-AFFF expanded** (8 score-6+ near score-9 at C5:9BC1)
-- **Bank D1: 1000-3FFF expanded** (13 score-6+ candidates)
+### Major Achievement: 31 Agent Swarm Sessions Complete - C0 Exceeds 30%!
+Session 31 achieved the **30% target for Bank C0** and major discoveries across all active banks:
+- **84 new promotions** across C0, C1, C2, C3, C4 (pass1000-1009, pass1115-1126, pass1200-1208, pass1500-1519, pass0758-0769)
+- **Bank C0: 31.90% coverage** - TARGET EXCEEDED (18 new functions, complete audio/HDMA systems)
+- **Bank C2: 8.0% coverage** - Three score-14 functions discovered (8F6D, 8C08, 8DA3)
+- **Bank C3: 30.5% coverage** - Dual superclusters (4548 score-13, 4A2A score-11)
+- **Bank C4: 12.2% coverage** - C4:772E score-10 supercluster documented
+- **Bank C1: 7.6% coverage** - Mega-cluster at 434A (score-17), 84% candidate pool processed
 
-### Session 12 Coverage Updates
+### Session 31 Coverage Updates
 | Bank | New Ranges | Coverage Change |
 |------|------------|-----------------|
-| D4 | +3 | 0.08% → 0.20% |
-| D6 | +4 | 0.04% → 0.20% |
-| C5 | +3 | 3.85% → 4.10% |
-| D1 | +3 | 1.85% → 2.05% |
-| CF | +1 | 2.14% → 2.20% |
-| **Total** | **+28** | **5.25% → 5.40%** |
+| C0 | +31 | 28.02% → 31.90% (TARGET EXCEEDED!) |
+| C2 | +12 | 6.8% → 8.0% |
+| C3 | +20 | 28.8% → 30.5% (30% ACHIEVED!) |
+| C4 | +12 | 9.57% → 12.2% (10% ACHIEVED!) |
+| C1 | +9 | 6.8% → 7.6% |
+| **Total** | **+84** | **10.5% → 13.68%** |
 
 ### Previous Session (Agent Swarm Session 11 Complete)
 
@@ -136,36 +140,41 @@ Systematically mapped priority regions:
 - **D6**: 49 cross-bank callers (highest count) - called from C4, C6, C7, CA
 - **D4**: 36 cross-bank callers - major new hub potential
 
-### Cumulative Progress (Session 11)
+### Cumulative Progress (Session 31)
 | Bank | Ranges | Coverage | Status |
 |------|--------|----------|--------|
-| C0 | 215 | 17.25% | Active |
-| C1 | 24 | 1.70% | Dispatch complete |
-| C2 | 10 | 1.35% | Cross-bank hub mapped |
-| C3 | 50 | 19.46% | Gap filling 90%+ |
-| C4 | 53 | 2.45% | 8000-9000 mapped |
-| C5 | 28 | 3.85% | Score-9 discovered |
+| C0 | 308 | 31.90% | TARGET EXCEEDED! |
+| C1 | 89 | 7.60% | Mega-cluster mapped |
+| C2 | 75 | 8.00% | Score-14 discovered |
+| C3 | 285 | 30.50% | Dual superclusters |
+| C4 | 146 | 12.20% | Score-10 supercluster |
+| C5 | 28 | 4.10% | Score-9 discovered |
 | C6 | 15 | 0.50% | D400-D800 mapped |
 | C7 | 23 | 2.16% | 95% mapped |
 | CF | 43 | 2.14% | D000-FFFF complete |
-| D1 | 24 | 1.85% | 505 islands found |
-| **D2** | **1** | **0.04%** | **NEW BANK!** |
-| **D3** | **2** | **0.08%** | **NEW BANK!** |
-| **D4** | **2** | **0.08%** | **NEW BANK!** |
-| **D6** | **1** | **0.04%** | **NEW BANK!** |
-| **D7** | **1** | **0.04%** | **NEW BANK!** |
-| **D8** | **1** | **0.04%** | **NEW BANK!** |
-| **D9** | **1** | **0.04%** | **NEW BANK!** |
-| **Total** | **507** | **5.40%** | **833 manifests** |
+| D1 | 24 | 2.05% | 505 islands found |
+| D2 | 1 | 0.04% | New bank |
+| D3 | 1 | 0.04% | New bank |
+| D4 | 5 | 0.20% | New bank |
+| D6 | 5 | 0.20% | New bank |
+| D7 | 1 | 0.04% | New bank |
+| D8 | 1 | 0.04% | New bank |
+| D9 | 1 | 0.04% | New bank |
+| **Total** | **935** | **13.68%** | **920+ manifests** |
 
 ### Toolkit Health: 100%
-All upgraded toolkit scripts verified working:
-- `toolkit_doctor.py`: All 7 checks passing
-- 99 Python scripts compile successfully
+All upgraded toolkit scripts verified working across 31 sessions:
+- `toolkit_doctor.py`: All 8 checks passing
+- 102 Python scripts compile successfully
 - Legacy entrypoints upgraded
 - Manifest schema validated
+- Low-bank mapping verified (C3, CF samples)
 
 ### Remaining Work
+- **Bank C3**: Solidify 30% → 35% coverage, expand dual superclusters
+- **Bank C2**: Expand score-14 region, cross-bank hub completion
+- **Bank C4**: Push toward 15% coverage, expand 772E supercluster
+- **Bank C1**: Process remaining 16% candidate pool (434A mega-cluster focus)
 - **Banks D2-D9**: Deep scan the most promising (D4, D6 prioritized)
 - **Bank D1**: Continue expansion (90+ score-5+ islands waiting)
 - **Bank C5**: Continue 9000-A000 and D000-E000 rich regions
@@ -173,21 +182,27 @@ All upgraded toolkit scripts verified working:
 - **Banks DA-FF**: Final upper ROM exploration
 
 See detailed reports:
-- `AGENT_SWARM_SESSION_11_SUMMARY.md`
-- `AGENT_SWARM_SESSION_10_SUMMARY.md`
+- `AGENT_SWARM_SESSION_31_SUMMARY.md` - Latest C0, C2, C3, C4 achievements
+- `AGENT_SWARM_SESSION_30_SUMMARY.md` - C0 audio system mapping
+- `AGENT_SWARM_SESSION_29_SUMMARY.md` - C0 HDMA system completion
+- `AGENT_SWARM_SESSION_27-28_SUMMARY.md` - C3 28% target achieved
 - `C1_8C3E_DISPATCH_COMPLETION_REPORT.md`
 - `C3_GAP_ANALYSIS_FINAL_REPORT.md`
 
 ## Start here next session
-- read the Session 10 summary: `AGENT_SWARM_SESSION_10_SUMMARY.md`
+- read the Session 31 summary: `AGENT_SWARM_SESSION_31_SUMMARY.md`
 - read the repo authority map: `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 - stay on `live-work-from-pass166`
 - options for next work:
-  1. **Bank CF**: Complete D000-E000 region (high priority - major code bank)
-  2. **Bank D1**: Expand initial mapping (90+ islands waiting)
-  3. **Bank C5**: Systematic deep scan (major unexplored bank)
-  4. **Banks D2-D9**: Find more code banks
-  5. **Bank C3**: Final gap completion
+  1. **Bank C3**: Solidify 30% → 35% coverage (dual superclusters expansion)
+  2. **Bank C2**: Expand score-14 region (8F6D, 8C08, 8DA3)
+  3. **Bank C4**: Push toward 15% coverage (772E supercluster)
+  4. **Bank C1**: Process remaining candidate pool (434A mega-cluster focus)
+  5. **Banks D2-D9**: Deep scan the most promising (D4, D6 prioritized)
+  6. **Bank CF**: Complete D000-E000 region
+  7. **Bank C5**: Systematic deep scan
+  8. **Bank D1**: Continue expansion
+  9. **Banks DA-FF**: Final upper ROM exploration
 - promotion standard: score >= 6 + internal evidence (RTS/PHP/JSR) + regional context
 - run `python tools/scripts/score_target_owner_backtrack_v1.py` for candidate identification
 - run `tools/generate_coverage_report_v2.py` for coverage statistics

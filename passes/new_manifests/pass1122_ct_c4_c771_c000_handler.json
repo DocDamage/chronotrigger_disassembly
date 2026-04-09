@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1122,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:C771",
+      "mode": "known_code",
+      "label": "ct_c4_c771_c000_handler",
+      "reason": "Score-6 cluster in C000-FFFF region. Cross-bank candidate."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 12
+    }
+  }
+}

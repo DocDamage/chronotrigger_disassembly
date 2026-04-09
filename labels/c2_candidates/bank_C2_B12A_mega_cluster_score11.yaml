@@ -1,0 +1,41 @@
+# Bank C2 - Score 11 Mega Cluster
+# Session 23 - AF72-B716 Gap Analysis
+
+range:
+  start: "C2:B12A"
+  end: "C2:B17E"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 11
+  width: 85
+  cluster: true
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.22
+  child_count: 7
+  child_ranges:
+    - "C2:B12A..C2:B13C"
+    - "C2:B137..C2:B14F"
+    - "C2:B13B..C2:B153"
+    - "C2:B142..C2:B15A"
+    - "C2:B146..C2:B15E"
+    - "C2:B156..C2:B16E"
+    - "C2:B166..C2:B17E"
+  
+confidence: 11
+status: "candidate"
+verified: false
+
+notes: |
+  Score 11 mega cluster in B100 region (B12A-B17E).
+  Largest cluster between AF72 and B716 - 85 bytes, 7 children.
+  Complex multi-entry function with overlapping child ranges.
+  Multiple internal entry points suggest table-driven dispatch.
+  Located 1,290 bytes from B716 - possible settlement pipeline stage.
+  High code density with nested control flow.
+  Likely a major intermediate hub or service coordinator.

@@ -2,11 +2,12 @@
   "pass_number": 1000,
   "closed_ranges": [
     {
-      "range": "C3:A3E2..C3:A406",
+      "range": "C0:3D52..C0:3DA8",
       "kind": "owner",
-      "label": "ct_c3_a3e2_jsr_entry",
+      "label": "ct_c0_3d52_handler_score11_cluster",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, JSR entry pattern. C3:A000-AFFF region. Target: C3:A3EE, 6 branch feeders."
+  "session": 21,
+  "promotion_reason": "Score-11 cluster, 5 children, 6 calls, 5 branches, 5 returns. 87 bytes. Session 21 C0:2800-4000 extension."
 }

@@ -1,0 +1,37 @@
+# Bank C3 - Score 5 Function Candidate (Session 24)
+# Range: C3:3B8E..C3:3BA1
+# 20-byte function with 2 calls
+
+candidate:
+  bank: "C3"
+  start: "C3:3B8E"
+  end: "C3:3BA1"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  score: 5
+  width: 20
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 2
+  returns: 1
+  ascii_ratio: 0.45
+
+analysis:
+  type: "function"
+  description: |
+    20-byte score-5 function with 2 external calls.
+    Multiple calls indicate active usage.
+    2 stackish ops suggest state management.
+
+confidence: 5
+status: "candidate"
+verified: false
+coverage_gain: 20
+
+notes: |
+  Score-5 candidate from C3:3000-4000 scan.
+  Multiple calls increase confidence of active code.

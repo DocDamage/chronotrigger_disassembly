@@ -1,0 +1,20 @@
+{
+  "pass_number": 1003,
+  "bank": "C3",
+  "start_address": "C3:DF00",
+  "end_address": "C3:DF1E",
+  "label": "ct_c3_df00_php_prologue",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:DF0A",
+  "prologue_byte": "08",
+  "prologue_mnemonic": "PHP",
+  "backtrack_distance": 10,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:DF00 region. PHP prologue, 31 bytes.",
+  "notes": [
+    "31-byte function in D000 page",
+    "Part of late-C3 code region"
+  ]
+}

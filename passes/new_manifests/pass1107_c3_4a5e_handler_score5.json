@@ -1,0 +1,17 @@
+{
+  "pass": "1107",
+  "bank": "C3",
+  "start_address": "C3:4A5E",
+  "end_address": "C3:4A77",
+  "label": "ct_c3_4a5e_high_traffic_handler_score5",
+  "target": "C3:4A5E",
+  "confidence": "medium",
+  "reasoning": "Score-5 high-traffic handler near C3:4A2A supercluster. 26 bytes with 4 entry variants. 4 calls indicate frequently-used function. RTI/RTS proximity suggests dispatch role.",
+  "cluster_score": 5,
+  "child_count": 4,
+  "return_count": 5,
+  "call_count": 4,
+  "gap_context": "C3:4A00-4B00 supercluster region",
+  "promotion_reason": "Score-5 high-traffic handler - 4 callers. Works with C3:4A2A supercluster dispatch architecture.",
+  "session": "27"
+}

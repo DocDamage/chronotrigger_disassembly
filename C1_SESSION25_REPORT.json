@@ -1,0 +1,90 @@
+{
+  "session": 25,
+  "bank": "C1",
+  "total_manifests": 10,
+  "total_candidates_analyzed": 34,
+  "regions_covered": [
+    "2000-3000",
+    "3000-4000",
+    "8000-9000",
+    "9000-A000",
+    "A000-B000",
+    "B000-C000",
+    "C000-D000",
+    "D000-E000",
+    "E000-F000",
+    "F000-FFFF"
+  ],
+  "manifests": [
+    {
+      "filepath": "labels/c1_session25\\C1_2814_score7_s25.yaml",
+      "name": "ct_c1_2814_handler_s25",
+      "region": "2000-3000",
+      "score": 7,
+      "range": "C1:2814..C1:282C"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_3722_score7_s25.yaml",
+      "name": "ct_c1_3722_handler_s25",
+      "region": "3000-4000",
+      "score": 7,
+      "range": "C1:3722..C1:373A"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_8C2F_score7_s25.yaml",
+      "name": "ct_c1_8c2f_handler_s25",
+      "region": "8000-9000",
+      "score": 7,
+      "range": "C1:8C2F..C1:8C3D"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_9032_score7_s25.yaml",
+      "name": "ct_c1_9032_handler_s25",
+      "region": "9000-A000",
+      "score": 7,
+      "range": "C1:9032..C1:9044"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_AD5A_score7_s25.yaml",
+      "name": "ct_c1_ad5a_handler_s25",
+      "region": "A000-B000",
+      "score": 7,
+      "range": "C1:AD5A..C1:AD67"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_B3A2_score7_s25.yaml",
+      "name": "ct_c1_b3a2_hub_s25",
+      "region": "B000-C000",
+      "score": 7,
+      "range": "C1:B3A2..C1:B3BA"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_CA0E_score7_s25.yaml",
+      "name": "ct_c1_ca0e_handler_s25",
+      "region": "C000-D000",
+      "score": 7,
+      "range": "C1:CA0E..C1:CA19"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_D2D1_score7_s25.yaml",
+      "name": "ct_c1_d2d1_handler_s25",
+      "region": "D000-E000",
+      "score": 7,
+      "range": "C1:D2D1..C1:D2DD"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_E0A2_score7_s25.yaml",
+      "name": "ct_c1_e0a2_handler_s25",
+      "region": "E000-F000",
+      "score": 7,
+      "range": "C1:E0A2..C1:E0BA"
+    },
+    {
+      "filepath": "labels/c1_session25\\C1_F8FA_score7_s25.yaml",
+      "name": "ct_c1_f8fa_hub_s25",
+      "region": "F000-FFFF",
+      "score": 7,
+      "range": "C1:F8FA..C1:F907"
+    }
+  ]
+}

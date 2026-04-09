@@ -1,0 +1,27 @@
+# Session 30 Manifest - Pass 1107
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1107
+
+target:
+  bank: "C1"
+  range: "C1:4AEB..C1:4B17"
+  label: "ct_c1_4aeb_library_hub"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 6
+  source: "c1_hub_manifests.py"
+  promotion_reason: "Hub function candidate. 27 callers. Score-6 cluster with array/table processing...."
+  callers: 27
+  hub_type: library
+
+promotion_reason: |
+  Hub function candidate. 27 callers. Score-6 cluster with array/table processing. Primary library hub for C1:4A00-4B00 region.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

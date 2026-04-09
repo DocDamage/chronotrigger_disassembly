@@ -1,0 +1,14 @@
+pass: 1024
+address: 02BFE6
+bank: 2
+label: ct_c2_bfe6_subroutine
+range: C2:BFE6-C2:BFFE
+score: 7
+width: 25
+call_count: 4
+branch_count: 1
+stackish_count: 1
+return_count: 1
+session: 21
+parent_hub: C2:B716
+rationale: Score 7 island at end of B800-C000 region, 4 calls, clean returns

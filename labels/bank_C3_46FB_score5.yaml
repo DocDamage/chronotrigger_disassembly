@@ -1,0 +1,50 @@
+# Bank C3 - Score 5 Function (SESSION 23)
+# C3:46FB-4709 - Multi-call subroutine
+
+range:
+  start: "C3:46FB"
+  end: "C3:4709"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 5
+  cluster_score: 5
+  width: 15
+  child_count: 2
+  children:
+    - "C3:46FB-C3:4703"
+    - "C3:46FB-C3:4709"
+
+features:
+  - "Score 5 cluster"
+  - "2 calls"
+  - "2 child variants"
+  - "Supercluster-adjacent"
+  
+stats:
+  calls: 2
+  branches: 1
+  stackish: 0
+  returns: 2
+  ascii_ratio: 0.467
+
+confidence: 5
+status: "candidate"
+verified: false
+priority: "medium"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:4400-4800 region
+  
+  Score 5 utility function near the C3:4548 supercluster.
+  2 callers suggest shared subroutine.
+  
+  Features:
+  - 15 bytes, 2 entry variants
+  - 2 calls = shared utility
+  - 2 returns (early exit possible)
+  - No stack operations
+  
+  RECOMMENDATION: Disassemble to identify as shared
+  helper function in the supercluster region.

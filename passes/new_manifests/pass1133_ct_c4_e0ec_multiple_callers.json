@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1133,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:E0EC",
+      "mode": "known_code",
+      "label": "ct_c4_e0ec_multiple_callers",
+      "reason": "Score-6, LDY# prologue. Multiple callers."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 29
+    }
+  }
+}

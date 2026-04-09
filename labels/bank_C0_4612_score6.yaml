@@ -1,0 +1,28 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1045 - Auto-generated from C0:4000-5000 scan
+
+range:
+  start: "C0:4612"
+  end: "C0:462A"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 3
+  branches: 4
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.28
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Solid candidate in C0:4600-4700 region with 3 calls and 4 branches.
+  No stack operations (simple register-based logic).
+  3 callers suggest moderately popular utility function.
+  Located mid-region in previously unmapped C0:4000-5000 area.

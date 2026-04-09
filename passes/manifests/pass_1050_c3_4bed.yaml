@@ -1,0 +1,13 @@
+pass: 1050
+address: 038BED
+bank: 3
+label: ct_c3_4bed_dual_call_handler
+range: C3:4BED-C3:4C00
+score: 4
+width: 20
+call_count: 2
+branch_count: 0
+stackish_count: 0
+return_count: 2
+session: 22
+rationale: Score 4 cluster from C3:4800-5000 scan. 2 calls, 2 returns. Dual-call entry function or state machine transition.

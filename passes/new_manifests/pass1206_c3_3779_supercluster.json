@@ -1,0 +1,17 @@
+{
+  "pass": 1206,
+  "bank": "C3",
+  "start_address": "C3:3779",
+  "end_address": "C3:37A2",
+  "label": "ct_c3_3779_multi_return_dispatch",
+  "target": "C3:3779",
+  "confidence": "high",
+  "reasoning": "Score-8 SUPERCLUSTER with 5 returns in 42 bytes. Multi-exit dispatch pattern. 5 child blocks suggest switch-case structure. Gap fill for C3:3000-4000 region.",
+  "score": 8,
+  "cluster_score": 8,
+  "child_count": 5,
+  "return_count": 5,
+  "gap_context": "C3:3000-4000 score-8 supercluster",
+  "promotion_reason": "Score-8 SUPERCLUSTER. 5 returns, 5 child blocks, dispatch pattern. High-value target for coverage.",
+  "session": "30"
+}

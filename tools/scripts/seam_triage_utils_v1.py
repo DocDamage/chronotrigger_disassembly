@@ -5,35 +5,7 @@ import json
 from pathlib import Path
 from typing import Iterable
 
-try:
-    from snes_utils_hirom_v2 import parse_snes_range, parse_snes_address, format_snes_range, slice_rom_range, file_offset_to_snes
-except Exception:
-    def parse_snes_address(text: str) -> tuple[int, int]:
-        bank_s, addr_s = text.split(':')
-        return int(bank_s, 16), int(addr_s, 16)
-
-    def parse_snes_range(text: str) -> tuple[int, int, int]:
-        left, right = text.split('..')
-        bank_s, start_s = left.split(':')
-        bank2_s, end_s = right.split(':')
-        if bank_s != bank2_s:
-            raise ValueError('cross-bank ranges not supported')
-        return int(bank_s, 16), int(start_s, 16), int(end_s, 16)
-
-    def format_snes_range(bank: int, start: int, end: int) -> str:
-        return f'{bank:02X}:{start:04X}..{bank:02X}:{end:04X}'
-
-    def slice_rom_range(rom_bytes: bytes, range_text: str) -> bytes:
-        bank, start, end = parse_snes_range(range_text)
-        if bank < 0xC0:
-            raise ValueError('unsupported bank')
-        base = (bank - 0xC0) * 0x10000
-        return rom_bytes[base + start: base + end + 1]
-
-    def file_offset_to_snes(offset: int) -> tuple[int, int]:
-        bank = 0xC0 + (offset // 0x10000)
-        addr = offset % 0x10000
-        return bank, addr
+from snes_utils import file_offset_to_snes, hirom_to_file_offset, format_snes_range, parse_snes_address, parse_snes_range, slice_rom_range
 
 BAD_START_HARD = {
     0x00: 'brk_or_barrier',
@@ -61,9 +33,7 @@ STACKISH = {0x08, 0x28, 0x48, 0x68, 0xDA, 0xFA, 0x5A, 0x7A}
 BARRIERS = {0x00, 0x02, 0x42, 0xFF}
 
 def snes_to_offset(bank: int, addr: int) -> int:
-    if bank < 0xC0:
-        raise ValueError(f'unsupported bank {bank:02X}')
-    return (bank - 0xC0) * 0x10000 + addr
+    return hirom_to_file_offset(bank, addr)
 
 def neighborhood(rom_bytes: bytes, bank: int, addr: int, radius: int) -> bytes:
     center = snes_to_offset(bank, addr)

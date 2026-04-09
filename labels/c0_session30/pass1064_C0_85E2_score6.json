@@ -1,0 +1,15 @@
+{
+  "pass": 1064,
+  "label": "CT_C0_85E2_AudioDMA_Score6",
+  "address": "C0:85E2",
+  "snes_address": "$C0$85E2",
+  "score": 6,
+  "description": "Audio DMA transfer function",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "8000-C000",
+  "features": {"category": "audio"},
+  "session": 30,
+  "connected_to": ["C0:8580"]
+}

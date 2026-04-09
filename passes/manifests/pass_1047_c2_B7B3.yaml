@@ -1,0 +1,14 @@
+pass: 1047
+address: 02B7B3
+bank: 2
+label: ct_c2_b7b3_post_settlement
+range: C2:B7B3-C2:B7CB
+score: 6
+width: 25
+call_count: 2
+branch_count: 2
+stackish_count: 0
+return_count: 1
+session: 24
+parent_hub: C2:B716
+rationale: Score 6 post-settlement handler, 2 calls, 2 branches, PHP prologue, B700 region coordinator

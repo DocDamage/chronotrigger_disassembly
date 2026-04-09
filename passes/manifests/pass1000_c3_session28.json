@@ -1,0 +1,19 @@
+{
+  "pass_number": 1000,
+  "bank": "C3",
+  "start_address": "C3:6641",
+  "end_address": "C3:6649",
+  "label": "ct_c3_6641_score6_function",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:6641",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 6,
+  "promotion_reason": "Score-6 function in C3:6600 region. 9 bytes with 1 call, 1 return.",
+  "notes": [
+    "9-byte micro-function",
+    "Adjacent to C3:6643 documented handler"
+  ]
+}

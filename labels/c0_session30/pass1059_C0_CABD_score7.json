@@ -1,0 +1,17 @@
+{
+  "pass": 1059,
+  "label": "CT_C0_CABD_EventDispatch_Score7",
+  "address": "C0:CABD",
+  "snes_address": "$C0$CABD",
+  "score": 7,
+  "description": "Event dispatcher - Score 7 cluster connected to CA4D",
+  "type": "function",
+  "status": "verified",
+  "size": 35,
+  "region": "C000-CFFF",
+  "features": {
+    "cluster": true
+  },
+  "session": 30,
+  "connected_to": ["C0:CA4D", "C0:CAAE"]
+}

@@ -1,0 +1,27 @@
+# Session 30 Manifest - Pass 1106
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1106
+
+target:
+  bank: "C1"
+  range: "C1:1B55..C1:1B66"
+  label: "ct_c1_1b55_utility_hub"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 6
+  source: "c1_hub_manifests.py"
+  promotion_reason: "Hub function candidate. 29 callers via JSR. Score-6 cluster. Primary utility hub..."
+  callers: 29
+  hub_type: utility
+
+promotion_reason: |
+  Hub function candidate. 29 callers via JSR. Score-6 cluster. Primary utility hub with JSL to C7:0004. C1:1B00-1C00 region anchor.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

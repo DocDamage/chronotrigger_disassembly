@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 29
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:EE10"
+  end_addr: "C1:EE27"
+  name: "ct_c1_ee10_score7_s29"
+  type: "subroutine"
+
+evidence:
+  score: 7
+  scan_width: 23
+  region: "C1:E000-FFFF"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-7 candidate in E000-FFFF region. Subroutine."
+      confidence: high
+
+provenance:
+  source: "Session 29 analysis"
+  pass_number: 1013
+  selection_reason: "Score-7 candidate from initial_scan."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

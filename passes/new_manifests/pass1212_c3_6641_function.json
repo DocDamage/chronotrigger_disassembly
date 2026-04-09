@@ -1,0 +1,17 @@
+{
+  "pass": 1212,
+  "bank": "C3",
+  "start_address": "C3:6641",
+  "end_address": "C3:6649",
+  "label": "ct_c3_6641_compact_function",
+  "target": "C3:6641",
+  "confidence": "high",
+  "reasoning": "Score-6 compact function. 9 bytes with balanced indicators. Low ASCII ratio (0.222) suggests code over data.",
+  "score": 6,
+  "call_count": 1,
+  "return_count": 1,
+  "ascii_ratio": 0.222,
+  "gap_context": "C3:6000-7000 region",
+  "promotion_reason": "Score-6 compact function. 9 bytes, high confidence despite small size.",
+  "session": "30"
+}

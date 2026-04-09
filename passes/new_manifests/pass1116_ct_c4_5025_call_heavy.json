@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1116,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:5025",
+      "mode": "known_code",
+      "label": "ct_c4_5025_call_heavy",
+      "reason": "Score-7 island, 2 calls, 2 branches. Call-heavy function."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 21
+    }
+  }
+}

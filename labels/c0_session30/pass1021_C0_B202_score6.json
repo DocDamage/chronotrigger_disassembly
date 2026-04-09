@@ -1,0 +1,17 @@
+{
+  "pass": 1021,
+  "label": "CT_C0_B202_DataInit_Score6",
+  "address": "C0:B202",
+  "snes_address": "$C0$B202",
+  "score": 6,
+  "description": "Data initialization with LDY# prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "B000-BFFF",
+  "features": {
+    "start_byte": "A0"
+  },
+  "session": 30,
+  "connected_to": []
+}

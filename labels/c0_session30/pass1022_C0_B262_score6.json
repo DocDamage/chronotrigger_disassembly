@@ -1,0 +1,17 @@
+{
+  "pass": 1022,
+  "label": "CT_C0_B262_Loader_Score6",
+  "address": "C0:B262",
+  "snes_address": "$C0$B262",
+  "score": 6,
+  "description": "Data loader with LDA# prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 40,
+  "region": "B000-BFFF",
+  "features": {
+    "start_byte": "A9"
+  },
+  "session": 30,
+  "connected_to": ["C0:B257"]
+}

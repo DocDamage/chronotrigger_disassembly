@@ -1,0 +1,17 @@
+{
+  "pass": 1041,
+  "bank": "C1",
+  "session": 24,
+  "range": "C1:4744..C1:475A",
+  "score": 7,
+  "width": 23,
+  "call_count": 2,
+  "branch_count": 5,
+  "stackish_count": 1,
+  "return_count": 1,
+  "ascii_ratio": 0.261,
+  "source": "C1:4600-5000_post_mega_cluster_scan",
+  "reason": "Score-7 cluster with 2 calls, 5 branches, stack operation. Post-ecosystem region beyond C1:4600 mega-cluster boundary.",
+  "related_to": "C1:4600_mega_cluster_boundary",
+  "timestamp": "2026-04-08T15:20:00-04:00"
+}

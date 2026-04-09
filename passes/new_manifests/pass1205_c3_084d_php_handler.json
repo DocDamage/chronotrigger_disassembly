@@ -1,0 +1,14 @@
+{
+  "pass": 1205,
+  "bank": "C3",
+  "start_address": "C3:084D",
+  "end_address": "C3:0878",
+  "label": "ct_c3_084d_php_handler",
+  "target": "C3:084D",
+  "confidence": "high",
+  "reasoning": "Score-6 PHP handler. Processor status preservation. Gap fill for C3:0529-08A0 region.",
+  "score": 6,
+  "gap_context": "C3:0529-08A0 early gap",
+  "promotion_reason": "Score-6 PHP handler. Status register preservation pattern.",
+  "session": "30"
+}

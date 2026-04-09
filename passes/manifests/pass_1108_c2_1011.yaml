@@ -1,0 +1,13 @@
+pass: 1108
+address: 021011
+bank: 2
+label: ct_c2_1011_post_vector_handler_s29
+range: C2:1011-C2:10A8
+score: 6
+width: 152
+call_count: 5
+branch_count: 4
+stackish_count: 2
+return_count: 2
+session: 29
+rationale: C2:1000-2000 region - Score-6 cluster just after vector area. REP prologue, multi-call handler. Extension of vector functionality.

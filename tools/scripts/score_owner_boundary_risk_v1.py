@@ -5,19 +5,12 @@ import argparse
 import json
 from pathlib import Path
 
+from snes_utils import file_offset_to_snes, hirom_to_file_offset, parse_snes_range
+
 BRANCHES = {0x10, 0x30, 0x50, 0x70, 0x80, 0x82, 0x90, 0xB0, 0xD0, 0xF0}
 RETURNS = {0x60, 0x6B, 0x40}
 CALLS = {0x20, 0x22, 0x4C, 0x5C}
 BARRIERS = {0x00, 0x02, 0x42, 0xFF}
-
-
-def parse_snes_range(text: str) -> tuple[int, int, int]:
-    left, right = text.split('..')
-    bank_s, start_s = left.split(':')
-    bank2_s, end_s = right.split(':')
-    if bank_s != bank2_s:
-        raise ValueError('cross-bank ranges not supported')
-    return int(bank_s, 16), int(start_s, 16), int(end_s, 16)
 
 
 def format_snes(bank: int, addr: int) -> str:
@@ -25,15 +18,7 @@ def format_snes(bank: int, addr: int) -> str:
 
 
 def snes_to_offset(bank: int, addr: int) -> int:
-    if bank < 0xC0:
-        raise ValueError(f'unsupported bank {bank:02X}')
-    return (bank - 0xC0) * 0x10000 + addr
-
-
-def file_offset_to_snes(offset: int) -> tuple[int, int]:
-    bank = 0xC0 + (offset // 0x10000)
-    addr = offset % 0x10000
-    return bank, addr
+    return hirom_to_file_offset(bank, addr)
 
 
 def iter_raw_callers(rom_bytes: bytes):

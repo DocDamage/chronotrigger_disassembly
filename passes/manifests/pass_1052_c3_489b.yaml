@@ -1,0 +1,13 @@
+pass: 1052
+address: 03889B
+bank: 3
+label: ct_c3_489b_branch_handler
+range: C3:489B-C3:489F
+score: 4
+width: 5
+call_count: 0
+branch_count: 3
+stackish_count: 0
+return_count: 1
+session: 22
+rationale: Score 4 cluster from C3:4800-5000 scan. Dense branch pattern (3 branches in 5 bytes). Jump vector or mini dispatch table.

@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1119,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:9E50",
+      "mode": "known_code",
+      "label": "ct_c4_9e50_handler",
+      "reason": "Score-6 cluster in 8000-C000 region, 2 branches."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 7
+    }
+  }
+}

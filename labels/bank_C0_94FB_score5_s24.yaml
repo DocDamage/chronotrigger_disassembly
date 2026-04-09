@@ -1,0 +1,27 @@
+# Bank C0 - Score 5 Function Candidate
+# Session 24 Pass 1329 - Full bank scan
+
+range:
+  start: "C0:94FB"
+  end: "C0:9513"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 25
+  
+features:
+  calls: 0
+  branches: 4
+  stackish: 1
+  returns: 2
+  ascii_ratio: 0.24
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Score-5 candidate from full C0 bank scan.
+  Calls: 0, Branches: 4, Returns: 2
+  Part of Session 24 push toward 21% coverage target.

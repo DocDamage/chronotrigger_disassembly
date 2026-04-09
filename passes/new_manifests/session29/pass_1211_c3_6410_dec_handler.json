@@ -1,0 +1,27 @@
+{
+  "pass_index": 1211,
+  "bank": "C3",
+  "session": 29,
+  "source": "score-4 candidate from C3:6000-6FFF discovery",
+  "reason": "DEC handler, C3:6400 page",
+  "score": 4,
+  "target": {
+    "start": "C3:6410",
+    "end": "C3:6416",
+    "data": ["DEC $7E2000", "BNE $6415", "RTS"],
+    "bytes": ["CE", "00", "20", "7E", "D0", "01", "60"]
+  },
+  "metadata": {
+    "prologue": "DEC",
+    "epilogue": "RTS",
+    "callers": [],
+    "verification": "score-4 candidate, manual validation required",
+    "estimated_bytes": 7
+  },
+  "manifest_metadata": {
+    "author": "Session 29 - Score-4/5 Processing",
+    "created": "2026-04-08",
+    "priority": "gap_fill",
+    "coverage_target": "30%"
+  }
+}

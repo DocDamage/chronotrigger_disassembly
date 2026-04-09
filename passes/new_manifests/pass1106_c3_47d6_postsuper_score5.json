@@ -1,0 +1,17 @@
+{
+  "pass": "1106",
+  "bank": "C3",
+  "start_address": "C3:47D6",
+  "end_address": "C3:47E5",
+  "label": "ct_c3_47d6_postsuper_utility_score5",
+  "target": "C3:47D6",
+  "confidence": "medium",
+  "reasoning": "Score-5 post-supercluster utility. Located after C3:4548 supercluster. No direct calls suggests utility or callback function potentially referenced from supercluster. Very low ASCII ratio (0.125) = clean code.",
+  "cluster_score": 5,
+  "child_count": 1,
+  "return_count": 1,
+  "call_count": 0,
+  "gap_context": "C3:4700-4800 post-supercluster region",
+  "promotion_reason": "Score-5 utility - Post-supercluster callback candidate. Clean code (ASCII 0.125).",
+  "session": "27"
+}

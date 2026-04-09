@@ -2,11 +2,12 @@
   "pass_number": 730,
   "closed_ranges": [
     {
-      "range": "C5:80DE..C5:80FC",
+      "range": "C4:5025..C4:5039",
       "kind": "owner",
-      "label": "ct_c5_80de_php_handler",
+      "label": "ct_c4_5025_handler_score7",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, PHP prologue. C5:8000-8FFF remaining candidate."
+  "session": 24,
+  "promotion_reason": "Score-7 candidate from hot zone 5000-6000. 2 calls, 2 branches, 1 return. 21 bytes."
 }

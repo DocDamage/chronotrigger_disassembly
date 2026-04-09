@@ -1,0 +1,20 @@
+{
+  "pass_number": 994,
+  "bank": "C3",
+  "start_address": "C3:A8BA",
+  "end_address": "C3:A8D3",
+  "label": "ct_c3_a8ba_jsr_entry",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:A8C0",
+  "prologue_byte": "20",
+  "prologue_mnemonic": "JSR",
+  "backtrack_distance": 6,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:A800 region. Compact 26-byte function.",
+  "notes": [
+    "26-byte compact helper function",
+    "Located in A800 page of C3 bank"
+  ]
+}

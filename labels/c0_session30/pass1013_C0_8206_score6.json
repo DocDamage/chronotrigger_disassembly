@@ -1,0 +1,19 @@
+{
+  "pass": 1013,
+  "label": "CT_C0_8206_SoundFunc_Score6",
+  "address": "C0:8206",
+  "snes_address": "$C0$8206",
+  "score": 6,
+  "description": "Sound processing function in audio cluster",
+  "type": "function",
+  "status": "candidate",
+  "size": 30,
+  "region": "8000-C000",
+  "features": {
+    "start_byte": "20",
+    "pattern": "JSR_prologue",
+    "category": "audio"
+  },
+  "session": 30,
+  "connected_to": ["C0:813D"]
+}

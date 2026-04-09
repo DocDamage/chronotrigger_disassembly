@@ -1,0 +1,17 @@
+{
+  "pass": 1044,
+  "bank": "C1",
+  "session": 23,
+  "range": "C1:45DC..C1:45F4",
+  "score": 5,
+  "width": 25,
+  "call_count": 1,
+  "branch_count": 0,
+  "stackish_count": 0,
+  "return_count": 1,
+  "ascii_ratio": 0.24,
+  "source": "C1:4450-4600_post_table_loader",
+  "reason": "Score-5 cluster with call and return. Post-table loader region, likely related to C1:43FB table loader.",
+  "related_to": "C1:43FB_table_loader",
+  "timestamp": "2026-04-08T15:30:00-04:00"
+}

@@ -1,0 +1,30 @@
+# Bank C2 - Score 6 Function Candidate
+# Session 22 - C2:A000-B000 scan
+
+range:
+  start: "C2:ACE8"
+  end: "C2:AD00"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 3
+  branches: 2
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.20
+  first_return: "C2:AD00"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 candidate in AC00 region (ACE8-AD00).
+  3 internal calls and 2 branches.
+  Moderate ASCII ratio suggests mixed code/data or tables.
+  Part of AC00-AD00 code cluster.
+  May serve as helper for settlement services.

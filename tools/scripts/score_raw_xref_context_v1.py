@@ -6,87 +6,12 @@ import json
 from pathlib import Path
 from typing import Iterable
 
-try:
-    from snes_utils_hirom_v2 import parse_snes_range, file_offset_to_snes
-    from manifest_xref_utils import iter_raw_callers, load_closed_ranges, classify_caller_context, anchor_strength
-except Exception:
-    # Fallbacks so the script is still self-contained for local validation.
-    def parse_snes_range(text: str):
-        left, right = text.split('..')
-        bank_s, start_s = left.split(':')
-        bank2_s, end_s = right.split(':')
-        if bank_s != bank2_s:
-            raise ValueError('cross-bank ranges not supported')
-        return int(bank_s, 16), int(start_s, 16), int(end_s, 16)
-
-    def file_offset_to_snes(offset: int):
-        bank = 0xC0 + (offset // 0x10000)
-        addr = offset % 0x10000
-        return bank, addr
-
-    def iter_raw_callers(rom_bytes: bytes):
-        limit = len(rom_bytes)
-        for offset in range(limit):
-            op = rom_bytes[offset]
-            caller_bank, caller_addr = file_offset_to_snes(offset)
-            caller_text = f'{caller_bank:02X}:{caller_addr:04X}'
-            if op in (0x20, 0x4C) and offset + 2 < limit:
-                target_addr = rom_bytes[offset + 1] | (rom_bytes[offset + 2] << 8)
-                kind = 'JSR' if op == 0x20 else 'JMP'
-                yield {
-                    'kind': kind,
-                    'caller': caller_text,
-                    'caller_bank': caller_bank,
-                    'target_bank': caller_bank,
-                    'target_addr': target_addr,
-                    'target': f'{caller_bank:02X}:{target_addr:04X}',
-                    'width': 3,
-                }
-            elif op in (0x22, 0x5C) and offset + 3 < limit:
-                target_addr = rom_bytes[offset + 1] | (rom_bytes[offset + 2] << 8)
-                target_bank = rom_bytes[offset + 3]
-                kind = 'JSL' if op == 0x22 else 'JML'
-                yield {
-                    'kind': kind,
-                    'caller': caller_text,
-                    'caller_bank': caller_bank,
-                    'target_bank': target_bank,
-                    'target_addr': target_addr,
-                    'target': f'{target_bank:02X}:{target_addr:04X}',
-                    'width': 4,
-                }
-
-    def load_closed_ranges(_):
-        return []
-
-    def classify_caller_context(_, __):
-        return {
-            'caller_status': 'unresolved',
-            'caller_range': '',
-            'caller_kind_family': 'unknown',
-            'caller_label': '',
-            'caller_confidence': 'unknown',
-        }
-
-    def anchor_strength(validity: str, caller_status: str) -> str:
-        if validity != 'valid':
-            return 'invalid'
-        if caller_status == 'resolved_code':
-            return 'strong'
-        if caller_status == 'resolved_data':
-            return 'suspect'
-        return 'weak'
+from manifest_xref_utils import anchor_strength, classify_caller_context, iter_raw_callers, load_closed_ranges
+from snes_utils import hirom_to_file_offset, parse_snes_address, parse_snes_range
 
 
 def snes_to_offset(bank: int, addr: int) -> int:
-    if bank < 0xC0:
-        raise ValueError(f'unsupported bank {bank:02X}')
-    return (bank - 0xC0) * 0x10000 + addr
-
-
-def parse_snes_address(text: str) -> tuple[int, int]:
-    bank_s, addr_s = text.split(':')
-    return int(bank_s, 16), int(addr_s, 16)
+    return hirom_to_file_offset(bank, addr)
 
 
 def neighborhood(rom_bytes: bytes, bank: int, addr: int, radius: int) -> bytes:

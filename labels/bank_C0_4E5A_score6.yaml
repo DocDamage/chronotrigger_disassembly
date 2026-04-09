@@ -1,0 +1,28 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1046 - Auto-generated from C0:4000-5000 scan
+
+range:
+  start: "C0:4E5A"
+  end: "C0:4E72"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.12
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Low ASCII ratio (0.12) strongly indicates code.
+  Located in C0:4E00-4F00 cluster with other candidates.
+  2 calls suggest shared utility in graphics or audio subsystem.
+  Part of emerging function cluster at C0:4E50-4F00.

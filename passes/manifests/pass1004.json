@@ -2,11 +2,12 @@
   "pass_number": 1004,
   "closed_ranges": [
     {
-      "range": "C3:AF42..C3:AF60",
+      "range": "C0:2C26..C0:2C40",
       "kind": "owner",
-      "label": "ct_c3_af42_ldy_init",
+      "label": "ct_c0_2c26_dispatch_score8_cluster",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-6 cluster, LDY# prologue. C3:A000-AFFF region. Target: C3:AF48, 6 branch feeders."
+  "session": 21,
+  "promotion_reason": "Score-8 cluster, 3 children, 1 call, 7 branches, 3 returns. 27 bytes. Dispatch handler. Session 21."
 }

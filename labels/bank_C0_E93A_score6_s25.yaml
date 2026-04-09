@@ -1,0 +1,28 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 25 - Generated for 22% coverage push
+
+range:
+  start: "C0:E93A"
+  end: "C0:E952"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 24
+  
+features:
+  start_byte: "??"
+  start_class: "island"
+  target: ""
+  call_count: 1
+  branch_count: 1
+  return_count: 1
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score-6 candidate from C0:E000-F000 scan.
+  Simple function with 1 call, 1 branch, 1 return.
+  Part of Session 25 push toward 22% coverage target.

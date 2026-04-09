@@ -1,0 +1,33 @@
+# Bank C4 - Score 4 Branch-Heavy Function Candidate
+# Session 23 - C4:5000-6000 Region Deep Scan
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:5C39"
+  end: "C4:5C4B"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 4
+  width: 19
+  call_count: 0
+  branch_count: 4
+  stackish_count: 0
+  return_count: 1
+  
+features:
+  - "Score 4 branch-heavy function"
+  - "19-byte width"
+  - "4 branches indicates complex control flow"
+  - "Single return point"
+  - "Very low ASCII ratio (0.053)"
+  
+confidence: 4
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5400-6000 region.
+  Branch-heavy function with 4 branches.
+  Very low ASCII ratio suggests highly structured code.
+  May be a switch statement handler.

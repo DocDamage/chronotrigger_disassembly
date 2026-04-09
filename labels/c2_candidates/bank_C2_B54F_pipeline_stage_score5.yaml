@@ -1,0 +1,32 @@
+# Bank C2 - Score 5 Pipeline Stage
+# Session 23 - B500 Region Analysis
+
+range:
+  start: "C2:B54F"
+  end: "C2:B567"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 25
+  
+features:
+  calls: 1
+  branches: 2
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.28
+  first_return: "C2:B567"
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Score 5 pipeline stage in B500 region (B54F-B567).
+  25 bytes with branch-based control flow.
+  Located 447 bytes before B716 hub.
+  Part of B400-B600 settlement pipeline region.
+  Multiple branches suggest conditional processing.
+  May validate or transform data before B716 settlement.
+  Positioned between B475 and B716 clusters.

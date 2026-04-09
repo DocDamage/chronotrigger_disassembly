@@ -1,0 +1,36 @@
+# Bank C2 - Score 8 Cluster Candidate
+# Session 22 - C2:A000-B000 scan
+
+range:
+  start: "C2:AF72"
+  end: "C2:AFB4"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 8
+  width: 67
+  cluster: true
+  
+features:
+  calls: 1
+  branches: 0
+  stackish: 1
+  returns: 3
+  ascii_ratio: 0.149
+  child_count: 3
+  child_ranges:
+    - "C2:AF72..C2:AF84"
+    - "C2:AF84..C2:AF9C"
+    - "C2:AF9C..C2:AFB4"
+  
+confidence: 8
+status: "candidate"
+verified: false
+
+notes: |
+  Score 8 cluster in AF00 region (AF72-AFB4).
+  Largest continuous code block found in scan (67 bytes).
+  Very low ASCII ratio (0.149) - strongly indicates code.
+  Multiple return points suggest switch/case or dispatch pattern.
+  May be a dispatcher or table-driven function.
+  High-value target for detailed analysis.

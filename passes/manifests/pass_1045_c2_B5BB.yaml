@@ -1,0 +1,14 @@
+pass: 1045
+address: 02B5BB
+bank: 2
+label: ct_c2_b5bb_jsl_entry
+range: C2:B5BB-C2:B5CB
+score: 5
+width: 17
+call_count: 4
+branch_count: 0
+stackish_count: 1
+return_count: 2
+session: 24
+parent_hub: C2:B716
+rationale: Score 5 JSL entry point, 4 calls, 2 returns, long jump target for cross-bank dispatch

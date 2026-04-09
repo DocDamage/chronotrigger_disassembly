@@ -1,0 +1,20 @@
+{
+  "pass_number": 1007,
+  "bank": "C3",
+  "start_address": "C3:373D",
+  "end_address": "C3:374D",
+  "label": "ct_c3_373d_score6_function",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:373D",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 6,
+  "promotion_reason": "Score-6 function in C3:3700 region. 17 bytes with 1 call, 1 return. Very low ASCII (0.176).",
+  "notes": [
+    "Excellent code indicators with very low ASCII ratio",
+    "Standalone 17-byte function",
+    "Part of C3:3700-4300 high-density region"
+  ]
+}

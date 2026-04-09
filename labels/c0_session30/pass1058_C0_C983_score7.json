@@ -1,0 +1,17 @@
+{
+  "pass": 1058,
+  "label": "CT_C0_C983_ConfigMgr_Score7",
+  "address": "C0:C983",
+  "snes_address": "$C0$C983",
+  "score": 7,
+  "description": "Configuration manager - Score 7 cluster in C000 region",
+  "type": "function",
+  "status": "verified",
+  "size": 35,
+  "region": "C000-CFFF",
+  "features": {
+    "cluster": true
+  },
+  "session": 30,
+  "connected_to": ["C0:CAAE"]
+}

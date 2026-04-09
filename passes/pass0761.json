@@ -1,0 +1,19 @@
+{
+  "session": 31,
+  "pass_number": 761,
+  "closed_ranges": [
+    {
+      "range": "C4:4ABB..C4:4AF0",
+      "kind": "owner",
+      "label": "ct_c4_4acb_php_handler",
+      "confidence": "high"
+    }
+  ],
+  "properties": {
+    "target": "C4:4ACB",
+    "prologue_type": "PHP ($08)",
+    "region": "C4:4000-5000",
+    "score": 6
+  },
+  "promotion_reason": "Score-6 PHP prologue, state preservation"
+}

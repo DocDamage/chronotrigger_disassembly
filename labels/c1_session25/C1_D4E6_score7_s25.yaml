@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 25,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:D4E6",
+    "end_addr": "C1:D4F2",
+    "name": "ct_c1_d4e6_handler_s25"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 1,
+    "branch_count": 1,
+    "return_count": 1,
+    "width": 13,
+    "ascii_ratio": 0.154,
+    "source_file": "c1_d000_scan.json"
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

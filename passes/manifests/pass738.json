@@ -2,11 +2,12 @@
   "pass_number": 738,
   "closed_ranges": [
     {
-      "range": "CF:F6FD..CF:F724",
+      "range": "C4:C069..C4:C072",
       "kind": "owner",
-      "label": "ct_cf_f6fd_score7_cluster",
+      "label": "ct_c4_c069_cluster_score7",
       "confidence": "high"
     }
   ],
-  "promotion_reason": "Score-7 cluster, 40 bytes. CF:F600 region high-confidence function."
+  "session": 24,
+  "promotion_reason": "Score-7 CLUSTER from C4:C000-D000. 1 call, 1 branch, 5 returns. Exceptional return density. 10 bytes."
 }

@@ -1,0 +1,29 @@
+# Bank C2 - Score 6 Function Candidate
+# Session 21 - C2:B000-C000 scan near B716 hub
+
+range:
+  start: "C2:B9F0"
+  end: "C2:BA08"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 3
+  branches: 0
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.28
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 candidate in B900-BA00 region, ~2DA bytes from B716 cross-bank hub.
+  3 calls indicate multiple callers - likely a shared utility function.
+  No internal branches suggests straight-line code with single exit.
+  Stack operation present (PHP/PLP or PHA/PLA pattern).
+  Near BA36-BA4E (score 5) and B8B2-B8C0 (score 6) - cluster activity.

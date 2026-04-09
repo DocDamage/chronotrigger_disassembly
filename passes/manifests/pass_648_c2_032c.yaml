@@ -1,0 +1,13 @@
+pass: 648
+address: 02032C
+bank: 2
+label: ct_c2_032c_vector_handler
+range: C2:032C-C2:0350
+score: 8
+width: 37
+call_count: 5
+branch_count: 2
+stackish_count: 3
+return_count: 4
+session: 25
+rationale: Score-8 cluster from C2:0000-1000 vector region. 37 bytes with 4 child islands, 3 stack ops. Vector table adjacent handler.

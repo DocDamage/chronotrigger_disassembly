@@ -1,0 +1,13 @@
+pass: 1033
+address: 039DEC
+bank: 3
+label: ct_c3_1dec_subroutine
+range: C3:1DEC-C3:1E1B
+score: 7
+width: 48
+call_count: 1
+branch_count: 4
+stackish_count: 4
+return_count: 3
+session: 21
+rationale: Score 7 cluster from C3:1800-2000 scan. 48 bytes, multiple branches with stack operations. Executable region.

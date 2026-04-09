@@ -27,9 +27,11 @@ The toolkit keeps compatibility entrypoints for the common workflow:
 Those scripts now forward to the newest maintained implementations so older handoffs and workflow notes remain usable without landing on placeholder stubs.
 
 The toolkit also tolerates both repo-era canonical manifests and older legacy target-list manifests in its audit lanes.
+Active analysis scripts now prefer the shared SNES helper layer instead of carrying local HiROM and range-parsing copies.
+`snes_utils_hirom_v2.py` is now a compatibility shim over `snes_utils.py` so older imports stay stable without maintaining a second mapper implementation.
 
 ## Self-audit
-- `scripts/toolkit_doctor.py` - compiles the toolkit, checks low-bank mapping correctness, verifies core entrypoints are no longer stubbed, smoke-tests the main CLI surfaces, and validates both legacy and canonical manifest schemas
+- `scripts/toolkit_doctor.py` - compiles the toolkit, checks low-bank mapping correctness, verifies core entrypoints are no longer stubbed, smoke-tests the main CLI surfaces, validates both legacy and canonical manifest schemas, and catches duplicate helper drift in active scripts
 
 ## Core workflow
 1. derive the next callable/data target

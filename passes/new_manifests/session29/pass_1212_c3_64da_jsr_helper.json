@@ -1,0 +1,27 @@
+{
+  "pass_index": 1212,
+  "bank": "C3",
+  "session": 29,
+  "source": "score-4 candidate from C3:6000-6FFF discovery",
+  "reason": "JSR helper, C3:6400 page",
+  "score": 4,
+  "target": {
+    "start": "C3:64DA",
+    "end": "C3:64DD",
+    "data": ["JSR $64DE", "RTS"],
+    "bytes": ["20", "DE", "64", "60"]
+  },
+  "metadata": {
+    "prologue": "JSR",
+    "epilogue": "RTS",
+    "callers": [],
+    "verification": "score-4 candidate, manual validation required",
+    "estimated_bytes": 4
+  },
+  "manifest_metadata": {
+    "author": "Session 29 - Score-4/5 Processing",
+    "created": "2026-04-08",
+    "priority": "gap_fill",
+    "coverage_target": "30%"
+  }
+}

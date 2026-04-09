@@ -1,0 +1,19 @@
+{
+  "session": 31,
+  "pass_number": 765,
+  "closed_ranges": [
+    {
+      "range": "C4:6403..C4:6430",
+      "kind": "owner",
+      "label": "ct_c4_6411_php_routine",
+      "confidence": "high"
+    }
+  ],
+  "properties": {
+    "target": "C4:6411",
+    "prologue_type": "PHP ($08)",
+    "region": "C4:6000-7000",
+    "score": 6
+  },
+  "promotion_reason": "Score-6 PHP prologue, 14-byte pre-target"
+}

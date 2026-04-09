@@ -1,0 +1,29 @@
+{
+  "pass": 1016,
+  "bank": "C0",
+  "label": "ct_c0_2500_logic_sub",
+  "address": "C0:2500",
+  "range": "C0:2500..C0:2520",
+  "bytes": 33,
+  "category": "code",
+  "confidence": 5,
+  "reasoning": [
+    "Score 5 cluster in 2500 region of Bank C0",
+    "Branch and return pattern indicates code",
+    "Round address boundary (2500) suggests intentional alignment",
+    "33 bytes - substantial subroutine size",
+    "Located between 243B and 2760 clusters",
+    "Pattern consistent with game logic subroutine"
+  ],
+  "findings": {
+    "calls": 2,
+    "branches": 2,
+    "stack_ops": 0,
+    "returns": 1,
+    "first_return": "C0:2518"
+  },
+  "flags": ["score5", "aligned_address"],
+  "related": ["C0:2500", "C0:2520", "C0:243B", "C0:2760"],
+  "session": 20,
+  "status": "closed"
+}

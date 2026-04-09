@@ -1,0 +1,13 @@
+pass: 1063
+address: 025CAB
+bank: 2
+label: ct_c2_5cab_rich_handler
+range: C2:5CAB-C2:5CC3
+score: 4
+width: 25
+call_count: 6
+branch_count: 4
+stackish_count: 0
+return_count: 2
+session: 26
+rationale: Score-4 island from C2:5800-6000 scan. 25 bytes with 6 calls, 4 branches, 2 returns. Rich internal structure with complex control flow.

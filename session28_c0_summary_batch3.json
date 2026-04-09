@@ -1,0 +1,160 @@
+{
+  "session": 28,
+  "bank": "C0",
+  "batch": 3,
+  "manifests_created": 21,
+  "total_bytes": 1047,
+  "focus_regions": [
+    "4ED6-520D",
+    "C3C4-C6E6"
+  ],
+  "manifests": [
+    {
+      "pass": 1148,
+      "addr": "C0:4ED6",
+      "score": 7,
+      "bytes": 58,
+      "desc": "Animation driver"
+    },
+    {
+      "pass": 1149,
+      "addr": "C0:4F20",
+      "score": 6,
+      "bytes": 45,
+      "desc": "Frame updater"
+    },
+    {
+      "pass": 1150,
+      "addr": "C0:4F60",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Sprite animator"
+    },
+    {
+      "pass": 1151,
+      "addr": "C0:4FA0",
+      "score": 6,
+      "bytes": 48,
+      "desc": "OAM builder"
+    },
+    {
+      "pass": 1152,
+      "addr": "C0:4FE0",
+      "score": 8,
+      "bytes": 68,
+      "desc": "VBlank handler"
+    },
+    {
+      "pass": 1153,
+      "addr": "C0:5030",
+      "score": 7,
+      "bytes": 55,
+      "desc": "Screen refresh"
+    },
+    {
+      "pass": 1154,
+      "addr": "C0:5090",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Scanline counter"
+    },
+    {
+      "pass": 1155,
+      "addr": "C0:50D0",
+      "score": 7,
+      "bytes": 50,
+      "desc": "HBlank setup"
+    },
+    {
+      "pass": 1156,
+      "addr": "C0:5110",
+      "score": 6,
+      "bytes": 38,
+      "desc": "Mode7 calculator"
+    },
+    {
+      "pass": 1157,
+      "addr": "C0:5140",
+      "score": 7,
+      "bytes": 55,
+      "desc": "Layer scroller"
+    },
+    {
+      "pass": 1158,
+      "addr": "C0:51A0",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Priority sorter"
+    },
+    {
+      "pass": 1159,
+      "addr": "C0:C3C4",
+      "score": 7,
+      "bytes": 62,
+      "desc": "Save data manager"
+    },
+    {
+      "pass": 1160,
+      "addr": "C0:C410",
+      "score": 6,
+      "bytes": 48,
+      "desc": "SRAM reader"
+    },
+    {
+      "pass": 1161,
+      "addr": "C0:C450",
+      "score": 7,
+      "bytes": 55,
+      "desc": "SRAM writer"
+    },
+    {
+      "pass": 1162,
+      "addr": "C0:C4A0",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Checksum calc"
+    },
+    {
+      "pass": 1163,
+      "addr": "C0:C4E0",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Data verifier"
+    },
+    {
+      "pass": 1164,
+      "addr": "C0:C530",
+      "score": 6,
+      "bytes": 45,
+      "desc": "File loader"
+    },
+    {
+      "pass": 1165,
+      "addr": "C0:C570",
+      "score": 7,
+      "bytes": 58,
+      "desc": "Game state saver"
+    },
+    {
+      "pass": 1166,
+      "addr": "C0:C5C0",
+      "score": 6,
+      "bytes": 42,
+      "desc": "Config loader"
+    },
+    {
+      "pass": 1167,
+      "addr": "C0:C600",
+      "score": 7,
+      "bytes": 50,
+      "desc": "Progress tracker"
+    },
+    {
+      "pass": 1168,
+      "addr": "C0:C650",
+      "score": 6,
+      "bytes": 40,
+      "desc": "Backup creator"
+    }
+  ]
+}

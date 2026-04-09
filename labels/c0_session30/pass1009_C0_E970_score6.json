@@ -1,0 +1,18 @@
+{
+  "pass": 1009,
+  "label": "CT_C0_E970_SystemInit_Score6",
+  "address": "C0:E970",
+  "snes_address": "$C0$E970",
+  "score": 6,
+  "description": "System initialization function in E000 region (very high code density)",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "20",
+    "pattern": "JSR_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}
