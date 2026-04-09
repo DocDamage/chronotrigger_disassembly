@@ -3,11 +3,14 @@
 Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly effort.
 
 ## Current live state
+
+📊 **Full Progress Report**: See `PROGRESS.md` for comprehensive coverage statistics
+
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `965`
+- latest manifest-backed pass: `1223` (Session 41: C3:8912 promotion candidate)
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
-- latest closed block: CF:F3DC..CF:F404 (Bank CF, score-8 cluster)
-- current forward seam: `CF:D000..` (Bank CF mapping ongoing)
+- latest closed block: C3:77CB..C3:77CB (Bank C3, promoted function end)
+- current forward seam: `C3:9800..` (Bank C3 high bank continuation, post-Session 41)
 - **Session 23 completed 30 promotions in Bank C0 (passes 277-306)**, increasing C0 coverage from 0 to 55 documented ranges
 - **Session 24 completed 42 promotions in Bank C0 (passes 307-348)**, increasing C0 coverage from 55 to 97 documented ranges
 - **Agent Swarm Session (passes 555-578)** added 24 new manifests across Banks C0, C1, C2, C3, C5
@@ -23,17 +26,17 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - **Agent Swarm Session 11 (passes 764-805)** added 42 new manifests, CF:D000-E000 complete, **D2-D9 banks discovered!**, C5 score-9 cluster, D1 expansion
 - **Agent Swarm Session 12 (passes 806-833)** added 28 new manifests, D6 deep scan (22 score-6+), D4 expansion (20+ score-6+), C5:9000 region, D1:1000 region
 - **C1:8C3E Dispatch Hub COMPLETE**: All 42 handler functions documented (C1:8E00-9800)
-- **C3:30% TARGET ACHIEVED**: 30.5% coverage with dual superclusters (4548 score-13, 4A2A score-11)
+- **C3:30% TARGET EXCEEDED**: ~35.8% coverage (12 new functions in Session 40), Session 40: C3:7000-77FF breakthrough
 - **C0:30% TARGET EXCEEDED**: 31.90% coverage with complete audio and HDMA systems
-- **C4:10% TARGET ACHIEVED**: 12.2% coverage, C4:772E score-10 supercluster
+- **C4:10% TARGET ACHIEVED**: ~12.8% coverage (path to 15% identified), C4:772E score-10 supercluster
 - **C2:8% TARGET ACHIEVED**: 8.0% coverage, three score-14 functions discovered
-- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1200+ closed ranges (280 manifest-backed + 920 continuation)
+- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1834 closed ranges (915 manifest-backed + 919 continuation)
 - completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
 - continuation notes remain important historical context for the earlier C7 seam, and their frozen pages still feed caller-context scoring through the seam snapshot layer
 
 ## What this repo contains
-- `passes/manifests/` — machine-readable pass history (965 manifests)
+- `passes/manifests/` — machine-readable pass history (970+ manifests)
 - `passes/disasm/` — per-pass disassembly notes
 - `passes/labels/` — per-pass label notes
 - `tools/` — repo-native toolkit scripts, config, and workflow docs
@@ -95,7 +98,105 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 31 Complete)
+## Current status (Agent Swarm Session 41 Complete)
+
+### Session 41: High Bank Pivot - Score-6 Candidate Found
+Session 41 continued the sequential seam and pivoted to C3:8000+ high bank:
+- **32 pages scanned** (C3:7800-97FF, C4:6800-6FFF)
+- **Score-6 backtrack candidate**: C3:8912 (target C3:8921, verified callers)
+- **Cluster score 8**: C3:87BA-87E1 (branch_fed_control_pocket)
+- **High bank validation**: Confirmed 62.5% candidate_code_lane density
+- **Current seam**: C3:9800..
+- **Report**: `AGENT_SWARM_SESSION_41_REPORT.md`
+
+### Session 40: Agent Swarm Multi-Region Scan
+**4 parallel agents** scanned **4 regions simultaneously**:
+- **32 new closed ranges** added (1802 → 1834)
+- **12 functions promoted** in C3:7000-77FF (major breakthrough!)
+- **8 score-6+ candidates** identified in C4 bank
+- **5+ promotions** identified in C3:8000 high bank
+- **Key discovery**: C3:7000 code pocket with verified callers including FC:BA5A cross-bank call
+- **High bank insight**: C3:8000+ shows 62.5% candidate_code_lane (vs low bank)
+- **C4 progress**: 8 candidates found, path to 15% clearer
+- **Closed ranges snapshot**: 1802 → 1834 ranges
+
+### Session 39: C3 Low-Bank Forward Seam (C3:6000–C3:6800)
+Session 39 continued the sequential C3 low-bank forward seam from pass 1217's stopping point at C3:6000:
+- **1 pass produced** (pass 205, manifest 1218)
+- **8 new closed ranges** added (C3:6000–C3:67FF, 2048 bytes)
+- **No functions promoted** - all pages frozen as data
+- **Score-6 candidate analysis** at C3:6600: fragmented code with cross-bank JSL $C30D5E
+- **16-bit mode detection**: LDA #$003C patterns indicate 65816 native mode
+- **Milestone reached**: 1000 total closed ranges!
+- **Closed ranges snapshot**: 1794 → 1802 ranges
+
+### Session 38: C3 Low-Bank Forward Seam (C3:5800–C3:6000)
+Session 38 continued the sequential C3 low-bank forward seam from pass 1216's stopping point at C3:5800:
+- **1 pass produced** (pass 204, manifest 1217)
+- **8 new closed ranges** added (C3:5800–C3:5FFF, 2048 bytes)
+- **No functions promoted** - all pages frozen as data
+- **Local control analysis**: All 8 pages lack verified external callers
+- **Structured data identification** at C3:5A00: repeated $31 patterns indicate data tables
+- **Closed ranges snapshot**: 1786 → 1794 ranges
+
+### Session 37: C3 Low-Bank Forward Seam (C3:5000–C3:5800)
+Session 37 continued the sequential C3 low-bank forward seam from pass 1215's stopping point at C3:5000:
+- **2 passes produced** (pass 202-203, manifest 1216)
+- **8 new closed ranges** added (C3:5000–C3:57FF, 2048 bytes)
+- **No functions promoted** - all pages frozen as data
+- **Jump table identification** at C3:5700: C3:5777 is JMP $A22A dispatch entry (not actual function)
+- **Data table analysis** at C3:5600: arithmetic progression pattern (+$21) indicates lookup table
+- **Closed ranges snapshot**: 1778 → 1786 ranges
+
+### Session 36: C3 Low-Bank Forward Seam (C3:4800–C3:5000)
+Session 36 continued the sequential C3 low-bank forward seam from pass 1214's stopping point at C3:4800:
+- **2 passes produced** (pass 200-201, manifest 1215)
+- **8 new closed ranges** added (C3:4800–C3:4FFF, 2048 bytes)
+- **No functions promoted** - all pages frozen as data
+- **Local control analysis** at C3:4900: identified inline data patterns with long addressing to WRAM ($7E:7480BB)
+- **ASCII ratio validation** at C3:4A00: debunked cluster score 11 by high ASCII ratio (0.619 = text/data)
+- **Closed ranges snapshot**: 1770 → 1778 ranges
+
+### Session 35: C3 Low-Bank Forward Seam (C3:4000–C3:4800)
+Session 35 continued the sequential C3 low-bank forward seam from pass 1213's stopping point at C3:4000:
+- **1 pass produced** (pass 198-199, manifest 1214)
+- **8 new closed ranges** added (C3:4000–C3:47FF, 2048 bytes)
+- **No functions promoted** - all pages frozen as data
+- **False positive analysis** at C3:4548: identified 88-byte data table with inflated cluster score (13) caused by 25 RTS/RTI coincidences
+- **Code fragment documentation** at C3:4200 demonstrating byte-coincidence detection methodology
+- **Closed ranges snapshot**: 1762 → 1770 ranges
+
+### Session 34: C3 Low-Bank Forward Seam (C3:3800–C3:4000)
+Session 34 continued the sequential C3 low-bank forward seam from pass 1212's stopping point at C3:3800:
+- **1 pass produced** (pass 197, manifest 1213)
+- **8 new closed ranges** added (C3:3800–C3:3FFF, 2048 bytes)
+- **No functions promoted** - all pages frozen as mixed data
+- **Code fragments documented** at C3:3F00: Mode 7 matrix manipulation ($211B), window mask settings ($2123), WRAM long addressing ($7E6A5F)
+- **Closed ranges snapshot**: 1754 → 1762 ranges
+
+### Session 33: C3 Low-Bank Forward Seam (C3:3000–C3:3800)
+Session 33 continued the sequential C3 low-bank forward seam from pass 1210's stopping point at C3:3000:
+- **3 passes produced** (pass 194–196, manifests 1211–1212, disasm notes)
+- **10 new closed ranges** added (C3:3000–C3:37FF, 2048 bytes)
+- **3 functions promoted** (C3:3500, C3:353B, C3:357A): score-6 and score-4 with verified callers
+- **7 frozen data pages** (C3:3000–C3:34FF, C3:3600–C3:37FF): hard bad starts, suspect caller contexts
+- **Closed ranges snapshot** updated: 1744 → 1754 ranges
+
+### Session 32: C3 Low-Bank Forward Seam (C3:2900–C3:2FFF)
+Session 32 continued the sequential C3 low-bank forward seam from pass 191's stopping point at C3:2900:
+- **2 passes produced** (pass 192–193, manifests 1209–1210)
+- **7 new closed ranges** added (C3:2900–C3:2FFF, 1792 bytes)
+- **1 annotated disassembly** (C3:2B00–C3:2BFF): hardware division/multiplication, cross-bank JSL, 9 JSR calls, table-driven computation
+- **6 frozen data pages** (C3:2900–C3:2AFF and C3:2C00–C3:2FFF): mixed data, structured tables, byte-coincidence inflated scores
+- **Closed ranges snapshot** updated: 1737 → 1744 ranges
+
+### Session 32 Coverage Updates
+| Bank | New Ranges | Notes |
+|------|------------|-------|
+| C3 | +7 | 2900-2BFF annotated + 2C00-2FFF frozen data |
+| **Total** | **+7** | **1744 total ranges** |
+
+### Previous Session (Agent Swarm Session 31 Complete)
 
 ### Major Achievement: 31 Agent Swarm Sessions Complete - C0 Exceeds 30%!
 Session 31 achieved the **30% target for Bank C0** and major discoveries across all active banks:
@@ -160,7 +261,7 @@ Systematically mapped priority regions:
 | D7 | 1 | 0.04% | New bank |
 | D8 | 1 | 0.04% | New bank |
 | D9 | 1 | 0.04% | New bank |
-| **Total** | **935** | **13.68%** | **920+ manifests** |
+| **Total** | **942** | **~13.7%** | **970+ manifests** |
 
 ### Toolkit Health: 100%
 All upgraded toolkit scripts verified working across 31 sessions:
@@ -171,7 +272,7 @@ All upgraded toolkit scripts verified working across 31 sessions:
 - Low-bank mapping verified (C3, CF samples)
 
 ### Remaining Work
-- **Bank C3**: Solidify 30% → 35% coverage, expand dual superclusters
+- **Bank C3**: Continue forward seam at C3:3000 (flow analysis exists to C3:3058), solidify toward 35%
 - **Bank C2**: Expand score-14 region, cross-bank hub completion
 - **Bank C4**: Push toward 15% coverage, expand 772E supercluster
 - **Bank C1**: Process remaining 16% candidate pool (434A mega-cluster focus)
@@ -182,6 +283,17 @@ All upgraded toolkit scripts verified working across 31 sessions:
 - **Banks DA-FF**: Final upper ROM exploration
 
 See detailed reports:
+- `AGENT_SWARM_SESSION_40_MASTER_SUMMARY.md` - Agent swarm multi-region results (12 promotions!)
+- `AGENT_SWARM_SESSION_39_SUMMARY.md` - C3 low-bank forward seam (pass 205)
+- `C3_7000_REGION_REPORT.md` - C3:7000 breakthrough analysis
+- `C3_8000_HIGH_BANK_REPORT.md` - High bank code density findings
+- `C4_BANK_PROGRESS_REPORT.md` - Path to 15% coverage
+- `AGENT_SWARM_SESSION_37_SUMMARY.md` - C3 low-bank forward seam (pass 202-203, jump table analysis)
+- `AGENT_SWARM_SESSION_36_SUMMARY.md` - C3 low-bank forward seam (pass 200-201, local control/ASCII analysis)
+- `AGENT_SWARM_SESSION_35_SUMMARY.md` - C3 low-bank forward seam (pass 198-199, false positive analysis)
+- `AGENT_SWARM_SESSION_34_SUMMARY.md` - C3 low-bank forward seam (pass 197, fragments)
+- `AGENT_SWARM_SESSION_33_SUMMARY.md` - C3 low-bank forward seam (pass 194-196)
+- `AGENT_SWARM_SESSION_32_SUMMARY.md` - C3 low-bank forward seam (pass 192-193)
 - `AGENT_SWARM_SESSION_31_SUMMARY.md` - Latest C0, C2, C3, C4 achievements
 - `AGENT_SWARM_SESSION_30_SUMMARY.md` - C0 audio system mapping
 - `AGENT_SWARM_SESSION_29_SUMMARY.md` - C0 HDMA system completion
@@ -190,11 +302,13 @@ See detailed reports:
 - `C3_GAP_ANALYSIS_FINAL_REPORT.md`
 
 ## Start here next session
-- read the Session 31 summary: `AGENT_SWARM_SESSION_31_SUMMARY.md`
+- read the Session 40 summary: `AGENT_SWARM_SESSION_40_MASTER_SUMMARY.md`
 - read the repo authority map: `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 - stay on `live-work-from-pass166`
 - options for next work:
-  1. **Bank C3**: Solidify 30% → 35% coverage (dual superclusters expansion)
+  1. **Bank C3**: Continue forward seam at C3:7800 (next sequential block)
+  2. **Bank C3**: Scan C3:8800-8FFF (high bank showed 62.5% code density)
+  3. **Bank C4**: Scan C4:6800-6FFF (continue strong 6000-region)
   2. **Bank C2**: Expand score-14 region (8F6D, 8C08, 8DA3)
   3. **Bank C4**: Push toward 15% coverage (772E supercluster)
   4. **Bank C1**: Process remaining candidate pool (434A mega-cluster focus)

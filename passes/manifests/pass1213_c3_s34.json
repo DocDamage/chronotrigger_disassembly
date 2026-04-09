@@ -1,0 +1,58 @@
+{
+  "pass_number": 1213,
+  "session": 34,
+  "closed_ranges": [
+    {
+      "range": "C3:3800..C3:38FF",
+      "kind": "data",
+      "label": "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3900..C3:39FF",
+      "kind": "data",
+      "label": "ct_c3_3900_frozen_branch_fed_pocket_3_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3A00..C3:3AFF",
+      "kind": "data",
+      "label": "ct_c3_3a00_frozen_mixed_command_data_3_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3B00..C3:3BFF",
+      "kind": "data",
+      "label": "ct_c3_3b00_frozen_branch_fed_pocket_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3C00..C3:3CFF",
+      "kind": "data",
+      "label": "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3D00..C3:3DFF",
+      "kind": "data",
+      "label": "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3E00..C3:3EFF",
+      "kind": "data",
+      "label": "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3F00..C3:3FFF",
+      "kind": "data",
+      "label": "ct_c3_3f00_frozen_mixed_command_data_fragments_no_promotable_clusters",
+      "confidence": "high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:4000..",
+  "promotion_reason": "Frozen 8 pages (C3:3800-3FFF) as data. All pages rejected via bad_start_or_dead_lane_reject posture. C3:3F00 flagged for manual review but disassembly revealed fragmented code patterns with hardware register access ($211B) and long addressing to WRAM ($7E6A5F), but no coherent promotable functions. Local clusters present but insufficient caller evidence for promotion."
+}

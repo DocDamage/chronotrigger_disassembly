@@ -1,0 +1,58 @@
+{
+  "pass_number": 1215,
+  "session": 36,
+  "closed_ranges": [
+    {
+      "range": "C3:4800..C3:48FF",
+      "kind": "data",
+      "label": "ct_c3_4800_frozen_branch_fed_pocket_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4900..C3:49FF",
+      "kind": "data",
+      "label": "ct_c3_4900_frozen_local_control_only_fragments",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4A00..C3:4AFF",
+      "kind": "data",
+      "label": "ct_c3_4a00_frozen_mixed_command_data_cluster_score_11_ascii_619",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4B00..C3:4BFF",
+      "kind": "data",
+      "label": "ct_c3_4b00_frozen_mixed_command_data_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4C00..C3:4CFF",
+      "kind": "data",
+      "label": "ct_c3_4c00_frozen_mixed_command_data_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4D00..C3:4DFF",
+      "kind": "data",
+      "label": "ct_c3_4d00_frozen_mixed_command_data_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4E00..C3:4EFF",
+      "kind": "data",
+      "label": "ct_c3_4e00_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4F00..C3:4FFF",
+      "kind": "data",
+      "label": "ct_c3_4f00_frozen_mixed_command_data_2_hard_bad_starts",
+      "confidence": "high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:5000..",
+  "promotion_reason": "Frozen 8 pages (C3:4800-4FFF) as data. C3:4900 had local_control_only posture but disassembly revealed fragmented code with RTS at $4930 followed by data bytes breaking flow. C3:4A00 had cluster score 11 but ASCII ratio 0.619 indicates data table, not code. All pages rejected due to hard bad starts, fragmented execution, or insufficient caller evidence."
+}

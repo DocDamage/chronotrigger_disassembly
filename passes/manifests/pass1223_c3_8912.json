@@ -1,0 +1,54 @@
+{
+  "pass": 1223,
+  "session": 41,
+  "manifest_type": "function_promotion",
+  "created_at": "2026-04-09T10:15:00",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "promotions": [
+    {
+      "function_address": "C3:8912",
+      "function_range": "C3:8912..C3:8939",
+      "source": "backtrack",
+      "score": 6,
+      "confidence": "medium",
+      "promotion_reason": "Score 6 backtrack candidate with verified callers, ASCII 0.175",
+      "start_byte": "08",
+      "start_class": "clean_start",
+      "start_mnemonic": "PHP",
+      "ascii_ratio": 0.175,
+      "zero_ff_ratio": 0.15,
+      "callers": [
+        {
+          "caller": "C3:1D95",
+          "target": "C3:89ED",
+          "kind": "JSR",
+          "anchor_strength": "weak",
+          "caller_ascii_ratio": 0.303
+        },
+        {
+          "caller": "C3:4CD6", 
+          "target": "C3:89ED",
+          "kind": "JSR",
+          "anchor_strength": "weak",
+          "caller_ascii_ratio": 0.364
+        }
+      ],
+      "internal_evidence": {
+        "has_rts": true,
+        "has_php": true,
+        "has_jsr": true,
+        "returns_count": 1,
+        "calls_count": 2,
+        "branches_count": 3
+      },
+      "verification_status": "pending_final_review"
+    }
+  ],
+  "region": "C3:8900-89FF",
+  "page_family": "mixed_command_data",
+  "scan_context": {
+    "seam_block_start": "C3:8800",
+    "session_41_scan": true,
+    "high_bank": true
+  }
+}

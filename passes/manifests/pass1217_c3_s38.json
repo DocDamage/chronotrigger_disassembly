@@ -1,0 +1,58 @@
+{
+  "pass_number": 1217,
+  "session": 38,
+  "closed_ranges": [
+    {
+      "range": "C3:5800..C3:58FF",
+      "kind": "data",
+      "label": "ct_c3_5800_frozen_candidate_lane_local_control_only",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5900..C3:59FF",
+      "kind": "data",
+      "label": "ct_c3_5900_frozen_branch_fed_pocket_local_control_only",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5A00..C3:5AFF",
+      "kind": "data",
+      "label": "ct_c3_5a00_frozen_branch_fed_pocket_structured_data",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5B00..C3:5BFF",
+      "kind": "data",
+      "label": "ct_c3_5b00_frozen_mixed_command_data_local_control_only",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5C00..C3:5CFF",
+      "kind": "data",
+      "label": "ct_c3_5c00_frozen_mixed_command_data_local_control_only",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5D00..C3:5DFF",
+      "kind": "data",
+      "label": "ct_c3_5d00_frozen_candidate_lane_local_control_only",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5E00..C3:5EFF",
+      "kind": "data",
+      "label": "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5F00..C3:5FFF",
+      "kind": "data",
+      "label": "ct_c3_5f00_frozen_branch_fed_pocket_local_control_only",
+      "confidence": "high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:6000..",
+  "promotion_reason": "Frozen 8 pages (C3:5800-5FFF) as data. All pages classified as local_control_only with no verified external callers. C3:5A00 flagged for manual review but shows structured data patterns with repeated $31 values. No score-6+ candidates with verified caller chains. All local clusters lack sufficient evidence for promotion."
+}

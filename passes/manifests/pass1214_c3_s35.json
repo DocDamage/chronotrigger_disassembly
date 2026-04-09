@@ -1,0 +1,58 @@
+{
+  "pass_number": 1214,
+  "session": 35,
+  "closed_ranges": [
+    {
+      "range": "C3:4000..C3:40FF",
+      "kind": "data",
+      "label": "ct_c3_4000_frozen_candidate_lane_12_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4100..C3:41FF",
+      "kind": "data",
+      "label": "ct_c3_4100_frozen_branch_fed_pocket_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4200..C3:42FF",
+      "kind": "data",
+      "label": "ct_c3_4200_frozen_mixed_command_data_0_hard_bad_starts_fragments",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4300..C3:43FF",
+      "kind": "data",
+      "label": "ct_c3_4300_frozen_mixed_command_data_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4400..C3:44FF",
+      "kind": "data",
+      "label": "ct_c3_4400_frozen_text_ascii_heavy_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4500..C3:45FF",
+      "kind": "data",
+      "label": "ct_c3_4500_frozen_candidate_lane_1_hard_bad_start_cluster_score_13",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4600..C3:46FF",
+      "kind": "data",
+      "label": "ct_c3_4600_frozen_mixed_command_data_mixed_lane_continue",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:4700..C3:47FF",
+      "kind": "data",
+      "label": "ct_c3_4700_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:4800..",
+  "promotion_reason": "Frozen 8 pages (C3:4000-47FF) as data. C3:4200 flagged for manual review but disassembly revealed fragmented code with data interspersed - insufficient for promotion. C3:4500 has high cluster score (13) with 25 returns suggesting data table/jump table, not code. C3:4600 mixed_lane_continue but no coherent promotable functions. All pages rejected due to hard bad starts, suspect callers, or fragmented execution flow."
+}

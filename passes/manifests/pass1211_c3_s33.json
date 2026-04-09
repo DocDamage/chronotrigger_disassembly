@@ -1,0 +1,28 @@
+{
+  "pass_number": 1211,
+  "session": 33,
+  "closed_ranges": [
+    {
+      "range": "C3:3500..C3:3526",
+      "kind": "owner",
+      "label": "ct_c3_3500_score6_function_3callers_jsr_c3_350e",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:353B..C3:3554",
+      "kind": "owner",
+      "label": "ct_c3_353b_score6_function_a9_start_jsr_target",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:357A..C3:3593",
+      "kind": "owner",
+      "label": "ct_c3_357a_score4_function_caller_anchor_3callers",
+      "confidence": "medium"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:3000..",
+  "promotion_reason": "C3:3500-3526 promoted as score-6 function with 3 verified callers (C3:5584, C3:6786, C3:21A8), JSR target at C3:350E, clean $20 start byte. C3:353B-3554 promoted as score-6 function with $A9 clean start, JSR target at C3:353C. C3:357A-3593 promoted as score-4 function with caller anchor validation from 3 callers (C3:5584, C3:6786, C3:21A8 for C3:357B target). All candidates pass local byte sanity checks with valid prologue patterns."
+}

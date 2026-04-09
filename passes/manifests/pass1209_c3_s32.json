@@ -1,0 +1,28 @@
+{
+  "pass_number": 1209,
+  "session": 32,
+  "closed_ranges": [
+    {
+      "range": "C3:2900..C3:29FF",
+      "kind": "data",
+      "label": "ct_c3_2900_frozen_mixed_data_19_brk_no_xref_targets",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:2A00..C3:2AFF",
+      "kind": "data",
+      "label": "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:2B00..C3:2BFF",
+      "kind": "owner",
+      "label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr",
+      "confidence": "medium-high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2C00..",
+  "promotion_reason": "Continuation of C3 low-bank forward seam from pass 191. C3:2900-2AFF frozen as mixed data (high BRK density, no xref targets). C3:2B00-2BFF promoted as branch-fed arithmetic pocket with hardware division ($4204), possible multiplication ($4202), cross-bank JSL to C3:0E29, 9 JSR calls to C3 low-bank utilities, and table-driven computation. BMI $2C01 at C3:2BF9 confirms cross-page flow into C3:2C00."
+}

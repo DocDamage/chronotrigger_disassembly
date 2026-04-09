@@ -1,0 +1,58 @@
+{
+  "pass_number": 1218,
+  "session": 39,
+  "closed_ranges": [
+    {
+      "range": "C3:6000..C3:60FF",
+      "kind": "data",
+      "label": "ct_c3_6000_frozen_candidate_lane_4_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:6100..C3:61FF",
+      "kind": "data",
+      "label": "ct_c3_6100_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:6200..C3:62FF",
+      "kind": "data",
+      "label": "ct_c3_6200_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:6300..C3:63FF",
+      "kind": "data",
+      "label": "ct_c3_6300_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:6400..C3:64FF",
+      "kind": "data",
+      "label": "ct_c3_6400_frozen_candidate_lane_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:6500..C3:65FF",
+      "kind": "data",
+      "label": "ct_c3_6500_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:6600..C3:66FF",
+      "kind": "data",
+      "label": "ct_c3_6600_frozen_branch_fed_pocket_fragmented_code",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:6700..C3:67FF",
+      "kind": "data",
+      "label": "ct_c3_6700_frozen_candidate_lane_local_control_only",
+      "confidence": "high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:6800..",
+  "promotion_reason": "Frozen 8 pages (C3:6000-67FF) as data. C3:6600 flagged for manual review with score-6 candidates (C3:6643, C3:66A6) and 2 callers to C3:66B0, but disassembly revealed fragmented code with data interspersed. C3:66A6 shows JSL $C30D5E (cross-bank call) but lacks coherent function boundaries. All pages rejected due to hard bad starts, fragmented execution, or local control only classification."
+}

@@ -1,0 +1,58 @@
+{
+  "pass_number": 1216,
+  "session": 37,
+  "closed_ranges": [
+    {
+      "range": "C3:5000..C3:50FF",
+      "kind": "data",
+      "label": "ct_c3_5000_frozen_mixed_command_data_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5100..C3:51FF",
+      "kind": "data",
+      "label": "ct_c3_5100_frozen_candidate_lane_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5200..C3:52FF",
+      "kind": "data",
+      "label": "ct_c3_5200_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5300..C3:53FF",
+      "kind": "data",
+      "label": "ct_c3_5300_frozen_local_control_only_0_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5400..C3:54FF",
+      "kind": "data",
+      "label": "ct_c3_5400_frozen_branch_fed_pocket_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5500..C3:55FF",
+      "kind": "data",
+      "label": "ct_c3_5500_frozen_branch_fed_pocket_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5600..C3:56FF",
+      "kind": "data",
+      "label": "ct_c3_5600_frozen_mixed_command_data_mixed_lane_continue",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:5700..C3:57FF",
+      "kind": "data",
+      "label": "ct_c3_5700_frozen_branch_fed_pocket_jump_table_entries",
+      "confidence": "high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:5800..",
+  "promotion_reason": "Frozen 8 pages (C3:5000-57FF) as data. C3:5700 flagged for manual review but disassembly revealed jump table entries (JMP $A22A at $5777) rather than actual functions. C3:5600 shows structured data patterns with regular $00, $21, $42, $63, $84 sequences indicating lookup tables. All pages rejected due to hard bad starts, fragmented code, or jump table structure rather than executable functions."
+}
