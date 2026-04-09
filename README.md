@@ -98,18 +98,18 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 44 Complete)
+## Current status (Agent Swarm Session 45 Complete)
+
+### Session 45: Continuation Scan - 4 Score-4 Candidates Pending
+Session 45 continued scanning with 24 pages documented:
+- **24 pages scanned** (C3:B800-C7FF, C4:8800-97FF)
+- **No promotions**: 4 score-4 candidates pending (+2 points needed)
+- **Cross-bank caller**: CA:31D8 → C3:B8EE (external bank)
+- **C4:8A00 page**: 5 entry callers, cluster scores 5 and 4
+- **Current seam**: C3:C800.. / C4:9800..
+- **Report**: `AGENT_SWARM_SESSION_45_REPORT.md`
 
 ### Session 44: Dual Promotion Breakthrough - C3:B000 Functions
-Session 44 achieved dual score-6 promotions in C3:B000 page:
-- **16 pages scanned** (C3:B000-B7FF, C4:8000-87FF)
-- **2 functions promoted**: C3:B002 (hardware clear) + C3:B086 (range validation)
-- **C3 bank**: ~36.0% coverage (exceeds 30% target)
-- **C4 bank**: ~13.0%, 6 candidate pages discovered
-- **Current seam**: C3:B800.. / C4:8800..
-- **Report**: `AGENT_SWARM_SESSION_44_REPORT.md`
-
-### Session 43: C4 Bank Push to 15% - 7 Entry Callers Discovered
 Session 41 continued the sequential seam and pivoted to C3:8000+ high bank:
 - **32 pages scanned** (C3:7800-97FF, C4:6800-6FFF)
 - **Score-6 backtrack candidate**: C3:8912 (target C3:8921, verified callers)
