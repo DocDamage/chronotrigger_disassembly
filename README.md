@@ -7,7 +7,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 📊 **Full Progress Report**: See `PROGRESS.md` for comprehensive coverage statistics
 
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `1223` (Session 41: C3:8912 promotion candidate)
+- latest manifest-backed pass: `1224` (Session 42: C4:714E 32-bit arithmetic helper)
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
 - latest closed block: C3:77CB..C3:77CB (Bank C3, promoted function end)
 - current forward seam: `C3:9800..` (Bank C3 high bank continuation, post-Session 41)
@@ -98,7 +98,16 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 41 Complete)
+## Current status (Agent Swarm Session 42 Complete)
+
+### Session 42: C4 Bank Deep Scan - 32-bit Arithmetic Helper Found
+Session 42 continued high bank exploration and focused on C4:7000 region:
+- **24 pages scanned** (C3:9800-A7FF, C4:7000-77FF)
+- **1 function promoted**: C4:714E (score-6, 32-bit arithmetic routine)
+- **C4 bank**: 11 candidate pages discovered
+- **Path to 15%**: C4:714E promotion + 3 more sessions estimated
+- **Current seam**: C3:A800.. / C4:7800..
+- **Report**: `AGENT_SWARM_SESSION_42_REPORT.md`
 
 ### Session 41: High Bank Pivot - Score-6 Candidate Found
 Session 41 continued the sequential seam and pivoted to C3:8000+ high bank:
