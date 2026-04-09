@@ -1,8 +1,8 @@
 # Chrono Trigger Disassembly Progress Report
 
-**Last Updated**: 2026-04-09 (Session 45 Complete)  
+**Last Updated**: 2026-04-09 (Session 46 Complete)  
 **Working Branch**: `live-work-from-pass166`  
-**Latest Manifest Pass**: 1227 (Session 44: C3:B002 + C3:B086 dual promotion)
+**Latest Manifest Pass**: 1229 (Session 46: C4:9D10 + C3:CB47 dual promotion)
 
 ---
 
@@ -10,8 +10,8 @@
 
 The Chrono Trigger SNES ROM disassembly project has reached significant milestones:
 
-- **~1,855 closed ranges** documented (920 manifest-backed + 919 continuation + 16 session 45 frozen)
-- **45 Agent Swarm Sessions** completed
+- **~1,857 closed ranges** documented (922 manifest-backed + 919 continuation + 16 frozen)
+- **46 Agent Swarm Sessions** completed
 - **Bank C0**: 31.90% coverage (30% target exceeded)
 - **Bank C3**: ~35.8% coverage (30% target exceeded)
 - **Bank C4**: ~12.8% coverage (approaching 15% target)
@@ -26,8 +26,8 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 | C0 | 308 | 31.90% | ✅ Target Exceeded | Audio/HDMA systems complete |
 | C1 | 89 | 7.60% | In Progress | 434A mega-cluster mapped |
 | C2 | 75 | 8.00% | ✅ Target Achieved | Score-14 functions discovered |
-| C3 | 358 | ~36.0% | ✅ Target Exceeded | +2 functions in Session 44 |
-| C4 | 156 | ~13.0% | In Progress | C4:7FAC promoted, 2% to 15% |
+| C3 | 359 | ~36.1% | ✅ Target Exceeded | +1 function in Session 46 |
+| C4 | 157 | ~13.1% | In Progress | C4:9D10 promoted, 1.9% to 15% |
 | C5 | 28 | 4.10% | In Progress | Score-9 cluster at 9BC1 |
 | C6 | 15 | 0.50% | Initial | D400-D800 mapped |
 | C7 | 23 | 2.16% | In Progress | 95% mapped |
@@ -39,6 +39,14 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 ---
 
 ## Recent Major Achievements
+
+### Session 46: Major Breakthrough - C4:9800 Exceptional Density (2026-04-09)
+Scanned C3:C800-CFFF and C4:9800-9FFF with major C4 discovery:
+- **16 pages scanned** (C3:C800-CFFF, C4:9800-9FFF)
+- **2 functions promoted**: C4:9D10 (3-byte copy) + C3:CB47 (hardware init)
+- **C4:9800-9FFF**: 7 of 8 pages are candidate_code_lane (exceptional!)
+- **Score-6 clusters**: 3 discovered (C3:CB8E, C4:9DE6, C4:9E50)
+- **Current seam**: C3:D000.. / C4:A000..
 
 ### Session 45: Continuation Scan - Pending Candidates (2026-04-09)
 Scanned C3:B800-C7FF and C4:8800-97FF, documented pending candidates:
