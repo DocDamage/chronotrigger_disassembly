@@ -1,0 +1,52 @@
+{
+  "pass_number": 1212,
+  "session": 33,
+  "closed_ranges": [
+    {
+      "range": "C3:3000..C3:30FF",
+      "kind": "data",
+      "label": "ct_c3_3000_frozen_branch_fed_pocket_bad_starts_4_hard_rejects",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3100..C3:31FF",
+      "kind": "data",
+      "label": "ct_c3_3100_frozen_mixed_command_data_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3200..C3:32FF",
+      "kind": "data",
+      "label": "ct_c3_3200_frozen_branch_fed_pocket_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3300..C3:33FF",
+      "kind": "data",
+      "label": "ct_c3_3300_frozen_candidate_lane_3_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3400..C3:34FF",
+      "kind": "data",
+      "label": "ct_c3_3400_frozen_candidate_lane_2_hard_bad_starts",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3600..C3:36FF",
+      "kind": "data",
+      "label": "ct_c3_3600_frozen_mixed_command_data_1_hard_bad_start",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:3700..C3:37FF",
+      "kind": "data",
+      "label": "ct_c3_3700_frozen_mixed_command_data_2_hard_bad_starts",
+      "confidence": "high"
+    }
+  ],
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:3800..",
+  "promotion_reason": "Frozen 7 pages from C3:3000-C3:37FF seam as data due to hard bad starts, suspect caller contexts, and invalid prologue patterns. C3:3000, C3:3100, C3:3200, C3:3300, C3:3400, C3:3600, C3:3700 all rejected via bad_start_or_dead_lane_reject posture. Local code islands identified but insufficient for promotion without stronger caller evidence."
+}

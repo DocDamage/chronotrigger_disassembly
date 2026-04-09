@@ -1,0 +1,204 @@
+{
+  "pass_id": 1222,
+  "bank": "C4",
+  "scan_date": "2026-04-09",
+  "scan_regions": [
+    {
+      "start": "C4:5000",
+      "pages": 8,
+      "end": "C4:57FF"
+    },
+    {
+      "start": "C4:6000",
+      "pages": 8,
+      "end": "C4:67FF"
+    }
+  ],
+  "current_bank_coverage": {
+    "ranges": 45,
+    "bytes": 1307,
+    "percentage": 1.99
+  },
+  "target_coverage_percentage": 15.0,
+  "score_6_plus_candidates": [
+    {
+      "address": "C4:504E",
+      "target": "C4:5059",
+      "score": 6,
+      "start_byte": "20",
+      "start_class": "clean_start",
+      "candidate_range": "C4:504E..C4:5071",
+      "ascii_ratio": 0.389,
+      "region": "C4:5000-50FF"
+    },
+    {
+      "address": "C4:6073",
+      "target": "C4:6077",
+      "score": 6,
+      "start_byte": "20",
+      "start_class": "clean_start",
+      "candidate_range": "C4:6073..C4:608F",
+      "ascii_ratio": 0.31,
+      "region": "C4:6000-60FF"
+    },
+    {
+      "address": "C4:607D",
+      "target": "C4:6080",
+      "score": 6,
+      "start_byte": "20",
+      "start_class": "clean_start",
+      "candidate_range": "C4:607D..C4:6098",
+      "ascii_ratio": 0.25,
+      "region": "C4:6000-60FF"
+    },
+    {
+      "address": "C4:607D",
+      "target": "C4:6085",
+      "score": 6,
+      "start_byte": "20",
+      "start_class": "clean_start",
+      "candidate_range": "C4:607D..C4:609D",
+      "ascii_ratio": 0.273,
+      "region": "C4:6000-60FF"
+    },
+    {
+      "address": "C4:62D8",
+      "target": "C4:62DF",
+      "score": 6,
+      "start_byte": "0B",
+      "start_class": "clean_start",
+      "candidate_range": "C4:62D8..C4:62F7",
+      "ascii_ratio": 0.344,
+      "region": "C4:6200-62FF"
+    },
+    {
+      "address": "C4:632B",
+      "target": "C4:6330",
+      "score": 6,
+      "start_byte": "DA",
+      "start_class": "clean_start",
+      "candidate_range": "C4:632B..C4:6348",
+      "ascii_ratio": 0.233,
+      "region": "C4:6300-63FF"
+    },
+    {
+      "address": "C4:63D0",
+      "target": "C4:63D8",
+      "score": 6,
+      "start_byte": "20",
+      "start_class": "clean_start",
+      "candidate_range": "C4:63D0..C4:63F0",
+      "ascii_ratio": 0.394,
+      "region": "C4:6300-63FF"
+    },
+    {
+      "address": "C4:6403",
+      "target": "C4:6411",
+      "score": 6,
+      "start_byte": "08",
+      "start_class": "clean_start",
+      "candidate_range": "C4:6403..C4:6429",
+      "ascii_ratio": 0.359,
+      "region": "C4:6400-64FF"
+    }
+  ],
+  "high_value_clusters": [
+    {
+      "range": "C4:5025..C4:5039",
+      "cluster_score": 7,
+      "width": 21,
+      "call_count": 2,
+      "branch_count": 2,
+      "return_count": 1,
+      "note": "Score-7 cluster in C4:5000 region"
+    },
+    {
+      "range": "C4:63CB..C4:63D4",
+      "cluster_score": 5,
+      "width": 10,
+      "call_count": 1,
+      "branch_count": 2,
+      "return_count": 1
+    },
+    {
+      "range": "C4:63AD..C4:63B5",
+      "cluster_score": 5,
+      "width": 9,
+      "call_count": 0,
+      "branch_count": 2,
+      "return_count": 1
+    }
+  ],
+  "verified_callers": [
+    {
+      "target": "C4:6005",
+      "caller": "C4:807E",
+      "strength": "strong"
+    },
+    {
+      "target": "C4:6008",
+      "caller": "C4:0E90",
+      "strength": "strong"
+    },
+    {
+      "target": "C4:6000",
+      "callers": ["C4:208B", "C4:676F", "C4:E870", "C4:D56D"],
+      "strength": "weak"
+    },
+    {
+      "target": "C4:60E0",
+      "callers": ["C4:5BDD", "C4:7271", "C4:DBC8", "C4:1BA7"],
+      "strength": "weak"
+    },
+    {
+      "target": "C4:6330",
+      "caller": "C4:164E",
+      "strength": "weak"
+    }
+  ],
+  "page_family_summary": {
+    "C4:5000-57FF": {
+      "candidate_code_lane": 5,
+      "mixed_command_data": 1,
+      "branch_fed_control_pocket": 2
+    },
+    "C4:6000-67FF": {
+      "candidate_code_lane": 5,
+      "mixed_command_data": 2,
+      "branch_fed_control_pocket": 1
+    }
+  },
+  "review_posture_summary": {
+    "bad_start_or_dead_lane_reject": 5,
+    "local_control_only": 7,
+    "manual_owner_boundary_review": 3,
+    "mixed_lane_continue": 1
+  },
+  "next_scan_recommendations": [
+    {
+      "region": "C4:6800-6FFF",
+      "priority": "high",
+      "rationale": "Continuation of 6000-67FF scan which showed strong candidates and verified callers"
+    },
+    {
+      "region": "C4:5800-5FFF",
+      "priority": "medium",
+      "rationale": "Fill gap between 5000-57FF and 6000-67FF regions"
+    },
+    {
+      "region": "C4:4000-4FFF",
+      "priority": "high",
+      "rationale": "Previously identified as dense code region (4000-5000 scan in earlier sessions)"
+    },
+    {
+      "region": "C4:8000-8FFF",
+      "priority": "medium",
+      "rationale": "C4:8010 hub area with cross-bank connectivity"
+    }
+  ],
+  "coverage_impact": {
+    "estimated_new_bytes": 400,
+    "estimated_new_percentage": 0.61,
+    "projected_total_percentage": 2.60
+  }
+}
