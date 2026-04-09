@@ -2,7 +2,7 @@
 
 **Last Updated**: 2026-04-09 (Session 41 Complete)  
 **Working Branch**: `live-work-from-pass166`  
-**Latest Manifest Pass**: 1225 (Session 43: C4:7FAC clamp routine)
+**Latest Manifest Pass**: 1227 (Session 44: C3:B002 + C3:B086 dual promotion)
 
 ---
 
@@ -10,8 +10,8 @@
 
 The Chrono Trigger SNES ROM disassembly project has reached significant milestones:
 
-- **1,837 closed ranges** documented (918 manifest-backed + 919 continuation)
-- **43 Agent Swarm Sessions** completed
+- **1,839 closed ranges** documented (920 manifest-backed + 919 continuation)
+- **44 Agent Swarm Sessions** completed
 - **Bank C0**: 31.90% coverage (30% target exceeded)
 - **Bank C3**: ~35.8% coverage (30% target exceeded)
 - **Bank C4**: ~12.8% coverage (approaching 15% target)
@@ -26,7 +26,7 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 | C0 | 308 | 31.90% | ✅ Target Exceeded | Audio/HDMA systems complete |
 | C1 | 89 | 7.60% | In Progress | 434A mega-cluster mapped |
 | C2 | 75 | 8.00% | ✅ Target Achieved | Score-14 functions discovered |
-| C3 | 356 | ~35.9% | ✅ Target Exceeded | +1 function in Session 41 |
+| C3 | 358 | ~36.0% | ✅ Target Exceeded | +2 functions in Session 44 |
 | C4 | 156 | ~13.0% | In Progress | C4:7FAC promoted, 2% to 15% |
 | C5 | 28 | 4.10% | In Progress | Score-9 cluster at 9BC1 |
 | C6 | 15 | 0.50% | Initial | D400-D800 mapped |
@@ -39,6 +39,14 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 ---
 
 ## Recent Major Achievements
+
+### Session 44: Dual Promotion Breakthrough - C3:B000 (2026-04-09)
+Scanned C3:B000-B7FF and C4:8000-87FF with exceptional C3 results:
+- **16 pages scanned** (C3:B000-B7FF, C4:8000-87FF)
+- **2 functions promoted**: C3:B002 (hardware clear) + C3:B086 (range validation)
+- **C3 bank**: ~36.0% coverage (target exceeded)
+- **C4 bank**: ~13.0%, 6 candidate_code_lane pages found
+- **Current seam**: C3:B800.. / C4:8800..
 
 ### Session 43: C4 Bank Push to 15% (2026-04-09)
 Focused on C4:7800-7FFF to push toward 15% coverage target:
