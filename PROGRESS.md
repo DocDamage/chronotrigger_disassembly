@@ -1,6 +1,6 @@
 # Chrono Trigger Disassembly Progress Report
 
-**Last Updated**: 2026-04-09 (Session 41 Complete)  
+**Last Updated**: 2026-04-09 (Session 45 Complete)  
 **Working Branch**: `live-work-from-pass166`  
 **Latest Manifest Pass**: 1227 (Session 44: C3:B002 + C3:B086 dual promotion)
 
@@ -10,8 +10,8 @@
 
 The Chrono Trigger SNES ROM disassembly project has reached significant milestones:
 
-- **1,839 closed ranges** documented (920 manifest-backed + 919 continuation)
-- **44 Agent Swarm Sessions** completed
+- **~1,855 closed ranges** documented (920 manifest-backed + 919 continuation + 16 session 45 frozen)
+- **45 Agent Swarm Sessions** completed
 - **Bank C0**: 31.90% coverage (30% target exceeded)
 - **Bank C3**: ~35.8% coverage (30% target exceeded)
 - **Bank C4**: ~12.8% coverage (approaching 15% target)
@@ -34,11 +34,19 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 | CF | 43 | 2.14% | In Progress | D000-FFFF complete |
 | D1 | 24 | 2.05% | Discovered | 505 islands found |
 | D2-D9 | 8 | 0.04% each | Discovered | All code banks identified |
-| **Total** | **1,835** | **~14.5%** | **Active** | **971+ manifests** |
+| **Total** | **~1,855** | **~14.6%** | **Active** | **971+ manifests** |
 
 ---
 
 ## Recent Major Achievements
+
+### Session 45: Continuation Scan - Pending Candidates (2026-04-09)
+Scanned C3:B800-C7FF and C4:8800-97FF, documented pending candidates:
+- **24 pages scanned** (C3:B800-C7FF, C4:8800-97FF)
+- **No promotions**: 4 score-4 candidates pending verification
+- **Cross-bank caller**: CA:31D8 → C3:B8EE (external bank)
+- **C4:8A00**: 5 entry callers, 2 local clusters
+- **Current seam**: C3:C800.. / C4:9800..
 
 ### Session 44: Dual Promotion Breakthrough - C3:B000 (2026-04-09)
 Scanned C3:B000-B7FF and C4:8000-87FF with exceptional C3 results:
