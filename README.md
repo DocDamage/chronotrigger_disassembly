@@ -7,7 +7,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 📊 **Full Progress Report**: See `PROGRESS.md` for comprehensive coverage statistics
 
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `1224` (Session 42: C4:714E 32-bit arithmetic helper)
+- latest manifest-backed pass: `1225` (Session 43: C4:7FAC clamped value routine)
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
 - latest closed block: C3:77CB..C3:77CB (Bank C3, promoted function end)
 - current forward seam: `C3:9800..` (Bank C3 high bank continuation, post-Session 41)
@@ -98,18 +98,18 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 42 Complete)
+## Current status (Agent Swarm Session 43 Complete)
+
+### Session 43: C4 Bank Push to 15% - 7 Entry Callers Discovered
+Session 43 focused on C4:7800-7FFF with exceptional results:
+- **16 pages scanned** (C3:A800-AFFF, C4:7800-7FFF)
+- **1 function promoted**: C4:7FAC (score-6, clamped value update routine)
+- **C4:7F00 page**: 7 verified entry callers (exceptional density)
+- **C4 bank**: ~13.0% coverage, 2.0% to 15% target
+- **Current seam**: C3:B000.. / C4:8000..
+- **Report**: `AGENT_SWARM_SESSION_43_REPORT.md`
 
 ### Session 42: C4 Bank Deep Scan - 32-bit Arithmetic Helper Found
-Session 42 continued high bank exploration and focused on C4:7000 region:
-- **24 pages scanned** (C3:9800-A7FF, C4:7000-77FF)
-- **1 function promoted**: C4:714E (score-6, 32-bit arithmetic routine)
-- **C4 bank**: 11 candidate pages discovered
-- **Path to 15%**: C4:714E promotion + 3 more sessions estimated
-- **Current seam**: C3:A800.. / C4:7800..
-- **Report**: `AGENT_SWARM_SESSION_42_REPORT.md`
-
-### Session 41: High Bank Pivot - Score-6 Candidate Found
 Session 41 continued the sequential seam and pivoted to C3:8000+ high bank:
 - **32 pages scanned** (C3:7800-97FF, C4:6800-6FFF)
 - **Score-6 backtrack candidate**: C3:8912 (target C3:8921, verified callers)
