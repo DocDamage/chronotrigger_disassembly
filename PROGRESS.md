@@ -2,7 +2,7 @@
 
 **Last Updated**: 2026-04-09 (Session 41 Complete)  
 **Working Branch**: `live-work-from-pass166`  
-**Latest Manifest Pass**: 1223 (Session 41: C3:8912 promotion)
+**Latest Manifest Pass**: 1224 (Session 42: C4:714E promotion)
 
 ---
 
@@ -10,8 +10,8 @@
 
 The Chrono Trigger SNES ROM disassembly project has reached significant milestones:
 
-- **1,835 closed ranges** documented (916 manifest-backed + 919 continuation)
-- **41 Agent Swarm Sessions** completed
+- **1,836 closed ranges** documented (917 manifest-backed + 919 continuation)
+- **42 Agent Swarm Sessions** completed
 - **Bank C0**: 31.90% coverage (30% target exceeded)
 - **Bank C3**: ~35.8% coverage (30% target exceeded)
 - **Bank C4**: ~12.8% coverage (approaching 15% target)
@@ -27,7 +27,7 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 | C1 | 89 | 7.60% | In Progress | 434A mega-cluster mapped |
 | C2 | 75 | 8.00% | ✅ Target Achieved | Score-14 functions discovered |
 | C3 | 356 | ~35.9% | ✅ Target Exceeded | +1 function in Session 41 |
-| C4 | 154 | ~12.8% | In Progress | Path to 15% identified |
+| C4 | 155 | ~12.9% | In Progress | C4:714E promoted, path to 15% |
 | C5 | 28 | 4.10% | In Progress | Score-9 cluster at 9BC1 |
 | C6 | 15 | 0.50% | Initial | D400-D800 mapped |
 | C7 | 23 | 2.16% | In Progress | 95% mapped |
@@ -39,6 +39,14 @@ The Chrono Trigger SNES ROM disassembly project has reached significant mileston
 ---
 
 ## Recent Major Achievements
+
+### Session 42: High Bank + C4 Deep Scan (2026-04-09)
+Continued high bank exploration and C4 bank deep scan:
+- **24 pages scanned** (C3:9800-A7FF, C4:7000-77FF)
+- **1 function promoted**: C4:714E (score-6, 32-bit arithmetic helper)
+- **C4 bank progress**: 11 candidate pages found, path to 15% clearer
+- **High bank continues**: 6 branch_fed_control_pocket pages at C3:A000+
+- **Current seam**: C3:A800.. / C4:7800..
 
 ### Session 41: Sequential Seam + High Bank Pivot (2026-04-09)
 Continued disassembly with focus on C3:7800+ and high bank exploration:
