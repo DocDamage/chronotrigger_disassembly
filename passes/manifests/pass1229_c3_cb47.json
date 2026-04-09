@@ -1,0 +1,47 @@
+{
+  "pass": 1229,
+  "session": 46,
+  "manifest_type": "function_promotion",
+  "created_at": "2026-04-09T11:01:00",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "promotions": [
+    {
+      "function_address": "C3:CB47",
+      "function_range": "C3:CB47..C3:CB64",
+      "source": "backtrack",
+      "score": 6,
+      "confidence": "medium",
+      "promotion_reason": "Score 6 backtrack candidate with verified caller, ASCII 0.300",
+      "start_byte": "08",
+      "start_class": "clean_start",
+      "start_mnemonic": "PHP",
+      "ascii_ratio": 0.3,
+      "zero_ff_ratio": 0.1,
+      "callers": [
+        {
+          "caller": "C3:28E9",
+          "target": "C3:CB4C",
+          "kind": "JSR",
+          "anchor_strength": "weak",
+          "caller_ascii_ratio": 0.242
+        }
+      ],
+      "internal_evidence": {
+        "has_rts": true,
+        "has_php": true,
+        "has_jsr": false,
+        "returns_count": 1,
+        "calls_count": 0,
+        "branches_count": 2
+      },
+      "verification_status": "pending_final_review"
+    }
+  ],
+  "region": "C3:CB00-CBFF",
+  "page_family": "branch_fed_control_pocket",
+  "scan_context": {
+    "seam_block_start": "C3:C800",
+    "session_46_scan": true,
+    "c3_high_bank": true
+  }
+}

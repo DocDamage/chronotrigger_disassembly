@@ -7,7 +7,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 📊 **Full Progress Report**: See `PROGRESS.md` for comprehensive coverage statistics
 
 - working branch: `live-work-from-pass166`
-- latest manifest-backed pass: `1227` (Session 44: C3:B002 + C3:B086 dual promotion)
+- latest manifest-backed pass: `1229` (Session 46: C4:9D10 + C3:CB47 dual promotion)
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
 - latest closed block: C3:77CB..C3:77CB (Bank C3, promoted function end)
 - current forward seam: `C3:9800..` (Bank C3 high bank continuation, post-Session 41)
@@ -98,18 +98,19 @@ Recent `C3` work exposed three recurring problems:
 
 The newer flow is designed to stop those mistakes before they turn into bad labels.
 
-## Current status (Agent Swarm Session 45 Complete)
+## Current status (Agent Swarm Session 46 Complete)
+
+### Session 46: Major Breakthrough - C4:9800 Exceptional Density
+Session 46 discovered exceptional C4:9800-9FFF region with 2 promotions:
+- **16 pages scanned** (C3:C800-CFFF, C4:9800-9FFF)
+- **2 functions promoted**: C4:9D10 (3-byte copy) + C3:CB47 (hardware init)
+- **C4:9800-9FFF**: 7 of 8 pages candidate_code_lane (87.5% density!)
+- **Score-6 clusters**: 3 discovered (C3:CB8E, C4:9DE6, C4:9E50)
+- **C4 bank**: ~13.1%, only 1.9% to 15% target
+- **Current seam**: C3:D000.. / C4:A000..
+- **Report**: `AGENT_SWARM_SESSION_46_REPORT.md`
 
 ### Session 45: Continuation Scan - 4 Score-4 Candidates Pending
-Session 45 continued scanning with 24 pages documented:
-- **24 pages scanned** (C3:B800-C7FF, C4:8800-97FF)
-- **No promotions**: 4 score-4 candidates pending (+2 points needed)
-- **Cross-bank caller**: CA:31D8 → C3:B8EE (external bank)
-- **C4:8A00 page**: 5 entry callers, cluster scores 5 and 4
-- **Current seam**: C3:C800.. / C4:9800..
-- **Report**: `AGENT_SWARM_SESSION_45_REPORT.md`
-
-### Session 44: Dual Promotion Breakthrough - C3:B000 Functions
 Session 41 continued the sequential seam and pivoted to C3:8000+ high bank:
 - **32 pages scanned** (C3:7800-97FF, C4:6800-6FFF)
 - **Score-6 backtrack candidate**: C3:8912 (target C3:8921, verified callers)
