@@ -1,0 +1,24 @@
+{
+  "pass": "c3_3c5b_score6",
+  "live_seam_after_pass": "C3:3C77..C3:3C7F",
+  "new_ranges": [
+    {
+      "range": "C3:3C5B..C3:3C76",
+      "label": "ct_c3_indexed_function_3c5b_score6",
+      "notes": "Score-6 candidate from gap 3761-3C7F. LDX #$0040 prologue. JSR to $207E. RTS epilogue. JMP $39B1. Owner backtrack validated."
+    }
+  ],
+  "promoted_labels": [
+    "ct_c3_indexed_function_3c5b_score6"
+  ],
+  "criteria": {
+    "score": 6,
+    "start_byte": "A2",
+    "start_class": "clean_start",
+    "prologue": "LDX",
+    "subroutine_calls": ["$207E"],
+    "epilogue": "RTS",
+    "local_jumps": ["$39B1"],
+    "validation": "owner_backtrack_v1"
+  }
+}

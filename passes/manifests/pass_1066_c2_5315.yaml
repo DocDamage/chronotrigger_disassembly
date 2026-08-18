@@ -1,0 +1,13 @@
+pass: 1066
+address: 025315
+bank: 2
+label: ct_c2_5315_helper
+range: C2:5315-C2:531C
+score: 6
+width: 8
+call_count: 1
+branch_count: 1
+stackish_count: 0
+return_count: 1
+session: 27
+rationale: Score-6 island from C2:5300 scan. 8 bytes compact helper function. Called from C2:51EE. Adjacent to larger 5319 candidate - potential sibling function.

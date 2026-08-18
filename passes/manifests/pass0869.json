@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "pass_number": 869,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "DD:8200..DD:8230",
+      "kind": "code_owner",
+      "label": "ct_dd_8200_score14_cluster",
+      "confidence": "high",
+      "verification_status": "pending"
+    }
+  ],
+  "new_labels": [
+    "ct_dd_8200_score14_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass869.json": "passes/manifests/legacy/pass869.json"
+  },
+  "notes": []
+}

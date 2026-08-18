@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate
+# DB:2190 - detected via owner backtracking
+# Score: 6
+# Reason: PHB prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:2196
+best_start: DB:2190
+score: 6
+distance: 6
+start_byte: 8B  # PHB
+start_class: clean_start
+candidate_range: DB:2190..DB:21A7

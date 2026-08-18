@@ -1,0 +1,117 @@
+{
+  "session": 28,
+  "bank": "C1",
+  "total_manifests": 12,
+  "total_bytes": 279,
+  "score_distribution": {
+    "7": 7,
+    "6": 5
+  },
+  "region_distribution": {
+    "0000-1000": 2,
+    "3000-4000": 1,
+    "4000-5000": 2,
+    "5000-6000": 1,
+    "9000-A000": 3,
+    "A000-B000": 1,
+    "E000-F000": 2
+  },
+  "manifests": [
+    {
+      "file": "labels/c1_session28/C1_0E62_score7_s28.yaml",
+      "addr": "C1:0E62",
+      "label": "ct_c1_0e62_handler_s28",
+      "score": 7,
+      "region": "0000-1000",
+      "bytes": 25
+    },
+    {
+      "file": "labels/c1_session28/C1_1035_score7_s28.yaml",
+      "addr": "C1:1035",
+      "label": "ct_c1_1035_handler_s28",
+      "score": 7,
+      "region": "0000-1000",
+      "bytes": 25
+    },
+    {
+      "file": "labels/c1_session28/C1_3FC5_score7_s28.yaml",
+      "addr": "C1:3FC5",
+      "label": "ct_c1_3fc5_handler_s28",
+      "score": 7,
+      "region": "3000-4000",
+      "bytes": 25
+    },
+    {
+      "file": "labels/c1_session28/C1_4008_score7_s28.yaml",
+      "addr": "C1:4008",
+      "label": "ct_c1_4008_hub_candidate_s28",
+      "score": 7,
+      "region": "4000-5000",
+      "bytes": 25
+    },
+    {
+      "file": "labels/c1_session28/C1_4ED8_score7_s28.yaml",
+      "addr": "C1:4ED8",
+      "label": "ct_c1_4ed8_handler_s28",
+      "score": 7,
+      "region": "4000-5000",
+      "bytes": 25
+    },
+    {
+      "file": "labels/c1_session28/C1_5FBA_score7_s28.yaml",
+      "addr": "C1:5FBA",
+      "label": "ct_c1_5fba_handler_s28",
+      "score": 7,
+      "region": "5000-6000",
+      "bytes": 25
+    },
+    {
+      "file": "labels/c1_session28/C1_928A_score6_s28.yaml",
+      "addr": "C1:928A",
+      "label": "ct_c1_928a_dispatch_handler_s28",
+      "score": 6,
+      "region": "9000-A000",
+      "bytes": 24
+    },
+    {
+      "file": "labels/c1_session28/C1_9301_score6_s28.yaml",
+      "addr": "C1:9301",
+      "label": "ct_c1_9301_dispatch_handler_s28",
+      "score": 6,
+      "region": "9000-A000",
+      "bytes": 18
+    },
+    {
+      "file": "labels/c1_session28/C1_937A_score6_s28.yaml",
+      "addr": "C1:937A",
+      "label": "ct_c1_937a_dispatch_handler_s28",
+      "score": 6,
+      "region": "9000-A000",
+      "bytes": 18
+    },
+    {
+      "file": "labels/c1_session28/C1_A4F0_score6_s28.yaml",
+      "addr": "C1:A4F0",
+      "label": "ct_c1_a4f0_handler_s28",
+      "score": 6,
+      "region": "A000-B000",
+      "bytes": 23
+    },
+    {
+      "file": "labels/c1_session28/C1_EE10_score7_s28.yaml",
+      "addr": "C1:EE10",
+      "label": "ct_c1_ee10_handler_s28",
+      "score": 7,
+      "region": "E000-F000",
+      "bytes": 22
+    },
+    {
+      "file": "labels/c1_session28/C1_F120_score6_s28.yaml",
+      "addr": "C1:F120",
+      "label": "ct_c1_f120_handler_s28",
+      "score": 6,
+      "region": "E000-F000",
+      "bytes": 24
+    }
+  ]
+}

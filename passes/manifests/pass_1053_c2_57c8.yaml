@@ -1,0 +1,13 @@
+pass: 1053
+address: 0257C8
+bank: 2
+label: ct_c2_57c8_vector_handler
+range: C2:57C8-C2:57D7
+score: 6
+width: 16
+call_count: 1
+branch_count: 6
+stackish_count: 0
+return_count: 1
+session: 26
+rationale: Score-6 vector target candidate. 16 bytes with 6 branches, 1 call. Branch-heavy dispatcher pattern. Matches vector table reference C2:57DF.

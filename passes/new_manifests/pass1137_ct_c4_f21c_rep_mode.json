@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1137,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:F21C",
+      "mode": "known_code",
+      "label": "ct_c4_f21c_rep_mode",
+      "reason": "Score-6, REP prologue. Mode set."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 27
+    }
+  }
+}

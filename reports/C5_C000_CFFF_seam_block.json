@@ -1,0 +1,110 @@
+{
+  "analysis_metadata": {
+    "region": "C5:C000-CFFF",
+    "pages": 16,
+    "bytes": 4096,
+    "tool": "run_seam_block_v1.py",
+    "date": "2026-04-08",
+    "rom": "Chrono Trigger (USA).sfc"
+  },
+  "page_family_counts": {
+    "candidate_code_lane": 8,
+    "mixed_command_data": 2,
+    "branch_fed_control_pocket": 6
+  },
+  "review_posture_counts": {
+    "bad_start_or_dead_lane_reject": 4,
+    "local_control_only": 10,
+    "manual_owner_boundary_review": 1,
+    "mixed_lane_continue": 1
+  },
+  "score_6_candidates": [
+    {
+      "address": "C5:C030",
+      "prologue": "PHP (08)",
+      "target": "C5:C034",
+      "score": 6,
+      "distance": 4,
+      "status": "EXISTING (Pass 577)"
+    },
+    {
+      "address": "C5:C036",
+      "prologue": "JSR (20)",
+      "target": "C5:C038",
+      "score": 6,
+      "distance": 2,
+      "status": "NEW"
+    },
+    {
+      "address": "C5:C0B7",
+      "prologue": "JSL (22)",
+      "target": "C5:C0C0",
+      "score": 6,
+      "distance": 9,
+      "status": "EXISTING (Pass 578)"
+    },
+    {
+      "address": "C5:C0EA",
+      "prologue": "PHP (08)",
+      "target": "C5:C0F4",
+      "score": 6,
+      "distance": 10,
+      "status": "NEW"
+    },
+    {
+      "address": "C5:C1E6",
+      "prologue": "JSR (20)",
+      "target": "C5:C1EF",
+      "score": 6,
+      "distance": 9,
+      "status": "NEW"
+    },
+    {
+      "address": "C5:CEF2",
+      "prologue": "PHP (08)",
+      "target": "C5:CF00",
+      "score": 6,
+      "distance": 14,
+      "status": "NEW"
+    }
+  ],
+  "score_5_candidates": [
+    {
+      "address": "C5:C2FD",
+      "prologue": "PHD (0B)",
+      "target": "C5:C2FD",
+      "score": 5,
+      "distance": 0,
+      "status": "NEW"
+    },
+    {
+      "address": "C5:CD33",
+      "prologue": "LDY# (A0)",
+      "target": "C5:CD33",
+      "score": 5,
+      "distance": 0,
+      "status": "NEW"
+    }
+  ],
+  "score_4_candidates": [
+    {"address": "C5:C00C", "prologue": "PHP (08)", "target": "C5:C00D", "score": 4},
+    {"address": "C5:C129", "prologue": "BVC (50)", "target": "C5:C130", "score": 4},
+    {"address": "C5:C3FD", "prologue": "CPY# (C0)", "target": "C5:C3FE", "score": 4},
+    {"address": "C5:C4FA", "prologue": "PHP (08)", "target": "C5:C500", "score": 4},
+    {"address": "C5:C617", "prologue": "JSR (20)", "target": "C5:C61F", "score": 4},
+    {"address": "C5:CB2B", "prologue": "AND (39)", "target": "C5:CB2F", "score": 4},
+    {"address": "C5:C2A9", "prologue": "PHB (8B)", "target": "C5:C2B0", "score": 4}
+  ],
+  "existing_manifests_in_region": [
+    {"pass": 577, "range": "C5:C030-C0A0", "label": "ct_c5_c030_c000_region"},
+    {"pass": 578, "range": "C5:C0B7-C130", "label": "ct_c5_c0b7_jsl_prologue"}
+  ],
+  "local_clusters": [
+    {"range": "C5:C0B6-C0C4", "score": 5, "width": 15},
+    {"range": "C5:C034-C03A", "score": 4, "width": 7},
+    {"range": "C5:C1E2-C1E8", "score": 6, "width": 7},
+    {"range": "C5:C2D9-C2E7", "score": 5, "width": 15},
+    {"range": "C5:CB70-CB7A", "score": 7, "width": 11},
+    {"range": "C5:C947-C95F", "score": 6, "width": 25}
+  ]
+}

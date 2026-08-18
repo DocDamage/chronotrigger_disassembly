@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "pass_number": 1067,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C0:6E58..C0:6E6C",
+      "kind": "superseded",
+      "label": "ct_c0_6e58_score6_s27",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C0:6E58..C0:6E5B",
+      "parent_label": "ct_c0_6e58_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_03d2a83c3af359e4aeda",
+          "adj_e1cd46e01237d60de869"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c0_6e58_score6_s27"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass_1067_c0_6e58.json": "passes/manifests/legacy/pass_1067_c0_6e58.json"
+  },
+  "notes": []
+}

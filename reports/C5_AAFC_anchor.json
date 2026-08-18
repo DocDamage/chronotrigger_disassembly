@@ -1,0 +1,40 @@
+{
+  "target": "C5:AAFC",
+  "call_count": 2,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 1,
+  "suspect_anchor_count": 0,
+  "invalid_count": 1,
+  "hits": [
+    {
+      "kind": "JMP",
+      "caller": "C5:4A78",
+      "target": "C5:AAFC",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "CA:509F",
+      "target": "C5:AAFC",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at CA:509F resolves to CA:AAFC, not C5:AAFC"
+      ]
+    }
+  ]
+}

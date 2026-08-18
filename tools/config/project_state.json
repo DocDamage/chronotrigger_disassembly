@@ -1,0 +1,13 @@
+{
+  "$schema": "tools/config/schemas/project_state.schema.json",
+  "schema_version": 1,
+  "latest_manifest_pass": 1229,
+  "live_seam": "C3:D000.. / C4:A000..",
+  "evidence": [
+    "README.md",
+    "PROGRESS.md",
+    "AGENT_SWARM_SESSION_46_REPORT.md",
+    "passes/manifests/pass1229.json"
+  ],
+  "rationale": "Session 46 completed scans through C3:CFFF and C4:9FFF; the next forward seams are C3:D000 and C4:A000."
+}

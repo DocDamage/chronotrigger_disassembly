@@ -1,0 +1,149 @@
+{
+  "schema_version": 2,
+  "pass_number": 165,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "live_seam_after_pass": "C3:0A90..C3:0E38",
+  "closed_ranges": [
+    {
+      "range": "C3:08A9..C3:08B2",
+      "kind": "superseded",
+      "label": "ct_c3_unattached_owner_tail_fragment_ending_in_rtl",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C3:08A9..C3:08B2",
+      "parent_label": "ct_c3_attached_terminal_tail_of_helper_rooted_at_0800_pending_full_upstream_closure",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_779b624f0a1ae9404a54",
+          "adj_9db91ab3ab02056b3539"
+        ]
+      }
+    },
+    {
+      "range": "C3:08B3..C3:0943",
+      "kind": "superseded",
+      "label": "ct_c3_frame_display_service_wrapper_with_local_setup_and_branch_selected_external_worker",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "parent_range": "C3:08BA..C3:08FF",
+      "parent_label": "ct_c3_08ba_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_f61620989f088756d8ae"
+        ]
+      }
+    },
+    {
+      "range": "C3:0944..C3:099C",
+      "kind": "code_helper",
+      "label": "ct_c3_signed_ppu_math_helper_using_4202_4203_and_4216",
+      "confidence": "medium-high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:099D..C3:09A0",
+      "kind": "veneer",
+      "label": "ct_c3_mvn_fe_to_7e_veneer",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:09A1..C3:09A4",
+      "kind": "veneer",
+      "label": "ct_c3_mvn_fe_to_7f_veneer",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:09A5..C3:09D8",
+      "kind": "code_owner",
+      "label": "ct_c3_change_detector_and_c70004_service_trigger_for_0388_038a_state",
+      "confidence": "medium-high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:09D9..C3:09E8",
+      "kind": "data",
+      "label": "ct_c3_eight_word_permutation_table_0000_0002_0001_0003_0004_0006_0005_0007",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:09E9..C3:0A8F",
+      "kind": "superseded",
+      "label": "ct_c3_wram_runtime_code_emitter_writing_generated_stub_bytes_through_2180",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "parent_range": "C3:09E9..C3:0A8F",
+      "parent_label": "ct_c3_wram_runtime_code_emitter_writing_generated_stub_bytes_through_2180",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_cbb62902e647182844d8"
+        ]
+      }
+    },
+    {
+      "range": "C3:0E39..C3:0EF9",
+      "kind": "text_marker",
+      "label": "ct_c3_jet_bike_race_inline_ascii_graphic_design_staff_text_block",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:08B3..C3:08B9",
+      "kind": "code_owner",
+      "label": "ct_c3_frame_display_service_wrapper_with_local_setup_and_branch_selected_external_worker__residual_08b3_08b9",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_f61620989f088756d8ae"
+        ],
+        "residual_of": "C3:08B3..C3:0943",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:0900..C3:0943",
+      "kind": "code_owner",
+      "label": "ct_c3_frame_display_service_wrapper_with_local_setup_and_branch_selected_external_worker__residual_0900_0943",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_f61620989f088756d8ae"
+        ],
+        "residual_of": "C3:08B3..C3:0943",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c3_unattached_owner_tail_fragment_ending_in_rtl",
+    "ct_c3_frame_display_service_wrapper_with_local_setup_and_branch_selected_external_worker",
+    "ct_c3_signed_ppu_math_helper_using_4202_4203_and_4216",
+    "ct_c3_mvn_fe_to_7e_veneer",
+    "ct_c3_mvn_fe_to_7f_veneer",
+    "ct_c3_change_detector_and_c70004_service_trigger_for_0388_038a_state",
+    "ct_c3_eight_word_permutation_table_0000_0002_0001_0003_0004_0006_0005_0007",
+    "ct_c3_wram_runtime_code_emitter_writing_generated_stub_bytes_through_2180",
+    "ct_c3_jet_bike_race_inline_ascii_graphic_design_staff_text_block",
+    "ct_c3_frame_display_service_wrapper_with_local_setup_and_branch_selected_external_worker__residual_08b3_08b9",
+    "ct_c3_frame_display_service_wrapper_with_local_setup_and_branch_selected_external_worker__residual_0900_0943"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass165_direct.json": "passes/manifests/legacy/pass165_direct.json"
+  },
+  "notes": [
+    "Split a fake giant seam into owners, veneers, data, and inline text.",
+    "Runtime-code emitter remains top-level because it has real external callers."
+  ]
+}

@@ -1,0 +1,36 @@
+# Bank C3 - Score 5 Function Candidate (Session 24)
+# Range: C3:74F5..C3:7508
+
+candidate:
+  bank: "C3"
+  start: "C3:74F5"
+  end: "C3:7508"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  score: 5
+  width: 20
+  
+features:
+  calls: 1
+  branches: 1
+  stackish: 2
+  returns: 1
+  ascii_ratio: 0.6
+
+analysis:
+  type: "function"
+  description: |
+    20-byte score-5 function with balanced indicators.
+    2 stackish operations suggest register preservation.
+    Single call and return indicate complete function.
+
+confidence: 5
+status: "candidate"
+verified: false
+coverage_gain: 20
+
+notes: |
+  Score-5 candidate from C3:7000-8000 scan.
+  Good coverage opportunity in upper C3 region.

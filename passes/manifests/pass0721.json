@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "pass_number": 721,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "CF:DA2F..CF:DA4D",
+      "kind": "code_owner",
+      "label": "ct_cf_da2f_c7_cross_bank",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:6454..C3:6472",
+      "kind": "superseded",
+      "label": "ct_c3_6454_gap_handler",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "parent_range": "C3:6400..C3:64FF",
+      "parent_label": "ct_c3_6400_frozen_candidate_lane_2_hard_bad_starts",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 4
+      },
+      "legacy_metadata": {
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_4526d910efd5255560ce"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_cf_da2f_c7_cross_bank",
+    "ct_c3_6454_gap_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass721.json": "passes/manifests/legacy/pass721.json",
+    "source_2_pass721_c3_6454_gap.json": "passes/manifests/legacy/pass721_c3_6454_gap.json"
+  },
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:645A",
+    "Weak caller C3:0A0C with single hit",
+    "Local clusters C3:6445..C3:6449 and C3:648A..C3:6490 show return evidence"
+  ]
+}

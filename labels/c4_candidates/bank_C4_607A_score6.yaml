@@ -1,0 +1,31 @@
+# Bank C4 - Score 6 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:607A"
+  end: "C4:6085"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 12
+  call_count: 1
+  branch_count: 1
+  stackish_count: 0
+  return_count: 1
+  
+features:
+  - "Score 6 function candidate"
+  - "12-byte compact function"
+  - "1 external call"
+  - "Simple control flow"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:6000-7000 region.
+  Score 6 candidate with clean call/branch/return structure.
+  Part of C4:607A-6086 cluster.

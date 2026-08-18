@@ -1,0 +1,47 @@
+# Bank C3 - Score 5 Function (SESSION 23)
+# C3:47D6-47E5 - Post-supercluster utility
+
+range:
+  start: "C3:47D6"
+  end: "C3:47E5"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 5
+  cluster_score: 5
+  width: 16
+  child_count: 1
+
+features:
+  - "Score 5 function"
+  - "0 calls (utility/ISR)"
+  - "1 branch"
+  - "Post-supercluster region"
+  
+stats:
+  calls: 0
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.125
+
+confidence: 5
+status: "candidate"
+verified: false
+priority: "medium"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:4400-4800 region
+  
+  Score 5 function located after the C3:4548 supercluster.
+  No direct calls suggests utility or callback function.
+  
+  Features:
+  - 16 bytes
+  - 0 calls = possible utility/ISR
+  - Very low ASCII ratio (0.125) = clean code
+  - 1 branch, 1 stack operation
+  
+  RECOMMENDATION: Check for references from the supercluster
+  as a potential handler/target.

@@ -1,0 +1,34 @@
+{
+  "pass_number": 163,
+  "branch": "repo-bootstrap-pass163",
+  "toolkit_version": "v6.8-pass161-upgraded",
+  "live_seam_after_pass": "C3:0307..C3:0528",
+  "completion_estimate": 70.2,
+  "closed_ranges": [
+    {
+      "range": "C3:01E4..C3:02DC",
+      "kind": "code_owner",
+      "label": "ct_c3_selected_7e_7f_band_initializer_and_32_step_saturating_add_subtract_wram_stream_worker",
+      "confidence": "medium-high"
+    },
+    {
+      "range": "C3:02DD..C3:0306",
+      "kind": "code_helper",
+      "label": "ct_c3_external_byte_mix_helper_updating_0386_and_returning_start_byte_for_c0_fe_chained_table_walk",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_selected_7e_7f_band_initializer_and_32_step_saturating_add_subtract_wram_stream_worker",
+    "ct_c3_external_byte_mix_helper_updating_0386_and_returning_start_byte_for_c0_fe_chained_table_walk"
+  ],
+  "confidence": {
+    "structural": "medium-high",
+    "semantic": "medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Split old monolithic seam 01E4..0306 into a real owner plus a separately callable helper.",
+    "Helper has at least one additional direct caller and must remain split."
+  ]
+}

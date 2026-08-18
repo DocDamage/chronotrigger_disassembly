@@ -1,0 +1,85 @@
+{
+  "target": "C5:DD0F",
+  "call_count": 5,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 1,
+  "suspect_anchor_count": 0,
+  "invalid_count": 4,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C5:10EE",
+      "target": "C5:DD0F",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C7:7461",
+      "target": "C5:DD0F",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at C7:7461 resolves to C7:DD0F, not C5:DD0F"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C8:124B",
+      "target": "C5:DD0F",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at C8:124B resolves to C8:DD0F, not C5:DD0F"
+      ]
+    },
+    {
+      "kind": "JMP",
+      "caller": "DF:4F68",
+      "target": "C5:DD0F",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JMP at DF:4F68 resolves to DF:DD0F, not C5:DD0F"
+      ]
+    },
+    {
+      "kind": "JMP",
+      "caller": "ED:5B69",
+      "target": "C5:DD0F",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JMP at ED:5B69 resolves to ED:DD0F, not C5:DD0F"
+      ]
+    }
+  ]
+}

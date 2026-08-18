@@ -1,0 +1,71 @@
+{
+  "provenance": {
+    "generator": "toolkit_doctor.py",
+    "generation_command": "python tools/scripts/toolkit_doctor.py --strict --output-json 'C:\\Users\\dferr\\AppData\\Local\\Temp\\ct-clean-reports-996e56ff463a47169a10facf64e1641f\\toolkit_doctor.json' --output-md 'C:\\Users\\dferr\\AppData\\Local\\Temp\\ct-clean-reports-996e56ff463a47169a10facf64e1641f\\toolkit_doctor.md'",
+    "generated_at_utc": "2026-08-18T23:00:14.051883+00:00",
+    "source_commit": "c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0",
+    "source_tree": "87dfb974665f8d9eb23523ed951b29bac02fcf2c",
+    "git_commit": "c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0",
+    "git_branch": "live-work-from-pass166",
+    "is_dirty_worktree": false,
+    "worktree_clean_before_generation": true,
+    "report_schema_version": 2,
+    "generator_source_digest": "5b11603e48f6da79412d4d938092e7058d4cdcb2d3a029b18172b825186c82e8",
+    "manifest_count": 961,
+    "manifest_set_digest": "17de258695a30716e919b9def75dab8887c52b534cc72e7a7bb0d8da40b6d0bd"
+  },
+  "overall_status": "pass",
+  "strict_mode": true,
+  "total_checks": 8,
+  "passed_checks": 8,
+  "failed_checks": 0,
+  "warned_checks": 0,
+  "checks": [
+    {
+      "name": "python_compilation",
+      "status": "pass",
+      "total_files": 241,
+      "failures": []
+    },
+    {
+      "name": "static_analysis_pyflakes",
+      "status": "pass",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "name": "canonical_manifest_integrity",
+      "status": "pass",
+      "manifest_count": 961,
+      "errors": []
+    },
+    {
+      "name": "range_ownership_conflicts",
+      "status": "pass",
+      "total_conflicts": 0,
+      "unresolved_conflicts_count": 0,
+      "waived_conflicts_count": 0,
+      "waiver_registry_errors": []
+    },
+    {
+      "name": "branch_state_audit",
+      "status": "pass",
+      "output": "reviewed intentional gaps: 106 passes accounted for\nlatest manifest seam: C3:D000.. / C4:A000..\nlatest continuation note: chrono_trigger_session15_continue_notes_100.md\nhistorical session15 note seam: (missing)\neffective live seam: C3:D000.. / C4:A000..\nbranch state audit ok"
+    },
+    {
+      "name": "policy_registries",
+      "status": "pass",
+      "errors": []
+    },
+    {
+      "name": "unit_tests",
+      "status": "pass",
+      "summary": "39 passed"
+    },
+    {
+      "name": "binary_and_cache_policy",
+      "status": "pass",
+      "output": "Binary/cache policy: current tracked tree is clean"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 24 Pass 1042 - Auto-generated from C0:0000-2000 scan
+
+range:
+  start: "C0:1925"
+  end: "C0:193D"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 1
+  branches: 6
+  stackish: 1
+  returns: 4
+  ascii_ratio: 0.28
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Outstanding candidate with 6 branches and 4 returns in 25 bytes.
+  Extremely complex control flow - likely a switch table or dispatch function.
+  Located in C0:1900-1A00 region, possibly game state handler.
+  Multiple exit points suggest different return paths based on conditions.

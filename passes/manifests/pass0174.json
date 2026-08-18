@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "pass_number": 174,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "live_seam_after_pass": "C3:16AC..C3:1816",
+  "closed_ranges": [
+    {
+      "range": "C3:15E9..C3:16A7",
+      "kind": "superseded",
+      "label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C3:1627..C3:1642",
+      "parent_label": "ct_c3_1627_multi_return_handler",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_98654623575e3f06e7f6",
+          "adj_3c5ad81be8da4c89c641",
+          "adj_ffb22bca319debbfc50e"
+        ]
+      }
+    },
+    {
+      "range": "C3:16A8..C3:16AB",
+      "kind": "veneer",
+      "label": "ct_c3_tiny_local_wrapper_calling_2629_then_returning",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:15E9..C3:1626",
+      "kind": "data",
+      "label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper__residual_15e9_1626",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_98654623575e3f06e7f6",
+          "adj_3c5ad81be8da4c89c641",
+          "adj_ffb22bca319debbfc50e"
+        ],
+        "residual_of": "C3:15E9..C3:16A7",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:1643..C3:1649",
+      "kind": "data",
+      "label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper__residual_1643_1649",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_98654623575e3f06e7f6",
+          "adj_3c5ad81be8da4c89c641",
+          "adj_ffb22bca319debbfc50e"
+        ],
+        "residual_of": "C3:15E9..C3:16A7",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:1659..C3:16A7",
+      "kind": "data",
+      "label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper__residual_1659_16a7",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_98654623575e3f06e7f6",
+          "adj_3c5ad81be8da4c89c641",
+          "adj_ffb22bca319debbfc50e"
+        ],
+        "residual_of": "C3:15E9..C3:16A7",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper",
+    "ct_c3_tiny_local_wrapper_calling_2629_then_returning",
+    "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper__residual_15e9_1626",
+    "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper__residual_1643_1649",
+    "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper__residual_1659_16a7"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass174_direct.json": "passes/manifests/legacy/pass174_direct.json"
+  },
+  "notes": [
+    "15E9 opens with bytes that initially look more code-like than the earlier mixed blobs, but the region still does not stabilize into one trustworthy owner/helper body under cautious linear inspection.",
+    "The first fully crisp executable splinter after that opening is 16A8..16AB, which resolves cleanly as JSR $2629 ; RTS.",
+    "Next seam advances to 16AC..1816. The bytes immediately after 16AB should be tested for another local owner start rather than assuming the entire remainder is data or one giant routine."
+  ]
+}

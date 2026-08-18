@@ -1,0 +1,27 @@
+{
+  "pass_index": 1200,
+  "bank": "C3",
+  "session": 29,
+  "source": "score-4 candidate from C3:5000-5FFF deep scan",
+  "reason": "CPY# prologue, gap filler for coverage push to 30%",
+  "score": 4,
+  "target": {
+    "start": "C3:5110",
+    "end": "C3:512E",
+    "data": ["CPY #$7FFF", "BNE $5117", "JSR $4DD0", "RTS"],
+    "bytes": ["C0", "FF", "7F", "D0", "03", "20", "D0", "4D", "60"]
+  },
+  "metadata": {
+    "prologue": "CPY#",
+    "epilogue": "RTS",
+    "callers": [],
+    "verification": "score-4 candidate, manual validation required",
+    "estimated_bytes": 30
+  },
+  "manifest_metadata": {
+    "author": "Session 29 - Score-4/5 Processing",
+    "created": "2026-04-08",
+    "priority": "gap_fill",
+    "coverage_target": "30%"
+  }
+}

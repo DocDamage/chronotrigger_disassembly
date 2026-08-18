@@ -1,0 +1,13 @@
+pass: 1067
+address: 025319
+bank: 2
+label: ct_c2_5319_jsr_handler
+range: C2:531D-C2:5338
+score: 6
+width: 28
+call_count: 2
+branch_count: 0
+stackish_count: 1
+return_count: 1
+session: 27
+rationale: Score-6 backtrack candidate from C2:5300 scan. JSR prologue at C2:5319 targeting C2:5320. 32 bytes with 2 calls, 1 return. Clean start byte (20). Cross-bank caller from C2:2346.

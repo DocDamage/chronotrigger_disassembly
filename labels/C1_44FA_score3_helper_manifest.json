@@ -1,0 +1,18 @@
+{
+  "pass": 1046,
+  "bank": "C1",
+  "session": 23,
+  "range": "C1:44FA..C1:4512",
+  "score": 3,
+  "width": 25,
+  "call_count": 1,
+  "branch_count": 0,
+  "stackish_count": 0,
+  "return_count": 1,
+  "ascii_ratio": 0.32,
+  "source": "C1:4450-4600_post_table_loader",
+  "reason": "Score-3 cluster with call and return. Below promotion threshold but may be helper to score-5 at C1:45DC.",
+  "related_to": "C1:45DC_score5_cluster",
+  "note": "Below score-5 threshold. Documented for completeness. May be promoted if caller context improves.",
+  "timestamp": "2026-04-08T15:30:00-04:00"
+}

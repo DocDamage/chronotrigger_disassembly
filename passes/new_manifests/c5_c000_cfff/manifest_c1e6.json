@@ -1,0 +1,22 @@
+{
+  "pass_number": 712,
+  "closed_ranges": [
+    {
+      "range": "C5:C1E6..C5:C207",
+      "kind": "owner",
+      "label": "ct_c5_c1e6_jsr_prologue",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, JSR prologue (20). Candidate triage seed. Strong function entry with cross-references.",
+  "analysis": {
+    "candidate_start": "C5:C1E6",
+    "target": "C5:C1EF",
+    "score": 6,
+    "distance_to_target": 9,
+    "start_byte": "20",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.382,
+    "zero_ff_ratio": 0.029
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "pass": "810",
+  "bank": "C3",
+  "start_address": "C3:B002",
+  "end_address": "C3:B01D",
+  "label": "ct_c3_b002_php_prologue_score6",
+  "target": "C3:B005",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. PHP ($08) prologue near mapped C3:B16F region. Strong function boundary evidence.",
+  "score": 6,
+  "start_byte": "08",
+  "start_class": "clean_start",
+  "region": "C3:B000-BFFF upper bank code",
+  "promotion_reason": "Score-6 PHP prologue. Adjacent to confirmed C3:B16F cluster."
+}

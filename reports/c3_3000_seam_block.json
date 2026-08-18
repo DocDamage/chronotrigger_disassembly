@@ -1,0 +1,402 @@
+{
+  "start": "C3:3000",
+  "pages_requested": 2,
+  "cache": {
+    "rom": "rom\\Chrono Trigger (USA).sfc",
+    "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+    "cache_dir": "tools\\cache",
+    "xref_index_path": "tools\\cache\\chrono_trigger_raw_xref_index_v1.json",
+    "closed_ranges_snapshot_path": "tools\\cache\\closed_ranges_snapshot_v1.json",
+    "xref_index_rebuilt": false,
+    "closed_ranges_snapshot_rebuilt": false,
+    "closed_ranges_snapshot_range_count": 1282,
+    "closed_ranges_snapshot_manifest_range_count": 382,
+    "closed_ranges_snapshot_continuation_range_count": 900
+  },
+  "page_family_counts": {
+    "branch_fed_control_pocket": 1,
+    "mixed_command_data": 1
+  },
+  "review_posture_counts": {
+    "bad_start_or_dead_lane_reject": 2
+  },
+  "pages": [
+    {
+      "range": "C3:3000..C3:30FF",
+      "page_family": "branch_fed_control_pocket",
+      "review_posture": "bad_start_or_dead_lane_reject",
+      "summary": {
+        "raw_target_count": 16,
+        "xref_hit_count": 19,
+        "effective_strong_or_weak_hits": 4,
+        "dead_lane_suppressed_hits": 0,
+        "hard_bad_start_hits": 4,
+        "soft_bad_start_hits": 0,
+        "owner_backtrack_candidates": 9,
+        "local_island_count": 3,
+        "local_cluster_count": 3,
+        "tiny_veneer_count": 4,
+        "wrapper_bad_target_count": 0,
+        "review_posture": "bad_start_or_dead_lane_reject"
+      },
+      "best_targets": [
+        {
+          "target": "C3:3006",
+          "best_strength": "weak",
+          "hit_count": 1,
+          "callers": [
+            "C3:8F03"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:307F",
+          "best_strength": "weak",
+          "hit_count": 1,
+          "callers": [
+            "C3:3318"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:30AC",
+          "best_strength": "weak",
+          "hit_count": 1,
+          "callers": [
+            "D2:7824"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:30D0",
+          "best_strength": "weak",
+          "hit_count": 1,
+          "callers": [
+            "C3:8543"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:3008",
+          "best_strength": "suspect",
+          "hit_count": 2,
+          "callers": [
+            "C3:2EE0",
+            "C3:94E0"
+          ],
+          "boundary_bait": false
+        }
+      ],
+      "top_backtracks": [
+        {
+          "candidate_start": "C3:3059",
+          "target": "C3:3063",
+          "score": 6,
+          "distance_to_target": 10,
+          "start_byte": "20",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.343,
+          "zero_ff_ratio": 0.086,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:3059..C3:307B"
+        },
+        {
+          "candidate_start": "C3:306D",
+          "target": "C3:3070",
+          "score": 6,
+          "distance_to_target": 3,
+          "start_byte": "A2",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.393,
+          "zero_ff_ratio": 0.071,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:306D..C3:3088"
+        },
+        {
+          "candidate_start": "C3:307D",
+          "target": "C3:307F",
+          "score": 6,
+          "distance_to_target": 2,
+          "start_byte": "0B",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.333,
+          "zero_ff_ratio": 0.074,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:307D..C3:3097"
+        },
+        {
+          "candidate_start": "C3:3092",
+          "target": "C3:3093",
+          "score": 6,
+          "distance_to_target": 1,
+          "start_byte": "22",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.269,
+          "zero_ff_ratio": 0.192,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:3092..C3:30AB"
+        },
+        {
+          "candidate_start": "C3:300C",
+          "target": "C3:3016",
+          "score": 4,
+          "distance_to_target": 10,
+          "start_byte": "22",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.371,
+          "zero_ff_ratio": 0.057,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:300C..C3:302E"
+        }
+      ],
+      "local_clusters": [
+        {
+          "range": "C3:30B6..C3:30BE",
+          "cluster_score": 6,
+          "child_count": 1,
+          "child_ranges": [
+            "C3:30B6..C3:30BE"
+          ],
+          "width": 9,
+          "call_count": 1,
+          "branch_count": 1,
+          "stackish_count": 0,
+          "return_count": 1,
+          "ascii_ratio": 0.222,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        },
+        {
+          "range": "C3:3068..C3:306E",
+          "cluster_score": 3,
+          "child_count": 1,
+          "child_ranges": [
+            "C3:3068..C3:306E"
+          ],
+          "width": 7,
+          "call_count": 0,
+          "branch_count": 0,
+          "stackish_count": 0,
+          "return_count": 1,
+          "ascii_ratio": 0.143,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        },
+        {
+          "range": "C3:307A..C3:3087",
+          "cluster_score": 2,
+          "child_count": 1,
+          "child_ranges": [
+            "C3:307A..C3:3087"
+          ],
+          "width": 14,
+          "call_count": 0,
+          "branch_count": 1,
+          "stackish_count": 0,
+          "return_count": 1,
+          "ascii_ratio": 0.429,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        }
+      ]
+    },
+    {
+      "range": "C3:3100..C3:31FF",
+      "page_family": "mixed_command_data",
+      "review_posture": "bad_start_or_dead_lane_reject",
+      "summary": {
+        "raw_target_count": 11,
+        "xref_hit_count": 15,
+        "effective_strong_or_weak_hits": 4,
+        "dead_lane_suppressed_hits": 0,
+        "hard_bad_start_hits": 1,
+        "soft_bad_start_hits": 0,
+        "owner_backtrack_candidates": 7,
+        "local_island_count": 4,
+        "local_cluster_count": 4,
+        "tiny_veneer_count": 4,
+        "wrapper_bad_target_count": 0,
+        "review_posture": "bad_start_or_dead_lane_reject"
+      },
+      "best_targets": [
+        {
+          "target": "C3:31A6",
+          "best_strength": "weak",
+          "hit_count": 3,
+          "callers": [
+            "C3:5A40",
+            "C3:6D50",
+            "C9:7A61"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:31B0",
+          "best_strength": "weak",
+          "hit_count": 2,
+          "callers": [
+            "C3:1328",
+            "C3:4684"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:31BF",
+          "best_strength": "weak",
+          "hit_count": 2,
+          "callers": [
+            "C3:15B0",
+            "C3:2BD1"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:3184",
+          "best_strength": "weak",
+          "hit_count": 1,
+          "callers": [
+            "C3:C97A"
+          ],
+          "boundary_bait": false
+        },
+        {
+          "target": "C3:3101",
+          "best_strength": "suspect",
+          "hit_count": 1,
+          "callers": [
+            "C3:5738"
+          ],
+          "boundary_bait": false
+        }
+      ],
+      "top_backtracks": [
+        {
+          "candidate_start": "C3:316D",
+          "target": "C3:3170",
+          "score": 4,
+          "distance_to_target": 3,
+          "start_byte": "55",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.429,
+          "zero_ff_ratio": 0.071,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:316D..C3:3188"
+        },
+        {
+          "candidate_start": "C3:316D",
+          "target": "C3:3172",
+          "score": 4,
+          "distance_to_target": 5,
+          "start_byte": "55",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.4,
+          "zero_ff_ratio": 0.067,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:316D..C3:318A"
+        },
+        {
+          "candidate_start": "C3:316D",
+          "target": "C3:3176",
+          "score": 4,
+          "distance_to_target": 9,
+          "start_byte": "55",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.353,
+          "zero_ff_ratio": 0.118,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:316D..C3:318E"
+        },
+        {
+          "candidate_start": "C3:316D",
+          "target": "C3:3177",
+          "score": 4,
+          "distance_to_target": 10,
+          "start_byte": "55",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.371,
+          "zero_ff_ratio": 0.114,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:316D..C3:318F"
+        },
+        {
+          "candidate_start": "C3:317A",
+          "target": "C3:3184",
+          "score": 4,
+          "distance_to_target": 10,
+          "start_byte": "62",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.257,
+          "zero_ff_ratio": 0.086,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C3:317A..C3:319C"
+        }
+      ],
+      "local_clusters": [
+        {
+          "range": "C3:318D..C3:319A",
+          "cluster_score": 4,
+          "child_count": 1,
+          "child_ranges": [
+            "C3:318D..C3:319A"
+          ],
+          "width": 14,
+          "call_count": 0,
+          "branch_count": 0,
+          "stackish_count": 1,
+          "return_count": 1,
+          "ascii_ratio": 0.214,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        },
+        {
+          "range": "C3:31CF..C3:31DF",
+          "cluster_score": 3,
+          "child_count": 1,
+          "child_ranges": [
+            "C3:31CF..C3:31DF"
+          ],
+          "width": 17,
+          "call_count": 1,
+          "branch_count": 0,
+          "stackish_count": 0,
+          "return_count": 1,
+          "ascii_ratio": 0.588,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        },
+        {
+          "range": "C3:31C1..C3:31CB",
+          "cluster_score": 3,
+          "child_count": 1,
+          "child_ranges": [
+            "C3:31C1..C3:31CB"
+          ],
+          "width": 11,
+          "call_count": 0,
+          "branch_count": 2,
+          "stackish_count": 1,
+          "return_count": 1,
+          "ascii_ratio": 0.545,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        },
+        {
+          "range": "C3:3179..C3:3183",
+          "cluster_score": 2,
+          "child_count": 1,
+          "child_ranges": [
+            "C3:3179..C3:3183"
+          ],
+          "width": 11,
+          "call_count": 0,
+          "branch_count": 3,
+          "stackish_count": 0,
+          "return_count": 1,
+          "ascii_ratio": 0.364,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        }
+      ]
+    }
+  ]
+}

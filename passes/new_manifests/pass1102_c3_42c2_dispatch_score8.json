@@ -1,0 +1,17 @@
+{
+  "pass": "1102",
+  "bank": "C3",
+  "start_address": "C3:42C2",
+  "end_address": "C3:42D4",
+  "label": "ct_c3_42c2_dispatch_handler_score8",
+  "target": "C3:42C2",
+  "confidence": "high",
+  "reasoning": "Score-8 dispatch handler located just before C3:4548 supercluster. 19 bytes with 2 child paths. Prepares state and dispatches to handlers in nearby supercluster region. Low ASCII ratio (0.263) = clean code.",
+  "cluster_score": 8,
+  "child_count": 2,
+  "return_count": 2,
+  "call_count": 1,
+  "gap_context": "C3:4200-4400 dispatch chain",
+  "promotion_reason": "Score-8 dispatch handler - Part of C3:4548 supercluster dispatch chain. Critical for understanding state machine architecture.",
+  "session": "27"
+}

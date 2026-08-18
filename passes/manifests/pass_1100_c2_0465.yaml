@@ -1,0 +1,13 @@
+pass: 1100
+address: 020465
+bank: 2
+label: ct_c2_0465_vector_handler_s29
+range: C2:0465-C2:0477
+score: 6
+width: 19
+call_count: 2
+branch_count: 2
+stackish_count: 0
+return_count: 1
+session: 29
+rationale: Score-6 cluster in C2:0000-1000 vector region. RTS-terminated function with clean boundaries. Part of initialization code family.

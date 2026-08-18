@@ -1,0 +1,18 @@
+{
+  "pass": 684,
+  "range": "C3:7207..C3:7228",
+  "label": "ct_c3_7207_php_prologue",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:7000-7FFF region. PHP ($08) prologue with clean start and multiple caller targets.",
+  "scan": {
+    "score": 6,
+    "start_byte": "08",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.294,
+    "zero_ff_ratio": 0.059,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

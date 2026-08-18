@@ -1,0 +1,31 @@
+{
+  "pass_number": 189,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2700..",
+  "completion_estimate": 78.4,
+  "closed_ranges": [
+    {
+      "range": "C3:2600..C3:26FF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_multi_target_page_with_false_text_table_callers_and_unsupported_late_rts_island_before_2700_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_multi_target_page_with_false_text_table_callers_and_unsupported_late_rts_island_before_2700_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2600 using the same caller-plus-local-structure discipline as the recent conservative C3 pages.",
+    "The page produced several visible raw targets, but much of the apparent support was fake; the clearest example is C3:0EBA -> C3:2620, where the caller sits inside obvious ASCII/text material rather than executable code.",
+    "Multiple higher-bank-looking callers into 2625, 263F, 265D, and 26A5 also come from byte neighborhoods that read more like table/script-style inline data than trustworthy code.",
+    "The caller side is better for 2600, 2629, and 26D0 because visible same-bank callers at C3:156D, C3:16A8, and C3:09AF look more code-like, but those targets still fail local byte-level sanity checks and are not promoted.",
+    "The strongest unsupported local coherence in the page is a late island around 2678..268F ending at the page's lone RTS, but it has no caller-backed true start and still sits inside mixed-content surroundings.",
+    "Because the caller-backed targets are structurally bad and the structurally better late RTS island is unsupported, the whole 2600..26FF page is frozen honestly as mixed inline content before the next 2700 seam."
+  ]
+}

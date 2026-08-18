@@ -1,0 +1,99 @@
+{
+  "session": 28,
+  "bank": "C0",
+  "target_coverage": "23%",
+  "manifests_created": 12,
+  "total_bytes": 676,
+  "focus_regions": [
+    "4000-5000",
+    "9000-A000",
+    "F000-FFFF",
+    "5000-6000"
+  ],
+  "manifests": [
+    {
+      "pass": 1101,
+      "addr": "C0:9E47",
+      "score": 8,
+      "bytes": 72,
+      "desc": "Graphics handler"
+    },
+    {
+      "pass": 1102,
+      "addr": "C0:FBF0",
+      "score": 8,
+      "bytes": 68,
+      "desc": "IRQ handler"
+    },
+    {
+      "pass": 1103,
+      "addr": "C0:4300",
+      "score": 8,
+      "bytes": 65,
+      "desc": "Dispatch handler"
+    },
+    {
+      "pass": 1104,
+      "addr": "C0:9EE0",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Tile processor"
+    },
+    {
+      "pass": 1105,
+      "addr": "C0:FB4D",
+      "score": 7,
+      "bytes": 55,
+      "desc": "HDMA setup"
+    },
+    {
+      "pass": 1106,
+      "addr": "C0:FC90",
+      "score": 7,
+      "bytes": 50,
+      "desc": "NMI processor"
+    },
+    {
+      "pass": 1107,
+      "addr": "C0:5710",
+      "score": 7,
+      "bytes": 48,
+      "desc": "Array processor"
+    },
+    {
+      "pass": 1108,
+      "addr": "C0:5820",
+      "score": 7,
+      "bytes": 58,
+      "desc": "Search function"
+    },
+    {
+      "pass": 1109,
+      "addr": "C0:5910",
+      "score": 7,
+      "bytes": 50,
+      "desc": "Transfer setup"
+    },
+    {
+      "pass": 1110,
+      "addr": "C0:4400",
+      "score": 7,
+      "bytes": 52,
+      "desc": "Data transformer"
+    },
+    {
+      "pass": 1111,
+      "addr": "C0:4500",
+      "score": 7,
+      "bytes": 58,
+      "desc": "Buffer manager"
+    },
+    {
+      "pass": 1112,
+      "addr": "C0:9F80",
+      "score": 7,
+      "bytes": 48,
+      "desc": "VRAM manager"
+    }
+  ]
+}

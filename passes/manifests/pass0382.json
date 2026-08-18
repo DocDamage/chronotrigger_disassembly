@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "pass_number": 382,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C0:188A..C0:18A5",
+      "kind": "code_owner",
+      "label": "ct_c0_188a_cpx_handler_score14",
+      "confidence": "high",
+      "verification_status": "pending"
+    }
+  ],
+  "new_labels": [
+    "ct_c0_188a_cpx_handler_score14"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass382.json": "passes/manifests/legacy/pass382.json"
+  },
+  "notes": []
+}

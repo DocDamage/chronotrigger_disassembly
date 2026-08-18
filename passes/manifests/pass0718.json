@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "pass_number": 718,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "CF:F8C0..CF:F8E8",
+      "kind": "code_owner",
+      "label": "ct_cf_f8c0_score6_cluster",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:6ACB..C3:6AE5",
+      "kind": "code_owner",
+      "label": "ct_c3_6acb_gap_handler",
+      "confidence": "high",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 6
+      },
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_cf_f8c0_score6_cluster",
+    "ct_c3_6acb_gap_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass718.json": "passes/manifests/legacy/pass718.json",
+    "source_2_pass718_c3_6acb_gap.json": "passes/manifests/legacy/pass718_c3_6acb_gap.json"
+  },
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6ACD",
+    "PHP (push processor status) is strong function prologue indicator",
+    "Low backtrack distance suggests clean function boundary",
+    "Candidate identified in previously unmapped high-density region C3:6000-6FFF"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "pass": 1078,
+  "label": "CT_C0_CBEB_Handler_Score6",
+  "address": "C0:CBEB",
+  "snes_address": "$C0$CBEB",
+  "score": 6,
+  "description": "Handler function in CBEB cluster",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "C000-CFFF",
+  "features": {"cluster": true},
+  "session": 30,
+  "connected_to": ["C0:CABA"]
+}

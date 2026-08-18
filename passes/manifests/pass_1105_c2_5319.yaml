@@ -1,0 +1,13 @@
+pass: 1105
+address: 025319
+bank: 2
+label: ct_c2_5319_rich_subroutine_s29
+range: C2:5319-C2:539D
+score: 6
+width: 133
+call_count: 5
+branch_count: 4
+stackish_count: 1
+return_count: 2
+session: 29
+rationale: C2:5000-6000 rich region extension. Score-6 with 5 internal calls. JSR-targeted subroutine with complex control flow.

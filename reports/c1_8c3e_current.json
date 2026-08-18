@@ -1,0 +1,640 @@
+{
+  "target": "C1:8C3E",
+  "call_count": 42,
+  "strong_anchor_count": 10,
+  "weak_anchor_count": 32,
+  "suspect_anchor_count": 0,
+  "invalid_count": 0,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C1:8EA7",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:8E9B..C1:8EAA",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_8e9b_handler_dispatch",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:8F0D",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:8F02..C1:8F11",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_8f02_handler_dispatch",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:903A",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:9032..C1:9044",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_9032_score7_cluster",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9077",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:906E..C1:9081",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_906e_score7_cluster",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:971F",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:96D4..C1:9727",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_96d4_dispatch_handler",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9751",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:9728..C1:975B",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_9728_dispatch_handler",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:97A0",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:9792..C1:97D4",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_9792_score8_cluster",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:97B5",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:9792..C1:97D4",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_9792_score8_cluster",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:97CA",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:9792..C1:97D4",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_9792_score8_cluster",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9803",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "strong",
+      "caller_status": "resolved_code",
+      "caller_range": "C1:97D5..C1:980F",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c1_97d5_dispatch_handler",
+      "caller_confidence": "high",
+      "notes": [
+        "caller sits inside a resolved executable range"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:8F7C",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:8FCF",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9008",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:90B3",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9125",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9183",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:91EE",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9252",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9298",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9310",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9389",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:93D1",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:93DB",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:941F",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:945B",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9469",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:94B2",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:94C7",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:94FB",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9509",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9549",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:955F",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:958F",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:95BD",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:95CB",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:95D6",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:95EF",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9647",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:9652",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:969A",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:96C9",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C1:975C",
+      "target": "C1:8C3E",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    }
+  ]
+}

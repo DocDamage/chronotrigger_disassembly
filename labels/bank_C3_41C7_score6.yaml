@@ -1,0 +1,51 @@
+# Bank C3 - Score 6 Function (SESSION 23)
+# C3:41C7-41DF - Multi-call subroutine
+
+range:
+  start: "C3:41C7"
+  end: "C3:41DF"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 6
+  cluster_score: 6
+  width: 25
+  child_count: 1
+
+features:
+  - "Score 6 function"
+  - "4 calls (high traffic)"
+  - "5 branches (complex logic)"
+  - "25-byte span"
+  
+stats:
+  calls: 4
+  branches: 5
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.28
+
+confidence: 6
+status: "candidate"
+verified: false
+priority: "high"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:4000-4400 region
+  
+  High-traffic utility function with 4 callers.
+  5 branches indicate complex conditional logic.
+  
+  Features:
+  - 25 bytes
+  - 4 calls = heavily used utility
+  - 5 branches = multiple code paths
+  - Only 1 return (converging logic)
+  - Low ASCII ratio (0.28)
+  
+  Likely a shared utility subroutine called by multiple
+  functions in the C3:4000-4400 region.
+  
+  RECOMMENDATION: Disassemble to identify function purpose
+  and document its 4 callers.

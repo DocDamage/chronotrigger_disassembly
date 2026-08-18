@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "pass_number": 1226,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:B002..C3:B01D",
+      "kind": "superseded",
+      "label": "ct_c3_B002",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C3:B002..C3:B01D",
+      "parent_label": "ct_c3_b002_php_prologue",
+      "evidence": {
+        "reason": null,
+        "source": "backtrack",
+        "score": 6
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "function_address": "C3:B002",
+          "function_range": "C3:B002..C3:B01D",
+          "source": "backtrack",
+          "score": 6,
+          "confidence": "medium",
+          "promotion_reason": "Score 6 backtrack candidate with verified caller, ASCII 0.393",
+          "start_byte": "08",
+          "start_class": "clean_start",
+          "start_mnemonic": "PHP",
+          "ascii_ratio": 0.393,
+          "zero_ff_ratio": 0.107,
+          "callers": [
+            {
+              "caller": "C3:CCE2",
+              "target": "C3:B005",
+              "kind": "JSR",
+              "anchor_strength": "weak",
+              "caller_ascii_ratio": 0.182
+            }
+          ],
+          "internal_evidence": {
+            "has_rts": true,
+            "has_php": true,
+            "has_jsr": false,
+            "returns_count": 1,
+            "calls_count": 0,
+            "branches_count": 1
+          },
+          "verification_status": "pending_final_review"
+        },
+        "ownership_adjudication_ids": [
+          "adj_2cc24b3d7973d482f35d"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c3_B002"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass1226_c3_b002.json": "passes/manifests/legacy/pass1226_c3_b002.json"
+  },
+  "notes": []
+}

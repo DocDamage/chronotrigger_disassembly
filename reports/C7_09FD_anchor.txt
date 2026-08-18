@@ -1,0 +1,8 @@
+target: C7:09FD
+call_count: 2
+strong=0 weak=1 suspect=1 invalid=0
+  JSR from C7:0A57 -> valid / weak / unresolved
+    note: caller lives in unresolved bytes, so this is weak anchor evidence
+  JSR from C7:064F -> valid / suspect / resolved_data
+    caller_range: C7:0600..C7:06FF (ct_note_backed_frozen_page_c7_0600_branch_fed_control_pocket_manual_owner_boundary_review)
+    note: caller sits inside a closed data range, so this hit is suspect

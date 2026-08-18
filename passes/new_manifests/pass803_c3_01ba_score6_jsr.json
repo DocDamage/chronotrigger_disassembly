@@ -1,0 +1,16 @@
+{
+  "pass": "803",
+  "bank": "C3",
+  "start_address": "C3:01BA",
+  "end_address": "C3:01DE",
+  "label": "ct_c3_01ba_jsr_prologue_score6",
+  "target": "C3:01C6",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. JSR ($20) prologue with clean start class. Target C3:01C6 has multiple callers. Gap fill C3:0000-01E3.",
+  "score": 6,
+  "start_byte": "20",
+  "start_class": "clean_start",
+  "distance_to_target": 12,
+  "gap_context": "C3:0000-01E3 bank start region",
+  "promotion_reason": "Score-6 JSR prologue. Multiple callers validate target. Bank entry point candidate."
+}

@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1121,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:9DE6",
+      "mode": "known_code",
+      "label": "ct_c4_9de6_handler",
+      "reason": "Score-6 cluster in 8000-C000 region."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 17
+    }
+  }
+}

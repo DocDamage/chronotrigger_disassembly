@@ -1,0 +1,127 @@
+name: Repository CI
+
+on:
+  push:
+    branches: [ main, live-work-from-pass166 ]
+  pull_request:
+    branches: [ main, live-work-from-pass166 ]
+
+jobs:
+  python-quality:
+    name: Python Quality & Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Conservation and evidence checks read historical commits and blobs.
+          fetch-depth: 0
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+      - name: Byte-compile Python files
+        run: python -m compileall -q tools tests
+      - name: Static analysis with pyflakes
+        run: python -m pyflakes tools tests
+      - name: Run automated test suite
+        run: python -m pytest -q
+
+  acceptance-suite:
+    name: Full Acceptance & Conservation Suite
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+      - name: Run full toolkit acceptance suite
+        run: python -m tools.ctrepo acceptance --strict
+
+  manifest-integrity:
+    name: Manifest Schema & Identity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Check all manifests strictly
+        run: python tools/scripts/check_all_manifests.py --strict
+      - name: Verify zero-loss range conservation
+        run: python tools/scripts/compare_manifest_range_inventory.py --strict --output-json "${{ runner.temp }}/range-inventory.json" --output-md "${{ runner.temp }}/range-inventory.md"
+      - name: Validate policy registries and evidence
+        run: python tools/scripts/validate_policy_registries.py
+      - name: Audit branch state and gaps
+        run: python tools/scripts/audit_branch_state_v1.py --strict-gaps
+
+  range-ownership:
+    name: Range Ownership & Collision
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Validate range ownership
+        run: python tools/scripts/validate_range_ownership.py --strict --output-json "${{ runner.temp }}/range-ownership.json" --output-md "${{ runner.temp }}/range-ownership.md"
+
+  artifact-integrity:
+    name: Artifact Encodings & JSON Validity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Validate repository artifacts
+        run: python tools/scripts/validate_repository_artifacts.py --strict --report "${{ runner.temp }}/artifact-validation.json"
+      - name: Reject tracked binaries and generated caches
+        run: python tools/scripts/validate_binary_policy.py
+      - name: Verify canonical report drift
+        run: python tools/scripts/check_report_drift.py
+
+  doctor-health:
+    name: Full Repository Doctor Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Run toolkit doctor in strict mode
+        run: python tools/scripts/toolkit_doctor.py --strict --output-json "${{ runner.temp }}/doctor.json" --output-md "${{ runner.temp }}/doctor.md"

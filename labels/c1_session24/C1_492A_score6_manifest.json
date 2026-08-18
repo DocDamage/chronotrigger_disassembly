@@ -1,0 +1,18 @@
+{
+  "pass": 1043,
+  "bank": "C1",
+  "session": 24,
+  "range": "C1:492A..C1:4942",
+  "score": 6,
+  "width": 25,
+  "call_count": 2,
+  "branch_count": 6,
+  "stackish_count": 0,
+  "return_count": 1,
+  "ascii_ratio": 0.2,
+  "repeated_pair_score": 0.083,
+  "source": "C1:4600-5000_post_mega_cluster_scan",
+  "reason": "Score-6 cluster with 2 calls, 6 branches. Dense branching suggests dispatch or state handler pattern.",
+  "related_to": "C1:4900_region_dispatch_candidates",
+  "timestamp": "2026-04-08T15:20:00-04:00"
+}

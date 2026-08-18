@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate
+# DB:027D - detected via owner backtracking
+# Score: 6
+# Reason: PHP prologue, has RTL at DB:0280
+
+source: score_target_owner_backtrack_v1.py
+target: DB:0280
+best_start: DB:027D
+score: 6
+distance: 3
+start_byte: 08  # PHP
+start_class: clean_start
+candidate_range: DB:027D..DB:0296

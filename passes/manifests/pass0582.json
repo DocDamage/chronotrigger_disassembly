@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "pass_number": 582,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C1:17BC..C1:17DC",
+      "kind": "superseded",
+      "label": "ct_c1_17bc_dispatch_handler_inc",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C1:17A5..C1:17BE",
+      "parent_label": "ct_c1_17a5_dispatch_handler_dec",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_b806b47ed8a48df7cdab",
+          "adj_25097d4fb93918198f57"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c1_17bc_dispatch_handler_inc"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass582.json": "passes/manifests/legacy/pass582.json"
+  },
+  "notes": []
+}

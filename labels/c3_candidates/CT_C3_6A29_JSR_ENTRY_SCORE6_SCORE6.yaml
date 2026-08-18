@@ -1,0 +1,24 @@
+# Bank C3 - CT_C3_6A29_JSR_ENTRY_SCORE6 (Session 25)
+# C3:6A29-C3:6A47 - Score 6 Candidate
+
+range:
+  start: "C3:6A29"
+  end: "C3:6A47"
+
+discovery:
+  method: "final_push_scan"
+  session: 25
+  score: 6
+  confidence: "high"
+
+features:
+  - "Score-6 candidate"
+  - "Clean prologue"
+
+confidence: 6
+status: "candidate"
+priority: "high"
+
+notes: |
+  Session 25 final push candidate.
+  Score-6 candidate from gap analysis. JSR entry with clean start class. Session 25 final push.

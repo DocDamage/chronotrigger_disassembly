@@ -1,0 +1,122 @@
+{
+  "session": 27,
+  "bank": "C1",
+  "total_manifests": 11,
+  "total_bytes": 272,
+  "score_distribution": {
+    "7": 11
+  },
+  "region_distribution": {
+    "0000-1000": 3,
+    "4000-5000": 2,
+    "5000-6000": 1,
+    "6000-7000": 3,
+    "D000-E000": 2,
+    "E000-F000": 1
+  },
+  "manifests": [
+    {
+      "filepath": "labels/c1_session27/C1_0551_score7_s27.yaml",
+      "name": "ct_c1_0551_handler_s27",
+      "range": "C1:0551..C1:056A",
+      "score": 7,
+      "region": "0000-1000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_058E_score7_s27.yaml",
+      "name": "ct_c1_058e_handler_s27",
+      "range": "C1:058E..C1:05A7",
+      "score": 7,
+      "region": "0000-1000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_08B9_score7_s27.yaml",
+      "name": "ct_c1_08b9_handler_s27",
+      "range": "C1:08B9..C1:08D2",
+      "score": 7,
+      "region": "0000-1000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_4744_score7_s27.yaml",
+      "name": "ct_c1_4744_handler_s27",
+      "range": "C1:4744..C1:475B",
+      "score": 7,
+      "region": "4000-5000",
+      "width": 23
+    },
+    {
+      "filepath": "labels/c1_session27/C1_57F0_score7_s27.yaml",
+      "name": "ct_c1_57f0_handler_s27",
+      "range": "C1:57F0..C1:5806",
+      "score": 7,
+      "region": "5000-6000",
+      "width": 22
+    },
+    {
+      "filepath": "labels/c1_session27/C1_6AEE_score7_s27.yaml",
+      "name": "ct_c1_6aee_handler_s27",
+      "range": "C1:6AEE..C1:6B07",
+      "score": 7,
+      "region": "6000-7000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_6B44_score7_s27.yaml",
+      "name": "ct_c1_6b44_handler_s27",
+      "range": "C1:6B44..C1:6B5D",
+      "score": 7,
+      "region": "6000-7000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_6BEF_score7_s27.yaml",
+      "name": "ct_c1_6bef_handler_s27",
+      "range": "C1:6BEF..C1:6C08",
+      "score": 7,
+      "region": "6000-7000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_D8B8_score7_s27.yaml",
+      "name": "ct_c1_d8b8_handler_s27",
+      "range": "C1:D8B8..C1:D8D1",
+      "score": 7,
+      "region": "D000-E000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_D9BE_score7_s27.yaml",
+      "name": "ct_c1_d9be_handler_s27",
+      "range": "C1:D9BE..C1:D9D7",
+      "score": 7,
+      "region": "D000-E000",
+      "width": 25
+    },
+    {
+      "filepath": "labels/c1_session27/C1_EF67_score7_s27.yaml",
+      "name": "ct_c1_ef67_handler_s27",
+      "range": "C1:EF67..C1:EF80",
+      "score": 7,
+      "region": "E000-F000",
+      "width": 25
+    }
+  ],
+  "target_regions": [
+    "0000-1000",
+    "4000-5000",
+    "5000-6000",
+    "6000-7000",
+    "D000-E000",
+    "E000-F000"
+  ],
+  "selection_criteria": [
+    "Score-7+ prioritized (all 11 are score-7)",
+    "High-density region focus (6000 region cluster)",
+    "New region coverage (0000-1000 previously unexplored)",
+    "Complementary coverage (D000-E000, E000-F000)",
+    "Maximum 3 per region for distribution"
+  ]
+}

@@ -1,0 +1,55 @@
+# Bank C3 - Score 6 Function (SESSION 23)
+# C3:5364-5375 - Dual-return handler
+
+range:
+  start: "C3:5364"
+  end: "C3:5375"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 6
+  cluster_score: 6
+  width: 18
+  child_count: 2
+  children:
+    - "C3:5364-C3:536C"
+    - "C3:5364-C3:5375"
+
+features:
+  - "Score 6 cluster"
+  - "2 returns (dual exit)"
+  - "2 child variants"
+  - "Located in C3:5000-6000"
+  
+stats:
+  calls: 0
+  branches: 2
+  stackish: 1
+  returns: 2
+  ascii_ratio: 0.278
+
+confidence: 6
+status: "candidate"
+verified: false
+priority: "high"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:5000-6000 region
+  
+  Compact 18-byte function with dual returns.
+  No direct calls suggest this may be a callback or
+  interrupt-style handler.
+  
+  Features:
+  - 18 bytes, 2 entry variants
+  - 0 calls = possible callback/ISR
+  - 2 branches, 2 returns
+  - 1 stack operation
+  - Very low ASCII ratio (0.278)
+  
+  The dual returns suggest early exit logic or
+  conditional completion paths.
+  
+  RECOMMENDATION: Check for indirect references (jump tables)
+  that may invoke this function.

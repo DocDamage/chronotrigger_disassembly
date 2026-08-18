@@ -1,0 +1,31 @@
+{
+  "pass_number": 191,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2900..",
+  "completion_estimate": 79.6,
+  "closed_ranges": [
+    {
+      "range": "C3:2800..C3:28FF",
+      "kind": "data",
+      "label": "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2800 using the same caller-plus-local-structure discipline as the recent conservative C3 pages.",
+    "The page's strongest visible support is the double low-bank same-bank JSR pressure into 2809 from C3:0CC9 and C3:0CF4, which is materially better than the false one-off hits driving several immediately previous freezes.",
+    "Even so, 2809 still fails local byte-level sanity checks strongly enough to reject promotion; it opens into a branch-heavy control blob and does not settle into a defendable owner/helper body.",
+    "The other visible targets are worse: 2835 is only hit from obvious ASCII/text material at C3:0EE1, 282D is only hit from a mixed/data-side JMP at C3:D4DF, and the visible callers into 2802, 2848, 288E, and 28B0 are mixed-content or too structurally weak to rescue those starts.",
+    "The page also contains lone return-looking bytes at 285A, 286D, and 287C, but none has a caller-backed true start and all remain unsupported interior splinters rather than defensible stubs or wrappers.",
+    "Because the best caller-backed target is still structurally bad and the later return-looking bytes are unsupported interior fragments, the whole 2800..28FF page is frozen honestly as mixed inline content before the next 2900 seam."
+  ]
+}

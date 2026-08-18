@@ -1,0 +1,17 @@
+{
+  "pass": 1045,
+  "bank": "C1",
+  "session": 24,
+  "range": "C1:51D5..C1:51ED",
+  "score": 7,
+  "width": 25,
+  "call_count": 1,
+  "branch_count": 1,
+  "stackish_count": 2,
+  "return_count": 1,
+  "ascii_ratio": 0.2,
+  "source": "C1:5000-6000_mid_bank_scan",
+  "reason": "Score-7 cluster with call, branch, and 2 stack operations. PHP/PLP pattern suggests interrupt-safe utility function.",
+  "related_to": "C1:5180-5280_region",
+  "timestamp": "2026-04-08T15:20:00-04:00"
+}

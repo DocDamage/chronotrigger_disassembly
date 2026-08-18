@@ -1,0 +1,13 @@
+pass: 1079
+address: 025E34
+bank: 2
+label: ct_c2_5e34_multi_return
+range: C2:5E34-C2:5E54
+score: 6
+width: 33
+call_count: 5
+branch_count: 0
+stackish_count: 2
+return_count: 4
+session: 27
+rationale: Score-6 cluster from C2:5E00 scan. 33 bytes with 5 calls, 4 returns. Multi-exit pattern with stack operations. Adjacent to 5E65 mega-cluster - potential function family.

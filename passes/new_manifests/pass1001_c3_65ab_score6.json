@@ -1,0 +1,18 @@
+{
+  "pass": 1001,
+  "range": "C3:65AB..C3:65C6",
+  "label": "ct_c3_65ab_phd_init_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from gap analysis. PHD prologue with clean start class. Session 25 final push.",
+  "scan": {
+    "score": 6,
+    "start_class": "clean_start",
+    "validation": "owner_backtrack_v1"
+  },
+  "coverage": {
+    "bytes": 27,
+    "bank": "C3"
+  },
+  "session": 25
+}

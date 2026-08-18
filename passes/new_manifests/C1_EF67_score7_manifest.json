@@ -1,0 +1,22 @@
+{
+  "pass_number": 711,
+  "label": "CT_C1_EF67_SUBROUTINE",
+  "addr": "C1:EF67",
+  "range": "C1:EF67..C1:EF7F",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7: 2 calls, 2 branches in C1:EF00 range",
+  "features": {
+    "calls": 2,
+    "branches": 2,
+    "stackish": 1,
+    "returns": 1,
+    "ascii_ratio": 0.28,
+    "data_misread_flags": []
+  },
+  "note": "Near end of C1 bank - likely specialized utility function"
+}

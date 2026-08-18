@@ -1,0 +1,13 @@
+pass: 642
+address: 024241
+bank: 2
+label: ct_c2_4241_jsr_handler
+range: C2:4241-C2:4259
+score: 7
+width: 25
+call_count: 1
+branch_count: 2
+stackish_count: 0
+return_count: 2
+session: 25
+rationale: Score-7 cluster from C2:4000-5000 scan. 25 bytes with JSR entry, 2 branches, 2 returns. Subroutine with dual exit points.

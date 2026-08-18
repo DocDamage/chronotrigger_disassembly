@@ -1,0 +1,13 @@
+pass: 646
+address: 0261E4
+bank: 2
+label: ct_c2_61e4_complex_fn
+range: C2:61E4-C2:621B
+score: 8
+width: 56
+call_count: 5
+branch_count: 1
+stackish_count: 0
+return_count: 5
+session: 25
+rationale: Score-8 cluster from C2:6000-7000 scan. 56 bytes with 5 child islands, 5 returns. Complex function with multiple internal branches.

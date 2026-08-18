@@ -1,0 +1,18 @@
+{
+  "pass": 1035,
+  "label": "CT_C0_E945_ModeSetup_Score6",
+  "address": "C0:E945",
+  "snes_address": "$C0$E945",
+  "score": 6,
+  "description": "Mode setup function with REP prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 38,
+  "region": "E000-EFFF",
+  "features": {
+    "start_byte": "C2",
+    "pattern": "REP_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

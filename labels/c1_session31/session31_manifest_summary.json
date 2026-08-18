@@ -1,0 +1,117 @@
+{
+  "session": 31,
+  "bank": "C1",
+  "total_manifests": 9,
+  "total_bytes": 225,
+  "score_distribution": {
+    "7": 9
+  },
+  "region_distribution": {
+    "0000-1FFF": 3,
+    "2000-3FFF": 2,
+    "4000-5FFF": 1,
+    "6000-7FFF": 3
+  },
+  "manifests": [
+    {
+      "pass": 1200,
+      "filepath": "labels/c1_session31/C1_0551_score7_s31.yaml",
+      "name": "ct_c1_0551_score7_handler_s31",
+      "range": "C1:0551..C1:056A",
+      "score": 7,
+      "region": "0000-1FFF",
+      "width": 25
+    },
+    {
+      "pass": 1201,
+      "filepath": "labels/c1_session31/C1_058E_score7_s31.yaml",
+      "name": "ct_c1_058e_score7_handler_s31",
+      "range": "C1:058E..C1:05A7",
+      "score": 7,
+      "region": "0000-1FFF",
+      "width": 25
+    },
+    {
+      "pass": 1202,
+      "filepath": "labels/c1_session31/C1_08B9_score7_s31.yaml",
+      "name": "ct_c1_08b9_score7_handler_s31",
+      "range": "C1:08B9..C1:08D2",
+      "score": 7,
+      "region": "0000-1FFF",
+      "width": 25
+    },
+    {
+      "pass": 1203,
+      "filepath": "labels/c1_session31/C1_2814_score7_s31.yaml",
+      "name": "ct_c1_2814_score7_handler_s31",
+      "range": "C1:2814..C1:282D",
+      "score": 7,
+      "region": "2000-3FFF",
+      "width": 25
+    },
+    {
+      "pass": 1204,
+      "filepath": "labels/c1_session31/C1_3722_score7_s31.yaml",
+      "name": "ct_c1_3722_score7_handler_s31",
+      "range": "C1:3722..C1:373B",
+      "score": 7,
+      "region": "2000-3FFF",
+      "width": 25
+    },
+    {
+      "pass": 1205,
+      "filepath": "labels/c1_session31/C1_51D5_score7_s31.yaml",
+      "name": "ct_c1_51d5_score7_handler_s31",
+      "range": "C1:51D5..C1:51EE",
+      "score": 7,
+      "region": "4000-5FFF",
+      "width": 25
+    },
+    {
+      "pass": 1206,
+      "filepath": "labels/c1_session31/C1_6AEE_score7_s31.yaml",
+      "name": "ct_c1_6aee_score7_handler_s31",
+      "range": "C1:6AEE..C1:6B07",
+      "score": 7,
+      "region": "6000-7FFF",
+      "width": 25
+    },
+    {
+      "pass": 1207,
+      "filepath": "labels/c1_session31/C1_6B44_score7_s31.yaml",
+      "name": "ct_c1_6b44_score7_handler_s31",
+      "range": "C1:6B44..C1:6B5D",
+      "score": 7,
+      "region": "6000-7FFF",
+      "width": 25
+    },
+    {
+      "pass": 1208,
+      "filepath": "labels/c1_session31/C1_6BEF_score7_s31.yaml",
+      "name": "ct_c1_6bef_score7_handler_s31",
+      "range": "C1:6BEF..C1:6C08",
+      "score": 7,
+      "region": "6000-7FFF",
+      "width": 25
+    }
+  ],
+  "target_regions": [
+    "0000-1000",
+    "2000-3000",
+    "3000-4000",
+    "5000-6000",
+    "6000-7000"
+  ],
+  "selection_criteria": [
+    "Score-7 prioritized (final batch)",
+    "Remaining unprocessed candidates",
+    "Gap filling across target regions",
+    "Complete candidate pool processing"
+  ],
+  "notes": [
+    "All 9 manifests are score-7 candidates",
+    "225 bytes total coverage added",
+    "Spans 4 major regions of Bank C1",
+    "Final batch of candidate pool processing"
+  ]
+}

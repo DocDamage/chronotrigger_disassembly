@@ -1,0 +1,28 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 24 Pass 1041 - Auto-generated from C0:0000-2000 scan
+
+range:
+  start: "C0:0C81"
+  end: "C0:0C99"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 1
+  branches: 5
+  stackish: 2
+  returns: 2
+  ascii_ratio: 0.24
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Excellent candidate with 5 branches and 2 returns in 25 bytes.
+  Complex control flow with multiple exit paths.
+  Located in C0:0C00-0D00 region, likely interrupt or event handler.
+  Low ASCII ratio confirms code nature.

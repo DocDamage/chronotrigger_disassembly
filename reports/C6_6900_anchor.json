@@ -1,0 +1,85 @@
+{
+  "target": "C6:6900",
+  "call_count": 5,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 2,
+  "suspect_anchor_count": 0,
+  "invalid_count": 3,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C6:424A",
+      "target": "C6:6900",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C6:E30F",
+      "target": "C6:6900",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "C2:79D7",
+      "target": "C6:6900",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at C2:79D7 resolves to C2:6900, not C6:6900"
+      ]
+    },
+    {
+      "kind": "JMP",
+      "caller": "DC:800E",
+      "target": "C6:6900",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JMP at DC:800E resolves to DC:6900, not C6:6900"
+      ]
+    },
+    {
+      "kind": "JMP",
+      "caller": "FE:AE64",
+      "target": "C6:6900",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JMP at FE:AE64 resolves to FE:6900, not C6:6900"
+      ]
+    }
+  ]
+}

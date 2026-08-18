@@ -1,0 +1,40 @@
+{
+  "target": "C5:B04F",
+  "call_count": 2,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 1,
+  "suspect_anchor_count": 0,
+  "invalid_count": 1,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C5:3112",
+      "target": "C5:B04F",
+      "validity": "valid",
+      "anchor_strength": "weak",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "caller lives in unresolved bytes, so this is weak anchor evidence"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "E7:0437",
+      "target": "C5:B04F",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at E7:0437 resolves to E7:B04F, not C5:B04F"
+      ]
+    }
+  ]
+}

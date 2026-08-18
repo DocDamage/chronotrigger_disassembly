@@ -1,0 +1,12 @@
+a9cd = int('A9CD', 16)
+a9b3 = int('A9B3', 16)
+aa7f = int('AA7F', 16)
+aba2 = int('ABA2', 16)
+
+print(f'A9CD = {hex(a9cd)} ({a9cd})')
+print(f'A9B3 = {hex(a9b3)} ({a9b3})')
+print(f'A9CD > A9B3: {a9cd > a9b3}')
+print(f'Gap: {a9cd - a9b3 - 1} bytes between A9B3 and A9CD')
+print()
+print(f'AA7F = {hex(aa7f)} ({aa7f})')
+print(f'ABA2 = {hex(aba2)} ({aba2})')

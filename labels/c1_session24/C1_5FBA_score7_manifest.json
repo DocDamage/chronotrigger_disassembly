@@ -1,0 +1,17 @@
+{
+  "pass": 1046,
+  "bank": "C1",
+  "session": 24,
+  "range": "C1:5FBA..C1:5FD2",
+  "score": 7,
+  "width": 25,
+  "call_count": 2,
+  "branch_count": 2,
+  "stackish_count": 1,
+  "return_count": 1,
+  "ascii_ratio": 0.24,
+  "source": "C1:5000-6000_mid_bank_scan",
+  "reason": "Score-7 cluster with 2 calls, 2 branches, stack operation. Multiple callers suggest shared utility function.",
+  "related_to": "C1:5F00-6000_region",
+  "timestamp": "2026-04-08T15:20:00-04:00"
+}

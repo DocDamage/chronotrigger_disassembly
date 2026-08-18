@@ -1,0 +1,18 @@
+{
+  "pass": 1210,
+  "bank": "C3",
+  "start_address": "C3:3E53",
+  "end_address": "C3:3E69",
+  "label": "ct_c3_3e53_call_branch_dispatch",
+  "target": "C3:3E53",
+  "confidence": "high",
+  "reasoning": "Score-7 high-value cluster with 3 returns and 2 calls. 23 bytes with low ASCII ratio (0.304). 3 child blocks suggest nested functions.",
+  "score": 7,
+  "cluster_score": 7,
+  "call_count": 2,
+  "return_count": 3,
+  "child_count": 3,
+  "gap_context": "C3:3000-4000 region",
+  "promotion_reason": "Score-7 dispatch. 2 calls, 3 returns, low ASCII ratio. High-value target.",
+  "session": "30"
+}

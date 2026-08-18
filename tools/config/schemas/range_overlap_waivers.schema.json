@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RangeOverlapWaiversRegistry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "description",
+    "total_waivers_count",
+    "waivers"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "integer", "enum": [2] },
+    "description": { "type": "string" },
+    "total_waivers_count": { "type": "integer", "minimum": 0 },
+    "waivers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "conflict_id",
+          "bank",
+          "overlap_range",
+          "relationship",
+          "left_pass",
+          "right_pass",
+          "left_range",
+          "right_range",
+          "left_label",
+          "right_label",
+          "rationale",
+          "evidence",
+          "reviewed_by",
+          "reviewed_at_utc",
+          "review_commit",
+          "revalidation_required"
+        ],
+        "properties": {
+          "conflict_id": { "type": "string" },
+          "bank": { "type": "string" },
+          "overlap_range": { "type": "string" },
+          "relationship": { "type": "string", "enum": ["code_data_overlap", "partial_overlap", "containment", "exact_duplicate"] },
+          "left_pass": { "type": "integer" },
+          "right_pass": { "type": "integer" },
+          "left_range": { "type": "string" },
+          "right_range": { "type": "string" },
+          "left_label": { "type": "string" },
+          "right_label": { "type": "string" },
+          "rationale": { "type": "string" },
+          "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "reviewed_by": { "type": "string", "minLength": 1 },
+          "reviewed_at_utc": { "type": "string", "format": "date-time" },
+          "review_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+          "revalidation_required": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

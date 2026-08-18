@@ -1,0 +1,39 @@
+# Bank C3 - Score 5 Function Candidate (Session 24)
+# Range: C3:3BBD..C3:3BD1
+# 21-byte function with stack operations
+
+candidate:
+  bank: "C3"
+  start: "C3:3BBD"
+  end: "C3:3BD1"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  score: 5
+  width: 21
+  
+features:
+  calls: 0
+  branches: 1
+  stackish: 2
+  returns: 1
+  ascii_ratio: 0.286
+
+analysis:
+  type: "function"
+  pattern: "stack_prologue_epilogue"
+  description: |
+    21-byte score-5 function with stack operations.
+    2 stackish ops suggest state preservation pattern.
+    Low ASCII ratio (0.286) strongly indicates code.
+    No external calls may indicate internal routine.
+
+confidence: 5
+status: "candidate"
+verified: false
+coverage_gain: 21
+
+notes: |
+  Score-5 candidate from C3:3000-4000 scan.
+  Stack operations increase confidence of function boundaries.

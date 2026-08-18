@@ -1,0 +1,28 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 21 Pass 1030 - Auto-generated from C0:3800-4000 scan
+
+range:
+  start: "C0:3D6B"
+  end: "C0:3D96"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 44
+  
+features:
+  calls: 2
+  branches: 3
+  stackish: 2
+  returns: 4
+  ascii_ratio: 0.22
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Extended Score 7 candidate spanning C0:3D6B-3D96 in C0:3800-4000 region.
+  Part of high-scoring cluster (C0:3D52-3DA8, cluster_score: 11).
+  2 stack operations, 4 returns suggest complex control flow.
+  Multiple internal branches indicate subroutine with several paths.

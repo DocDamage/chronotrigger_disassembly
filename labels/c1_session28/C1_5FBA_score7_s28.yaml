@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 28
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:5FBA"
+  end_addr: "C1:5FD3"
+  name: "ct_c1_5fba_handler_s28"
+  type: "subroutine"
+
+evidence:
+  score: 7
+  scan_width: 25
+  region: "C1:5000-6000"
+  features:
+    - type: "instruction_pattern"
+      description: "Score-7 candidate in 5000-6000 region."
+      confidence: high
+
+provenance:
+  source: "Session 28 targeted analysis"
+  pass_number: 594
+  selection_reason: "Score-7 candidate in 5000-6000 region."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

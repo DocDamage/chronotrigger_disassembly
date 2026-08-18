@@ -1,0 +1,27 @@
+# Pass 1203: C1:2814 Score-7 Subroutine (Session 31 - Final Batch)
+bank: C1
+address: 0x2814
+range: C1:2814..C1:282D
+label: ct_c1_2814_score7_handler_s31
+score: 7
+width: 25
+type: subroutine
+region: 2000-3FFF
+description: |
+  Score-7 subroutine in C1:2800-2900 region.
+  PHP/PHB prologue pattern.
+  Part of C1:2000-3000 code density.
+  
+properties:
+  entry_pattern: PHP
+  exit_pattern: RTS
+  call_count: 0
+  branch_count: 2
+  
+promotion_reason: |
+  Score-7 island, 25 bytes.
+  Strong function boundaries.
+  Gap filler for 2000-3FFF region.
+  
+session: 31
+created: 2026-04-08

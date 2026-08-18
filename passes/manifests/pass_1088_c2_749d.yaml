@@ -1,0 +1,13 @@
+pass: 1088
+address: 02749D
+bank: 2
+label: ct_c2_749d_mode_routine
+range: C2:749D-C2:74AD
+score: 6
+width: 17
+call_count: 1
+branch_count: 2
+stackish_count: 0
+return_count: 1
+session: 28
+rationale: Score-6 routine from C2:7000-8000 region. 17 bytes with REP/SEP mode switching pattern. Control flow function.

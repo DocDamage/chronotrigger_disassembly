@@ -1,0 +1,29 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1050 - Auto-generated from C0:0000-2000 scan
+
+range:
+  start: "C0:0AE6"
+  end: "C0:0AFE"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 3
+  branches: 4
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.28
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Solid candidate in C0:0A00-0B00 region.
+  3 calls and 4 branches indicate moderately complex function.
+  Located between C0:0887 and C0:0C81 candidates.
+  Part of emerging low-bank function distribution.
+  Likely initialization or configuration helper.

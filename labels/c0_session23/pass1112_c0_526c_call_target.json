@@ -1,0 +1,23 @@
+{
+  "pass": 1112,
+  "label": "CT_C0_526C_Call_Target",
+  "address": "C0:526C",
+  "snes_address": "$C0526C",
+  "score": 5,
+  "description": "High-call-count target with 3 calls",
+  "type": "function",
+  "size": 21,
+  "status": "mapped",
+  "region": "5000-6000",
+  "scan_data": {
+    "width": 21,
+    "call_count": 3,
+    "branch_count": 3,
+    "return_count": 2,
+    "stackish_count": 1,
+    "ascii_ratio": 0.429,
+    "cluster_score": 6
+  },
+  "session": 23,
+  "created": "2026-04-08T15:14:44"
+}

@@ -1,0 +1,30 @@
+# Bank C2 - Score 6 Function Candidate
+# Session 22 - C2:A000-B000 scan
+
+range:
+  start: "C2:AE9D"
+  end: "C2:AEB5"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 3
+  branches: 0
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.28
+  first_return: "C2:AEB5"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 candidate in AE00 region (AE9D-AEB5).
+  3 internal calls, straight-line code (no branches).
+  Similar pattern to A492-A4AA - shared utility.
+  Low ASCII ratio (0.28) indicates code.
+  Positioned in high-density code region.

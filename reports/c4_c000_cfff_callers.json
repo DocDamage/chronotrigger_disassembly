@@ -1,0 +1,693 @@
+{
+  "range": "C4:C000..C4:CFFF",
+  "target_count": 31,
+  "targets": [
+    {
+      "target": "C4:C000",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C000",
+          "kind": "JSR",
+          "caller": "C4:4E9C",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:4E00..C4:4EFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_4e00_coarse_zero_promotion_note_02_block_01_page_04",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C036",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C036",
+          "kind": "JSR",
+          "caller": "C4:02AC",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C080",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C080",
+          "kind": "JSR",
+          "caller": "C4:5AFC",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:5A00..C4:5AFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_5a00_coarse_zero_promotion_note_02_block_02_page_06",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C0C0",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 4,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C0C0",
+          "kind": "JSR",
+          "caller": "C4:0F12",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        },
+        {
+          "target": "C4:C0C0",
+          "kind": "JSL",
+          "caller": "D1:0236",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        },
+        {
+          "target": "C4:C0C0",
+          "kind": "JSL",
+          "caller": "D1:04BF",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        },
+        {
+          "target": "C4:C0C0",
+          "kind": "JSL",
+          "caller": "D1:35E1",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C0DF",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C0DF",
+          "kind": "JSR",
+          "caller": "C4:16FA",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C0E0",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C0E0",
+          "kind": "JSR",
+          "caller": "C4:63DD",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:6300..C4:63FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_6300_coarse_zero_promotion_note_03_block_01_page_05",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C0E2",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C0E2",
+          "kind": "JSR",
+          "caller": "C4:5D86",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:5D00..C4:5DFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_5d00_coarse_zero_promotion_note_02_block_02_page_09",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C0E7",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C0E7",
+          "kind": "JSR",
+          "caller": "C4:BFAB",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:BF00..C4:BFFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_bf00_coarse_zero_promotion_note_07_block_02_page_07",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C0F0",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C0F0",
+          "kind": "JSR",
+          "caller": "C4:639F",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:6300..C4:63FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_6300_coarse_zero_promotion_note_03_block_01_page_05",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C203",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C203",
+          "kind": "JSR",
+          "caller": "C4:1A46",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C37C",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C37C",
+          "kind": "JSR",
+          "caller": "C4:4085",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:4000..C4:40FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_4000_coarse_zero_promotion_note_01_block_01_page_10",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C400",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C400",
+          "kind": "JMP",
+          "caller": "C4:9F76",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:9F00..C4:9FFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_9f00_coarse_zero_promotion_note_06_block_01_page_05",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C405",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C405",
+          "kind": "JSR",
+          "caller": "C4:0559",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C406",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C406",
+          "kind": "JSL",
+          "caller": "FD:8676",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C4DF",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C4DF",
+          "kind": "JSR",
+          "caller": "C4:0B49",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C4FE",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C4FE",
+          "kind": "JSR",
+          "caller": "C4:7092",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:7000..C4:70FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_7000_coarse_zero_promotion_note_03_block_02_page_08",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C501",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C501",
+          "kind": "JSR",
+          "caller": "C4:EE72",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:EE00..C4:EEFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_ee00_coarse_zero_promotion_note_10_block_01_page_04",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C53D",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C53D",
+          "kind": "JSR",
+          "caller": "C4:1620",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C6BF",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C6BF",
+          "kind": "JSR",
+          "caller": "C4:CD83",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:C6DF",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C6DF",
+          "kind": "JSR",
+          "caller": "C4:8EF3",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:8E00..C4:8EFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_8e00_coarse_zero_promotion_note_05_block_01_page_08",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C831",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C831",
+          "kind": "JSR",
+          "caller": "C4:5E4D",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:5E00..C4:5EFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_5e00_coarse_zero_promotion_note_02_block_02_page_10",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C8BA",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C8BA",
+          "kind": "JSR",
+          "caller": "C4:F1D9",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:F100..C4:F1FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_f100_coarse_zero_promotion_note_10_block_01_page_07",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C8C8",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C8C8",
+          "kind": "JSR",
+          "caller": "C4:FE8A",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:FE00..C4:FEFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_fe00_coarse_zero_promotion_note_10_block_02_page_10",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C8DF",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C8DF",
+          "kind": "JSR",
+          "caller": "C4:B629",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:B600..C4:B6FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_b600_coarse_zero_promotion_note_07_block_01_page_08",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C8EE",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C8EE",
+          "kind": "JSR",
+          "caller": "C4:6269",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:6200..C4:62FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_6200_coarse_zero_promotion_note_03_block_01_page_04",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C900",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C900",
+          "kind": "JMP",
+          "caller": "C4:9CB8",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:9C00..C4:9CFF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_9c00_coarse_zero_promotion_note_06_block_01_page_02",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:C98C",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:C98C",
+          "kind": "JSR",
+          "caller": "C4:044A",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:CE09",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:CE09",
+          "kind": "JSR",
+          "caller": "C4:82EC",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:8200..C4:82FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_8200_coarse_zero_promotion_note_04_block_02_page_06",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:CEAA",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 1,
+      "suspect_anchor_count": 0,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:CEAA",
+          "kind": "JSR",
+          "caller": "C4:D0F3",
+          "validity": "valid",
+          "anchor_strength": "weak",
+          "caller_status": "unresolved",
+          "caller_range": "",
+          "caller_kind_family": "unknown",
+          "caller_label": "",
+          "caller_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "target": "C4:CF00",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:CF00",
+          "kind": "JSR",
+          "caller": "C4:8918",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:8900..C4:89FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_8900_coarse_zero_promotion_note_05_block_01_page_03",
+          "caller_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "target": "C4:CF3F",
+      "strong_anchor_count": 0,
+      "weak_anchor_count": 0,
+      "suspect_anchor_count": 1,
+      "invalid_count": 0,
+      "hits": [
+        {
+          "target": "C4:CF3F",
+          "kind": "JSR",
+          "caller": "C4:F02F",
+          "validity": "valid",
+          "anchor_strength": "suspect",
+          "caller_status": "resolved_data",
+          "caller_range": "C4:F000..C4:F0FF",
+          "caller_kind_family": "data",
+          "caller_label": "ct_note_backed_frozen_page_c4_f000_coarse_zero_promotion_note_10_block_01_page_06",
+          "caller_confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

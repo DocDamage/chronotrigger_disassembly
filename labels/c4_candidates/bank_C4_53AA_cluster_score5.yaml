@@ -1,0 +1,38 @@
+# Bank C4 - Score 5 Cluster Candidate
+# Session 23 - C4:5000-6000 Region Deep Scan
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:53AA"
+  end: "C4:53C0"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  cluster_score: 5
+  width: 23
+  call_count: 0
+  branch_count: 5
+  stackish_count: 2
+  return_count: 3
+  child_count: 3
+  child_ranges:
+    - "C4:53AA..C4:53B3"
+    - "C4:53AA..C4:53B4"
+    - "C4:53AA..C4:53C0"
+  
+features:
+  - "Score 5 cluster (high value)"
+  - "23-byte substantial width"
+  - "5 branches indicates complex control flow"
+  - "3 return points suggest multi-exit logic"
+  - "2 stack operations"
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:5000-6000 hot zone region.
+  Branch-heavy cluster with 5 branches and 3 exits.
+  May be a switch statement or error handler.
+  Highest cluster score in 5000-5400 region.

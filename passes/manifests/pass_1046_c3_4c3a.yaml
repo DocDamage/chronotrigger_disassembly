@@ -1,0 +1,13 @@
+pass: 1046
+address: 038C3A
+bank: 3
+label: ct_c3_4c3a_sed_handler
+range: C3:4C3A-C3:4C49
+score: 5
+width: 16
+call_count: 1
+branch_count: 1
+stackish_count: 2
+return_count: 1
+session: 22
+rationale: Score 5 cluster from C3:4800-5000 scan. Uses SED (decimal mode) - BCD arithmetic handler. 1 call, 1 return. Specialized calculation function.

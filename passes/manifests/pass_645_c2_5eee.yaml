@@ -1,0 +1,13 @@
+pass: 645
+address: 025EEE
+bank: 2
+label: ct_c2_5eee_multi_return
+range: C2:5EEE-C2:5F25
+score: 7
+width: 56
+call_count: 6
+branch_count: 0
+stackish_count: 4
+return_count: 4
+session: 25
+rationale: Score-7 cluster from C2:5000-6000 scan. 56 bytes with 4 returns, 6 calls, 4 stack ops. Multi-exit subroutine cluster.

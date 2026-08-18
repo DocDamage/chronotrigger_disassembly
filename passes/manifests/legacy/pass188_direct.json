@@ -1,0 +1,31 @@
+{
+  "pass_number": 188,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2600..",
+  "completion_estimate": 77.8,
+  "closed_ranges": [
+    {
+      "range": "C3:2500..C3:25FF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_weak_single_caller_page_with_unsupported_2523_helper_stub_and_late_pointer_table_cluster_before_2600_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_weak_single_caller_page_with_unsupported_2523_helper_stub_and_late_pointer_table_cluster_before_2600_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2500 using the same caller-plus-local-structure discipline as the recent conservative C3 pages.",
+    "Only three visible raw targets land inside this page: 2504, 2509, and 2520.",
+    "Of those, only the same-bank C3:5599 -> C3:2504 JSR looks remotely caller-trustworthy; the apparent C3:C1DD -> C3:2520 and C3:C1E7 -> C3:2509 hits live in obvious byte-soup neighborhoods and are not treated as meaningful support.",
+    "Even the best visible target, 2504, still fails local byte-level sanity checks and does not stabilize into a defendable routine start.",
+    "The strongest local coherence in the page is an unsupported helper-looking island at 2523..2529 ending in the page's lone RTS, but it has no caller-backed true start and sits immediately after unstable mixed-content bytes.",
+    "The later half of the page shifts into obvious pointer/table-like material from roughly 2590 onward, which further argues against forcing an executable split before the next 2600 seam."
+  ]
+}

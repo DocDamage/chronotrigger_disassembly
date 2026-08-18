@@ -1,0 +1,30 @@
+{
+  "pass_number": 183,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2100..",
+  "completion_estimate": 74.8,
+  "closed_ranges": [
+    {
+      "range": "C3:2000..C3:20FF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_table_and_false_low_bank_helper_cluster_before_2100_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_control_table_and_false_low_bank_helper_cluster_before_2100_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2000 using the upgraded tiny-veneer plus caller-context workflow.",
+    "The seam produced real-looking same-bank raw caller fan-in into 20AA, 20B2, and 20E6, including low-bank C3 pressure, but those targets still fail local byte-level sanity checks and are not promoted.",
+    "2000 and 2010 also remain unstable despite visible raw hits, while 2083 stays a false-entry pocket instead of stabilizing into a clean owner/helper body.",
+    "No clean wrapper, return-stub, or other tiny executable split survives inside 2000..20FF.",
+    "After freezing the whole mixed pocket honestly, 2100 becomes the next in-order seam to investigate."
+  ]
+}

@@ -1,0 +1,27 @@
+# Pass 1205: C1:51D5 Score-7 Subroutine (Session 31 - Final Batch)
+bank: C1
+address: 0x51D5
+range: C1:51D5..C1:51EE
+label: ct_c1_51d5_score7_handler_s31
+score: 7
+width: 25
+type: subroutine
+region: 5000-5FFF
+description: |
+  Score-7 subroutine in C1:5100-5200 region.
+  PHP prologue, RTS return.
+  Companion to C1:5FBA handler.
+  
+properties:
+  entry_pattern: PHP
+  exit_pattern: RTS
+  call_count: 0
+  branch_count: 2
+  
+promotion_reason: |
+  Score-7 island, 25 bytes.
+  High-confidence function.
+  Fills 5000-5FFF coverage gap.
+  
+session: 31
+created: 2026-04-08

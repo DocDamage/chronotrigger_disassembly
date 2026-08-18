@@ -1,0 +1,18 @@
+python : Traceback (most recent call last):
+At line:1 char:52
++ ... isassembly; python tools\scripts\find_local_code_islands_v2.py --rom  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Doc\Desktop\chronotrigger_disassembly\tools\scripts\find_local_code_islands_v2.py", line 166, in 
+<module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\Doc\Desktop\chronotrigger_disassembly\tools\scripts\find_local_code_islands_v2.py", line 98, in main
+    bank, start, _ = parse_snes_range(args.range_text)
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Doc\Desktop\chronotrigger_disassembly\tools\scripts\snes_utils_hirom_v2.py", line 34, in 
+parse_snes_range
+    raise RangeParseError(f'invalid SNES range: {text}')
+snes_utils_hirom_v2.RangeParseError: invalid SNES range: D4:C000-FFFF

@@ -1,0 +1,22 @@
+{
+  "pass": "c3_3217_score6",
+  "live_seam_after_pass": "C3:3235..C3:34FF",
+  "new_ranges": [
+    {
+      "range": "C3:3217..C3:3234",
+      "label": "ct_c3_ppu_setup_function_3217_score6",
+      "notes": "Score-6 candidate from gap 30B1-34FF. PHP prologue. Writes to PPU registers $2120, $210D. Owner backtrack validated."
+    }
+  ],
+  "promoted_labels": [
+    "ct_c3_ppu_setup_function_3217_score6"
+  ],
+  "criteria": {
+    "score": 6,
+    "start_byte": "08",
+    "start_class": "clean_start",
+    "prologue": "PHP",
+    "register_access": ["$2120", "$210D"],
+    "validation": "owner_backtrack_v1"
+  }
+}

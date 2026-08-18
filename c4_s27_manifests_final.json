@@ -1,0 +1,226 @@
+{
+  "session": 27,
+  "bank": "C4",
+  "manifest_count": 29,
+  "pass_range": "1115-1143",
+  "total_bytes": 634,
+  "coverage_increase_percent": 0.97,
+  "new_manifests": 18,
+  "new_bytes": 444,
+  "all_manifests": [
+    {
+      "pass": 1115,
+      "file": "pass1115_ct_c4_7730_supercluster.json",
+      "addr": "C4:7730",
+      "label": "ct_c4_7730_supercluster",
+      "score": 7,
+      "bytes": 25
+    },
+    {
+      "pass": 1116,
+      "file": "pass1116_ct_c4_5025_call_heavy.json",
+      "addr": "C4:5025",
+      "label": "ct_c4_5025_call_heavy",
+      "score": 7,
+      "bytes": 21
+    },
+    {
+      "pass": 1117,
+      "file": "pass1117_ct_c4_46b7_branch_handler.json",
+      "addr": "C4:46B7",
+      "label": "ct_c4_46b7_branch_handler",
+      "score": 6,
+      "bytes": 25
+    },
+    {
+      "pass": 1118,
+      "file": "pass1118_ct_c4_1701_dual_branch.json",
+      "addr": "C4:1701",
+      "label": "ct_c4_1701_dual_branch",
+      "score": 6,
+      "bytes": 8
+    },
+    {
+      "pass": 1119,
+      "file": "pass1119_ct_c4_9e50_handler.json",
+      "addr": "C4:9E50",
+      "label": "ct_c4_9e50_handler",
+      "score": 6,
+      "bytes": 7
+    },
+    {
+      "pass": 1120,
+      "file": "pass1120_ct_c4_607a_subroutine.json",
+      "addr": "C4:607A",
+      "label": "ct_c4_607a_subroutine",
+      "score": 6,
+      "bytes": 12
+    },
+    {
+      "pass": 1121,
+      "file": "pass1121_ct_c4_9de6_handler.json",
+      "addr": "C4:9DE6",
+      "label": "ct_c4_9de6_handler",
+      "score": 6,
+      "bytes": 17
+    },
+    {
+      "pass": 1122,
+      "file": "pass1122_ct_c4_c771_c000_handler.json",
+      "addr": "C4:C771",
+      "label": "ct_c4_c771_c000_handler",
+      "score": 6,
+      "bytes": 12
+    },
+    {
+      "pass": 1123,
+      "file": "pass1123_ct_c4_7980_call_dense.json",
+      "addr": "C4:7980",
+      "label": "ct_c4_7980_call_dense",
+      "score": 5,
+      "bytes": 19
+    },
+    {
+      "pass": 1124,
+      "file": "pass1124_ct_c4_752a_call_triple.json",
+      "addr": "C4:752A",
+      "label": "ct_c4_752a_call_triple",
+      "score": 5,
+      "bytes": 19
+    },
+    {
+      "pass": 1125,
+      "file": "pass1125_ct_c4_7f8f_branch_heavy.json",
+      "addr": "C4:7F8F",
+      "label": "ct_c4_7f8f_branch_heavy",
+      "score": 5,
+      "bytes": 25
+    },
+    {
+      "pass": 1126,
+      "addr": "C4:9013",
+      "label": "ct_c4_9013_ldy_handler",
+      "score": 6,
+      "bytes": 26
+    },
+    {
+      "pass": 1127,
+      "addr": "C4:9D10",
+      "label": "ct_c4_9d10_cluster",
+      "score": 6,
+      "bytes": 27
+    },
+    {
+      "pass": 1128,
+      "addr": "C4:9FEA",
+      "label": "ct_c4_9fea_jsr_page",
+      "score": 6,
+      "bytes": 22
+    },
+    {
+      "pass": 1129,
+      "addr": "C4:B3B1",
+      "label": "ct_c4_b3b1_caller_heavy",
+      "score": 6,
+      "bytes": 36
+    },
+    {
+      "pass": 1130,
+      "addr": "C4:C0DF",
+      "label": "ct_c4_c0df_cross_bank",
+      "score": 6,
+      "bytes": 26
+    },
+    {
+      "pass": 1131,
+      "addr": "C4:C4DD",
+      "label": "ct_c4_c4dd_phk_entry",
+      "score": 6,
+      "bytes": 27
+    },
+    {
+      "pass": 1132,
+      "addr": "C4:C8C7",
+      "label": "ct_c4_c8c7_rep_handler",
+      "score": 6,
+      "bytes": 26
+    },
+    {
+      "pass": 1133,
+      "addr": "C4:E0EC",
+      "label": "ct_c4_e0ec_multiple_callers",
+      "score": 6,
+      "bytes": 29
+    },
+    {
+      "pass": 1134,
+      "addr": "C4:E35E",
+      "label": "ct_c4_e35e_php_clear",
+      "score": 6,
+      "bytes": 29
+    },
+    {
+      "pass": 1135,
+      "addr": "C4:EE00",
+      "label": "ct_c4_ee00_excellent",
+      "score": 6,
+      "bytes": 26
+    },
+    {
+      "pass": 1136,
+      "addr": "C4:EFD1",
+      "label": "ct_c4_efd1_jsl_long",
+      "score": 6,
+      "bytes": 26
+    },
+    {
+      "pass": 1137,
+      "addr": "C4:F21C",
+      "label": "ct_c4_f21c_rep_mode",
+      "score": 6,
+      "bytes": 27
+    },
+    {
+      "pass": 1138,
+      "addr": "C4:F9FA",
+      "label": "ct_c4_f9fa_ldx_init",
+      "score": 6,
+      "bytes": 31
+    },
+    {
+      "pass": 1139,
+      "addr": "C4:FDB9",
+      "label": "ct_c4_fdb9_high_page",
+      "score": 6,
+      "bytes": 32
+    },
+    {
+      "pass": 1140,
+      "addr": "C4:6BDA",
+      "label": "ct_c4_6bda_score6",
+      "score": 6,
+      "bytes": 8
+    },
+    {
+      "pass": 1141,
+      "addr": "C4:59FE",
+      "label": "ct_c4_59fe_call_triple",
+      "score": 5,
+      "bytes": 10
+    },
+    {
+      "pass": 1142,
+      "addr": "C4:772E",
+      "label": "ct_c4_772e_supercluster_alt",
+      "score": 5,
+      "bytes": 21
+    },
+    {
+      "pass": 1143,
+      "addr": "C4:7DA7",
+      "label": "ct_c4_7da7_branch_handler",
+      "score": 5,
+      "bytes": 15
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "pass": 1209,
+  "bank": "C3",
+  "start_address": "C3:3DE2",
+  "end_address": "C3:3DF0",
+  "label": "ct_c3_3de2_stack_dispatch",
+  "target": "C3:3DE2",
+  "confidence": "high",
+  "reasoning": "Score-6 dispatch cluster with 3 stackish operations and 2 returns. 15-byte stack-heavy handler. Interrupt or state preservation pattern.",
+  "score": 6,
+  "cluster_score": 6,
+  "return_count": 2,
+  "gap_context": "C3:3000-4000 region",
+  "promotion_reason": "Score-6 dispatch. 3 stack ops, 2 returns in 15 bytes. High stack activity.",
+  "session": "30"
+}

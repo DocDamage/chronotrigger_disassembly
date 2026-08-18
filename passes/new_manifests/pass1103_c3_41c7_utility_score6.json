@@ -1,0 +1,17 @@
+{
+  "pass": "1103",
+  "bank": "C3",
+  "start_address": "C3:41C7",
+  "end_address": "C3:41DF",
+  "label": "ct_c3_41c7_multi_call_utility_score6",
+  "target": "C3:41C7",
+  "confidence": "high",
+  "reasoning": "Score-6 high-traffic utility function with 4 callers. 25-byte span with 5 branches indicating complex conditional logic. Only 1 return suggests converging logic paths. Low ASCII ratio (0.28) confirms code.",
+  "cluster_score": 6,
+  "child_count": 1,
+  "return_count": 1,
+  "call_count": 4,
+  "gap_context": "C3:4100-4200 utility region",
+  "promotion_reason": "Score-6 shared utility - 4 callers indicate heavily-used subroutine. Complex branching (5 branches) suggests multi-path logic.",
+  "session": "27"
+}

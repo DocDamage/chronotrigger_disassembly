@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "pass_number": 1013,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:1498..C3:14A5",
+      "kind": "code_owner",
+      "label": "ct_c3_1498_stack_helper",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": [
+          "Cluster score 5 - stack-focused utility",
+          "1 call reference, 1 branch, 2 returns",
+          "2 stack operations indicate stack manipulation",
+          "14-byte helper with dual return paths",
+          "ASCII ratio 0.429 - within code range"
+        ],
+        "findings": {
+          "calls": 1,
+          "branches": 1,
+          "stack_ops": 2,
+          "returns": 2,
+          "first_return": "C3:1499"
+        },
+        "score": 5
+      },
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    },
+    {
+      "range": "C1:EE10..C1:EE27",
+      "kind": "code_owner",
+      "label": "ct_c1_ee10_score7_s29",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 7
+      },
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c3_1498_stack_helper",
+    "ct_c1_ee10_score7_s29"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass1013.json": "passes/manifests/legacy/pass1013.json",
+    "source_2_pass1013_c1_session29.json": "passes/manifests/legacy/pass1013_c1_session29.json"
+  },
+  "notes": []
+}

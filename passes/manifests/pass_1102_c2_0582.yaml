@@ -1,0 +1,13 @@
+pass: 1102
+address: 020582
+bank: 2
+label: ct_c2_0582_system_handler_s29
+range: C2:0582-C2:059A
+score: 6
+width: 25
+call_count: 3
+branch_count: 1
+stackish_count: 1
+return_count: 1
+session: 29
+rationale: Score-6 cluster in vector region with 3 internal calls. System-level handler function with PHP prologue.

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chrono Trigger Disassembly Canonical Pass Manifest Schema v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pass_number",
+    "status",
+    "branch",
+    "closed_ranges"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "enum": [2] },
+    "pass_number": { "type": "integer", "minimum": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "reviewed", "accepted", "superseded"]
+    },
+    "branch": { "type": "string" },
+    "toolkit_version": { "type": "string" },
+    "rom_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "live_seam_after_pass": { "type": "string" },
+    "completion_estimate": { "type": "number", "minimum": 0, "maximum": 100 },
+    "closed_ranges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["range", "kind", "label"],
+        "properties": {
+          "range": {
+            "type": "string",
+            "pattern": "^[0-9A-Fa-f]{2}:[0-9A-Fa-f]{4}\\.\\.[0-9A-Fa-f]{2}:[0-9A-Fa-f]{4}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "code_owner",
+              "code_helper",
+              "wrapper",
+              "veneer",
+              "data",
+              "text_marker",
+              "tail_fragment",
+              "superseded"
+            ]
+          },
+          "label": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium-high", "medium", "low", "reviewed", "score-6", "score-5", "score-4"]
+          },
+          "verification_status": { "type": "string" },
+          "parent_range": { "type": "string" },
+          "parent_label": { "type": "string" },
+          "evidence": { "type": "object" },
+          "legacy_metadata": { "type": "object" }
+        }
+      }
+    },
+    "new_labels": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "confidence": {
+      "type": "object",
+      "properties": {
+        "structural": { "type": "string" },
+        "semantic": { "type": "string" },
+        "rebuild": { "type": "string" }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "properties": {
+        "disassembly_note": { "type": "string" },
+        "legacy_manifest": { "type": "string" },
+        "session_report": { "type": "string" }
+      }
+    },
+    "legacy_metadata": { "type": "object" },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

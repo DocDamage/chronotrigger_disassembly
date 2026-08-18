@@ -1,0 +1,115 @@
+{
+  "target": "C4:8012",
+  "call_count": 7,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 0,
+  "suspect_anchor_count": 1,
+  "invalid_count": 6,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C4:7FF5",
+      "target": "C4:8012",
+      "validity": "valid",
+      "anchor_strength": "suspect",
+      "caller_status": "resolved_data",
+      "caller_range": "C4:7F00..C4:7FFF",
+      "caller_kind_family": "data",
+      "caller_label": "ct_note_backed_frozen_page_c4_7f00_coarse_zero_promotion_note_04_block_02_page_03",
+      "caller_confidence": "medium",
+      "notes": [
+        "caller sits inside a closed data range, so this hit is suspect"
+      ]
+    },
+    {
+      "kind": "JMP",
+      "caller": "D6:4881",
+      "target": "C4:8012",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JMP at D6:4881 resolves to D6:8012, not C4:8012"
+      ]
+    },
+    {
+      "kind": "JMP",
+      "caller": "D7:28C6",
+      "target": "C4:8012",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JMP at D7:28C6 resolves to D7:8012, not C4:8012"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "D7:77A8",
+      "target": "C4:8012",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at D7:77A8 resolves to D7:8012, not C4:8012"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "EB:8C3C",
+      "target": "C4:8012",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at EB:8C3C resolves to EB:8012, not C4:8012"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "FB:AD1C",
+      "target": "C4:8012",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at FB:AD1C resolves to FB:8012, not C4:8012"
+      ]
+    },
+    {
+      "kind": "JSR",
+      "caller": "FB:BCE9",
+      "target": "C4:8012",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "unresolved",
+      "caller_range": "",
+      "caller_kind_family": "unknown",
+      "caller_label": "",
+      "caller_confidence": "unknown",
+      "notes": [
+        "same-bank JSR at FB:BCE9 resolves to FB:8012, not C4:8012"
+      ]
+    }
+  ]
+}

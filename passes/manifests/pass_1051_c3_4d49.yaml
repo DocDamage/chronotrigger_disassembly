@@ -1,0 +1,13 @@
+pass: 1051
+address: 038D49
+bank: 3
+label: ct_c3_4d49_stack_handler
+range: C3:4D49-C3:4D51
+score: 4
+width: 9
+call_count: 1
+branch_count: 0
+stackish_count: 3
+return_count: 1
+session: 22
+rationale: Score 4 cluster from C3:4800-5000 scan. High stackish density (3 in 9 bytes). Stack manipulation helper or parameter handler.

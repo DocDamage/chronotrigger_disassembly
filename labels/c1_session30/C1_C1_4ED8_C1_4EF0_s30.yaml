@@ -1,0 +1,26 @@
+# Session 30 Manifest - Pass 1102
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1102
+
+target:
+  bank: "C1"
+  range: "C1:4ED8..C1:4EF0"
+  label: "ct_c1_4ed8_score7_subroutine_s30"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 7
+  source: "C1_initial_scan_summary.json"
+  promotion_reason: "Score-7 candidate update. 25 bytes width. Post-ecosystem region function with ca..."
+  previous_sessions: [24, 28]
+
+promotion_reason: |
+  Score-7 candidate update. 25 bytes width. Post-ecosystem region function with call, 4 branches, stack operation. Validated across sessions 24, 28.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

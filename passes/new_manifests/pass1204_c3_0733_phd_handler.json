@@ -1,0 +1,14 @@
+{
+  "pass": 1204,
+  "bank": "C3",
+  "start_address": "C3:0733",
+  "end_address": "C3:0751",
+  "label": "ct_c3_0733_phd_handler",
+  "target": "C3:0733",
+  "confidence": "high",
+  "reasoning": "Score-6 PHD handler. Direct page stack operation. Gap fill for C3:0529-08A0 region.",
+  "score": 6,
+  "gap_context": "C3:0529-08A0 early gap",
+  "promotion_reason": "Score-6 PHD handler. Direct page preservation utility.",
+  "session": "30"
+}

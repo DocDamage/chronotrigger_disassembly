@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "pass_number": 429,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C0:4B49..C0:4B65",
+      "kind": "code_owner",
+      "label": "ct_c0_4b2c_battle_calc_3callers",
+      "confidence": "high",
+      "verification_status": "pending"
+    }
+  ],
+  "new_labels": [
+    "ct_c0_4b2c_battle_calc_3callers"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass429.json": "passes/manifests/legacy/pass429.json"
+  },
+  "notes": []
+}

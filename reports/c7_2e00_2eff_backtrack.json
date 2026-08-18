@@ -1,0 +1,54 @@
+{
+  "range": "C7:2E00..C7:2EFF",
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "candidate_start": "C7:2ED4",
+      "target": "C7:2EE4",
+      "score": 4,
+      "distance_to_target": 16,
+      "start_byte": "DA",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.293,
+      "zero_ff_ratio": 0.049,
+      "repeated_pair_score": 0.0,
+      "candidate_range": "C7:2ED4..C7:2EFC"
+    },
+    {
+      "candidate_start": "C7:2E03",
+      "target": "C7:2E03",
+      "score": 3,
+      "distance_to_target": 0,
+      "start_byte": "3A",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.32,
+      "zero_ff_ratio": 0.08,
+      "repeated_pair_score": 0.167,
+      "candidate_range": "C7:2E03..C7:2E1B"
+    },
+    {
+      "candidate_start": "C7:2EFD",
+      "target": "C7:2EFE",
+      "score": 2,
+      "distance_to_target": 1,
+      "start_byte": "A3",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.308,
+      "zero_ff_ratio": 0.038,
+      "repeated_pair_score": 0.077,
+      "candidate_range": "C7:2EFD..C7:2EFF"
+    },
+    {
+      "candidate_start": "C7:2EFD",
+      "target": "C7:2EFF",
+      "score": 2,
+      "distance_to_target": 2,
+      "start_byte": "A3",
+      "start_class": "clean_start",
+      "ascii_ratio": 0.296,
+      "zero_ff_ratio": 0.037,
+      "repeated_pair_score": 0.077,
+      "candidate_range": "C7:2EFD..C7:2EFF"
+    }
+  ]
+}

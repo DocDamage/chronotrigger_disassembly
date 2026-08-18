@@ -1,0 +1,18 @@
+{
+  "pass": 704,
+  "range": "C3:AF42..C3:AF60",
+  "label": "ct_c3_af42_ldy_init",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. LDY immediate ($A0) prologue with clean start class. Region C3:A000-AFFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "A0",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

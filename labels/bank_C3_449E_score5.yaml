@@ -1,0 +1,47 @@
+# Bank C3 - Score 5 Function (SESSION 23)
+# C3:449E-44B0 - Pre-supercluster handler
+
+range:
+  start: "C3:449E"
+  end: "C3:44B0"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 23
+  score: 5
+  cluster_score: 5
+  width: 19
+  child_count: 1
+
+features:
+  - "Score 5 function"
+  - "1 call"
+  - "2 branches"
+  - "Near supercluster region"
+  
+stats:
+  calls: 1
+  branches: 2
+  stackish: 2
+  returns: 1
+  ascii_ratio: 0.632
+
+confidence: 5
+status: "candidate"
+verified: false
+priority: "medium"
+
+notes: |
+  SESSION 23 DISCOVERY - C3:4400-4800 region
+  
+  Score 5 function located just before the C3:4548 supercluster.
+  May be a setup function or entry point to the supercluster.
+  
+  Features:
+  - 19 bytes
+  - 1 call, 2 branches
+  - 2 stack operations
+  - Higher ASCII ratio (0.632) - possible text handling
+  
+  RECOMMENDATION: Disassemble to check relationship to
+  nearby C3:4548 supercluster.

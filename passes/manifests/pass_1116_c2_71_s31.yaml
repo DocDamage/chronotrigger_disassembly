@@ -1,0 +1,13 @@
+pass: 1116
+address: 028C71
+bank: 2
+label: ct_c2_8c71_handler
+range: C2:8C71-C2:8CA2
+score: 10
+width: 49
+call_count: 1
+branch_count: 2
+return_count: 1
+session: 31
+parent_hub: C2:8CAB
+rationale: Score-10 handler bridging to 8CAB, PHY prologue, gap filler function

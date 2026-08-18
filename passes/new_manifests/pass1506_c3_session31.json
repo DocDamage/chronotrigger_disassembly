@@ -1,0 +1,19 @@
+{
+  "pass": 1506,
+  "range": "C3:8A00..C3:8A1A",
+  "label": "ct_c3_8a00_dispatcher_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:8939-957B gap. Dispatch handler with CMP/BEQ, 27 bytes, session 31 final push.",
+  "scan": {
+    "score": 6,
+    "width": 27,
+    "call_count": 2,
+    "branch_count": 3,
+    "stackish_count": 1,
+    "return_count": 1,
+    "first_return_address": "C3:8A19",
+    "ascii_ratio": 0.16,
+    "zero_ff_ratio": 0.0
+  }
+}

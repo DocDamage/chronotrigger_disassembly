@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1155,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:7730",
+      "mode": "known_code",
+      "label": "ct_c4_7730_supercluster_ext",
+      "reason": "Extended score-7 supercluster. 6 branches, full coverage."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 27
+    }
+  }
+}

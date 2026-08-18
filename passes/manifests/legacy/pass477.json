@@ -1,0 +1,19 @@
+{
+  "pass_num": 477,
+  "pass_name": "C0_7F62_GraphicsHandler_7Callers",
+  "region": "C0:7F61-7F7A",
+  "targets": [
+    {
+      "addr": "C0:7F62",
+      "label": "CT_C0_7F62_GFX_HANDLER_7CALLERS",
+      "score": 4,
+      "callers": 7,
+      "start_byte": "48",
+      "start_type": "PHA",
+      "end_marker": "RTS",
+      "verified": true
+    }
+  ],
+  "coverage_bytes": 26,
+  "notes": "HIGH-CALLER Graphics/Scroll handler. 7 callers (C0:0A9F, C0:0AC0, C0:0AED, C0:EAE1, C0:EB01, C0:EB21, C0:EB38). Scroll/GFX utility."
+}

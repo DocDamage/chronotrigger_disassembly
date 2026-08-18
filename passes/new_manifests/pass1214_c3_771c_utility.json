@@ -1,0 +1,16 @@
+{
+  "pass": 1214,
+  "bank": "C3",
+  "start_address": "C3:771C",
+  "end_address": "C3:7734",
+  "label": "ct_c3_771c_utility_function",
+  "target": "C3:771C",
+  "confidence": "medium",
+  "reasoning": "Score-5 utility function with 4 external calls indicating wide usage. 25 bytes with multiple branches. High call count suggests shared utility.",
+  "score": 5,
+  "call_count": 4,
+  "return_count": 1,
+  "gap_context": "C3:7000-8000 region (currently ~9% coverage)",
+  "promotion_reason": "Score-5 utility with 4 callers. Widely-used function in 7000-8000 region.",
+  "session": "30"
+}

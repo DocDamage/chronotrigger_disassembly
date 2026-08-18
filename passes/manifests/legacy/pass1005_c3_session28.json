@@ -1,0 +1,21 @@
+{
+  "pass_number": 1005,
+  "bank": "C3",
+  "start_address": "C3:F701",
+  "end_address": "C3:F720",
+  "label": "ct_c3_f701_jsr_entry",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:F708",
+  "prologue_byte": "20",
+  "prologue_mnemonic": "JSR",
+  "backtrack_distance": 7,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:F700 region. JSR prologue, 32 bytes. FINAL PUSH milestone!",
+  "notes": [
+    "32-byte function in F000 page",
+    "Session 28 FINAL PUSH manifest",
+    "Helps reach 30% coverage milestone for Bank C3"
+  ]
+}

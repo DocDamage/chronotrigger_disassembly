@@ -1,0 +1,30 @@
+# Bank C2 - Score 6 Function Candidate
+# Session 22 - C2:B800-C000 scan
+
+range:
+  start: "C2:B8B2"
+  end: "C2:B8C0"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 15
+  
+features:
+  calls: 1
+  branches: 1
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.133
+  first_return: "C2:B8C0"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 candidate in B800 region (B8B2-B8C0).
+  Compact 15-byte function with single branch.
+  Very low ASCII ratio (0.133) strongly indicates code.
+  Simple conditional utility function.
+  Early in B800 region, may be entry point helper.

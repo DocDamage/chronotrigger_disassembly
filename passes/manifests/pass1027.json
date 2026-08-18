@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "pass_number": 1027,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:19DB..C3:1A05",
+      "kind": "superseded",
+      "label": "ct_c3_19DB",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C3:19A5..C3:1A00",
+      "parent_label": "ct_c3_19a5_unknown_function_score6_cluster",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 9
+      },
+      "legacy_metadata": {
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_0fc1b5b35595e56068d8",
+          "adj_8ce7ee8a74e78b26f4b9",
+          "adj_b6e8afad562927a16b2f",
+          "adj_bdb739d3ca81735f157b"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c3_19DB"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass1027.json": "passes/manifests/legacy/pass1027.json"
+  },
+  "notes": []
+}

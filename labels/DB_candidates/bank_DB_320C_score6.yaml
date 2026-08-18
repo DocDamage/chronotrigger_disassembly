@@ -1,0 +1,13 @@
+# Bank DB Score-6 Candidate
+# DB:320C - detected via owner backtracking
+# Score: 6
+# Reason: PHP prologue
+
+source: score_target_owner_backtrack_v1.py
+target: DB:320E
+best_start: DB:320C
+score: 6
+distance: 2
+start_byte: 08  # PHP
+start_class: clean_start
+candidate_range: DB:320C..DB:3223

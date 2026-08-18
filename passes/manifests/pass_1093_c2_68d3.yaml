@@ -1,0 +1,13 @@
+pass: 1093
+address: 0268D3
+bank: 2
+label: ct_c2_68d3_call_hub
+range: C2:68D3-C2:68E3
+score: 6
+width: 17
+call_count: 3
+branch_count: 1
+stackish_count: 0
+return_count: 2
+session: 28
+rationale: Score-6 cluster from C2:6000-7000 region. 17 bytes with 3 calls. Local subroutine hub calling multiple child functions.

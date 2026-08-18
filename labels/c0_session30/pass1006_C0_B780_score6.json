@@ -1,0 +1,18 @@
+{
+  "pass": 1006,
+  "label": "CT_C0_B780_Processor_Score6",
+  "address": "C0:B780",
+  "snes_address": "$C0$B780",
+  "score": 6,
+  "description": "Data processor with JSR prologue",
+  "type": "function",
+  "status": "candidate",
+  "size": 33,
+  "region": "B000-BFFF",
+  "features": {
+    "start_byte": "20",
+    "pattern": "JSR_prologue"
+  },
+  "session": 30,
+  "connected_to": []
+}

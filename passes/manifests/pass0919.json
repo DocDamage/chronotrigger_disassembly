@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "pass_number": 919,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "DD:0F16..DD:0F2D",
+      "kind": "superseded",
+      "label": "ct_dd_0f16_score4_cluster",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "DD:0F04..DD:0F52",
+      "parent_label": "ct_dd_0f04_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_1c2346c28ac485d3baae"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_dd_0f16_score4_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass919.json": "passes/manifests/legacy/pass919.json"
+  },
+  "notes": []
+}

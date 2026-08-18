@@ -1,0 +1,13 @@
+pass: 1040
+address: 03A548
+bank: 3
+label: ct_c3_4548_jump_table_dispatch
+range: C3:4548-C3:459F
+score: 13
+width: 88
+call_count: 0
+branch_count: 5
+stackish_count: 3
+return_count: 25
+session: 21
+rationale: Score 13 SUPERCLUSTER from C3:4400-4800 scan. 88 bytes with 25 returns - major jump table or dispatch routine. Highest score candidate in Bank C3.

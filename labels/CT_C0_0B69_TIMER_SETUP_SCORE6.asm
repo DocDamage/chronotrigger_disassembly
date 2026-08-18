@@ -1,0 +1,2 @@
+; Timer setup function
+CT_C0_0B69_TIMER_SETUP_SCORE6: EQU $C000B69

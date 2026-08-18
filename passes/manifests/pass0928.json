@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "pass_number": 928,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "DD:9B4D..DD:9B65",
+      "kind": "superseded",
+      "label": "ct_dd_9b4d_score4_cluster",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "DD:9B4D..DD:9B80",
+      "parent_label": "ct_dd_9b4d_score19_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_1dd0c969c31a7c3745cd",
+          "adj_4a4366175739594822c5"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_dd_9b4d_score4_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass928.json": "passes/manifests/legacy/pass928.json"
+  },
+  "notes": []
+}

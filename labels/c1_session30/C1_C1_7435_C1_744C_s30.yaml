@@ -1,0 +1,25 @@
+# Session 30 Manifest - Pass 1100
+# Generated for C1 Bank Candidate Completion
+
+manifest_version: "1.0"
+session: 30
+pass_number: 1100
+
+target:
+  bank: "C1"
+  range: "C1:7435..C1:744C"
+  label: "ct_c1_7435_score7_subroutine"
+  confidence: "high"
+  kind: "owner"
+
+metadata:
+  score: 7
+  source: "C1_initial_scan_summary.json"
+  promotion_reason: "Score-7 candidate. 23 bytes width. Subroutine with call and return patterns. Loc..."
+
+promotion_reason: |
+  Score-7 candidate. 23 bytes width. Subroutine with call and return patterns. Located in C1:7000-8000 region.
+
+disassembly:
+  mode: "code"
+  merge_policy: "session_priority"

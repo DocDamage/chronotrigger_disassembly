@@ -1,0 +1,39 @@
+{
+  "pass_number": 170,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-audit",
+  "live_seam_after_pass": "C3:1300..C3:1816",
+  "completion_estimate": 71.6,
+  "closed_ranges": [
+    {
+      "range": "C3:08A9..C3:08B2",
+      "kind": "tail_fragment",
+      "label": "ct_c3_attached_terminal_tail_of_helper_rooted_at_0800_pending_full_upstream_closure",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:01E4..C3:02DC",
+      "kind": "code_owner",
+      "label": "ct_c3_selected_7e_7f_band_initializer_and_32_step_saturating_add_subtract_wram_stream_worker",
+      "confidence": "high"
+    },
+    {
+      "range": "C3:02DD..C3:0306",
+      "kind": "code_helper",
+      "label": "ct_c3_external_byte_mix_helper_updating_0386_and_returning_start_byte_for_c0_fe_chained_table_walk",
+      "confidence": "high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_attached_terminal_tail_of_helper_rooted_at_0800_pending_full_upstream_closure"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "medium-high",
+    "rebuild": "medium-high"
+  },
+  "notes": [
+    "Audit pass: 08A9..08B2 is attached to upstream helper entry at 0800, not an unattached orphan.",
+    "Audit pass: 01E4 owner and 02DD helper split remains correct and is reinforced by external caller evidence."
+  ]
+}

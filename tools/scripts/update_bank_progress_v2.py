@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+
+from snes_utils import iter_manifest_paths, load_manifest, manifest_pass_number
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description='Rebuild bank progress index from pass manifests')
+    parser.add_argument('--bank', default='C3')
+    parser.add_argument('--manifests-dir', default='passes/manifests')
+    parser.add_argument('--out', default='tools/config/bank_c3_progress.generated.json')
+    args = parser.parse_args()
+
+    bank = args.bank.upper()
+    closed_exec = []
+    closed_data = []
+    superseded_claims = []
+    latest_seam = None
+    latest_pass = 0
+
+    for path in iter_manifest_paths(args.manifests_dir):
+        data = load_manifest(path)
+        pass_number = manifest_pass_number(data, path)
+        latest_pass = max(latest_pass, pass_number)
+        
+        # Check if manifest touches this bank
+        has_bank_ranges = False
+        for item in data.get('closed_ranges', []):
+            if not isinstance(item, dict) or not item.get('range', '').startswith(f'{bank}:'):
+                continue
+            has_bank_ranges = True
+            entry = {
+                'range': item['range'],
+                'label': item['label'],
+                'pass': pass_number,
+                'confidence': item['confidence'],
+                'kind': item['kind'],
+            }
+            if item['kind'] == 'superseded':
+                superseded_claims.append(entry)
+            elif item['kind'] in {'data', 'text_marker'}:
+                closed_data.append(entry)
+            else:
+                closed_exec.append(entry)
+
+        seam_cand = data.get('live_seam_after_pass') or data.get('region')
+        if seam_cand and (seam_cand.startswith(f'{bank}:') or has_bank_ranges):
+            latest_seam = seam_cand
+
+    result = {
+        'bank': bank,
+        'latest_pass': latest_pass,
+        'latest_live_seam': latest_seam or f'{bank}:0000..',
+        'closed_executable_ranges': closed_exec,
+        'closed_data_ranges': closed_data,
+        'superseded_historical_claims': superseded_claims,
+    }
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
+    print(f'wrote {out_path} (latest pass: {latest_pass}, latest seam: {result["latest_live_seam"]})')
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

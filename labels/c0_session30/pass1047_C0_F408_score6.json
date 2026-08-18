@@ -1,0 +1,17 @@
+{
+  "pass": 1047,
+  "label": "CT_C0_F408_HDMADisp_Score6",
+  "address": "C0:F408",
+  "snes_address": "$C0$F408",
+  "score": 6,
+  "description": "HDMA dispatcher function",
+  "type": "function",
+  "status": "candidate",
+  "size": 35,
+  "region": "F000-FFFF",
+  "features": {
+    "category": "hdma"
+  },
+  "session": 30,
+  "connected_to": ["C0:F41D", "C0:F428"]
+}

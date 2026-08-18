@@ -1,0 +1,22 @@
+{
+  "pass_number": 704,
+  "label": "CT_C1_3F8B_BRANCH_HEAVY",
+  "addr": "C1:3F8B",
+  "range": "C1:3F8B..C1:3FA3",
+  "score": 7,
+  "cluster_score": 7,
+  "type": "function",
+  "bank": "C1",
+  "width": 25,
+  "confidence": "high",
+  "evidence": "Score-7 with 7 branches - complex control flow, 2 stack ops",
+  "features": {
+    "calls": 1,
+    "branches": 7,
+    "stackish": 2,
+    "returns": 1,
+    "ascii_ratio": 0.12,
+    "data_misread_flags": []
+  },
+  "note": "Branch-heavy subroutine near end of low bank - possible switch/case handler"
+}

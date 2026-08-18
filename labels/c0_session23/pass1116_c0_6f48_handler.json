@@ -1,0 +1,23 @@
+{
+  "pass": 1116,
+  "label": "CT_C0_6F48_Handler",
+  "address": "C0:6F48",
+  "snes_address": "$C06F48",
+  "score": 7,
+  "description": "Handler cluster with 3 callers, stack operations",
+  "type": "handler",
+  "size": 34,
+  "status": "mapped",
+  "region": "60AC-6EF8 gap",
+  "scan_data": {
+    "width": 34,
+    "call_count": 3,
+    "branch_count": 2,
+    "return_count": 3,
+    "stackish_count": 2,
+    "ascii_ratio": 0.5,
+    "cluster_score": 7
+  },
+  "session": 23,
+  "created": "2026-04-08T15:14:44"
+}

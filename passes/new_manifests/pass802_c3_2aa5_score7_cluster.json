@@ -1,0 +1,17 @@
+{
+  "pass": "802",
+  "bank": "C3",
+  "start_address": "C3:2AA5",
+  "end_address": "C3:2ACC",
+  "label": "ct_c3_2aa5_code_island_score7",
+  "target": "C3:2AA5",
+  "confidence": "high",
+  "reasoning": "Score-7 cluster in C3:2900-3058 gap. 40-byte width, 3 child islands, 2 callers, 6 branches.",
+  "cluster_score": 7,
+  "child_count": 3,
+  "width": 40,
+  "call_count": 2,
+  "branch_count": 6,
+  "gap_context": "C3:2900-3058 major gap fill",
+  "promotion_reason": "Score-7 cluster with multiple caller support. Event system related."
+}

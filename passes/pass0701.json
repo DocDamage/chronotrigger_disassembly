@@ -1,0 +1,20 @@
+{
+  "pass_number": 701,
+  "closed_ranges": [
+    {
+      "range": "C1:431B..C1:432B",
+      "kind": "owner",
+      "label": "ct_c1_431b_entry_helper",
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "score": 5,
+    "width": 17,
+    "call_count": 0,
+    "branch_count": 1,
+    "return_count": 1,
+    "ascii_ratio": 0.294
+  },
+  "promotion_reason": "Pre-cluster entry point with score 5. 17 bytes. Single branch and return. Entry to mega-cluster region."
+}

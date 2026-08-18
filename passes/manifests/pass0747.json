@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "pass_number": 747,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C4:4ABB..C4:4AF0",
+      "kind": "superseded",
+      "label": "ct_c4_4abb_score6_cluster",
+      "confidence": "high",
+      "verification_status": "pending",
+      "parent_range": "C4:4ABB..C4:4AE3",
+      "parent_label": "ct_c4_4abb_php_prologue",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_900c545f9470a2a7d24f",
+          "adj_3533326bc609e4fe5207"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c4_4abb_score6_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass747.json": "passes/manifests/legacy/pass747.json"
+  },
+  "notes": []
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BaselinePassGapAccountingRegistry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schema_version", "description", "total_gaps_count", "intentional_gaps"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "integer", "enum": [3] },
+    "description": { "type": "string", "minLength": 1 },
+    "total_gaps_count": { "type": "integer", "minimum": 0 },
+    "intentional_gaps": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pass_number", "status", "reason_code", "rationale", "evidence",
+          "evidence_commit", "generated_by", "revalidation_required"
+        ],
+        "properties": {
+          "pass_number": { "type": "integer", "minimum": 1 },
+          "status": { "type": "string", "enum": ["baseline_absent", "investigation_needed"] },
+          "reason_code": { "type": "string", "enum": ["no_baseline_manifest", "baseline_identity_mismatch"] },
+          "rationale": { "type": "string", "minLength": 1 },
+          "evidence": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 3 },
+          "evidence_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+          "generated_by": { "type": "string", "minLength": 1 },
+          "revalidation_required": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

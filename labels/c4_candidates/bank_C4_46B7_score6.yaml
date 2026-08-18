@@ -1,0 +1,31 @@
+# Bank C4 - Score 6 Function Candidate
+# Session 21 Deep Scan - C4:4000-8000 Region
+# Auto-generated on 2026-04-08
+
+range:
+  start: "C4:46B7"
+  end: "C4:46CF"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  call_count: 1
+  branch_count: 3
+  stackish_count: 0
+  return_count: 2
+  
+features:
+  - "Score 6 function candidate"
+  - "25-byte substantial width"
+  - "1 external call"
+  - "3 branches with 2 returns"
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Located in C4:4000-5000 region.
+  Score 6 candidate with 25 bytes width and 3 branches.
+  Part of C4:46B2-46D1 cluster (score 6 cluster).

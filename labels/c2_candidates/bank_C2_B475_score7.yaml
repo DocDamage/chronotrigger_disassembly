@@ -1,0 +1,28 @@
+# Bank C2 - Score 7 Function Candidate
+# Session 21 - C2:B000-C000 scan near B716 hub
+
+range:
+  start: "C2:B475"
+  end: "C2:B48D"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 2
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.2
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  Score 7 candidate in B400-B500 region, ~241 bytes from B716 cross-bank hub.
+  2 calls suggest multiple entry points or callers.
+  Low ASCII ratio (0.2) indicates code content.
+  Likely related to settlement service or menu functions.

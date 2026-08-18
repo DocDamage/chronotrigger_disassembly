@@ -1,0 +1,13 @@
+pass: 1077
+address: 02522C
+bank: 2
+label: ct_c2_522c_dispatcher
+range: C2:522C-C2:5242
+score: 5
+width: 23
+call_count: 6
+branch_count: 1
+stackish_count: 0
+return_count: 1
+session: 27
+rationale: Score-4 cluster (elevated to 5) from C2:5200 scan. 23 bytes with 6 calls! High call density indicates active dispatcher. Cross-bank caller from C2:5232.

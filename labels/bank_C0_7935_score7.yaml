@@ -1,0 +1,29 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 24 Pass 1048 - Auto-generated from C0:7000-8000 scan
+
+range:
+  start: "C0:7935"
+  end: "C0:794D"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 25
+  
+features:
+  calls: 2
+  branches: 3
+  stackish: 2
+  returns: 1
+  ascii_ratio: 0.28
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  High-score candidate in previously unmapped C0:7000-8000 region.
+  3 branches with 2 stack operations (PHP/PLP pattern).
+  Located at C0:7935 - high address suggests late-system utility.
+  Critical discovery - first high-confidence candidate in C0:7000+.
+  Likely save/load or system configuration function.

@@ -1,0 +1,18 @@
+{
+  "pass": 682,
+  "range": "C3:052A..C3:0543",
+  "label": "ct_c3_052a_jsr_entry",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from gap C3:0529-08A0 backtrack analysis. JSR ($20) entry with strong caller evidence. Gap fill priority.",
+  "scan": {
+    "score": 6,
+    "start_byte": "20",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.269,
+    "zero_ff_ratio": 0.154,
+    "repeated_pair_score": 0.308
+  },
+  "continues_from": null,
+  "next": "C3:0540..C3:0559"
+}

@@ -1,0 +1,40 @@
+# Bank C3 - Score 6 Cluster (Session 24)
+# Range: C3:5364..C3:5375
+# DISCOVERY: 18-byte cluster with 2 returns
+
+candidate:
+  bank: "C3"
+  start: "C3:5364"
+  end: "C3:5375"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  cluster_score: 6
+  width: 18
+  
+features:
+  calls: 0
+  branches: 2
+  stackish: 1
+  returns: 2
+  ascii_ratio: 0.278
+  child_count: 2
+
+analysis:
+  type: "inline_function"
+  pattern: "dual_return"
+  description: |
+    18-byte cluster with 2 returns (no external calls).
+    May be inline code or internal routine.
+    Low ASCII ratio (0.278) suggests code.
+    2 returns indicate multiple exit conditions.
+
+confidence: 6
+status: "candidate"
+verified: false
+coverage_gain: 18
+
+notes: |
+  Score-6 cluster from C3:5000-6000 scan.
+  No external calls suggest internal utility or inline code.

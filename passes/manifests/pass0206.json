@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "pass_number": 206,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C7:CB1A..C7:CB1C",
+      "kind": "code_owner",
+      "label": "ct_c7_cb1a_jsr_to_b01f",
+      "confidence": "high",
+      "verification_status": "pending",
+      "evidence": {
+        "instruction": "JSR $B01F",
+        "bytes": "20 1F B0",
+        "anchor_target": "C7:B01F",
+        "anchor_target_status": "promoted_pass_193",
+        "note": "Strong anchor to promoted B000-B1FF"
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c7_cb1a_jsr_to_b01f"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass206.json": "passes/manifests/legacy/pass206.json"
+  },
+  "notes": []
+}

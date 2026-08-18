@@ -1,0 +1,19 @@
+{
+  "pass": 1502,
+  "range": "C3:2000..C3:2015",
+  "label": "ct_c3_2000_init_score6",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from C3:1E1B-28E6 gap. LDA# init sequence, 22 bytes, session 31 final push.",
+  "scan": {
+    "score": 6,
+    "width": 22,
+    "call_count": 1,
+    "branch_count": 2,
+    "stackish_count": 2,
+    "return_count": 1,
+    "first_return_address": "C3:2014",
+    "ascii_ratio": 0.18,
+    "zero_ff_ratio": 0.0
+  }
+}

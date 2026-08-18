@@ -1,0 +1,19 @@
+python : Traceback (most recent call last):
+At line:1 char:95
++ ... (USA).sfc"; python tools/scripts/score_target_owner_backtrack_v1.py - ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Doc\Desktop\chronotrigger_disassembly\tools\scripts\score_target_owner_backtrack_v1.py", line 116, in 
+<module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\Doc\Desktop\chronotrigger_disassembly\tools\scripts\score_target_owner_backtrack_v1.py", line 59, in 
+main
+    bank, start, end = parse_snes_range(args.range_text)
+                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Doc\Desktop\chronotrigger_disassembly\tools\scripts\snes_utils_hirom_v2.py", line 34, in 
+parse_snes_range
+    raise RangeParseError(f'invalid SNES range: {text}')
+snes_utils_hirom_v2.RangeParseError: invalid SNES range: C0:8000-C000

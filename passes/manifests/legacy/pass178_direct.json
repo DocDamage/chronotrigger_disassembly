@@ -1,0 +1,29 @@
+{
+  "pass_number": 178,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:18FD..",
+  "completion_estimate": 73.0,
+  "closed_ranges": [
+    {
+      "range": "C3:1881..C3:18FC",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_opcode_and_register_setup_blob_after_rtl_stub_before_18fd_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_opcode_and_register_setup_blob_after_rtl_stub_before_18fd_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "Forward re-audit of 1881..18FC does not produce a trustworthy anchored owner: the region contains repeated opcode-looking slices, partial hardware-register write sequences, and a tempting helper-like tail ending in RTL, but none of those starts can be defended from validated caller context yet.",
+    "Raw same-bank target patterns inside the 1880s, including 188C, 1898, and 18A1, currently trace back to unresolved higher-bank C3 regions, so they are not strong enough to rescue those addresses into confirmed executable owners.",
+    "The next seam is reduced to 18FD because it is the next raw target candidate in-order after the frozen blob, but it should still be treated as unproven until its caller context is validated rather than merely pattern-matched.",
+    "This pass is intentionally conservative: it preserves one potentially meaningful candidate pocket around the 18FD area while refusing to overclaim the unstable middle after the 1880 RTL stub."
+  ]
+}

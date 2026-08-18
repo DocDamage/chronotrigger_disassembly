@@ -1,0 +1,31 @@
+{
+  "pass_number": 187,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward-plus-xref-anchor-upgrade",
+  "live_seam_after_pass": "C3:2500..",
+  "completion_estimate": 77.2,
+  "closed_ranges": [
+    {
+      "range": "C3:2400..C3:24FF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_pointer_table_and_false_interior_target_cluster_with_unsupported_2461_helper_pocket_before_2500_candidate",
+      "confidence": "medium-high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_inline_mixed_pointer_table_and_false_interior_target_cluster_with_unsupported_2461_helper_pocket_before_2500_candidate"
+  ],
+  "confidence": {
+    "structural": "high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "This pass continued from the repo-forward seam at C3:2400 using the same caller-plus-local-structure discipline as the recent conservative C3 pages.",
+    "The page opens in obvious pointer/table-like material, and the earliest visible raw targets at 2404 and 2406 land directly inside that repeated-value lead-in rather than on believable executable boundaries.",
+    "The visible middle targets at 2422, 2434, 2440, 2443, and 244E also fail local sanity checks strongly enough to reject promotion; they sit in mixed inline neighborhoods rather than caller-backed routine starts.",
+    "The later visible targets at 248D, 24A4, 24AE, and 24F8 are likewise unstable interior landings and are better explained as mixed-content or operand-overlap false positives than as trustworthy entry points.",
+    "The strongest unsupported local coherence in the page is a helper-looking pocket around 2461..2483 that ends at a clean RTS, but it has no caller-backed true start and is not promoted.",
+    "Because the supported targets are structurally bad and the structurally better local pocket is unsupported, the whole 2400..24FF page is frozen honestly as mixed inline content before the next 2500 seam."
+  ]
+}

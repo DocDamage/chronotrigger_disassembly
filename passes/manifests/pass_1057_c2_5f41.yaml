@@ -1,0 +1,13 @@
+pass: 1057
+address: 025F41
+bank: 2
+label: ct_c2_5f41_stack_rich_handler
+range: C2:5F41-C2:5F5B
+score: 5
+width: 27
+call_count: 5
+branch_count: 1
+stackish_count: 2
+return_count: 4
+session: 26
+rationale: Score-5 island from 5F2C-5F5B cluster. 27 bytes with 4 returns, 5 calls, 2 stack ops. High stack activity indicates state preservation.

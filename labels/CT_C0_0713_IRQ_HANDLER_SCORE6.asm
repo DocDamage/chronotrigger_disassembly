@@ -1,0 +1,2 @@
+; IRQ handler entry
+CT_C0_0713_IRQ_HANDLER_SCORE6: EQU $C000713

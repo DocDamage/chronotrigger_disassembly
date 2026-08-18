@@ -1,0 +1,13 @@
+pass: 647
+address: 026F14
+bank: 2
+label: ct_c2_6f14_branch_heavy
+range: C2:6F14-C2:6F2C
+score: 7
+width: 25
+call_count: 1
+branch_count: 5
+stackish_count: 1
+return_count: 1
+session: 25
+rationale: Score-7 island from C2:6000-7000 scan. 25 bytes with 5 branches, 1 call, 1 return. Branch-heavy control flow function.

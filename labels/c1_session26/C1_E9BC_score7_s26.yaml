@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.0",
+  "session": 26,
+  "target": {
+    "bank": "C1",
+    "start_addr": "C1:E9BC",
+    "end_addr": "C1:E9D5",
+    "name": "ct_c1_e9bc_handler_s26"
+  },
+  "metadata": {
+    "score": 7,
+    "call_count": 1,
+    "branch_count": 3,
+    "return_count": 1,
+    "width": 25,
+    "region": "E000-F000",
+    "selection_reason": "Score-7 candidate adjacent to E99F. Related handler pair."
+  },
+  "disassembly": {
+    "mode": "code",
+    "merge_policy": "session_priority"
+  }
+}

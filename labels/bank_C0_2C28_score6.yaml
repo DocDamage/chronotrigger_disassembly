@@ -1,0 +1,27 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 21 Pass 1025 - Auto-generated from C0:2800-4000 scan
+
+range:
+  start: "C0:2C28"
+  end: "C0:2C40"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 1
+  branches: 7
+  stackish: 0
+  returns: 2
+  ascii_ratio: 0.24
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Excellent branch density (7 branches in 25 bytes) in C0:2800-3000 region.
+  2 returns suggest multiple exit paths. Complex control flow candidate.
+  Low ASCII ratio indicates likely code.

@@ -1,0 +1,31 @@
+metadata:
+  manifest_version: "1.0"
+  created: "2026-04-08"
+  session: 28
+  author: "Kimi Code CLI"
+
+target:
+  bank: "C1"
+  start_addr: "C1:4008"
+  end_addr: "C1:4021"
+  name: "ct_c1_4008_hub_candidate_s28"
+  type: "hub_candidate"
+
+evidence:
+  score: 7
+  scan_width: 25
+  region: "C1:4000-5000"
+  features:
+    - type: "instruction_pattern"
+      description: "Hub candidate at 4008. High call density expected."
+      confidence: high
+
+provenance:
+  source: "Session 28 targeted analysis"
+  pass_number: 592
+  selection_reason: "Hub candidate at 4008. High call density expected."
+
+validation:
+  method: "static_analysis"
+  status: "pending"
+  tests: []

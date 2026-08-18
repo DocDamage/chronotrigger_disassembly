@@ -1,0 +1,14 @@
+# Bank DB Score-6 Candidate
+# DB:00AC - detected via owner backtracking
+# Score: 6
+# Reason: PHP prologue, has RTS at DB:00BF
+# Cross-bank callers: Verified via JSL/JML analysis
+
+source: score_target_owner_backtrack_v1.py
+target: DB:00AD
+best_start: DB:00AC
+score: 6
+distance: 1
+start_byte: 08  # PHP
+start_class: clean_start
+candidate_range: DB:00AC..DB:00C4

@@ -1,0 +1,29 @@
+# Bank C0 - Score 7 Function Candidate
+# Session 24 Pass 1043 - Auto-generated from C0:0000-2000 scan
+
+range:
+  start: "C0:19DF"
+  end: "C0:19F6"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 7
+  width: 24
+  
+features:
+  calls: 3
+  branches: 2
+  stackish: 1
+  returns: 3
+  ascii_ratio: 0.292
+  
+confidence: 7
+status: "candidate"
+verified: false
+
+notes: |
+  High-value candidate with 3 calls and 3 returns.
+  Multiple callers suggest popular utility function.
+  Located near C0:1925 candidate - potential function cluster.
+  Low ASCII ratio (0.292) confirms code nature.
+  May be related to game state management or input handling.

@@ -1,0 +1,37 @@
+# Bank C3 - Score 6 Function Candidate (Session 24)
+# Range: C3:373D..C3:374D
+
+candidate:
+  bank: "C3"
+  start: "C3:373D"
+  end: "C3:374D"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 24
+  score: 6
+  width: 17
+  
+features:
+  calls: 1
+  branches: 1
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.176
+
+analysis:
+  type: "function"
+  description: |
+    Score-6 island with excellent code indicators.
+    Very low ASCII ratio (0.176) strongly suggests code.
+    Single call and return indicate standalone function.
+    17 bytes provides good coverage per manifest.
+
+confidence: 6
+status: "candidate"
+verified: false
+coverage_gain: 17
+
+notes: |
+  High-confidence candidate from C3:3000-4000 scan.
+  Low ASCII ratio is excellent discriminator for code vs data.

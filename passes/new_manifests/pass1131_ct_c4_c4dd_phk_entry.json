@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1131,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:C4DD",
+      "mode": "known_code",
+      "label": "ct_c4_c4dd_phk_entry",
+      "reason": "Score-6, PHK prologue. Bank push common pattern."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 27
+    }
+  }
+}

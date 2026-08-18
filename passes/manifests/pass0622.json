@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "pass_number": 622,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C1:8F02..C1:8F11",
+      "kind": "code_owner",
+      "label": "ct_c1_8f02_handler_dispatch",
+      "confidence": "high",
+      "verification_status": "pending"
+    }
+  ],
+  "new_labels": [
+    "ct_c1_8f02_handler_dispatch"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass622.json": "passes/manifests/legacy/pass622.json"
+  },
+  "notes": []
+}

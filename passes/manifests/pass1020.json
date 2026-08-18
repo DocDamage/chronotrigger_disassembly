@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "pass_number": 1020,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C0:202F..C0:2055",
+      "kind": "code_owner",
+      "label": "ct_c0_202f_state_manager",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": [
+          "Score 6 cluster - strong code indicators",
+          "4 branch instructions with balanced control flow",
+          "4 return instructions suggesting multiple exit paths",
+          "39 bytes - typical state management function",
+          "Located at start of 2000-2800 scan region",
+          "Pattern consistent with state machine or mode manager"
+        ],
+        "findings": {
+          "calls": 0,
+          "branches": 4,
+          "stack_ops": 0,
+          "returns": 4,
+          "first_return": "C0:203F"
+        },
+        "score": 6
+      },
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    },
+    {
+      "range": "C1:1569..C1:1582",
+      "kind": "code_owner",
+      "label": "ct_c1_1569_score7_s29",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 7
+      },
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c0_202f_state_manager",
+    "ct_c1_1569_score7_s29"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass1020.json": "passes/manifests/legacy/pass1020.json",
+    "source_2_pass1020_c1_session29.json": "passes/manifests/legacy/pass1020_c1_session29.json"
+  },
+  "notes": []
+}

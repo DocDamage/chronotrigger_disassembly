@@ -1,0 +1,102 @@
+{
+  "session": 31,
+  "date": "2026-04-08",
+  "manifests": [
+    {
+      "pass": 758,
+      "label": "ct_c4_10ff_jsr_handler",
+      "range": "C4:10FE..C4:1120",
+      "size": 35,
+      "region": "C4:1000-2000"
+    },
+    {
+      "pass": 759,
+      "label": "ct_c4_1488_rep_handler",
+      "range": "C4:147C..C4:14A8",
+      "size": 45,
+      "region": "C4:1000-2000"
+    },
+    {
+      "pass": 760,
+      "label": "ct_c4_4820_jsr_util",
+      "range": "C4:481E..C4:4840",
+      "size": 35,
+      "region": "C4:4000-5000"
+    },
+    {
+      "pass": 761,
+      "label": "ct_c4_4acb_php_handler",
+      "range": "C4:4ABB..C4:4AF0",
+      "size": 54,
+      "region": "C4:4000-5000"
+    },
+    {
+      "pass": 762,
+      "label": "ct_c4_6077_jsr_dispatch",
+      "range": "C4:6073..C4:6098",
+      "size": 38,
+      "region": "C4:6000-7000"
+    },
+    {
+      "pass": 763,
+      "label": "ct_c4_62df_phd_handler",
+      "range": "C4:62D8..C4:6300",
+      "size": 41,
+      "region": "C4:6000-7000"
+    },
+    {
+      "pass": 764,
+      "label": "ct_c4_6330_phx_handler",
+      "range": "C4:632B..C4:6350",
+      "size": 38,
+      "region": "C4:6000-7000"
+    },
+    {
+      "pass": 765,
+      "label": "ct_c4_6411_php_routine",
+      "range": "C4:6403..C4:6430",
+      "size": 46,
+      "region": "C4:6000-7000"
+    },
+    {
+      "pass": 766,
+      "label": "ct_c4_714f_jsr_entry",
+      "range": "C4:714F..C4:7170",
+      "size": 34,
+      "region": "C4:7000-8000"
+    },
+    {
+      "pass": 767,
+      "label": "ct_c4_8012_multi_entry",
+      "range": "C4:8010..C4:8035",
+      "size": 38,
+      "region": "C4:8000-C000"
+    },
+    {
+      "pass": 768,
+      "label": "ct_c4_84c4_php_util",
+      "range": "C4:84C1..C4:84E8",
+      "size": 40,
+      "region": "C4:8000-C000"
+    },
+    {
+      "pass": 769,
+      "label": "ct_c4_8600_jsr_routine",
+      "range": "C4:85FE..C4:8625",
+      "size": 40,
+      "region": "C4:8000-C000"
+    }
+  ],
+  "summary": {
+    "total_manifests": 12,
+    "total_bytes": 484,
+    "regions_covered": [
+      "C4:8000-C000",
+      "C4:6000-7000",
+      "C4:4000-5000",
+      "C4:1000-2000",
+      "C4:7000-8000"
+    ],
+    "coverage_estimate": "+0.74%"
+  }
+}

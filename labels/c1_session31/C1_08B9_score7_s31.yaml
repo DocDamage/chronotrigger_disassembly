@@ -1,0 +1,27 @@
+# Pass 1202: C1:08B9 Score-7 Subroutine (Session 31 - Final Batch)
+bank: C1
+address: 0x08B9
+range: C1:08B9..C1:08D2
+label: ct_c1_08b9_score7_handler_s31
+score: 7
+width: 25
+type: subroutine
+region: 0000-1FFF
+description: |
+  Score-7 subroutine in C1:0800-0900 region.
+  PHP prologue entry, RTS exit.
+  High-confidence function boundary.
+  
+properties:
+  entry_pattern: PHP
+  exit_pattern: RTS
+  call_count: 0
+  branch_count: 2
+  
+promotion_reason: |
+  Score-7 candidate, 25 bytes.
+  Strong prologue evidence.
+  Fills gap in 0000-1FFF region.
+  
+session: 31
+created: 2026-04-08

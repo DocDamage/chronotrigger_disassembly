@@ -1,0 +1,27 @@
+{
+  "pass_index": 1207,
+  "bank": "C3",
+  "session": 29,
+  "source": "score-4 candidate from C3:5000-5FFF deep scan",
+  "reason": "Call-heavy function, gap filler for coverage push to 30%",
+  "score": 4,
+  "target": {
+    "start": "C3:5DF9",
+    "end": "C3:5E17",
+    "data": ["JSR $5E2A", "JSR $5E3C", "JSR $5E4E", "RTS"],
+    "bytes": ["20", "2A", "5E", "20", "3C", "5E", "20", "4E", "5E", "60"]
+  },
+  "metadata": {
+    "prologue": "JSR",
+    "epilogue": "RTS",
+    "callers": [],
+    "verification": "score-4 candidate, manual validation required",
+    "estimated_bytes": 30
+  },
+  "manifest_metadata": {
+    "author": "Session 29 - Score-4/5 Processing",
+    "created": "2026-04-08",
+    "priority": "gap_fill",
+    "coverage_target": "30%"
+  }
+}

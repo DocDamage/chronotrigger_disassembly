@@ -1,0 +1,13 @@
+pass: 1060
+address: 025C23
+bank: 2
+label: ct_c2_5c23_control_handler
+range: C2:5C23-C2:5C36
+score: 5
+width: 20
+call_count: 5
+branch_count: 3
+stackish_count: 1
+return_count: 1
+session: 26
+rationale: Score-5 island from C2:5800-6000 scan. 20 bytes with 5 calls, 3 branches. Control-flow handler with rich internal structure.

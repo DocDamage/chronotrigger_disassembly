@@ -1,0 +1,25 @@
+{
+  "target": "C4:84C1",
+  "call_count": 1,
+  "strong_anchor_count": 0,
+  "weak_anchor_count": 0,
+  "suspect_anchor_count": 0,
+  "invalid_count": 1,
+  "hits": [
+    {
+      "kind": "JSR",
+      "caller": "C0:EBA6",
+      "target": "C4:84C1",
+      "validity": "invalid_bank_mismatch",
+      "anchor_strength": "invalid",
+      "caller_status": "resolved_code",
+      "caller_range": "C0:EBA6..C0:EBC1",
+      "caller_kind_family": "code",
+      "caller_label": "ct_c0_eba6_event_helper_4callers",
+      "caller_confidence": "medium",
+      "notes": [
+        "same-bank JSR at C0:EBA6 resolves to C0:84C1, not C4:84C1"
+      ]
+    }
+  ]
+}

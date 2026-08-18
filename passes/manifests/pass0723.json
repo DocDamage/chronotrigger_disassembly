@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "pass_number": 723,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "CF:F606..CF:F635",
+      "kind": "code_owner",
+      "label": "ct_cf_f606_score8_cluster",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:6A4F..C3:6A6B",
+      "kind": "code_owner",
+      "label": "ct_c3_6a4f_gap_handler",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 4
+      },
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_cf_f606_score8_cluster",
+    "ct_c3_6a4f_gap_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass723.json": "passes/manifests/legacy/pass723.json",
+    "source_2_pass723_c3_6a4f_gap.json": "passes/manifests/legacy/pass723_c3_6a4f_gap.json"
+  },
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6A53",
+    "JSL indicates this function calls into other banks",
+    "Part of C3:6000-6FFF high-density unexplored region"
+  ]
+}

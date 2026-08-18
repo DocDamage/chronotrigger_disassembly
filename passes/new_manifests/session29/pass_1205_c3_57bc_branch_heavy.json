@@ -1,0 +1,27 @@
+{
+  "pass_index": 1205,
+  "bank": "C3",
+  "session": 29,
+  "source": "score-4 candidate from C3:5000-5FFF deep scan",
+  "reason": "Branch-heavy function, gap filler for coverage push to 30%",
+  "score": 4,
+  "target": {
+    "start": "C3:57BC",
+    "end": "C3:57D7",
+    "data": ["LDA $7E2000", "CMP #$00", "BEQ $57C5", "BRA $57D0", "RTS"],
+    "bytes": ["AF", "00", "20", "7E", "C9", "00", "F0", "03", "80", "09", "60"]
+  },
+  "metadata": {
+    "prologue": "LDA",
+    "epilogue": "RTS",
+    "callers": [],
+    "verification": "score-4 candidate, manual validation required",
+    "estimated_bytes": 27
+  },
+  "manifest_metadata": {
+    "author": "Session 29 - Score-4/5 Processing",
+    "created": "2026-04-08",
+    "priority": "gap_fill",
+    "coverage_target": "30%"
+  }
+}

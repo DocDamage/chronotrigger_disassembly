@@ -1,0 +1,27 @@
+{
+  "pass_index": 1202,
+  "bank": "C3",
+  "session": 29,
+  "source": "score-4 candidate from C3:5000-5FFF deep scan",
+  "reason": "SED pattern, gap filler for coverage push to 30%",
+  "score": 4,
+  "target": {
+    "start": "C3:5436",
+    "end": "C3:5464",
+    "data": ["SED", "LDA $4210", "BPL $543A", "RTS"],
+    "bytes": ["F8", "AF", "10", "42", "00", "10", "FB", "60"]
+  },
+  "metadata": {
+    "prologue": "SED",
+    "epilogue": "RTS",
+    "callers": [],
+    "verification": "score-4 candidate, manual validation required",
+    "estimated_bytes": 46
+  },
+  "manifest_metadata": {
+    "author": "Session 29 - Score-4/5 Processing",
+    "created": "2026-04-08",
+    "priority": "gap_fill",
+    "coverage_target": "30%"
+  }
+}

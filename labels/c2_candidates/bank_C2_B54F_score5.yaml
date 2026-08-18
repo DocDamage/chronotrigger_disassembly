@@ -1,0 +1,29 @@
+# Bank C2 - Score 5 Function Candidate
+# Session 21 - C2:B000-C000 scan near B716 hub
+
+range:
+  start: "C2:B54F"
+  end: "C2:B567"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 25
+  
+features:
+  calls: 4
+  branches: 1
+  stackish: 1
+  returns: 1
+  ascii_ratio: 0.36
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Score 5 candidate in B500-B600 region, ~1C7 bytes from B716 cross-bank hub.
+  High call count (4) indicates shared utility function.
+  Stack operation present - likely register preservation pattern.
+  Near B475-B48D (score 7) - possible call relationship.
+  ASCII ratio slightly elevated (0.36) but still within code range.

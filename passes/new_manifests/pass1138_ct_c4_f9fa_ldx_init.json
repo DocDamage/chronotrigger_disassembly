@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1138,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:F9FA",
+      "mode": "known_code",
+      "label": "ct_c4_f9fa_ldx_init",
+      "reason": "Score-6, LDX# prologue. Register init."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 31
+    }
+  }
+}

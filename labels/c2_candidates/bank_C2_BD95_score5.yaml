@@ -1,0 +1,30 @@
+# Bank C2 - Score 5 Function Candidate
+# Session 22 - C2:B800-C000 scan
+
+range:
+  start: "C2:BD95"
+  end: "C2:BDA5"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 5
+  width: 17
+  
+features:
+  calls: 3
+  branches: 2
+  stackish: 3
+  returns: 2
+  ascii_ratio: 0.471
+  first_return: "C2:BD98"
+  
+confidence: 5
+status: "candidate"
+verified: false
+
+notes: |
+  Score 5 candidate in BD00 region (BD95-BDA5).
+  High stack operations (3) and multiple returns (2).
+  Multiple branches suggest conditional logic.
+  Higher ASCII ratio may indicate embedded data or tables.
+  Close to C000 boundary - possible service helper.

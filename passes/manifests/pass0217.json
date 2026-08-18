@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "pass_number": 217,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C7:BD2D..C7:BD4E",
+      "kind": "superseded",
+      "label": "ct_c7_bd2d_extended_with_bd36_cluster",
+      "confidence": "high",
+      "verification_status": "pending",
+      "parent_range": "C7:BD2D..C7:BD2F",
+      "parent_label": "ct_c7_bd2d_jsr_to_d364",
+      "evidence": {
+        "original": "BD2D-BD2F (pass 205, 3 bytes, strong anchor)",
+        "extension": "BD36-BD4E (score 4 cluster, 25 bytes)",
+        "gap": "9 bytes (BD2F-BD36)",
+        "combined_width": 34,
+        "note": "Extended minimal promotion with adjacent cluster"
+      },
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_2686152d1c48d0c24a22"
+        ]
+      }
+    },
+    {
+      "range": "C7:BD30..C7:BD4E",
+      "kind": "code_owner",
+      "label": "ct_c7_bd2d_extended_with_bd36_cluster__residual_bd30_bd4e",
+      "confidence": "high",
+      "verification_status": "pending",
+      "evidence": {
+        "original": "BD2D-BD2F (pass 205, 3 bytes, strong anchor)",
+        "extension": "BD36-BD4E (score 4 cluster, 25 bytes)",
+        "gap": "9 bytes (BD2F-BD36)",
+        "combined_width": 34,
+        "note": "Extended minimal promotion with adjacent cluster"
+      },
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_2686152d1c48d0c24a22"
+        ],
+        "residual_of": "C7:BD2D..C7:BD4E",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c7_bd2d_extended_with_bd36_cluster",
+    "ct_c7_bd2d_extended_with_bd36_cluster__residual_bd30_bd4e"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass217.json": "passes/manifests/legacy/pass217.json"
+  },
+  "notes": [
+    "Pass 205: BD2D (3 bytes) strong anchor to D363",
+    "BD36-BD4E: score 4 cluster (25 bytes)",
+    "Combined: BD2D-BD4E (34 bytes)",
+    "9-byte gap between anchor and cluster"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "pass": 707,
+  "range": "C3:B573..C3:B58C",
+  "label": "ct_c3_b573_phd_prologue",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. PHD ($0B) direct page push prologue with clean start class. Region C3:B000-BFFF.",
+  "scan": {
+    "score": 6,
+    "start_byte": "0B",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.29,
+    "zero_ff_ratio": 0.065,
+    "repeated_pair_score": 0.067
+  },
+  "continues_from": null,
+  "next": null
+}

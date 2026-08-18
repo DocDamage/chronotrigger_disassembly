@@ -1,0 +1,27 @@
+# Bank C0 - Score 6 Function Candidate
+# Session 24 Pass 1282 - Full bank scan
+
+range:
+  start: "C0:4EFC"
+  end: "C0:4F09"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 14
+  
+features:
+  calls: 1
+  branches: 1
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.143
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score-6 candidate from full C0 bank scan.
+  Calls: 1, Branches: 1, Returns: 1
+  Part of Session 24 push toward 21% coverage target.

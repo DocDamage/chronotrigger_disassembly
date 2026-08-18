@@ -1,0 +1,13 @@
+pass: 1045
+address: 038A5E
+bank: 3
+label: ct_c3_4a5e_multi_call_handler
+range: C3:4A5E-C3:4A77
+score: 5
+width: 26
+call_count: 4
+branch_count: 2
+stackish_count: 0
+return_count: 5
+session: 22
+rationale: Score 5 cluster from C3:4800-5000 scan. 4 calls, 5 returns - multi-entry handler function. High call density suggests utility or helper function.

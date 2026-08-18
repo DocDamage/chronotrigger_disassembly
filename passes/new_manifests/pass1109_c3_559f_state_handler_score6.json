@@ -1,0 +1,17 @@
+{
+  "pass": "1109",
+  "bank": "C3",
+  "start_address": "C3:559F",
+  "end_address": "C3:55C1",
+  "label": "ct_c3_559f_state_handler_score6",
+  "target": "C3:559F",
+  "confidence": "high",
+  "reasoning": "Score-6 multi-branch state handler. 35 bytes with 2 entry variants. Exceptional branch density: 6 branches suggests compact state machine. 1 call, 2 returns, 2 stack operations.",
+  "cluster_score": 6,
+  "child_count": 2,
+  "return_count": 2,
+  "call_count": 1,
+  "gap_context": "C3:5500-5600 region",
+  "promotion_reason": "Score-6 state machine - High branch count (6) indicates complex control flow. Priority disassembly target.",
+  "session": "27"
+}

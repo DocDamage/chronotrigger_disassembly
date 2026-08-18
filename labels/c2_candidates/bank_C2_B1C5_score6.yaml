@@ -1,0 +1,29 @@
+# Bank C2 - Score 6 Function Candidate
+# Session 21 - C2:B000-C000 scan
+
+range:
+  start: "C2:B1C5"
+  end: "C2:B1DD"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 2
+  branches: 2
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.24
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 candidate in B100-B200 region.
+  Part of larger cluster spanning C2:B12A-B17E (cluster score 11).
+  2 calls and 2 branches suggest internal control flow complexity.
+  Nearby B12A-B13C island (score 5) may be related entry point.
+  Located ~5A0 bytes from B716 hub - possible related functionality.

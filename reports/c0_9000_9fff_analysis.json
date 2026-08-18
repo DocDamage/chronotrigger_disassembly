@@ -1,0 +1,195 @@
+{
+  "analysis_range": "C0:9000-9FFF",
+  "analysis_date": "2026-04-08",
+  "tools_used": [
+    "score_target_owner_backtrack_v1.py",
+    "run_seam_block_v1.py",
+    "find_local_code_islands_v2.py"
+  ],
+  "summary": {
+    "backtrack_candidates": 60,
+    "score_6_plus_candidates": 29,
+    "code_clusters": 51,
+    "php_prologues": 27,
+    "rts_returns": 93,
+    "pages_analyzed": 16
+  },
+  "page_families": {
+    "branch_fed_control_pocket": 13,
+    "text_ascii_heavy": 3
+  },
+  "review_posture": {
+    "manual_owner_boundary_review": 8,
+    "local_control_only": 6,
+    "mixed_lane_continue": 1,
+    "bad_start_or_dead_lane_reject": 1
+  },
+  "top_clusters": [
+    {"range": "C0:9A1C..C0:9A74", "score": 10, "width": 89},
+    {"range": "C0:928A..C0:92C9", "score": 8, "width": 64},
+    {"range": "C0:9ABA..C0:9AF0", "score": 8, "width": 55},
+    {"range": "C0:9708..C0:9725", "score": 8, "width": 30},
+    {"range": "C0:9153..C0:9173", "score": 6, "width": 33},
+    {"range": "C0:9494..C0:94B1", "score": 6, "width": 30},
+    {"range": "C0:94F6..C0:9513", "score": 6, "width": 30}
+  ],
+  "recommended_manifests": [
+    {
+      "range": "C0:9168..C0:91AC",
+      "label": "ct_c0_9168_utility_handler",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "20 (JSR)",
+      "caller_count": 1,
+      "callers": ["C0:884C"],
+      "returns": "RTS",
+      "length_bytes": 68,
+      "promotion_reason": "Score-6 backtrack candidate with JSR prologue, RTS return"
+    },
+    {
+      "range": "C0:919F..C0:91AC",
+      "label": "ct_c0_919f_short_helper",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "0B (PHD)",
+      "caller_count": 3,
+      "callers": ["C0:8852", "C0:88B9", "C0:88DD"],
+      "returns": "RTS",
+      "length_bytes": 13,
+      "promotion_reason": "Score-6 backtrack candidate with PHD prologue, multiple callers"
+    },
+    {
+      "range": "C0:9501..C0:950F",
+      "label": "ct_c0_9501_data_setup",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "A9 (LDA#)",
+      "caller_count": 1,
+      "callers": ["C0:93FA"],
+      "returns": "RTS",
+      "length_bytes": 14,
+      "promotion_reason": "Score-6 LDA# prologue with RTS return"
+    },
+    {
+      "range": "C0:953B..C0:9545",
+      "label": "ct_c0_953b_short_utility",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "A9 (LDA#)",
+      "caller_count": 1,
+      "callers": ["C0:93FD"],
+      "returns": "RTS",
+      "length_bytes": 10,
+      "promotion_reason": "Score-6 short utility function"
+    },
+    {
+      "range": "C0:956F..C0:9579",
+      "label": "ct_c0_956f_short_utility",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "A9 (LDA#)",
+      "caller_count": 1,
+      "callers": ["C0:9403"],
+      "returns": "RTS",
+      "length_bytes": 10,
+      "promotion_reason": "Score-6 short utility function"
+    },
+    {
+      "range": "C0:95A5..C0:95AF",
+      "label": "ct_c0_95a5_short_utility",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "A9 (LDA#)",
+      "caller_count": 1,
+      "callers": ["C0:9400"],
+      "returns": "RTS",
+      "length_bytes": 10,
+      "promotion_reason": "Score-6 short utility function"
+    },
+    {
+      "range": "C0:9610..C0:9619",
+      "label": "ct_c0_9610_bank_helper",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "8B (PHB)",
+      "caller_count": 1,
+      "callers": ["C0:940B"],
+      "returns": "RTS",
+      "length_bytes": 9,
+      "promotion_reason": "Score-6 bank register helper with PHB prologue"
+    },
+    {
+      "range": "C0:9644..C0:964D",
+      "label": "ct_c0_9644_bank_helper",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "8B (PHB)",
+      "caller_count": 1,
+      "callers": ["C0:9411"],
+      "returns": "RTS",
+      "length_bytes": 9,
+      "promotion_reason": "Score-6 bank register helper with PHB prologue"
+    },
+    {
+      "range": "C0:9713..C0:9721",
+      "label": "ct_c0_9713_data_processor",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "A9 (LDA#)",
+      "caller_count": 1,
+      "callers": ["C0:941D"],
+      "returns": "RTS",
+      "length_bytes": 14,
+      "promotion_reason": "Score-6 data processing function"
+    },
+    {
+      "range": "C0:9B72..C0:9B86",
+      "label": "ct_c0_9b72_bit_manip_helper",
+      "kind": "owner",
+      "confidence": "medium",
+      "score": 6,
+      "start_byte": "5A (PHY)",
+      "caller_count": 1,
+      "callers": ["C0:8AAC"],
+      "returns": "RTS",
+      "length_bytes": 20,
+      "promotion_reason": "Score-6 bit manipulation helper with PHY prologue"
+    }
+  ],
+  "existing_manifests_in_region": [
+    {"pass": 274, "range": "C0:943C..C0:9490", "label": "ct_c0_943c_unknown_function_score6_cluster"},
+    {"pass": 441, "range": "C0:97A6..C0:97C0", "label": "ct_c0_97a6_function_7callers"},
+    {"pass": 442, "range": "C0:9923..C0:9963", "label": "ct_c0_9923_function_8callers"},
+    {"pass": 443, "range": "C0:9F7F..C0:9F90", "label": "ct_c0_9f7f_function_21callers"}
+  ],
+  "code_patterns": {
+    "prologue_types": {
+      "LDA# (A9)": 15,
+      "JSR (20)": 8,
+      "PHB (8B)": 3,
+      "PHD (0B)": 2,
+      "PHY (5A)": 1
+    },
+    "common_patterns": [
+      "LDA# immediate -> STA zp (A9 xx 85 xx) - register initialization",
+      "JSR -> REP -> stack operations - function chaining",
+      "PHB/PHD -> stack manipulation - bank/data register management"
+    ]
+  },
+  "coverage_gaps": [
+    {"range": "C0:9000..C0:9100", "bytes": 256, "notes": "text_ascii_heavy region"},
+    {"range": "C0:9200..C0:9400", "bytes": 512, "notes": "text_ascii_heavy region"},
+    {"range": "C0:9490..C0:9500", "bytes": 112, "notes": "gap after pass274"},
+    {"range": "C0:97C0..C0:997F", "bytes": 447, "notes": "gap after pass441"},
+    {"range": "C0:9987..C0:9F7F", "bytes": 1528, "notes": "gap before pass443"}
+  ]
+}

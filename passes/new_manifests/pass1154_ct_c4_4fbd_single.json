@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1154,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:4FBD",
+      "mode": "known_code",
+      "label": "ct_c4_4fbd_single",
+      "reason": "Score-5, 1 branch. 4000-5000 region."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 14
+    }
+  }
+}

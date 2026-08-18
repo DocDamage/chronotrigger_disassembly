@@ -1,0 +1,13 @@
+pass: 1078
+address: 02524E
+bank: 2
+label: ct_c2_524e_handler
+range: C2:524E-C2:5261
+score: 5
+width: 20
+call_count: 5
+branch_count: 2
+stackish_count: 0
+return_count: 1
+session: 27
+rationale: Score-4 cluster (elevated to 5) from C2:5200 scan. 20 bytes with 5 calls, 2 branches. Adjacent to 522C dispatcher. Rich subroutine with multiple internal targets.

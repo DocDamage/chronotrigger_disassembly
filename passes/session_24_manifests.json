@@ -1,0 +1,132 @@
+{
+  "session": 24,
+  "bank": "C4",
+  "manifests": [
+    {
+      "pass_number": 730,
+      "closed_ranges": [{
+        "range": "C4:5025..C4:5039",
+        "kind": "owner",
+        "label": "ct_c4_5025_handler_score7",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-7 candidate from hot zone 5000-6000. 2 calls, 2 branches, 1 return. 21 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 731,
+      "closed_ranges": [{
+        "range": "C4:772E..C4:774A",
+        "kind": "owner",
+        "label": "ct_c4_772e_cluster_score10",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-10 CLUSTER from hot zone 7000-8000. 1 call, 6 branches, 4 returns. Major code cluster. 29 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 732,
+      "closed_ranges": [{
+        "range": "C4:7730..C4:7748",
+        "kind": "owner",
+        "label": "ct_c4_7730_handler_score7",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-7 candidate from hot zone 7000-8000. 1 call, 6 branches, 3 returns. 25 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 733,
+      "closed_ranges": [{
+        "range": "C4:7732..C4:774A",
+        "kind": "owner",
+        "label": "ct_c4_7732_handler_score7",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-7 candidate from hot zone 7000-8000. 1 call, 5 branches, 4 returns. 25 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 734,
+      "closed_ranges": [{
+        "range": "C4:1701..C4:1717",
+        "kind": "owner",
+        "label": "ct_c4_1701_cluster_score6",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-6 candidate from C4:1000-2000. 2 calls, 5 branches, 2 returns. 23 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 735,
+      "closed_ranges": [{
+        "range": "C4:46B7..C4:46CF",
+        "kind": "owner",
+        "label": "ct_c4_46b7_handler_score6",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-6 candidate from C4:4000-5000. 1 call, 3 branches, 2 returns. 25 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 736,
+      "closed_ranges": [{
+        "range": "C4:607A..C4:6086",
+        "kind": "owner",
+        "label": "ct_c4_607a_handler_score6",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-6 candidate from C4:6000-7000. 1 call, 1 branch, 2 returns. 13 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 737,
+      "closed_ranges": [{
+        "range": "C4:6BDA..C4:6BE1",
+        "kind": "owner",
+        "label": "ct_c4_6bda_handler_score6",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-6 candidate from C4:6000-7000. 1 call, 0 branches, 1 return. 8 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 738,
+      "closed_ranges": [{
+        "range": "C4:C069..C4:C072",
+        "kind": "owner",
+        "label": "ct_c4_c069_cluster_score7",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-7 CLUSTER from C4:C000-D000. 1 call, 1 branch, 5 returns. Exceptional return density. 10 bytes.",
+      "session": 24
+    },
+    {
+      "pass_number": 739,
+      "closed_ranges": [{
+        "range": "C4:C771..C4:C77C",
+        "kind": "owner",
+        "label": "ct_c4_c771_handler_score6",
+        "confidence": "high"
+      }],
+      "promotion_reason": "Score-6 candidate from C4:C000-D000. 1 call, 1 branch, 1 return. 12 bytes.",
+      "session": 24
+    }
+  ],
+  "coverage_summary": {
+    "new_manifests": 10,
+    "bytes_covered": 172,
+    "regions_covered": [
+      "C4:1000-2000",
+      "C4:5000-6000",
+      "C4:6000-7000",
+      "C4:7000-8000",
+      "C4:C000-D000"
+    ],
+    "score_distribution": {
+      "score_10": 1,
+      "score_7": 4,
+      "score_6": 5
+    }
+  }
+}

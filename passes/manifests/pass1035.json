@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "pass_number": 1035,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C1:4358..C1:4370",
+      "kind": "superseded",
+      "label": "ct_c1_4358",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C1:434A..C1:4362",
+      "parent_label": "ct_c1_434A",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 5
+      },
+      "legacy_metadata": {
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_6603cc41158149df32fa",
+          "adj_b35b315142d8d464c374"
+        ]
+      }
+    },
+    {
+      "range": "C1:436A..C1:4370",
+      "kind": "code_owner",
+      "label": "ct_c1_4358__residual_436a_4370",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 5
+      },
+      "legacy_metadata": {
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_6603cc41158149df32fa",
+          "adj_b35b315142d8d464c374"
+        ],
+        "residual_of": "C1:4358..C1:4370",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c1_4358",
+    "ct_c1_4358__residual_436a_4370"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass1035.json": "passes/manifests/legacy/pass1035.json"
+  },
+  "notes": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "pass_number": 979,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "CF:383A..CF:3861",
+      "kind": "superseded",
+      "label": "ct_cf_383a_lda_init",
+      "confidence": "high",
+      "verification_status": "pending",
+      "parent_range": "CF:3833..CF:3859",
+      "parent_label": "ct_cf_3833_pha_handler",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7593edc39d80999a6663"
+        ]
+      }
+    },
+    {
+      "range": "CF:385A..CF:3861",
+      "kind": "code_owner",
+      "label": "ct_cf_383a_lda_init__residual_385a_3861",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7593edc39d80999a6663"
+        ],
+        "residual_of": "CF:383A..CF:3861",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_cf_383a_lda_init",
+    "ct_cf_383a_lda_init__residual_385a_3861"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass979.json": "passes/manifests/legacy/pass979.json"
+  },
+  "notes": []
+}

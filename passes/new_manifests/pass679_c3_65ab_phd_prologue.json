@@ -1,0 +1,18 @@
+{
+  "pass": 679,
+  "range": "C3:65AB..C3:65C6",
+  "label": "ct_c3_65ab_phd_prologue",
+  "kind": "code_owner",
+  "confidence": "high",
+  "reasoning": "Score-6 candidate from backtrack analysis. PHD ($0B) prologue with clean start class. Target C3:65AE has multiple callers.",
+  "scan": {
+    "score": 6,
+    "start_byte": "0B",
+    "start_class": "clean_start",
+    "ascii_ratio": 0.214,
+    "zero_ff_ratio": 0.179,
+    "repeated_pair_score": 0.0
+  },
+  "continues_from": null,
+  "next": null
+}

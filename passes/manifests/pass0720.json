@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "pass_number": 720,
+  "status": "draft",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "CF:8AC1..CF:8AE0",
+      "kind": "code_owner",
+      "label": "ct_cf_8ac1_cross_bank_entry",
+      "confidence": "high",
+      "verification_status": "pending"
+    },
+    {
+      "range": "C3:600C..C3:6028",
+      "kind": "superseded",
+      "label": "ct_c3_600c_gap_handler",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "parent_range": "C3:6000..C3:60FF",
+      "parent_label": "ct_c3_6000_frozen_candidate_lane_4_hard_bad_starts",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 4
+      },
+      "legacy_metadata": {
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_1d2ef8fd177bb59779c9"
+        ]
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_cf_8ac1_cross_bank_entry",
+    "ct_c3_600c_gap_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "source_1_pass720.json": "passes/manifests/legacy/pass720.json",
+    "source_2_pass720_c3_600c_gap.json": "passes/manifests/legacy/pass720_c3_600c_gap.json"
+  },
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6010",
+    "JSR instruction indicates subroutine behavior",
+    "Callers: C3:2F41, C3:68CE (suspect strength)",
+    "Local cluster shows branch and return evidence"
+  ]
+}

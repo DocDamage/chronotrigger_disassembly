@@ -1,0 +1,13 @@
+pass: 641
+address: 029043
+bank: 2
+label: ct_c2_9043_cluster_handler
+range: C2:9043-C2:905E
+score: 8
+width: 28
+call_count: 3
+branch_count: 5
+stackish_count: 1
+return_count: 2
+session: 25
+rationale: Score-8 cluster from C2:9000-A000 scan. 28 bytes with 5 branches, 3 calls, 2 returns. High-value subroutine entry.

@@ -1,0 +1,44 @@
+{
+  "pass_number": 177,
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-v2-forward",
+  "live_seam_after_pass": "C3:1881..",
+  "completion_estimate": 72.9,
+  "closed_ranges": [
+    {
+      "range": "C3:1817..C3:1818",
+      "kind": "veneer",
+      "label": "ct_c3_tiny_branch_landing_pad_redirecting_execution_back_to_17ef",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:1819..C3:187F",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_and_code_fragments_between_branch_pad_and_rtl_stub",
+      "confidence": "medium"
+    },
+    {
+      "range": "C3:1880..C3:1880",
+      "kind": "veneer",
+      "label": "ct_c3_single_byte_rtl_return_stub_reached_via_local_jump",
+      "confidence": "high"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_tiny_branch_landing_pad_redirecting_execution_back_to_17ef",
+    "ct_c3_inline_mixed_control_and_code_fragments_between_branch_pad_and_rtl_stub",
+    "ct_c3_single_byte_rtl_return_stub_reached_via_local_jump"
+  ],
+  "confidence": {
+    "structural": "medium-high",
+    "semantic": "low-medium",
+    "rebuild": "medium"
+  },
+  "notes": [
+    "C3:1817 is not a normal owner start: it is just BRA $17EF, making it a tiny landing pad that redirects execution back into the span frozen in pass 176.",
+    "The observed long jump at DF:0E55 still supports treating 1817 itself as executable bytes, but it does not by itself rescue the surrounding 1819..187F region into a clean routine body.",
+    "C3:1880 is a real isolated executable splinter: the byte is RTL and there is a same-bank JMP $1880 at C3:2936, so this is best treated as a one-byte return stub rather than left buried in mixed content.",
+    "The bytes from 1819..187F remain heavily mixed and include additional raw call-pattern hits that do not stabilize into trustworthy entry owners under cautious inspection, so they are frozen as inline mixed content for now.",
+    "Next forward work should resume at 1881 and test whether one of the later same-bank targets in the 1880s or 1890s resolves into a real owner rather than another false-positive call pattern."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1130,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:C0DF",
+      "mode": "known_code",
+      "label": "ct_c4_c0df_cross_bank",
+      "reason": "Score-6, PHP prologue. Cross-bank entries from D1:xxxx."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 26
+    }
+  }
+}

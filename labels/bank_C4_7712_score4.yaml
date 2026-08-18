@@ -1,0 +1,42 @@
+# Bank C4 - Score 4 Function Candidate (SESSION 25)
+# C4:7712-7721 - Neighbor of 772E supercluster
+
+range:
+  start: "C4:7712"
+  end: "C4:7721"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  session: 25
+  score: 4
+  width: 16
+
+features:
+  - "Score 4 candidate"
+  - "1 call, 3 branches, 1 return"
+  - "Adjacent to 772E supercluster"
+  
+stats:
+  calls: 1
+  branches: 3
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.375
+
+confidence: 4
+status: "candidate"
+verified: false
+
+notes: |
+  SESSION 25 DISCOVERY
+  
+  Candidate in C4:7700-7800 region.
+  Located immediately before the 772E supercluster.
+  
+  Features:
+  - 1 call indicates callable function
+  - 3 branches suggest conditional logic
+  - ASCII ratio 0.375 (moderate)
+  
+  May be a related helper function or prelude to the
+  772E supercluster. Examine relationship during disassembly.

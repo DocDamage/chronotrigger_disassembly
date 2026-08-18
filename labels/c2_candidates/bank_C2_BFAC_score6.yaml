@@ -1,0 +1,29 @@
+# Bank C2 - Score 6 Function Candidate
+# Session 21 - C2:B000-C000 scan
+
+range:
+  start: "C2:BFAC"
+  end: "C2:BFC4"
+  
+discovery:
+  method: "find_local_code_islands_v2"
+  score: 6
+  width: 25
+  
+features:
+  calls: 4
+  branches: 1
+  stackish: 0
+  returns: 1
+  ascii_ratio: 0.24
+  
+confidence: 6
+status: "candidate"
+verified: false
+
+notes: |
+  Score 6 candidate in BF00-C000 region.
+  High call count (4) suggests widely-used utility or service function.
+  Positioned near BFE6-BFFE (score 7) - possible related functionality.
+  Part of dense high-score cluster in BF00-C000 tail region.
+  Low ASCII ratio indicates code content.

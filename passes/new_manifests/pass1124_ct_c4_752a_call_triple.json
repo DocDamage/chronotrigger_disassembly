@@ -1,0 +1,18 @@
+{
+  "disassembly": {
+    "pass": 1124,
+    "bank": "C4",
+    "session": 27,
+    "target": {
+      "address": "C4:752A",
+      "mode": "known_code",
+      "label": "ct_c4_752a_call_triple",
+      "reason": "Score-5, 3 calls. Call-heavy in 7000-8000 region."
+    },
+    "closure": {
+      "verification": "pending",
+      "strategy": "score_based",
+      "expected_length": 19
+    }
+  }
+}
