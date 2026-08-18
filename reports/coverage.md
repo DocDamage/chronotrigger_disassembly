@@ -1,7 +1,7 @@
 # Chrono Trigger Disassembly — Coverage Report
 
 - **Generated**: `2026-08-18T22:59:59.929807+00:00`
-- **Source Commit**: `c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0`
+- **Source Commit**: `8779214587ea05fc52a1ecbd448a8387f5628c19`
 - **Manifest Set Digest**: `17de258695a30716e919b9def75dab8887c52b534cc72e7a7bb0d8da40b6d0bd`
 - **Canonical Manifests**: 961
 - **Total Closed Ranges**: 1289

@@ -4,8 +4,8 @@
 |---|---|
 | Repository | Chrono Trigger Disassembly |
 | Working branch | `live-work-from-pass166` |
-| Original audit baseline | `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59` |
-| Remediation implementation under review | `d53cd365ed335047adcbb353ac83afb061816d5b` |
+| Original audit baseline | `c00ebe6f8e2d81f9c724c79215ac7643a5c1b353` |
+| Remediation implementation under review | `c27033d908abb803a9a603690a458f3f976e3ac9` |
 | Plan created | 2026-08-18 |
 | Plan status | Proposed; corrective implementation has not started |
 | Relationship to original plan | Corrective follow-up to `docs/plans/REPOSITORY_REMEDIATION_IMPLEMENTATION_PLAN.md` |
@@ -232,8 +232,8 @@ Prevent further data loss and establish an immutable recovery point for both the
 
 - [ ] Add a prominent temporary guard to the contributor/remediation runbook: do not use `migrate_manifests.py --apply` until the idempotency fix is merged.
 - [ ] Record the following commits in a corrective baseline artifact:
-  - original pre-remediation baseline `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59`;
-  - defective remediation commit `d53cd365ed335047adcbb353ac83afb061816d5b`.
+  - original pre-remediation baseline `c00ebe6f8e2d81f9c724c79215ac7643a5c1b353`;
+  - defective remediation commit `c27033d908abb803a9a603690a458f3f976e3ac9`.
 - [ ] Generate a baseline source inventory directly from the original Git tree, not the current filesystem.
 - [ ] Record all 1,000 manifest paths and Git blob IDs from the baseline tree.
 - [ ] Record the current 978-entry migration ledger and 961 canonical manifest hashes.
@@ -255,7 +255,7 @@ Each missing source entry should contain:
 
 ```json
 {
-  "baseline_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+  "baseline_commit": "c00ebe6f8e2d81f9c724c79215ac7643a5c1b353",
   "source_path": "passes/manifests/pass1000.json",
   "source_blob": "<git-blob-id>",
   "source_sha256": "<sha256>",
@@ -270,9 +270,9 @@ Each missing source entry should contain:
 
 ```powershell
 git status --short
-git cat-file -e 253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59^{commit}
-git cat-file -e d53cd365ed335047adcbb353ac83afb061816d5b^{commit}
-git ls-tree -r --name-only 253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59 -- passes/manifests
+git cat-file -e c00ebe6f8e2d81f9c724c79215ac7643a5c1b353^{commit}
+git cat-file -e c27033d908abb803a9a603690a458f3f976e3ac9^{commit}
+git ls-tree -r --name-only c00ebe6f8e2d81f9c724c79215ac7643a5c1b353 -- passes/manifests
 ```
 
 ### Exit criteria

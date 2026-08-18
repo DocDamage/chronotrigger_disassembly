@@ -6,4 +6,4 @@ This directory documents historical toolkit releases. Generated ZIP snapshots we
 
 - **Active Tooling**: Active tools live in `tools/` and `tools/ctrepo/`.
 - **Releases**: Distribution bundles should be generated reproducibly from Git tags via release automation (`tools/scripts/package_repo_toolkit_release_v1.py`) and attached to GitHub Releases rather than tracked in the main Git tree.
-- **Historical Snapshots**: The removed archives are inventoried by SHA-256 in `reports/remediation/binary_archive_disposition.json` and remain recoverable from commit `cfd7d54a7a3dbfd7e7089fa976dee998fdf62d75` until separately authorized history cleanup occurs.
+- **Historical Snapshots**: The removed archives are inventoried by SHA-256 in `reports/remediation/binary_archive_disposition.json` and remain recoverable from commit `27fe5f574030bf73fc19c769fc7dbe876c495837` until separately authorized history cleanup occurs.

@@ -4,7 +4,7 @@
 |---|---|
 | Repository | Chrono Trigger Disassembly |
 | Working branch at audit | `live-work-from-pass166` |
-| Audit baseline commit | `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59` |
+| Audit baseline commit | `c00ebe6f8e2d81f9c724c79215ac7643a5c1b353` |
 | Plan created | 2026-08-18 |
 | Plan status | Proposed; implementation has not started |
 | Primary objective | Restore a single, validated, reproducible source of truth for manifests, range ownership, coverage, reports, and repository artifacts |
