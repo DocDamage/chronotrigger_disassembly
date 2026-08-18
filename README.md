@@ -264,7 +264,7 @@ All upgraded toolkit scripts verified working across 31 sessions:
 - Low-bank mapping verified (C3, CF samples)
 
 ### Remaining Work
-- **Bank C3**: Continue forward seam at C3:3000 (flow analysis exists to C3:3058), solidify toward 35%
+- **Bank C3**: Continue validated work from the authoritative frontier `C3:D000.. / C4:A000..`; review high-bank candidates around C3:8800+
 - **Bank C2**: Expand score-14 region, cross-bank hub completion
 - **Bank C4**: Push toward 15% coverage, expand 772E supercluster
 - **Bank C1**: Process remaining 16% candidate pool (434A mega-cluster focus)
@@ -297,18 +297,17 @@ See detailed reports:
 - read the Session 40 summary: `AGENT_SWARM_SESSION_40_MASTER_SUMMARY.md`
 - read the repo authority map: `docs/handoffs/chrono_trigger_repo_authority_map_2026-03-30.md`
 - stay on `live-work-from-pass166`
+- current authoritative frontier: `C3:D000.. / C4:A000..`
 - options for next work:
-  1. **Bank C3**: Continue forward seam at C3:7800 (next sequential block)
-  2. **Bank C3**: Scan C3:8800-8FFF (high bank showed 62.5% code density)
-  3. **Bank C4**: Scan C4:6800-6FFF (continue strong 6000-region)
-  2. **Bank C2**: Expand score-14 region (8F6D, 8C08, 8DA3)
-  3. **Bank C4**: Push toward 15% coverage (772E supercluster)
-  4. **Bank C1**: Process remaining candidate pool (434A mega-cluster focus)
-  5. **Banks D2-D9**: Deep scan the most promising (D4, D6 prioritized)
-  6. **Bank CF**: Complete D000-E000 region
-  7. **Bank C5**: Systematic deep scan
+  1. **Bank C3**: Re-review C3:8800-8FFF candidates (high bank showed 62.5% code density)
+  2. **Bank C4**: Scan C4:6800-6FFF and continue toward the 15% target
+  3. **Bank C2**: Expand the score-14 region (8F6D, 8C08, 8DA3)
+  4. **Bank C1**: Process the remaining candidate pool (434A mega-cluster focus)
+  5. **Banks D2-D9**: Deep scan the most promising regions (D4, D6 prioritized)
+  6. **Bank CF**: Continue the pending C000-D000 region
+  7. **Bank C5**: Systematic deep scan of the 9000-A000 and D000-E000 regions
   8. **Bank D1**: Continue expansion
-  9. **Banks DA-FF**: Final upper ROM exploration
+  9. **Banks DA-FF**: Final upper-ROM exploration
 - promotion standard: score >= 6 + internal evidence (RTS/PHP/JSR) + regional context
 - run `python tools/scripts/score_target_owner_backtrack_v1.py` for candidate identification
 - run `tools/generate_coverage_report_v2.py` for coverage statistics

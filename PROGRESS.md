@@ -206,19 +206,19 @@ Continued disassembly with focus on C3:7800+ and high bank exploration:
 ## Recommended Next Steps
 
 ### Immediate Priority (Next Session)
-1. **Scan C3:8800-8FFF** - High bank code density
-2. **Promote C3:7000 functions** - 12 verified candidates
-3. **Scan C4:6800-6FFF** - Continue 6000-region
+1. **Re-review C3:8800-8FFF candidates** - High bank code density
+2. **Scan C4:6800-6FFF** - Continue toward the 15% target
+3. **Expand the C2 score-14 region** - 8F6D, 8C08, 8DA3
 
 ### Short Term (Next 3-4 Sessions)
 1. Complete C4:15% target
 2. Continue C3 high bank exploration
-3. Process C1 434A mega-cluster
+3. Process the C1 434A mega-cluster
 
 ### Medium Term
 1. Deep scan C2 score-14 region
 2. Expand D1, D4, D6 banks
-3. Map CF:C000-D000 region
+3. Continue the pending CF:C000-D000 region
 
 ---
 
