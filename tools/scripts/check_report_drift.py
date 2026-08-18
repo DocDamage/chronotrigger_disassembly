@@ -38,9 +38,13 @@ def _semantic_payload(document: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def _semantic_markdown(text: str) -> str:
+    provenance_prefixes = (
+        "- **Generated**:",
+        "- **Source Commit**:",
+    )
     return "\n".join(
         line for line in text.replace("\r\n", "\n").splitlines()
-        if not line.startswith("- **Generated**:")
+        if not line.startswith(provenance_prefixes)
     ).strip()
 
 
