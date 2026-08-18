@@ -3,7 +3,7 @@
 
 import json
 import os
-import shutil
+
 
 MANIFESTS_DIR = '../../passes/manifests'
 LABELS_DIR = '../../labels'

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 205,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "code_helper",
       "label": "ct_c7_bd2d_jsr_to_d364",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "instruction": "JSR $D364",
         "bytes": "20 64 D3",
@@ -32,7 +32,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass205.json": "passes/manifests/legacy/pass205.json"
+    "source_1_pass205.json": "passes/manifests/legacy/pass205.json"
   },
   "notes": []
 }

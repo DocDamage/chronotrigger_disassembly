@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 164,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,7 +12,7 @@
       "kind": "code_owner",
       "label": "ct_c3_7f_tile_strip_builder_with_regenerate_reuse_blank_fast_paths_and_sampled_byte_to_planar_4bpp_pack_core",
       "confidence": "medium-high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -24,7 +24,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass164.json": "passes/manifests/legacy/pass164.json"
+    "source_1_pass164_direct.json": "passes/manifests/legacy/pass164_direct.json"
   },
   "notes": [
     "Refused to split at 034C because control flow folds back into the shared owner and exits only through the shared RTL.",

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 1214,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,56 +12,56 @@
       "kind": "data",
       "label": "ct_c3_4000_frozen_candidate_lane_12_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:4100..C3:41FF",
       "kind": "data",
       "label": "ct_c3_4100_frozen_branch_fed_pocket_2_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:4200..C3:42FF",
       "kind": "data",
       "label": "ct_c3_4200_frozen_mixed_command_data_0_hard_bad_starts_fragments",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:4300..C3:43FF",
       "kind": "data",
       "label": "ct_c3_4300_frozen_mixed_command_data_1_hard_bad_start",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:4400..C3:44FF",
       "kind": "data",
       "label": "ct_c3_4400_frozen_text_ascii_heavy_1_hard_bad_start",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:4500..C3:45FF",
       "kind": "data",
       "label": "ct_c3_4500_frozen_candidate_lane_1_hard_bad_start_cluster_score_13",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:4600..C3:46FF",
       "kind": "data",
       "label": "ct_c3_4600_frozen_mixed_command_data_mixed_lane_continue",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:4700..C3:47FF",
       "kind": "data",
       "label": "ct_c3_4700_frozen_candidate_lane_1_hard_bad_start",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -80,7 +80,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1214_c3_s35.json": "passes/manifests/legacy/pass1214_c3_s35.json"
+    "source_1_pass1214_c3_s35.json": "passes/manifests/legacy/pass1214_c3_s35.json"
   },
   "notes": []
 }

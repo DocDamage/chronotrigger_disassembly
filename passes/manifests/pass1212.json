@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 1212,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,49 +12,49 @@
       "kind": "data",
       "label": "ct_c3_3000_frozen_branch_fed_pocket_bad_starts_4_hard_rejects",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:3100..C3:31FF",
       "kind": "data",
       "label": "ct_c3_3100_frozen_mixed_command_data_1_hard_bad_start",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:3200..C3:32FF",
       "kind": "data",
       "label": "ct_c3_3200_frozen_branch_fed_pocket_2_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:3300..C3:33FF",
       "kind": "data",
       "label": "ct_c3_3300_frozen_candidate_lane_3_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:3400..C3:34FF",
       "kind": "data",
       "label": "ct_c3_3400_frozen_candidate_lane_2_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:3600..C3:36FF",
       "kind": "data",
       "label": "ct_c3_3600_frozen_mixed_command_data_1_hard_bad_start",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:3700..C3:37FF",
       "kind": "data",
       "label": "ct_c3_3700_frozen_mixed_command_data_2_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -72,7 +72,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1212_c3_s33.json": "passes/manifests/legacy/pass1212_c3_s33.json"
+    "source_1_pass1212_c3_s33.json": "passes/manifests/legacy/pass1212_c3_s33.json"
   },
   "notes": []
 }

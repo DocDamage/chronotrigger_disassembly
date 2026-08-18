@@ -1068,10 +1068,24 @@
       "kind": "code_helper"
     },
     {
+      "range": "C3:1753..C3:175B",
+      "label": "ct_c3_1753_branch_util",
+      "pass": 1008,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
       "range": "C3:3DE2..C3:3DF0",
       "label": "ct_c3_3de2_score6_dispatch",
       "pass": 1008,
       "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:130A..C3:130E",
+      "label": "ct_c3_130a_entry_point_helper",
+      "pass": 1009,
+      "confidence": "medium",
       "kind": "code_helper"
     },
     {
@@ -1082,11 +1096,53 @@
       "kind": "code_helper"
     },
     {
+      "range": "C3:1627..C3:1642",
+      "label": "ct_c3_1627_multi_return_handler",
+      "pass": 1010,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:14BD..C3:14C6",
+      "label": "ct_c3_14bd_branch_utility",
+      "pass": 1011,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:164A..C3:1658",
+      "label": "ct_c3_164a_branch_dispatcher",
+      "pass": 1012,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:1498..C3:14A5",
+      "label": "ct_c3_1498_stack_helper",
+      "pass": 1013,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:147D..C3:148B",
+      "label": "ct_c3_147d_compare_branch_util",
+      "pass": 1014,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:1507..C3:150C",
+      "label": "ct_c3_1507_stack_micro_util",
+      "pass": 1015,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
       "range": "C3:14BD..C3:14C6",
       "label": "ct_c3_14BD",
       "pass": 1024,
       "confidence": "medium",
-      "kind": "code_helper"
+      "kind": "superseded"
     },
     {
       "range": "C3:15BC..C3:15DC",
@@ -1100,7 +1156,7 @@
       "label": "ct_c3_1627",
       "pass": 1026,
       "confidence": "medium",
-      "kind": "code_helper"
+      "kind": "superseded"
     },
     {
       "range": "C3:19DB..C3:1A05",
@@ -1253,28 +1309,28 @@
       "range": "C3:8912..C3:8939",
       "label": "ct_c3_8912",
       "pass": 1223,
-      "confidence": "high",
+      "confidence": "medium",
       "kind": "superseded"
     },
     {
       "range": "C3:B002..C3:B01D",
       "label": "ct_c3_B002",
       "pass": 1226,
-      "confidence": "high",
+      "confidence": "medium",
       "kind": "superseded"
     },
     {
       "range": "C3:B086..C3:B0AA",
       "label": "ct_c3_B086",
       "pass": 1227,
-      "confidence": "high",
+      "confidence": "medium",
       "kind": "superseded"
     },
     {
       "range": "C3:CB47..C3:CB64",
       "label": "ct_c3_CB47",
       "pass": 1229,
-      "confidence": "high",
+      "confidence": "medium",
       "kind": "superseded"
     }
   ],

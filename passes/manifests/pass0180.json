@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 180,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,21 +12,21 @@
       "kind": "data",
       "label": "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:1AD6..C3:1ADA",
       "kind": "veneer",
       "label": "ct_c3_tiny_long_wrapper_calling_c30d0e_then_returning",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:1ADB..C3:1AEF",
       "kind": "data",
       "label": "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate",
       "confidence": "medium-high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -40,7 +40,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass180.json": "passes/manifests/legacy/pass180.json"
+    "source_1_pass180_direct.json": "passes/manifests/legacy/pass180_direct.json"
   },
   "notes": [
     "This pass again used the upgraded flow: tiny-veneer detection first, then caller-quality checks on the surviving targets inside 1A60..1AEF.",

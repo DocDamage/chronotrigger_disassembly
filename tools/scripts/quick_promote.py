@@ -81,7 +81,6 @@ def main():
     # Calculate range
     target = args.target
     start = args.start or target
-    bank = start.split(':')[0]
     start_int = addr_to_int(start)
     end_int = start_int + args.size
     end = int_to_addr(end_int)

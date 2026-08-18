@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntentionalPassGapsRegistry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "description",
+    "total_gaps_count",
+    "intentional_gaps"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "enum": [2] },
+    "description": { "type": "string" },
+    "total_gaps_count": { "type": "integer", "minimum": 0 },
+    "intentional_gaps": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pass_number",
+          "status",
+          "reason_code",
+          "rationale",
+          "evidence",
+          "reviewed_by",
+          "reviewed_at_utc",
+          "review_commit",
+          "revalidation_required"
+        ],
+        "properties": {
+          "pass_number": { "type": "integer" },
+          "status": { "type": "string", "enum": ["verified_gap", "unreviewed_candidate", "investigation_needed"] },
+          "reason_code": { "type": "string", "enum": ["unnumbered_draft_iteration", "session_number_skip", "non_range_investigation", "external_sync_gap"] },
+          "rationale": { "type": "string" },
+          "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "reviewed_by": { "type": "string" },
+          "reviewed_at_utc": { "type": "string" },
+          "review_commit": { "type": "string" },
+          "revalidation_required": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

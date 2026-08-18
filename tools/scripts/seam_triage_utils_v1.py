@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Iterable
 
-from snes_utils import file_offset_to_snes, hirom_to_file_offset, format_snes_range, parse_snes_address, parse_snes_range, slice_rom_range
+from snes_utils import hirom_to_file_offset, parse_snes_range, slice_rom_range
 
 BAD_START_HARD = {
     0x00: 'brk_or_barrier',

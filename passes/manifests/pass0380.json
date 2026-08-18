@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 380,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "code_owner",
       "label": "ct_c0_107f_vram_calc_score25",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -23,7 +23,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass380.json": "passes/manifests/legacy/pass380.json"
+    "source_1_pass380.json": "passes/manifests/legacy/pass380.json"
   },
   "notes": []
 }

@@ -1,0 +1,27 @@
+{
+  "pass": 1009,
+  "bank": "C3",
+  "label": "ct_c3_130a_entry_point_helper",
+  "address": "C3:130A",
+  "range": "C3:130A..C3:130E",
+  "bytes": 5,
+  "category": "code",
+  "confidence": 4,
+  "reasoning": [
+    "Cluster score 4",
+    "2 call references, 2 branches, 1 return",
+    "High ASCII ratio 0.6 - may contain immediate values",
+    "Near C3:1300 open lane start"
+  ],
+  "findings": {
+    "calls": 2,
+    "branches": 2,
+    "stack_ops": 0,
+    "returns": 1,
+    "first_return": "C3:130E"
+  },
+  "flags": [],
+  "related": ["C3:130A", "C3:130E", "C3:1300"],
+  "session": 19,
+  "status": "closed"
+}

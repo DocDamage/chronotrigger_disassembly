@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 174,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,14 +12,14 @@
       "kind": "data",
       "label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:16A8..C3:16AB",
       "kind": "veneer",
       "label": "ct_c3_tiny_local_wrapper_calling_2629_then_returning",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -32,7 +32,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass174.json": "passes/manifests/legacy/pass174.json"
+    "source_1_pass174_direct.json": "passes/manifests/legacy/pass174_direct.json"
   },
   "notes": [
     "15E9 opens with bytes that initially look more code-like than the earlier mixed blobs, but the region still does not stabilize into one trustworthy owner/helper body under cautious linear inspection.",

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 178,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,7 +12,7 @@
       "kind": "data",
       "label": "ct_c3_inline_mixed_opcode_and_register_setup_blob_after_rtl_stub_before_18fd_candidate",
       "confidence": "medium-high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -24,7 +24,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass178.json": "passes/manifests/legacy/pass178.json"
+    "source_1_pass178_direct.json": "passes/manifests/legacy/pass178_direct.json"
   },
   "notes": [
     "Forward re-audit of 1881..18FC does not produce a trustworthy anchored owner: the region contains repeated opcode-looking slices, partial hardware-register write sequences, and a tempting helper-like tail ending in RTL, but none of those starts can be defended from validated caller context yet.",

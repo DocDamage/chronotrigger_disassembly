@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 856,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "superseded",
       "label": "ct_df_6497_score12_cluster",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "parent_range": "DF:6497..DF:64C0",
       "parent_label": "ct_df_6497_score12_cluster",
       "notes": "Superseded duplicate of Pass 842 (ct_df_6497_score12_cluster)"
@@ -26,7 +26,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass856.json": "passes/manifests/legacy/pass856.json"
+    "source_1_pass856.json": "passes/manifests/legacy/pass856.json"
   },
   "notes": []
 }

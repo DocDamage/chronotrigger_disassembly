@@ -86,7 +86,7 @@ def main():
         json.dump(results, f, indent=2)
     
     print(f"\n\n{'='*60}")
-    print(f"SCAN COMPLETE")
+    print("SCAN COMPLETE")
     print(f"{'='*60}")
     print(f"Total missing pages scanned: {len(missing_pages)}")
     print(f"Pages with code: {len(has_code_pages)}")
@@ -94,7 +94,7 @@ def main():
     print(f"Errors: {len(errors)}")
     
     if has_code_pages:
-        print(f"\n--- Pages with code (potential new passes) ---")
+        print("\n--- Pages with code (potential new passes) ---")
         for p in has_code_pages:
             print(f"  {p['page']}: {p['family']} / {p['posture']}")
     

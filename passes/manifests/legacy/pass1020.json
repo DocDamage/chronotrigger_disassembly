@@ -1,0 +1,29 @@
+{
+  "pass": 1020,
+  "bank": "C0",
+  "label": "ct_c0_202f_state_manager",
+  "address": "C0:202F",
+  "range": "C0:202F..C0:2055",
+  "bytes": 39,
+  "category": "code",
+  "confidence": 6,
+  "reasoning": [
+    "Score 6 cluster - strong code indicators",
+    "4 branch instructions with balanced control flow",
+    "4 return instructions suggesting multiple exit paths",
+    "39 bytes - typical state management function",
+    "Located at start of 2000-2800 scan region",
+    "Pattern consistent with state machine or mode manager"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 4,
+    "stack_ops": 0,
+    "returns": 4,
+    "first_return": "C0:203F"
+  },
+  "flags": ["score6", "multi_return"],
+  "related": ["C0:202F", "C0:2055", "C0:203F"],
+  "session": 20,
+  "status": "closed"
+}

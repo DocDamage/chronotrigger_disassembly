@@ -315,7 +315,7 @@ def main():
     print(f"Range Conflicts: {len(overlap_lines)} total ({len(exact_duplicates)} exact duplicates, {len(other_overlaps)} overlaps)")
 
     # 5. Capture other baseline command outputs
-    res_doc = subprocess.run(
+    subprocess.run(
         [sys.executable, 'tools/scripts/toolkit_doctor.py', '--output-json', 'reports/remediation/baseline_doctor.json', '--output-md', 'reports/remediation/baseline_doctor.md'],
         capture_output=True, text=True
     )

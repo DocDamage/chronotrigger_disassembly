@@ -29,7 +29,7 @@ for fname in os.listdir(MANIFESTS_DIR):
 # Sort by caller count
 c0_passes.sort(key=lambda x: x['callers'], reverse=True)
 
-print(f'=== Bank C0 Summary ===')
+print('=== Bank C0 Summary ===')
 print(f'Total C0 functions: {len(c0_passes)}')
 print()
 print('=== Top 15 by caller count ===')
@@ -47,5 +47,5 @@ for p in c0_passes:
 
 total = sum(e-s for s, e in ranges)
 print()
-print(f'=== Coverage ===')
+print('=== Coverage ===')
 print(f'Total bytes covered: {total} ({100*total/65536:.1f}% of Bank C0)')

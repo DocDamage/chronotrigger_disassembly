@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 172,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,14 +12,14 @@
       "kind": "data",
       "label": "ct_c3_inline_mixed_control_dispatch_and_dma_setup_blob_preceding_tiny_eb7b_wrapper",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:13F8..C3:13FB",
       "kind": "veneer",
       "label": "ct_c3_tiny_local_wrapper_calling_eb7b_then_returning",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -32,7 +32,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass172.json": "passes/manifests/legacy/pass172.json"
+    "source_1_pass172_direct.json": "passes/manifests/legacy/pass172_direct.json"
   },
   "notes": [
     "Cautious mixed-content split: 1318..13F7 does not hold up as one clean owner under linear sweep and instead behaves like an inline control/dispatch plus hardware-setup blob.",

@@ -1,17 +1,50 @@
 {
   "schema_version": 2,
   "pass_number": 1008,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
   "closed_ranges": [
     {
+      "range": "C3:1753..C3:175B",
+      "kind": "code_helper",
+      "label": "ct_c3_1753_branch_util",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": [
+          "Cluster score 4",
+          "2 branches, 2 returns - balanced flow",
+          "ASCII ratio 0.222 - low data content",
+          "Clean code candidate"
+        ],
+        "findings": {
+          "calls": 0,
+          "branches": 2,
+          "stack_ops": 0,
+          "returns": 2,
+          "first_return": "C3:1755"
+        },
+        "score": 4
+      },
+      "legacy_metadata": {
+        "raw_single_function": true
+      },
+      "parent_range": "C3:16BA..C3:17BC",
+      "parent_label": "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry"
+    },
+    {
       "range": "C3:3DE2..C3:3DF0",
       "kind": "code_helper",
       "label": "ct_c3_3de2_score6_dispatch",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 6
+      },
       "legacy_metadata": {
         "raw_single_function": true
       },
@@ -20,6 +53,7 @@
     }
   ],
   "new_labels": [
+    "ct_c3_1753_branch_util",
     "ct_c3_3de2_score6_dispatch"
   ],
   "confidence": {
@@ -28,7 +62,8 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1008_c3_final.json": "passes/manifests/legacy/pass1008_c3_final.json"
+    "source_1_pass1008.json": "passes/manifests/legacy/pass1008.json",
+    "source_2_pass1008_c3_final.json": "passes/manifests/legacy/pass1008_c3_final.json"
   },
   "notes": [
     "Stack-heavy dispatch pattern (3 ops in 15 bytes)",

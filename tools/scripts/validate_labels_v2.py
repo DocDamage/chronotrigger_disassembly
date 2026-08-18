@@ -2,8 +2,8 @@
 from __future__ import annotations
 
 import argparse
-import json
-from pathlib import Path
+
+
 
 from snes_utils import iter_manifest_paths, load_manifest, manifest_pass_number, parse_snes_range
 

@@ -104,7 +104,7 @@ def main():
     print(f"Classification: {classification}")
     print(f"Reason: {reason}")
     print()
-    print(f"Statistics:")
+    print("Statistics:")
     print(f"  PHP (08): {results['php_count']}")
     print(f"  PLP (28): {results['plp_count']}")
     print(f"  SED (F8): {results['sed_count']}")

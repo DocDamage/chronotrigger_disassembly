@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 177,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,21 +12,21 @@
       "kind": "veneer",
       "label": "ct_c3_tiny_branch_landing_pad_redirecting_execution_back_to_17ef",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:1819..C3:187F",
       "kind": "data",
       "label": "ct_c3_inline_mixed_control_and_code_fragments_between_branch_pad_and_rtl_stub",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:1880..C3:1880",
       "kind": "veneer",
       "label": "ct_c3_single_byte_rtl_return_stub_reached_via_local_jump",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -40,7 +40,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass177.json": "passes/manifests/legacy/pass177.json"
+    "source_1_pass177_direct.json": "passes/manifests/legacy/pass177_direct.json"
   },
   "notes": [
     "C3:1817 is not a normal owner start: it is just BRA $17EF, making it a tiny landing pad that redirects execution back into the span frozen in pass 176.",

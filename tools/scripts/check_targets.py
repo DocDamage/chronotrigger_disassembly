@@ -1,4 +1,4 @@
-import json
+
 
 # From scan results - extract backtrack data for targets
 targets = {

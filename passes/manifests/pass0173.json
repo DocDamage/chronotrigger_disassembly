@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 173,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,14 +12,14 @@
       "kind": "data",
       "label": "ct_c3_inline_mixed_control_table_and_helper_blob_before_c302dd_wrapper",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:15E4..C3:15E8",
       "kind": "veneer",
       "label": "ct_c3_tiny_long_wrapper_calling_c302dd_then_returning",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -32,7 +32,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass173.json": "passes/manifests/legacy/pass173.json"
+    "source_1_pass173_direct.json": "passes/manifests/legacy/pass173_direct.json"
   },
   "notes": [
     "Cautious forward split again: 13FC..15E3 still refuses to stabilize as one credible owner under linear sweep and contains repeated mixed control/data-looking stretches before the next clean veneer.",

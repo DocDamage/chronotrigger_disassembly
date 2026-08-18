@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Registry of reviewed intentional range overlap waivers",
-  "version": 1,
-  "total_waivers_count": 170,
+  "schema_version": 2,
+  "description": "Registry of reviewed intentional range overlap waivers (Schema v2)",
+  "total_waivers_count": 180,
   "waivers": [
     {
       "conflict_id": "conf_C3_01B4_01C9_599_600",
@@ -15,8 +15,14 @@
       "right_range": "C3:01B4..C3:01E3",
       "left_label": "ct_c3_01a8_jsr_prologue",
       "right_label": "ct_c3_01b4_php_prologue",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0599.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_01BA_01C9_599_753",
@@ -29,8 +35,14 @@
       "right_range": "C3:01BA..C3:01D5",
       "left_label": "ct_c3_01a8_jsr_prologue",
       "right_label": "ct_c3_01ba_jsr_prologue",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0599.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_01E4_02DC_163_170",
@@ -43,8 +55,14 @@
       "right_range": "C3:01E4..C3:02DC",
       "left_label": "ct_c3_selected_7e_7f_band_initializer_and_32_step_saturating_add_subtract_wram_stream_worker",
       "right_label": "ct_c3_selected_7e_7f_band_initializer_and_32_step_saturating_add_subtract_wram_stream_worker",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0163.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_02DD_0306_163_170",
@@ -57,8 +75,14 @@
       "right_range": "C3:02DD..C3:0306",
       "left_label": "ct_c3_external_byte_mix_helper_updating_0386_and_returning_start_byte_for_c0_fe_chained_table_walk",
       "right_label": "ct_c3_external_byte_mix_helper_updating_0386_and_returning_start_byte_for_c0_fe_chained_table_walk",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0163.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_0540_0548_754_990",
@@ -71,8 +95,14 @@
       "right_range": "C3:0540..C3:0559",
       "left_label": "ct_c3_052a_jsr_entry",
       "right_label": "ct_c3_0540_lda_init",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0754.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_0540_054B_601_990",
@@ -85,8 +115,14 @@
       "right_range": "C3:0540..C3:0559",
       "left_label": "ct_c3_052a_jsr_entry",
       "right_label": "ct_c3_0540_lda_init",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0601.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_05B0_05B3_991_992",
@@ -99,8 +135,14 @@
       "right_range": "C3:05B0..C3:05BA",
       "left_label": "ct_c3_058b_phd_handler",
       "right_label": "ct_c3_05b0_bra_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0991.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_08A9_08B2_170_218",
@@ -113,8 +155,14 @@
       "right_range": "C3:08A9..C3:08B2",
       "left_label": "ct_c3_08a1_unknown_function_score6_cluster",
       "right_label": "ct_c3_attached_terminal_tail_of_helper_rooted_at_0800_pending_full_upstream_closure",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0218.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_08A9_08B2_165_170",
@@ -127,8 +175,14 @@
       "right_range": "C3:08A9..C3:08B2",
       "left_label": "ct_c3_unattached_owner_tail_fragment_ending_in_rtl",
       "right_label": "ct_c3_attached_terminal_tail_of_helper_rooted_at_0800_pending_full_upstream_closure",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0165.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_09E9_0A8F_165_169",
@@ -141,8 +195,14 @@
       "right_range": "C3:09E9..C3:0A8F",
       "left_label": "ct_c3_wram_runtime_code_emitter_writing_generated_stub_bytes_through_2180",
       "right_label": "ct_c3_wram_runtime_code_emitter_writing_generated_stub_bytes_through_2180",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0165.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_0B03_0C91_166_169",
@@ -155,8 +215,14 @@
       "right_range": "C3:0B03..C3:0C91",
       "left_label": "ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words",
       "right_label": "ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0166.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_0CB1_0CB7_166_169",
@@ -169,8 +235,94 @@
       "right_range": "C3:0CB1..C3:0CB7",
       "left_label": "ct_c3_stream_word_fetch_helper_advancing_20_and_caching_fetched_word",
       "right_label": "ct_c3_stream_word_fetch_helper_advancing_20_and_caching_fetched_word",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0166.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C3_14BD_14C6_173_1024",
+      "bank": "C3",
+      "overlap_range": "C3:14BD..C3:14C6",
+      "relationship": "containment",
+      "left_pass": 173,
+      "right_pass": 1024,
+      "left_range": "C3:13FC..C3:15E3",
+      "right_range": "C3:14BD..C3:14C6",
+      "left_label": "ct_c3_inline_mixed_control_table_and_helper_blob_before_c302dd_wrapper",
+      "right_label": "ct_c3_14BD",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0173.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C3_14BD_14C6_1011_1024",
+      "bank": "C3",
+      "overlap_range": "C3:14BD..C3:14C6",
+      "relationship": "exact_duplicate",
+      "left_pass": 1011,
+      "right_pass": 1024,
+      "left_range": "C3:14BD..C3:14C6",
+      "right_range": "C3:14BD..C3:14C6",
+      "left_label": "ct_c3_14bd_branch_utility",
+      "right_label": "ct_c3_14BD",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/legacy/pass1011.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C3_1627_1642_174_1026",
+      "bank": "C3",
+      "overlap_range": "C3:1627..C3:1642",
+      "relationship": "containment",
+      "left_pass": 174,
+      "right_pass": 1026,
+      "left_range": "C3:15E9..C3:16A7",
+      "right_range": "C3:1627..C3:1642",
+      "left_label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper",
+      "right_label": "ct_c3_1627",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0174.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C3_1627_1642_1010_1026",
+      "bank": "C3",
+      "overlap_range": "C3:1627..C3:1642",
+      "relationship": "exact_duplicate",
+      "left_pass": 1010,
+      "right_pass": 1026,
+      "left_range": "C3:1627..C3:1642",
+      "right_range": "C3:1627..C3:1642",
+      "left_label": "ct_c3_1627_multi_return_handler",
+      "right_label": "ct_c3_1627",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/legacy/pass1010.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_19DB_1A05_179_1027",
@@ -183,8 +335,14 @@
       "right_range": "C3:19DB..C3:1A05",
       "left_label": "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate",
       "right_label": "ct_c3_19DB",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0179.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_1A03_1A5F_179_222",
@@ -197,8 +355,14 @@
       "right_range": "C3:1A03..C3:1A70",
       "left_label": "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate",
       "right_label": "ct_c3_1a03_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0179.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_19DB_1A00_221_942",
@@ -211,8 +375,14 @@
       "right_range": "C3:19DB..C3:1A05",
       "left_label": "ct_c3_19a5_unknown_function_score6_cluster",
       "right_label": "ct_c3_19db_score9_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0221.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_19DB_1A00_221_1027",
@@ -225,8 +395,14 @@
       "right_range": "C3:19DB..C3:1A05",
       "left_label": "ct_c3_19a5_unknown_function_score6_cluster",
       "right_label": "ct_c3_19DB",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0221.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_19DB_1A05_942_1027",
@@ -239,8 +415,14 @@
       "right_range": "C3:19DB..C3:1A05",
       "left_label": "ct_c3_19db_score9_cluster",
       "right_label": "ct_c3_19DB",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0942.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_1A03_1A05_222_942",
@@ -253,8 +435,14 @@
       "right_range": "C3:1A03..C3:1A70",
       "left_label": "ct_c3_19db_score9_cluster",
       "right_label": "ct_c3_1a03_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0942.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_1A03_1A05_222_1027",
@@ -267,8 +455,14 @@
       "right_range": "C3:1A03..C3:1A70",
       "left_label": "ct_c3_19DB",
       "right_label": "ct_c3_1a03_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1027.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_1A60_1A70_180_222",
@@ -281,8 +475,14 @@
       "right_range": "C3:1A60..C3:1AD5",
       "left_label": "ct_c3_1a03_unknown_function_score6_cluster",
       "right_label": "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0222.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_1BF5_1BFF_181_224",
@@ -295,8 +495,14 @@
       "right_range": "C3:1BF5..C3:1C00",
       "left_label": "ct_c3_inline_mixed_opcode_cluster_with_weak_rtl_stub_and_unstable_multi_target_pocket_before_1c00_candidate",
       "right_label": "ct_c3_1bf5_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0181.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_1C00_1C00_182_224",
@@ -309,8 +515,14 @@
       "right_range": "C3:1C00..C3:1FFF",
       "left_label": "ct_c3_1bf5_unknown_function_score6_cluster",
       "right_label": "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0224.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_2B3A_2B6E_1030_1209",
@@ -323,8 +535,14 @@
       "right_range": "C3:2B3A..C3:2B6E",
       "left_label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr",
       "right_label": "ct_c3_2B3A",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass1209.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_2B3A_2B6E_894_1030",
@@ -337,8 +555,14 @@
       "right_range": "C3:2B3A..C3:2B6E",
       "left_label": "ct_c3_2b3a_score8_cluster",
       "right_label": "ct_c3_2B3A",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0894.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_2CF8_2CFF_905_1210",
@@ -351,8 +575,14 @@
       "right_range": "C3:2CF8..C3:2D18",
       "left_label": "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6",
       "right_label": "ct_c3_2cf8_score7_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1210.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_2D00_2D18_905_1210",
@@ -365,8 +595,14 @@
       "right_range": "C3:2D00..C3:2DFF",
       "left_label": "ct_c3_2cf8_score7_cluster",
       "right_label": "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0905.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_2EA7_2EBF_1029_1210",
@@ -379,8 +615,14 @@
       "right_range": "C3:2EA7..C3:2EBF",
       "left_label": "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences",
       "right_label": "ct_c3_2EA7",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass1210.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_2EA7_2EBF_893_1029",
@@ -393,8 +635,14 @@
       "right_range": "C3:2EA7..C3:2EBF",
       "left_label": "ct_c3_2ea7_score12_cluster",
       "right_label": "ct_c3_2EA7",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0893.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_373D_374D_236_1007",
@@ -407,8 +655,14 @@
       "right_range": "C3:373D..C3:374D",
       "left_label": "ct_c3_3705_unknown_function_score6_cluster",
       "right_label": "ct_c3_373d_score6_function",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0236.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_40B7_40FF_233_1214",
@@ -421,8 +675,14 @@
       "right_range": "C3:40B7..C3:4100",
       "left_label": "ct_c3_4000_frozen_candidate_lane_12_hard_bad_starts",
       "right_label": "ct_c3_40b7_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1214.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4100_4100_233_1214",
@@ -435,8 +695,14 @@
       "right_range": "C3:4100..C3:41FF",
       "left_label": "ct_c3_40b7_unknown_function_score6_cluster",
       "right_label": "ct_c3_4100_frozen_branch_fed_pocket_2_hard_bad_starts",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0233.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_41AF_41FF_226_1214",
@@ -449,8 +715,14 @@
       "right_range": "C3:41AF..C3:4200",
       "left_label": "ct_c3_4100_frozen_branch_fed_pocket_2_hard_bad_starts",
       "right_label": "ct_c3_41af_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1214.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4200_4200_226_1214",
@@ -463,8 +735,14 @@
       "right_range": "C3:4200..C3:42FF",
       "left_label": "ct_c3_41af_unknown_function_score6_cluster",
       "right_label": "ct_c3_4200_frozen_mixed_command_data_0_hard_bad_starts_fragments",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0226.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_42C5_42FF_237_1214",
@@ -477,8 +755,14 @@
       "right_range": "C3:42C5..C3:4320",
       "left_label": "ct_c3_4200_frozen_mixed_command_data_0_hard_bad_starts_fragments",
       "right_label": "ct_c3_42c5_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1214.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_42C5_42D4_237_963",
@@ -491,8 +775,14 @@
       "right_range": "C3:42C5..C3:4320",
       "left_label": "ct_c3_42c2_score8_cluster",
       "right_label": "ct_c3_42c5_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0963.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4300_4320_237_1214",
@@ -505,8 +795,14 @@
       "right_range": "C3:4300..C3:43FF",
       "left_label": "ct_c3_42c5_unknown_function_score6_cluster",
       "right_label": "ct_c3_4300_frozen_mixed_command_data_1_hard_bad_start",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0237.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4548_459F_1031_1214",
@@ -519,8 +815,14 @@
       "right_range": "C3:4548..C3:459F",
       "left_label": "ct_c3_4500_frozen_candidate_lane_1_hard_bad_start_cluster_score_13",
       "right_label": "ct_c3_4548",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass1214.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4548_4599_234_940",
@@ -533,8 +835,14 @@
       "right_range": "C3:4548..C3:459F",
       "left_label": "ct_c3_453b_unknown_function_score6_cluster",
       "right_label": "ct_c3_4548_score13_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0234.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4548_4599_234_1031",
@@ -547,8 +855,14 @@
       "right_range": "C3:4548..C3:459F",
       "left_label": "ct_c3_453b_unknown_function_score6_cluster",
       "right_label": "ct_c3_4548",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0234.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4548_459F_940_1031",
@@ -561,8 +875,14 @@
       "right_range": "C3:4548..C3:459F",
       "left_label": "ct_c3_4548_score13_cluster",
       "right_label": "ct_c3_4548",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0940.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4A49_4A53_245_941",
@@ -575,8 +895,14 @@
       "right_range": "C3:4A49..C3:4AA0",
       "left_label": "ct_c3_4a2a_score11_cluster",
       "right_label": "ct_c3_4a49_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0941.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4EE7_4EFF_251_1215",
@@ -589,8 +915,14 @@
       "right_range": "C3:4EE7..C3:4F40",
       "left_label": "ct_c3_4e00_frozen_candidate_lane_1_hard_bad_start",
       "right_label": "ct_c3_4ee7_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1215.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_4F00_4F40_251_1215",
@@ -603,8 +935,14 @@
       "right_range": "C3:4F00..C3:4FFF",
       "left_label": "ct_c3_4ee7_unknown_function_score6_cluster",
       "right_label": "ct_c3_4f00_frozen_mixed_command_data_2_hard_bad_starts",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0251.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_51EF_51FF_604_1216",
@@ -617,8 +955,14 @@
       "right_range": "C3:51EF..C3:520C",
       "left_label": "ct_c3_5100_frozen_candidate_lane_2_hard_bad_starts",
       "right_label": "ct_c3_51ef_jsr_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1216.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_5200_520C_604_1216",
@@ -631,8 +975,14 @@
       "right_range": "C3:5200..C3:52FF",
       "left_label": "ct_c3_51ef_jsr_handler",
       "right_label": "ct_c3_5200_frozen_candidate_lane_1_hard_bad_start",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0604.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_55A3_55FF_239_1216",
@@ -645,8 +995,14 @@
       "right_range": "C3:55A3..C3:5600",
       "left_label": "ct_c3_5500_frozen_branch_fed_pocket_1_hard_bad_start",
       "right_label": "ct_c3_55a3_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1216.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_55A3_55C1_239_998",
@@ -659,8 +1015,14 @@
       "right_range": "C3:55A3..C3:5600",
       "left_label": "ct_c3_559f_score6_cluster",
       "right_label": "ct_c3_55a3_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0998.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_5600_5600_239_1216",
@@ -673,8 +1035,14 @@
       "right_range": "C3:5600..C3:56FF",
       "left_label": "ct_c3_55a3_unknown_function_score6_cluster",
       "right_label": "ct_c3_5600_frozen_mixed_command_data_mixed_lane_continue",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0239.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_58E8_58FF_605_1217",
@@ -687,8 +1055,14 @@
       "right_range": "C3:58E8..C3:591A",
       "left_label": "ct_c3_5800_frozen_candidate_lane_local_control_only",
       "right_label": "ct_c3_58e8_lda_init",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass1217.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_5900_591A_605_1217",
@@ -701,8 +1075,14 @@
       "right_range": "C3:5900..C3:59FF",
       "left_label": "ct_c3_58e8_lda_init",
       "right_label": "ct_c3_5900_frozen_branch_fed_pocket_local_control_only",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (code_data_overlap)",
+      "evidence": [
+        "passes/manifests/pass0605.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_5E34_5E54_603_981",
@@ -715,8 +1095,14 @@
       "right_range": "C3:5E34..C3:5E54",
       "left_label": "ct_c3_5e01_jsl_long_fn",
       "right_label": "ct_c3_5e34_ldy_init_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0603.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_5E47_5E6C_603_982",
@@ -729,8 +1115,14 @@
       "right_range": "C3:5E47..C3:5E6C",
       "left_label": "ct_c3_5e01_jsl_long_fn",
       "right_label": "ct_c3_5e47_lda_init_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0603.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_5E47_5E54_981_982",
@@ -743,8 +1135,14 @@
       "right_range": "C3:5E47..C3:5E6C",
       "left_label": "ct_c3_5e34_ldy_init_handler",
       "right_label": "ct_c3_5e47_lda_init_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0981.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_65AB_65C8_713_756",
@@ -757,8 +1155,14 @@
       "right_range": "C3:65AB..C3:65C9",
       "left_label": "ct_c3_65ab_gap_handler",
       "right_label": "ct_c3_65ab_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0713.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_66A6_66C8_724_1218",
@@ -771,8 +1175,14 @@
       "right_range": "C3:66A6..C3:66C8",
       "left_label": "ct_c3_6600_frozen_branch_fed_pocket_fragmented_code",
       "right_label": "ct_c3_66a6_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass1218.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_6643_6649_714_1000",
@@ -785,8 +1195,14 @@
       "right_range": "C3:6643..C3:6660",
       "left_label": "ct_c3_6641_score6_function",
       "right_label": "ct_c3_6643_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1000.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_66A6_66C4_716_757",
@@ -799,8 +1215,14 @@
       "right_range": "C3:66A6..C3:66C8",
       "left_label": "ct_c3_66a6_score6_cluster",
       "right_label": "ct_c3_66a6_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0757.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_66A6_66C4_724_757",
@@ -813,8 +1235,14 @@
       "right_range": "C3:66A6..C3:66C8",
       "left_label": "ct_c3_66a6_score6_cluster",
       "right_label": "ct_c3_66a6_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0757.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_66A6_66C8_716_724",
@@ -827,8 +1255,14 @@
       "right_range": "C3:66A6..C3:66C8",
       "left_label": "ct_c3_66a6_gap_handler",
       "right_label": "ct_c3_66a6_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0716.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_6A29_6A47_725_1219",
@@ -841,8 +1275,14 @@
       "right_range": "C3:6A29..C3:6A47",
       "left_label": "ct_c3_6800",
       "right_label": "ct_c3_6a29_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass1219.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_6ACB_6AE5_726_1219",
@@ -855,8 +1295,14 @@
       "right_range": "C3:6ACB..C3:6AE5",
       "left_label": "ct_c3_6800",
       "right_label": "ct_c3_6acb_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass1219.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_6C11_6C38_727_1219",
@@ -869,8 +1315,14 @@
       "right_range": "C3:6C11..C3:6C38",
       "left_label": "ct_c3_6800",
       "right_label": "ct_c3_6c11_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass1219.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_6A29_6A47_717_725",
@@ -883,8 +1335,14 @@
       "right_range": "C3:6A29..C3:6A47",
       "left_label": "ct_c3_6a29_gap_handler",
       "right_label": "ct_c3_6a29_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0717.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_6ACB_6AE5_718_726",
@@ -897,8 +1355,14 @@
       "right_range": "C3:6ACB..C3:6AE5",
       "left_label": "ct_c3_6acb_gap_handler",
       "right_label": "ct_c3_6acb_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0718.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_6C11_6C38_719_727",
@@ -911,8 +1375,14 @@
       "right_range": "C3:6C11..C3:6C38",
       "left_label": "ct_c3_6c11_gap_handler",
       "right_label": "ct_c3_6c11_gap_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0719.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_7210_7224_715_1220",
@@ -925,8 +1395,14 @@
       "right_range": "C3:7210..C3:7230",
       "left_label": "ct_c3_7207_gap_handler",
       "right_label": "ct_c3_7210",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0715.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_7210_7228_1220_1220",
@@ -939,8 +1415,14 @@
       "right_range": "C3:7210..C3:7230",
       "left_label": "ct_c3_7207",
       "right_label": "ct_c3_7210",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass1220.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_8912_8939_998_1223",
@@ -953,8 +1435,14 @@
       "right_range": "C3:8912..C3:8939",
       "left_label": "ct_c3_8912_php_prologue",
       "right_label": "ct_c3_8912",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0998.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_A3E2_A3FF_225_992",
@@ -967,8 +1455,14 @@
       "right_range": "C3:A3E2..C3:A406",
       "left_label": "ct_c3_a396_unknown_function_score6_cluster",
       "right_label": "ct_c3_a3e2_jsr_entry",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0225.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_A3F1_A3FF_225_993",
@@ -981,8 +1475,14 @@
       "right_range": "C3:A3F1..C3:A419",
       "left_label": "ct_c3_a396_unknown_function_score6_cluster",
       "right_label": "ct_c3_a3f1_jsr_entry",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0225.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_A3F1_A406_992_993",
@@ -995,8 +1495,14 @@
       "right_range": "C3:A3F1..C3:A419",
       "left_label": "ct_c3_a3e2_jsr_entry",
       "right_label": "ct_c3_a3f1_jsr_entry",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0992.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_B002_B01D_983_1226",
@@ -1009,8 +1515,14 @@
       "right_range": "C3:B002..C3:B01D",
       "left_label": "ct_c3_b002_php_prologue",
       "right_label": "ct_c3_B002",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0983.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_B086_B0AA_984_1227",
@@ -1023,8 +1535,14 @@
       "right_range": "C3:B086..C3:B0AA",
       "left_label": "ct_c3_b086_phx_prologue",
       "right_label": "ct_c3_B086",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0984.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C3_CB47_CB64_1002_1229",
@@ -1037,8 +1555,14 @@
       "right_range": "C3:CB47..C3:CB64",
       "left_label": "ct_c3_cb47_php_prologue",
       "right_label": "ct_c3_CB47",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/legacy/pass1002.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_1212_1218_407_1062",
@@ -1051,8 +1575,14 @@
       "right_range": "C0:1212..C0:1227",
       "left_label": "ct_c0_10a9_long_handler_score13",
       "right_label": "ct_c0_1212_score6_s27",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0407.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_1219_1227_518_1062",
@@ -1065,8 +1595,14 @@
       "right_range": "C0:1219..C0:123C",
       "left_label": "ct_c0_1212_score6_s27",
       "right_label": "ct_c0_1219_function_2callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass1062.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_20BD_20C0_371_1023",
@@ -1079,8 +1615,54 @@
       "right_range": "C0:20BD..C0:20DF",
       "left_label": "ct_c0_20a0_data_processor",
       "right_label": "ct_c0_20bd_lut_loader_score12",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1023.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C0_2512_2520_257_1016",
+      "bank": "C0",
+      "overlap_range": "C0:2512..C0:2520",
+      "relationship": "partial_overlap",
+      "left_pass": 1016,
+      "right_pass": 257,
+      "left_range": "C0:2500..C0:2520",
+      "right_range": "C0:2512..C0:2570",
+      "left_label": "ct_c0_2500_logic_sub",
+      "right_label": "ct_c0_2512_unknown_function_score6_cluster",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1016.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C0_269F_26A0_1017_1074",
+      "bank": "C0",
+      "overlap_range": "C0:269F..C0:26A0",
+      "relationship": "partial_overlap",
+      "left_pass": 1017,
+      "right_pass": 1074,
+      "left_range": "C0:2680..C0:26A0",
+      "right_range": "C0:269F..C0:26BF",
+      "left_label": "ct_c0_2680_calculation_routine",
+      "right_label": "ct_c0_269f_score6_s27",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1017.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_26A2_26BF_1074_1075",
@@ -1093,8 +1675,94 @@
       "right_range": "C0:26A2..C0:26C0",
       "left_label": "ct_c0_269f_score6_s27",
       "right_label": "ct_c0_26a2_score6_s27",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass1074.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C0_27E0_27EA_269_1019",
+      "bank": "C0",
+      "overlap_range": "C0:27E0..C0:27EA",
+      "relationship": "partial_overlap",
+      "left_pass": 1019,
+      "right_pass": 269,
+      "left_range": "C0:27CC..C0:27EA",
+      "right_range": "C0:27E0..C0:2830",
+      "left_label": "ct_c0_27cc_event_handler",
+      "right_label": "ct_c0_27e0_unknown_function_score6_cluster",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1019.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C0_2C29_2C40_261_1004",
+      "bank": "C0",
+      "overlap_range": "C0:2C29..C0:2C40",
+      "relationship": "partial_overlap",
+      "left_pass": 1004,
+      "right_pass": 261,
+      "left_range": "C0:2C26..C0:2C40",
+      "right_range": "C0:2C29..C0:2C80",
+      "left_label": "ct_c0_2c26_dispatch_score8_cluster",
+      "right_label": "ct_c0_2c29_unknown_function_score6_cluster",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1004.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C0_38B3_38C4_404_1002",
+      "bank": "C0",
+      "overlap_range": "C0:38B3..C0:38C4",
+      "relationship": "partial_overlap",
+      "left_pass": 404,
+      "right_pass": 1002,
+      "left_range": "C0:3885..C0:38C4",
+      "right_range": "C0:38B3..C0:38E7",
+      "left_label": "CT_C0_3885_CROSS_BANK_LOADER_SCORE26",
+      "right_label": "ct_c0_38b3_sprite_handler_score8_cluster",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0404.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
+    },
+    {
+      "conflict_id": "conf_C0_3D7E_3D83_1006_1007",
+      "bank": "C0",
+      "overlap_range": "C0:3D7E..C0:3D83",
+      "relationship": "partial_overlap",
+      "left_pass": 1006,
+      "right_pass": 1007,
+      "left_range": "C0:3D6B..C0:3D83",
+      "right_range": "C0:3D7E..C0:3D96",
+      "left_label": "ct_c0_3d6b_subhandler_score7",
+      "right_label": "ct_c0_3d7e_handler_score7",
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1006.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_6070_6074_288_1131",
@@ -1107,8 +1775,14 @@
       "right_range": "C0:6070..C0:607D",
       "left_label": "ct_c0_6040_Screen_wrapper_score7",
       "right_label": "ct_c0_6070_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1131.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_6E5C_6E6C_506_1067",
@@ -1121,8 +1795,14 @@
       "right_range": "C0:6E5C..C0:6E74",
       "left_label": "ct_c0_6e58_score6_s27",
       "right_label": "ct_c0_6e5c_event_handler_2callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass1067.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_6EF9_6F01_1069_1070",
@@ -1135,8 +1815,14 @@
       "right_range": "C0:6EF9..C0:6F0C",
       "left_label": "ct_c0_6ee5_score6_s27",
       "right_label": "ct_c0_6ef9_score6_s27",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass1069.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_6EF9_6EFF_458_1070",
@@ -1149,8 +1835,14 @@
       "right_range": "C0:6EF9..C0:6F0C",
       "left_label": "ct_c0_6ef9_handler_4callers",
       "right_label": "ct_c0_6ef9_score6_s27",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0458.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_6F08_6F0C_1070_1071",
@@ -1163,8 +1855,14 @@
       "right_range": "C0:6F08..C0:6F1C",
       "left_label": "ct_c0_6ef9_score6_s27",
       "right_label": "ct_c0_6f08_score6_s27",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass1070.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_6F08_6F0B_298_1071",
@@ -1177,8 +1875,14 @@
       "right_range": "C0:6F08..C0:6F1C",
       "left_label": "ct_c0_6f08_unknown_function_score6_cluster",
       "right_label": "ct_c0_6f08_score6_s27",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0298.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_74E2_74EC_467_468",
@@ -1191,8 +1895,14 @@
       "right_range": "C0:74E2..C0:74FF",
       "left_label": "CT_C0_74C7_GFX_HANDLER_SC6",
       "right_label": "CT_C0_74E2_GFX_HANDLER_SC6",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0467.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_74E2_74E7_303_468",
@@ -1205,8 +1915,14 @@
       "right_range": "C0:74E2..C0:74FF",
       "left_label": "ct_c0_74e2_unknown_function_score6_cluster",
       "right_label": "CT_C0_74E2_GFX_HANDLER_SC6",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0303.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_78CC_78E4_555_556",
@@ -1219,8 +1935,14 @@
       "right_range": "C0:78CC..C0:796C",
       "left_label": "ct_c0_7857_jsr_entry",
       "right_label": "ct_c0_78cc_rep_prologue",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0555.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7BA0_7BC1_263_474",
@@ -1233,8 +1955,14 @@
       "right_range": "C0:7BA0..C0:7C00",
       "left_label": "CT_C0_7BA0_GFX_HANDLER_SC6",
       "right_label": "ct_c0_7ba0_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0474.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F16_7F3F_559_560",
@@ -1247,8 +1975,14 @@
       "right_range": "C0:7F16..C0:7F9D",
       "left_label": "ct_c0_7ea8_pha_prologue",
       "right_label": "ct_c0_7f16_dual_caller_fn",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0559.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F43_7F9D_560_561",
@@ -1261,8 +1995,14 @@
       "right_range": "C0:7F43..C0:7FC8",
       "left_label": "ct_c0_7f16_dual_caller_fn",
       "right_label": "ct_c0_7f43_strong_target",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0560.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F43_7F56_308_476",
@@ -1275,8 +2015,14 @@
       "right_range": "C0:7F43..C0:7F60",
       "left_label": "ct_c0_7f43_unknown_function_score6_cluster",
       "right_label": "CT_C0_7F43_GFX_HANDLER_SC6",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0308.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F43_7F56_308_561",
@@ -1289,8 +2035,14 @@
       "right_range": "C0:7F43..C0:7FC8",
       "left_label": "ct_c0_7f43_unknown_function_score6_cluster",
       "right_label": "ct_c0_7f43_strong_target",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0308.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F43_7F60_476_561",
@@ -1303,8 +2055,14 @@
       "right_range": "C0:7F43..C0:7FC8",
       "left_label": "CT_C0_7F43_GFX_HANDLER_SC6",
       "right_label": "ct_c0_7f43_strong_target",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0476.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F62_7F7B_477_561",
@@ -1317,8 +2075,14 @@
       "right_range": "C0:7F62..C0:7F7B",
       "left_label": "ct_c0_7f43_strong_target",
       "right_label": "CT_C0_7F62_GFX_HANDLER_7CALLERS",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0561.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F62_7F99_459_561",
@@ -1331,8 +2095,14 @@
       "right_range": "C0:7F62..C0:7F99",
       "left_label": "ct_c0_7f43_strong_target",
       "right_label": "ct_c0_7f62_graphics_utility_7callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0561.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_7F62_7F7B_459_477",
@@ -1345,8 +2115,14 @@
       "right_range": "C0:7F62..C0:7F99",
       "left_label": "CT_C0_7F62_GFX_HANDLER_7CALLERS",
       "right_label": "ct_c0_7f62_graphics_utility_7callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0477.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_80BD_813B_454_562",
@@ -1359,8 +2135,14 @@
       "right_range": "C0:80BD..C0:813F",
       "left_label": "ct_c0_8085_dma_handler_v2_23callers",
       "right_label": "ct_c0_80bd_library_fn_23_callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0454.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_813B_813B_454_906",
@@ -1373,8 +2155,14 @@
       "right_range": "C0:813B..C0:8153",
       "left_label": "ct_c0_8085_dma_handler_v2_23callers",
       "right_label": "ct_c0_813b_dma_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0454.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_813B_813B_454_563",
@@ -1387,8 +2175,14 @@
       "right_range": "C0:813B..C0:81BD",
       "left_label": "ct_c0_8085_dma_handler_v2_23callers",
       "right_label": "ct_c0_813b_cluster_score6",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0454.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_813B_813F_562_906",
@@ -1401,8 +2195,14 @@
       "right_range": "C0:813B..C0:8153",
       "left_label": "ct_c0_80bd_library_fn_23_callers",
       "right_label": "ct_c0_813b_dma_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0562.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_813B_813F_562_563",
@@ -1415,8 +2215,14 @@
       "right_range": "C0:813B..C0:81BD",
       "left_label": "ct_c0_80bd_library_fn_23_callers",
       "right_label": "ct_c0_813b_cluster_score6",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0562.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_813C_813F_309_562",
@@ -1429,8 +2235,14 @@
       "right_range": "C0:813C..C0:8155",
       "left_label": "ct_c0_80bd_library_fn_23_callers",
       "right_label": "ct_c0_813c_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0562.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_813C_8153_309_906",
@@ -1443,8 +2255,14 @@
       "right_range": "C0:813C..C0:8155",
       "left_label": "ct_c0_813b_dma_handler",
       "right_label": "ct_c0_813c_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0906.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_84A7_84BF_414_591",
@@ -1457,8 +2275,14 @@
       "right_range": "C0:84A7..C0:84C0",
       "left_label": "ct_c0_84a2_jsr_helper",
       "right_label": "ct_c0_84a7_dma_setup_score18",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0591.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_8719_8741_273_593",
@@ -1471,8 +2295,14 @@
       "right_range": "C0:8719..C0:8770",
       "left_label": "ct_c0_8703_complex_utility",
       "right_label": "ct_c0_8719_unknown_function_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0593.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_8756_8770_273_950",
@@ -1485,8 +2315,14 @@
       "right_range": "C0:8756..C0:8776",
       "left_label": "ct_c0_8719_unknown_function_score6_cluster",
       "right_label": "ct_c0_8756_dma_util",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0273.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_881E_8825_456_951",
@@ -1499,8 +2335,14 @@
       "right_range": "C0:881E..C0:8859",
       "left_label": "ct_c0_8805_graphics_init",
       "right_label": "ct_c0_881e_mode_setup_8callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0951.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_9168_9175_614_961",
@@ -1513,8 +2355,14 @@
       "right_range": "C0:9168..C0:91AC",
       "left_label": "ct_c0_9155_sprite_setup",
       "right_label": "ct_c0_9168_jsr_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0961.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_91AC_91AC_525_614",
@@ -1527,8 +2375,14 @@
       "right_range": "C0:91AC..C0:91BC",
       "left_label": "ct_c0_9168_jsr_handler",
       "right_label": "ct_c0_919f_function_3callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0614.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_919F_91AB_321_615",
@@ -1541,8 +2395,14 @@
       "right_range": "C0:919F..C0:91AC",
       "left_label": "ct_c0_919f_tiny_branch_score6_cluster",
       "right_label": "ct_c0_919f_phd_helper",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0321.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_91AC_91AC_525_615",
@@ -1555,8 +2415,14 @@
       "right_range": "C0:91AC..C0:91BC",
       "left_label": "ct_c0_919f_phd_helper",
       "right_label": "ct_c0_919f_function_3callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0615.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_970D_9720_323_895",
@@ -1569,8 +2435,14 @@
       "right_range": "C0:970D..C0:9725",
       "left_label": "ct_c0_9708_score8_control_function",
       "right_label": "ct_c0_970d_score7_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0323.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_9E7F_9E8F_547_1101",
@@ -1583,8 +2455,14 @@
       "right_range": "C0:9E7F..C0:9E9C",
       "left_label": "ct_c0_9e47_Graphics_handler_score8",
       "right_label": "ct_c0_9e7f_function_1caller",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1101.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_9F80_9F90_443_1112",
@@ -1597,8 +2475,14 @@
       "right_range": "C0:9F80..C0:9FB0",
       "left_label": "ct_c0_9f7f_function_21callers",
       "right_label": "ct_c0_9f80_VRAM_manager_score7",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0443.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_B262_B270_493_651",
@@ -1611,8 +2495,14 @@
       "right_range": "C0:B262..C0:B27A",
       "left_label": "ct_c0_b257_score7_cluster",
       "right_label": "ct_c0_b262_menu_handler_2callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0651.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_C7F2_C7FA_418_908",
@@ -1625,8 +2515,14 @@
       "right_range": "C0:C7F2..C0:C80A",
       "left_label": "ct_c0_c7a6_graphics_handler_5callers",
       "right_label": "ct_c0_c7f2_graphics_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0418.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_CAB5_CAD5_345_630",
@@ -1639,8 +2535,14 @@
       "right_range": "C0:CAB5..C0:CAD8",
       "left_label": "ct_c0_caae_flag_handler_score6_cluster",
       "right_label": "ct_c0_cab5_score7_fn",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0345.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_E687_E698_447_632",
@@ -1653,8 +2555,14 @@
       "right_range": "C0:E687..C0:E69C",
       "left_label": "ct_c0_e682_rep_prologue",
       "right_label": "ct_c0_e687_state_loader_score6",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0632.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C0_F875_F880_529_952",
@@ -1667,8 +2575,14 @@
       "right_range": "C0:F875..C0:F898",
       "left_label": "ct_c0_f860_hdma_init",
       "right_label": "ct_c0_f875_function_2callers",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0952.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_179C_17A0_579_580",
@@ -1681,8 +2595,14 @@
       "right_range": "C1:179C..C1:17A0",
       "left_label": "ct_c1_178e_dispatch_prologue",
       "right_label": "ct_c1_179c_dispatch_hub",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0580.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_17BC_17BE_581_582",
@@ -1695,8 +2615,14 @@
       "right_range": "C1:17BC..C1:17DC",
       "left_label": "ct_c1_17a5_dispatch_handler_dec",
       "right_label": "ct_c1_17bc_dispatch_handler_inc",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0581.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_4351_4362_1032_1034",
@@ -1709,8 +2635,14 @@
       "right_range": "C1:4351..C1:4369",
       "left_label": "ct_c1_434A",
       "right_label": "ct_c1_4351",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1032.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_4358_4362_1032_1035",
@@ -1723,8 +2655,14 @@
       "right_range": "C1:4358..C1:4370",
       "left_label": "ct_c1_434A",
       "right_label": "ct_c1_4358",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1032.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_435F_4362_1032_1037",
@@ -1737,8 +2675,14 @@
       "right_range": "C1:435F..C1:4377",
       "left_label": "ct_c1_434A",
       "right_label": "ct_c1_435F",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1032.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_4358_4369_1034_1035",
@@ -1751,8 +2695,14 @@
       "right_range": "C1:4358..C1:4370",
       "left_label": "ct_c1_4351",
       "right_label": "ct_c1_4358",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1034.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_435F_4369_1034_1037",
@@ -1765,8 +2715,14 @@
       "right_range": "C1:435F..C1:4377",
       "left_label": "ct_c1_4351",
       "right_label": "ct_c1_435F",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1034.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_435F_4370_1035_1037",
@@ -1779,8 +2735,14 @@
       "right_range": "C1:435F..C1:4377",
       "left_label": "ct_c1_4358",
       "right_label": "ct_c1_435F",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1035.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_4375_4377_1033_1037",
@@ -1793,8 +2755,14 @@
       "right_range": "C1:4375..C1:438D",
       "left_label": "ct_c1_435F",
       "right_label": "ct_c1_4375",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1037.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_4383_438D_1033_1038",
@@ -1807,8 +2775,14 @@
       "right_range": "C1:4383..C1:439B",
       "left_label": "ct_c1_4375",
       "right_label": "ct_c1_4383",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/legacy/pass1033.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_4AEB_4B00_573_586",
@@ -1821,8 +2795,14 @@
       "right_range": "C1:4AEB..C1:4B17",
       "left_label": "ct_c1_4a6b_hub_27_callers",
       "right_label": "ct_c1_4aeb_library_hub",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0573.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C1_8E9B_8EAA_608_621",
@@ -1835,8 +2815,14 @@
       "right_range": "C1:8E9B..C1:8EAA",
       "left_label": "ct_c1_8e95_score8_cluster",
       "right_label": "ct_c1_8e9b_handler_dispatch",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0608.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C2_8249_82C0_575_598",
@@ -1849,8 +2835,14 @@
       "right_range": "C2:8249..C2:82D5",
       "left_label": "ct_c2_823c_mode_switch_fn",
       "right_label": "ct_c2_8249_8000_region_fn",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0575.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C5_9F72_9F89_797_827",
@@ -1863,8 +2855,14 @@
       "right_range": "C5:9F72..C5:9F98",
       "left_label": "ct_c5_9f66_score7_cluster",
       "right_label": "ct_c5_9f72_rep_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0797.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C5_C1E6_C204_635_708",
@@ -1877,8 +2875,14 @@
       "right_range": "C5:C1E6..C5:C204",
       "left_label": "ct_c5_c1e6_jsr_prologue",
       "right_label": "ct_c5_c1e6_jsr_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0635.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_01D2_01EB_636_641",
@@ -1891,8 +2895,14 @@
       "right_range": "C4:01D2..C4:01EB",
       "left_label": "ct_c4_01d2_jsr_entry",
       "right_label": "ct_c4_01d2_jsr_entry",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0636.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_02BB_02D8_637_642",
@@ -1905,8 +2915,14 @@
       "right_range": "C4:02BB..C4:02D8",
       "left_label": "ct_c4_02bb_phb_prologue",
       "right_label": "ct_c4_02bb_phb_bank_mgmt",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0637.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_0E8C_0E96_646_666",
@@ -1919,8 +2935,14 @@
       "right_range": "C4:0E8C..C4:0EB8",
       "left_label": "ct_c4_0e7a_island_score7",
       "right_label": "ct_c4_0e8c_php_stack_frame",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0666.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_4074_4080_691_692",
@@ -1933,8 +2955,14 @@
       "right_range": "C4:4074..C4:4095",
       "left_label": "ct_c4_4062_score4_handler",
       "right_label": "ct_c4_4074_score4_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0691.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_4091_4095_692_698",
@@ -1947,8 +2975,14 @@
       "right_range": "C4:4091..C4:40B0",
       "left_label": "ct_c4_4074_score4_handler",
       "right_label": "ct_c4_4091_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0692.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_41BA_41E0_688_745",
@@ -1961,8 +2995,14 @@
       "right_range": "C4:41BA..C4:41E0",
       "left_label": "ct_c4_41ba_score6_handler",
       "right_label": "ct_c4_41ba_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0688.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_481E_4840_689_746",
@@ -1975,8 +3015,14 @@
       "right_range": "C4:481E..C4:4840",
       "left_label": "ct_c4_481e_score6_handler",
       "right_label": "ct_c4_481e_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0689.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_4ABB_4AF0_690_747",
@@ -1989,8 +3035,14 @@
       "right_range": "C4:4ABB..C4:4AF0",
       "left_label": "ct_c4_4abb_score6_handler",
       "right_label": "ct_c4_4abb_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0690.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_4FBD_4FC0_687_697",
@@ -2003,8 +3055,14 @@
       "right_range": "C4:4FBD..C4:4FCA",
       "left_label": "ct_c4_4fb5_score4_handler",
       "right_label": "ct_c4_4fbd_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0697.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_7732_7748_732_733",
@@ -2017,8 +3075,14 @@
       "right_range": "C4:7732..C4:774A",
       "left_label": "ct_c4_7730_handler_score7",
       "right_label": "ct_c4_7732_handler_score7",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0732.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_8010_8038_647_790",
@@ -2031,8 +3095,14 @@
       "right_range": "C4:8010..C4:8038",
       "left_label": "ct_c4_8010_multi_entry_hub",
       "right_label": "ct_c4_8010_hub_entry",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0647.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_C069_C072_667_738",
@@ -2045,8 +3115,14 @@
       "right_range": "C4:C069..C4:C072",
       "left_label": "ct_c4_c069_dual_return_hub",
       "right_label": "ct_c4_c069_cluster_score7",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0667.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_C0DF_C0F8_640_679",
@@ -2059,8 +3135,14 @@
       "right_range": "C4:C0DF..C4:C0F8",
       "left_label": "ct_c4_c0df_cross_bank_fn",
       "right_label": "ct_c4_c0df_php_stackframe",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0640.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_C4_C771_C77C_681_739",
@@ -2073,8 +3155,14 @@
       "right_range": "C4:C771..C4:C77C",
       "left_label": "ct_c4_c771_utility",
       "right_label": "ct_c4_c771_handler_score6",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0681.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_CF_2014_2024_969_970",
@@ -2087,8 +3175,14 @@
       "right_range": "CF:2014..CF:202E",
       "left_label": "ct_cf_200b_php_entry",
       "right_label": "ct_cf_2014_php_routine",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0969.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_CF_2027_202E_970_971",
@@ -2101,8 +3195,14 @@
       "right_range": "CF:2027..CF:2040",
       "left_label": "ct_cf_2014_php_routine",
       "right_label": "ct_cf_2027_jsl_longcall",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0970.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_CF_2040_2040_971_972",
@@ -2115,8 +3215,14 @@
       "right_range": "CF:2040..CF:205C",
       "left_label": "ct_cf_2027_jsl_longcall",
       "right_label": "ct_cf_2040_phd_dispatch",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0971.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_CF_383A_3859_978_979",
@@ -2129,8 +3235,14 @@
       "right_range": "CF:383A..CF:3861",
       "left_label": "ct_cf_3833_pha_handler",
       "right_label": "ct_cf_383a_lda_init",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0978.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_CF_383D_3859_978_980",
@@ -2143,8 +3255,14 @@
       "right_range": "CF:383D..CF:3863",
       "left_label": "ct_cf_3833_pha_handler",
       "right_label": "ct_cf_383d_ldx_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0978.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_CF_383D_3861_979_980",
@@ -2157,8 +3275,14 @@
       "right_range": "CF:383D..CF:3863",
       "left_label": "ct_cf_383a_lda_init",
       "right_label": "ct_cf_383d_ldx_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0979.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_CF_C0B4_C0D0_716_816",
@@ -2171,8 +3295,14 @@
       "right_range": "CF:C0B4..CF:C0D8",
       "left_label": "ct_cf_c0b0_score6_cluster",
       "right_label": "ct_cf_c0b4_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0816.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_D1_F661_F69B_780_844",
@@ -2185,8 +3315,14 @@
       "right_range": "D1:F661..D1:F69B",
       "left_label": "ct_d1_f661_score8_cluster",
       "right_label": "ct_d1_f661_score8_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0780.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_D6_002A_0043_848_857",
@@ -2199,8 +3335,14 @@
       "right_range": "D6:002A..D6:0043",
       "left_label": "ct_d6_002a_hub_entry",
       "right_label": "ct_d6_002a_hub_entry",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0848.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_D6_3AF0_3B1E_839_861",
@@ -2213,8 +3355,14 @@
       "right_range": "D6:3AF0..D6:3B1E",
       "left_label": "ct_d6_3af0_score8_cluster",
       "right_label": "ct_d6_3af0_score8_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0839.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_D6_D47B_D4A4_840_862",
@@ -2227,8 +3375,14 @@
       "right_range": "D6:D47B..D6:D4A4",
       "left_label": "ct_d6_d47b_score8_cluster",
       "right_label": "ct_d6_d47b_score8_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0840.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_D4_0A2F_0A46_866_879",
@@ -2241,8 +3395,14 @@
       "right_range": "D4:0A2F..D4:0A46",
       "left_label": "ct_d4_0a2f_phd_handler",
       "right_label": "ct_d4_0a2f_phd_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0866.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_D4_0FF5_100A_867_881",
@@ -2255,8 +3415,14 @@
       "right_range": "D4:0FF5..D4:100A",
       "left_label": "ct_d4_0ff5_php_handler",
       "right_label": "ct_d4_0ff5_php_handler",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0867.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DD_1EFC_1F0F_902_914",
@@ -2269,8 +3435,14 @@
       "right_range": "DD:1EFC..DD:1F40",
       "left_label": "ct_dd_1ef8_score11_cluster",
       "right_label": "ct_dd_1efc_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0902.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DD_1F30_1F40_914_915",
@@ -2283,8 +3455,14 @@
       "right_range": "DD:1F30..DD:1F80",
       "left_label": "ct_dd_1efc_score6_cluster",
       "right_label": "ct_dd_1f30_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0914.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DD_1F34_1F40_914_916",
@@ -2297,8 +3475,14 @@
       "right_range": "DD:1F34..DD:1F81",
       "left_label": "ct_dd_1efc_score6_cluster",
       "right_label": "ct_dd_1f34_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0914.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DD_1F34_1F80_915_916",
@@ -2311,8 +3495,14 @@
       "right_range": "DD:1F34..DD:1F81",
       "left_label": "ct_dd_1f30_score6_cluster",
       "right_label": "ct_dd_1f34_score6_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0915.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DD_4B4D_4B69_891_926",
@@ -2325,8 +3515,14 @@
       "right_range": "DD:4B4D..DD:4B69",
       "left_label": "ct_dd_4b4d_score13_cluster",
       "right_label": "ct_dd_4b4d_score4_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0891.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DD_973D_9755_849_927",
@@ -2339,8 +3535,14 @@
       "right_range": "DD:973D..DD:975F",
       "left_label": "ct_dd_973d_score4_cluster",
       "right_label": "ct_dd_973d_score20_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0927.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DD_9B4D_9B65_850_928",
@@ -2353,8 +3555,14 @@
       "right_range": "DD:9B4D..DD:9B6F",
       "left_label": "ct_dd_9b4d_score4_cluster",
       "right_label": "ct_dd_9b4d_score20_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (containment)",
+      "evidence": [
+        "passes/manifests/pass0928.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DE_8B5D_8B60_838_852",
@@ -2367,8 +3575,14 @@
       "right_range": "DE:8B5D..DE:8B7F",
       "left_label": "ct_de_8b35_score18_cluster",
       "right_label": "ct_de_8b5d_score18_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (partial_overlap)",
+      "evidence": [
+        "passes/manifests/pass0838.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     {
       "conflict_id": "conf_DF_6497_64C0_842_856",
@@ -2381,8 +3595,14 @@
       "right_range": "DF:6497..DF:64C0",
       "left_label": "ct_df_6497_score12_cluster",
       "right_label": "ct_df_6497_score12_cluster",
-      "rationale": "Historical multi-pass seam overlap preserved via interval union",
-      "reviewed": true
+      "rationale": "Historical multi-pass seam overlap preserved via interval union (exact_duplicate)",
+      "evidence": [
+        "passes/manifests/pass0842.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:39.043615+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     }
   ]
 }
