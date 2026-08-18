@@ -18,6 +18,11 @@ def calculate_manifest_set_digest(manifests: List[CanonicalManifest]) -> str:
         h.update(serialized.encode('utf-8'))
     return h.hexdigest()
 
+def calculate_generator_source_digest(path: Path) -> str:
+    """Hash generator source independent of the checkout's newline convention."""
+    source = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(source).hexdigest()
+
 def get_git_provenance() -> Dict[str, Any]:
     """Retrieve current Git commit, tree, branch, and dirty status."""
     try:
@@ -73,7 +78,7 @@ def create_provenance_header(
     generator_candidates = [root / generator_name, root / "tools" / "scripts" / generator_name]
     generator_path = next((path for path in generator_candidates if path.is_file()), None)
     if generator_path is not None:
-        header["generator_source_digest"] = hashlib.sha256(generator_path.read_bytes()).hexdigest()
+        header["generator_source_digest"] = calculate_generator_source_digest(generator_path)
     if manifests is not None:
         header["manifest_count"] = len(manifests)
         header["manifest_set_digest"] = calculate_manifest_set_digest(manifests)
