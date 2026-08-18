@@ -8,7 +8,7 @@
 | Last Reviewed Commit | `c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0` |
 | Plan | `docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md` |
 | Last Updated | 2026-08-18 |
-| Current State | **Implementation and clean report provenance complete; independent acceptance pending** |
+| Current State | **Non-destructive remediation complete; all release acceptance gates pass** |
 
 ## Phase status
 
@@ -25,7 +25,7 @@
 | 8 — Reports and provenance | Complete | Drift checks are read-only and pass. Canonical reports were regenerated from clean implementation commit `c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0`; clean-provenance enforcement passes across newline conventions. |
 | 9 — Binary and cache hygiene | Current tree complete; history cleanup deferred | 82 tracked ZIPs (284,204,840 bytes) removed from the index and inventoried by hash; no ROM/ZIP/raw-xref cache is tracked. Reachable-history rewrite remains separately gated. |
 | 10 — Documentation reconciliation | Complete | Current seam, coverage, archive policy, progress metrics, and status claims are reconciled. |
-| 11 — Independent clean acceptance | Pending release workflow | Local acceptance passes. A fresh-clone/clean-detached-worktree acceptance run requires committed inputs. |
+| 11 — Independent clean acceptance | Complete | The 12-step strict acceptance suite passes from a fresh detached worktree at commit `ffbb234`; 39 tests pass and report drift remains current across checkout newline conventions. |
 
 ## Verified metrics
 
@@ -38,8 +38,6 @@
 - Pass gaps: 106 baseline-absence records with reachable commit and existing evidence paths.
 - Tests: 39 passing; Pyflakes: 0 findings; doctor: 8/8; canonical JSON/YAML artifact report: 4,401 valid, 0 errors.
 
-## Remaining release actions
+## Separately gated history maintenance
 
-1. Commit the clean-source report refresh separately.
-2. Run `python -m tools.ctrepo acceptance --strict` from a fresh clone or clean detached worktree.
-3. Keep Git-history cleanup deferred unless maintainers separately approve the coordinated rewrite runbook.
+The current tree is release-ready. Historical ROM/archive blobs remain reachable from older commits; keep Git-history cleanup deferred unless maintainers separately approve the coordinated rewrite runbook.

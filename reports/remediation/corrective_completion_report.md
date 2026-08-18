@@ -1,6 +1,6 @@
 # Corrective Remediation Implementation Verification
 
-> This is an implementation verification report, not a final clean-baseline release sign-off. Unsupported waiver, gap, and independent-acceptance claims from the prior version remain removed; canonical report provenance has now been regenerated from a clean implementation commit.
+> This is the clean-baseline release sign-off for the non-destructive remediation. Unsupported waiver and gap claims from the prior version remain removed; clean report provenance and independent acceptance are now verified from committed states.
 
 | Field | Value |
 |---|---|
@@ -8,7 +8,7 @@
 | Branch | `live-work-from-pass166` |
 | Verification date | 2026-08-18 |
 | Implementation status | **PASS** |
-| Release status | **PENDING INDEPENDENT CLEAN ACCEPTANCE** |
+| Release status | **PASS** |
 
 ## Implemented corrections
 
@@ -34,13 +34,16 @@ Branch state audit: ok; 106 gaps accounted
 Pytest: 39 passed
 Coverage: 59,050 unique bytes across 961 manifests
 Toolkit Doctor: PASS (8/8)
-Artifact Validation: 4,402 valid JSON/YAML files, 0 errors (temporary acceptance output; canonical self-excluding report scans 4,401)
+Artifact Validation: 4,397 valid JSON/YAML files, 0 errors (fresh detached worktree)
 Binary/cache policy: current tracked tree is clean
 Report drift: deterministic payloads and provenance are current
 Acceptance suite: PASSED (12/12 steps)
 ```
 
-## Explicitly pending
+## Independent acceptance
 
-- Phase 11 independent acceptance must run from a fresh clone or clean detached worktree after those commits exist.
+The complete 12-step strict acceptance suite passed from a fresh detached worktree at commit `ffbb234`, including byte compilation, Pyflakes, policy validation, conservation, ownership, branch-state, 39 tests, coverage, doctor, artifact, binary-policy, and canonical report-drift gates.
+
+## Separately gated
+
 - Historical ROM/archive blobs remain reachable. Rewriting shared Git history is destructive and remains subject to separate maintainer approval under `docs/runbooks/git_history_cleanup.md`.
