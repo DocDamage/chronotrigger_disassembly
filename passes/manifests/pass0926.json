@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "pass_number": 926,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "DD:4B4D..DD:4B69",
+      "kind": "superseded",
+      "label": "ct_dd_4b4d_score4_cluster",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "parent_range": "DD:4B4D..DD:4B69",
+      "parent_label": "ct_dd_4b4d_score13_cluster",
+      "notes": "Superseded duplicate of Pass 891 (ct_dd_4b4d_score13_cluster)"
+    }
+  ],
+  "new_labels": [
+    "ct_dd_4b4d_score4_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass926.json": "passes/manifests/legacy/pass926.json"
+  },
+  "notes": []
+}

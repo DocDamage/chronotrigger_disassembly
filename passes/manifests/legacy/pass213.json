@@ -1,0 +1,28 @@
+{
+  "pass_number": 213,
+  "pass_name": "cluster_promotion_c7_ca7e_score_6",
+  "closed_ranges": [
+    {
+      "range": "C7:CA7E..C7:CA96",
+      "kind": "owner",
+      "label": "ct_c7_ca7e_unknown_function_score_6_cluster",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 6,
+        "cluster_width": 25,
+        "region": "CA00 (between C900-CB00)",
+        "note": "Score-6 cluster found in systematic scan"
+      }
+    }
+  ],
+  "promotion_reason": "Cluster promotion - score 6 with 25 bytes width. Located in CA00 region between promoted 924D-9265 and CBAF-CBC7.",
+  "previous_status": "frozen_no_anchors",
+  "risks": ["No external anchors"],
+  "promoted_by": "session_19_cluster_scan",
+  "date": "2026-04-05",
+  "notes": [
+    "Score 6 cluster: 25 bytes",
+    "Found in systematic C7 scan",
+    "CA00 region coverage"
+  ]
+}

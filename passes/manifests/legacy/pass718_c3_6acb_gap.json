@@ -1,0 +1,22 @@
+{
+  "pass_number": 718,
+  "bank": "C3",
+  "start_address": "C3:6ACB",
+  "end_address": "C3:6AE5",
+  "label": "ct_c3_6acb_gap_handler",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:6ACD",
+  "prologue_byte": "08",
+  "prologue_mnemonic": "PHP",
+  "backtrack_distance": 2,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:6000-6FFF high-density region. PHP prologue with clean stack behavior.",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6ACD",
+    "PHP (push processor status) is strong function prologue indicator",
+    "Low backtrack distance suggests clean function boundary",
+    "Candidate identified in previously unmapped high-density region C3:6000-6FFF"
+  ]
+}

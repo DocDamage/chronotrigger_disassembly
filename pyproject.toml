@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chrono-trigger-disassembly-tools"
+version = "2.0.0"
+description = "Tooling, validation, and analytics library for the Chrono Trigger SNES disassembly project"
+authors = [{ name = "Chrono Trigger Disassembly Team" }]
+requires-python = ">=3.10"
+dependencies = [
+    "jsonschema>=4.20.0",
+    "PyYAML>=6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pyflakes>=3.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

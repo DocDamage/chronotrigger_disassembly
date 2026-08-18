@@ -1,15 +1,32 @@
 {
-  "pass": 1036,
-  "bank": "C1",
-  "session": 21,
-  "range": "C1:431B..C1:432B",
-  "score": 5,
-  "width": 17,
-  "call_count": 0,
-  "branch_count": 1,
-  "return_count": 1,
-  "ascii_ratio": 0.294,
-  "source": "C1:4300-4450_preceding_code",
-  "reason": "Pre-mega-cluster code at C1:431B. Score 5 island, likely entry/trampoline.",
-  "timestamp": "2026-04-08T15:20:00-04:00"
+  "schema_version": 2,
+  "pass_number": 1036,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C1:431B..C1:432B",
+      "kind": "code_owner",
+      "label": "ct_c1_431B",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c1_431B"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass1036.json": "passes/manifests/pass1036.json"
+  },
+  "notes": []
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "pass_number": 849,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "DD:973D..DD:975F",
+      "kind": "code_helper",
+      "label": "ct_dd_973d_score20_cluster",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "parent_range": "DD:973D..DD:9770",
+      "parent_label": "ct_dd_973d_score19_cluster"
+    }
+  ],
+  "new_labels": [
+    "ct_dd_973d_score20_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass849.json": "passes/manifests/legacy/pass849.json"
+  },
+  "notes": []
+}

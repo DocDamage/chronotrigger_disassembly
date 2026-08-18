@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "pass_number": 1213,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "live_seam_after_pass": "C3:4000..",
+  "closed_ranges": [
+    {
+      "range": "C3:3800..C3:38FF",
+      "kind": "data",
+      "label": "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:3900..C3:39FF",
+      "kind": "data",
+      "label": "ct_c3_3900_frozen_branch_fed_pocket_3_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:3A00..C3:3AFF",
+      "kind": "data",
+      "label": "ct_c3_3a00_frozen_mixed_command_data_3_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:3B00..C3:3BFF",
+      "kind": "data",
+      "label": "ct_c3_3b00_frozen_branch_fed_pocket_1_hard_bad_start",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:3C00..C3:3CFF",
+      "kind": "data",
+      "label": "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:3D00..C3:3DFF",
+      "kind": "data",
+      "label": "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:3E00..C3:3EFF",
+      "kind": "data",
+      "label": "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:3F00..C3:3FFF",
+      "kind": "data",
+      "label": "ct_c3_3f00_frozen_mixed_command_data_fragments_no_promotable_clusters",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts",
+    "ct_c3_3900_frozen_branch_fed_pocket_3_hard_bad_starts",
+    "ct_c3_3a00_frozen_mixed_command_data_3_hard_bad_starts",
+    "ct_c3_3b00_frozen_branch_fed_pocket_1_hard_bad_start",
+    "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts",
+    "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start",
+    "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts",
+    "ct_c3_3f00_frozen_mixed_command_data_fragments_no_promotable_clusters"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass1213_c3_s34.json": "passes/manifests/legacy/pass1213_c3_s34.json"
+  },
+  "notes": []
+}

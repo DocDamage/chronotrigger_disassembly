@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "pass_number": 749,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "D1:0E59..D1:0E7B",
+      "kind": "code_helper",
+      "label": "ct_d1_0e59_score7_cluster",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "parent_range": "D1:0E59..D1:0E86",
+      "parent_label": "ct_d1_0e59_score9_cluster"
+    }
+  ],
+  "new_labels": [
+    "ct_d1_0e59_score7_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass749.json": "passes/manifests/legacy/pass749.json"
+  },
+  "notes": []
+}

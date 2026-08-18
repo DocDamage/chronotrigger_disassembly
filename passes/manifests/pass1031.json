@@ -1,15 +1,35 @@
 {
-  "pass": 1031,
-  "bank": "C3",
-  "session": 21,
-  "range": "C3:4548..C3:459F",
-  "score": 13,
-  "width": 88,
-  "call_count": 0,
-  "branch_count": 5,
-  "return_count": 25,
-  "ascii_ratio": 0.398,
-  "source": "C3:4000-5000_scan_cluster",
-  "reason": "Highest score cluster in rich region C3:4000-5000",
-  "timestamp": "2026-04-08T15:15:00-04:00"
+  "schema_version": 2,
+  "pass_number": 1031,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:4548..C3:459F",
+      "kind": "superseded",
+      "label": "ct_c3_4548",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_single_function": true
+      },
+      "parent_range": "C3:4548..C3:459F",
+      "parent_label": "ct_c3_4548_score13_cluster",
+      "notes": "Superseded duplicate of Pass 940 (ct_c3_4548_score13_cluster)"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_4548"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass1031.json": "passes/manifests/pass1031.json"
+  },
+  "notes": []
 }

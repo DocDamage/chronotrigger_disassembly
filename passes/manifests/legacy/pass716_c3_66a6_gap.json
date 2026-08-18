@@ -1,0 +1,21 @@
+{
+  "pass_number": 716,
+  "bank": "C3",
+  "start_address": "C3:66A6",
+  "end_address": "C3:66C8",
+  "label": "ct_c3_66a6_gap_handler",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:66B0",
+  "prologue_byte": "A9",
+  "prologue_mnemonic": "LDA#",
+  "backtrack_distance": 10,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:6000-6FFF high-density region. LDA# prologue with RTS evidence.",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:66B0",
+    "Strong LDA# immediate-load prologue typical of function initialization",
+    "Candidate identified in previously unmapped high-density region C3:6000-6FFF"
+  ]
+}

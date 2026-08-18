@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "pass_number": 863,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "D6:D94C..D6:D96A",
+      "kind": "code_owner",
+      "label": "ct_d6_d94c_score8_cluster",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    }
+  ],
+  "new_labels": [
+    "ct_d6_d94c_score8_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass863.json": "passes/manifests/legacy/pass863.json"
+  },
+  "notes": []
+}

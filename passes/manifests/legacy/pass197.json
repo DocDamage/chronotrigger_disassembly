@@ -1,0 +1,37 @@
+{
+  "pass_number": 197,
+  "pass_name": "extension_promotion_c7_c1b6_cluster_score_6",
+  "closed_ranges": [
+    {
+      "range": "C7:C1B6..C7:C1CE",
+      "kind": "owner",
+      "label": "ct_c7_c1b6_unknown_function_cluster_extension",
+      "confidence": "high",
+      "evidence": {
+        "cluster_score": 6,
+        "cluster_width": 25,
+        "cluster_children": 1,
+        "relation_to_c193": "adjacent_3_byte_gap",
+        "gap_bytes": "C1B3-C1B5: CA 06 C3",
+        "backtrack_candidate": "C1EF->C1FF (score 4, CPY #imm)",
+        "note": "Natural extension of C193 promotion - adjacent cluster"
+      }
+    }
+  ],
+  "promotion_reason": "Extension promotion - adjacent score-6 cluster to pass 196. Small 3-byte gap (CA 06 C3) between C193-C1B2 and C1B6-C1CE suggests contiguous code region.",
+  "previous_status": "frozen_adjacent_to_promoted",
+  "risks": [
+    "3-byte gap may be data or padding",
+    "No external anchors",
+    "Extension promotion - depends on C193 validity"
+  ],
+  "promoted_by": "session_18_extension_decision_c1b6",
+  "date": "2026-04-05",
+  "notes": [
+    "Score 6 cluster: 25 bytes width",
+    "Adjacent to C193-C1B2 (pass 196) with only 3-byte gap",
+    "Combined region: C193-C1CE (52 bytes contiguous code)",
+    "Next cluster C1ED-C206 (score 5) only 30 bytes away",
+    "Potential future extension toward C300"
+  ]
+}

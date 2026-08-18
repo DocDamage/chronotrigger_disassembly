@@ -1,0 +1,324 @@
+{
+  "schema_version": 2,
+  "pass_number": 1220,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:706B..C3:7090",
+      "kind": "code_owner",
+      "label": "ct_c3_706B",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Score 4, ASCII 0.158, clean_start 0x38",
+        "source": "backtrack"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:706B",
+          "range": "C3:706B..C3:7090",
+          "source": "backtrack",
+          "confidence": "high",
+          "reason": "Score 4, ASCII 0.158, clean_start 0x38"
+        }
+      }
+    },
+    {
+      "range": "C3:70ED..C3:70FF",
+      "kind": "code_helper",
+      "label": "ct_c3_70ED",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Score 4, ASCII 0.250, clean_start 0x20",
+        "source": "backtrack"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:70ED",
+          "range": "C3:70ED..C3:70FF",
+          "source": "backtrack",
+          "confidence": "high",
+          "reason": "Score 4, ASCII 0.250, clean_start 0x20"
+        }
+      },
+      "parent_range": "C3:70E0..C3:7100",
+      "parent_label": "ct_c3_70E0"
+    },
+    {
+      "range": "C3:713E..C3:7159",
+      "kind": "code_owner",
+      "label": "ct_c3_713E",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Score 4, ASCII 0.286, clean_start 0x20",
+        "source": "backtrack"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:713E",
+          "range": "C3:713E..C3:7159",
+          "source": "backtrack",
+          "confidence": "high",
+          "reason": "Score 4, ASCII 0.286, clean_start 0x20"
+        }
+      }
+    },
+    {
+      "range": "C3:7207..C3:7228",
+      "kind": "code_owner",
+      "label": "ct_c3_7207",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Score 6, ASCII 0.294, clean_start 0x08",
+        "source": "backtrack"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:7207",
+          "range": "C3:7207..C3:7228",
+          "source": "backtrack",
+          "confidence": "high",
+          "reason": "Score 6, ASCII 0.294, clean_start 0x08"
+        }
+      }
+    },
+    {
+      "range": "C3:70E0..C3:7100",
+      "kind": "code_owner",
+      "label": "ct_c3_70E0",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: C3:88C9",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:70E0",
+          "range": "C3:70E0..C3:7100",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:88C9"
+        }
+      }
+    },
+    {
+      "range": "C3:7210..C3:7230",
+      "kind": "code_owner",
+      "label": "ct_c3_7210",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: C3:4AAC",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:7210",
+          "range": "C3:7210..C3:7230",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:4AAC"
+        }
+      }
+    },
+    {
+      "range": "C3:724E..C3:726E",
+      "kind": "code_owner",
+      "label": "ct_c3_724E",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: C3:A8C5",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:724E",
+          "range": "C3:724E..C3:726E",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:A8C5"
+        }
+      }
+    },
+    {
+      "range": "C3:7385..C3:73A5",
+      "kind": "code_owner",
+      "label": "ct_c3_7385",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: C3:2489",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:7385",
+          "range": "C3:7385..C3:73A5",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:2489"
+        }
+      }
+    },
+    {
+      "range": "C3:74F5..C3:7515",
+      "kind": "code_owner",
+      "label": "ct_c3_74F5",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: C3:466C",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:74F5",
+          "range": "C3:74F5..C3:7515",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:466C"
+        }
+      }
+    },
+    {
+      "range": "C3:7534..C3:7554",
+      "kind": "code_owner",
+      "label": "ct_c3_7534",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: C3:8E66",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:7534",
+          "range": "C3:7534..C3:7554",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:8E66"
+        }
+      }
+    },
+    {
+      "range": "C3:76C3..C3:76E3",
+      "kind": "code_owner",
+      "label": "ct_c3_76C3",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: FC:BA5A (cross-bank call)",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:76C3",
+          "range": "C3:76C3..C3:76E3",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: FC:BA5A (cross-bank call)"
+        }
+      }
+    },
+    {
+      "range": "C3:77AB..C3:77CB",
+      "kind": "code_owner",
+      "label": "ct_c3_77AB",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "reason": "Verified caller: C3:57FD",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:77AB",
+          "range": "C3:77AB..C3:77CB",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:57FD"
+        }
+      }
+    },
+    {
+      "range": "C3:7297..C3:72A9",
+      "kind": "data",
+      "label": "ct_c3_7297",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_frozen": {
+          "range": "C3:7297..C3:72A9",
+          "reason": "High ASCII (0.789) - likely text/data"
+        }
+      }
+    },
+    {
+      "range": "C3:727B..C3:7285",
+      "kind": "data",
+      "label": "ct_c3_727B",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_frozen": {
+          "range": "C3:727B..C3:7285",
+          "reason": "High ASCII (0.909) - likely text/data"
+        }
+      }
+    },
+    {
+      "range": "C3:7331..C3:7340",
+      "kind": "data",
+      "label": "ct_c3_7331",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_frozen": {
+          "range": "C3:7331..C3:7340",
+          "reason": "High ASCII (0.938) - text/data, multiple returns"
+        }
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c3_706B",
+    "ct_c3_70ED",
+    "ct_c3_713E",
+    "ct_c3_7207",
+    "ct_c3_70E0",
+    "ct_c3_7210",
+    "ct_c3_724E",
+    "ct_c3_7385",
+    "ct_c3_74F5",
+    "ct_c3_7534",
+    "ct_c3_76C3",
+    "ct_c3_77AB",
+    "ct_c3_7297",
+    "ct_c3_727B",
+    "ct_c3_7331"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass1220_c3_7000.json": "passes/manifests/legacy/pass1220_c3_7000.json"
+  },
+  "notes": [
+    "Region is predominantly text_ascii_heavy (6/8 pages)",
+    "2 pages show mixed_command_data at C3:7000-71FF",
+    "Most pages require manual_owner_boundary_review",
+    "Found 8 weak targets with verified external callers",
+    "7 high-confidence backtrack candidates identified (score>=4, ASCII<0.4)",
+    "C3:76C3 has cross-bank caller from FC:BA5A (notable)"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "pass_number": 992,
+  "bank": "C3",
+  "start_address": "C3:A3E2",
+  "end_address": "C3:A406",
+  "label": "ct_c3_a3e2_jsr_entry",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "backtrack_score_6",
+  "target": "C3:A3E8",
+  "prologue_byte": "20",
+  "prologue_mnemonic": "JSR",
+  "backtrack_distance": 6,
+  "score": 6,
+  "promotion_reason": "Score-6 candidate in C3:A000 region. JSR prologue with RTS evidence.",
+  "notes": [
+    "Entry point discovered via owner backtrack",
+    "Strong JSR prologue typical of function entry",
+    "37-byte compact function"
+  ]
+}

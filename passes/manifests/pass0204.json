@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "pass_number": 204,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C7:7488..C7:748A",
+      "kind": "code_owner",
+      "label": "ct_c7_7488_jsr_to_b188",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "instruction": "JSR $B188",
+        "bytes": "20 88 B1",
+        "anchor_target": "C7:B188",
+        "anchor_target_status": "promoted_pass_193",
+        "note": "Strong anchor to promoted B000-B1FF"
+      }
+    }
+  ],
+  "new_labels": [
+    "ct_c7_7488_jsr_to_b188"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass204.json": "passes/manifests/legacy/pass204.json"
+  },
+  "notes": []
+}

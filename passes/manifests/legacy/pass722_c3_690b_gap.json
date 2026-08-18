@@ -1,0 +1,22 @@
+{
+  "pass_number": 722,
+  "bank": "C3",
+  "start_address": "C3:690B",
+  "end_address": "C3:6930",
+  "label": "ct_c3_690b_gap_handler",
+  "kind": "owner",
+  "confidence": "medium-high",
+  "source": "backtrack_score_4",
+  "target": "C3:6918",
+  "prologue_byte": "0B",
+  "prologue_mnemonic": "PHD",
+  "backtrack_distance": 13,
+  "score": 4,
+  "promotion_reason": "Score-4 candidate in C3:6900 page. PHD prologue (strong function entry signal).",
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6918",
+    "PHD (push direct page register) is very strong function prologue indicator",
+    "Larger backtrack distance suggests function preamble before main body",
+    "Local cluster C3:6931..C3:6939 shows branch and return evidence"
+  ]
+}

@@ -1,0 +1,10 @@
+python : usage: score_target_owner_backtrack_v1.py [-h] --rom ROM --range RANGE_TEXT
+At line:1 char:52
++ ... isassembly; python tools\scripts\score_target_owner_backtrack_v1.py - ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (usage: score_ta...ange RANGE_TEXT:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+                                          [--max-back MAX_BACK]
+                                          [--lookahead LOOKAHEAD] [--json]
+score_target_owner_backtrack_v1.py: error: the following arguments are required: --range

@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "pass_number": 879,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "D4:0A2F..D4:0A46",
+      "kind": "superseded",
+      "label": "ct_d4_0a2f_phd_handler",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "parent_range": "D4:0A2F..D4:0A46",
+      "parent_label": "ct_d4_0a2f_phd_handler",
+      "notes": "Superseded duplicate of Pass 866 (ct_d4_0a2f_phd_handler)"
+    }
+  ],
+  "new_labels": [
+    "ct_d4_0a2f_phd_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass879.json": "passes/manifests/legacy/pass879.json"
+  },
+  "notes": []
+}

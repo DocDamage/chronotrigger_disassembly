@@ -1,0 +1,12 @@
+python : usage: build_call_anchor_report_v3.py [-h] --rom ROM --target TARGET
+At line:1 char:52
++ ... isassembly; python tools\scripts\build_call_anchor_report_v3.py --rom ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (usage: build_ca...--target TARGET:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+                                      [--manifests-dir MANIFESTS_DIR]
+                                      [--sessions-dir SESSIONS_DIR]
+                                      [--closed-ranges-snapshot CLOSED_RANGES_SNAPSHOT]
+                                      [--only-valid] [--json]
+build_call_anchor_report_v3.py: error: the following arguments are required: --target

@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "pass_number": 403,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C0:34EE..C0:3501",
+      "kind": "code_helper",
+      "label": "CT_C0_34EE_MVN_HANDLER",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_target": {
+          "addr": "C0:34EE",
+          "label": "CT_C0_34EE_MVN_HANDLER",
+          "score": 6,
+          "callers": 1,
+          "start_byte": "A9",
+          "start_type": "LDA",
+          "end_marker": "RTS",
+          "verified": true
+        }
+      },
+      "parent_range": "C0:34EE..C0:3540",
+      "parent_label": "ct_c0_34ee_unknown_function_score6_cluster"
+    }
+  ],
+  "new_labels": [
+    "CT_C0_34EE_MVN_HANDLER"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass403.json": "passes/manifests/legacy/pass403.json"
+  },
+  "notes": []
+}

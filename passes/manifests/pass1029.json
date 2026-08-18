@@ -1,15 +1,35 @@
 {
-  "pass": 1029,
-  "bank": "C3",
-  "session": 21,
-  "range": "C3:2EA7..C3:2EBF",
-  "score": 12,
-  "width": 25,
-  "call_count": 4,
-  "branch_count": 1,
-  "return_count": 12,
-  "ascii_ratio": 0.84,
-  "source": "C3:2800-3000_scan_cluster",
-  "reason": "Highest score cluster in mid-bank region",
-  "timestamp": "2026-04-08T15:15:00-04:00"
+  "schema_version": 2,
+  "pass_number": 1029,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:2EA7..C3:2EBF",
+      "kind": "superseded",
+      "label": "ct_c3_2EA7",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_single_function": true
+      },
+      "parent_range": "C3:2EA7..C3:2EBF",
+      "parent_label": "ct_c3_2ea7_score12_cluster",
+      "notes": "Superseded duplicate of Pass 893 (ct_c3_2ea7_score12_cluster)"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_2EA7"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass1029.json": "passes/manifests/pass1029.json"
+  },
+  "notes": []
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "pass_number": 738,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C4:C069..C4:C072",
+      "kind": "superseded",
+      "label": "ct_c4_c069_cluster_score7",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "parent_range": "C4:C069..C4:C072",
+      "parent_label": "ct_c4_c069_dual_return_hub",
+      "notes": "Superseded duplicate of Pass 667 (ct_c4_c069_dual_return_hub)"
+    }
+  ],
+  "new_labels": [
+    "ct_c4_c069_cluster_score7"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass738.json": "passes/manifests/legacy/pass738.json"
+  },
+  "notes": []
+}

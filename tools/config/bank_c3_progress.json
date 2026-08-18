@@ -1,62 +1,1920 @@
 {
   "bank": "C3",
-  "status": "active",
-  "notes": [
-    "Low-bank executable cluster is closed through the CODE END C3 marker.",
-    "Post-marker gap 10D0..12FF is frozen as inline data/padding.",
-    "Next higher unresolved callable lane is 1300..1816."
-  ],
+  "latest_pass": 1229,
+  "latest_live_seam": "C3:6800..",
   "closed_executable_ranges": [
-    {"range":"C3:0EFA..C3:1024","label":"ct_c3_selected_bank_four_edge_scanline_owner_ordering_four_xy_pairs_and_materializing_row_spans_to_7e_or_7f","pass":167},
-    {"range":"C3:1025..C3:10BF","label":"ct_c3_selected_bank_edge_rasterizer_storing_one_x_intercept_byte_per_scanline_with_common_epilogue","pass":167}
+    {
+      "range": "C3:01E4..C3:02DC",
+      "label": "ct_c3_selected_7e_7f_band_initializer_and_32_step_saturating_add_subtract_wram_stream_worker",
+      "pass": 163,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:02DD..C3:0306",
+      "label": "ct_c3_external_byte_mix_helper_updating_0386_and_returning_start_byte_for_c0_fe_chained_table_walk",
+      "pass": 163,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0307..C3:0528",
+      "label": "ct_c3_7f_tile_strip_builder_with_regenerate_reuse_blank_fast_paths_and_sampled_byte_to_planar_4bpp_pack_core",
+      "pass": 164,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:08A9..C3:08B2",
+      "label": "ct_c3_unattached_owner_tail_fragment_ending_in_rtl",
+      "pass": 165,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:08B3..C3:0943",
+      "label": "ct_c3_frame_display_service_wrapper_with_local_setup_and_branch_selected_external_worker",
+      "pass": 165,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0944..C3:099C",
+      "label": "ct_c3_signed_ppu_math_helper_using_4202_4203_and_4216",
+      "pass": 165,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:099D..C3:09A0",
+      "label": "ct_c3_mvn_fe_to_7e_veneer",
+      "pass": 165,
+      "confidence": "high",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:09A1..C3:09A4",
+      "label": "ct_c3_mvn_fe_to_7f_veneer",
+      "pass": 165,
+      "confidence": "high",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:09A5..C3:09D8",
+      "label": "ct_c3_change_detector_and_c70004_service_trigger_for_0388_038a_state",
+      "pass": 165,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:09E9..C3:0A8F",
+      "label": "ct_c3_wram_runtime_code_emitter_writing_generated_stub_bytes_through_2180",
+      "pass": 165,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0A90..C3:0AFE",
+      "label": "ct_c3_nmi_gated_input_display_blackout_check_with_alternating_7e377a_service_dispatch",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0AFF..C3:0B02",
+      "label": "ct_c3_stream_interpreter_jsr_rtl_veneer",
+      "pass": 166,
+      "confidence": "high",
+      "kind": "wrapper"
+    },
+    {
+      "range": "C3:0B03..C3:0C91",
+      "label": "ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0C92..C3:0CB0",
+      "label": "ct_c3_nibble_slot_update_helper_with_pointer_advance_path",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0CB1..C3:0CB7",
+      "label": "ct_c3_stream_word_fetch_helper_advancing_20_and_caching_fetched_word",
+      "pass": 166,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0CB8..C3:0CCC",
+      "label": "ct_c3_first_free_slot_clear_helper_for_table_0920",
+      "pass": 166,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0CCD..C3:0CE1",
+      "label": "ct_c3_first_free_slot_clear_helper_for_table_0940",
+      "pass": 166,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0CE2..C3:0CF7",
+      "label": "ct_c3_first_free_slot_write_helper_for_table_0920",
+      "pass": 166,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0CF8..C3:0D0C",
+      "label": "ct_c3_first_free_slot_write_helper_for_table_0940",
+      "pass": 166,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0D0D..C3:0D5B",
+      "label": "ct_c3_wram_data_quad_writer_to_0700_with_duplicated_sample_bytes_and_shift_decay_update",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0D5C..C3:0DBB",
+      "label": "ct_c3_wram_data_quad_writer_variant_with_clamped_first_coordinate_and_rotate_decay_update",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0DBC..C3:0DF1",
+      "label": "ct_c3_7e_pointer_quad_writer_to_0700_with_shift_update_through_13",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0DF2..C3:0E27",
+      "label": "ct_c3_7e_pointer_quad_writer_to_0700_with_rotate_update_through_13",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0E2A..C3:0E37",
+      "label": "ct_c3_increment_compare_tail_helper_looping_until_14_falls_below_00f4",
+      "pass": 166,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:0EFA..C3:1024",
+      "label": "ct_c3_selected_bank_four_edge_scanline_owner_ordering_four_xy_pairs_and_materializing_row_spans_to_7e_or_7f",
+      "pass": 167,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:1025..C3:10BF",
+      "label": "ct_c3_selected_bank_edge_rasterizer_storing_one_x_intercept_byte_per_scanline_with_common_epilogue",
+      "pass": 167,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:09E9..C3:0A8F",
+      "label": "ct_c3_wram_runtime_code_emitter_writing_generated_stub_bytes_through_2180",
+      "pass": 169,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:0B03..C3:0C91",
+      "label": "ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words",
+      "pass": 169,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:0CB1..C3:0CB7",
+      "label": "ct_c3_stream_word_fetch_helper_advancing_20_and_caching_fetched_word",
+      "pass": 169,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:08A9..C3:08B2",
+      "label": "ct_c3_attached_terminal_tail_of_helper_rooted_at_0800_pending_full_upstream_closure",
+      "pass": 170,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:01E4..C3:02DC",
+      "label": "ct_c3_selected_7e_7f_band_initializer_and_32_step_saturating_add_subtract_wram_stream_worker",
+      "pass": 170,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:02DD..C3:0306",
+      "label": "ct_c3_external_byte_mix_helper_updating_0386_and_returning_start_byte_for_c0_fe_chained_table_walk",
+      "pass": 170,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:13F8..C3:13FB",
+      "label": "ct_c3_tiny_local_wrapper_calling_eb7b_then_returning",
+      "pass": 172,
+      "confidence": "high",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:15E4..C3:15E8",
+      "label": "ct_c3_tiny_long_wrapper_calling_c302dd_then_returning",
+      "pass": 173,
+      "confidence": "high",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:16A8..C3:16AB",
+      "label": "ct_c3_tiny_local_wrapper_calling_2629_then_returning",
+      "pass": 174,
+      "confidence": "high",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:16AC..C3:16B9",
+      "label": "ct_c3_small_local_looping_helper_returning_after_backward_branch",
+      "pass": 175,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:1817..C3:1818",
+      "label": "ct_c3_tiny_branch_landing_pad_redirecting_execution_back_to_17ef",
+      "pass": 177,
+      "confidence": "medium",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:1880..C3:1880",
+      "label": "ct_c3_single_byte_rtl_return_stub_reached_via_local_jump",
+      "pass": 177,
+      "confidence": "high",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:1AD6..C3:1ADA",
+      "label": "ct_c3_tiny_long_wrapper_calling_c30d0e_then_returning",
+      "pass": 180,
+      "confidence": "high",
+      "kind": "veneer"
+    },
+    {
+      "range": "C3:08A1..C3:08B2",
+      "label": "ct_c3_08a1_unknown_function_score6_cluster",
+      "pass": 218,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:08BA..C3:08FF",
+      "label": "ct_c3_08ba_unknown_function_score6_cluster",
+      "pass": 219,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:1922..C3:1999",
+      "label": "ct_c3_1922_unknown_function_score6_cluster",
+      "pass": 220,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:19A5..C3:1A00",
+      "label": "ct_c3_19a5_unknown_function_score6_cluster",
+      "pass": 221,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:1A03..C3:1A70",
+      "label": "ct_c3_1a03_unknown_function_score6_cluster",
+      "pass": 222,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:4C43..C3:4CFF",
+      "label": "ct_c3_4c43_unknown_function_score6_cluster",
+      "pass": 223,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:1BF5..C3:1C00",
+      "label": "ct_c3_1bf5_unknown_function_score6_cluster",
+      "pass": 224,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:A396..C3:A3FF",
+      "label": "ct_c3_a396_unknown_function_score6_cluster",
+      "pass": 225,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:41AF..C3:4200",
+      "label": "ct_c3_41af_unknown_function_score6_cluster",
+      "pass": 226,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:3EA4..C3:3EFF",
+      "label": "ct_c3_3ea4_unknown_function_score6_cluster",
+      "pass": 227,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:8300..C3:837F",
+      "label": "ct_c3_8300_unknown_function_score5_cluster",
+      "pass": 228,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:8440..C3:84FF",
+      "label": "ct_c3_8440_unknown_function_score5_cluster",
+      "pass": 229,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:8C8E..C3:8CFF",
+      "label": "ct_c3_8c8e_unknown_function_score6_cluster",
+      "pass": 230,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:4002..C3:4080",
+      "label": "ct_c3_4002_unknown_function_score6_cluster",
+      "pass": 231,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3C80..C3:3CFF",
+      "label": "ct_c3_3c80_unknown_function_score5_cluster",
+      "pass": 232,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:40B7..C3:4100",
+      "label": "ct_c3_40b7_unknown_function_score6_cluster",
+      "pass": 233,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:453B..C3:4599",
+      "label": "ct_c3_453b_unknown_function_score6_cluster",
+      "pass": 234,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3059..C3:30B0",
+      "label": "ct_c3_3059_unknown_function_score6_cluster",
+      "pass": 235,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3705..C3:3760",
+      "label": "ct_c3_3705_unknown_function_score6_cluster",
+      "pass": 236,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:42C5..C3:4320",
+      "label": "ct_c3_42c5_unknown_function_score6_cluster",
+      "pass": 237,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:C244..C3:C2A0",
+      "label": "ct_c3_c244_unknown_function_score6_cluster",
+      "pass": 238,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:55A3..C3:5600",
+      "label": "ct_c3_55a3_unknown_function_score6_cluster",
+      "pass": 239,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:80C4..C3:8120",
+      "label": "ct_c3_80c4_unknown_function_score6_cluster",
+      "pass": 240,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:AC12..C3:AC80",
+      "label": "ct_c3_ac12_unknown_function_score6_cluster",
+      "pass": 241,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:C09E..C3:C120",
+      "label": "ct_c3_c09e_unknown_function_score6_cluster",
+      "pass": 242,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:90F0..C3:9150",
+      "label": "ct_c3_90f0_unknown_function_score6_cluster",
+      "pass": 243,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:3500..C3:3560",
+      "label": "ct_c3_3500_unknown_function_score6_cluster",
+      "pass": 244,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:4A49..C3:4AA0",
+      "label": "ct_c3_4a49_unknown_function_score6_cluster",
+      "pass": 245,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:2807..C3:2870",
+      "label": "ct_c3_2807_unknown_function_score6_cluster",
+      "pass": 246,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:B16F..C3:B1D0",
+      "label": "ct_c3_b16f_unknown_function_score6_cluster",
+      "pass": 247,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:4B22..C3:4B80",
+      "label": "ct_c3_4b22_unknown_function_score6_cluster",
+      "pass": 248,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:4D4A..C3:4DA0",
+      "label": "ct_c3_4d4a_unknown_function_score6_cluster",
+      "pass": 249,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:4E0E..C3:4E60",
+      "label": "ct_c3_4e0e_unknown_function_score6_cluster",
+      "pass": 250,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:4EE7..C3:4F40",
+      "label": "ct_c3_4ee7_unknown_function_score6_cluster",
+      "pass": 251,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:2E31..C3:2E55",
+      "label": "ct_c3_2e31_phd_prologue",
+      "pass": 565,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3217..C3:3234",
+      "label": "ct_c3_3217_ppu_handler",
+      "pass": 566,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3280..C3:329A",
+      "label": "ct_c3_3280_rtl_handler",
+      "pass": 567,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:34CE..C3:34EB",
+      "label": "ct_c3_34ce_data_handler",
+      "pass": 568,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:387B..C3:38A3",
+      "label": "ct_c3_387b_math_16bit",
+      "pass": 569,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3C5B..C3:3C76",
+      "label": "ct_c3_3c5b_indexed_ops",
+      "pass": 570,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:01A8..C3:01C9",
+      "label": "ct_c3_01a8_jsr_prologue",
+      "pass": 599,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:01B4..C3:01E3",
+      "label": "ct_c3_01b4_php_prologue",
+      "pass": 600,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:052A..C3:054B",
+      "label": "ct_c3_052a_jsr_entry",
+      "pass": 601,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:5131..C3:5158",
+      "label": "ct_c3_5131_phd_prologue",
+      "pass": 602,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:5E01..C3:5E74",
+      "label": "ct_c3_5e01_jsl_long_fn",
+      "pass": 603,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:51EF..C3:520C",
+      "label": "ct_c3_51ef_jsr_handler",
+      "pass": 604,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:58E8..C3:591A",
+      "label": "ct_c3_58e8_lda_init",
+      "pass": 605,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:65AB..C3:65C8",
+      "label": "ct_c3_65ab_gap_handler",
+      "pass": 713,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:6643..C3:6660",
+      "label": "ct_c3_6643_gap_handler",
+      "pass": 714,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:7207..C3:7224",
+      "label": "ct_c3_7207_gap_handler",
+      "pass": 715,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:66A6..C3:66C8",
+      "label": "ct_c3_66a6_gap_handler",
+      "pass": 716,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:6A29..C3:6A47",
+      "label": "ct_c3_6a29_gap_handler",
+      "pass": 717,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:6ACB..C3:6AE5",
+      "label": "ct_c3_6acb_gap_handler",
+      "pass": 718,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:6C11..C3:6C38",
+      "label": "ct_c3_6c11_gap_handler",
+      "pass": 719,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:600C..C3:6028",
+      "label": "ct_c3_600c_gap_handler",
+      "pass": 720,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:6454..C3:6472",
+      "label": "ct_c3_6454_gap_handler",
+      "pass": 721,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:690B..C3:6930",
+      "label": "ct_c3_690b_gap_handler",
+      "pass": 722,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:6A4F..C3:6A6B",
+      "label": "ct_c3_6a4f_gap_handler",
+      "pass": 723,
+      "confidence": "medium-high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:66A6..C3:66C8",
+      "label": "ct_c3_66a6_gap_handler",
+      "pass": 724,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:6A29..C3:6A47",
+      "label": "ct_c3_6a29_gap_handler",
+      "pass": 725,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:6ACB..C3:6AE5",
+      "label": "ct_c3_6acb_gap_handler",
+      "pass": 726,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:6C11..C3:6C38",
+      "label": "ct_c3_6c11_gap_handler",
+      "pass": 727,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:01BA..C3:01D5",
+      "label": "ct_c3_01ba_jsr_prologue",
+      "pass": 753,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:052A..C3:0548",
+      "label": "ct_c3_052a_jsr_entry",
+      "pass": 754,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:06CE..C3:06EA",
+      "label": "ct_c3_06ce_phy_prologue",
+      "pass": 755,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:65AB..C3:65C9",
+      "label": "ct_c3_65ab_score6_cluster",
+      "pass": 756,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:66A6..C3:66C4",
+      "label": "ct_c3_66a6_score6_cluster",
+      "pass": 757,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:2EA7..C3:2EBF",
+      "label": "ct_c3_2ea7_score12_cluster",
+      "pass": 893,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:2B3A..C3:2B6E",
+      "label": "ct_c3_2b3a_score8_cluster",
+      "pass": 894,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:2AA5..C3:2AC5",
+      "label": "ct_c3_2aa5_score7_cluster",
+      "pass": 904,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:2CF8..C3:2D18",
+      "label": "ct_c3_2cf8_score7_cluster",
+      "pass": 905,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:4548..C3:459F",
+      "label": "ct_c3_4548_score13_cluster",
+      "pass": 940,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:4A2A..C3:4A53",
+      "label": "ct_c3_4a2a_score11_cluster",
+      "pass": 941,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:19DB..C3:1A05",
+      "label": "ct_c3_19db_score9_cluster",
+      "pass": 942,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:B979..C3:B9AC",
+      "label": "ct_c3_b979_score9_cluster",
+      "pass": 943,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:87BA..C3:87E1",
+      "label": "ct_c3_87ba_score8_cluster",
+      "pass": 944,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:3779..C3:37A2",
+      "label": "ct_c3_3779_score8_cluster",
+      "pass": 958,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:42C2..C3:42D4",
+      "label": "ct_c3_42c2_score8_cluster",
+      "pass": 963,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:5E34..C3:5E54",
+      "label": "ct_c3_5e34_ldy_init_handler",
+      "pass": 981,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:5E47..C3:5E6C",
+      "label": "ct_c3_5e47_lda_init_handler",
+      "pass": 982,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:B002..C3:B01D",
+      "label": "ct_c3_b002_php_prologue",
+      "pass": 983,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:B086..C3:B0AA",
+      "label": "ct_c3_b086_phx_prologue",
+      "pass": 984,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:B0F3..C3:B119",
+      "label": "ct_c3_b0f3_jsr_entry",
+      "pass": 985,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:B573..C3:B58C",
+      "label": "ct_c3_b573_phd_prologue",
+      "pass": 986,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:BB75..C3:BB99",
+      "label": "ct_c3_bb75_php_prologue",
+      "pass": 987,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:78EF..C3:7908",
+      "label": "ct_c3_78ef_pha_prologue",
+      "pass": 988,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0026..C3:0036",
+      "label": "ct_c3_0026_php_handler",
+      "pass": 989,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0540..C3:0559",
+      "label": "ct_c3_0540_lda_init",
+      "pass": 990,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:058B..C3:05B3",
+      "label": "ct_c3_058b_phd_handler",
+      "pass": 991,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:05B0..C3:05BA",
+      "label": "ct_c3_05b0_bra_handler",
+      "pass": 992,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:A3E2..C3:A406",
+      "label": "ct_c3_a3e2_jsr_entry",
+      "pass": 992,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:0733..C3:0747",
+      "label": "ct_c3_0733_phd_handler",
+      "pass": 993,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:A3F1..C3:A419",
+      "label": "ct_c3_a3f1_jsr_entry",
+      "pass": 993,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:084D..C3:0856",
+      "label": "ct_c3_084d_php_handler",
+      "pass": 994,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:A8BA..C3:A8D3",
+      "label": "ct_c3_a8ba_jsr_entry",
+      "pass": 994,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:8074..C3:8094",
+      "label": "ct_c3_8074_jsr_entry",
+      "pass": 995,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:ADF8..C3:AE18",
+      "label": "ct_c3_adf8_ldy_init",
+      "pass": 995,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:8274..C3:8290",
+      "label": "ct_c3_8274_jsr_entry",
+      "pass": 996,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:AF42..C3:AF60",
+      "label": "ct_c3_af42_ldy_init",
+      "pass": 996,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:8400..C3:841A",
+      "label": "ct_c3_8400_jsr_entry",
+      "pass": 997,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:5364..C3:5375",
+      "label": "ct_c3_5364_score6_cluster",
+      "pass": 997,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:8912..C3:8939",
+      "label": "ct_c3_8912_php_prologue",
+      "pass": 998,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:559F..C3:55C1",
+      "label": "ct_c3_559f_score6_cluster",
+      "pass": 998,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:A1F9..C3:A218",
+      "label": "ct_c3_a1f9_jsl_entry",
+      "pass": 999,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:6334..C3:6345",
+      "label": "ct_c3_6334_score6_function",
+      "pass": 999,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:6641..C3:6649",
+      "label": "ct_c3_6641_score6_function",
+      "pass": 1000,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:C2C2..C3:C2E8",
+      "label": "ct_c3_c2c2_php_prologue",
+      "pass": 1001,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:CB47..C3:CB64",
+      "label": "ct_c3_cb47_php_prologue",
+      "pass": 1002,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:DF00..C3:DF1E",
+      "label": "ct_c3_df00_php_prologue",
+      "pass": 1003,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:E4EF..C3:E508",
+      "label": "ct_c3_e4ef_jsl_entry",
+      "pass": 1004,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:F701..C3:F720",
+      "label": "ct_c3_f701_jsr_entry",
+      "pass": 1005,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:30B6..C3:30BE",
+      "label": "ct_c3_30b6_score6_function",
+      "pass": 1006,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:373D..C3:374D",
+      "label": "ct_c3_373d_score6_function",
+      "pass": 1007,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3DE2..C3:3DF0",
+      "label": "ct_c3_3de2_score6_dispatch",
+      "pass": 1008,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:3E53..C3:3E69",
+      "label": "ct_c3_3e53_score7_dispatch",
+      "pass": 1009,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:14BD..C3:14C6",
+      "label": "ct_c3_14BD",
+      "pass": 1024,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:15BC..C3:15DC",
+      "label": "ct_c3_15BC",
+      "pass": 1025,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:1627..C3:1642",
+      "label": "ct_c3_1627",
+      "pass": 1026,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:19DB..C3:1A05",
+      "label": "ct_c3_19DB",
+      "pass": 1027,
+      "confidence": "medium",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:1DEC..C3:1E1B",
+      "label": "ct_c3_1DEC",
+      "pass": 1028,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:2EA7..C3:2EBF",
+      "label": "ct_c3_2EA7",
+      "pass": 1029,
+      "confidence": "medium",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:2B3A..C3:2B6E",
+      "label": "ct_c3_2B3A",
+      "pass": 1030,
+      "confidence": "medium",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:4548..C3:459F",
+      "label": "ct_c3_4548",
+      "pass": 1031,
+      "confidence": "medium",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:2B00..C3:2BFF",
+      "label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr",
+      "pass": 1209,
+      "confidence": "medium-high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:3500..C3:3526",
+      "label": "ct_c3_3500_score6_function_3callers_jsr_c3_350e",
+      "pass": 1211,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:353B..C3:3554",
+      "label": "ct_c3_353b_score6_function_a9_start_jsr_target",
+      "pass": 1211,
+      "confidence": "medium",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:357A..C3:3593",
+      "label": "ct_c3_357a_score4_function_caller_anchor_3callers",
+      "pass": 1211,
+      "confidence": "medium",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:706B..C3:7090",
+      "label": "ct_c3_706B",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:70ED..C3:70FF",
+      "label": "ct_c3_70ED",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_helper"
+    },
+    {
+      "range": "C3:713E..C3:7159",
+      "label": "ct_c3_713E",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:7207..C3:7228",
+      "label": "ct_c3_7207",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:70E0..C3:7100",
+      "label": "ct_c3_70E0",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:7210..C3:7230",
+      "label": "ct_c3_7210",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:724E..C3:726E",
+      "label": "ct_c3_724E",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:7385..C3:73A5",
+      "label": "ct_c3_7385",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:74F5..C3:7515",
+      "label": "ct_c3_74F5",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:7534..C3:7554",
+      "label": "ct_c3_7534",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:76C3..C3:76E3",
+      "label": "ct_c3_76C3",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:77AB..C3:77CB",
+      "label": "ct_c3_77AB",
+      "pass": 1220,
+      "confidence": "high",
+      "kind": "code_owner"
+    },
+    {
+      "range": "C3:8912..C3:8939",
+      "label": "ct_c3_8912",
+      "pass": 1223,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:B002..C3:B01D",
+      "label": "ct_c3_B002",
+      "pass": 1226,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:B086..C3:B0AA",
+      "label": "ct_c3_B086",
+      "pass": 1227,
+      "confidence": "high",
+      "kind": "superseded"
+    },
+    {
+      "range": "C3:CB47..C3:CB64",
+      "label": "ct_c3_CB47",
+      "pass": 1229,
+      "confidence": "high",
+      "kind": "superseded"
+    }
   ],
   "closed_data_ranges": [
-    {"range":"C3:10C0..C3:10CF","label":"ct_c3_inline_ascii_code_end_c3_marker","pass":167},
-    {"range":"C3:10D0..C3:12FF","label":"ct_c3_post_code_end_inline_data_padding_block_with_zero_spacer_and_short_control_tail_before_next_callable_lane","pass":168}
-  ],
-  "externally_anchored_entries": [
-    {"range":"C3:0EFA..C3:1024","anchor":"C3:0011 -> JMP $0EFA"}
-  ],
-  "open_lanes": [
-    {"range":"C3:1300..C3:1816","reason":"next higher unresolved callable lane above low-bank CODE END marker"},
-    {"range":"C3:1817..","reason":"separate externally anchored entry kept isolated from current lane"}
-  ],
-  "session_21_manifests": [
-    {"pass":1024,"range":"C3:14BD..C3:14C6","score":6,"width":10,"status":"pending"},
-    {"pass":1025,"range":"C3:15BC..C3:15DC","score":6,"width":33,"status":"pending"},
-    {"pass":1026,"range":"C3:1627..C3:1642","score":6,"width":28,"status":"pending"},
-    {"pass":1027,"range":"C3:19DB..C3:1A05","score":9,"width":43,"status":"pending"},
-    {"pass":1028,"range":"C3:1DEC..C3:1E1B","score":7,"width":48,"status":"pending"},
-    {"pass":1029,"range":"C3:2EA7..C3:2EBF","score":12,"width":25,"status":"pending"},
-    {"pass":1030,"range":"C3:2B3A..C3:2B6E","score":8,"width":53,"status":"pending"},
-    {"pass":1031,"range":"C3:4548..C3:459F","score":13,"width":88,"status":"pending"},
-    {"pass":1032,"range":"C3:19DB..C3:1A05","score":9,"width":43,"status":"created"},
-    {"pass":1033,"range":"C3:1DEC..C3:1E1B","score":7,"width":48,"status":"created"},
-    {"pass":1034,"range":"C3:2EA7..C3:2EBF","score":12,"width":25,"status":"created"},
-    {"pass":1035,"range":"C3:2B3A..C3:2B6E","score":8,"width":53,"status":"created"},
-    {"pass":1036,"range":"C3:2AA5..C3:2ACC","score":7,"width":40,"status":"created"},
-    {"pass":1037,"range":"C3:2CF8..C3:2D09","score":7,"width":18,"status":"created"},
-    {"pass":1038,"range":"C3:28E6..C3:28F3","score":6,"width":14,"status":"created"},
-    {"pass":1039,"range":"C3:15BC..C3:15DC","score":6,"width":33,"status":"created"},
-    {"pass":1040,"range":"C3:4548..C3:459F","score":13,"width":88,"status":"created"},
-    {"pass":1041,"range":"C3:449E..C3:44B0","score":5,"width":19,"status":"created"},
-    {"pass":1042,"range":"C3:47D6..C3:47E5","score":5,"width":16,"status":"created"},
-    {"pass":1043,"range":"C3:46FB..C3:4709","score":5,"width":15,"status":"created"}
-  ],
-  "coverage_estimate": {
-    "current_bytes": 13536,
-    "current_coverage": "20.65%",
-    "new_bytes": 740,
-    "estimated_coverage": "21.78%",
-    "target": "28%",
-    "remaining_bytes_needed": 4088
-  },
-  "session_21_summary": {
-    "regions_scanned": ["C3:1300-1816", "C3:1800-2000", "C3:2000-3000", "C3:4400-4800"],
-    "manifests_created": 12,
-    "total_new_bytes": 412,
-    "scores": [9, 7, 12, 8, 7, 7, 6, 6, 13, 5, 5, 5],
-    "pass_range": "1032-1043",
-    "high_value_targets": ["C3:4548-459F (score 13)", "C3:2EA7-2EBF (score 12)", "C3:19DB-1A05 (score 9)"]
-  }
+    {
+      "range": "C3:09D9..C3:09E8",
+      "label": "ct_c3_eight_word_permutation_table_0000_0002_0001_0003_0004_0006_0005_0007",
+      "pass": 165,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:0E39..C3:0EF9",
+      "label": "ct_c3_jet_bike_race_inline_ascii_graphic_design_staff_text_block",
+      "pass": 165,
+      "confidence": "high",
+      "kind": "text_marker"
+    },
+    {
+      "range": "C3:10C0..C3:10CF",
+      "label": "ct_c3_inline_ascii_code_end_c3_marker",
+      "pass": 167,
+      "confidence": "high",
+      "kind": "text_marker"
+    },
+    {
+      "range": "C3:10D0..C3:12FF",
+      "label": "ct_c3_post_code_end_inline_data_padding_block_with_zero_spacer_and_short_control_tail_before_next_callable_lane",
+      "pass": 168,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1300..C3:1317",
+      "label": "ct_c3_inline_control_dispatch_data_block_preceding_higher_c3_execution_body",
+      "pass": 171,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1318..C3:13F7",
+      "label": "ct_c3_inline_mixed_control_dispatch_and_dma_setup_blob_preceding_tiny_eb7b_wrapper",
+      "pass": 172,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:13FC..C3:15E3",
+      "label": "ct_c3_inline_mixed_control_table_and_helper_blob_before_c302dd_wrapper",
+      "pass": 173,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:15E9..C3:16A7",
+      "label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper",
+      "pass": 174,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:16BA..C3:17BC",
+      "label": "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry",
+      "pass": 175,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:17BD..C3:1816",
+      "label": "ct_c3_mixed_opcode_looking_inline_blob_without_valid_c3_callers_before_isolated_1817_entry_candidate",
+      "pass": 176,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1819..C3:187F",
+      "label": "ct_c3_inline_mixed_control_and_code_fragments_between_branch_pad_and_rtl_stub",
+      "pass": 177,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1881..C3:18FC",
+      "label": "ct_c3_inline_mixed_opcode_and_register_setup_blob_after_rtl_stub_before_18fd_candidate",
+      "pass": 178,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:18FD..C3:1A5F",
+      "label": "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate",
+      "pass": 179,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1A60..C3:1AD5",
+      "label": "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper",
+      "pass": 180,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1ADB..C3:1AEF",
+      "label": "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate",
+      "pass": 180,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1AF0..C3:1BFF",
+      "label": "ct_c3_inline_mixed_opcode_cluster_with_weak_rtl_stub_and_unstable_multi_target_pocket_before_1c00_candidate",
+      "pass": 181,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:1C00..C3:1FFF",
+      "label": "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate",
+      "pass": 182,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2000..C3:20FF",
+      "label": "ct_c3_inline_mixed_control_table_and_false_low_bank_helper_cluster_before_2100_candidate",
+      "pass": 183,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2100..C3:21FF",
+      "label": "ct_c3_inline_mixed_xref_bait_with_untrusted_single_call_targets_and_unsupported_local_helper_pocket_before_2200_candidate",
+      "pass": 184,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2200..C3:22FF",
+      "label": "ct_c3_inline_mixed_false_target_cluster_with_brk_heavy_lead_in_and_unsupported_226f_helper_pocket_before_2300_candidate",
+      "pass": 185,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2300..C3:23FF",
+      "label": "ct_c3_inline_mixed_brk_heavy_arithmetic_like_cluster_and_false_table_entry_targets_before_2400_candidate",
+      "pass": 186,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2400..C3:24FF",
+      "label": "ct_c3_inline_mixed_pointer_table_and_false_interior_target_cluster_with_unsupported_2461_helper_pocket_before_2500_candidate",
+      "pass": 187,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2500..C3:25FF",
+      "label": "ct_c3_inline_mixed_weak_single_caller_page_with_unsupported_2523_helper_stub_and_late_pointer_table_cluster_before_2600_candidate",
+      "pass": 188,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2600..C3:26FF",
+      "label": "ct_c3_inline_mixed_multi_target_page_with_false_text_table_callers_and_unsupported_late_rts_island_before_2700_candidate",
+      "pass": 189,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2700..C3:27FF",
+      "label": "ct_c3_inline_branch_heavy_mixed_control_arithmetic_blob_with_false_data_side_2709_target_and_no_caller_backed_true_start_before_2800_candidate",
+      "pass": 190,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2800..C3:28FF",
+      "label": "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate",
+      "pass": 191,
+      "confidence": "medium-high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2900..C3:29FF",
+      "label": "ct_c3_2900_frozen_mixed_data_19_brk_no_xref_targets",
+      "pass": 1209,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2A00..C3:2AFF",
+      "label": "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts",
+      "pass": 1209,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2C00..C3:2CFF",
+      "label": "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6",
+      "pass": 1210,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2D00..C3:2DFF",
+      "label": "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences",
+      "pass": 1210,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2E00..C3:2EFF",
+      "label": "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences",
+      "pass": 1210,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:2F00..C3:2FFF",
+      "label": "ct_c3_2f00_frozen_structured_data_continuation_40_brk_tabular_patterns",
+      "pass": 1210,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3000..C3:30FF",
+      "label": "ct_c3_3000_frozen_branch_fed_pocket_bad_starts_4_hard_rejects",
+      "pass": 1212,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3100..C3:31FF",
+      "label": "ct_c3_3100_frozen_mixed_command_data_1_hard_bad_start",
+      "pass": 1212,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3200..C3:32FF",
+      "label": "ct_c3_3200_frozen_branch_fed_pocket_2_hard_bad_starts",
+      "pass": 1212,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3300..C3:33FF",
+      "label": "ct_c3_3300_frozen_candidate_lane_3_hard_bad_starts",
+      "pass": 1212,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3400..C3:34FF",
+      "label": "ct_c3_3400_frozen_candidate_lane_2_hard_bad_starts",
+      "pass": 1212,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3600..C3:36FF",
+      "label": "ct_c3_3600_frozen_mixed_command_data_1_hard_bad_start",
+      "pass": 1212,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3700..C3:37FF",
+      "label": "ct_c3_3700_frozen_mixed_command_data_2_hard_bad_starts",
+      "pass": 1212,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3800..C3:38FF",
+      "label": "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3900..C3:39FF",
+      "label": "ct_c3_3900_frozen_branch_fed_pocket_3_hard_bad_starts",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3A00..C3:3AFF",
+      "label": "ct_c3_3a00_frozen_mixed_command_data_3_hard_bad_starts",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3B00..C3:3BFF",
+      "label": "ct_c3_3b00_frozen_branch_fed_pocket_1_hard_bad_start",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3C00..C3:3CFF",
+      "label": "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3D00..C3:3DFF",
+      "label": "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3E00..C3:3EFF",
+      "label": "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:3F00..C3:3FFF",
+      "label": "ct_c3_3f00_frozen_mixed_command_data_fragments_no_promotable_clusters",
+      "pass": 1213,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4000..C3:40FF",
+      "label": "ct_c3_4000_frozen_candidate_lane_12_hard_bad_starts",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4100..C3:41FF",
+      "label": "ct_c3_4100_frozen_branch_fed_pocket_2_hard_bad_starts",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4200..C3:42FF",
+      "label": "ct_c3_4200_frozen_mixed_command_data_0_hard_bad_starts_fragments",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4300..C3:43FF",
+      "label": "ct_c3_4300_frozen_mixed_command_data_1_hard_bad_start",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4400..C3:44FF",
+      "label": "ct_c3_4400_frozen_text_ascii_heavy_1_hard_bad_start",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4500..C3:45FF",
+      "label": "ct_c3_4500_frozen_candidate_lane_1_hard_bad_start_cluster_score_13",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4600..C3:46FF",
+      "label": "ct_c3_4600_frozen_mixed_command_data_mixed_lane_continue",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4700..C3:47FF",
+      "label": "ct_c3_4700_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1214,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4800..C3:48FF",
+      "label": "ct_c3_4800_frozen_branch_fed_pocket_2_hard_bad_starts",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4900..C3:49FF",
+      "label": "ct_c3_4900_frozen_local_control_only_fragments",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4A00..C3:4AFF",
+      "label": "ct_c3_4a00_frozen_mixed_command_data_cluster_score_11_ascii_619",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4B00..C3:4BFF",
+      "label": "ct_c3_4b00_frozen_mixed_command_data_1_hard_bad_start",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4C00..C3:4CFF",
+      "label": "ct_c3_4c00_frozen_mixed_command_data_2_hard_bad_starts",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4D00..C3:4DFF",
+      "label": "ct_c3_4d00_frozen_mixed_command_data_1_hard_bad_start",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4E00..C3:4EFF",
+      "label": "ct_c3_4e00_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:4F00..C3:4FFF",
+      "label": "ct_c3_4f00_frozen_mixed_command_data_2_hard_bad_starts",
+      "pass": 1215,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5000..C3:50FF",
+      "label": "ct_c3_5000_frozen_mixed_command_data_2_hard_bad_starts",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5100..C3:51FF",
+      "label": "ct_c3_5100_frozen_candidate_lane_2_hard_bad_starts",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5200..C3:52FF",
+      "label": "ct_c3_5200_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5300..C3:53FF",
+      "label": "ct_c3_5300_frozen_local_control_only_0_hard_bad_starts",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5400..C3:54FF",
+      "label": "ct_c3_5400_frozen_branch_fed_pocket_1_hard_bad_start",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5500..C3:55FF",
+      "label": "ct_c3_5500_frozen_branch_fed_pocket_1_hard_bad_start",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5600..C3:56FF",
+      "label": "ct_c3_5600_frozen_mixed_command_data_mixed_lane_continue",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5700..C3:57FF",
+      "label": "ct_c3_5700_frozen_branch_fed_pocket_jump_table_entries",
+      "pass": 1216,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5800..C3:58FF",
+      "label": "ct_c3_5800_frozen_candidate_lane_local_control_only",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5900..C3:59FF",
+      "label": "ct_c3_5900_frozen_branch_fed_pocket_local_control_only",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5A00..C3:5AFF",
+      "label": "ct_c3_5a00_frozen_branch_fed_pocket_structured_data",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5B00..C3:5BFF",
+      "label": "ct_c3_5b00_frozen_mixed_command_data_local_control_only",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5C00..C3:5CFF",
+      "label": "ct_c3_5c00_frozen_mixed_command_data_local_control_only",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5D00..C3:5DFF",
+      "label": "ct_c3_5d00_frozen_candidate_lane_local_control_only",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5E00..C3:5EFF",
+      "label": "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:5F00..C3:5FFF",
+      "label": "ct_c3_5f00_frozen_branch_fed_pocket_local_control_only",
+      "pass": 1217,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6000..C3:60FF",
+      "label": "ct_c3_6000_frozen_candidate_lane_4_hard_bad_starts",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6100..C3:61FF",
+      "label": "ct_c3_6100_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6200..C3:62FF",
+      "label": "ct_c3_6200_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6300..C3:63FF",
+      "label": "ct_c3_6300_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6400..C3:64FF",
+      "label": "ct_c3_6400_frozen_candidate_lane_2_hard_bad_starts",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6500..C3:65FF",
+      "label": "ct_c3_6500_frozen_candidate_lane_1_hard_bad_start",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6600..C3:66FF",
+      "label": "ct_c3_6600_frozen_branch_fed_pocket_fragmented_code",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6700..C3:67FF",
+      "label": "ct_c3_6700_frozen_candidate_lane_local_control_only",
+      "pass": 1218,
+      "confidence": "high",
+      "kind": "data"
+    },
+    {
+      "range": "C3:6800..C3:6FFF",
+      "label": "ct_c3_6800",
+      "pass": 1219,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:7297..C3:72A9",
+      "label": "ct_c3_7297",
+      "pass": 1220,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:727B..C3:7285",
+      "label": "ct_c3_727B",
+      "pass": 1220,
+      "confidence": "medium",
+      "kind": "data"
+    },
+    {
+      "range": "C3:7331..C3:7340",
+      "label": "ct_c3_7331",
+      "pass": 1220,
+      "confidence": "medium",
+      "kind": "data"
+    }
+  ]
 }

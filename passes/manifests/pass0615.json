@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "pass_number": 615,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C0:919F..C0:91AC",
+      "kind": "code_helper",
+      "label": "ct_c0_919f_phd_helper",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "parent_range": "C0:9168..C0:91AC",
+      "parent_label": "ct_c0_9168_jsr_handler"
+    }
+  ],
+  "new_labels": [
+    "ct_c0_919f_phd_helper"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass615.json": "passes/manifests/legacy/pass615.json"
+  },
+  "notes": []
+}

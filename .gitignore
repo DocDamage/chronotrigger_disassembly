@@ -9,8 +9,21 @@ Thumbs.db
 *.swo
 
 # Python build artifacts
+.venv/
 __pycache__/
 *.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
 
-# Local toolkit caches
+# Commercial ROM binaries (strictly untracked)
+*.sfc
+*.smc
+rom/*.sfc
+rom/*.smc
+
+# Local generated caches
 tools/cache/
+.cache/
+tools/scripts/tools/cache/

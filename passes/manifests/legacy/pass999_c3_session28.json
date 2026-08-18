@@ -1,0 +1,19 @@
+{
+  "pass_number": 999,
+  "bank": "C3",
+  "start_address": "C3:6334",
+  "end_address": "C3:6345",
+  "label": "ct_c3_6334_score6_function",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:6334",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 6,
+  "promotion_reason": "Score-6 function in C3:6300 region. 18 bytes with 1 call, 1 return.",
+  "notes": [
+    "18-byte compact function",
+    "Located in high-density C3:6000-6FFF region"
+  ]
+}

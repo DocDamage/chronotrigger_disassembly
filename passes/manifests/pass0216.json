@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "pass_number": 216,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C7:C4AA..C7:C4B3",
+      "kind": "code_helper",
+      "label": "ct_c7_c4aa_unknown_function_score_4_extension",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "cluster_score": 4,
+        "cluster_width": 10,
+        "distance_to_c4ff": 76,
+        "relation": "76 bytes from promoted C300-C4FF (pass 192)",
+        "note": "Score-4 cluster near C4FF"
+      },
+      "parent_range": "C7:C300..C7:C4FF",
+      "parent_label": "C7_C300_C4FF_code_region"
+    }
+  ],
+  "new_labels": [
+    "ct_c7_c4aa_unknown_function_score_4_extension"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass216.json": "passes/manifests/legacy/pass216.json"
+  },
+  "notes": [
+    "Score 4 cluster: 10 bytes",
+    "76 bytes from C4FF (pass 192)",
+    "C400 region coverage"
+  ]
+}
