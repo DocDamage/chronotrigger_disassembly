@@ -1,6 +1,6 @@
 # Corrective Remediation Implementation Verification
 
-> This is an implementation verification report, not a final clean-baseline release sign-off. The prior version incorrectly claimed reviewed waivers, verified gaps, clean report provenance, and independent acceptance. Those claims have been removed.
+> This is an implementation verification report, not a final clean-baseline release sign-off. Unsupported waiver, gap, and independent-acceptance claims from the prior version remain removed; canonical report provenance has now been regenerated from a clean implementation commit.
 
 | Field | Value |
 |---|---|
@@ -8,7 +8,7 @@
 | Branch | `live-work-from-pass166` |
 | Verification date | 2026-08-18 |
 | Implementation status | **PASS** |
-| Release status | **PENDING CLEAN-COMMIT REPORT REGENERATION AND INDEPENDENT ACCEPTANCE** |
+| Release status | **PENDING INDEPENDENT CLEAN ACCEPTANCE** |
 
 ## Implemented corrections
 
@@ -22,6 +22,7 @@
 8. Pass 1229 and the project-state registry explicitly identify the live frontier as `C3:D000.. / C4:A000..`. Static and generated progress snapshots agree.
 9. Report drift validation regenerates into a temporary directory, validates provenance schemas and manifest digests, compares deterministic payloads, and never mutates tracked reports while checking them.
 10. The current index contains no ROM, ZIP, or generated raw-xref cache. The 82 removed archives total 284,204,840 bytes and are recorded with SHA-256 hashes and a Git recovery commit in `binary_archive_disposition.json`.
+11. Canonical coverage, range-ownership, and doctor reports were regenerated from clean implementation commit `c0d60c09749e921b6379528ef748799a3aca5fdf`; report-drift validation with clean-provenance enforcement passes.
 
 ## Local acceptance evidence
 
@@ -41,6 +42,5 @@ Acceptance suite: PASSED (12/12 steps)
 
 ## Explicitly pending
 
-- The checked-in reports honestly say they were generated while implementation changes were uncommitted. Phase 8 clean provenance requires the plan's two-commit workflow and has not been fabricated.
 - Phase 11 independent acceptance must run from a fresh clone or clean detached worktree after those commits exist.
 - Historical ROM/archive blobs remain reachable. Rewriting shared Git history is destructive and remains subject to separate maintainer approval under `docs/runbooks/git_history_cleanup.md`.
