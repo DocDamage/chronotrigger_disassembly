@@ -5,10 +5,10 @@
 | Repository | Chrono Trigger Disassembly |
 | Branch | `live-work-from-pass166` |
 | Baseline Commit | `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59` |
-| Last Reviewed Commit | `cfd7d54a7a3dbfd7e7089fa976dee998fdf62d75` |
+| Last Reviewed Commit | `c0d60c09749e921b6379528ef748799a3aca5fdf` |
 | Plan | `docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md` |
 | Last Updated | 2026-08-18 |
-| Current State | **Implementation validated locally; clean-commit release gates pending** |
+| Current State | **Implementation and clean report provenance complete; independent acceptance pending** |
 
 ## Phase status
 
@@ -22,7 +22,7 @@
 | 5 — Range ownership | Complete | 326 explicit interval decisions; original claims retained; 184 active non-overlapping residual records; 0 active conflicts; 0 waivers. |
 | 6 — Seam and coverage authority | Complete | Pass 1229 explicitly records `C3:D000.. / C4:A000..`; 59,050 unique covered bytes. |
 | 7 — Doctor, CLI, tests, and CI parity | Complete | Local 12-step acceptance passes; doctor passes 8/8; CI calls the same strict policy gates. |
-| 8 — Reports and provenance | Implementation complete; release gate pending | Drift checks are read-only and pass. Reports accurately record a dirty generation worktree; clean provenance requires the planned clean input commit plus report-only regeneration. |
+| 8 — Reports and provenance | Complete | Drift checks are read-only and pass. Canonical reports were regenerated from clean implementation commit `c0d60c09749e921b6379528ef748799a3aca5fdf`; clean-provenance enforcement passes. |
 | 9 — Binary and cache hygiene | Current tree complete; history cleanup deferred | 82 tracked ZIPs (284,204,840 bytes) removed from the index and inventoried by hash; no ROM/ZIP/raw-xref cache is tracked. Reachable-history rewrite remains separately gated. |
 | 10 — Documentation reconciliation | Complete | Current seam, coverage, archive policy, progress metrics, and status claims are reconciled. |
 | 11 — Independent clean acceptance | Pending release workflow | Local acceptance passes. A fresh-clone/clean-detached-worktree acceptance run requires committed inputs. |
@@ -40,7 +40,6 @@
 
 ## Remaining release actions
 
-1. Commit the non-report inputs as clean commit A.
-2. Regenerate canonical reports from clean commit A and commit those reports separately.
-3. Run `python -m tools.ctrepo acceptance --strict` from a fresh clone or clean detached worktree.
-4. Keep Git-history cleanup deferred unless maintainers separately approve the coordinated rewrite runbook.
+1. Commit the clean-source report refresh separately.
+2. Run `python -m tools.ctrepo acceptance --strict` from a fresh clone or clean detached worktree.
+3. Keep Git-history cleanup deferred unless maintainers separately approve the coordinated rewrite runbook.
