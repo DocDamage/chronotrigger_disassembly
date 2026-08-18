@@ -4,8 +4,8 @@
 |---|---|
 | Repository | Chrono Trigger Disassembly |
 | Branch | `live-work-from-pass166` |
-| Baseline Commit | `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59` |
-| Last Reviewed Commit | `c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0` |
+| Baseline Commit | `c00ebe6f8e2d81f9c724c79215ac7643a5c1b353` |
+| Last Reviewed Commit | `8779214587ea05fc52a1ecbd448a8387f5628c19` |
 | Plan | `docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md` |
 | Last Updated | 2026-08-18 |
 | Current State | **Non-destructive remediation complete; all release acceptance gates pass** |
@@ -22,7 +22,7 @@
 | 5 — Range ownership | Complete | 326 explicit interval decisions; original claims retained; 184 active non-overlapping residual records; 0 active conflicts; 0 waivers. |
 | 6 — Seam and coverage authority | Complete | Pass 1229 explicitly records `C3:D000.. / C4:A000..`; 59,050 unique covered bytes. |
 | 7 — Doctor, CLI, tests, and CI parity | Complete | Local 12-step acceptance passes; doctor passes 8/8; CI calls the same strict policy gates. |
-| 8 — Reports and provenance | Complete | Drift checks are read-only and pass. Canonical reports were regenerated from clean implementation commit `c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0`; clean-provenance enforcement passes across newline conventions. |
+| 8 — Reports and provenance | Complete | Drift checks are read-only and pass. Canonical reports were regenerated from clean implementation commit `8779214587ea05fc52a1ecbd448a8387f5628c19`; clean-provenance enforcement passes across newline conventions. |
 | 9 — Binary and cache hygiene | Current tree complete; history cleanup deferred | 82 tracked ZIPs (284,204,840 bytes) removed from the index and inventoried by hash; no ROM/ZIP/raw-xref cache is tracked. Reachable-history rewrite remains separately gated. |
 | 10 — Documentation reconciliation | Complete | Current seam, coverage, archive policy, progress metrics, and status claims are reconciled. |
 | 11 — Independent clean acceptance | Complete | The 12-step strict acceptance suite passes from a fresh detached worktree at commit `ffbb234`; 39 tests pass and report drift remains current across checkout newline conventions. |

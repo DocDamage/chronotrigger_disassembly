@@ -22,7 +22,7 @@
 8. Pass 1229 and the project-state registry explicitly identify the live frontier as `C3:D000.. / C4:A000..`. Static and generated progress snapshots agree.
 9. Report drift validation regenerates into a temporary directory, validates provenance schemas and manifest digests, compares deterministic payloads, and never mutates tracked reports while checking them.
 10. The current index contains no ROM, ZIP, or generated raw-xref cache. The 82 removed archives total 284,204,840 bytes and are recorded with SHA-256 hashes and a Git recovery commit in `binary_archive_disposition.json`.
-11. Canonical coverage, range-ownership, and doctor reports were regenerated from clean implementation commit `c5e6f287ddd5f1afdbb9ff50f67886c34e6769c0`; report-drift validation with clean-provenance enforcement passes across newline conventions.
+11. Canonical coverage, range-ownership, and doctor reports were regenerated from clean implementation commit `8779214587ea05fc52a1ecbd448a8387f5628c19`; report-drift validation with clean-provenance enforcement passes across newline conventions.
 
 ## Local acceptance evidence
 

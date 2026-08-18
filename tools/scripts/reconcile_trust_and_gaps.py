@@ -19,7 +19,7 @@ from tools.ctrepo.manifest_discovery import iter_canonical_manifests
 
 
 BASELINE_PATH = Path("reports/remediation/corrective_baseline.json")
-BASELINE_COMMIT = "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59"
+BASELINE_COMMIT = "c00ebe6f8e2d81f9c724c79215ac7643a5c1b353"
 
 
 def _filename_pass(path: str) -> int | None:

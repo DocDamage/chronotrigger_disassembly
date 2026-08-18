@@ -1,7 +1,7 @@
 > [!WARNING]
 > **HISTORICALLY SUPERSEDED REPORT**
 > 
-> This completion report was published following initial commit `d53cd365ed335047adcbb353ac83afb061816d5b`. A subsequent independent corrective audit identified non-idempotent migration issues (22 missing baseline source files for passes 1000–1021, 20 absent ranges / 613 bytes), bulk-generated waiver records, and doctor/CI discrepancies.
+> This completion report was published following initial commit `c27033d908abb803a9a603690a458f3f976e3ac9`. A subsequent independent corrective audit identified non-idempotent migration issues (22 missing baseline source files for passes 1000–1021, 20 absent ranges / 613 bytes), bulk-generated waiver records, and doctor/CI discrepancies.
 >
 > This report is preserved for audit history but is **SUPERSEDED** by:
 > - Plan: `docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md`
@@ -12,8 +12,8 @@
 |---|---|
 | Repository | Chrono Trigger Disassembly |
 | Branch | `live-work-from-pass166` |
-| Baseline Commit | `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59` |
-| Remediation Under Review Commit | `d53cd365ed335047adcbb353ac83afb061816d5b` |
+| Baseline Commit | `c00ebe6f8e2d81f9c724c79215ac7643a5c1b353` |
+| Remediation Under Review Commit | `c27033d908abb803a9a603690a458f3f976e3ac9` |
 | Initial Report Date | 2026-08-18 |
 | Audit Status | **SUPERSEDED — SEE CURRENT CORRECTIVE STATUS** |
 
