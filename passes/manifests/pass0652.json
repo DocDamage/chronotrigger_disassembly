@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 652,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "code_helper",
       "label": "ct_c0_e970_jsr_handler",
       "confidence": "medium",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "parent_range": "C0:E945..C0:E9A0",
       "parent_label": "ct_c0_e945_unknown_function_score6_cluster"
     }
@@ -25,7 +25,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass652.json": "passes/manifests/legacy/pass652.json"
+    "source_1_pass652.json": "passes/manifests/legacy/pass652.json"
   },
   "notes": []
 }

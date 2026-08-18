@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Iterable
+
 
 from manifest_xref_utils import anchor_strength, classify_caller_context, iter_raw_callers, load_closed_ranges
 from snes_utils import hirom_to_file_offset, parse_snes_address, parse_snes_range

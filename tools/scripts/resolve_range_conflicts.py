@@ -5,13 +5,13 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import Dict, List, Any, Set, Tuple
+from typing import Dict, List, Any, Tuple
 
 repo_root = Path(__file__).resolve().parent.parent.parent
 if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
-from tools.ctrepo.manifest_discovery import discover_manifest_candidates
+
 from tools.ctrepo.range_model import detect_range_conflicts
 from tools.ctrepo.manifest_models import ClosedRange
 

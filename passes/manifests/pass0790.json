@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 790,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "superseded",
       "label": "ct_c4_8010_hub_entry",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "parent_range": "C4:8010..C4:8038",
       "parent_label": "ct_c4_8010_multi_entry_hub",
       "notes": "Superseded duplicate of Pass 647 (ct_c4_8010_multi_entry_hub)"
@@ -26,7 +26,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass790.json": "passes/manifests/legacy/pass790.json"
+    "source_1_pass790.json": "passes/manifests/legacy/pass790.json"
   },
   "notes": []
 }

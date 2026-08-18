@@ -1,22 +1,28 @@
 {
   "schema_version": 2,
   "pass_number": 1024,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
   "closed_ranges": [
     {
       "range": "C3:14BD..C3:14C6",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_14BD",
       "confidence": "medium",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 6
+      },
       "legacy_metadata": {
         "raw_single_function": true
       },
-      "parent_range": "C3:13FC..C3:15E3",
-      "parent_label": "ct_c3_inline_mixed_control_table_and_helper_blob_before_c302dd_wrapper"
+      "parent_range": "C3:14BD..C3:14C6",
+      "parent_label": "ct_c3_14bd_branch_utility",
+      "notes": "Superseded duplicate of Pass 1011 (ct_c3_14bd_branch_utility)"
     }
   ],
   "new_labels": [
@@ -28,7 +34,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1024.json": "passes/manifests/pass1024.json"
+    "source_1_pass1024.json": "passes/manifests/legacy/pass1024.json"
   },
   "notes": []
 }

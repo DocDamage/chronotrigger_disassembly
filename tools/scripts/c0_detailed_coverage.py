@@ -55,7 +55,7 @@ def main():
                         'kind': entry.get('kind', 'unknown'),
                         'label': entry.get('label', 'unknown')
                     })
-        except Exception as e:
+        except Exception:
             pass
     
     # Calculate coverage
@@ -110,7 +110,7 @@ def main():
     med_pages = sum(1 for p in page_coverage_pct if 25 <= p < 75)
     high_pages = sum(1 for p in page_coverage_pct if p >= 75)
     
-    print(f"\nCoverage Distribution:")
+    print("\nCoverage Distribution:")
     print(f"  0%    (empty):  {zero_pages:3d} pages ({(zero_pages/256)*100:.1f}%)")
     print(f"  1-25%  (low):    {low_pages:3d} pages ({(low_pages/256)*100:.1f}%)")
     print(f"  25-75% (med):    {med_pages:3d} pages ({(med_pages/256)*100:.1f}%)")

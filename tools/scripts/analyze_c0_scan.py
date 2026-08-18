@@ -26,7 +26,7 @@ def analyze_backtrack(path, name):
     return items
 
 if __name__ == "__main__":
-    import sys
+
     repo_root = Path(__file__).parent.parent.parent
     
     islands_8000 = analyze_islands(repo_root / "reports" / "c0_8000_bfff_islands.json", "C0:8000-BFFF Islands")

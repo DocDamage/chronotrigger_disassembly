@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 1220,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "code_owner",
       "label": "ct_c3_706B",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Score 4, ASCII 0.158, clean_start 0x38",
         "source": "backtrack"
@@ -31,7 +31,7 @@
       "kind": "code_helper",
       "label": "ct_c3_70ED",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Score 4, ASCII 0.250, clean_start 0x20",
         "source": "backtrack"
@@ -53,7 +53,7 @@
       "kind": "code_owner",
       "label": "ct_c3_713E",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Score 4, ASCII 0.286, clean_start 0x20",
         "source": "backtrack"
@@ -73,7 +73,7 @@
       "kind": "code_owner",
       "label": "ct_c3_7207",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Score 6, ASCII 0.294, clean_start 0x08",
         "source": "backtrack"
@@ -93,7 +93,7 @@
       "kind": "code_owner",
       "label": "ct_c3_70E0",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: C3:88C9",
         "source": "weak_target"
@@ -113,7 +113,7 @@
       "kind": "code_owner",
       "label": "ct_c3_7210",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: C3:4AAC",
         "source": "weak_target"
@@ -133,7 +133,7 @@
       "kind": "code_owner",
       "label": "ct_c3_724E",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: C3:A8C5",
         "source": "weak_target"
@@ -153,7 +153,7 @@
       "kind": "code_owner",
       "label": "ct_c3_7385",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: C3:2489",
         "source": "weak_target"
@@ -173,7 +173,7 @@
       "kind": "code_owner",
       "label": "ct_c3_74F5",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: C3:466C",
         "source": "weak_target"
@@ -193,7 +193,7 @@
       "kind": "code_owner",
       "label": "ct_c3_7534",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: C3:8E66",
         "source": "weak_target"
@@ -213,7 +213,7 @@
       "kind": "code_owner",
       "label": "ct_c3_76C3",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: FC:BA5A (cross-bank call)",
         "source": "weak_target"
@@ -233,7 +233,7 @@
       "kind": "code_owner",
       "label": "ct_c3_77AB",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "reason": "Verified caller: C3:57FD",
         "source": "weak_target"
@@ -311,7 +311,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1220_c3_7000.json": "passes/manifests/legacy/pass1220_c3_7000.json"
+    "source_1_pass1220_c3_7000.json": "passes/manifests/legacy/pass1220_c3_7000.json"
   },
   "notes": [
     "Region is predominantly text_ascii_heavy (6/8 pages)",

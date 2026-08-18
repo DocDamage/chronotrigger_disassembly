@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 1023,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -10,8 +10,26 @@
       "range": "C0:20A0..C0:20C0",
       "kind": "code_owner",
       "label": "ct_c0_20a0_data_processor",
-      "confidence": "score-5",
-      "verification_status": "reviewed",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": [
+          "Score 5 cluster following high-confidence 206D region",
+          "Multiple branch instructions detected",
+          "Located immediately after score-7 cluster at 206D",
+          "33 bytes - suggests related processing function",
+          "May be continuation or related handler to 206D",
+          "Pattern consistent with data processing routine"
+        ],
+        "findings": {
+          "calls": 1,
+          "branches": 3,
+          "stack_ops": 0,
+          "returns": 2,
+          "first_return": "C0:20B8"
+        },
+        "score": 5
+      },
       "legacy_metadata": {
         "raw_single_function": true
       }
@@ -26,7 +44,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1023.json": "passes/manifests/pass1023.json"
+    "source_1_pass1023.json": "passes/manifests/legacy/pass1023.json"
   },
   "notes": []
 }

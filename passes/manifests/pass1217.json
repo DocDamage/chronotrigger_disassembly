@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 1217,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,56 +12,56 @@
       "kind": "data",
       "label": "ct_c3_5800_frozen_candidate_lane_local_control_only",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:5900..C3:59FF",
       "kind": "data",
       "label": "ct_c3_5900_frozen_branch_fed_pocket_local_control_only",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:5A00..C3:5AFF",
       "kind": "data",
       "label": "ct_c3_5a00_frozen_branch_fed_pocket_structured_data",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:5B00..C3:5BFF",
       "kind": "data",
       "label": "ct_c3_5b00_frozen_mixed_command_data_local_control_only",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:5C00..C3:5CFF",
       "kind": "data",
       "label": "ct_c3_5c00_frozen_mixed_command_data_local_control_only",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:5D00..C3:5DFF",
       "kind": "data",
       "label": "ct_c3_5d00_frozen_candidate_lane_local_control_only",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:5E00..C3:5EFF",
       "kind": "data",
       "label": "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:5F00..C3:5FFF",
       "kind": "data",
       "label": "ct_c3_5f00_frozen_branch_fed_pocket_local_control_only",
       "confidence": "high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -80,7 +80,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1217_c3_s38.json": "passes/manifests/legacy/pass1217_c3_s38.json"
+    "source_1_pass1217_c3_s38.json": "passes/manifests/legacy/pass1217_c3_s38.json"
   },
   "notes": []
 }

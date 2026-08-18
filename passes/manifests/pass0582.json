@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 582,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "code_helper",
       "label": "ct_c1_17bc_dispatch_handler_inc",
       "confidence": "medium",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "parent_range": "C1:178E..C1:17FF",
       "parent_label": "ct_c1_178e_hub_25_callers"
     }
@@ -25,7 +25,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass582.json": "passes/manifests/legacy/pass582.json"
+    "source_1_pass582.json": "passes/manifests/legacy/pass582.json"
   },
   "notes": []
 }

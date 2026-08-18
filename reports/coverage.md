@@ -1,17 +1,21 @@
 # Chrono Trigger Disassembly — Coverage Report
 
-- **Generated**: `2026-08-18T20:40:50.693045+00:00`
-- **Git Commit**: `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59`
+- **Generated**: `2026-08-18T21:33:52.748950+00:00`
+- **Source Commit**: `d53cd365ed335047adcbb353ac83afb061816d5b`
+- **Manifest Set Digest**: `09b06ac4f818b7277657428e6b760dcfb8254992310df6b571819699176e31b6`
 - **Canonical Manifests**: 961
-- **Total Closed Ranges**: 1083
-- **Total Closed Bytes**: 58,621 bytes
-- **Whole ROM Coverage**: 1.3976% (58,621 / 4,194,304 bytes)
+- **Total Closed Ranges**: 1105
+- **Raw Claimed Bytes**: 67,923 B
+- **Uniquely Closed Bytes**: 59,050 B
+- **Executable Code**: 38,192 B
+- **Classified Data**: 24,092 B
+- **Whole ROM Coverage**: **1.4079%** (59,050 / 4,194,304 bytes)
 
 ## Bank Coverage Summary
 
 | Bank | Closed Bytes | Capacity | Coverage % | Active Intervals |
 |---|---|---|---|---|
-| Bank `C0` | 15,646 B | 65,536 B | **23.87%** | 285 |
+| Bank `C0` | 16,075 B | 65,536 B | **24.53%** | 292 |
 | Bank `C1` | 1,661 B | 65,536 B | **2.53%** | 45 |
 | Bank `C2` | 883 B | 65,536 B | **1.35%** | 10 |
 | Bank `C3` | 29,665 B | 65,536 B | **45.27%** | 56 |

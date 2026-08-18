@@ -2,7 +2,7 @@
 """Generate coverage report for all banks based on manifest data."""
 
 import json
-import os
+
 import re
 from pathlib import Path
 from collections import defaultdict
@@ -41,7 +41,7 @@ def load_manifests(manifests_dir='passes/manifests'):
                             'kind': closed_range.get('kind', 'unknown'),
                             'confidence': closed_range.get('confidence', 'unknown')
                         })
-        except Exception as e:
+        except Exception:
             pass  # Skip problematic files
     
     return bank_ranges

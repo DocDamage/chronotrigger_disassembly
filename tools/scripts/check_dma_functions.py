@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check DMA utility functions at C0:8085, C0:808D, C0:8500"""
 
-import sys
+
 import os
 
 # Read ROM

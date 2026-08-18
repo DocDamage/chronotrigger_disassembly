@@ -1,0 +1,29 @@
+{
+  "pass": 1019,
+  "bank": "C0",
+  "label": "ct_c0_27cc_event_handler",
+  "address": "C0:27CC",
+  "range": "C0:27CC..C0:27EA",
+  "bytes": 31,
+  "category": "code",
+  "confidence": 7,
+  "reasoning": [
+    "Score 7 cluster - highest confidence in upper 2000-2800 region",
+    "6 branch instructions with complex conditional logic",
+    "2 return instructions marking clear function exit",
+    "31 bytes - typical handler function size",
+    "Located near 2760 cluster suggesting related functionality",
+    "Pattern consistent with event or input handling code"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 6,
+    "stack_ops": 0,
+    "returns": 2,
+    "first_return": "C0:27E4"
+  },
+  "flags": ["score7", "multi_branch"],
+  "related": ["C0:27CC", "C0:27EA", "C0:27E4", "C0:2760"],
+  "session": 20,
+  "status": "closed"
+}

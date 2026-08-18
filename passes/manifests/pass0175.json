@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 175,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,14 +12,14 @@
       "kind": "code_helper",
       "label": "ct_c3_small_local_looping_helper_returning_after_backward_branch",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     },
     {
       "range": "C3:16BA..C3:17BC",
       "kind": "data",
       "label": "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry",
       "confidence": "medium",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -32,7 +32,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass175.json": "passes/manifests/legacy/pass175.json"
+    "source_1_pass175_direct.json": "passes/manifests/legacy/pass175_direct.json"
   },
   "notes": [
     "16AC sits immediately after the prior RTS boundary at 16AB and forms a small self-contained code-looking loop ending in RTS at 16B9, making it more defensible as a tiny local helper than as part of the surrounding mixed blob.",

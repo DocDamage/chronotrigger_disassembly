@@ -92,11 +92,11 @@ for t in targets:
     # Check overlap
     overlaps = check_overlap(addr, end_addr)
     if overlaps:
-        print(f"  WARNING: Overlaps with existing ranges:")
+        print("  WARNING: Overlaps with existing ranges:")
         for ov in overlaps:
             print(f"    - {ov[0]}: {ov[1]} ({ov[2]})")
     else:
-        print(f"  STATUS: CLEAR - ready for promotion")
+        print("  STATUS: CLEAR - ready for promotion")
         verified.append({
             'start': addr,
             'end': end_addr,
@@ -131,7 +131,7 @@ for addr, callers, pass_file, desc in covered:
 print("\n" + "=" * 70)
 print("SUMMARY:")
 print("=" * 70)
-print(f"  Total targets checked: 8")
-print(f"  Already covered: 5")
+print("  Total targets checked: 8")
+print("  Already covered: 5")
 print(f"  Verified ready: {len(verified)}")
 print(f"  Needs investigation: {8 - 5 - len(verified)}")

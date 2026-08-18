@@ -5,12 +5,12 @@ Batch scan multiple Bank C0 regions and auto-promote high-caller targets.
 
 import json
 import subprocess
-import os
-import sys
+
+
 import argparse
 from pathlib import Path
-from typing import List, Tuple
-import tempfile
+
+
 
 # Priority regions to scan (from coverage analysis)
 DEFAULT_REGIONS = [
@@ -110,7 +110,7 @@ def main():
         print(f"  Found {len(targets)} targets, {len(high_callers)} with {args.min_callers}+ callers")
         
         if high_callers:
-            print(f"\n  High-caller targets:")
+            print("\n  High-caller targets:")
             for t in sorted(high_callers, key=lambda x: -x['caller_count']):
                 status = "✓" if t['strength'] == 'weak' else "?"
                 print(f"    {status} {t['target']}: {t['caller_count']} callers ({t['strength']})")

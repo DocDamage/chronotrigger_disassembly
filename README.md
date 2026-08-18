@@ -4,43 +4,24 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 
 ## Current live state
 
-📊 **Full Progress Report**: See `PROGRESS.md` for comprehensive coverage statistics
+📊 **Full Progress Report**: See `reports/coverage.md` for comprehensive coverage statistics
 
 - working branch: `live-work-from-pass166`
 - latest manifest-backed pass: `1229` (Session 46: C4:9D10 + C3:CB47 dual promotion)
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
-- latest closed block: C3:77CB..C3:77CB (Bank C3, promoted function end)
-- current forward seam: `C3:9800..` (Bank C3 high bank continuation, post-Session 41)
-- **Session 23 completed 30 promotions in Bank C0 (passes 277-306)**, increasing C0 coverage from 0 to 55 documented ranges
-- **Session 24 completed 42 promotions in Bank C0 (passes 307-348)**, increasing C0 coverage from 55 to 97 documented ranges
-- **Agent Swarm Session (passes 555-578)** added 24 new manifests across Banks C0, C1, C2, C3, C5
-- **Agent Swarm Session 2 (passes 579-603)** added 25 new manifests, deep scans of C5, C1 hubs, C0 continuation
-- **Agent Swarm Session 3 (passes 604-620)** added 17 new manifests, C3:5000 major discovery, C1:8000 hub, C0:9000 continuation
-- **Agent Swarm Session 4 (passes 621-640)** added 20 new manifests, C1 dispatch table, C2 cross-bank hub, C4 initial mapping
-- **Agent Swarm Session 5 (passes 641-658)** added 18 new manifests, C4 deep scan, C6 initial mapping, C1 dispatch completion
-- **Agent Swarm Session 6 (passes 659-676)** added 18 new manifests, C6:D400 highest density, C4 cross-bank, C1 dispatch progress
-- **Agent Swarm Session 7 (passes 677-697)** added 21 new manifests, C6:D800 RTL, C4:4000, C0:0000, C1 dispatch COMPLETE
-- **Agent Swarm Session 8 (passes 698-715)** added 18 new manifests, C4:9000-FFFF, CF bank initial, C3 gaps, C5 deep scan
-- **Agent Swarm Session 9 (passes 716-733)** added 18 new manifests, CF:E000-F000 major region, C6:E000-FFFF completion, C3:6000 completion
-- **Agent Swarm Session 10 (passes 734-763)** added 30 new manifests, CF:F000-FFFF highest density, C4:4000-5000, **D1 bank discovered!**
-- **Agent Swarm Session 11 (passes 764-805)** added 42 new manifests, CF:D000-E000 complete, **D2-D9 banks discovered!**, C5 score-9 cluster, D1 expansion
-- **Agent Swarm Session 12 (passes 806-833)** added 28 new manifests, D6 deep scan (22 score-6+), D4 expansion (20+ score-6+), C5:9000 region, D1:1000 region
-- **C1:8C3E Dispatch Hub COMPLETE**: All 42 handler functions documented (C1:8E00-9800)
-- **C3:30% TARGET EXCEEDED**: ~35.8% coverage (12 new functions in Session 40), Session 40: C3:7000-77FF breakthrough
-- **C0:30% TARGET EXCEEDED**: 31.90% coverage with complete audio and HDMA systems
-- **C4:10% TARGET ACHIEVED**: ~12.8% coverage (path to 15% identified), C4:772E score-10 supercluster
-- **C2:8% TARGET ACHIEVED**: 8.0% coverage, three score-14 functions discovered
-- effective closed-range snapshot: `tools/cache/closed_ranges_snapshot_v1.json` now carries 1834 closed ranges (915 manifest-backed + 919 continuation)
-- completion estimate: see latest handoff - coarse `%` metric is not reliable at current granularity
+- current live seam: `C3:6800..`
+- canonical pass manifests: 961 canonical manifests generated from 1,000 legacy source manifests
+- total closed ranges: 1,105 closed ranges (59,050 uniquely covered bytes, 1.4079% of whole ROM)
+- conservation status: 100% verified zero-loss conservation (`tools/scripts/compare_manifest_range_inventory.py`)
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
-- continuation notes remain important historical context for the earlier C7 seam, and their frozen pages still feed caller-context scoring through the seam snapshot layer
+- continuation notes remain important historical context for the earlier C7 seam
 
 ## What this repo contains
-- `passes/manifests/` — machine-readable pass history (970+ manifests)
+- `passes/manifests/` — canonical Schema v2 pass manifests (`pass0001.json`..`pass1229.json`) and `legacy/` source archive
 - `passes/disasm/` — per-pass disassembly notes
 - `passes/labels/` — per-pass label notes
-- `tools/` — repo-native toolkit scripts, config, and workflow docs
-- `reports/` — generated bank progress, seam-block, anchor, and toolkit-status artifacts
+- `tools/` — repo-native toolkit scripts, models (`tools/ctrepo`), configs, and schemas
+- `reports/` — generated coverage, health, and provenance reports
 - `repo_sync/` — earlier sync packets from the repo-first transition phase
 - `disassembly/` — legacy disassembly-note mirror through pass `163` (historical)
 - `labels/` — legacy label-note mirror through pass `163` (historical)

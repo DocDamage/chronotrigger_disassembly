@@ -1,11 +1,16 @@
 {
   "provenance": {
     "generator": "toolkit_doctor.py",
-    "generated_at_utc": "2026-08-18T20:40:44.157329+00:00",
-    "git_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+    "generated_at_utc": "2026-08-18T21:33:55.467858+00:00",
+    "source_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+    "source_tree": "0eaf7b5c7d0cb783ef72871b9781d86e277adf2e",
+    "git_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
     "git_branch": "live-work-from-pass166",
     "is_dirty_worktree": true,
-    "schema_version": 2
+    "worktree_clean_before_generation": false,
+    "report_schema_version": 2,
+    "manifest_count": 961,
+    "manifest_set_digest": "09b06ac4f818b7277657428e6b760dcfb8254992310df6b571819699176e31b6"
   },
   "overall_status": "pass",
   "strict_mode": true,
@@ -17,13 +22,14 @@
     {
       "name": "python_compilation",
       "status": "pass",
-      "total_files": 227,
+      "total_files": 236,
       "failures": []
     },
     {
-      "name": "static_analysis_undefined_names",
+      "name": "static_analysis_pyflakes",
       "status": "pass",
-      "undefined_names": []
+      "returncode": 0,
+      "output": ""
     },
     {
       "name": "canonical_manifest_integrity",
@@ -34,9 +40,9 @@
     {
       "name": "range_ownership_conflicts",
       "status": "pass",
-      "total_conflicts": 170,
+      "total_conflicts": 180,
       "unresolved_conflicts_count": 0,
-      "waived_conflicts_count": 170
+      "waived_conflicts_count": 180
     },
     {
       "name": "branch_state_audit",
@@ -46,7 +52,7 @@
     {
       "name": "unit_tests",
       "status": "pass",
-      "summary": "21 passed in 0.11s"
+      "summary": "28 passed in 0.49s"
     },
     {
       "name": "prohibited_rom_tracking",

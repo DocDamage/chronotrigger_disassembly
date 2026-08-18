@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Promote high-caller targets from recent scans"""
-import os, json
+import json
 from pathlib import Path
 
 MANIFESTS_DIR = Path('../../passes/manifests')

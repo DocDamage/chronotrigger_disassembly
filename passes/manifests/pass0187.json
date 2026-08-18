@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 187,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,7 +12,7 @@
       "kind": "data",
       "label": "ct_c3_inline_mixed_pointer_table_and_false_interior_target_cluster_with_unsupported_2461_helper_pocket_before_2500_candidate",
       "confidence": "medium-high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -24,7 +24,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass187.json": "passes/manifests/legacy/pass187.json"
+    "source_1_pass187_direct.json": "passes/manifests/legacy/pass187_direct.json"
   },
   "notes": [
     "This pass continued from the repo-forward seam at C3:2400 using the same caller-plus-local-structure discipline as the recent conservative C3 pages.",

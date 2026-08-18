@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 184,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,7 +12,7 @@
       "kind": "data",
       "label": "ct_c3_inline_mixed_xref_bait_with_untrusted_single_call_targets_and_unsupported_local_helper_pocket_before_2200_candidate",
       "confidence": "medium-high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -24,7 +24,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass184.json": "passes/manifests/legacy/pass184.json"
+    "source_1_pass184_direct.json": "passes/manifests/legacy/pass184_direct.json"
   },
   "notes": [
     "This pass continued from the repo-forward seam at C3:2100 using the upgraded tiny-veneer plus caller-context workflow.",

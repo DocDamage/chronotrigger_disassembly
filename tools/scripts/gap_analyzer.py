@@ -4,10 +4,10 @@ Analyze Bank C0 coverage gaps and suggest next scanning priorities.
 """
 
 import json
-import glob
+
 from pathlib import Path
 from typing import List, Tuple, Dict
-from collections import defaultdict
+
 
 MANIFESTS_DIR = Path('../../passes/manifests')
 BANK_SIZE = 0x10000  # 64KB per bank
@@ -125,7 +125,7 @@ def main():
     gaps = find_gaps(coverage, min_gap_size=256)
     
     print(f"\n{'=' * 70}")
-    print(f"TOP 15 GAPS (sorted by size)")
+    print("TOP 15 GAPS (sorted by size)")
     print(f"{'=' * 70}")
     print(f"{'Rank':<6} {'Start':<10} {'End':<10} {'Size':<10} {'Pages':<8} {'Est.Func':<10} {'Quality':<10}")
     print("-" * 70)
@@ -140,7 +140,7 @@ def main():
     
     # Recommendations
     print(f"\n{'=' * 70}")
-    print(f"SCAN RECOMMENDATIONS")
+    print("SCAN RECOMMENDATIONS")
     print(f"{'=' * 70}")
     
     high_quality_gaps = [g for g in gaps if analyze_gap_quality(g[0], g[1])['quality'] == 'high']
@@ -154,7 +154,7 @@ def main():
     
     # Page-level breakdown
     print(f"\n{'=' * 70}")
-    print(f"PAGE-LEVEL COVERAGE (256-byte pages)")
+    print("PAGE-LEVEL COVERAGE (256-byte pages)")
     print(f"{'=' * 70}")
     
     page_coverage = []
@@ -173,7 +173,7 @@ def main():
     print(f"Zero coverage: {len(zero_pages)}")
     
     if zero_pages:
-        print(f"\nZero-coverage page ranges:")
+        print("\nZero-coverage page ranges:")
         # Group consecutive pages
         ranges = []
         start = zero_pages[0]

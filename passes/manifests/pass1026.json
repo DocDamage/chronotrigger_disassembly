@@ -1,22 +1,28 @@
 {
   "schema_version": 2,
   "pass_number": 1026,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
   "closed_ranges": [
     {
       "range": "C3:1627..C3:1642",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_1627",
       "confidence": "medium",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 6
+      },
       "legacy_metadata": {
         "raw_single_function": true
       },
-      "parent_range": "C3:15E9..C3:16A7",
-      "parent_label": "ct_c3_inline_code_looking_mixed_helper_and_control_blob_before_local_2629_wrapper"
+      "parent_range": "C3:1627..C3:1642",
+      "parent_label": "ct_c3_1627_multi_return_handler",
+      "notes": "Superseded duplicate of Pass 1010 (ct_c3_1627_multi_return_handler)"
     }
   ],
   "new_labels": [
@@ -28,7 +34,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1026.json": "passes/manifests/pass1026.json"
+    "source_1_pass1026.json": "passes/manifests/legacy/pass1026.json"
   },
   "notes": []
 }

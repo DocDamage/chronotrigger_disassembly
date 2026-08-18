@@ -2,7 +2,7 @@
 """Generate coverage report for all banks based on manifest data. v2 - Fixed overlap handling."""
 
 import json
-import os
+
 import re
 from pathlib import Path
 from collections import defaultdict
@@ -73,7 +73,7 @@ def load_manifests(manifests_dir='passes/manifests'):
                             'kind': closed_range.get('kind', 'unknown'),
                             'confidence': closed_range.get('confidence', 'unknown')
                         })
-        except Exception as e:
+        except Exception:
             pass  # Skip problematic files
     
     # Merge overlapping ranges for each bank
@@ -159,7 +159,7 @@ def generate_report():
         print("-" * 50)
         
         if overlaps:
-            print(f"  Overlaps detected:")
+            print("  Overlaps detected:")
             for pass1, pass2, desc in overlaps[:5]:
                 print(f"    {pass1} ↔ {pass2}: {desc}")
             if len(overlaps) > 5:

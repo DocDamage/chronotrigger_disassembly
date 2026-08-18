@@ -5,9 +5,9 @@ Creates pass manifests automatically with conflict detection and boundary adjust
 """
 
 import json
-import glob
-import os
-import sys
+
+
+
 import argparse
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional
@@ -258,7 +258,7 @@ def main():
         conflicts = check_conflicts(suggested_range, existing_ranges)
         
         if conflicts:
-            print(f"  [WARN]  CONFLICTS found:")
+            print("  [WARN]  CONFLICTS found:")
             for name, r in conflicts:
                 print(f"      {name}: {r}")
             
@@ -273,12 +273,12 @@ def main():
                     suggested_range = adjusted_range
                     adjusted.append(target)
                 else:
-                    print(f"  [FAIL] Cannot auto-fix, skipping")
+                    print("  [FAIL] Cannot auto-fix, skipping")
                     skipped.append((target, "conflict"))
                     print()
                     continue
             else:
-                print(f"  Use --auto-fix to attempt boundary adjustment")
+                print("  Use --auto-fix to attempt boundary adjustment")
                 skipped.append((target, "conflict"))
                 print()
                 continue

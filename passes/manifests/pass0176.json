@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 176,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -12,7 +12,7 @@
       "kind": "data",
       "label": "ct_c3_mixed_opcode_looking_inline_blob_without_valid_c3_callers_before_isolated_1817_entry_candidate",
       "confidence": "medium-high",
-      "verification_status": "reviewed"
+      "verification_status": "pending"
     }
   ],
   "new_labels": [
@@ -24,7 +24,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass176.json": "passes/manifests/legacy/pass176.json"
+    "source_1_pass176_direct.json": "passes/manifests/legacy/pass176_direct.json"
   },
   "notes": [
     "Re-audit of 17BD invalidates the prior C4:CE36 anchor claim: that byte pattern is a same-bank JSR inside bank C4 and therefore targets C4:17BD, not C3:17BD.",

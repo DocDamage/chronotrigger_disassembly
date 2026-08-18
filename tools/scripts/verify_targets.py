@@ -47,7 +47,7 @@ for addr, desc in targets:
             if overlap:
                 print(f'  OVERLAP: {overlap}')
             else:
-                print(f'  CLEAR - ready for promotion')
+                print('  CLEAR - ready for promotion')
                 ready.append((addr, end, desc))
         else:
             print('  No RTS found')

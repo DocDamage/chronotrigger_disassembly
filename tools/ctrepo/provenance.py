@@ -16,11 +16,16 @@ def calculate_manifest_set_digest(manifests: List[CanonicalManifest]) -> str:
     return h.hexdigest()
 
 def get_git_provenance() -> Dict[str, Any]:
-    """Retrieve current Git commit, branch, and dirty status."""
+    """Retrieve current Git commit, tree, branch, and dirty status."""
     try:
         commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], stderr=subprocess.DEVNULL).decode().strip()
     except Exception:
         commit = "unknown"
+
+    try:
+        tree = subprocess.check_output(['git', 'rev-parse', 'HEAD^{tree}'], stderr=subprocess.DEVNULL).decode().strip()
+    except Exception:
+        tree = "unknown"
         
     try:
         branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], stderr=subprocess.DEVNULL).decode().strip()
@@ -34,9 +39,12 @@ def get_git_provenance() -> Dict[str, Any]:
         is_dirty = True
 
     return {
+        "source_commit": commit,
+        "source_tree": tree,
         "git_commit": commit,
         "git_branch": branch,
-        "is_dirty": is_dirty
+        "is_dirty": is_dirty,
+        "worktree_clean_before_generation": not is_dirty
     }
 
 def create_provenance_header(
@@ -49,14 +57,27 @@ def create_provenance_header(
     header = {
         "generator": generator_name,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "source_commit": git_info["source_commit"],
+        "source_tree": git_info["source_tree"],
         "git_commit": git_info["git_commit"],
         "git_branch": git_info["git_branch"],
         "is_dirty_worktree": git_info["is_dirty"],
-        "schema_version": 2
+        "worktree_clean_before_generation": git_info["worktree_clean_before_generation"],
+        "report_schema_version": 2
     }
     if manifests is not None:
         header["manifest_count"] = len(manifests)
         header["manifest_set_digest"] = calculate_manifest_set_digest(manifests)
+    else:
+        # Compute digest from existing canonical manifests if discoverable
+        try:
+            from .manifest_discovery import iter_canonical_manifests
+            discovered = list(iter_canonical_manifests())
+            header["manifest_count"] = len(discovered)
+            header["manifest_set_digest"] = calculate_manifest_set_digest(discovered)
+        except Exception:
+            header["manifest_count"] = 0
+            header["manifest_set_digest"] = hashlib.sha256(b"empty").hexdigest()
         
     if extra:
         header.update(extra)

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 1228,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -10,11 +10,12 @@
       "range": "C4:9D10..C4:9D2A",
       "kind": "code_owner",
       "label": "ct_c4_9D10",
-      "confidence": "high",
-      "verification_status": "reviewed",
+      "confidence": "medium",
+      "verification_status": "pending",
       "evidence": {
         "reason": null,
-        "source": "backtrack"
+        "source": "backtrack",
+        "score": 6
       },
       "legacy_metadata": {
         "raw_promotion": {
@@ -60,7 +61,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass1228_c4_9d10.json": "passes/manifests/legacy/pass1228_c4_9d10.json"
+    "source_1_pass1228_c4_9d10.json": "passes/manifests/legacy/pass1228_c4_9d10.json"
   },
   "notes": []
 }

@@ -5,7 +5,7 @@ Checks for overlaps, boundary issues, and suggests fixes.
 """
 
 import json
-import glob
+
 from pathlib import Path
 from typing import List, Tuple, Dict
 import sys
@@ -98,7 +98,7 @@ def check_boundaries(passes: List[Tuple[str, Dict]]) -> List[Tuple[str, str, str
             # Check for non-page-aligned in code regions
             # (This is a warning, not necessarily an error)
             if start % 256 != 0 and size > 50:
-                issues.append((name, range_str, f"Not page-aligned (may be OK)"))
+                issues.append((name, range_str, "Not page-aligned (may be OK)"))
     
     return issues
 
@@ -170,7 +170,7 @@ def main():
         print(f"\n[FAIL] Found {len(overlaps)} overlap(s):\n")
         for name1, range1, name2, range2, details in overlaps:
             print(f"  {name1}: {range1}")
-            print(f"    vs")
+            print("    vs")
             print(f"  {name2}: {range2}")
             print(f"  -> {details}\n")
         

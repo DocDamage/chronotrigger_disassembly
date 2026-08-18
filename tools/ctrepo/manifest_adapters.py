@@ -30,13 +30,32 @@ def detect_schema_family(data: Any) -> str:
     return "unknown"
 
 
+def normalize_verification_status(raw_status: Optional[str]) -> str:
+    """Map legacy verification states to controlled canonical vocabulary."""
+    if not raw_status:
+        return "pending"
+    s = raw_status.strip().lower()
+    if s in ("pending_final_review", "pending", "unreviewed", "draft"):
+        return "pending"
+    if s in ("reviewed", "accepted", "superseded"):
+        return s
+    return "pending"
+
+
 def adapt_to_canonical(
     data: Dict[str, Any],
+    schema_family: Optional[str] = None,
     source_path: Optional[str] = None,
     filename_pass: Optional[int] = None
 ) -> CanonicalManifest:
     """Adapt any recognized manifest dictionary into a CanonicalManifest model."""
-    schema_fam = detect_schema_family(data)
+    if schema_family is None or schema_family not in ("canonical_v1", "canonical_v2", "legacy_targets", "promotions", "single_function", "scan_report", "invalid", "unknown"):
+        # If second arg was source_path
+        if schema_family is not None and ("/" in schema_family or "\\" in schema_family or schema_family.endswith(".json")):
+            source_path = schema_family
+        schema_fam = detect_schema_family(data)
+    else:
+        schema_fam = schema_family
     
     if schema_fam == "invalid":
         raise ValueError(f"Data is not a dictionary: {data}")
@@ -57,7 +76,7 @@ def adapt_to_canonical(
         raise ValueError(f"Could not determine pass_number for manifest at {source_path}")
 
     branch = data.get("branch", "live-work-from-pass166")
-    status = data.get("status", "reviewed")
+    status = data.get("status", "draft")
     toolkit_version = data.get("toolkit_version", "repo-native-vNext")
     rom_sha256 = data.get("rom_sha256", "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9")
     live_seam = data.get("live_seam_after_pass")
@@ -81,7 +100,8 @@ def adapt_to_canonical(
     legacy_meta: Dict[str, Any] = {}
 
     if schema_fam in ("canonical_v1", "canonical_v2"):
-        for item in data.get("closed_ranges", []):
+        items = data.get("closed_ranges") or data.get("ranges") or []
+        for item in items:
             if isinstance(item, dict):
                 r_str = item.get("range") or item.get("address_range")
                 if r_str:
@@ -90,7 +110,7 @@ def adapt_to_canonical(
                         kind=item.get("kind", "code_owner"),
                         label=item.get("label", ""),
                         confidence=item.get("confidence", "medium"),
-                        verification_status=item.get("verification_status"),
+                        verification_status=normalize_verification_status(item.get("verification_status")),
                         parent_range=item.get("parent_range"),
                         parent_label=item.get("parent_label"),
                         evidence=item.get("evidence", {}),
@@ -123,6 +143,7 @@ def adapt_to_canonical(
                         kind=raw_kind,
                         label=label,
                         confidence=conf,
+                        verification_status="pending",
                         legacy_metadata={"raw_target": item}
                     )
                     closed_ranges.append(cr)
@@ -130,7 +151,9 @@ def adapt_to_canonical(
                         new_labels.append(cr.label)
                         
     elif schema_fam == "promotions":
-        items = data.get("promotions") or data.get("promoted_functions") or data.get("promoted") or []
+        items = data.get("promotions") or data.get("promoted_functions") or data.get("promoted")
+        if not items:
+            items = [data]
         for item in items:
             if isinstance(item, dict):
                 r_str = item.get("function_range") or item.get("range")
@@ -145,18 +168,21 @@ def adapt_to_canonical(
                         r_str = f"{b}:{int(s,16):04X}..{b}:{int(s,16)+0x1F:04X}"
                 if r_str:
                     label = item.get("name") or item.get("label") or ""
-                    v_stat = item.get("verification_status", "reviewed")
-                    if v_stat == "pending_final_review":
-                        v_stat = "reviewed"
+                    v_stat = normalize_verification_status(item.get("verification_status"))
                     score_val = item.get("score")
-                    conf = "high" if (score_val and ("score-6" in str(score_val) or score_val == 6)) else item.get("confidence", "medium")
+                    evidence_obj = item.get("evidence") or {"reason": item.get("reason"), "source": item.get("source")}
+                    if score_val is not None:
+                        if isinstance(evidence_obj, dict):
+                            evidence_obj["score"] = score_val
+                    # Preserve explicit confidence or default to medium
+                    conf = item.get("confidence", "medium")
                     cr = ClosedRange.parse(
                         range_str=r_str,
                         kind="code_owner",
                         label=label,
                         confidence=conf,
                         verification_status=v_stat,
-                        evidence=item.get("evidence") or {"reason": item.get("reason"), "source": item.get("source")},
+                        evidence=evidence_obj,
                         legacy_metadata={"raw_promotion": item}
                     )
                     closed_ranges.append(cr)
@@ -192,12 +218,18 @@ def adapt_to_canonical(
                 r_str = f"{b}:{s_a:04X}..{b}:{e_a:04X}"
         if r_str:
             label = data.get("name") or data.get("label") or ""
+            score_val = data.get("confidence") if isinstance(data.get("confidence"), int) else data.get("score")
+            evidence_obj = {"reasoning": data.get("reasoning"), "findings": data.get("findings")}
+            if score_val is not None:
+                evidence_obj["score"] = score_val
+            conf = data.get("confidence", "medium") if not isinstance(data.get("confidence"), int) else "medium"
             cr = ClosedRange.parse(
                 range_str=r_str,
                 kind=data.get("kind") or data.get("type", "code_owner"),
                 label=label,
-                confidence=data.get("confidence", "medium"),
-                verification_status=data.get("verification_status", "reviewed"),
+                confidence=conf,
+                verification_status=normalize_verification_status(data.get("verification_status")),
+                evidence=evidence_obj,
                 legacy_metadata={"raw_single_function": True}
             )
             closed_ranges.append(cr)

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Rebuilt coverage generator using canonical manifests and interval byte unions."""
+"""Coverage generator with explicit denominator labels, provenance headers, and strict validation."""
 
 import argparse
 import json
 import os
 import sys
 from pathlib import Path
-from typing import Dict, Any, List
+
 
 repo_root = Path(__file__).resolve().parent.parent.parent
 if str(repo_root) not in sys.path:
@@ -29,10 +29,20 @@ def main() -> int:
     
     all_ranges = []
     ranges_with_meta = []
+    total_raw_bytes = 0
+    code_ranges = []
+    data_ranges = []
+
     for m in manifests:
         for cr in m.closed_ranges:
             all_ranges.append(cr)
             ranges_with_meta.append((cr, m.pass_number, m.source_path or f"pass{m.pass_number:04d}.json"))
+            raw_len = (cr.end_addr - cr.start_addr + 1)
+            total_raw_bytes += raw_len
+            if cr.kind in ("data", "text_marker", "data_table"):
+                data_ranges.append(cr)
+            elif cr.kind != "superseded":
+                code_ranges.append(cr)
 
     # Conflict check
     waiver_cids = set()
@@ -55,33 +65,37 @@ def main() -> int:
 
     # Byte union coverage
     union_res = compute_byte_union(all_ranges)
+    code_union_res = compute_byte_union(code_ranges)
+    data_union_res = compute_byte_union(data_ranges)
 
-    # Denominators: SNES HiROM bank = 64 KiB (65,536 bytes)
-    # Total ROM = 4 MiB (4,194,304 bytes across 64 banks C0-FF)
-    BANK_SIZE = 65536
-    WHOLE_ROM_SIZE = 4194304
+    BANK_CAPACITY_BYTES = 65536
+    WHOLE_ROM_CAPACITY_BYTES = 4194304
 
     bank_coverage_table = {}
     for bank, covered_bytes in sorted(union_res["bank_covered_bytes"].items()):
-        pct = (covered_bytes / BANK_SIZE) * 100.0
+        pct = (covered_bytes / BANK_CAPACITY_BYTES) * 100.0
         bank_coverage_table[bank] = {
             "covered_bytes": covered_bytes,
-            "bank_capacity_bytes": BANK_SIZE,
+            "bank_capacity_bytes": BANK_CAPACITY_BYTES,
             "coverage_pct": round(pct, 2),
             "disjoint_intervals_count": len(union_res["bank_unions"].get(bank, []))
         }
 
     total_closed_bytes = union_res["total_covered_bytes"]
-    whole_rom_pct = (total_closed_bytes / WHOLE_ROM_SIZE) * 100.0
+    whole_rom_pct = (total_closed_bytes / WHOLE_ROM_CAPACITY_BYTES) * 100.0
 
     provenance = create_provenance_header("generate_coverage.py", manifests=manifests)
 
     report_payload = {
         "provenance": provenance,
         "metrics": {
-            "total_manifests_count": len(manifests),
+            "total_canonical_manifests_count": len(manifests),
             "total_closed_ranges_count": len(all_ranges),
-            "total_uniquely_closed_bytes": total_closed_bytes,
+            "raw_claimed_bytes_before_union": total_raw_bytes,
+            "uniquely_closed_bytes_after_union": total_closed_bytes,
+            "executable_closed_bytes": code_union_res["total_covered_bytes"],
+            "classified_data_closed_bytes": data_union_res["total_covered_bytes"],
+            "whole_rom_capacity_bytes": WHOLE_ROM_CAPACITY_BYTES,
             "whole_rom_coverage_pct": round(whole_rom_pct, 4),
             "active_banks_count": len(bank_coverage_table)
         },
@@ -100,11 +114,15 @@ def main() -> int:
             "# Chrono Trigger Disassembly — Coverage Report",
             "",
             f"- **Generated**: `{provenance['generated_at_utc']}`",
-            f"- **Git Commit**: `{provenance['git_commit']}`",
+            f"- **Source Commit**: `{provenance.get('source_commit', 'unknown')}`",
+            f"- **Manifest Set Digest**: `{provenance.get('manifest_set_digest', 'unknown')}`",
             f"- **Canonical Manifests**: {len(manifests)}",
             f"- **Total Closed Ranges**: {len(all_ranges)}",
-            f"- **Total Closed Bytes**: {total_closed_bytes:,} bytes",
-            f"- **Whole ROM Coverage**: {whole_rom_pct:.4f}% ({total_closed_bytes:,} / {WHOLE_ROM_SIZE:,} bytes)",
+            f"- **Raw Claimed Bytes**: {total_raw_bytes:,} B",
+            f"- **Uniquely Closed Bytes**: {total_closed_bytes:,} B",
+            f"- **Executable Code**: {code_union_res['total_covered_bytes']:,} B",
+            f"- **Classified Data**: {data_union_res['total_covered_bytes']:,} B",
+            f"- **Whole ROM Coverage**: **{whole_rom_pct:.4f}%** ({total_closed_bytes:,} / {WHOLE_ROM_CAPACITY_BYTES:,} bytes)",
             "",
             "## Bank Coverage Summary",
             "",
@@ -117,7 +135,7 @@ def main() -> int:
         with open(args.output_md, "w", encoding="utf-8") as f:
             f.write("\n".join(md_lines))
 
-    print(f"Coverage generated: {total_closed_bytes:,} bytes across {len(manifests)} manifests ({whole_rom_pct:.2f}% of whole ROM).")
+    print(f"Coverage generated: {total_closed_bytes:,} bytes across {len(manifests)} manifests ({whole_rom_pct:.4f}% of whole ROM).")
     return 0
 
 if __name__ == "__main__":

@@ -1,0 +1,27 @@
+{
+  "pass": 1008,
+  "bank": "C3",
+  "label": "ct_c3_1753_branch_util",
+  "address": "C3:1753",
+  "range": "C3:1753..C3:175B",
+  "bytes": 9,
+  "category": "code",
+  "confidence": 4,
+  "reasoning": [
+    "Cluster score 4",
+    "2 branches, 2 returns - balanced flow",
+    "ASCII ratio 0.222 - low data content",
+    "Clean code candidate"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 2,
+    "stack_ops": 0,
+    "returns": 2,
+    "first_return": "C3:1755"
+  },
+  "flags": [],
+  "related": ["C3:1753", "C3:1755", "C3:175B"],
+  "session": 19,
+  "status": "closed"
+}

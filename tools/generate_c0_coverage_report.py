@@ -181,9 +181,6 @@ def main():
     total_covered = len(covered_bytes)
     coverage_percentage = (total_covered / BANK_SIZE) * 100
     
-    # Calculate by page
-    page_coverage = calculate_page_coverage(covered_bytes)
-    
     # Calculate by 4KB region
     region_coverage = calculate_region_coverage(covered_bytes)
     
@@ -200,8 +197,8 @@ def main():
     # Summary section
     report_lines.append("## Summary")
     report_lines.append("")
-    report_lines.append(f"| Metric | Value |")
-    report_lines.append(f"|--------|-------|")
+    report_lines.append("| Metric | Value |")
+    report_lines.append("|--------|-------|")
     report_lines.append(f"| Total Functions | {total_functions} |")
     report_lines.append(f"| Total Manifests | {len(manifests)} |")
     report_lines.append(f"| Covered Bytes | {total_covered:,} / {BANK_SIZE:,} |")
@@ -340,10 +337,10 @@ def main():
     print(f"Coverage: {coverage_percentage:.1f}% ({total_covered:,} / {BANK_SIZE:,} bytes)")
     print(f"Total functions: {total_functions}")
     print(f"Total manifests: {len(manifests)}")
-    print(f"\nTop 5 gaps:")
+    print("\nTop 5 gaps:")
     for i, (start, end, size) in enumerate(gaps[:5], 1):
         print(f"  {i}. C0:{start:04X}-C0:{end:04X} ({size:,} bytes)")
 
 if __name__ == "__main__":
-    from datetime import datetime
+
     main()

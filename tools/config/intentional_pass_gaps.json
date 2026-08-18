@@ -1,432 +1,1458 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Registry of reviewed intentional pass gaps in historical sequence",
-  "version": 1,
+  "schema_version": 2,
+  "description": "Registry of reviewed intentional pass gaps in historical sequence with complete evidence metadata",
   "total_gaps_count": 106,
   "intentional_gaps": {
     "282": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 282,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 282",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "304": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 304,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 304",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "305": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 305,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 305",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "307": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 307,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 307",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "312": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 312,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 312",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "316": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 316,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 316",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "322": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 322,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 322",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "331": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 331,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 331",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "335": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 335,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 335",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "341": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 341,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 341",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "357": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 357,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 357",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "361": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 361,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 361",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "384": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 384,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 384",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "388": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 388,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 388",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "392": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 392,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 392",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "398": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 398,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 398",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "400": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 400,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 400",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "411": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 411,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 411",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "412": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 412,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 412",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "413": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 413,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 413",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "425": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 425,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 425",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "457": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 457,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 457",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "478": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 478,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 478",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "479": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 479,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 479",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "484": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 484,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 484",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
+        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "537": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 537,
+      "status": "verified_gap",
+      "reason_code": "unnumbered_draft_iteration",
+      "rationale": "Historical multi-agent pass sequence transition gap at pass 537",
+      "evidence": [
+        "docs/sessions/"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1040": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1040,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1040",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1041": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1041,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1041",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1042": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1042,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1042",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1043": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1043,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1043",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1044": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1044,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1044",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1045": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1045,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1045",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1046": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1046,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1046",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1047": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1047,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1047",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1048": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1048,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1048",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1049": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1049,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1049",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1050": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1050,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1050",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1051": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1051,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1051",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1052": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1052,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1052",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1053": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1053,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1053",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1054": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1054,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1054",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1055": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1055,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1055",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1056": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1056,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1056",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1057": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1057,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1057",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1058": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1058,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1058",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1059": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1059,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1059",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1060": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1060,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1060",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1061": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1061,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1061",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1076": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1076,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1076",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1077": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1077,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1077",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1078": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1078,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1078",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1079": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1079,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1079",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1080": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1080,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1080",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1081": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1081,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1081",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1082": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1082,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1082",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1083": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1083,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1083",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1084": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1084,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1084",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1085": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1085,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1085",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1086": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1086,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1086",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1087": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1087,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1087",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1088": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1088,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1088",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1089": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1089,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1089",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1090": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1090,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1090",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1091": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1091,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1091",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1092": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1092,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1092",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1093": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1093,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1093",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1094": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1094,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1094",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1095": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1095,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1095",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1096": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1096,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1096",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1097": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1097,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1097",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1098": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1098,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1098",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1099": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1099,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1099",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1100": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1100,
+      "status": "verified_gap",
+      "reason_code": "session_number_skip",
+      "rationale": "Historical agent swarm session numbering reservation gap at pass 1100",
+      "evidence": [
+        "docs/sessions/chrono_trigger_session30_c4_scan.md",
+        "passes/README.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1169": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1169,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1169",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1170": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1170,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1170",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1171": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1171,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1171",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1172": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1172,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1172",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1173": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1173,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1173",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1174": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1174,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1174",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1175": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1175,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1175",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1176": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1176,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1176",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1177": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1177,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1177",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1178": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1178,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1178",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1179": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1179,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1179",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1180": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1180,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1180",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1181": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1181,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1181",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1182": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1182,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1182",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1183": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1183,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1183",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1184": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1184,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1184",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1185": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1185,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1185",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1186": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1186,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1186",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1187": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1187,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1187",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1188": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1188,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1188",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1189": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1189,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1189",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1190": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1190,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1190",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1191": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1191,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1191",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1192": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1192,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1192",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1193": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1193,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1193",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1194": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1194,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1194",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1195": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1195,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1195",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1196": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1196,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1196",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1197": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1197,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1197",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1198": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1198,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1198",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1199": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1199,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1199",
+      "evidence": [
+        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1221": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1221,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Bank C4 candidate scan and classification pass (no closed ranges emitted)",
+      "evidence": [
+        "passes/manifests/legacy/pass1222_c4_scan.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     },
     "1222": {
-      "rationale": "Historical agent swarm sequence gap or unnumbered draft iteration",
-      "reviewed": true
+      "pass_number": 1222,
+      "status": "verified_gap",
+      "reason_code": "non_range_investigation",
+      "rationale": "Bank C4 candidate scan and classification pass (no closed ranges emitted)",
+      "evidence": [
+        "passes/manifests/legacy/pass1222_c4_scan.json"
+      ],
+      "reviewed_by": "remediation-maintainer",
+      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
+      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "revalidation_required": false
     }
   }
 }

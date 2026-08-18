@@ -36,6 +36,15 @@ def validate_manifest_semantics(manifest: CanonicalManifest) -> List[str]:
     if manifest.pass_number <= 0:
         errors.append(f"pass_number must be positive (got {manifest.pass_number})")
 
+    if manifest.source_path:
+        import re
+        fn = os.path.basename(manifest.source_path)
+        m_pass = re.search(r'pass(\d+)', fn)
+        if m_pass:
+            fn_pass = int(m_pass.group(1))
+            if fn_pass != manifest.pass_number:
+                errors.append(f"Filename pass number mismatch: filename '{fn}' claims pass {fn_pass} but content claims pass {manifest.pass_number}")
+
     if not manifest.closed_ranges:
         errors.append(f"Pass {manifest.pass_number} contains 0 closed ranges")
 

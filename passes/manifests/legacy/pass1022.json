@@ -1,0 +1,29 @@
+{
+  "pass": 1022,
+  "bank": "C0",
+  "label": "ct_c0_22ca_stack_helper",
+  "address": "C0:22CA",
+  "range": "C0:22CA..C0:22D7",
+  "bytes": 14,
+  "category": "code",
+  "confidence": 6,
+  "reasoning": [
+    "Score 6 cluster with prominent stack operations",
+    "Stack manipulation pattern - likely PHA/PLA or PHP/PLP",
+    "14 bytes - small helper function",
+    "Compact size typical of stack preservation routines",
+    "Located in 2200 region of Bank C0",
+    "Pattern consistent with interrupt save/restore"
+  ],
+  "findings": {
+    "calls": 0,
+    "branches": 0,
+    "stack_ops": 2,
+    "returns": 1,
+    "first_return": "C0:22D7"
+  },
+  "flags": ["score6", "stack_operation"],
+  "related": ["C0:22CA", "C0:22D7"],
+  "session": 20,
+  "status": "closed"
+}

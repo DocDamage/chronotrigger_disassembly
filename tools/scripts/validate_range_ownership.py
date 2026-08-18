@@ -6,14 +6,14 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Tuple
 
 repo_root = Path(__file__).resolve().parent.parent.parent
 if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
 from tools.ctrepo.manifest_discovery import iter_canonical_manifests
-from tools.ctrepo.range_model import detect_range_conflicts, compute_byte_union, RangeConflict
+from tools.ctrepo.range_model import detect_range_conflicts, compute_byte_union
 from tools.ctrepo.manifest_models import ClosedRange
 
 def main() -> int:

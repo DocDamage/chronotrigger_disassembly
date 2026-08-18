@@ -32,6 +32,54 @@ def run_verify_rom(args):
     sys.argv = ["verify_rom.py", "--rom", args.rom]
     return rom_main()
 
+def run_acceptance(args):
+    print("=== Running Full Acceptance Test Suite ===")
+    
+    print("\n--- Step 1: Static Analysis (Pyflakes) ---")
+    ret_flake = subprocess.call([sys.executable, "-m", "pyflakes", "tools", "tests"], cwd=str(repo_root))
+    if ret_flake != 0:
+        print("Static analysis failed.")
+        return 1
+
+    print("\n--- Step 2: Range Inventory Conservation ---")
+    ret_inv = subprocess.call([sys.executable, "tools/scripts/compare_manifest_range_inventory.py"], cwd=str(repo_root))
+    if ret_inv != 0:
+        print("Range inventory conservation check failed.")
+        return 1
+
+    print("\n--- Step 3: Range Ownership & Conflict Check ---")
+    ret_own = subprocess.call([sys.executable, "tools/scripts/validate_range_ownership.py", "--strict"], cwd=str(repo_root))
+    if ret_own != 0:
+        print("Range ownership check failed.")
+        return 1
+
+    print("\n--- Step 4: Branch State & Gaps Check ---")
+    ret_branch = subprocess.call([sys.executable, "tools/scripts/audit_branch_state_v1.py", "--strict-gaps"], cwd=str(repo_root))
+    if ret_branch != 0:
+        print("Branch state audit failed.")
+        return 1
+
+    print("\n--- Step 5: Pytest Unit Tests ---")
+    ret_test = subprocess.call([sys.executable, "-m", "pytest", "-q"], cwd=str(repo_root))
+    if ret_test != 0:
+        print("Pytest suite failed.")
+        return 1
+
+    print("\n--- Step 6: Coverage Report Generation ---")
+    ret_cov = subprocess.call([sys.executable, "tools/scripts/generate_coverage.py", "--strict"], cwd=str(repo_root))
+    if ret_cov != 0:
+        print("Coverage generation failed.")
+        return 1
+
+    print("\n--- Step 7: Toolkit Doctor ---")
+    ret_doc = subprocess.call([sys.executable, "tools/scripts/toolkit_doctor.py", "--strict"], cwd=str(repo_root))
+    if ret_doc != 0:
+        print("Toolkit doctor failed.")
+        return 1
+
+    print("\n=== Acceptance Suite PASSED Successfully ===")
+    return 0
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Chrono Trigger Disassembly Toolkit CLI")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -56,6 +104,11 @@ def main() -> int:
     p_rom = subparsers.add_parser("verify-rom", help="Verify local ROM SHA-256")
     p_rom.add_argument("--rom", default="rom/Chrono Trigger (USA).sfc", help="Path to local ROM")
     p_rom.set_defaults(func=run_verify_rom)
+
+    # acceptance
+    p_acc = subparsers.add_parser("acceptance", help="Run complete CI acceptance suite in strict mode")
+    p_acc.add_argument("--strict", action="store_true", default=True, help="Enforce strict mode")
+    p_acc.set_defaults(func=run_acceptance)
 
     args = parser.parse_args()
     return args.func(args)

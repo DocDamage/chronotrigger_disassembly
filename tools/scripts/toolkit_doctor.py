@@ -7,7 +7,7 @@ import argparse
 import json
 import os
 import py_compile
-import re
+
 import subprocess
 import sys
 from pathlib import Path
@@ -57,21 +57,21 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
             [sys.executable, "-m", "pyflakes", "tools", "tests"],
             cwd=str(root), capture_output=True, text=True
         )
-        flake_output = res.stdout.strip()
-        # Exclude known benign warnings if any
-        flake_lines = [l for l in flake_output.splitlines() if l.strip() and "undefined name" in l]
-        flake_ok = len(flake_lines) == 0
+        flake_output = (res.stdout + res.stderr).strip()
+        flake_ok = (res.returncode == 0) and len(flake_output) == 0
         if not flake_ok:
             has_failures = True
         checks.append({
-            "name": "static_analysis_undefined_names",
+            "name": "static_analysis_pyflakes",
             "status": "pass" if flake_ok else "fail",
-            "undefined_names": flake_lines
+            "returncode": res.returncode,
+            "output": flake_output
         })
     except Exception as e:
+        has_failures = True
         checks.append({
-            "name": "static_analysis_undefined_names",
-            "status": "skipped",
+            "name": "static_analysis_pyflakes",
+            "status": "fail",
             "reason": str(e)
         })
 

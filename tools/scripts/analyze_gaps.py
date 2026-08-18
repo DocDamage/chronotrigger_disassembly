@@ -52,20 +52,20 @@ def main():
     if end_marker < 0xFFFF:
         gaps.append((end_marker, 0xFFFF))
     
-    print(f"=== Bank C0 Coverage ===")
+    print("=== Bank C0 Coverage ===")
     print(f"Total functions: {len(ranges)}")
     print(f"Total bytes covered: {total_bytes} ({100*total_bytes/65536:.1f}%)")
     print()
     
     # Show gaps > 256 bytes
-    print(f"=== Gaps > 256 bytes ===")
+    print("=== Gaps > 256 bytes ===")
     for gap_start, gap_end in gaps:
         size = gap_end - gap_start
         if size > 256:
             print(f"  C0:{gap_start:04X}..C0:{gap_end:04X}: {size} bytes")
     
     print()
-    print(f"=== Top 10 gaps ===")
+    print("=== Top 10 gaps ===")
     gaps_sorted = sorted(gaps, key=lambda x: x[1]-x[0], reverse=True)[:10]
     for gap_start, gap_end in gaps_sorted:
         size = gap_end - gap_start
@@ -73,7 +73,7 @@ def main():
     
     # Show coverage by 4KB region
     print()
-    print(f"=== Coverage by 4KB region ===")
+    print("=== Coverage by 4KB region ===")
     for region in range(0x0, 0x10000, 0x1000):
         region_ranges = [(s, e) for s, e, _, _ in ranges if s >= region and s < region + 0x1000]
         region_coverage = sum(e - s for s, e in region_ranges)

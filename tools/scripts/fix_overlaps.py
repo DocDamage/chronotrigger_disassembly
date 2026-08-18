@@ -80,12 +80,6 @@ def adjust_boundaries():
         for r in data.get('closed_ranges', []):
             if r.get('range') == old_range:
                 r['range'] = new_range
-                # Update label to reflect new boundary
-                old_label = r.get('label', '')
-                # Parse addresses
-                old_start = old_range.split('..')[0].split(':')[1]
-                new_start = new_range.split('..')[0].split(':')[1]
-                new_end = new_range.split('..')[1].split(':')[1]
                 print(f"  {fname}: {old_range} -> {new_range}")
                 break
         

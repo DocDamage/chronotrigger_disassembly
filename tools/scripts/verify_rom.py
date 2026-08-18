@@ -4,7 +4,7 @@
 import argparse
 import hashlib
 import os
-import sys
+
 
 EXPECTED_SHA256 = "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9"
 EXPECTED_SIZE = 4194304

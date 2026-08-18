@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "pass_number": 196,
-  "status": "reviewed",
+  "status": "draft",
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
@@ -11,7 +11,7 @@
       "kind": "code_owner",
       "label": "ct_c7_c193_unknown_function_cluster_entry",
       "confidence": "high",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "evidence": {
         "cluster_score": 7,
         "cluster_width": 32,
@@ -34,7 +34,7 @@
     "rebuild": "low"
   },
   "sources": {
-    "legacy_1_pass196.json": "passes/manifests/legacy/pass196.json"
+    "source_1_pass196.json": "passes/manifests/legacy/pass196.json"
   },
   "notes": [
     "Cluster score 7: Highest internal evidence in C7 bank analyzed so far",
