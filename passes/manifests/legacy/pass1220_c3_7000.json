@@ -1,0 +1,128 @@
+{
+  "pass": "pass1220",
+  "region": "C3:7000-77FF",
+  "scan_date": "2026-04-09",
+  "pages_scanned": 8,
+  "promotions": [
+    {
+      "addr": "C3:706B",
+      "range": "C3:706B..C3:7090",
+      "source": "backtrack",
+      "confidence": "high",
+      "reason": "Score 4, ASCII 0.158, clean_start 0x38"
+    },
+    {
+      "addr": "C3:70ED",
+      "range": "C3:70ED..C3:70FF",
+      "source": "backtrack",
+      "confidence": "high",
+      "reason": "Score 4, ASCII 0.250, clean_start 0x20"
+    },
+    {
+      "addr": "C3:713E",
+      "range": "C3:713E..C3:7159",
+      "source": "backtrack",
+      "confidence": "high",
+      "reason": "Score 4, ASCII 0.286, clean_start 0x20"
+    },
+    {
+      "addr": "C3:7207",
+      "range": "C3:7207..C3:7228",
+      "source": "backtrack",
+      "confidence": "high",
+      "reason": "Score 6, ASCII 0.294, clean_start 0x08"
+    },
+    {
+      "addr": "C3:70E0",
+      "range": "C3:70E0..C3:7100",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: C3:88C9"
+    },
+    {
+      "addr": "C3:7210",
+      "range": "C3:7210..C3:7230",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: C3:4AAC"
+    },
+    {
+      "addr": "C3:724E",
+      "range": "C3:724E..C3:726E",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: C3:A8C5"
+    },
+    {
+      "addr": "C3:7385",
+      "range": "C3:7385..C3:73A5",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: C3:2489"
+    },
+    {
+      "addr": "C3:74F5",
+      "range": "C3:74F5..C3:7515",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: C3:466C"
+    },
+    {
+      "addr": "C3:7534",
+      "range": "C3:7534..C3:7554",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: C3:8E66"
+    },
+    {
+      "addr": "C3:76C3",
+      "range": "C3:76C3..C3:76E3",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: FC:BA5A (cross-bank call)"
+    },
+    {
+      "addr": "C3:77AB",
+      "range": "C3:77AB..C3:77CB",
+      "source": "weak_target",
+      "confidence": "high",
+      "reason": "Verified caller: C3:57FD"
+    }
+  ],
+  "frozen_ranges": [
+    {
+      "range": "C3:7297..C3:72A9",
+      "reason": "High ASCII (0.789) - likely text/data"
+    },
+    {
+      "range": "C3:727B..C3:7285",
+      "reason": "High ASCII (0.909) - likely text/data"
+    },
+    {
+      "range": "C3:7331..C3:7340",
+      "reason": "High ASCII (0.938) - text/data, multiple returns"
+    }
+  ],
+  "needs_manual_review": [
+    {
+      "range": "C3:7000..C3:7020",
+      "reason": "mixed_command_data with bad_start_or_dead_lane_reject"
+    },
+    {
+      "range": "C3:7100..C3:7159",
+      "reason": "mixed_command_data with bad_start_or_dead_lane_reject"
+    },
+    {
+      "range": "C3:7300..C3:73FF",
+      "reason": "text_ascii_heavy but has weak target at C3:7385"
+    }
+  ],
+  "notes": [
+    "Region is predominantly text_ascii_heavy (6/8 pages)",
+    "2 pages show mixed_command_data at C3:7000-71FF",
+    "Most pages require manual_owner_boundary_review",
+    "Found 8 weak targets with verified external callers",
+    "7 high-confidence backtrack candidates identified (score>=4, ASCII<0.4)",
+    "C3:76C3 has cross-bank caller from FC:BA5A (notable)"
+  ]
+}

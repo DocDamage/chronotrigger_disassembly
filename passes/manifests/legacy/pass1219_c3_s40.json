@@ -1,0 +1,22 @@
+{
+  "pass_number": 1219,
+  "pass_name": "C3_6800_6FFF_Freeze",
+  "region": "C3:6800..C3:6FFF",
+  "pages": [
+    {"page": "C3:6800..C3:68FF", "status": "frozen_data", "posture": "bad_start_or_dead_lane_reject"},
+    {"page": "C3:6900..C3:69FF", "status": "frozen_data", "posture": "bad_start_or_dead_lane_reject"},
+    {"page": "C3:6A00..C3:6AFF", "status": "frozen_data", "posture": "bad_start_or_dead_lane_reject"},
+    {"page": "C3:6B00..C3:6BFF", "status": "frozen_data", "posture": "manual_owner_boundary_review"},
+    {"page": "C3:6C00..C3:6CFF", "status": "frozen_data", "posture": "local_control_only"},
+    {"page": "C3:6D00..C3:6DFF", "status": "frozen_data", "posture": "text_ascii_heavy"},
+    {"page": "C3:6E00..C3:6EFF", "status": "frozen_data", "posture": "mixed_lane_continue"},
+    {"page": "C3:6F00..C3:6FFF", "status": "frozen_data", "posture": "mixed_lane_continue"}
+  ],
+  "promotions": [],
+  "closed_ranges": [
+    {"range": "C3:6800..C3:6FFF", "kind": "data", "confidence": "medium", "reason": "session_40_freeze"}
+  ],
+  "seam_after_pass": "C3:7000",
+  "session": 40,
+  "notes": "All pages frozen as data. Score-6 candidates examined but rejected due to suspicious caller contexts and invalid opcode sequences."
+}

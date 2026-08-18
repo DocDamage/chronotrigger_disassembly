@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "pass_number": 1210,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "live_seam_after_pass": "C3:3000..",
+  "closed_ranges": [
+    {
+      "range": "C3:2C00..C3:2CFF",
+      "kind": "data",
+      "label": "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:2D00..C3:2DFF",
+      "kind": "data",
+      "label": "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:2E00..C3:2EFF",
+      "kind": "data",
+      "label": "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:2F00..C3:2FFF",
+      "kind": "data",
+      "label": "ct_c3_2f00_frozen_structured_data_continuation_40_brk_tabular_patterns",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6",
+    "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences",
+    "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences",
+    "ct_c3_2f00_frozen_structured_data_continuation_40_brk_tabular_patterns"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass1210_c3_s32.json": "passes/manifests/legacy/pass1210_c3_s32.json"
+  },
+  "notes": []
+}

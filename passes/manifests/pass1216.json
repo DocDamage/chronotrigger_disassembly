@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "pass_number": 1216,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "live_seam_after_pass": "C3:5800..",
+  "closed_ranges": [
+    {
+      "range": "C3:5000..C3:50FF",
+      "kind": "data",
+      "label": "ct_c3_5000_frozen_mixed_command_data_2_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:5100..C3:51FF",
+      "kind": "data",
+      "label": "ct_c3_5100_frozen_candidate_lane_2_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:5200..C3:52FF",
+      "kind": "data",
+      "label": "ct_c3_5200_frozen_candidate_lane_1_hard_bad_start",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:5300..C3:53FF",
+      "kind": "data",
+      "label": "ct_c3_5300_frozen_local_control_only_0_hard_bad_starts",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:5400..C3:54FF",
+      "kind": "data",
+      "label": "ct_c3_5400_frozen_branch_fed_pocket_1_hard_bad_start",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:5500..C3:55FF",
+      "kind": "data",
+      "label": "ct_c3_5500_frozen_branch_fed_pocket_1_hard_bad_start",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:5600..C3:56FF",
+      "kind": "data",
+      "label": "ct_c3_5600_frozen_mixed_command_data_mixed_lane_continue",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:5700..C3:57FF",
+      "kind": "data",
+      "label": "ct_c3_5700_frozen_branch_fed_pocket_jump_table_entries",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_5000_frozen_mixed_command_data_2_hard_bad_starts",
+    "ct_c3_5100_frozen_candidate_lane_2_hard_bad_starts",
+    "ct_c3_5200_frozen_candidate_lane_1_hard_bad_start",
+    "ct_c3_5300_frozen_local_control_only_0_hard_bad_starts",
+    "ct_c3_5400_frozen_branch_fed_pocket_1_hard_bad_start",
+    "ct_c3_5500_frozen_branch_fed_pocket_1_hard_bad_start",
+    "ct_c3_5600_frozen_mixed_command_data_mixed_lane_continue",
+    "ct_c3_5700_frozen_branch_fed_pocket_jump_table_entries"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass1216_c3_s37.json": "passes/manifests/legacy/pass1216_c3_s37.json"
+  },
+  "notes": []
+}

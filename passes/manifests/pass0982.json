@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "pass_number": 982,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:5E47..C3:5E6C",
+      "kind": "code_helper",
+      "label": "ct_c3_5e47_lda_init_handler",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "parent_range": "C3:5E00..C3:5EFF",
+      "parent_label": "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only"
+    }
+  ],
+  "new_labels": [
+    "ct_c3_5e47_lda_init_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass982.json": "passes/manifests/legacy/pass982.json"
+  },
+  "notes": []
+}

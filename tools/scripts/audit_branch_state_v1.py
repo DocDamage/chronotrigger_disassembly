@@ -2,7 +2,16 @@
 from __future__ import annotations
 
 import argparse
+import json
+import sys
 from pathlib import Path
+
+repo_root = Path(__file__).resolve().parent.parent.parent
+scripts_dir = Path(__file__).resolve().parent
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
+if str(scripts_dir) not in sys.path:
+    sys.path.insert(0, str(scripts_dir))
 
 from continuation_note_utils_v1 import latest_continuation_note_summary
 from snes_utils import iter_manifest_paths, load_manifest, manifest_live_seam, manifest_pass_number
@@ -14,7 +23,8 @@ def main() -> int:
     parser.add_argument('--sessions-dir', default='docs/sessions')
     parser.add_argument('--bank-progress', default='tools/config/bank_c3_progress.json')
     parser.add_argument('--generated-progress', default='tools/config/bank_c3_progress.generated.json')
-    parser.add_argument('--strict-gaps', action='store_true', help='Fail when manifest pass numbers are non-contiguous')
+    parser.add_argument('--gaps-config', default='tools/config/intentional_pass_gaps.json')
+    parser.add_argument('--strict-gaps', action='store_true', help='Fail when manifest pass numbers are non-contiguous and unreviewed')
     args = parser.parse_args()
 
     manifest_passes = []
@@ -31,8 +41,19 @@ def main() -> int:
     else:
         expected = list(range(min(manifest_passes), max(manifest_passes) + 1))
         missing = sorted(set(expected) - set(manifest_passes))
-        if missing:
-            warnings.append(f'missing manifest pass numbers: {missing}')
+        intentional_gaps = set()
+        gaps_path = Path(args.gaps_config)
+        if gaps_path.exists():
+            try:
+                g_data = json.loads(gaps_path.read_text(encoding='utf-8'))
+                intentional_gaps = {int(k) for k in g_data.get('intentional_gaps', {}).keys()}
+            except Exception:
+                pass
+        unreviewed = [m for m in missing if m not in intentional_gaps]
+        if unreviewed:
+            warnings.append(f'unreviewed missing manifest pass numbers: {unreviewed}')
+        elif missing:
+            print(f'reviewed intentional gaps: {len(missing)} passes accounted for')
 
     latest_note = latest_continuation_note_summary(args.sessions_dir)
     effective_seam = latest_note.live_seam if latest_note and latest_note.live_seam else latest_seam

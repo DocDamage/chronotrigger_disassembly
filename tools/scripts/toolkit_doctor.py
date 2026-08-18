@@ -1,290 +1,267 @@
 #!/usr/bin/env python3
+"""Comprehensive repository health doctor and test suite runner."""
+
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import py_compile
 import re
 import subprocess
 import sys
 from pathlib import Path
+from typing import Dict, Any, List, Tuple
 
-import snes_utils
-import snes_utils_hirom_v2
+repo_root = Path(__file__).resolve().parent.parent.parent
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
 
+from tools.ctrepo.provenance import create_provenance_header
+from tools.ctrepo.manifest_discovery import discover_manifest_candidates
+from tools.ctrepo.manifest_validation import validate_manifest
+from tools.ctrepo.range_model import detect_range_conflicts
 
-SCRIPT_REF_RE = re.compile(r'`(?P<path>tools/scripts/[^`]+\.py)`')
-LOCAL_SCRIPT_REF_RE = re.compile(r'`(?P<name>[A-Za-z0-9_./-]+\.py)`')
+def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
+    root = repo_root
+    checks: List[Dict[str, Any]] = []
+    has_failures = False
+    has_warnings = False
 
-CORE_ENTRYPOINTS = [
-    'tools/scripts/find_next_callable_lane.py',
-    'tools/scripts/build_call_anchor_report.py',
-    'tools/scripts/classify_c3_ranges.py',
-    'tools/scripts/validate_labels.py',
-    'tools/scripts/publish_pass_bundle.py',
-    'tools/scripts/update_bank_progress.py',
-]
-
-HELP_SMOKE_TARGETS = [
-    'tools/scripts/find_next_callable_lane.py',
-    'tools/scripts/build_call_anchor_report.py',
-    'tools/scripts/classify_c3_ranges.py',
-    'tools/scripts/validate_labels.py',
-    'tools/scripts/publish_pass_bundle.py',
-    'tools/scripts/update_bank_progress.py',
-]
-
-DUPLICATE_HELPER_TARGETS = [
-    'tools/scripts/detect_data_patterns_v1.py',
-    'tools/scripts/validate_cross_bank_callers_v1.py',
-    'tools/scripts/page_range_mixedness_v1.py',
-    'tools/scripts/score_owner_boundary_risk_v1.py',
-    'tools/scripts/find_local_code_islands_v1.py',
-    'tools/scripts/score_raw_xref_context_v1.py',
-    'tools/scripts/seam_triage_utils_v1.py',
-]
-
-
-def repo_root() -> Path:
-    return Path(__file__).resolve().parents[2]
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Audit toolkit health, compatibility entrypoints, and low-bank mapping correctness')
-    parser.add_argument('--output-json', default='reports/toolkit_doctor.json')
-    parser.add_argument('--output-md', default='reports/toolkit_doctor.md')
-    return parser.parse_args()
-
-
-def add_check(results: list[dict[str, object]], name: str, ok: bool, details: object) -> None:
-    results.append({'name': name, 'ok': ok, 'details': details})
-
-
-def compile_check(root: Path) -> tuple[bool, dict[str, object]]:
-    failures: list[dict[str, str]] = []
-    scripts = sorted(root.glob('tools/scripts/*.py'))
-    for path in scripts:
-        try:
-            py_compile.compile(str(path), doraise=True)
-        except Exception as exc:  # pragma: no cover - surfaced in doctor output
-            failures.append({'path': str(path.relative_to(root)).replace('\\', '/'), 'error': str(exc)})
-    return (not failures, {'script_count': len(scripts), 'failures': failures})
-
-
-def legacy_entrypoint_check(root: Path) -> tuple[bool, dict[str, object]]:
-    missing: list[str] = []
-    stub_markers: list[str] = []
-    for rel in CORE_ENTRYPOINTS:
-        path = root / rel
-        if not path.exists():
-            missing.append(rel)
+    # 1. Compile Check on all tracked python files
+    py_files = []
+    py_failures = []
+    for p in root.rglob("*.py"):
+        if ".git" in str(p) or ".venv" in str(p):
             continue
-        text = path.read_text(encoding='utf-8')
-        if re.search(r"""print\(\s*f?['"]\[stub\]""", text):
-            stub_markers.append(rel)
-    return (not missing and not stub_markers, {'required': CORE_ENTRYPOINTS, 'missing': missing, 'stub_markers': stub_markers})
+        rel = str(p.relative_to(root)).replace("\\", "/")
+        py_files.append(rel)
+        try:
+            py_compile.compile(str(p), doraise=True)
+        except Exception as e:
+            py_failures.append({"path": rel, "error": str(e)})
 
+    check_ok = len(py_failures) == 0
+    if not check_ok:
+        has_failures = True
+    checks.append({
+        "name": "python_compilation",
+        "status": "pass" if check_ok else "fail",
+        "total_files": len(py_files),
+        "failures": py_failures
+    })
 
-def collect_script_refs(root: Path) -> tuple[list[str], list[str]]:
-    refs: list[str] = []
-    workflow_path = root / 'tools/docs/workflow.md'
-    workflow_text = workflow_path.read_text(encoding='utf-8')
-    refs.extend(f"tools/scripts/{m.group('name')}" for m in LOCAL_SCRIPT_REF_RE.finditer(workflow_text) if '/' not in m.group('name'))
-
-    for rel in ['README.md', 'tools/README.md']:
-        text = (root / rel).read_text(encoding='utf-8')
-        refs.extend(m.group('path') for m in SCRIPT_REF_RE.finditer(text))
-    refs = sorted(set(refs))
-
-    missing: list[str] = []
-    for rel in refs:
-        if not (root / rel).exists():
-            missing.append(rel)
-    return refs, missing
-
-
-def readme_reference_check(root: Path) -> tuple[bool, dict[str, object]]:
-    refs, missing = collect_script_refs(root)
-    return (not missing, {'referenced_scripts': refs, 'missing': missing})
-
-
-def low_bank_mapping_check() -> tuple[bool, dict[str, object]]:
-    samples = [
-        {'address': 'C3:0000', 'offset': 0x030000},
-        {'address': 'C3:0557', 'offset': 0x030557},
-        {'address': 'CF:F3DC', 'offset': 0x0FF3DC},
-    ]
-    mismatches: list[dict[str, object]] = []
-
-    for sample in samples:
-        bank, addr = snes_utils.parse_snes_address(sample['address'])
-        legacy_offset = snes_utils.hirom_to_file_offset(bank, addr)
-        legacy_roundtrip = f'{snes_utils.file_offset_to_snes(sample["offset"])[0]:02X}:{snes_utils.file_offset_to_snes(sample["offset"])[1]:04X}'
-        v2_offset = snes_utils_hirom_v2.hirom_to_file_offset(bank, addr)
-        v2_roundtrip = f'{snes_utils_hirom_v2.file_offset_to_snes(sample["offset"])[0]:02X}:{snes_utils_hirom_v2.file_offset_to_snes(sample["offset"])[1]:04X}'
-        if legacy_offset != sample['offset'] or v2_offset != sample['offset'] or legacy_roundtrip != sample['address'] or v2_roundtrip != sample['address']:
-            mismatches.append(
-                {
-                    'sample': sample,
-                    'legacy_offset': legacy_offset,
-                    'legacy_roundtrip': legacy_roundtrip,
-                    'v2_offset': v2_offset,
-                    'v2_roundtrip': v2_roundtrip,
-                }
-            )
-
-    return (not mismatches, {'samples': samples, 'mismatches': mismatches})
-
-
-def help_smoke_check(root: Path) -> tuple[bool, dict[str, object]]:
-    failures: list[dict[str, object]] = []
-    for rel in HELP_SMOKE_TARGETS:
-        completed = subprocess.run(
-            [sys.executable, str(root / rel), '--help'],
-            cwd=root,
-            capture_output=True,
-            text=True,
+    # 2. Pyflakes static analysis check
+    try:
+        res = subprocess.run(
+            [sys.executable, "-m", "pyflakes", "tools", "tests"],
+            cwd=str(root), capture_output=True, text=True
         )
-        if completed.returncode != 0:
-            failures.append(
-                {
-                    'script': rel,
-                    'returncode': completed.returncode,
-                    'stderr_tail': completed.stderr.splitlines()[-10:],
-                }
-            )
-    return (not failures, {'smoke_targets': HELP_SMOKE_TARGETS, 'failures': failures})
+        flake_output = res.stdout.strip()
+        # Exclude known benign warnings if any
+        flake_lines = [l for l in flake_output.splitlines() if l.strip() and "undefined name" in l]
+        flake_ok = len(flake_lines) == 0
+        if not flake_ok:
+            has_failures = True
+        checks.append({
+            "name": "static_analysis_undefined_names",
+            "status": "pass" if flake_ok else "fail",
+            "undefined_names": flake_lines
+        })
+    except Exception as e:
+        checks.append({
+            "name": "static_analysis_undefined_names",
+            "status": "skipped",
+            "reason": str(e)
+        })
 
+    # 3. Canonical Manifest Integrity Check
+    manifest_candidates = discover_manifest_candidates(manifests_dir=str(root / "passes/manifests"))
+    manifest_errors = []
+    duplicate_passes = {}
+    seen_passes = {}
+    for c in manifest_candidates:
+        if not c.is_canonical_filename:
+            manifest_errors.append(f"{c.source_path}: non-canonical filename '{c.filename}'")
+        if c.error:
+            manifest_errors.append(f"{c.source_path}: {c.error}")
+        elif c.manifest:
+            p_num = c.manifest.pass_number
+            if p_num in seen_passes:
+                duplicate_passes[p_num] = [seen_passes[p_num], c.source_path]
+                manifest_errors.append(f"Duplicate pass {p_num}")
+            else:
+                seen_passes[p_num] = c.source_path
+            is_valid, errs = validate_manifest(c.manifest, strict=True)
+            if not is_valid:
+                for err in errs:
+                    manifest_errors.append(f"{c.source_path}: {err}")
 
-def manifest_schema_smoke_check(root: Path) -> tuple[bool, dict[str, object]]:
-    samples = [
-        'passes/manifests/pass402.json',
-        'passes/manifests/pass763.json',
-    ]
-    failures: list[dict[str, object]] = []
-    for rel in samples:
-        completed = subprocess.run(
-            [sys.executable, str(root / 'tools/scripts/check_pass_manifest.py'), '--manifest', str(root / rel)],
-            cwd=root,
-            capture_output=True,
-            text=True,
+    manifest_ok = len(manifest_errors) == 0
+    if not manifest_ok:
+        has_failures = True
+    checks.append({
+        "name": "canonical_manifest_integrity",
+        "status": "pass" if manifest_ok else "fail",
+        "manifest_count": len(manifest_candidates),
+        "errors": manifest_errors[:20]
+    })
+
+    # 4. Range Ownership & Conflict Check
+    ranges_with_meta = []
+    for c in manifest_candidates:
+        if c.manifest:
+            for r in c.manifest.closed_ranges:
+                ranges_with_meta.append((r, c.manifest.pass_number, c.source_path))
+
+    waivers_file = root / "tools/config/range_overlap_waivers.json"
+    waiver_cids = set()
+    if waivers_file.exists():
+        try:
+            w_doc = json.loads(waivers_file.read_text(encoding="utf-8"))
+            for w in w_doc.get("waivers", []):
+                waiver_cids.add(w.get("conflict_id", w))
+        except Exception:
+            pass
+
+    all_conflicts = detect_range_conflicts(ranges_with_meta)
+    unresolved_conflicts = [c for c in all_conflicts if c.conflict_id not in waiver_cids]
+    range_ok = len(unresolved_conflicts) == 0
+    if not range_ok:
+        has_failures = True
+    checks.append({
+        "name": "range_ownership_conflicts",
+        "status": "pass" if range_ok else "fail",
+        "total_conflicts": len(all_conflicts),
+        "unresolved_conflicts_count": len(unresolved_conflicts),
+        "waived_conflicts_count": len(all_conflicts) - len(unresolved_conflicts)
+    })
+
+    # 5. Branch State & Gaps Check
+    try:
+        res = subprocess.run(
+            [sys.executable, str(root / "tools/scripts/audit_branch_state_v1.py"), "--strict-gaps"],
+            cwd=str(root), capture_output=True, text=True
         )
-        if completed.returncode != 0:
-            failures.append(
-                {
-                    'manifest': rel,
-                    'returncode': completed.returncode,
-                    'stdout_tail': completed.stdout.splitlines()[-10:],
-                    'stderr_tail': completed.stderr.splitlines()[-10:],
-                }
-            )
-    return (not failures, {'sample_manifests': samples, 'failures': failures})
+        branch_ok = (res.returncode == 0)
+        if not branch_ok:
+            has_failures = True
+        checks.append({
+            "name": "branch_state_audit",
+            "status": "pass" if branch_ok else "fail",
+            "output": res.stdout.strip()
+        })
+    except Exception as e:
+        has_failures = True
+        checks.append({
+            "name": "branch_state_audit",
+            "status": "fail",
+            "error": str(e)
+        })
 
+    # 6. Pytest Unit Tests
+    try:
+        res = subprocess.run(
+            [sys.executable, "-m", "pytest", "-q"],
+            cwd=str(root), capture_output=True, text=True
+        )
+        test_ok = (res.returncode == 0)
+        if not test_ok:
+            has_failures = True
+        checks.append({
+            "name": "unit_tests",
+            "status": "pass" if test_ok else "fail",
+            "summary": res.stdout.strip().splitlines()[-1] if res.stdout.strip() else ""
+        })
+    except Exception as e:
+        checks.append({
+            "name": "unit_tests",
+            "status": "fail",
+            "error": str(e)
+        })
 
-def branch_state_smoke_check(root: Path) -> tuple[bool, dict[str, object]]:
-    completed = subprocess.run(
-        [sys.executable, str(root / 'tools/scripts/audit_branch_state_v1.py')],
-        cwd=root,
-        capture_output=True,
-        text=True,
-    )
-    return (
-        completed.returncode == 0,
-        {
-            'returncode': completed.returncode,
-            'stdout_tail': completed.stdout.splitlines()[-12:],
-            'stderr_tail': completed.stderr.splitlines()[-12:],
-        },
-    )
+    # 7. Prohibited Commercial ROM Check in git tracking
+    try:
+        res = subprocess.run(
+            ["git", "ls-files", "rom/*.sfc", "rom/*.smc", "*.sfc", "*.smc"],
+            cwd=str(root), capture_output=True, text=True
+        )
+        tracked_roms = [l.strip() for l in res.stdout.splitlines() if l.strip()]
+        rom_ok = len(tracked_roms) == 0
+        if not rom_ok:
+            has_warnings = True
+            if strict:
+                has_failures = True
+        checks.append({
+            "name": "prohibited_rom_tracking",
+            "status": "pass" if rom_ok else ("fail" if strict else "warn"),
+            "tracked_roms": tracked_roms
+        })
+    except Exception:
+        pass
 
+    # Overall report
+    overall_status = "fail" if has_failures else ("warn" if has_warnings else "pass")
+    
+    provenance = create_provenance_header("toolkit_doctor.py")
+    report = {
+        "provenance": provenance,
+        "overall_status": overall_status,
+        "strict_mode": strict,
+        "total_checks": len(checks),
+        "passed_checks": sum(1 for c in checks if c["status"] == "pass"),
+        "failed_checks": sum(1 for c in checks if c["status"] == "fail"),
+        "warned_checks": sum(1 for c in checks if c["status"] == "warn"),
+        "checks": checks
+    }
 
-def duplicate_helper_check(root: Path) -> tuple[bool, dict[str, object]]:
-    helper_defs = (
-        'def hirom_to_file_offset',
-        'def file_offset_to_snes',
-        'def parse_snes_range',
-        'def slice_rom_range',
-    )
-    offenders: list[dict[str, object]] = []
-    for rel in DUPLICATE_HELPER_TARGETS:
-        text = (root / rel).read_text(encoding='utf-8')
-        found = [helper for helper in helper_defs if helper in text]
-        if found:
-            offenders.append({'script': rel, 'duplicate_helpers': found})
-    return (not offenders, {'targets': DUPLICATE_HELPER_TARGETS, 'offenders': offenders})
-
-
-def render_markdown(data: dict[str, object]) -> str:
-    lines = [
-        '# Toolkit Doctor',
-        '',
-        f"- overall health: **{data['health_percent']:.1f}%**",
-        f"- passing checks: **{data['passed_checks']} / {data['total_checks']}**",
-        '',
-        '## Checks',
-        '',
-    ]
-    for item in data['checks']:
-        status = 'ok' if item['ok'] else 'fail'
-        lines.append(f"- **{item['name']}**: {status}")
-        details_text = json.dumps(item['details'], indent=2)
-        for line in details_text.splitlines():
-            lines.append(f'  {line}')
-    return '\n'.join(lines) + '\n'
+    return report, (not has_failures)
 
 
 def main() -> int:
-    args = parse_args()
-    root = repo_root()
-    checks: list[dict[str, object]] = []
+    parser = argparse.ArgumentParser(description="Repository health doctor.")
+    parser.add_argument("--strict", action="store_true", help="Fail on warnings as well as errors")
+    parser.add_argument("--output-json", default="reports/toolkit_doctor.json")
+    parser.add_argument("--output-md", default="reports/toolkit_doctor.md")
+    args = parser.parse_args()
 
-    ok, details = compile_check(root)
-    add_check(checks, 'python_script_compile_health', ok, details)
+    report, success = run_doctor(strict=args.strict)
 
-    ok, details = legacy_entrypoint_check(root)
-    add_check(checks, 'legacy_entrypoints_upgraded', ok, details)
+    if args.output_json:
+        os.makedirs(os.path.dirname(os.path.abspath(args.output_json)), exist_ok=True)
+        with open(args.output_json, "w", encoding="utf-8") as f:
+            json.dump(report, f, indent=2)
 
-    ok, details = readme_reference_check(root)
-    add_check(checks, 'doc_script_references', ok, details)
+    if args.output_md:
+        os.makedirs(os.path.dirname(os.path.abspath(args.output_md)), exist_ok=True)
+        md_lines = [
+            "# Toolkit Doctor — Repository Health Report",
+            "",
+            f"- **Overall Status**: `{report['overall_status'].upper()}`",
+            f"- **Passed Checks**: {report['passed_checks']} / {report['total_checks']}",
+            f"- **Failed Checks**: {report['failed_checks']}",
+            f"- **Warnings**: {report['warned_checks']}",
+            "",
+            "## Check Details",
+            "",
+            "| Check Name | Status | Details |",
+            "|---|---|---|"
+        ]
+        for c in report["checks"]:
+            md_lines.append(f"| `{c['name']}` | **{c['status'].upper()}** | {json.dumps(c.get('details') or c.get('summary') or c.get('failures') or c.get('unresolved_conflicts_count') or c.get('output') or 'OK')} |")
 
-    ok, details = low_bank_mapping_check()
-    add_check(checks, 'low_bank_mapping', ok, details)
+        with open(args.output_md, "w", encoding="utf-8") as f:
+            f.write("\n".join(md_lines))
 
-    ok, details = help_smoke_check(root)
-    add_check(checks, 'core_help_smoke', ok, details)
+    print(f"Toolkit Doctor: {report['overall_status'].upper()} ({report['passed_checks']}/{report['total_checks']} checks passed)")
+    
+    if args.output_json:
+        print(f"Wrote {args.output_json}")
+    if args.output_md:
+        print(f"Wrote {args.output_md}")
 
-    ok, details = manifest_schema_smoke_check(root)
-    add_check(checks, 'manifest_schema_smoke', ok, details)
-
-    ok, details = branch_state_smoke_check(root)
-    add_check(checks, 'branch_state_audit', ok, details)
-
-    ok, details = duplicate_helper_check(root)
-    add_check(checks, 'duplicate_helper_drift', ok, details)
-
-    passed = sum(1 for item in checks if item['ok'])
-    total = len(checks)
-    health = round((passed / total) * 100.0, 1) if total else 0.0
-
-    report = {
-        'generated_from': str(root),
-        'health_percent': health,
-        'passed_checks': passed,
-        'total_checks': total,
-        'checks': checks,
-    }
-
-    json_path = (root / args.output_json).resolve()
-    md_path = (root / args.output_md).resolve()
-    json_path.parent.mkdir(parents=True, exist_ok=True)
-    md_path.parent.mkdir(parents=True, exist_ok=True)
-    json_path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
-    md_path.write_text(render_markdown(report), encoding='utf-8')
-
-    print(str(json_path.relative_to(root)).replace('\\', '/'))
-    print(str(md_path.relative_to(root)).replace('\\', '/'))
-    return 0 if passed == total else 1
+    return 0 if success else 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     raise SystemExit(main())

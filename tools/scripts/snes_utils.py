@@ -65,24 +65,43 @@ def slice_rom_range(rom_bytes: bytes, range_text: str) -> bytes:
 
 
 def iter_manifest_paths(manifests_dir: str | Path) -> Iterator[Path]:
-    for path in sorted(Path(manifests_dir).glob('pass*.json')):
-        if path.is_file() and CANONICAL_PASS_RE.match(path.name):
-            yield path
+    paths = []
+    for path in Path(manifests_dir).glob('pass*.json'):
+        if path.is_file():
+            m = re.match(r'^pass(\d+)', path.name, re.IGNORECASE)
+            p_num = int(m.group(1)) if m else 999999
+            paths.append((p_num, path))
+    paths.sort(key=lambda x: (x[0], x[1].name))
+    for _, path in paths:
+        yield path
 
 
 def manifest_pass_number(data: dict, path: str | Path | None = None) -> int:
-    raw = data.get('pass_number', data.get('pass_num'))
+    raw = data.get('pass_number', data.get('pass_num') or data.get('pass'))
     if raw is not None:
-        return int(raw)
+        try:
+            return int(raw)
+        except Exception:
+            pass
     if path is not None:
-        match = re.match(r'^pass(\d+)\.json$', Path(path).name, re.IGNORECASE)
+        match = re.match(r'^pass(\d+)', Path(path).name, re.IGNORECASE)
         if match:
             return int(match.group(1))
     return 0
 
 
 def load_manifest(path: str | Path) -> dict:
-    return json.loads(Path(path).read_text(encoding='utf-8'))
+    raw = Path(path).read_bytes()
+    if raw.startswith(b'\xef\xbb\xbf'):
+        return json.loads(raw[3:].decode('utf-8'))
+    if raw.startswith(b'\xff\xfe'):
+        return json.loads(raw[2:].decode('utf-16-le'))
+    if raw.startswith(b'\xfe\xff'):
+        return json.loads(raw[2:].decode('utf-16-be'))
+    try:
+        return json.loads(raw.decode('utf-8'))
+    except UnicodeDecodeError:
+        return json.loads(raw.decode('latin-1'))
 
 
 def manifest_schema_name(data: dict) -> str:

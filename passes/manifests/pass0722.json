@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "pass_number": 722,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "CF:D3B0..CF:D3E0",
+      "kind": "code_owner",
+      "label": "ct_cf_d3b0_score8_cluster",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:690B..C3:6930",
+      "kind": "code_helper",
+      "label": "ct_c3_690b_gap_handler",
+      "confidence": "medium-high",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_single_function": true
+      },
+      "parent_range": "C3:6800..C3:6FFF",
+      "parent_label": "ct_c3_6800"
+    }
+  ],
+  "new_labels": [
+    "ct_cf_d3b0_score8_cluster",
+    "ct_c3_690b_gap_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass722.json": "passes/manifests/legacy/pass722.json",
+    "legacy_2_pass722_c3_690b_gap.json": "passes/manifests/legacy/pass722_c3_690b_gap.json"
+  },
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6918",
+    "PHD (push direct page register) is very strong function prologue indicator",
+    "Larger backtrack distance suggests function preamble before main body",
+    "Local cluster C3:6931..C3:6939 shows branch and return evidence"
+  ]
+}

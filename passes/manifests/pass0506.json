@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "pass_number": 506,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C0:6E5C..C0:6E74",
+      "kind": "code_owner",
+      "label": "ct_c0_6e5c_event_handler_2callers",
+      "confidence": "medium",
+      "verification_status": "reviewed"
+    }
+  ],
+  "new_labels": [
+    "ct_c0_6e5c_event_handler_2callers"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass506.json": "passes/manifests/legacy/pass506.json"
+  },
+  "notes": []
+}

@@ -1,18 +1,9 @@
-# `toolkits/` Status
+# Toolkit Archives and Release Policy
 
-This directory is **archive material**.
+This directory contains historical archive snapshots from earlier phases of the project.
 
-What it contains:
-- historical toolkit zip bundles
-- older release packages and working snapshots
-- repo-native release bundles for handoff/recovery when explicitly rebuilt
+## Retention Policy
 
-What it is **not**:
-- not the active toolkit source tree
-- not authoritative for current script behavior
-
-Use instead:
-- `tools/` for active scripts, config, docs, and cache state
-- `reports/toolkit_release_manifest_*.md` for rebuilt repo-native release metadata
-
-Keep these archives for provenance and recovery only.
+- **Active Tooling**: Active tools live in `tools/` and `tools/ctrepo/`.
+- **Releases**: Distribution bundles should be generated reproducibly from Git tags via release automation (`tools/scripts/package_repo_toolkit_release_v1.py`) and attached to GitHub Releases rather than tracked in the main Git tree.
+- **Historical Snapshots**: Legacy archives in this directory are preserved for audit purposes.

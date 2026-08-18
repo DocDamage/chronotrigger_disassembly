@@ -1,0 +1,12 @@
+{
+  "pass_number": 628,
+  "closed_ranges": [
+    {
+      "range": "C2:800E..C2:8169",
+      "kind": "owner",
+      "label": "ct_c2_800e_nmi_vblank_handler",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "NMI/VBlank interrupt handler (~360 bytes). Main entry point for C2:8000 hub. Cross-bank validated."
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "pass_number": 717,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "CF:E4A0..CF:E4C8",
+      "kind": "code_owner",
+      "label": "ct_cf_e4a0_score6_cluster",
+      "confidence": "high",
+      "verification_status": "reviewed"
+    },
+    {
+      "range": "C3:6A29..C3:6A47",
+      "kind": "code_helper",
+      "label": "ct_c3_6a29_gap_handler",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_single_function": true
+      },
+      "parent_range": "C3:6800..C3:6FFF",
+      "parent_label": "ct_c3_6800"
+    }
+  ],
+  "new_labels": [
+    "ct_cf_e4a0_score6_cluster",
+    "ct_c3_6a29_gap_handler"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass717.json": "passes/manifests/legacy/pass717.json",
+    "legacy_2_pass717_c3_6a29_gap.json": "passes/manifests/legacy/pass717_c3_6a29_gap.json"
+  },
+  "notes": [
+    "Entry point discovered via owner backtrack from raw caller target C3:6A2F",
+    "JSR instruction suggests this is a wrapper or dispatcher function",
+    "Local cluster C3:6A2F..C3:6A34 shows return evidence",
+    "Candidate identified in previously unmapped high-density region C3:6000-6FFF"
+  ]
+}

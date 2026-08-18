@@ -1,0 +1,89 @@
+name: Repository CI
+
+on:
+  push:
+    branches: [ main, live-work-from-pass166 ]
+  pull_request:
+    branches: [ main, live-work-from-pass166 ]
+
+jobs:
+  python-quality:
+    name: Python Quality & Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+      - name: Byte-compile Python files
+        run: python -m compileall -q tools tests
+      - name: Static analysis with pyflakes
+        run: python -m pyflakes tools tests
+      - name: Run automated test suite
+        run: python -m pytest -q
+
+  manifest-integrity:
+    name: Manifest Schema & Identity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Check all manifests strictly
+        run: python tools/scripts/check_all_manifests.py --strict
+      - name: Audit branch state and gaps
+        run: python tools/scripts/audit_branch_state_v1.py --strict-gaps
+
+  range-ownership:
+    name: Range Ownership & Collision
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Validate range ownership
+        run: python tools/scripts/validate_range_ownership.py --strict
+
+  artifact-integrity:
+    name: Artifact Encodings & JSON Validity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Validate repository artifacts
+        run: python tools/scripts/validate_repository_artifacts.py --strict
+
+  doctor-health:
+    name: Full Repository Doctor Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Run toolkit doctor in strict mode
+        run: python tools/scripts/toolkit_doctor.py --strict

@@ -1,0 +1,20 @@
+{
+  "pass_number": 997,
+  "bank": "C3",
+  "start_address": "C3:5364",
+  "end_address": "C3:5375",
+  "label": "ct_c3_5364_score6_cluster",
+  "kind": "owner",
+  "confidence": "high",
+  "source": "local_code_island",
+  "target": "C3:5364",
+  "prologue_byte": "",
+  "prologue_mnemonic": "",
+  "score": 6,
+  "promotion_reason": "Score-6 cluster in C3:5300 region. 18 bytes with 2 returns.",
+  "notes": [
+    "18-byte dual-return cluster",
+    "Discovered via local island analysis",
+    "Low ASCII ratio (0.278) confirms code"
+  ]
+}

@@ -1,27 +1,39 @@
 {
-  "pass": 1009,
-  "bank": "C3",
-  "label": "ct_c3_130a_entry_point_helper",
-  "address": "C3:130A",
-  "range": "C3:130A..C3:130E",
-  "bytes": 5,
-  "category": "code",
-  "confidence": 4,
-  "reasoning": [
-    "Cluster score 4",
-    "2 call references, 2 branches, 1 return",
-    "High ASCII ratio 0.6 - may contain immediate values",
-    "Near C3:1300 open lane start"
+  "schema_version": 2,
+  "pass_number": 1009,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C3:3E53..C3:3E69",
+      "kind": "code_helper",
+      "label": "ct_c3_3e53_score7_dispatch",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_single_function": true
+      },
+      "parent_range": "C3:3E00..C3:3EFF",
+      "parent_label": "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts"
+    }
   ],
-  "findings": {
-    "calls": 2,
-    "branches": 2,
-    "stack_ops": 0,
-    "returns": 1,
-    "first_return": "C3:130E"
+  "new_labels": [
+    "ct_c3_3e53_score7_dispatch"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
   },
-  "flags": [],
-  "related": ["C3:130A", "C3:130E", "C3:1300"],
-  "session": 19,
-  "status": "closed"
+  "sources": {
+    "legacy_1_pass1009_c3_final.json": "passes/manifests/legacy/pass1009_c3_final.json"
+  },
+  "notes": [
+    "HIGHEST SCORE in final batch (score-7)",
+    "23-byte cluster with multiple calls and returns",
+    "Child count of 3 suggests nested functions",
+    "Strong code indicators with low ASCII ratio"
+  ]
 }

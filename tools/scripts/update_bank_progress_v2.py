@@ -25,10 +25,13 @@ def main() -> int:
         data = load_manifest(path)
         pass_number = manifest_pass_number(data, path)
         latest_pass = max(latest_pass, pass_number)
-        latest_seam = data.get('live_seam_after_pass', data.get('region', latest_seam))
+        
+        # Check if manifest touches this bank
+        has_bank_ranges = False
         for item in data.get('closed_ranges', []):
-            if not item['range'].startswith(f'{bank}:'):
+            if not isinstance(item, dict) or not item.get('range', '').startswith(f'{bank}:'):
                 continue
+            has_bank_ranges = True
             entry = {
                 'range': item['range'],
                 'label': item['label'],
@@ -41,17 +44,21 @@ def main() -> int:
             else:
                 closed_exec.append(entry)
 
+        seam_cand = data.get('live_seam_after_pass') or data.get('region')
+        if seam_cand and (seam_cand.startswith(f'{bank}:') or has_bank_ranges):
+            latest_seam = seam_cand
+
     result = {
         'bank': bank,
         'latest_pass': latest_pass,
-        'latest_live_seam': latest_seam,
+        'latest_live_seam': latest_seam or f'{bank}:0000..',
         'closed_executable_ranges': closed_exec,
         'closed_data_ranges': closed_data,
     }
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
-    print(f'wrote {out_path}')
+    print(f'wrote {out_path} (latest pass: {latest_pass}, latest seam: {result["latest_live_seam"]})')
     return 0
 
 

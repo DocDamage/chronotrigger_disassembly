@@ -1,28 +1,32 @@
 {
-  "pass": 1011,
-  "bank": "C3",
-  "label": "ct_c3_14bd_branch_utility",
-  "address": "C3:14BD",
-  "range": "C3:14BD..C3:14C6",
-  "bytes": 10,
-  "category": "code",
-  "confidence": 6,
-  "reasoning": [
-    "Cluster score 6 - high confidence branch utility",
-    "1 call reference, 3 branches, 1 return",
-    "Compact 10-byte conditional branch routine",
-    "ASCII ratio 0.2 - very low data content",
-    "Clean code candidate with balanced flow control"
+  "schema_version": 2,
+  "pass_number": 1011,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "C1:D35D..C1:D370",
+      "kind": "code_owner",
+      "label": "ct_c1_d35d_score7_s29",
+      "confidence": "medium",
+      "verification_status": "reviewed",
+      "legacy_metadata": {
+        "raw_single_function": true
+      }
+    }
   ],
-  "findings": {
-    "calls": 1,
-    "branches": 3,
-    "stack_ops": 0,
-    "returns": 1,
-    "first_return": "C3:14C6"
+  "new_labels": [
+    "ct_c1_d35d_score7_s29"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
   },
-  "flags": [],
-  "related": ["C3:14BD", "C3:14C6"],
-  "session": 20,
-  "status": "closed"
+  "sources": {
+    "legacy_1_pass1011_c1_session29.json": "passes/manifests/legacy/pass1011_c1_session29.json"
+  },
+  "notes": []
 }

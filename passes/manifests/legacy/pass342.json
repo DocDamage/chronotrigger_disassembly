@@ -1,0 +1,12 @@
+{
+  "pass_number": 342,
+  "closed_ranges": [
+    {
+      "range": "C0:C819..C0:C81F",
+      "kind": "owner",
+      "label": "ct_c0_c819_bounds_check_score6_cluster",
+      "confidence": "high"
+    }
+  ],
+  "promotion_reason": "Score-6 cluster, bounds check function with BPL/BMI dual exit. Calls C0:C9C6. Called from C0:6E9B, C0:9DE9."
+}

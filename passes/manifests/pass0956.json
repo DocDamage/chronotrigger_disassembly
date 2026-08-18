@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "pass_number": 956,
+  "status": "reviewed",
+  "branch": "live-work-from-pass166",
+  "toolkit_version": "repo-native-vNext",
+  "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "closed_ranges": [
+    {
+      "range": "DD:0E00..DD:0E20",
+      "kind": "code_helper",
+      "label": "ct_dd_0e00_score6_cluster",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "parent_range": "DD:0E00..DD:0E50",
+      "parent_label": "ct_dd_0e00_score6_cluster"
+    }
+  ],
+  "new_labels": [
+    "ct_dd_0e00_score6_cluster"
+  ],
+  "confidence": {
+    "structural": "medium",
+    "semantic": "medium",
+    "rebuild": "low"
+  },
+  "sources": {
+    "legacy_1_pass956.json": "passes/manifests/legacy/pass956.json"
+  },
+  "notes": []
+}
