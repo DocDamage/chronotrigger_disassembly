@@ -8,8 +8,32 @@
   "closed_ranges": [
     {
       "range": "C0:74C7..C0:74EC",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "CT_C0_74C7_GFX_HANDLER_SC6",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "parent_range": "C0:74E2..C0:74E7",
+      "parent_label": "ct_c0_74e2_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "raw_target": {
+          "addr": "C0:74C7",
+          "label": "CT_C0_74C7_GFX_HANDLER_SC6",
+          "score": 6,
+          "callers": 4,
+          "start_byte": "C2",
+          "start_type": "REP",
+          "end_marker": "RTS",
+          "verified": true
+        },
+        "ownership_adjudication_ids": [
+          "adj_63497f8f0c82d5ace412"
+        ]
+      }
+    },
+    {
+      "range": "C0:74C7..C0:74E1",
+      "kind": "code_owner",
+      "label": "CT_C0_74C7_GFX_HANDLER_SC6__residual_74c7_74e1",
       "confidence": "medium",
       "verification_status": "pending",
       "legacy_metadata": {
@@ -22,12 +46,43 @@
           "start_type": "REP",
           "end_marker": "RTS",
           "verified": true
-        }
+        },
+        "ownership_adjudication_ids": [
+          "adj_63497f8f0c82d5ace412"
+        ],
+        "residual_of": "C0:74C7..C0:74EC",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C0:74E8..C0:74EC",
+      "kind": "code_owner",
+      "label": "CT_C0_74C7_GFX_HANDLER_SC6__residual_74e8_74ec",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "raw_target": {
+          "addr": "C0:74C7",
+          "label": "CT_C0_74C7_GFX_HANDLER_SC6",
+          "score": 6,
+          "callers": 4,
+          "start_byte": "C2",
+          "start_type": "REP",
+          "end_marker": "RTS",
+          "verified": true
+        },
+        "ownership_adjudication_ids": [
+          "adj_63497f8f0c82d5ace412"
+        ],
+        "residual_of": "C0:74C7..C0:74EC",
+        "coverage_treatment": "active_non_overlapping_residual"
       }
     }
   ],
   "new_labels": [
-    "CT_C0_74C7_GFX_HANDLER_SC6"
+    "CT_C0_74C7_GFX_HANDLER_SC6",
+    "CT_C0_74C7_GFX_HANDLER_SC6__residual_74c7_74e1",
+    "CT_C0_74C7_GFX_HANDLER_SC6__residual_74e8_74ec"
   ],
   "confidence": {
     "structural": "medium",

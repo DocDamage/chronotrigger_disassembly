@@ -42,13 +42,16 @@ Before executing history rewriting:
      --path "rom/Chrono Trigger (USA).sfc" `
      --path-glob "*.sfc" `
      --path-glob "*.smc" `
-     --path-glob "tools/scripts/tools/cache/*"
+     --path-glob "toolkits/**/*.zip" `
+     --path-glob "emulators/*.zip" `
+     --path-glob "tools/scripts/tools/cache/*" `
+     --path-glob "**/raw_xref_index*.json"
    ```
 
 3. Verify repository integrity and verify that prohibited blobs are unreachable:
    ```powershell
    git fsck --full --strict
-   git rev-list --objects --all | Select-String -Pattern "\.sfc|\.smc"
+   git rev-list --objects --all | Select-String -Pattern "\.sfc|\.smc|\.zip|raw_xref_index.*\.json"
    ```
 
 4. Compare canonical source tree hashes between original and rewritten tips:
@@ -71,3 +74,7 @@ Before executing history rewriting:
    ```powershell
    git clone <repo_url> "Chrono Trigger Disassembly Clean"
    ```
+
+## Current authorization status
+
+History rewriting has not been authorized or performed. The current tree is clean of ROMs, ZIP archives, and generated raw-xref caches, while the historical blobs remain reachable for recovery and audit until maintainers schedule the coordinated procedure above.

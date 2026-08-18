@@ -8,14 +8,54 @@
   "closed_ranges": [
     {
       "range": "C0:7B75..C0:7C29",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_c0_7b75_validated_seam",
       "confidence": "medium",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C0:7BA0..C0:7BC1",
+      "parent_label": "CT_C0_7BA0_GFX_HANDLER_SC6",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7f3748425a2c2161f511",
+          "adj_4106edcd4e9a75fc4d48"
+        ]
+      }
+    },
+    {
+      "range": "C0:7B75..C0:7B9F",
+      "kind": "code_owner",
+      "label": "ct_c0_7b75_validated_seam__residual_7b75_7b9f",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7f3748425a2c2161f511",
+          "adj_4106edcd4e9a75fc4d48"
+        ],
+        "residual_of": "C0:7B75..C0:7C29",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C0:7C01..C0:7C29",
+      "kind": "code_owner",
+      "label": "ct_c0_7b75_validated_seam__residual_7c01_7c29",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7f3748425a2c2161f511",
+          "adj_4106edcd4e9a75fc4d48"
+        ],
+        "residual_of": "C0:7B75..C0:7C29",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_c0_7b75_validated_seam"
+    "ct_c0_7b75_validated_seam",
+    "ct_c0_7b75_validated_seam__residual_7b75_7b9f",
+    "ct_c0_7b75_validated_seam__residual_7c01_7c29"
   ],
   "confidence": {
     "structural": "medium",

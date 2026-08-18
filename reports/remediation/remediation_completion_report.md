@@ -4,9 +4,9 @@
 > This completion report was published following initial commit `d53cd365ed335047adcbb353ac83afb061816d5b`. A subsequent independent corrective audit identified non-idempotent migration issues (22 missing baseline source files for passes 1000–1021, 20 absent ranges / 613 bytes), bulk-generated waiver records, and doctor/CI discrepancies.
 >
 > This report is preserved for audit history but is **SUPERSEDED** by:
-> - Plan: [`docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md`](file:///c:/dev/Chrono%20Trigger%20Disassembly/docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md)
-> - Status Tracking: [`reports/remediation/corrective_status.md`](file:///c:/dev/Chrono%20Trigger%20Disassembly/reports/remediation/corrective_status.md)
-> - Baseline Discrepancies: [`reports/remediation/manifest_source_discrepancy.json`](file:///c:/dev/Chrono%20Trigger%20Disassembly/reports/remediation/manifest_source_discrepancy.json)
+> - Plan: `docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md`
+> - Status Tracking: `reports/remediation/corrective_status.md`
+> - Baseline Discrepancies: `reports/remediation/manifest_source_discrepancy.json`
 
 | Field | Value |
 |---|---|
@@ -15,7 +15,7 @@
 | Baseline Commit | `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59` |
 | Remediation Under Review Commit | `d53cd365ed335047adcbb353ac83afb061816d5b` |
 | Initial Report Date | 2026-08-18 |
-| Audit Status | **SUPERSEDED — Corrective Action Plan In Progress** |
+| Audit Status | **SUPERSEDED — SEE CURRENT CORRECTIVE STATUS** |
 
 ---
 

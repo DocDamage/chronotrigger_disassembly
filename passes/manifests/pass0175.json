@@ -16,15 +16,52 @@
     },
     {
       "range": "C3:16BA..C3:17BC",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry",
       "confidence": "medium",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:1753..C3:175B",
+      "parent_label": "ct_c3_1753_branch_util",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_70ea15fe624558e2b70e"
+        ]
+      }
+    },
+    {
+      "range": "C3:16BA..C3:1752",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry__residual_16ba_1752",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_70ea15fe624558e2b70e"
+        ],
+        "residual_of": "C3:16BA..C3:17BC",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:175C..C3:17BC",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry__residual_175c_17bc",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_70ea15fe624558e2b70e"
+        ],
+        "residual_of": "C3:16BA..C3:17BC",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
     "ct_c3_small_local_looping_helper_returning_after_backward_branch",
-    "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry"
+    "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry",
+    "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry__residual_16ba_1752",
+    "ct_c3_inline_mixed_control_table_and_code_fragments_before_externally_anchored_17bd_entry__residual_175c_17bc"
   ],
   "confidence": {
     "structural": "medium",

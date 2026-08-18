@@ -15,6 +15,7 @@ if str(scripts_dir) not in sys.path:
 
 from continuation_note_utils_v1 import latest_continuation_note_summary
 from snes_utils import iter_manifest_paths, load_manifest, manifest_live_seam, manifest_pass_number
+from tools.ctrepo.policy_validation import validate_gap_registry
 
 
 def main() -> int:
@@ -29,10 +30,14 @@ def main() -> int:
 
     manifest_passes = []
     latest_seam = None
+    latest_pass = None
     for path in iter_manifest_paths(args.manifests_dir):
         data = load_manifest(path)
-        manifest_passes.append(manifest_pass_number(data, path))
-        latest_seam = manifest_live_seam(data) or latest_seam
+        pass_number = manifest_pass_number(data, path)
+        manifest_passes.append(pass_number)
+        if latest_pass is None or pass_number > latest_pass:
+            latest_pass = pass_number
+            latest_seam = manifest_live_seam(data)
 
     warnings = []
     issues = []
@@ -45,30 +50,43 @@ def main() -> int:
         gaps_path = Path(args.gaps_config)
         if gaps_path.exists():
             try:
+                gap_errors = validate_gap_registry(gaps_path)
+                if gap_errors:
+                    issues.extend(f'gap registry: {error}' for error in gap_errors)
                 g_data = json.loads(gaps_path.read_text(encoding='utf-8'))
-                intentional_gaps = {int(k) for k in g_data.get('intentional_gaps', {}).keys()}
-            except Exception:
-                pass
+                intentional_gaps = {
+                    int(k) for k, value in g_data.get('intentional_gaps', {}).items()
+                    if value.get('status') == 'baseline_absent'
+                }
+            except Exception as exc:
+                issues.append(f'could not validate gap registry: {exc}')
         unreviewed = [m for m in missing if m not in intentional_gaps]
         if unreviewed:
             warnings.append(f'unreviewed missing manifest pass numbers: {unreviewed}')
         elif missing:
             print(f'reviewed intentional gaps: {len(missing)} passes accounted for')
 
+    if latest_pass is not None and not latest_seam:
+        issues.append(f'latest manifest pass {latest_pass} has no explicit live_seam_after_pass')
+
     latest_note = latest_continuation_note_summary(args.sessions_dir)
-    effective_seam = latest_note.live_seam if latest_note and latest_note.live_seam else latest_seam
+    effective_seam = latest_seam
 
     static_progress = Path(args.bank_progress)
     generated_progress = Path(args.generated_progress)
-    if static_progress.exists() and generated_progress.exists() and latest_note is None:
+    if static_progress.exists():
+        static_data = json.loads(static_progress.read_text(encoding='utf-8'))
+        if static_data.get('latest_live_seam') != latest_seam:
+            issues.append('static progress latest seam differs from latest manifest seam')
+    if generated_progress.exists():
         gen_data = json.loads(generated_progress.read_text(encoding='utf-8'))
-        if gen_data.get('latest_live_seam') and latest_seam and gen_data['latest_live_seam'] != latest_seam:
+        if gen_data.get('latest_live_seam') != latest_seam:
             issues.append('generated progress latest seam differs from latest manifest seam')
 
     print(f'latest manifest seam: {latest_seam}')
     if latest_note is not None:
         print(f'latest continuation note: {Path(latest_note.source_path).name}')
-        print(f'note-backed live seam: {latest_note.live_seam or "(missing)"}')
+        print(f'historical session15 note seam: {latest_note.live_seam or "(missing)"}')
     print(f'effective live seam: {effective_seam}')
     if warnings:
         print('warnings found:')

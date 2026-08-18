@@ -8,12 +8,17 @@
   "closed_ranges": [
     {
       "range": "C5:C036..C5:C050",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c5_c036_jsr_entry",
       "confidence": "high",
       "verification_status": "pending",
       "parent_range": "C5:C030..C5:C0A0",
-      "parent_label": "ct_c5_c030_c000_region"
+      "parent_label": "ct_c5_c030_c000_region",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_e46db44790b00277232a"
+        ]
+      }
     }
   ],
   "new_labels": [

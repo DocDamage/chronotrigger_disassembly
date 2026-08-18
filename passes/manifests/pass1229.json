@@ -5,6 +5,7 @@
   "branch": "live-work-from-pass166",
   "toolkit_version": "repo-native-vNext",
   "rom_sha256": "06d1c2b06b716052c5596aaa0c2e5632a027fee1a9a28439e509f813c30829a9",
+  "live_seam_after_pass": "C3:D000.. / C4:A000..",
   "closed_ranges": [
     {
       "range": "C3:CB47..C3:CB64",
@@ -12,6 +13,8 @@
       "label": "ct_c3_CB47",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:CB47..C3:CB64",
+      "parent_label": "ct_c3_cb47_php_prologue",
       "evidence": {
         "reason": null,
         "source": "backtrack",
@@ -48,11 +51,11 @@
             "branches_count": 2
           },
           "verification_status": "pending_final_review"
-        }
-      },
-      "parent_range": "C3:CB47..C3:CB64",
-      "parent_label": "ct_c3_cb47_php_prologue",
-      "notes": "Superseded duplicate of Pass 1002 (ct_c3_cb47_php_prologue)"
+        },
+        "ownership_adjudication_ids": [
+          "adj_7ef7732549f9d3df61b2"
+        ]
+      }
     }
   ],
   "new_labels": [

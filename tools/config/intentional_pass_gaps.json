@@ -1,1457 +1,1491 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "schema_version": 2,
-  "description": "Registry of reviewed intentional pass gaps in historical sequence with complete evidence metadata",
+  "$schema": "schemas/intentional_pass_gaps.schema.json",
+  "schema_version": 3,
+  "description": "Factual accounting of pass identities absent from the immutable baseline; no human intent is inferred.",
   "total_gaps_count": 106,
   "intentional_gaps": {
     "282": {
       "pass_number": 282,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 282",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 282 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 281 and 283.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0281.json",
+        "passes/manifests/pass0283.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "304": {
       "pass_number": 304,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 304",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 304 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 303 and 306.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0303.json",
+        "passes/manifests/pass0306.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "305": {
       "pass_number": 305,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 305",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 305 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 303 and 306.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0303.json",
+        "passes/manifests/pass0306.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "307": {
       "pass_number": 307,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 307",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 307 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 306 and 308.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0306.json",
+        "passes/manifests/pass0308.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "312": {
       "pass_number": 312,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 312",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 312 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 311 and 313.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0311.json",
+        "passes/manifests/pass0313.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "316": {
       "pass_number": 316,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 316",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 316 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 315 and 317.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0315.json",
+        "passes/manifests/pass0317.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "322": {
       "pass_number": 322,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 322",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 322 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 321 and 323.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0321.json",
+        "passes/manifests/pass0323.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "331": {
       "pass_number": 331,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 331",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 331 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 330 and 332.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0330.json",
+        "passes/manifests/pass0332.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "335": {
       "pass_number": 335,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 335",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 335 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 334 and 336.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0334.json",
+        "passes/manifests/pass0336.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "341": {
       "pass_number": 341,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 341",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 341 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 340 and 342.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0340.json",
+        "passes/manifests/pass0342.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "357": {
       "pass_number": 357,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 357",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 357 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 356 and 358.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0356.json",
+        "passes/manifests/pass0358.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "361": {
       "pass_number": 361,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 361",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 361 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 360 and 362.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0360.json",
+        "passes/manifests/pass0362.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "384": {
       "pass_number": 384,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 384",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 384 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 383 and 385.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0383.json",
+        "passes/manifests/pass0385.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "388": {
       "pass_number": 388,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 388",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 388 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 387 and 389.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0387.json",
+        "passes/manifests/pass0389.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "392": {
       "pass_number": 392,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 392",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 392 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 391 and 393.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0391.json",
+        "passes/manifests/pass0393.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "398": {
       "pass_number": 398,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 398",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 398 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 397 and 399.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0397.json",
+        "passes/manifests/pass0399.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "400": {
       "pass_number": 400,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 400",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 400 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 399 and 401.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0399.json",
+        "passes/manifests/pass0401.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "411": {
       "pass_number": 411,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 411",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 411 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 410 and 414.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0410.json",
+        "passes/manifests/pass0414.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "412": {
       "pass_number": 412,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 412",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 412 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 410 and 414.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0410.json",
+        "passes/manifests/pass0414.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "413": {
       "pass_number": 413,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 413",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 413 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 410 and 414.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0410.json",
+        "passes/manifests/pass0414.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "425": {
       "pass_number": 425,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 425",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 425 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 424 and 426.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0424.json",
+        "passes/manifests/pass0426.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "457": {
       "pass_number": 457,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 457",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 457 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 456 and 458.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0456.json",
+        "passes/manifests/pass0458.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "478": {
       "pass_number": 478,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 478",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 478 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 477 and 480.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0477.json",
+        "passes/manifests/pass0480.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "479": {
       "pass_number": 479,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 479",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 479 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 477 and 480.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0477.json",
+        "passes/manifests/pass0480.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "484": {
       "pass_number": 484,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical Session 23/24 Bank C0 promotion sequence leap at pass 484",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 484 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 483 and 485.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session23_c0_promotions.md",
-        "docs/sessions/chrono_trigger_session24_c0_promotions.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0483.json",
+        "passes/manifests/pass0485.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "537": {
       "pass_number": 537,
-      "status": "verified_gap",
-      "reason_code": "unnumbered_draft_iteration",
-      "rationale": "Historical multi-agent pass sequence transition gap at pass 537",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 537 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 536 and 538.",
       "evidence": [
-        "docs/sessions/"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass0536.json",
+        "passes/manifests/pass0538.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1040": {
       "pass_number": 1040,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1040",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1040 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1041": {
       "pass_number": 1041,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1041",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1041 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1042": {
       "pass_number": 1042,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1042",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1042 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1043": {
       "pass_number": 1043,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1043",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1043 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1044": {
       "pass_number": 1044,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1044",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1044 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1045": {
       "pass_number": 1045,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1045",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1045 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1046": {
       "pass_number": 1046,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1046",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1046 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1047": {
       "pass_number": 1047,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1047",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1047 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1048": {
       "pass_number": 1048,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1048",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1048 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1049": {
       "pass_number": 1049,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1049",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1049 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1050": {
       "pass_number": 1050,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1050",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1050 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1051": {
       "pass_number": 1051,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1051",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1051 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1052": {
       "pass_number": 1052,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1052",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1052 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1053": {
       "pass_number": 1053,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1053",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1053 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1054": {
       "pass_number": 1054,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1054",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1054 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1055": {
       "pass_number": 1055,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1055",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1055 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1056": {
       "pass_number": 1056,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1056",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1056 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1057": {
       "pass_number": 1057,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1057",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1057 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1058": {
       "pass_number": 1058,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1058",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1058 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1059": {
       "pass_number": 1059,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1059",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1059 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1060": {
       "pass_number": 1060,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1060",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1060 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1061": {
       "pass_number": 1061,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1061",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1061 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1039 and 1062.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1039.json",
+        "passes/manifests/pass1062.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1076": {
       "pass_number": 1076,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1076",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1076 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1077": {
       "pass_number": 1077,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1077",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1077 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1078": {
       "pass_number": 1078,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1078",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1078 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1079": {
       "pass_number": 1079,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1079",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1079 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1080": {
       "pass_number": 1080,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1080",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1080 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1081": {
       "pass_number": 1081,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1081",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1081 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1082": {
       "pass_number": 1082,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1082",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1082 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1083": {
       "pass_number": 1083,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1083",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1083 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1084": {
       "pass_number": 1084,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1084",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1084 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1085": {
       "pass_number": 1085,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1085",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1085 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1086": {
       "pass_number": 1086,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1086",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1086 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1087": {
       "pass_number": 1087,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1087",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1087 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1088": {
       "pass_number": 1088,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1088",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1088 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1089": {
       "pass_number": 1089,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1089",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1089 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1090": {
       "pass_number": 1090,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1090",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1090 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1091": {
       "pass_number": 1091,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1091",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1091 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1092": {
       "pass_number": 1092,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1092",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1092 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1093": {
       "pass_number": 1093,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1093",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1093 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1094": {
       "pass_number": 1094,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1094",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1094 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1095": {
       "pass_number": 1095,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1095",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1095 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1096": {
       "pass_number": 1096,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1096",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1096 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1097": {
       "pass_number": 1097,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1097",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1097 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1098": {
       "pass_number": 1098,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1098",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1098 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1099": {
       "pass_number": 1099,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1099",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1099 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1100": {
       "pass_number": 1100,
-      "status": "verified_gap",
-      "reason_code": "session_number_skip",
-      "rationale": "Historical agent swarm session numbering reservation gap at pass 1100",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1100 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1075 and 1101.",
       "evidence": [
-        "docs/sessions/chrono_trigger_session30_c4_scan.md",
-        "passes/README.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1075.json",
+        "passes/manifests/pass1101.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1169": {
       "pass_number": 1169,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1169",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1169 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1170": {
       "pass_number": 1170,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1170",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1170 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1171": {
       "pass_number": 1171,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1171",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1171 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1172": {
       "pass_number": 1172,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1172",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1172 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1173": {
       "pass_number": 1173,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1173",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1173 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1174": {
       "pass_number": 1174,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1174",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1174 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1175": {
       "pass_number": 1175,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1175",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1175 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1176": {
       "pass_number": 1176,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1176",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1176 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1177": {
       "pass_number": 1177,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1177",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1177 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1178": {
       "pass_number": 1178,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1178",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1178 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1179": {
       "pass_number": 1179,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1179",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1179 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1180": {
       "pass_number": 1180,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1180",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1180 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1181": {
       "pass_number": 1181,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1181",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1181 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1182": {
       "pass_number": 1182,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1182",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1182 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1183": {
       "pass_number": 1183,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1183",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1183 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1184": {
       "pass_number": 1184,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1184",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1184 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1185": {
       "pass_number": 1185,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1185",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1185 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1186": {
       "pass_number": 1186,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1186",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1186 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1187": {
       "pass_number": 1187,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1187",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1187 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1188": {
       "pass_number": 1188,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1188",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1188 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1189": {
       "pass_number": 1189,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1189",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1189 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1190": {
       "pass_number": 1190,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1190",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1190 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1191": {
       "pass_number": 1191,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1191",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1191 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1192": {
       "pass_number": 1192,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1192",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1192 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1193": {
       "pass_number": 1193,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1193",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1193 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1194": {
       "pass_number": 1194,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1194",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1194 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1195": {
       "pass_number": 1195,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1195",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1195 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1196": {
       "pass_number": 1196,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1196",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1196 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1197": {
       "pass_number": 1197,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1197",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1197 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1198": {
       "pass_number": 1198,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1198",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1198 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1199": {
       "pass_number": 1199,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Historical audio/HDMA exploratory analysis pass without closed ranges at pass 1199",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1199 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1168 and 1200.",
       "evidence": [
-        "docs/reports/raw_seams/c0_audio_hdma_investigation.md"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1168.json",
+        "passes/manifests/pass1200.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1221": {
       "pass_number": 1221,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Bank C4 candidate scan and classification pass (no closed ranges emitted)",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1221 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1220 and 1223.",
       "evidence": [
-        "passes/manifests/legacy/pass1222_c4_scan.json"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1220.json",
+        "passes/manifests/pass1223.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     },
     "1222": {
       "pass_number": 1222,
-      "status": "verified_gap",
-      "reason_code": "non_range_investigation",
-      "rationale": "Bank C4 candidate scan and classification pass (no closed ranges emitted)",
+      "status": "baseline_absent",
+      "reason_code": "no_baseline_manifest",
+      "rationale": "No source manifest with pass identity 1222 exists in the immutable 253f2f6c baseline inventory; adjacent canonical passes are 1220 and 1223.",
       "evidence": [
-        "passes/manifests/legacy/pass1222_c4_scan.json"
+        "reports/remediation/corrective_baseline.json",
+        "passes/manifests/pass1220.json",
+        "passes/manifests/pass1223.json"
       ],
-      "reviewed_by": "remediation-maintainer",
-      "reviewed_at_utc": "2026-08-18T21:27:12.621577+00:00",
-      "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+      "evidence_commit": "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59",
+      "generated_by": "reconcile_trust_and_gaps.py",
       "revalidation_required": false
     }
   }

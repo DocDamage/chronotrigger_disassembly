@@ -1,14 +1,14 @@
 # Chrono Trigger Disassembly — Coverage Report
 
-- **Generated**: `2026-08-18T21:33:52.748950+00:00`
-- **Source Commit**: `d53cd365ed335047adcbb353ac83afb061816d5b`
-- **Manifest Set Digest**: `09b06ac4f818b7277657428e6b760dcfb8254992310df6b571819699176e31b6`
+- **Generated**: `2026-08-18T22:48:48.460816+00:00`
+- **Source Commit**: `cfd7d54a7a3dbfd7e7089fa976dee998fdf62d75`
+- **Manifest Set Digest**: `17de258695a30716e919b9def75dab8887c52b534cc72e7a7bb0d8da40b6d0bd`
 - **Canonical Manifests**: 961
-- **Total Closed Ranges**: 1105
-- **Raw Claimed Bytes**: 67,923 B
+- **Total Closed Ranges**: 1289
+- **Raw Claimed Bytes**: 80,879 B
 - **Uniquely Closed Bytes**: 59,050 B
-- **Executable Code**: 38,192 B
-- **Classified Data**: 24,092 B
+- **Executable Code**: 38,079 B
+- **Classified Data**: 20,971 B
 - **Whole ROM Coverage**: **1.4079%** (59,050 / 4,194,304 bytes)
 
 ## Bank Coverage Summary

@@ -9,10 +9,17 @@
   "closed_ranges": [
     {
       "range": "C3:1A60..C3:1AD5",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper",
       "confidence": "medium",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:1A03..C3:1A70",
+      "parent_label": "ct_c3_1a03_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_b36ed73bb295fc27277e"
+        ]
+      }
     },
     {
       "range": "C3:1AD6..C3:1ADA",
@@ -27,12 +34,27 @@
       "label": "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate",
       "confidence": "medium-high",
       "verification_status": "pending"
+    },
+    {
+      "range": "C3:1A71..C3:1AD5",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper__residual_1a71_1ad5",
+      "confidence": "medium",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_b36ed73bb295fc27277e"
+        ],
+        "residual_of": "C3:1A60..C3:1AD5",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
     "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper",
     "ct_c3_tiny_long_wrapper_calling_c30d0e_then_returning",
-    "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate"
+    "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate",
+    "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper__residual_1a71_1ad5"
   ],
   "confidence": {
     "structural": "medium",

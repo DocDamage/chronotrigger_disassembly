@@ -9,21 +9,31 @@
   "closed_ranges": [
     {
       "range": "C3:3500..C3:3526",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_3500_score6_function_3callers_jsr_c3_350e",
       "confidence": "medium",
       "verification_status": "pending",
       "parent_range": "C3:3500..C3:3560",
-      "parent_label": "ct_c3_3500_unknown_function_score6_cluster"
+      "parent_label": "ct_c3_3500_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7171f588d9dd073fed0e"
+        ]
+      }
     },
     {
       "range": "C3:353B..C3:3554",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_353b_score6_function_a9_start_jsr_target",
       "confidence": "medium",
       "verification_status": "pending",
       "parent_range": "C3:3500..C3:3560",
-      "parent_label": "ct_c3_3500_unknown_function_score6_cluster"
+      "parent_label": "ct_c3_3500_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7d102fcd94b1b4db1528"
+        ]
+      }
     },
     {
       "range": "C3:357A..C3:3593",

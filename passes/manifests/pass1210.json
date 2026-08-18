@@ -9,24 +9,46 @@
   "closed_ranges": [
     {
       "range": "C3:2C00..C3:2CFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:2CF8..C3:2D18",
+      "parent_label": "ct_c3_2cf8_score7_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_dd333c657088cc332bcf"
+        ]
+      }
     },
     {
       "range": "C3:2D00..C3:2DFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:2CF8..C3:2D18",
+      "parent_label": "ct_c3_2cf8_score7_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_455f6585638ff32cc827"
+        ]
+      }
     },
     {
       "range": "C3:2E00..C3:2EFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:2E31..C3:2E55",
+      "parent_label": "ct_c3_2e31_phd_prologue",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_125e246f894f7931b4ee",
+          "adj_60868e10eba4a43218b3"
+        ]
+      }
     },
     {
       "range": "C3:2F00..C3:2FFF",
@@ -34,13 +56,91 @@
       "label": "ct_c3_2f00_frozen_structured_data_continuation_40_brk_tabular_patterns",
       "confidence": "high",
       "verification_status": "pending"
+    },
+    {
+      "range": "C3:2C00..C3:2CF7",
+      "kind": "data",
+      "label": "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6__residual_2c00_2cf7",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_dd333c657088cc332bcf"
+        ],
+        "residual_of": "C3:2C00..C3:2CFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2D19..C3:2DFF",
+      "kind": "data",
+      "label": "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences__residual_2d19_2dff",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_455f6585638ff32cc827"
+        ],
+        "residual_of": "C3:2D00..C3:2DFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2E00..C3:2E30",
+      "kind": "data",
+      "label": "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences__residual_2e00_2e30",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_125e246f894f7931b4ee",
+          "adj_60868e10eba4a43218b3"
+        ],
+        "residual_of": "C3:2E00..C3:2EFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2E56..C3:2EA6",
+      "kind": "data",
+      "label": "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences__residual_2e56_2ea6",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_125e246f894f7931b4ee",
+          "adj_60868e10eba4a43218b3"
+        ],
+        "residual_of": "C3:2E00..C3:2EFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2EC0..C3:2EFF",
+      "kind": "data",
+      "label": "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences__residual_2ec0_2eff",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_125e246f894f7931b4ee",
+          "adj_60868e10eba4a43218b3"
+        ],
+        "residual_of": "C3:2E00..C3:2EFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
     "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6",
     "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences",
     "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences",
-    "ct_c3_2f00_frozen_structured_data_continuation_40_brk_tabular_patterns"
+    "ct_c3_2f00_frozen_structured_data_continuation_40_brk_tabular_patterns",
+    "ct_c3_2c00_frozen_mixed_data_0_rts_rtl_7_brk_invalid_jml_a6__residual_2c00_2cf7",
+    "ct_c3_2d00_frozen_data_32_brk_inflated_score_byte_coincidences__residual_2d19_2dff",
+    "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences__residual_2e00_2e30",
+    "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences__residual_2e56_2ea6",
+    "ct_c3_2e00_frozen_structured_data_tables_42_brk_14_rti_coincidences__residual_2ec0_2eff"
   ],
   "confidence": {
     "structural": "medium",

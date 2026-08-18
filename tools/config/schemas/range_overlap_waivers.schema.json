@@ -10,6 +10,7 @@
     "waivers"
   ],
   "properties": {
+    "$schema": { "type": "string" },
     "schema_version": { "type": "integer", "enum": [2] },
     "description": { "type": "string" },
     "total_waivers_count": { "type": "integer", "minimum": 0 },
@@ -49,9 +50,9 @@
           "right_label": { "type": "string" },
           "rationale": { "type": "string" },
           "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-          "reviewed_by": { "type": "string" },
-          "reviewed_at_utc": { "type": "string" },
-          "review_commit": { "type": "string" },
+          "reviewed_by": { "type": "string", "minLength": 1 },
+          "reviewed_at_utc": { "type": "string", "format": "date-time" },
+          "review_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
           "revalidation_required": { "type": "boolean" }
         }
       }

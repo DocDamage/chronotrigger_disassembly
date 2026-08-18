@@ -15,8 +15,28 @@
     },
     {
       "range": "C3:A3F1..C3:A419",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_c3_a3f1_jsr_entry",
+      "confidence": "high",
+      "verification_status": "pending",
+      "parent_range": "C3:A3E2..C3:A406",
+      "parent_label": "ct_c3_a3e2_jsr_entry",
+      "evidence": {
+        "reasoning": null,
+        "findings": null,
+        "score": 6
+      },
+      "legacy_metadata": {
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_5eb5aaf1286aa30a627e"
+        ]
+      }
+    },
+    {
+      "range": "C3:A407..C3:A419",
+      "kind": "code_owner",
+      "label": "ct_c3_a3f1_jsr_entry__residual_a407_a419",
       "confidence": "high",
       "verification_status": "pending",
       "evidence": {
@@ -25,13 +45,19 @@
         "score": 6
       },
       "legacy_metadata": {
-        "raw_single_function": true
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_5eb5aaf1286aa30a627e"
+        ],
+        "residual_of": "C3:A3F1..C3:A419",
+        "coverage_treatment": "active_non_overlapping_residual"
       }
     }
   ],
   "new_labels": [
     "ct_c3_0733_phd_handler",
-    "ct_c3_a3f1_jsr_entry"
+    "ct_c3_a3f1_jsr_entry",
+    "ct_c3_a3f1_jsr_entry__residual_a407_a419"
   ],
   "confidence": {
     "structural": "medium",

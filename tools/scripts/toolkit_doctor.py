@@ -7,6 +7,7 @@ import argparse
 import json
 import os
 import py_compile
+import re
 
 import subprocess
 import sys
@@ -20,7 +21,14 @@ if str(repo_root) not in sys.path:
 from tools.ctrepo.provenance import create_provenance_header
 from tools.ctrepo.manifest_discovery import discover_manifest_candidates
 from tools.ctrepo.manifest_validation import validate_manifest
+from tools.ctrepo.policy_validation import validate_all_policy_registries, validate_waiver_registry
 from tools.ctrepo.range_model import detect_range_conflicts
+
+
+def stable_pytest_summary(output: str) -> str:
+    """Remove wall-clock timing from pytest's otherwise deterministic summary."""
+    summary = output.strip().splitlines()[-1] if output.strip() else ""
+    return re.sub(r"\s+in\s+\d+(?:\.\d+)?s$", "", summary)
 
 def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
     root = repo_root
@@ -116,17 +124,14 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
 
     waivers_file = root / "tools/config/range_overlap_waivers.json"
     waiver_cids = set()
-    if waivers_file.exists():
-        try:
-            w_doc = json.loads(waivers_file.read_text(encoding="utf-8"))
-            for w in w_doc.get("waivers", []):
-                waiver_cids.add(w.get("conflict_id", w))
-        except Exception:
-            pass
+    waiver_errors = validate_waiver_registry(waivers_file)
+    if not waiver_errors:
+        w_doc = json.loads(waivers_file.read_text(encoding="utf-8"))
+        waiver_cids = {w["conflict_id"] for w in w_doc.get("waivers", [])}
 
     all_conflicts = detect_range_conflicts(ranges_with_meta)
     unresolved_conflicts = [c for c in all_conflicts if c.conflict_id not in waiver_cids]
-    range_ok = len(unresolved_conflicts) == 0
+    range_ok = not waiver_errors and len(unresolved_conflicts) == 0
     if not range_ok:
         has_failures = True
     checks.append({
@@ -134,7 +139,8 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
         "status": "pass" if range_ok else "fail",
         "total_conflicts": len(all_conflicts),
         "unresolved_conflicts_count": len(unresolved_conflicts),
-        "waived_conflicts_count": len(all_conflicts) - len(unresolved_conflicts)
+        "waived_conflicts_count": len(all_conflicts) - len(unresolved_conflicts),
+        "waiver_registry_errors": waiver_errors,
     })
 
     # 5. Branch State & Gaps Check
@@ -159,7 +165,18 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
             "error": str(e)
         })
 
-    # 6. Pytest Unit Tests
+    # 6. Policy registries and their evidence
+    policy_errors = validate_all_policy_registries()
+    policy_ok = not policy_errors
+    if not policy_ok:
+        has_failures = True
+    checks.append({
+        "name": "policy_registries",
+        "status": "pass" if policy_ok else "fail",
+        "errors": policy_errors,
+    })
+
+    # 7. Pytest Unit Tests
     try:
         res = subprocess.run(
             [sys.executable, "-m", "pytest", "-q"],
@@ -171,34 +188,37 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
         checks.append({
             "name": "unit_tests",
             "status": "pass" if test_ok else "fail",
-            "summary": res.stdout.strip().splitlines()[-1] if res.stdout.strip() else ""
+            "summary": stable_pytest_summary(res.stdout)
         })
     except Exception as e:
+        has_failures = True
         checks.append({
             "name": "unit_tests",
             "status": "fail",
             "error": str(e)
         })
 
-    # 7. Prohibited Commercial ROM Check in git tracking
+    # 8. Prohibited binaries and generated caches in Git tracking
     try:
         res = subprocess.run(
-            ["git", "ls-files", "rom/*.sfc", "rom/*.smc", "*.sfc", "*.smc"],
+            [sys.executable, str(root / "tools/scripts/validate_binary_policy.py")],
             cwd=str(root), capture_output=True, text=True
         )
-        tracked_roms = [l.strip() for l in res.stdout.splitlines() if l.strip()]
-        rom_ok = len(tracked_roms) == 0
-        if not rom_ok:
-            has_warnings = True
-            if strict:
-                has_failures = True
+        binary_ok = res.returncode == 0
+        if not binary_ok:
+            has_failures = True
         checks.append({
-            "name": "prohibited_rom_tracking",
-            "status": "pass" if rom_ok else ("fail" if strict else "warn"),
-            "tracked_roms": tracked_roms
+            "name": "binary_and_cache_policy",
+            "status": "pass" if binary_ok else "fail",
+            "output": (res.stdout + res.stderr).strip(),
         })
-    except Exception:
-        pass
+    except Exception as exc:
+        has_failures = True
+        checks.append({
+            "name": "binary_and_cache_policy",
+            "status": "fail",
+            "error": str(exc),
+        })
 
     # Overall report
     overall_status = "fail" if has_failures else ("warn" if has_warnings else "pass")

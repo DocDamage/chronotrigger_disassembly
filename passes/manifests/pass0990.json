@@ -8,14 +8,38 @@
   "closed_ranges": [
     {
       "range": "C3:0540..C3:0559",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_c3_0540_lda_init",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:052A..C3:0548",
+      "parent_label": "ct_c3_052a_jsr_entry",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_6d305728c75e722fc168",
+          "adj_6ba47ca9918a5e934c02"
+        ]
+      }
+    },
+    {
+      "range": "C3:054C..C3:0559",
+      "kind": "code_owner",
+      "label": "ct_c3_0540_lda_init__residual_054c_0559",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_6d305728c75e722fc168",
+          "adj_6ba47ca9918a5e934c02"
+        ],
+        "residual_of": "C3:0540..C3:0559",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_c3_0540_lda_init"
+    "ct_c3_0540_lda_init",
+    "ct_c3_0540_lda_init__residual_054c_0559"
   ],
   "confidence": {
     "structural": "medium",

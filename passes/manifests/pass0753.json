@@ -8,12 +8,18 @@
   "closed_ranges": [
     {
       "range": "C3:01BA..C3:01D5",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_01ba_jsr_prologue",
       "confidence": "high",
       "verification_status": "pending",
-      "parent_range": "C3:01B4..C3:01E3",
-      "parent_label": "ct_c3_01b4_php_prologue"
+      "parent_range": "C3:01A8..C3:01C9",
+      "parent_label": "ct_c3_01a8_jsr_prologue",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_f42fc1107ef812133586",
+          "adj_5451bc82d6f2bf82281b"
+        ]
+      }
     }
   ],
   "new_labels": [

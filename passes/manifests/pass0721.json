@@ -15,20 +15,23 @@
     },
     {
       "range": "C3:6454..C3:6472",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_6454_gap_handler",
       "confidence": "medium-high",
       "verification_status": "pending",
+      "parent_range": "C3:6400..C3:64FF",
+      "parent_label": "ct_c3_6400_frozen_candidate_lane_2_hard_bad_starts",
       "evidence": {
         "reasoning": null,
         "findings": null,
         "score": 4
       },
       "legacy_metadata": {
-        "raw_single_function": true
-      },
-      "parent_range": "C3:6400..C3:64FF",
-      "parent_label": "ct_c3_6400_frozen_candidate_lane_2_hard_bad_starts"
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_4526d910efd5255560ce"
+        ]
+      }
     }
   ],
   "new_labels": [

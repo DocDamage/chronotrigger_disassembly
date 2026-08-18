@@ -9,9 +9,10 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - working branch: `live-work-from-pass166`
 - latest manifest-backed pass: `1229` (Session 46: C4:9D10 + C3:CB47 dual promotion)
 - latest continuation-note snapshot: `docs/sessions/chrono_trigger_session15_continue_notes_100.md` (historical C7 summary through pass 217)
-- current live seam: `C3:6800..`
+- current live seam: `C3:D000.. / C4:A000..` (from canonical pass `1229` and `tools/config/project_state.json`)
 - canonical pass manifests: 961 canonical manifests generated from 1,000 legacy source manifests
-- total closed ranges: 1,105 closed ranges (59,050 uniquely covered bytes, 1.4079% of whole ROM)
+- range inventory: 1,105 conserved historical claims normalized into 1,289 records (1,061 active, 228 superseded); active ownership is conflict-free
+- unique coverage: 59,050 bytes (1.4079% of the 4 MiB ROM)
 - conservation status: 100% verified zero-loss conservation (`tools/scripts/compare_manifest_range_inventory.py`)
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
 - continuation notes remain important historical context for the earlier C7 seam
@@ -25,7 +26,7 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - `repo_sync/` — earlier sync packets from the repo-first transition phase
 - `disassembly/` — legacy disassembly-note mirror through pass `163` (historical)
 - `labels/` — legacy label-note mirror through pass `163` (historical)
-- `toolkits/` — archived toolkit zip bundles; not the active tooling tree
+- `toolkits/` — historical unpacked toolkit source; binary ZIP snapshots are intentionally excluded from Git
 - `docs/handoffs/` — master handoff snapshots and resume checklists
 - `docs/sessions/` — continuation notes and next-session starting documents
 - `docs/reports/raw_seams/` — long-form seam-facing raw report markdown
@@ -88,7 +89,7 @@ Session 46 discovered exceptional C4:9800-9FFF region with 2 promotions:
 - **C4:9800-9FFF**: 7 of 8 pages candidate_code_lane (87.5% density!)
 - **Score-6 clusters**: 3 discovered (C3:CB8E, C4:9DE6, C4:9E50)
 - **C4 bank**: ~13.1%, only 1.9% to 15% target
-- **Current seam**: C3:D000.. / C4:A000..
+- **Session-ending seam**: C3:D000.. / C4:A000..
 - **Report**: `AGENT_SWARM_SESSION_46_REPORT.md`
 
 ### Session 45: Continuation Scan - 4 Score-4 Candidates Pending
@@ -97,7 +98,7 @@ Session 41 continued the sequential seam and pivoted to C3:8000+ high bank:
 - **Score-6 backtrack candidate**: C3:8912 (target C3:8921, verified callers)
 - **Cluster score 8**: C3:87BA-87E1 (branch_fed_control_pocket)
 - **High bank validation**: Confirmed 62.5% candidate_code_lane density
-- **Current seam**: C3:9800..
+- **Session-ending seam**: C3:9800..
 - **Report**: `AGENT_SWARM_SESSION_41_REPORT.md`
 
 ### Session 40: Agent Swarm Multi-Region Scan

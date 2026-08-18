@@ -8,14 +8,36 @@
   "closed_ranges": [
     {
       "range": "D4:4008..D4:4030",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_d4_4008_score6_cluster",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "D4:4008..D4:4026",
+      "parent_label": "ct_d4_4008_score7_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_05dbf26a12913f812acc"
+        ]
+      }
+    },
+    {
+      "range": "D4:4027..D4:4030",
+      "kind": "code_owner",
+      "label": "ct_d4_4008_score6_cluster__residual_4027_4030",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_05dbf26a12913f812acc"
+        ],
+        "residual_of": "D4:4008..D4:4030",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_4008_score6_cluster"
+    "ct_d4_4008_score6_cluster",
+    "ct_d4_4008_score6_cluster__residual_4027_4030"
   ],
   "confidence": {
     "structural": "medium",

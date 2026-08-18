@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RangeAdjudicationLedger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "policy_version",
+    "source_commit",
+    "description",
+    "decision_count",
+    "decisions"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "policy_version": { "const": "deterministic-interval-ownership-v2" },
+    "source_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "description": { "type": "string", "minLength": 20 },
+    "decision_count": { "type": "integer", "minimum": 0 },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "action",
+          "relationship",
+          "subject",
+          "winner",
+          "reason_code",
+          "rationale",
+          "coverage_treatment",
+          "rank",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": { "type": "string", "pattern": "^adj_[a-f0-9]{20}$" },
+          "action": { "const": "supersede" },
+          "relationship": {
+            "enum": ["exact_duplicate", "containment", "partial_overlap", "code_data_overlap"]
+          },
+          "subject": { "$ref": "#/$defs/rangeIdentity" },
+          "winner": { "$ref": "#/$defs/rangeIdentity" },
+          "reason_code": { "const": "deterministic_ownership_precedence" },
+          "rationale": { "type": "string", "minLength": 80 },
+          "coverage_treatment": {
+            "const": "winner_owns_overlap_subject_retains_non_overlapping_residuals"
+          },
+          "rank": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["winner", "subject"],
+            "properties": {
+              "winner": { "$ref": "#/$defs/rank" },
+              "subject": { "$ref": "#/$defs/rank" }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 2,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rangeIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pass_number", "range", "label"],
+      "properties": {
+        "pass_number": { "type": "integer", "minimum": 1 },
+        "range": { "type": "string", "pattern": "^[A-F0-9]{2}:[A-F0-9]{4}\\.\\.[A-F0-9]{2}:[A-F0-9]{4}$" },
+        "label": { "type": "string", "minLength": 1 }
+      }
+    },
+    "rank": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "integer" },
+        { "type": "integer" },
+        { "type": "integer" },
+        { "type": "integer" },
+        { "type": "integer" }
+      ],
+      "items": false,
+      "minItems": 5,
+      "maxItems": 5
+    }
+  }
+}

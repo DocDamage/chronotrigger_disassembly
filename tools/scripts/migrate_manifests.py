@@ -5,7 +5,10 @@ import argparse
 import hashlib
 import json
 import os
+import shutil
 import sys
+import tempfile
+import time
 
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
@@ -16,6 +19,8 @@ if str(repo_root) not in sys.path:
 
 from tools.ctrepo.manifest_models import CanonicalManifest, ClosedRange
 from tools.ctrepo.manifest_discovery import discover_manifest_candidates
+from tools.ctrepo.manifest_validation import validate_manifest
+from tools.ctrepo.range_adjudication import apply_adjudications, load_adjudications
 
 
 def sha256_file(filepath: str) -> str:
@@ -25,21 +30,49 @@ def sha256_file(filepath: str) -> str:
             h.update(chunk)
     return h.hexdigest()
 
-def plan_migration(manifests_dir: str = "passes/manifests") -> Tuple[Dict[int, CanonicalManifest], List[Dict[str, Any]]]:
+
+def replace_with_retry(source: str, destination: str, attempts: int = 12) -> None:
+    """Atomically replace a file, tolerating short-lived Windows reader locks."""
+    for attempt in range(attempts):
+        try:
+            os.replace(source, destination)
+            return
+        except PermissionError:
+            if attempt == attempts - 1:
+                raise
+            time.sleep(0.05 * (attempt + 1))
+
+def _baseline_original_paths() -> Dict[str, str]:
+    """Return baseline SHA-256 -> original repository path when available."""
+    baseline_path = repo_root / "reports" / "remediation" / "corrective_baseline.json"
+    if not baseline_path.exists():
+        return {}
+    data = json.loads(baseline_path.read_text(encoding="utf-8"))
+    return {entry["sha256"]: entry["path"] for entry in data.get("manifests", [])}
+
+
+def plan_migration(
+    manifests_dir: str = "passes/manifests",
+    adjudications_path: str = "tools/config/range_adjudications.json",
+    apply_ownership_adjudications: bool = True,
+    project_state_path: str = "tools/config/project_state.json",
+) -> Tuple[Dict[int, CanonicalManifest], List[Dict[str, Any]]]:
     """Analyze all candidate source manifests and construct merged canonical manifests + migration ledger."""
     legacy_dir = os.path.join(manifests_dir, "legacy")
     
     # 1. Collect all candidates from legacy directory (or manifests_dir if legacy does not exist)
     all_candidates = []
-    seen_source_hashes = set()
+    seen_source_keys = set()
+    original_paths = _baseline_original_paths()
 
     source_dir = legacy_dir if os.path.exists(legacy_dir) and len(os.listdir(legacy_dir)) > 0 else manifests_dir
 
     for c in discover_manifest_candidates(manifests_dir=source_dir):
         if c.source_path and os.path.exists(c.source_path):
             file_hash = sha256_file(c.source_path)
-            if file_hash not in seen_source_hashes:
-                seen_source_hashes.add(file_hash)
+            source_key = (os.path.normcase(os.path.abspath(c.source_path)), file_hash)
+            if source_key not in seen_source_keys:
+                seen_source_keys.add(source_key)
                 all_candidates.append(c)
 
     # 2. Group candidates by pass number
@@ -67,7 +100,7 @@ def plan_migration(manifests_dir: str = "passes/manifests") -> Tuple[Dict[int, C
         merged_notes: List[str] = []
         sources: Dict[str, str] = {}
         legacy_meta: Dict[str, Any] = {}
-        status = "draft"
+        status = "accepted"
         live_seam = None
         
         for c in cand_list:
@@ -76,7 +109,8 @@ def plan_migration(manifests_dir: str = "passes/manifests") -> Tuple[Dict[int, C
             m = c.manifest
             if m.live_seam_after_pass:
                 live_seam = m.live_seam_after_pass
-            if m.status in ("accepted", "reviewed", "draft"):
+            trust_rank = {"draft": 0, "reviewed": 1, "accepted": 2}
+            if m.status in trust_rank and trust_rank[m.status] < trust_rank.get(status, 0):
                 status = m.status
                 
             fn_clean = os.path.basename(c.source_path)
@@ -123,6 +157,7 @@ def plan_migration(manifests_dir: str = "passes/manifests") -> Tuple[Dict[int, C
                 disposition = "scan_report_without_closed_ranges"
 
             migration_records.append({
+                "original_source_path": original_paths.get(src_sha, c.source_path.replace("\\", "/")),
                 "source_path": c.source_path.replace("\\", "/"),
                 "source_filename": c.filename,
                 "source_sha256": src_sha,
@@ -138,6 +173,7 @@ def plan_migration(manifests_dir: str = "passes/manifests") -> Tuple[Dict[int, C
     for s in scan_reports:
         src_sha = sha256_file(s.source_path) if os.path.exists(s.source_path) else None
         migration_records.append({
+            "original_source_path": original_paths.get(src_sha, s.source_path.replace("\\", "/")),
             "source_path": s.source_path.replace("\\", "/"),
             "source_filename": s.filename,
             "source_sha256": src_sha,
@@ -153,6 +189,17 @@ def plan_migration(manifests_dir: str = "passes/manifests") -> Tuple[Dict[int, C
     # Sort migration records deterministically by parsed_pass, source_path
     migration_records.sort(key=lambda x: (x["parsed_pass"] if x["parsed_pass"] is not None else 99999, x["source_path"]))
 
+    if apply_ownership_adjudications:
+        adjudications = load_adjudications(adjudications_path)
+        apply_adjudications(canonical_manifests, adjudications, strict=True)
+        state_path = Path(project_state_path)
+        if state_path.exists():
+            project_state = json.loads(state_path.read_text(encoding="utf-8"))
+            latest_pass = int(project_state["latest_manifest_pass"])
+            if latest_pass not in canonical_manifests:
+                raise ValueError(f"Project state references missing pass {latest_pass}")
+            canonical_manifests[latest_pass].live_seam_after_pass = project_state["live_seam"]
+
     return canonical_manifests, migration_records
 
 
@@ -163,12 +210,18 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Perform planning and analysis without modifying files")
     parser.add_argument("--apply", action="store_true", help="Execute the migration and write canonical files")
     parser.add_argument("--allow-corrective-apply", action="store_true", help="Override Phase 0 safety guard for Phase 3 apply")
+    parser.add_argument("--adjudications", default="tools/config/range_adjudications.json", help="Durable ownership adjudication ledger")
+    parser.add_argument("--skip-adjudications", action="store_true", help="Generate source-normalized manifests before ownership adjudication")
     parser.add_argument("--report", default="reports/remediation/manifest_migration_plan.json", help="Path to write migration JSON report")
     args = parser.parse_args()
 
     manifests_dir = args.manifests_dir
     print(f"Analyzing manifests in {manifests_dir}...")
-    canon_manifests, mig_map = plan_migration(manifests_dir)
+    canon_manifests, mig_map = plan_migration(
+        manifests_dir,
+        adjudications_path=args.adjudications,
+        apply_ownership_adjudications=not args.skip_adjudications,
+    )
 
     report_payload = {
         "total_canonical_manifests": len(canon_manifests),
@@ -196,21 +249,58 @@ def main() -> int:
         print("Use --dry-run or provide --allow-corrective-apply when executing Phase 3.")
         return 1
 
-    target_out_dir = args.staging_dir or manifests_dir
+    target_out_dir = os.path.abspath(args.staging_dir or manifests_dir)
     print(f"Applying migration to {target_out_dir}...")
-    os.makedirs(target_out_dir, exist_ok=True)
 
-    for pass_num, canon_m in sorted(canon_manifests.items()):
-        dest_filename = f"pass{pass_num:04d}.json"
-        dest_path = os.path.join(target_out_dir, dest_filename)
-        data = canon_m.to_dict()
-        with open(dest_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+    # Always build and validate a complete temporary tree before replacing any
+    # destination.  Production replacement keeps backups until every atomic
+    # os.replace succeeds, then removes them.
+    target_parent = os.path.dirname(target_out_dir)
+    os.makedirs(target_parent, exist_ok=True)
+    temp_dir = tempfile.mkdtemp(prefix="manifest-migration-", dir=target_parent)
+    backup_dir = None
+    try:
+        for pass_num, canon_m in sorted(canon_manifests.items()):
+            valid, errors = validate_manifest(canon_m, strict=True)
+            if not valid:
+                raise ValueError(f"Staged pass {pass_num} failed validation: {errors}")
+            dest_filename = f"pass{pass_num:04d}.json"
+            with open(os.path.join(temp_dir, dest_filename), "w", encoding="utf-8") as f:
+                json.dump(canon_m.to_dict(), f, indent=2)
 
-    mig_map_path = os.path.join(target_out_dir, "manifest_migration_map.json")
-    with open(mig_map_path, "w", encoding="utf-8") as f:
-        json.dump(report_payload, f, indent=2)
-    print(f"Written {mig_map_path}")
+        with open(os.path.join(temp_dir, "manifest_migration_map.json"), "w", encoding="utf-8") as f:
+            json.dump(report_payload, f, indent=2)
+
+        expected = {f"pass{p:04d}.json" for p in canon_manifests}
+        staged = {p.name for p in Path(temp_dir).glob("pass*.json")}
+        if staged != expected:
+            raise ValueError(f"Staged manifest set mismatch: expected {len(expected)}, found {len(staged)}")
+
+        os.makedirs(target_out_dir, exist_ok=True)
+        backup_dir = tempfile.mkdtemp(prefix="manifest-backup-", dir=target_parent)
+        replaced: List[str] = []
+        try:
+            for filename in sorted(expected | {"manifest_migration_map.json"}):
+                destination = os.path.join(target_out_dir, filename)
+                if os.path.exists(destination):
+                    shutil.copy2(destination, os.path.join(backup_dir, filename))
+                replace_with_retry(os.path.join(temp_dir, filename), destination)
+                replaced.append(filename)
+        except Exception:
+            for filename in replaced:
+                backup = os.path.join(backup_dir, filename)
+                destination = os.path.join(target_out_dir, filename)
+                if os.path.exists(backup):
+                    replace_with_retry(backup, destination)
+                elif os.path.exists(destination):
+                    os.remove(destination)
+            raise
+
+        print(f"Written {len(expected)} canonical manifests and manifest_migration_map.json")
+    finally:
+        shutil.rmtree(temp_dir, ignore_errors=True)
+        if backup_dir:
+            shutil.rmtree(backup_dir, ignore_errors=True)
 
     return 0
 

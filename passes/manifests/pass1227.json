@@ -12,6 +12,8 @@
       "label": "ct_c3_B086",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:B086..C3:B0AA",
+      "parent_label": "ct_c3_b086_phx_prologue",
       "evidence": {
         "reason": null,
         "source": "backtrack",
@@ -48,11 +50,11 @@
             "branches_count": 2
           },
           "verification_status": "pending_final_review"
-        }
-      },
-      "parent_range": "C3:B086..C3:B0AA",
-      "parent_label": "ct_c3_b086_phx_prologue",
-      "notes": "Superseded duplicate of Pass 984 (ct_c3_b086_phx_prologue)"
+        },
+        "ownership_adjudication_ids": [
+          "adj_1c12f3edb7e7be5d4b56"
+        ]
+      }
     }
   ],
   "new_labels": [

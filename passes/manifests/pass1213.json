@@ -9,10 +9,17 @@
   "closed_ranges": [
     {
       "range": "C3:3800..C3:38FF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:387B..C3:38A3",
+      "parent_label": "ct_c3_387b_math_16bit",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_0240cf14ebcf6eebec46"
+        ]
+      }
     },
     {
       "range": "C3:3900..C3:39FF",
@@ -37,24 +44,47 @@
     },
     {
       "range": "C3:3C00..C3:3CFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:3C5B..C3:3C76",
+      "parent_label": "ct_c3_3c5b_indexed_ops",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_8480005ebd9506cc5000",
+          "adj_a4da99b673d549ccebcb"
+        ]
+      }
     },
     {
       "range": "C3:3D00..C3:3DFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:3DE2..C3:3DF0",
+      "parent_label": "ct_c3_3de2_score6_dispatch",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_bc38925f4b6429debdb2"
+        ]
+      }
     },
     {
       "range": "C3:3E00..C3:3EFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:3E53..C3:3E69",
+      "parent_label": "ct_c3_3e53_score7_dispatch",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_d1fae7f4849681ce4148",
+          "adj_2792ef63b2c450dd1f55"
+        ]
+      }
     },
     {
       "range": "C3:3F00..C3:3FFF",
@@ -62,6 +92,122 @@
       "label": "ct_c3_3f00_frozen_mixed_command_data_fragments_no_promotable_clusters",
       "confidence": "high",
       "verification_status": "pending"
+    },
+    {
+      "range": "C3:3800..C3:387A",
+      "kind": "data",
+      "label": "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts__residual_3800_387a",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_0240cf14ebcf6eebec46"
+        ],
+        "residual_of": "C3:3800..C3:38FF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:38A4..C3:38FF",
+      "kind": "data",
+      "label": "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts__residual_38a4_38ff",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_0240cf14ebcf6eebec46"
+        ],
+        "residual_of": "C3:3800..C3:38FF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:3C00..C3:3C5A",
+      "kind": "data",
+      "label": "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts__residual_3c00_3c5a",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_8480005ebd9506cc5000",
+          "adj_a4da99b673d549ccebcb"
+        ],
+        "residual_of": "C3:3C00..C3:3CFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:3C77..C3:3C7F",
+      "kind": "data",
+      "label": "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts__residual_3c77_3c7f",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_8480005ebd9506cc5000",
+          "adj_a4da99b673d549ccebcb"
+        ],
+        "residual_of": "C3:3C00..C3:3CFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:3D00..C3:3DE1",
+      "kind": "data",
+      "label": "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start__residual_3d00_3de1",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_bc38925f4b6429debdb2"
+        ],
+        "residual_of": "C3:3D00..C3:3DFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:3DF1..C3:3DFF",
+      "kind": "data",
+      "label": "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start__residual_3df1_3dff",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_bc38925f4b6429debdb2"
+        ],
+        "residual_of": "C3:3D00..C3:3DFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:3E00..C3:3E52",
+      "kind": "data",
+      "label": "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts__residual_3e00_3e52",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_d1fae7f4849681ce4148",
+          "adj_2792ef63b2c450dd1f55"
+        ],
+        "residual_of": "C3:3E00..C3:3EFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:3E6A..C3:3EA3",
+      "kind": "data",
+      "label": "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts__residual_3e6a_3ea3",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_d1fae7f4849681ce4148",
+          "adj_2792ef63b2c450dd1f55"
+        ],
+        "residual_of": "C3:3E00..C3:3EFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
@@ -72,7 +218,15 @@
     "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts",
     "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start",
     "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts",
-    "ct_c3_3f00_frozen_mixed_command_data_fragments_no_promotable_clusters"
+    "ct_c3_3f00_frozen_mixed_command_data_fragments_no_promotable_clusters",
+    "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts__residual_3800_387a",
+    "ct_c3_3800_frozen_branch_fed_pocket_5_hard_bad_starts__residual_38a4_38ff",
+    "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts__residual_3c00_3c5a",
+    "ct_c3_3c00_frozen_candidate_lane_2_hard_bad_starts__residual_3c77_3c7f",
+    "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start__residual_3d00_3de1",
+    "ct_c3_3d00_frozen_candidate_lane_1_hard_bad_start__residual_3df1_3dff",
+    "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts__residual_3e00_3e52",
+    "ct_c3_3e00_frozen_mixed_command_data_3_hard_bad_starts__residual_3e6a_3ea3"
   ],
   "confidence": {
     "structural": "medium",

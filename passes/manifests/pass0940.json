@@ -8,16 +8,36 @@
   "closed_ranges": [
     {
       "range": "C3:4548..C3:459F",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_4548_score13_cluster",
       "confidence": "high",
       "verification_status": "pending",
-      "parent_range": "C3:4500..C3:45FF",
-      "parent_label": "ct_c3_4500_frozen_candidate_lane_1_hard_bad_start_cluster_score_13"
+      "parent_range": "C3:453B..C3:4599",
+      "parent_label": "ct_c3_453b_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_5681fee966748e7c74fc"
+        ]
+      }
+    },
+    {
+      "range": "C3:459A..C3:459F",
+      "kind": "code_owner",
+      "label": "ct_c3_4548_score13_cluster__residual_459a_459f",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_5681fee966748e7c74fc"
+        ],
+        "residual_of": "C3:4548..C3:459F",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_c3_4548_score13_cluster"
+    "ct_c3_4548_score13_cluster",
+    "ct_c3_4548_score13_cluster__residual_459a_459f"
   ],
   "confidence": {
     "structural": "medium",

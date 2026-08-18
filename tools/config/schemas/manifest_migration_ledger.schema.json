@@ -21,6 +21,7 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
+          "original_source_path",
           "source_path",
           "source_filename",
           "source_sha256",
@@ -32,15 +33,16 @@
           "disposition"
         ],
         "properties": {
+          "original_source_path": { "type": "string", "minLength": 1 },
           "source_path": { "type": "string" },
           "source_filename": { "type": "string" },
           "source_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
           "detected_schema": { "type": "string" },
           "parsed_pass": { "type": ["integer", "null"] },
-          "canonical_target_filename": { "type": "string" },
-          "canonical_pass": { "type": "integer" },
+          "canonical_target_filename": { "type": ["string", "null"] },
+          "canonical_pass": { "type": ["integer", "null"] },
           "range_count": { "type": "integer", "minimum": 0 },
-          "disposition": { "type": "string", "enum": ["canonicalized", "merged", "superseded", "quarantined", "archived"] },
+          "disposition": { "type": "string", "enum": ["canonicalized", "merged", "superseded", "quarantined", "archived", "scan_report_without_closed_ranges"] },
           "legacy_archived_path": { "type": "string" }
         }
       }

@@ -12,17 +12,20 @@
       "label": "ct_c3_2EA7",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:2EA7..C3:2EBF",
+      "parent_label": "ct_c3_2ea7_score12_cluster",
       "evidence": {
         "reasoning": null,
         "findings": null,
         "score": 12
       },
       "legacy_metadata": {
-        "raw_single_function": true
-      },
-      "parent_range": "C3:2EA7..C3:2EBF",
-      "parent_label": "ct_c3_2ea7_score12_cluster",
-      "notes": "Superseded duplicate of Pass 893 (ct_c3_2ea7_score12_cluster)"
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_9a9a1e339bc6280c34e1",
+          "adj_77bafa6f794e9efae512"
+        ]
+      }
     }
   ],
   "new_labels": [

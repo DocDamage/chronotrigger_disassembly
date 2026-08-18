@@ -16,23 +16,97 @@
     },
     {
       "range": "C3:2A00..C3:2AFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:2AA5..C3:2AC5",
+      "parent_label": "ct_c3_2aa5_score7_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_5c76140fff333aedc61f"
+        ]
+      }
     },
     {
       "range": "C3:2B00..C3:2BFF",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr",
       "confidence": "medium-high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:2B3A..C3:2B6E",
+      "parent_label": "ct_c3_2b3a_score8_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_e8793e187cddc0e8c353"
+        ]
+      }
+    },
+    {
+      "range": "C3:2A00..C3:2AA4",
+      "kind": "data",
+      "label": "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts__residual_2a00_2aa4",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_5c76140fff333aedc61f"
+        ],
+        "residual_of": "C3:2A00..C3:2AFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2AC6..C3:2AFF",
+      "kind": "data",
+      "label": "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts__residual_2ac6_2aff",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_5c76140fff333aedc61f"
+        ],
+        "residual_of": "C3:2A00..C3:2AFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2B00..C3:2B39",
+      "kind": "code_owner",
+      "label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr__residual_2b00_2b39",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_e8793e187cddc0e8c353"
+        ],
+        "residual_of": "C3:2B00..C3:2BFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2B6F..C3:2BFF",
+      "kind": "code_owner",
+      "label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr__residual_2b6f_2bff",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_e8793e187cddc0e8c353"
+        ],
+        "residual_of": "C3:2B00..C3:2BFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
     "ct_c3_2900_frozen_mixed_data_19_brk_no_xref_targets",
     "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts",
-    "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr"
+    "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr",
+    "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts__residual_2a00_2aa4",
+    "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts__residual_2ac6_2aff",
+    "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr__residual_2b00_2b39",
+    "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr__residual_2b6f_2bff"
   ],
   "confidence": {
     "structural": "medium",

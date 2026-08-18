@@ -8,14 +8,36 @@
   "closed_ranges": [
     {
       "range": "D1:0E59..D1:0E86",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_d1_0e59_score9_cluster",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "D1:0E59..D1:0E7B",
+      "parent_label": "ct_d1_0e59_score7_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_879dbbb7b74f8610ae9d"
+        ]
+      }
+    },
+    {
+      "range": "D1:0E7C..D1:0E86",
+      "kind": "code_owner",
+      "label": "ct_d1_0e59_score9_cluster__residual_0e7c_0e86",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_879dbbb7b74f8610ae9d"
+        ],
+        "residual_of": "D1:0E59..D1:0E86",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_0e59_score9_cluster"
+    "ct_d1_0e59_score9_cluster",
+    "ct_d1_0e59_score9_cluster__residual_0e7c_0e86"
   ],
   "confidence": {
     "structural": "medium",

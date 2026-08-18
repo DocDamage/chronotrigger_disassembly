@@ -29,3 +29,7 @@ reports/seam_cache/
 repo_sync/seam_cache/
 .cache/
 tools/scripts/tools/cache/
+
+# Release archives are distributed outside the tracked source tree.
+toolkits/**/*.zip
+emulators/*.zip

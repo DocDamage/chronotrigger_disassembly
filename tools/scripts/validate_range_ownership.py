@@ -15,6 +15,8 @@ if str(repo_root) not in sys.path:
 from tools.ctrepo.manifest_discovery import iter_canonical_manifests
 from tools.ctrepo.range_model import detect_range_conflicts, compute_byte_union
 from tools.ctrepo.manifest_models import ClosedRange
+from tools.ctrepo.policy_validation import validate_waiver_registry
+from tools.ctrepo.provenance import create_provenance_header
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate range ownership and interval overlaps.")
@@ -27,17 +29,19 @@ def main() -> int:
 
     # Load waivers
     waiver_cids = set()
+    waiver_errors = []
     if os.path.exists(args.waivers_config):
         try:
+            waiver_errors = validate_waiver_registry(Path(args.waivers_config))
             with open(args.waivers_config, "r", encoding="utf-8") as f:
                 w_data = json.load(f)
                 for w in w_data.get("waivers", []):
                     if isinstance(w, dict) and "conflict_id" in w:
                         waiver_cids.add(w["conflict_id"])
-                    elif isinstance(w, str):
-                        waiver_cids.add(w)
+                    else:
+                        waiver_errors.append("waiver entry is not an object with conflict_id")
         except Exception as e:
-            print(f"Warning: Could not parse waivers config: {e}")
+            waiver_errors.append(f"Could not parse waivers config: {e}")
 
     # Collect all ranges
     all_ranges_with_meta: List[Tuple[ClosedRange, int, str]] = []
@@ -65,6 +69,7 @@ def main() -> int:
     coverage_res = compute_byte_union(all_closed_ranges)
 
     report_json_data = {
+        "provenance": create_provenance_header("tools/scripts/validate_range_ownership.py", all_manifests),
         "total_ranges": len(all_ranges_with_meta),
         "total_manifests": len(all_manifests),
         "total_conflicts": len(conflicts),
@@ -91,6 +96,8 @@ def main() -> int:
             } for c in unresolved_conflicts
         ]
     }
+    if waiver_errors:
+        report_json_data["waiver_registry_errors"] = waiver_errors
 
     if args.output_json:
         os.makedirs(os.path.dirname(os.path.abspath(args.output_json)), exist_ok=True)
@@ -126,7 +133,11 @@ def main() -> int:
 
     print(f"Range Ownership: {len(conflicts)} total conflicts ({len(unresolved_conflicts)} unresolved: {len(exact_duplicates)} exact dups, {len(partial_overlaps)} partial overlaps, {len(containments)} containments, {len(code_data)} code/data)")
 
-    if args.strict and unresolved_conflicts:
+    if waiver_errors:
+        print("Waiver registry errors:")
+        for error in waiver_errors:
+            print(f"  - {error}")
+    if args.strict and (unresolved_conflicts or waiver_errors):
         return 1
     return 0
 

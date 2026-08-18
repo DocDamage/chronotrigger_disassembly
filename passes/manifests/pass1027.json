@@ -12,17 +12,22 @@
       "label": "ct_c3_19DB",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:19A5..C3:1A00",
+      "parent_label": "ct_c3_19a5_unknown_function_score6_cluster",
       "evidence": {
         "reasoning": null,
         "findings": null,
         "score": 9
       },
       "legacy_metadata": {
-        "raw_single_function": true
-      },
-      "parent_range": "C3:19DB..C3:1A05",
-      "parent_label": "ct_c3_19db_score9_cluster",
-      "notes": "Superseded duplicate of Pass 942 (ct_c3_19db_score9_cluster)"
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_0fc1b5b35595e56068d8",
+          "adj_8ce7ee8a74e78b26f4b9",
+          "adj_b6e8afad562927a16b2f",
+          "adj_bdb739d3ca81735f157b"
+        ]
+      }
     }
   ],
   "new_labels": [

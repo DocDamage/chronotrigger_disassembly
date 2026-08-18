@@ -23,10 +23,17 @@
     },
     {
       "range": "C3:0B03..C3:0C91",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words",
       "confidence": "medium-high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:0B03..C3:0C91",
+      "parent_label": "ct_c3_stream_bytecode_interpreter_updating_0920_0940_and_dispatching_apu_command_words",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_bc5e703060dd93727cb3"
+        ]
+      }
     },
     {
       "range": "C3:0C92..C3:0CB0",

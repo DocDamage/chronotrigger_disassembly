@@ -8,12 +8,17 @@
   "closed_ranges": [
     {
       "range": "DD:0E00..DD:0E20",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_dd_0e00_score6_cluster",
       "confidence": "high",
       "verification_status": "pending",
       "parent_range": "DD:0E00..DD:0E50",
-      "parent_label": "ct_dd_0e00_score6_cluster"
+      "parent_label": "ct_dd_0e00_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_d10aae302ff61ec22806"
+        ]
+      }
     }
   ],
   "new_labels": [

@@ -1,17 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "IntentionalPassGapsRegistry",
+  "title": "BaselinePassGapAccountingRegistry",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "schema_version",
-    "description",
-    "total_gaps_count",
-    "intentional_gaps"
-  ],
+  "required": ["$schema", "schema_version", "description", "total_gaps_count", "intentional_gaps"],
   "properties": {
-    "schema_version": { "type": "integer", "enum": [2] },
-    "description": { "type": "string" },
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "integer", "enum": [3] },
+    "description": { "type": "string", "minLength": 1 },
     "total_gaps_count": { "type": "integer", "minimum": 0 },
     "intentional_gaps": {
       "type": "object",
@@ -19,25 +15,17 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "pass_number",
-          "status",
-          "reason_code",
-          "rationale",
-          "evidence",
-          "reviewed_by",
-          "reviewed_at_utc",
-          "review_commit",
-          "revalidation_required"
+          "pass_number", "status", "reason_code", "rationale", "evidence",
+          "evidence_commit", "generated_by", "revalidation_required"
         ],
         "properties": {
-          "pass_number": { "type": "integer" },
-          "status": { "type": "string", "enum": ["verified_gap", "unreviewed_candidate", "investigation_needed"] },
-          "reason_code": { "type": "string", "enum": ["unnumbered_draft_iteration", "session_number_skip", "non_range_investigation", "external_sync_gap"] },
-          "rationale": { "type": "string" },
-          "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-          "reviewed_by": { "type": "string" },
-          "reviewed_at_utc": { "type": "string" },
-          "review_commit": { "type": "string" },
+          "pass_number": { "type": "integer", "minimum": 1 },
+          "status": { "type": "string", "enum": ["baseline_absent", "investigation_needed"] },
+          "reason_code": { "type": "string", "enum": ["no_baseline_manifest", "baseline_identity_mismatch"] },
+          "rationale": { "type": "string", "minLength": 1 },
+          "evidence": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 3 },
+          "evidence_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+          "generated_by": { "type": "string", "minLength": 1 },
           "revalidation_required": { "type": "boolean" }
         }
       }
