@@ -1,24 +1,26 @@
 {
   "provenance": {
     "generator": "generate_coverage.py",
-    "generated_at_utc": "2026-08-18T21:33:52.748950+00:00",
-    "source_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
-    "source_tree": "0eaf7b5c7d0cb783ef72871b9781d86e277adf2e",
-    "git_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+    "generation_command": "python tools/scripts/generate_coverage.py --strict --output-json reports/coverage.json --output-md reports/coverage.md",
+    "generated_at_utc": "2026-08-18T22:48:48.460816+00:00",
+    "source_commit": "cfd7d54a7a3dbfd7e7089fa976dee998fdf62d75",
+    "source_tree": "6cebb8fd47d8c067f1f2680277eeb2c7c7c329cb",
+    "git_commit": "cfd7d54a7a3dbfd7e7089fa976dee998fdf62d75",
     "git_branch": "live-work-from-pass166",
     "is_dirty_worktree": true,
     "worktree_clean_before_generation": false,
     "report_schema_version": 2,
+    "generator_source_digest": "932873e3e14efe2b1de49f9ccbdcb42d5ed95ec9308a5f5647d15f75deab0649",
     "manifest_count": 961,
-    "manifest_set_digest": "09b06ac4f818b7277657428e6b760dcfb8254992310df6b571819699176e31b6"
+    "manifest_set_digest": "17de258695a30716e919b9def75dab8887c52b534cc72e7a7bb0d8da40b6d0bd"
   },
   "metrics": {
     "total_canonical_manifests_count": 961,
-    "total_closed_ranges_count": 1105,
-    "raw_claimed_bytes_before_union": 67923,
+    "total_closed_ranges_count": 1289,
+    "raw_claimed_bytes_before_union": 80879,
     "uniquely_closed_bytes_after_union": 59050,
-    "executable_closed_bytes": 38192,
-    "classified_data_closed_bytes": 24092,
+    "executable_closed_bytes": 38079,
+    "classified_data_closed_bytes": 20971,
     "whole_rom_capacity_bytes": 4194304,
     "whole_rom_coverage_pct": 1.4079,
     "active_banks_count": 23

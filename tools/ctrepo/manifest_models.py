@@ -53,14 +53,20 @@ class ClosedRange:
         kind_norm = (kind or "code_owner").lower().strip()
         kind_map = {
             "owner": "code_owner",
+            "code": "code_owner",
             "function": "code_owner",
             "subroutine": "code_owner",
             "target": "code_owner",
+            "cluster": "code_owner",
+            "hub_candidate": "code_owner",
             "helper": "code_helper",
             "entry_stub": "wrapper",
             "stub": "wrapper"
         }
-        kind_final = kind_map.get(kind_norm, kind_norm if kind_norm in ("code_owner", "code_helper", "wrapper", "veneer", "data", "text_marker", "tail_fragment", "superseded") else "code_owner")
+        allowed_kinds = ("code_owner", "code_helper", "wrapper", "veneer", "data", "text_marker", "tail_fragment", "superseded")
+        kind_final = kind_map.get(kind_norm, kind_norm if kind_norm in allowed_kinds else None)
+        if kind_final is None:
+            raise ValueError(f"Unknown range kind '{kind}' for {range_str}")
 
         # Normalize confidence to controlled vocabulary
         conf_str = str(confidence or "medium").lower().strip()
@@ -96,7 +102,7 @@ class ClosedRange:
             kind=kind_final,
             label=final_label,
             confidence=conf_final,
-            verification_status=kwargs.get("verification_status") or "reviewed",
+            verification_status=kwargs.get("verification_status") or "pending",
             parent_range=kwargs.get("parent_range"),
             parent_label=kwargs.get("parent_label"),
             evidence=evidence,

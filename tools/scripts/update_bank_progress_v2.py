@@ -18,6 +18,7 @@ def main() -> int:
     bank = args.bank.upper()
     closed_exec = []
     closed_data = []
+    superseded_claims = []
     latest_seam = None
     latest_pass = 0
 
@@ -39,7 +40,9 @@ def main() -> int:
                 'confidence': item['confidence'],
                 'kind': item['kind'],
             }
-            if item['kind'] in {'data', 'text_marker'}:
+            if item['kind'] == 'superseded':
+                superseded_claims.append(entry)
+            elif item['kind'] in {'data', 'text_marker'}:
                 closed_data.append(entry)
             else:
                 closed_exec.append(entry)
@@ -54,6 +57,7 @@ def main() -> int:
         'latest_live_seam': latest_seam or f'{bank}:0000..',
         'closed_executable_ranges': closed_exec,
         'closed_data_ranges': closed_data,
+        'superseded_historical_claims': superseded_claims,
     }
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)

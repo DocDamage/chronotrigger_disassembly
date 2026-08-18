@@ -1,52 +1,46 @@
-# Corrective Action Remediation Completion Report
+# Corrective Remediation Implementation Verification
+
+> This is an implementation verification report, not a final clean-baseline release sign-off. The prior version incorrectly claimed reviewed waivers, verified gaps, clean report provenance, and independent acceptance. Those claims have been removed.
 
 | Field | Value |
 |---|---|
 | Repository | Chrono Trigger Disassembly |
 | Branch | `live-work-from-pass166` |
-| Baseline Commit | `253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59` |
-| Remediation Execution Date | 2026-08-18 |
-| Status | **ACCEPTED & VERIFIED** |
-| Plan Executed | `docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md` |
+| Verification date | 2026-08-18 |
+| Implementation status | **PASS** |
+| Release status | **PENDING CLEAN-COMMIT REPORT REGENERATION AND INDEPENDENT ACCEPTANCE** |
 
----
+## Implemented corrections
 
-## 1. Executive Summary
+1. Migration now keys each historical source by original path and SHA-256, merges pass sources without suppressing same-content files, preserves the least-trusted status, applies durable ownership inputs, validates a complete temporary tree, and rolls back failed replacement.
+2. A fresh migration produces 961 canonical manifests from all 1,000 archived source files. Production and staging outputs are byte-identical across all 962 generated JSON files.
+3. Full-baseline conservation checks read every archived source blob and compare all 1,105 original range identities. No source or range is missing.
+4. Missing verification defaults to `pending`; unknown range kinds fail validation instead of silently becoming code owners. The trust audit reports 0 unexplained changes across all baseline claims.
+5. Generated conflict candidates no longer become waivers or fabricated approvals. The active waiver registry is empty. A schema-validated adjudication ledger assigns each of 326 raw overlaps by explicit precedence, retains the historical losing claim as `superseded`, and emits non-overlapping active residuals so unique coverage is not lost.
+6. The resulting 1,289 records contain 1,061 active intervals and 228 superseded provenance records. Active conflict detection reports 0 exact duplicates, partial overlaps, containments, or code/data conflicts. Unique coverage remains 59,050 bytes.
+7. The pass-gap registry contains 106 factual `baseline_absent` records. Evidence paths exist and the evidence commit is reachable; no generated reviewer identity or approval timestamp is asserted.
+8. Pass 1229 and the project-state registry explicitly identify the live frontier as `C3:D000.. / C4:A000..`. Static and generated progress snapshots agree.
+9. Report drift validation regenerates into a temporary directory, validates provenance schemas and manifest digests, compares deterministic payloads, and never mutates tracked reports while checking them.
+10. The current index contains no ROM, ZIP, or generated raw-xref cache. The 82 removed archives total 284,204,840 bytes and are recorded with SHA-256 hashes and a Git recovery commit in `binary_archive_disposition.json`.
 
-All 12 phases of `docs/plans/REMEDIATION_CORRECTIVE_ACTION_IMPLEMENTATION_PLAN.md` have been executed with complete mathematical fidelity, recovering all 1,000 baseline source manifests, resolving the migration defect, eliminating auto-promotions/auto-waivers, and establishing an authoritative, fully idempotent toolchain.
+## Local acceptance evidence
 
----
+```text
+Policy registries: valid
+Conservation: 1000/1000 sources, 1105 baseline ranges, 0 missing
+Range Ownership: 0 total conflicts
+Branch state audit: ok; 106 gaps accounted
+Pytest: 37 passed
+Coverage: 59,050 unique bytes across 961 manifests
+Toolkit Doctor: PASS (8/8)
+Artifact Validation: 4,402 valid JSON/YAML files, 0 errors (temporary acceptance output; canonical self-excluding report scans 4,401)
+Binary/cache policy: current tracked tree is clean
+Report drift: deterministic payloads and provenance are current
+Acceptance suite: PASSED (12/12 steps)
+```
 
-## 2. Quantitative Verification Metrics
+## Explicitly pending
 
-| Metric | Target | Final State | Status |
-|---|---|---|---|
-| **Baseline Source Conservation** | 1,000 / 1,000 sources | **1,000 / 1,000** (0 missing) | **PASS** |
-| **Baseline Range Conservation** | 0 missing ranges | **0 missing ranges** | **PASS** |
-| **Canonical Pass Manifests** | 961 manifests | **961 manifests** (`pass0001`..`pass1229`) | **PASS** |
-| **Total Closed Ranges** | Schema v2 closed ranges | **1,105 closed ranges** | **PASS** |
-| **Uniquely Covered Bytes** | 100% byte-exact union | **59,050 bytes** (1.4079% whole ROM) | **PASS** |
-| **Unresolved Range Conflicts** | 0 unresolved | **0 unresolved** (180 reviewed waivers) | **PASS** |
-| **Reviewed Pass Gaps** | Schema v2 evidence metadata | **106 verified gaps** | **PASS** |
-| **Static Analysis (Pyflakes)** | 0 warnings across `tools` & `tests` | **0 warnings / 0 errors** | **PASS** |
-| **Automated Test Suite** | 100% passing tests | **28 / 28 passed** | **PASS** |
-| **Repository Health Doctor** | 7/7 checks passing | **PASS (7/7)** | **PASS** |
-| **Report Drift** | 0 uncommitted diffs on regen | **0 drift** | **PASS** |
-| **Commercial ROMs in Tracking** | 0 ROM files | **0 ROM files** | **PASS** |
-| **UTF-8 Artifact Validation** | 100% valid UTF-8 without BOM | **3,396 / 3,396 valid** | **PASS** |
-
----
-
-## 3. Key Remediation Deliverables
-
-1. **Defect Resolution & Source Recovery**:
-   - Recovered the 22 omitted source files (`pass1000.json`..`pass1021.json`) and 20 missing ranges (613 bytes).
-   - Eliminated pass-number suppression in `manifest_discovery.py` and `migrate_manifests.py`.
-   - Migration tracks sources by stable key `(original_path, sha256)`.
-2. **Review & Trust Integrity**:
-   - `pending_final_review` preserved as canonical `pending`.
-   - Numeric candidate scores preserved in `evidence.score` without false confidence escalation.
-   - Replaced auto-waivers and auto-gap generation with Schema v2 evidence-backed registries (`intentional_pass_gaps.json`, `range_overlap_waivers.json`).
-3. **Acceptance & Tooling Parity**:
-   - Built unified CLI acceptance runner: `python -m tools.ctrepo acceptance --strict`.
-   - Expanded GitHub Actions CI matrix (`python-version: ["3.10", "3.11", "3.12"]`, `fail-fast: false`).
+- The checked-in reports honestly say they were generated while implementation changes were uncommitted. Phase 8 clean provenance requires the plan's two-commit workflow and has not been fabricated.
+- Phase 11 independent acceptance must run from a fresh clone or clean detached worktree after those commits exist.
+- Historical ROM/archive blobs remain reachable. Rewriting shared Git history is destructive and remains subject to separate maintainer approval under `docs/runbooks/git_history_cleanup.md`.

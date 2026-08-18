@@ -12,17 +12,20 @@
       "label": "ct_c3_2B3A",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:2B3A..C3:2B6E",
+      "parent_label": "ct_c3_2b3a_score8_cluster",
       "evidence": {
         "reasoning": null,
         "findings": null,
         "score": 8
       },
       "legacy_metadata": {
-        "raw_single_function": true
-      },
-      "parent_range": "C3:2B3A..C3:2B6E",
-      "parent_label": "ct_c3_2b3a_score8_cluster",
-      "notes": "Superseded duplicate of Pass 894 (ct_c3_2b3a_score8_cluster)"
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_31f43507b3efbe2d282c",
+          "adj_4b9a8cf4bc4f0de7df29"
+        ]
+      }
     }
   ],
   "new_labels": [

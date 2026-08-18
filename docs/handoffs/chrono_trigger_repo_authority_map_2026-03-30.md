@@ -68,8 +68,8 @@ These files are useful context, but they are not the current start point:
 ## Archive-Only Material
 
 These should not drive current decisions:
-- `toolkits/` - historical zip bundles and rebuilt release bundles; use `tools/` for active tooling and `reports/toolkit_release_manifest_*.md` for release metadata
-- `emulators/bsnes-windows.zip` - convenience archive, not repo state
+- `toolkits/` - historical release documentation only; generated ZIP bundles are excluded from the current tree
+- `emulators/` - emulator setup documentation only; binaries must be downloaded from upstream
 - `docs/rom_analysis/` - imported external dump material and assets
 
 ---
@@ -91,9 +91,9 @@ These are the files or directories most likely to waste time if treated as curre
 - older mirror trees stop at pass `163`
 - current manifest-backed pass notes live under `passes/disasm/` and `passes/labels/`
 
-4. `toolkits/*.zip`
-- historical releases and working bundles
-- not authoritative for current repo tooling behavior
+4. Historical toolkit ZIP names in old handoffs
+- historical release references only; the binary files are no longer tracked in the current tree
+- use `tools/` for current behavior and `reports/remediation/binary_archive_disposition.json` for recovery hashes
 
 ---
 

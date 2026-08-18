@@ -8,12 +8,18 @@
   "closed_ranges": [
     {
       "range": "C1:17BC..C1:17DC",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c1_17bc_dispatch_handler_inc",
       "confidence": "medium",
       "verification_status": "pending",
-      "parent_range": "C1:178E..C1:17FF",
-      "parent_label": "ct_c1_178e_hub_25_callers"
+      "parent_range": "C1:17A5..C1:17BE",
+      "parent_label": "ct_c1_17a5_dispatch_handler_dec",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_b806b47ed8a48df7cdab",
+          "adj_25097d4fb93918198f57"
+        ]
+      }
     }
   ],
   "new_labels": [

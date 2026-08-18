@@ -3,6 +3,7 @@
 import argparse
 import sys
 import subprocess
+import tempfile
 from pathlib import Path
 
 repo_root = Path(__file__).resolve().parent.parent.parent
@@ -34,48 +35,73 @@ def run_verify_rom(args):
 
 def run_acceptance(args):
     print("=== Running Full Acceptance Test Suite ===")
-    
-    print("\n--- Step 1: Static Analysis (Pyflakes) ---")
-    ret_flake = subprocess.call([sys.executable, "-m", "pyflakes", "tools", "tests"], cwd=str(repo_root))
-    if ret_flake != 0:
-        print("Static analysis failed.")
-        return 1
 
-    print("\n--- Step 2: Range Inventory Conservation ---")
-    ret_inv = subprocess.call([sys.executable, "tools/scripts/compare_manifest_range_inventory.py"], cwd=str(repo_root))
-    if ret_inv != 0:
-        print("Range inventory conservation check failed.")
-        return 1
+    with tempfile.TemporaryDirectory(prefix="ctrepo-acceptance-") as tmp:
+        output_dir = Path(tmp)
+        steps = [
+            ("Byte Compilation", [sys.executable, "-m", "compileall", "-q", "tools", "tests"]),
+            ("Static Analysis (Pyflakes)", [sys.executable, "-m", "pyflakes", "tools", "tests"]),
+            ("Policy Registry Validation", [sys.executable, "tools/scripts/validate_policy_registries.py"]),
+            (
+                "Full Baseline Range Conservation",
+                [
+                    sys.executable,
+                    "tools/scripts/compare_manifest_range_inventory.py",
+                    "--strict",
+                    "--output-json", str(output_dir / "range_inventory.json"),
+                    "--output-md", str(output_dir / "range_inventory.md"),
+                ],
+            ),
+            (
+                "Range Ownership & Conflict Check",
+                [
+                    sys.executable,
+                    "tools/scripts/validate_range_ownership.py",
+                    "--strict",
+                    "--output-json", str(output_dir / "range_ownership.json"),
+                    "--output-md", str(output_dir / "range_ownership.md"),
+                ],
+            ),
+            ("Branch State & Gaps Check", [sys.executable, "tools/scripts/audit_branch_state_v1.py", "--strict-gaps"]),
+            ("Pytest Unit Tests", [sys.executable, "-m", "pytest", "-q"]),
+            (
+                "Coverage Generation",
+                [
+                    sys.executable,
+                    "tools/scripts/generate_coverage.py",
+                    "--strict",
+                    "--output-json", str(output_dir / "coverage.json"),
+                    "--output-md", str(output_dir / "coverage.md"),
+                ],
+            ),
+            (
+                "Toolkit Doctor",
+                [
+                    sys.executable,
+                    "tools/scripts/toolkit_doctor.py",
+                    "--strict",
+                    "--output-json", str(output_dir / "doctor.json"),
+                    "--output-md", str(output_dir / "doctor.md"),
+                ],
+            ),
+            (
+                "Repository Artifact Validation",
+                [
+                    sys.executable,
+                    "tools/scripts/validate_repository_artifacts.py",
+                    "--strict",
+                    "--report", str(output_dir / "artifacts.json"),
+                ],
+            ),
+            ("Binary and Cache Policy", [sys.executable, "tools/scripts/validate_binary_policy.py"]),
+            ("Canonical Report Drift", [sys.executable, "tools/scripts/check_report_drift.py"]),
+        ]
 
-    print("\n--- Step 3: Range Ownership & Conflict Check ---")
-    ret_own = subprocess.call([sys.executable, "tools/scripts/validate_range_ownership.py", "--strict"], cwd=str(repo_root))
-    if ret_own != 0:
-        print("Range ownership check failed.")
-        return 1
-
-    print("\n--- Step 4: Branch State & Gaps Check ---")
-    ret_branch = subprocess.call([sys.executable, "tools/scripts/audit_branch_state_v1.py", "--strict-gaps"], cwd=str(repo_root))
-    if ret_branch != 0:
-        print("Branch state audit failed.")
-        return 1
-
-    print("\n--- Step 5: Pytest Unit Tests ---")
-    ret_test = subprocess.call([sys.executable, "-m", "pytest", "-q"], cwd=str(repo_root))
-    if ret_test != 0:
-        print("Pytest suite failed.")
-        return 1
-
-    print("\n--- Step 6: Coverage Report Generation ---")
-    ret_cov = subprocess.call([sys.executable, "tools/scripts/generate_coverage.py", "--strict"], cwd=str(repo_root))
-    if ret_cov != 0:
-        print("Coverage generation failed.")
-        return 1
-
-    print("\n--- Step 7: Toolkit Doctor ---")
-    ret_doc = subprocess.call([sys.executable, "tools/scripts/toolkit_doctor.py", "--strict"], cwd=str(repo_root))
-    if ret_doc != 0:
-        print("Toolkit doctor failed.")
-        return 1
+        for index, (name, command) in enumerate(steps, start=1):
+            print(f"\n--- Step {index}/{len(steps)}: {name} ---")
+            if subprocess.call(command, cwd=str(repo_root)) != 0:
+                print(f"{name} failed.")
+                return 1
 
     print("\n=== Acceptance Suite PASSED Successfully ===")
     return 0

@@ -8,12 +8,18 @@
   "closed_ranges": [
     {
       "range": "C3:66A6..C3:66C4",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_66a6_score6_cluster",
       "confidence": "high",
       "verification_status": "pending",
-      "parent_range": "C3:6600..C3:66FF",
-      "parent_label": "ct_c3_6600_frozen_branch_fed_pocket_fragmented_code"
+      "parent_range": "C3:66A6..C3:66C8",
+      "parent_label": "ct_c3_66a6_gap_handler",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_7bf5d7c4ef087237cb47",
+          "adj_52504ebc0b1d33eb9133"
+        ]
+      }
     }
   ],
   "new_labels": [

@@ -8,12 +8,18 @@
   "closed_ranges": [
     {
       "range": "DD:9B4D..DD:9B65",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_dd_9b4d_score4_cluster",
       "confidence": "medium",
       "verification_status": "pending",
       "parent_range": "DD:9B4D..DD:9B80",
-      "parent_label": "ct_dd_9b4d_score19_cluster"
+      "parent_label": "ct_dd_9b4d_score19_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_1dd0c969c31a7c3745cd",
+          "adj_4a4366175739594822c5"
+        ]
+      }
     }
   ],
   "new_labels": [

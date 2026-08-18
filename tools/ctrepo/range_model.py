@@ -32,6 +32,10 @@ def detect_range_conflicts(
     # Group by bank
     by_bank: Dict[str, List[Tuple[ClosedRange, int, str]]] = {}
     for r, p_num, src in ranges_with_metadata:
+        # Superseded records are retained for provenance but are not active
+        # ownership claims and therefore cannot participate in conflicts.
+        if r.kind == "superseded":
+            continue
         by_bank.setdefault(r.bank, []).append((r, p_num, src))
 
     conflicts: List[RangeConflict] = []

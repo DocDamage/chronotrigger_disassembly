@@ -28,10 +28,12 @@
     },
     {
       "range": "C3:70ED..C3:70FF",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_70ED",
       "confidence": "high",
       "verification_status": "pending",
+      "parent_range": "C3:70E0..C3:7100",
+      "parent_label": "ct_c3_70E0",
       "evidence": {
         "reason": "Score 4, ASCII 0.250, clean_start 0x20",
         "source": "backtrack"
@@ -43,10 +45,11 @@
           "source": "backtrack",
           "confidence": "high",
           "reason": "Score 4, ASCII 0.250, clean_start 0x20"
-        }
-      },
-      "parent_range": "C3:70E0..C3:7100",
-      "parent_label": "ct_c3_70E0"
+        },
+        "ownership_adjudication_ids": [
+          "adj_c3ff34357dcbbfea8e6d"
+        ]
+      }
     },
     {
       "range": "C3:713E..C3:7159",
@@ -110,10 +113,12 @@
     },
     {
       "range": "C3:7210..C3:7230",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_c3_7210",
       "confidence": "high",
       "verification_status": "pending",
+      "parent_range": "C3:7207..C3:7228",
+      "parent_label": "ct_c3_7207",
       "evidence": {
         "reason": "Verified caller: C3:4AAC",
         "source": "weak_target"
@@ -125,7 +130,10 @@
           "source": "weak_target",
           "confidence": "high",
           "reason": "Verified caller: C3:4AAC"
-        }
+        },
+        "ownership_adjudication_ids": [
+          "adj_1872f916b3cc08b71dc4"
+        ]
       }
     },
     {
@@ -253,7 +261,7 @@
       "kind": "data",
       "label": "ct_c3_7297",
       "confidence": "medium",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "legacy_metadata": {
         "raw_frozen": {
           "range": "C3:7297..C3:72A9",
@@ -266,7 +274,7 @@
       "kind": "data",
       "label": "ct_c3_727B",
       "confidence": "medium",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "legacy_metadata": {
         "raw_frozen": {
           "range": "C3:727B..C3:7285",
@@ -279,12 +287,37 @@
       "kind": "data",
       "label": "ct_c3_7331",
       "confidence": "medium",
-      "verification_status": "reviewed",
+      "verification_status": "pending",
       "legacy_metadata": {
         "raw_frozen": {
           "range": "C3:7331..C3:7340",
           "reason": "High ASCII (0.938) - text/data, multiple returns"
         }
+      }
+    },
+    {
+      "range": "C3:7229..C3:7230",
+      "kind": "code_owner",
+      "label": "ct_c3_7210__residual_7229_7230",
+      "confidence": "high",
+      "verification_status": "pending",
+      "evidence": {
+        "reason": "Verified caller: C3:4AAC",
+        "source": "weak_target"
+      },
+      "legacy_metadata": {
+        "raw_promotion": {
+          "addr": "C3:7210",
+          "range": "C3:7210..C3:7230",
+          "source": "weak_target",
+          "confidence": "high",
+          "reason": "Verified caller: C3:4AAC"
+        },
+        "ownership_adjudication_ids": [
+          "adj_1872f916b3cc08b71dc4"
+        ],
+        "residual_of": "C3:7210..C3:7230",
+        "coverage_treatment": "active_non_overlapping_residual"
       }
     }
   ],
@@ -303,7 +336,8 @@
     "ct_c3_77AB",
     "ct_c3_7297",
     "ct_c3_727B",
-    "ct_c3_7331"
+    "ct_c3_7331",
+    "ct_c3_7210__residual_7229_7230"
   ],
   "confidence": {
     "structural": "medium",

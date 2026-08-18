@@ -2,8 +2,11 @@
 
 import hashlib
 import json
+import shlex
 import subprocess
+import sys
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Dict, Any, List, Optional
 from .manifest_models import CanonicalManifest
 
@@ -56,6 +59,7 @@ def create_provenance_header(
     git_info = get_git_provenance()
     header = {
         "generator": generator_name,
+        "generation_command": shlex.join(["python", *sys.argv]),
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "source_commit": git_info["source_commit"],
         "source_tree": git_info["source_tree"],
@@ -65,6 +69,11 @@ def create_provenance_header(
         "worktree_clean_before_generation": git_info["worktree_clean_before_generation"],
         "report_schema_version": 2
     }
+    root = Path(__file__).resolve().parent.parent.parent
+    generator_candidates = [root / generator_name, root / "tools" / "scripts" / generator_name]
+    generator_path = next((path for path in generator_candidates if path.is_file()), None)
+    if generator_path is not None:
+        header["generator_source_digest"] = hashlib.sha256(generator_path.read_bytes()).hexdigest()
     if manifests is not None:
         header["manifest_count"] = len(manifests)
         header["manifest_set_digest"] = calculate_manifest_set_digest(manifests)

@@ -9,14 +9,51 @@
   "closed_ranges": [
     {
       "range": "C3:2800..C3:28FF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate",
       "confidence": "medium-high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:2807..C3:2870",
+      "parent_label": "ct_c3_2807_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_0dc473d855e5aec96e48"
+        ]
+      }
+    },
+    {
+      "range": "C3:2800..C3:2806",
+      "kind": "data",
+      "label": "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate__residual_2800_2806",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_0dc473d855e5aec96e48"
+        ],
+        "residual_of": "C3:2800..C3:28FF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:2871..C3:28FF",
+      "kind": "data",
+      "label": "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate__residual_2871_28ff",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_0dc473d855e5aec96e48"
+        ],
+        "residual_of": "C3:2800..C3:28FF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate"
+    "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate",
+    "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate__residual_2800_2806",
+    "ct_c3_inline_branch_heavy_mixed_control_blob_with_double_low_bank_2809_hits_but_no_defendable_true_start_before_2900_candidate__residual_2871_28ff"
   ],
   "confidence": {
     "structural": "medium",

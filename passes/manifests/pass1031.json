@@ -12,17 +12,21 @@
       "label": "ct_c3_4548",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:453B..C3:4599",
+      "parent_label": "ct_c3_453b_unknown_function_score6_cluster",
       "evidence": {
         "reasoning": null,
         "findings": null,
         "score": 13
       },
       "legacy_metadata": {
-        "raw_single_function": true
-      },
-      "parent_range": "C3:4548..C3:459F",
-      "parent_label": "ct_c3_4548_score13_cluster",
-      "notes": "Superseded duplicate of Pass 940 (ct_c3_4548_score13_cluster)"
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_59fb8125de231900764a",
+          "adj_cf11b3e8247215ebc3c5",
+          "adj_73781891b3a9676ccbc6"
+        ]
+      }
     }
   ],
   "new_labels": [

@@ -8,14 +8,36 @@
   "closed_ranges": [
     {
       "range": "CF:102F..CF:1057",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_cf_102f_phb_handler",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "CF:102F..CF:1050",
+      "parent_label": "ct_cf_102f_phb_handler",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_34cb4188cbf1b0350230"
+        ]
+      }
+    },
+    {
+      "range": "CF:1051..CF:1057",
+      "kind": "code_owner",
+      "label": "ct_cf_102f_phb_handler__residual_1051_1057",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_34cb4188cbf1b0350230"
+        ],
+        "residual_of": "CF:102F..CF:1057",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_cf_102f_phb_handler"
+    "ct_cf_102f_phb_handler",
+    "ct_cf_102f_phb_handler__residual_1051_1057"
   ],
   "confidence": {
     "structural": "medium",

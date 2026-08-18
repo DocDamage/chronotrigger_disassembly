@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CanonicalProjectState",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "latest_manifest_pass",
+    "live_seam",
+    "evidence",
+    "rationale"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "latest_manifest_pass": { "type": "integer", "minimum": 1 },
+    "live_seam": { "type": "string", "minLength": 10 },
+    "evidence": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "rationale": { "type": "string", "minLength": 40 }
+  }
+}

@@ -1,99 +1,133 @@
 #!/usr/bin/env python3
-"""Generate trust delta report and reconcile intentional pass gaps with Schema v2 metadata."""
+"""Audit trust fidelity and account for historical pass-number gaps factually."""
+
+from __future__ import annotations
 
 import json
-import os
+import re
+import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any, Dict, List, Tuple
 
 repo_root = Path(__file__).resolve().parent.parent.parent
 if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
+from tools.ctrepo.manifest_adapters import adapt_to_canonical
 from tools.ctrepo.manifest_discovery import iter_canonical_manifests
 
-def main():
-    # 1. Audit trust delta
-    trust_deltas = []
-    for m in iter_canonical_manifests():
-        for cr in m.closed_ranges:
-            if cr.verification_status == "pending" or cr.confidence != "high":
-                trust_deltas.append({
-                    "pass": m.pass_number,
-                    "range": cr.range_str,
-                    "label": cr.label,
-                    "verification_status": cr.verification_status,
-                    "confidence": cr.confidence,
-                    "has_evidence": bool(cr.evidence)
-                })
 
-    report_path = "reports/remediation/trust_delta_report.json"
-    os.makedirs(os.path.dirname(report_path), exist_ok=True)
-    with open(report_path, "w", encoding="utf-8") as f:
-        json.dump({
-            "total_ranges_audited": len(trust_deltas),
-            "records": trust_deltas
-        }, f, indent=2)
-    print(f"Wrote {report_path}")
+BASELINE_PATH = Path("reports/remediation/corrective_baseline.json")
+BASELINE_COMMIT = "253f2f6c75cd9b572bdc1fc25d6dcc0e8d148a59"
 
-    # 2. Rebuild intentional_pass_gaps.json to Schema v2
-    gaps_config_path = "tools/config/intentional_pass_gaps.json"
-    
-    # Read current gap numbers from canonical manifests
-    existing_passes = {m.pass_number for m in iter_canonical_manifests()}
-    all_possible = set(range(min(existing_passes), max(existing_passes) + 1))
-    gap_numbers = sorted(all_possible - existing_passes)
 
-    now_utc = datetime.now(timezone.utc).isoformat()
-    gaps_dict = {}
-    for g in gap_numbers:
-        # Determine specific reason code and rationale based on pass number regions
-        if 282 <= g <= 484:
-            reason_code = "unnumbered_draft_iteration"
-            rationale = f"Historical Session 23/24 Bank C0 promotion sequence leap at pass {g}"
-            evidence = ["docs/sessions/chrono_trigger_session23_c0_promotions.md", "docs/sessions/chrono_trigger_session24_c0_promotions.md"]
-        elif 1040 <= g <= 1100:
-            reason_code = "session_number_skip"
-            rationale = f"Historical agent swarm session numbering reservation gap at pass {g}"
-            evidence = ["docs/sessions/chrono_trigger_session30_c4_scan.md", "passes/README.md"]
-        elif 1169 <= g <= 1199:
-            reason_code = "non_range_investigation"
-            rationale = f"Historical audio/HDMA exploratory analysis pass without closed ranges at pass {g}"
-            evidence = ["docs/reports/raw_seams/c0_audio_hdma_investigation.md"]
-        elif g in (1221, 1222):
-            reason_code = "non_range_investigation"
-            rationale = "Bank C4 candidate scan and classification pass (no closed ranges emitted)"
-            evidence = ["passes/manifests/legacy/pass1222_c4_scan.json"]
-        else:
-            reason_code = "unnumbered_draft_iteration"
-            rationale = f"Historical multi-agent pass sequence transition gap at pass {g}"
-            evidence = ["docs/sessions/"]
+def _filename_pass(path: str) -> int | None:
+    match = re.search(r"pass_?(\d+)", Path(path).name, flags=re.IGNORECASE)
+    return int(match.group(1)) if match else None
 
-        gaps_dict[str(g)] = {
-            "pass_number": g,
-            "status": "verified_gap",
-            "reason_code": reason_code,
-            "rationale": rationale,
-            "evidence": evidence,
-            "reviewed_by": "remediation-maintainer",
-            "reviewed_at_utc": now_utc,
-            "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
-            "revalidation_required": False
+
+def _baseline_manifest(entry: Dict[str, Any]):
+    raw = subprocess.check_output(["git", "cat-file", "-p", entry["blob_id"]])
+    data = json.loads(raw.decode("utf-8-sig"))
+    return adapt_to_canonical(data, source_path=entry["path"], filename_pass=_filename_pass(entry["path"]))
+
+
+def main() -> int:
+    baseline = json.loads(BASELINE_PATH.read_text(encoding="utf-8"))
+    canonical = list(iter_canonical_manifests())
+    canonical_ranges: Dict[Tuple[int, str, str], List[Any]] = {}
+    for manifest in canonical:
+        for item in manifest.closed_ranges:
+            canonical_ranges.setdefault((manifest.pass_number, item.range_str, item.label), []).append(item)
+
+    trust_records: List[Dict[str, Any]] = []
+    unexplained_promotions: List[Dict[str, Any]] = []
+    baseline_passes = set()
+    non_range_sources: List[str] = []
+    for entry in baseline.get("manifests", []):
+        try:
+            manifest = _baseline_manifest(entry)
+        except ValueError:
+            non_range_sources.append(entry["path"])
+            continue
+        baseline_passes.add(manifest.pass_number)
+        for source_item in manifest.closed_ranges:
+            matches = canonical_ranges.get((manifest.pass_number, source_item.range_str, source_item.label), [])
+            for canonical_item in matches[:1]:
+                record = {
+                    "source_path": entry["path"],
+                    "pass_number": manifest.pass_number,
+                    "range": source_item.range_str,
+                    "label": source_item.label,
+                    "source_verification_status": source_item.verification_status,
+                    "canonical_verification_status": canonical_item.verification_status,
+                    "source_confidence": source_item.confidence,
+                    "canonical_confidence": canonical_item.confidence,
+                }
+                promoted = (
+                    source_item.verification_status != canonical_item.verification_status
+                    or source_item.confidence != canonical_item.confidence
+                )
+                record["trust_changed"] = promoted
+                trust_records.append(record)
+                if promoted:
+                    unexplained_promotions.append(record)
+
+    trust_report = {
+        "schema_version": 2,
+        "baseline_commit": baseline.get("baseline_commit"),
+        "total_source_range_records_audited": len(trust_records),
+        "unexplained_promotions_count": len(unexplained_promotions),
+        "non_range_sources": non_range_sources,
+        "unexplained_promotions": unexplained_promotions,
+        "records": trust_records,
+    }
+    trust_path = Path("reports/remediation/trust_delta_report.json")
+    trust_path.write_text(json.dumps(trust_report, indent=2) + "\n", encoding="utf-8")
+
+    canonical_passes = {manifest.pass_number for manifest in canonical}
+    gap_numbers = sorted(set(range(min(canonical_passes), max(canonical_passes) + 1)) - canonical_passes)
+    gaps: Dict[str, Dict[str, Any]] = {}
+    ordered_passes = sorted(canonical_passes)
+    for gap in gap_numbers:
+        lower = max(number for number in ordered_passes if number < gap)
+        upper = min(number for number in ordered_passes if number > gap)
+        status = "baseline_absent" if gap not in baseline_passes else "investigation_needed"
+        gaps[str(gap)] = {
+            "pass_number": gap,
+            "status": status,
+            "reason_code": "no_baseline_manifest" if status == "baseline_absent" else "baseline_identity_mismatch",
+            "rationale": (
+                f"No source manifest with pass identity {gap} exists in the immutable "
+                f"{BASELINE_COMMIT[:8]} baseline inventory; adjacent canonical passes are {lower} and {upper}."
+            ),
+            "evidence": [
+                "reports/remediation/corrective_baseline.json",
+                f"passes/manifests/pass{lower:04d}.json",
+                f"passes/manifests/pass{upper:04d}.json",
+            ],
+            "evidence_commit": BASELINE_COMMIT,
+            "generated_by": "reconcile_trust_and_gaps.py",
+            "revalidation_required": False,
         }
 
     gap_record = {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "schema_version": 2,
-        "description": "Registry of reviewed intentional pass gaps in historical sequence with complete evidence metadata",
-        "total_gaps_count": len(gaps_dict),
-        "intentional_gaps": gaps_dict
+        "$schema": "schemas/intentional_pass_gaps.schema.json",
+        "schema_version": 3,
+        "description": "Factual accounting of pass identities absent from the immutable baseline; no human intent is inferred.",
+        "total_gaps_count": len(gaps),
+        "intentional_gaps": gaps,
     }
+    gap_path = Path("tools/config/intentional_pass_gaps.json")
+    gap_path.write_text(json.dumps(gap_record, indent=2) + "\n", encoding="utf-8")
 
-    with open(gaps_config_path, "w", encoding="utf-8") as f:
-        json.dump(gap_record, f, indent=2)
+    print(
+        f"Trust audit: {len(trust_records)} ranges, {len(unexplained_promotions)} changes; "
+        f"gap accounting: {len(gaps)} baseline-absence records"
+    )
+    return 1 if unexplained_promotions or any(item["status"] == "investigation_needed" for item in gaps.values()) else 0
 
-    print(f"Updated {gaps_config_path} with {len(gaps_dict)} verified gap entries (Schema v2).")
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -1,28 +1,30 @@
 {
   "provenance": {
     "generator": "toolkit_doctor.py",
-    "generated_at_utc": "2026-08-18T21:33:55.467858+00:00",
-    "source_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
-    "source_tree": "0eaf7b5c7d0cb783ef72871b9781d86e277adf2e",
-    "git_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
+    "generation_command": "python tools/scripts/toolkit_doctor.py --strict --output-json reports/toolkit_doctor.json --output-md reports/toolkit_doctor.md",
+    "generated_at_utc": "2026-08-18T22:49:02.448612+00:00",
+    "source_commit": "cfd7d54a7a3dbfd7e7089fa976dee998fdf62d75",
+    "source_tree": "6cebb8fd47d8c067f1f2680277eeb2c7c7c329cb",
+    "git_commit": "cfd7d54a7a3dbfd7e7089fa976dee998fdf62d75",
     "git_branch": "live-work-from-pass166",
     "is_dirty_worktree": true,
     "worktree_clean_before_generation": false,
     "report_schema_version": 2,
+    "generator_source_digest": "5b11603e48f6da79412d4d938092e7058d4cdcb2d3a029b18172b825186c82e8",
     "manifest_count": 961,
-    "manifest_set_digest": "09b06ac4f818b7277657428e6b760dcfb8254992310df6b571819699176e31b6"
+    "manifest_set_digest": "17de258695a30716e919b9def75dab8887c52b534cc72e7a7bb0d8da40b6d0bd"
   },
   "overall_status": "pass",
   "strict_mode": true,
-  "total_checks": 7,
-  "passed_checks": 7,
+  "total_checks": 8,
+  "passed_checks": 8,
   "failed_checks": 0,
   "warned_checks": 0,
   "checks": [
     {
       "name": "python_compilation",
       "status": "pass",
-      "total_files": 236,
+      "total_files": 241,
       "failures": []
     },
     {
@@ -40,24 +42,30 @@
     {
       "name": "range_ownership_conflicts",
       "status": "pass",
-      "total_conflicts": 180,
+      "total_conflicts": 0,
       "unresolved_conflicts_count": 0,
-      "waived_conflicts_count": 180
+      "waived_conflicts_count": 0,
+      "waiver_registry_errors": []
     },
     {
       "name": "branch_state_audit",
       "status": "pass",
-      "output": "reviewed intentional gaps: 106 passes accounted for\nlatest manifest seam: C3:6800..\nlatest continuation note: chrono_trigger_session15_continue_notes_100.md\nnote-backed live seam: (missing)\neffective live seam: C3:6800..\nbranch state audit ok"
+      "output": "reviewed intentional gaps: 106 passes accounted for\nlatest manifest seam: C3:D000.. / C4:A000..\nlatest continuation note: chrono_trigger_session15_continue_notes_100.md\nhistorical session15 note seam: (missing)\neffective live seam: C3:D000.. / C4:A000..\nbranch state audit ok"
+    },
+    {
+      "name": "policy_registries",
+      "status": "pass",
+      "errors": []
     },
     {
       "name": "unit_tests",
       "status": "pass",
-      "summary": "28 passed in 0.49s"
+      "summary": "37 passed"
     },
     {
-      "name": "prohibited_rom_tracking",
+      "name": "binary_and_cache_policy",
       "status": "pass",
-      "tracked_roms": []
+      "output": "Binary/cache policy: current tracked tree is clean"
     }
   ]
 }

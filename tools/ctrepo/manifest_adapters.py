@@ -196,7 +196,7 @@ def adapt_to_canonical(
                     kind="data",
                     label=item.get("label", ""),
                     confidence="medium",
-                    verification_status="reviewed",
+                    verification_status=normalize_verification_status(item.get("verification_status")),
                     legacy_metadata={"raw_frozen": item}
                 )
                 closed_ranges.append(cr)

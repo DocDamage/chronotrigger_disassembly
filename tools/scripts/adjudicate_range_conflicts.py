@@ -1,173 +1,197 @@
 #!/usr/bin/env python3
-"""Adjudicate range ownership, exact duplicates, helper containments, and construct Schema v2 waivers."""
+"""Build durable deterministic ownership decisions without fabricating waivers."""
 
+from __future__ import annotations
+
+import argparse
+import hashlib
 import json
-import os
+import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Any, List, Tuple
+from typing import Any, Dict, List, Tuple
 
 repo_root = Path(__file__).resolve().parent.parent.parent
 if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
+from tools.ctrepo.manifest_models import CanonicalManifest, ClosedRange
+from tools.ctrepo.range_adjudication import apply_adjudications, iter_manifest_ranges
+from tools.ctrepo.range_model import RangeConflict, detect_range_conflicts
+from tools.scripts.migrate_manifests import plan_migration
 
-from tools.ctrepo.range_model import detect_range_conflicts
-from tools.ctrepo.manifest_models import ClosedRange
 
-def main():
-    manifests_dir = "passes/manifests"
-    waivers_path = "tools/config/range_overlap_waivers.json"
-    candidates_report_path = "reports/remediation/range_conflict_candidates.json"
+CONFIDENCE_RANK = {
+    "low": 0, "score-4": 1, "medium": 2, "score-5": 2,
+    "medium-high": 3, "score-6": 3, "high": 4, "reviewed": 5,
+}
+STATUS_RANK = {"pending": 0, "draft": 0, "reviewed": 2, "accepted": 3}
+KIND_RANK = {
+    "tail_fragment": 0, "text_marker": 1, "data": 2,
+    "code_helper": 3, "wrapper": 3, "veneer": 3, "code_owner": 4,
+}
 
-    # 1. Load all manifests from manifests_dir
-    manifest_files = sorted([f for f in os.listdir(manifests_dir) if f.startswith("pass") and f.endswith(".json")])
-    manifest_data: Dict[str, Dict[str, Any]] = {}
-    for fn in manifest_files:
-        path = os.path.join(manifests_dir, fn)
-        with open(path, "r", encoding="utf-8") as f:
-            manifest_data[fn] = json.load(f)
 
-    # Collect all ranges
-    all_ranges_list: List[Tuple[ClosedRange, int, str, int]] = []
-    for fn, doc in manifest_data.items():
-        p_num = doc.get("pass_number", 0)
-        for idx, r_dict in enumerate(doc.get("closed_ranges", [])):
-            cr = ClosedRange.parse(
-                range_str=r_dict["range"],
-                kind=r_dict.get("kind", "code_owner"),
-                label=r_dict.get("label", ""),
-                confidence=r_dict.get("confidence", "medium"),
-                verification_status=r_dict.get("verification_status"),
-                parent_range=r_dict.get("parent_range"),
-                parent_label=r_dict.get("parent_label"),
-                evidence=r_dict.get("evidence", {})
-            )
-            all_ranges_list.append((cr, p_num, fn, idx))
+def _identity(pass_number: int, item: ClosedRange) -> Dict[str, Any]:
+    return {"pass_number": pass_number, "range": item.range_str, "label": item.label}
 
-    all_ranges_list.sort(key=lambda x: (x[0].bank, x[0].start_addr, -(x[0].end_addr - x[0].start_addr), x[1]))
 
-    # 2. Deconflict exact duplicates by marking secondary instances as superseded
-    seen_exact_ranges: Dict[Tuple[str, int, int], Tuple[int, str, str]] = {}
-    modified_files = set()
+def _decision_id(action: str, subject: Dict[str, Any], other: Dict[str, Any]) -> str:
+    raw = json.dumps([action, subject, other], sort_keys=True).encode("utf-8")
+    return "adj_" + hashlib.sha256(raw).hexdigest()[:20]
 
-    for cr, p_num, fn, idx in all_ranges_list:
-        key = (cr.bank, cr.start_addr, cr.end_addr)
-        if key in seen_exact_ranges:
-            primary_pass, primary_fn, primary_label = seen_exact_ranges[key]
-            target_r = manifest_data[fn]["closed_ranges"][idx]
-            target_r["kind"] = "superseded"
-            target_r["parent_range"] = cr.range_str
-            target_r["parent_label"] = primary_label
-            target_r["notes"] = f"Superseded duplicate of Pass {primary_pass} ({primary_label})"
-            modified_files.add(fn)
-        else:
-            seen_exact_ranges[key] = (p_num, fn, cr.label)
 
-    # 3. Resolve helper containments
-    for i in range(len(all_ranges_list)):
-        r1, p1, fn1, idx1 = all_ranges_list[i]
-        if manifest_data[fn1]["closed_ranges"][idx1].get("kind") == "superseded":
-            continue
-        for j in range(len(all_ranges_list)):
-            if i == j:
-                continue
-            r2, p2, fn2, idx2 = all_ranges_list[j]
-            if manifest_data[fn2]["closed_ranges"][idx2].get("kind") == "superseded":
-                continue
+def _conflict_id(conflict: RangeConflict) -> str:
+    identities = sorted(
+        [_identity(conflict.left_pass, conflict.left_range), _identity(conflict.right_pass, conflict.right_range)],
+        key=lambda item: (item["pass_number"], item["range"], item["label"]),
+    )
+    raw = json.dumps(
+        [conflict.relationship, conflict.overlap_range_str, identities],
+        sort_keys=True,
+    ).encode("utf-8")
+    return "conf_" + hashlib.sha256(raw).hexdigest()[:20]
 
-            if r1.bank == r2.bank and r1.start_addr <= r2.start_addr and r1.end_addr >= r2.end_addr:
-                if not (r1.start_addr == r2.start_addr and r1.end_addr == r2.end_addr):
-                    child_dict = manifest_data[fn2]["closed_ranges"][idx2]
-                    if not child_dict.get("parent_range"):
-                        child_dict["kind"] = "code_helper"
-                        child_dict["parent_range"] = r1.range_str
-                        child_dict["parent_label"] = r1.label
-                        modified_files.add(fn2)
 
-    for fn in modified_files:
-        path = os.path.join(manifests_dir, fn)
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(manifest_data[fn], f, indent=2)
-    print(f"Updated {len(modified_files)} manifest files with deconflicted ownership and parent-child links.")
+def _rank(pass_number: int, item: ClosedRange) -> Tuple[int, int, int, int, int]:
+    """Rank ownership evidence; earlier pass is only the final tie-break."""
+    return (
+        STATUS_RANK.get(item.verification_status or "pending", 0),
+        CONFIDENCE_RANK.get(item.confidence, 0),
+        1 if item.evidence else 0,
+        KIND_RANK.get(item.kind, 0),
+        -pass_number,
+    )
 
-    # 4. Recompute conflicts after deconfliction
-    updated_ranges_meta: List[Tuple[ClosedRange, int, str]] = []
-    for fn, doc in manifest_data.items():
-        p_num = doc.get("pass_number", 0)
-        for r_dict in doc.get("closed_ranges", []):
-            cr = ClosedRange.parse(
-                range_str=r_dict["range"],
-                kind=r_dict.get("kind", "code_owner"),
-                label=r_dict.get("label", ""),
-                confidence=r_dict.get("confidence", "medium"),
-                verification_status=r_dict.get("verification_status"),
-                parent_range=r_dict.get("parent_range"),
-                parent_label=r_dict.get("parent_label"),
-                evidence=r_dict.get("evidence", {})
-            )
-            updated_ranges_meta.append((cr, p_num, fn))
 
-    conflicts = detect_range_conflicts(updated_ranges_meta)
-    print(f"Total post-deconfliction conflicts requiring waiver adjudication: {len(conflicts)}")
+def _locate(conflict: RangeConflict) -> Tuple[Tuple[int, ClosedRange], Tuple[int, ClosedRange]]:
+    return (conflict.left_pass, conflict.left_range), (conflict.right_pass, conflict.right_range)
 
-    # 5. Store generated candidates separately
-    os.makedirs(os.path.dirname(candidates_report_path), exist_ok=True)
-    with open(candidates_report_path, "w", encoding="utf-8") as f:
-        json.dump({
-            "total_conflicts": len(conflicts),
-            "candidates": [
-                {
-                    "conflict_id": c.conflict_id,
-                    "bank": c.bank,
-                    "overlap_range": c.overlap_range_str,
-                    "relationship": c.relationship,
-                    "left_pass": c.left_pass,
-                    "right_pass": c.right_pass,
-                    "left_range": c.left_range.range_str,
-                    "right_range": c.right_range.range_str,
-                    "left_label": c.left_range.label,
-                    "right_label": c.right_range.label,
-                    "suggested_resolution": c.suggested_resolution
-                } for c in conflicts
-            ]
-        }, f, indent=2)
-    print(f"Wrote candidates report to {candidates_report_path}")
 
-    # 6. Build Schema v2 active waivers registry with explicit reviewer and evidence metadata
-    now_utc = datetime.now(timezone.utc).isoformat()
-    waivers_list = []
-    for c in conflicts:
-        waivers_list.append({
-            "conflict_id": c.conflict_id,
-            "bank": c.bank,
-            "overlap_range": c.overlap_range_str,
+def _manifest_evidence(manifests: Dict[int, CanonicalManifest], passes: List[int]) -> List[str]:
+    evidence: List[str] = []
+    for pass_number in passes:
+        canonical = f"passes/manifests/pass{pass_number:04d}.json"
+        if canonical not in evidence:
+            evidence.append(canonical)
+        for source in sorted(manifests[pass_number].sources.values()):
+            if source not in evidence:
+                evidence.append(source)
+    return evidence
+
+
+def _supersede(conflict: RangeConflict, manifests: Dict[int, CanonicalManifest]) -> Dict[str, Any]:
+    left, right = _locate(conflict)
+    winner, loser = (left, right) if _rank(*left) >= _rank(*right) else (right, left)
+    winner_pass, winner_range = winner
+    loser_pass, loser_range = loser
+    winner_rank = list(_rank(*winner))
+    loser_rank = list(_rank(*loser))
+    subject = _identity(loser_pass, loser_range)
+    winner_data = _identity(winner_pass, winner_range)
+    return {
+        "decision_id": _decision_id("supersede", subject, winner_data),
+        "action": "supersede",
+        "relationship": conflict.relationship,
+        "subject": subject,
+        "winner": winner_data,
+        "reason_code": "deterministic_ownership_precedence",
+        "rationale": (
+            "The overlapping bytes cannot have two active owners. The winner has the higher "
+            "verification, confidence, evidence, and kind rank; pass number is only the "
+            "final tie-break. The original weaker claim remains as superseded provenance, "
+            "and any non-overlapping bytes are emitted as active residual fragments."
+        ),
+        "coverage_treatment": "winner_owns_overlap_subject_retains_non_overlapping_residuals",
+        "rank": {"winner": winner_rank, "subject": loser_rank},
+        "evidence": _manifest_evidence(manifests, [winner_pass, loser_pass]),
+    }
+
+
+def build_adjudications(
+    manifests: Dict[int, CanonicalManifest],
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    decisions: List[Dict[str, Any]] = []
+    initial_conflicts = detect_range_conflicts(list(iter_manifest_ranges(manifests)))
+    initial_candidates = [
+        {
+            "conflict_id": _conflict_id(c),
             "relationship": c.relationship,
-            "left_pass": c.left_pass,
-            "right_pass": c.right_pass,
-            "left_range": c.left_range.range_str,
-            "right_range": c.right_range.range_str,
-            "left_label": c.left_range.label,
-            "right_label": c.right_range.label,
-            "rationale": f"Historical multi-pass seam overlap preserved via interval union ({c.relationship})",
-            "evidence": [f"passes/manifests/legacy/pass{c.left_pass:04d}.json" if os.path.exists(f"passes/manifests/legacy/pass{c.left_pass:04d}.json") else f"passes/manifests/pass{c.left_pass:04d}.json"],
-            "reviewed_by": "remediation-maintainer",
-            "reviewed_at_utc": now_utc,
-            "review_commit": "d53cd365ed335047adcbb353ac83afb061816d5b",
-            "revalidation_required": False
-        })
+            "overlap_range": c.overlap_range_str,
+            "left": {
+                **_identity(c.left_pass, c.left_range),
+                "kind": c.left_range.kind,
+                "confidence": c.left_range.confidence,
+                "verification_status": c.left_range.verification_status,
+            },
+            "right": {
+                **_identity(c.right_pass, c.right_range),
+                "kind": c.right_range.kind,
+                "confidence": c.right_range.confidence,
+                "verification_status": c.right_range.verification_status,
+            },
+            "evidence": _manifest_evidence(manifests, [c.left_pass, c.right_pass]),
+        }
+        for c in initial_conflicts
+    ]
+    for conflict in sorted(
+        initial_conflicts,
+        key=lambda c: (c.bank, c.overlap_start, c.overlap_end, c.left_pass, c.right_pass, c.relationship),
+    ):
+        decisions.append(_supersede(conflict, manifests))
+    return decisions, initial_candidates
 
-    with open(waivers_path, "w", encoding="utf-8") as f:
-        json.dump({
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "schema_version": 2,
-            "description": "Registry of reviewed intentional range overlap waivers (Schema v2)",
-            "total_waivers_count": len(waivers_list),
-            "waivers": waivers_list
-        }, f, indent=2)
 
-    print(f"Updated {waivers_path} with {len(waivers_list)} reviewed waivers (Schema v2).")
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Build durable deterministic range adjudications")
+    parser.add_argument("--output", default="tools/config/range_adjudications.json")
+    parser.add_argument("--candidates", default="reports/remediation/range_conflict_candidates.json")
+    args = parser.parse_args()
+
+    manifests, _ = plan_migration(apply_ownership_adjudications=False)
+    decisions, candidates = build_adjudications(manifests)
+    validation_manifests, _ = plan_migration(apply_ownership_adjudications=False)
+    apply_adjudications(validation_manifests, {"decisions": decisions}, strict=True)
+    remaining = detect_range_conflicts(list(iter_manifest_ranges(validation_manifests)))
+    if remaining:
+        print(f"Adjudication failed: {len(remaining)} conflicts remain")
+        return 1
+
+    source_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+    ledger = {
+        "$schema": "tools/config/schemas/range_adjudications.schema.json",
+        "schema_version": 1,
+        "policy_version": "deterministic-interval-ownership-v2",
+        "source_commit": source_commit,
+        "description": "Durable ownership decisions applied by canonical manifest migration",
+        "decision_count": len(decisions),
+        "decisions": decisions,
+    }
+    candidate_report = {
+        "schema_version": 2,
+        "source_commit": source_commit,
+        "generated_status": "candidate_input_only",
+        "total_conflicts": len(candidates),
+        "candidates": candidates,
+        "resolution_summary": {
+            "decisions": len(decisions),
+            "remaining_active_conflicts": 0,
+            "by_relationship": {
+                relationship: sum(1 for candidate in candidates if candidate["relationship"] == relationship)
+                for relationship in sorted({candidate["relationship"] for candidate in candidates})
+            },
+        },
+    }
+
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(ledger, indent=2) + "\n", encoding="utf-8")
+    candidate_path = Path(args.candidates)
+    candidate_path.parent.mkdir(parents=True, exist_ok=True)
+    candidate_path.write_text(json.dumps(candidate_report, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote {len(decisions)} durable decisions from {len(candidates)} raw conflicts")
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

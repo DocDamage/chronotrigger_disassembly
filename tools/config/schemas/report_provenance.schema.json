@@ -13,7 +13,7 @@
     "generated_at_utc",
     "report_schema_version"
   ],
-  "properties": {
+    "properties": {
     "source_commit": { "type": "string" },
     "source_tree": { "type": "string" },
     "worktree_clean_before_generation": { "type": "boolean" },
@@ -22,6 +22,10 @@
     "generator_source_digest": { "type": "string" },
     "generation_command": { "type": "string" },
     "generated_at_utc": { "type": "string" },
-    "report_schema_version": { "type": "integer" }
+    "report_schema_version": { "type": "integer" },
+    "manifest_count": { "type": "integer", "minimum": 0 },
+    "git_commit": { "type": "string" },
+    "git_branch": { "type": "string" },
+    "is_dirty_worktree": { "type": "boolean" }
   }
 }

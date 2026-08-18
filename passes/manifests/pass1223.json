@@ -12,6 +12,8 @@
       "label": "ct_c3_8912",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:8912..C3:8939",
+      "parent_label": "ct_c3_8912_php_prologue",
       "evidence": {
         "reason": null,
         "source": "backtrack",
@@ -55,11 +57,11 @@
             "branches_count": 3
           },
           "verification_status": "pending_final_review"
-        }
-      },
-      "parent_range": "C3:8912..C3:8939",
-      "parent_label": "ct_c3_8912_php_prologue",
-      "notes": "Superseded duplicate of Pass 998 (ct_c3_8912_php_prologue)"
+        },
+        "ownership_adjudication_ids": [
+          "adj_c44e59b5c59dd333cefe"
+        ]
+      }
     }
   ],
   "new_labels": [

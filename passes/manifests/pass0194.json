@@ -25,12 +25,17 @@
     },
     {
       "range": "C7:C5B0..C7:C5B1",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c7_c5b0_subroutine_entry",
       "confidence": "high",
       "verification_status": "pending",
       "parent_range": "C7:C5AC..C7:C5D0",
-      "parent_label": "ct_c7_c5ac_unknown_function_rep_prologue"
+      "parent_label": "ct_c7_c5ac_unknown_function_rep_prologue",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_e321f65c35165666ef37"
+        ]
+      }
     }
   ],
   "new_labels": [

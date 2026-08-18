@@ -9,14 +9,36 @@
   "closed_ranges": [
     {
       "range": "C3:1C00..C3:1FFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate",
       "confidence": "medium-high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:1BF5..C3:1C00",
+      "parent_label": "ct_c3_1bf5_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_624b8c2fee2a008e7e5a"
+        ]
+      }
+    },
+    {
+      "range": "C3:1C01..C3:1FFF",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate__residual_1c01_1fff",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_624b8c2fee2a008e7e5a"
+        ],
+        "residual_of": "C3:1C00..C3:1FFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate"
+    "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate",
+    "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate__residual_1c01_1fff"
   ],
   "confidence": {
     "structural": "medium",

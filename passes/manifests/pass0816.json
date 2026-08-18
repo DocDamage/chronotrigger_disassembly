@@ -8,14 +8,36 @@
   "closed_ranges": [
     {
       "range": "CF:C0B0..CF:C0D0",
-      "kind": "code_owner",
+      "kind": "superseded",
       "label": "ct_cf_c0b0_score6_cluster",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "CF:C0B4..CF:C0D8",
+      "parent_label": "ct_cf_c0b4_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_b5fc9be5613730cd0e6f"
+        ]
+      }
+    },
+    {
+      "range": "CF:C0B0..CF:C0B3",
+      "kind": "code_owner",
+      "label": "ct_cf_c0b0_score6_cluster__residual_c0b0_c0b3",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_b5fc9be5613730cd0e6f"
+        ],
+        "residual_of": "CF:C0B0..CF:C0D0",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_cf_c0b0_score6_cluster"
+    "ct_cf_c0b0_score6_cluster",
+    "ct_cf_c0b0_score6_cluster__residual_c0b0_c0b3"
   ],
   "confidence": {
     "structural": "medium",

@@ -9,14 +9,60 @@
   "closed_ranges": [
     {
       "range": "C3:18FD..C3:1A5F",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate",
       "confidence": "medium-high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:1922..C3:1999",
+      "parent_label": "ct_c3_1922_unknown_function_score6_cluster",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_6e4cdcdfff27db59578b",
+          "adj_1cc03264e6d2e7aa8bbc",
+          "adj_927460dad00b050ef7fe",
+          "adj_9960aa4781d2000c62f6"
+        ]
+      }
+    },
+    {
+      "range": "C3:18FD..C3:1921",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate__residual_18fd_1921",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_6e4cdcdfff27db59578b",
+          "adj_1cc03264e6d2e7aa8bbc",
+          "adj_927460dad00b050ef7fe",
+          "adj_9960aa4781d2000c62f6"
+        ],
+        "residual_of": "C3:18FD..C3:1A5F",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:199A..C3:19A4",
+      "kind": "data",
+      "label": "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate__residual_199a_19a4",
+      "confidence": "medium-high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_6e4cdcdfff27db59578b",
+          "adj_1cc03264e6d2e7aa8bbc",
+          "adj_927460dad00b050ef7fe",
+          "adj_9960aa4781d2000c62f6"
+        ],
+        "residual_of": "C3:18FD..C3:1A5F",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
-    "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate"
+    "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate",
+    "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate__residual_18fd_1921",
+    "ct_c3_inline_mixed_opcode_false_wrapper_and_unstable_entry_cluster_before_1a60_candidate__residual_199a_19a4"
   ],
   "confidence": {
     "structural": "medium",

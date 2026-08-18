@@ -8,20 +8,23 @@
   "closed_ranges": [
     {
       "range": "C3:1DEC..C3:1E1B",
-      "kind": "code_helper",
+      "kind": "superseded",
       "label": "ct_c3_1DEC",
       "confidence": "medium",
       "verification_status": "pending",
+      "parent_range": "C3:1C00..C3:1FFF",
+      "parent_label": "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate",
       "evidence": {
         "reasoning": null,
         "findings": null,
         "score": 7
       },
       "legacy_metadata": {
-        "raw_single_function": true
-      },
-      "parent_range": "C3:1C00..C3:1FFF",
-      "parent_label": "ct_c3_inline_mixed_control_table_false_entry_and_false_wrapper_cluster_before_2000_candidate"
+        "raw_single_function": true,
+        "ownership_adjudication_ids": [
+          "adj_28dfa9c9754db6f64fac"
+        ]
+      }
     }
   ],
   "new_labels": [

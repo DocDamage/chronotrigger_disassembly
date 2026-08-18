@@ -9,17 +9,31 @@
   "closed_ranges": [
     {
       "range": "C3:5800..C3:58FF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_5800_frozen_candidate_lane_local_control_only",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:58E8..C3:591A",
+      "parent_label": "ct_c3_58e8_lda_init",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_dd084cdf453c0a0c80d9"
+        ]
+      }
     },
     {
       "range": "C3:5900..C3:59FF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_5900_frozen_branch_fed_pocket_local_control_only",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:58E8..C3:591A",
+      "parent_label": "ct_c3_58e8_lda_init",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_1d8fd46c26e1b3562243"
+        ]
+      }
     },
     {
       "range": "C3:5A00..C3:5AFF",
@@ -51,10 +65,19 @@
     },
     {
       "range": "C3:5E00..C3:5EFF",
-      "kind": "data",
+      "kind": "superseded",
       "label": "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "pending",
+      "parent_range": "C3:5E01..C3:5E74",
+      "parent_label": "ct_c3_5e01_jsl_long_fn",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_3f285c440fc0b2631b8f",
+          "adj_18f0fe12885c18cb5deb",
+          "adj_4edf2c10d3b09007cfa8"
+        ]
+      }
     },
     {
       "range": "C3:5F00..C3:5FFF",
@@ -62,6 +85,66 @@
       "label": "ct_c3_5f00_frozen_branch_fed_pocket_local_control_only",
       "confidence": "high",
       "verification_status": "pending"
+    },
+    {
+      "range": "C3:5800..C3:58E7",
+      "kind": "data",
+      "label": "ct_c3_5800_frozen_candidate_lane_local_control_only__residual_5800_58e7",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_dd084cdf453c0a0c80d9"
+        ],
+        "residual_of": "C3:5800..C3:58FF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:591B..C3:59FF",
+      "kind": "data",
+      "label": "ct_c3_5900_frozen_branch_fed_pocket_local_control_only__residual_591b_59ff",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_1d8fd46c26e1b3562243"
+        ],
+        "residual_of": "C3:5900..C3:59FF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:5E00..C3:5E00",
+      "kind": "data",
+      "label": "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only__residual_5e00_5e00",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_3f285c440fc0b2631b8f",
+          "adj_18f0fe12885c18cb5deb",
+          "adj_4edf2c10d3b09007cfa8"
+        ],
+        "residual_of": "C3:5E00..C3:5EFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
+    },
+    {
+      "range": "C3:5E75..C3:5EFF",
+      "kind": "data",
+      "label": "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only__residual_5e75_5eff",
+      "confidence": "high",
+      "verification_status": "pending",
+      "legacy_metadata": {
+        "ownership_adjudication_ids": [
+          "adj_3f285c440fc0b2631b8f",
+          "adj_18f0fe12885c18cb5deb",
+          "adj_4edf2c10d3b09007cfa8"
+        ],
+        "residual_of": "C3:5E00..C3:5EFF",
+        "coverage_treatment": "active_non_overlapping_residual"
+      }
     }
   ],
   "new_labels": [
@@ -72,7 +155,11 @@
     "ct_c3_5c00_frozen_mixed_command_data_local_control_only",
     "ct_c3_5d00_frozen_candidate_lane_local_control_only",
     "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only",
-    "ct_c3_5f00_frozen_branch_fed_pocket_local_control_only"
+    "ct_c3_5f00_frozen_branch_fed_pocket_local_control_only",
+    "ct_c3_5800_frozen_candidate_lane_local_control_only__residual_5800_58e7",
+    "ct_c3_5900_frozen_branch_fed_pocket_local_control_only__residual_591b_59ff",
+    "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only__residual_5e00_5e00",
+    "ct_c3_5e00_frozen_branch_fed_pocket_local_control_only__residual_5e75_5eff"
   ],
   "confidence": {
     "structural": "medium",

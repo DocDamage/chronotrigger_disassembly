@@ -61,7 +61,9 @@ jobs:
       - name: Check all manifests strictly
         run: python tools/scripts/check_all_manifests.py --strict
       - name: Verify zero-loss range conservation
-        run: python tools/scripts/compare_manifest_range_inventory.py
+        run: python tools/scripts/compare_manifest_range_inventory.py --strict --output-json "${{ runner.temp }}/range-inventory.json" --output-md "${{ runner.temp }}/range-inventory.md"
+      - name: Validate policy registries and evidence
+        run: python tools/scripts/validate_policy_registries.py
       - name: Audit branch state and gaps
         run: python tools/scripts/audit_branch_state_v1.py --strict-gaps
 
@@ -77,7 +79,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
       - name: Validate range ownership
-        run: python tools/scripts/validate_range_ownership.py --strict
+        run: python tools/scripts/validate_range_ownership.py --strict --output-json "${{ runner.temp }}/range-ownership.json" --output-md "${{ runner.temp }}/range-ownership.md"
 
   artifact-integrity:
     name: Artifact Encodings & JSON Validity
@@ -91,7 +93,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
       - name: Validate repository artifacts
-        run: python tools/scripts/validate_repository_artifacts.py --strict
+        run: python tools/scripts/validate_repository_artifacts.py --strict --report "${{ runner.temp }}/artifact-validation.json"
+      - name: Reject tracked binaries and generated caches
+        run: python tools/scripts/validate_binary_policy.py
+      - name: Verify canonical report drift
+        run: python tools/scripts/check_report_drift.py
 
   doctor-health:
     name: Full Repository Doctor Check
@@ -105,4 +111,4 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
       - name: Run toolkit doctor in strict mode
-        run: python tools/scripts/toolkit_doctor.py --strict
+        run: python tools/scripts/toolkit_doctor.py --strict --output-json "${{ runner.temp }}/doctor.json" --output-md "${{ runner.temp }}/doctor.md"

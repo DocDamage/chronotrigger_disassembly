@@ -1,40 +1,44 @@
 # Chrono Trigger Disassembly Progress Report
 
-**Last Updated**: 2026-04-09 (Session 46 Complete)  
-**Working Branch**: `live-work-from-pass166`  
+**Last Updated**: 2026-04-09 (Session 46 Complete)
+**Working Branch**: `live-work-from-pass166`
 **Latest Manifest Pass**: 1229 (Session 46: C4:9D10 + C3:CB47 dual promotion)
 
 ---
 
 ## Executive Summary
 
-The Chrono Trigger SNES ROM disassembly project has reached significant milestones:
+The canonical repository state is reconstructed from the complete historical manifest archive:
 
-- **~1,857 closed ranges** documented (922 manifest-backed + 919 continuation + 16 frozen)
+- **1,105 historical closed-range claims** conserved across 961 canonical manifests
+- **1,289 canonical records** after ownership normalization (1,061 active, 228 superseded provenance records)
+- **0 unresolved active ownership conflicts**; superseded claims remain preserved as provenance
+- **1,000/1,000 source manifests** represented in the migration ledger
+- **106 absent pass numbers** factually accounted as having no baseline manifest
 - **46 Agent Swarm Sessions** completed
-- **Bank C0**: 31.90% coverage (30% target exceeded)
-- **Bank C3**: ~35.8% coverage (30% target exceeded)
-- **Bank C4**: ~12.8% coverage (approaching 15% target)
-- **12 functions promoted** in latest Session 40 (C3:7000 breakthrough)
+- **59,050 unique bytes** covered after active-interval union (1.4079% of the 4 MiB ROM)
+- **Current frontier**: `C3:D000.. / C4:A000..`
 
 ---
 
 ## Coverage by Bank
 
-| Bank | Ranges | Coverage | Status | Notes |
-|------|--------|----------|--------|-------|
-| C0 | 308 | 31.90% | ✅ Target Exceeded | Audio/HDMA systems complete |
-| C1 | 89 | 7.60% | In Progress | 434A mega-cluster mapped |
-| C2 | 75 | 8.00% | ✅ Target Achieved | Score-14 functions discovered |
-| C3 | 359 | ~36.1% | ✅ Target Exceeded | +1 function in Session 46 |
-| C4 | 157 | ~13.1% | In Progress | C4:9D10 promoted, 1.9% to 15% |
-| C5 | 28 | 4.10% | In Progress | Score-9 cluster at 9BC1 |
-| C6 | 15 | 0.50% | Initial | D400-D800 mapped |
-| C7 | 23 | 2.16% | In Progress | 95% mapped |
-| CF | 43 | 2.14% | In Progress | D000-FFFF complete |
-| D1 | 24 | 2.05% | Discovered | 505 islands found |
-| D2-D9 | 8 | 0.04% each | Discovered | All code banks identified |
-| **Total** | **~1,855** | **~14.6%** | **Active** | **971+ manifests** |
+These are canonical active-interval metrics from `reports/coverage.json`; older session sections below retain their historical snapshots.
+
+| Bank | Disjoint Intervals | Covered Bytes | Bank Coverage |
+|------|-------------------:|--------------:|--------------:|
+| C0 | 292 | 16,075 | 24.53% |
+| C1 | 45 | 1,661 | 2.53% |
+| C2 | 10 | 883 | 1.35% |
+| C3 | 56 | 29,665 | 45.27% |
+| C4 | 48 | 1,393 | 2.13% |
+| C5 | 20 | 1,505 | 2.30% |
+| C6 | 14 | 317 | 0.48% |
+| C7 | 23 | 1,416 | 2.16% |
+| CF | 45 | 1,623 | 2.48% |
+| D1 | 18 | 933 | 1.42% |
+| D2–DF | 112 | 3,579 | — |
+| **ROM total** | **683** | **59,050** | **1.4079%** |
 
 ---
 
@@ -46,7 +50,7 @@ Scanned C3:C800-CFFF and C4:9800-9FFF with major C4 discovery:
 - **2 functions promoted**: C4:9D10 (3-byte copy) + C3:CB47 (hardware init)
 - **C4:9800-9FFF**: 7 of 8 pages are candidate_code_lane (exceptional!)
 - **Score-6 clusters**: 3 discovered (C3:CB8E, C4:9DE6, C4:9E50)
-- **Current seam**: C3:D000.. / C4:A000..
+- **Session-ending seam**: C3:D000.. / C4:A000..
 
 ### Session 45: Continuation Scan - Pending Candidates (2026-04-09)
 Scanned C3:B800-C7FF and C4:8800-97FF, documented pending candidates:
@@ -54,7 +58,7 @@ Scanned C3:B800-C7FF and C4:8800-97FF, documented pending candidates:
 - **No promotions**: 4 score-4 candidates pending verification
 - **Cross-bank caller**: CA:31D8 → C3:B8EE (external bank)
 - **C4:8A00**: 5 entry callers, 2 local clusters
-- **Current seam**: C3:C800.. / C4:9800..
+- **Session-ending seam**: C3:C800.. / C4:9800..
 
 ### Session 44: Dual Promotion Breakthrough - C3:B000 (2026-04-09)
 Scanned C3:B000-B7FF and C4:8000-87FF with exceptional C3 results:
@@ -62,7 +66,7 @@ Scanned C3:B000-B7FF and C4:8000-87FF with exceptional C3 results:
 - **2 functions promoted**: C3:B002 (hardware clear) + C3:B086 (range validation)
 - **C3 bank**: ~36.0% coverage (target exceeded)
 - **C4 bank**: ~13.0%, 6 candidate_code_lane pages found
-- **Current seam**: C3:B800.. / C4:8800..
+- **Session-ending seam**: C3:B800.. / C4:8800..
 
 ### Session 43: C4 Bank Push to 15% (2026-04-09)
 Focused on C4:7800-7FFF to push toward 15% coverage target:
@@ -70,7 +74,7 @@ Focused on C4:7800-7FFF to push toward 15% coverage target:
 - **1 function promoted**: C4:7FAC (score-6, clamped value update routine)
 - **Major discovery**: C4:7F00 page has 7 verified entry callers
 - **C4 bank**: ~13.0% coverage, 2.0% to 15% target
-- **Current seam**: C3:B000.. / C4:8000..
+- **Session-ending seam**: C3:B000.. / C4:8000..
 
 ### Session 42: High Bank + C4 Deep Scan (2026-04-09)
 Continued high bank exploration and C4 bank deep scan:
@@ -78,7 +82,7 @@ Continued high bank exploration and C4 bank deep scan:
 - **1 function promoted**: C4:714E (score-6, 32-bit arithmetic helper)
 - **C4 bank progress**: 11 candidate pages found, path to 15% clearer
 - **High bank continues**: 6 branch_fed_control_pocket pages at C3:A000+
-- **Current seam**: C3:A800.. / C4:7800..
+- **Session-ending seam**: C3:A800.. / C4:7800..
 
 ### Session 41: Sequential Seam + High Bank Pivot (2026-04-09)
 Continued disassembly with focus on C3:7800+ and high bank exploration:
@@ -87,7 +91,7 @@ Continued disassembly with focus on C3:7800+ and high bank exploration:
 - **High bank validation**: C3:8000+ confirms 62.5% code density
 - **Cluster score 8**: C3:87BA-87E1 (branch_fed_control_pocket)
 - **4 RTL stubs** detected at C3:8900
-- **Current seam**: C3:9800..
+- **Session-ending seam**: C3:9800..
 
 ### Session 40: Agent Swarm Multi-Region Scan (2026-04-09)
 **4 parallel agents** scanned **4 regions simultaneously**:
@@ -158,9 +162,9 @@ Continued disassembly with focus on C3:7800+ and high bank exploration:
 ## File Inventory
 
 ### Manifests (passes/manifests/)
-- **970+ total manifests**
-- Latest: `pass1222_c4_scan.json`
-- Session 40: pass1219, pass1220, pass1221, pass1222
+- **961 canonical manifests** generated reproducibly from 1,000 archived sources
+- Latest canonical manifest: `pass1229.json`
+- The range-less `pass1222_c4_scan.json` source is retained in `legacy/` and represented in the migration ledger
 
 ### Disassembly Notes (passes/disasm/)
 - pass205.md - C3:6600 fragments
@@ -186,7 +190,7 @@ Continued disassembly with focus on C3:7800+ and high bank exploration:
 ### Bank C4: 15% Target
 - **Current**: ~12.8%
 - **Gap**: ~2.2%
-- **Path**: 
+- **Path**: pending next-session selection
   1. Promote 8 Session 40 candidates (+0.6%)
   2. Scan C4:6800-6FFF (continuation)
   3. Scan C4:4000-4FFF (dense region)
