@@ -4,10 +4,63 @@ import json
 from pathlib import Path
 
 from tools.ctrepo.manifest_models import CanonicalManifest, ClosedRange
+from tools.ctrepo.manifest_corrections import iter_manifest_corrections
 from tools.ctrepo.manifest_discovery import discover_manifest_candidates
 from tools.ctrepo.manifest_validation import validate_manifest
 from tools.ctrepo.range_adjudication import apply_adjudications
 from tools.scripts.migrate_manifests import plan_migration
+
+
+def test_bulk_manifest_correction_expands_label_from_subject_start():
+    registry = {
+        "corrections": [],
+        "bulk_corrections": [{
+            "correction_id": "corr_fixture_pool",
+            "subjects": [{"pass_number": 1, "range": "DD:1027..DD:1037", "label": "old"}],
+            "reason": "fixture reason long enough for the policy schema",
+            "evidence": ["fixture"],
+            "updates": {
+                "kind": "data",
+                "label_suffix": "word_table_data",
+                "confidence": "high",
+                "verification_status": "reviewed",
+                "evidence": {"classification": "word_table"},
+            },
+        }],
+    }
+
+    corrections = list(iter_manifest_corrections(registry))
+
+    assert corrections[0]["correction_id"] == "corr_fixture_pool_001"
+    assert corrections[0]["updates"]["label"] == "ct_dd_1027_word_table_data"
+
+
+def test_selector_manifest_correction_is_exact_and_preserves_labels():
+    manifests = {
+        1: CanonicalManifest(pass_number=1, closed_ranges=[
+            ClosedRange.parse("C0:1000..C0:1010", kind="code_owner", label="owner"),
+            ClosedRange.parse("C0:1011..C0:1012", kind="superseded", label="old"),
+        ])
+    }
+    registry = {
+        "corrections": [],
+        "bulk_corrections": [{
+            "correction_id": "corr_fixture_selection",
+            "selection": {"bank": "C0", "exclude_kinds": ["superseded"], "expected_count": 1},
+            "reason": "fixture reason long enough for the policy schema",
+            "evidence": ["fixture"],
+            "updates": {
+                "confidence": "high",
+                "verification_status": "reviewed",
+                "evidence": {"classification": "reviewed_code"},
+            },
+        }],
+    }
+
+    corrections = list(iter_manifest_corrections(registry, manifests=manifests))
+
+    assert corrections[0]["subject"]["label"] == "owner"
+    assert "label" not in corrections[0]["updates"]
 
 def test_migration_merges_same_pass_sources_instead_of_skipping_current_manifest(tmp_path):
     # Pass 1000 direct file with range A

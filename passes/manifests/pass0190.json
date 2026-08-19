@@ -11,8 +11,13 @@
       "range": "C3:2700..C3:27FF",
       "kind": "data",
       "label": "ct_c3_inline_branch_heavy_mixed_control_arithmetic_blob_with_false_data_side_2709_target_and_no_caller_backed_true_start_before_2800_candidate",
-      "confidence": "medium-high",
-      "verification_status": "pending"
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [

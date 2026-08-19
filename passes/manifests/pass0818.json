@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:40AD..D4:40D0",
-      "kind": "code_owner",
-      "label": "ct_d4_40ad_ldy_handler",
+      "kind": "data",
+      "label": "ct_d4_40ad_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "A0 90 B0 D8 28 D8 28 D0 30 D0 30 A0",
+        "reasoning": "Symmetric high/low mask pairs transition into compact pixel-row indices, contradicting execution.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_40ad_ldy_handler"
+    "ct_d4_40ad_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

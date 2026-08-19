@@ -3,7 +3,11 @@
 import subprocess
 import sys
 
-from tools.ctrepo.policy_validation import validate_all_policy_registries
+from tools.ctrepo.policy_validation import (
+    validate_all_policy_registries,
+    validate_candidate_dispositions,
+    validate_manifest_corrections,
+)
 from tools.ctrepo.provenance import calculate_generator_source_digest, create_provenance_header
 from tools.scripts.check_report_drift import _semantic_markdown
 from tools.scripts.toolkit_doctor import stable_pytest_summary
@@ -34,6 +38,14 @@ def test_semantic_markdown_ignores_provenance_only_lines():
 
 def test_policy_registries_and_evidence_are_valid():
     assert validate_all_policy_registries() == []
+
+
+def test_candidate_disposition_registry_is_valid():
+    assert validate_candidate_dispositions() == []
+
+
+def test_manifest_correction_registry_is_valid():
+    assert validate_manifest_corrections() == []
 
 
 def test_doctor_pytest_summary_drops_nondeterministic_timing():

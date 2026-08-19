@@ -42,11 +42,11 @@
       "kind": "code_owner",
       "label": "ct_c3_3e53_score7_dispatch",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
       "evidence": {
-        "reasoning": null,
-        "findings": null,
-        "score": 7
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
       },
       "legacy_metadata": {
         "raw_single_function": true

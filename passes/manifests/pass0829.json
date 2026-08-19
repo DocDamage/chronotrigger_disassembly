@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:5691..D4:56C0",
-      "kind": "code_owner",
-      "label": "ct_d4_5691_jsl_handler",
+      "kind": "data",
+      "label": "ct_d4_5691_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "22 2D 22 32 2D 4D 60 82 91 C3 AC 96",
+        "reasoning": "An identical non-code header recurs at D4:5451; the remaining bytes are symmetric plane masks.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_5691_jsl_handler"
+    "ct_d4_5691_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

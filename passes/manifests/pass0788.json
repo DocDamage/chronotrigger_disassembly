@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D3:888A..D3:88A2",
-      "kind": "code_owner",
-      "label": "ct_d3_888a_score7_cluster",
+      "kind": "data",
+      "label": "ct_d3_888a_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "19 04 24 12 05 2E 11 16 08 0B 08 0F",
+        "reasoning": "Bounded row fields terminate in masks without coherent control flow.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d3_888a_score7_cluster"
+    "ct_d3_888a_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

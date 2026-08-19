@@ -12,7 +12,12 @@
       "kind": "data",
       "label": "ct_c3_2900_frozen_mixed_data_19_brk_no_xref_targets",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     },
     {
       "range": "C3:2A00..C3:2AFF",
@@ -47,7 +52,12 @@
       "kind": "data",
       "label": "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts__residual_2a00_2aa4",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_5c76140fff333aedc61f"
@@ -61,7 +71,12 @@
       "kind": "data",
       "label": "ct_c3_2a00_frozen_mixed_data_17_brk_6_unsupported_rts__residual_2ac6_2aff",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_5c76140fff333aedc61f"
@@ -74,8 +89,13 @@
       "range": "C3:2B00..C3:2B39",
       "kind": "code_owner",
       "label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr__residual_2b00_2b39",
-      "confidence": "medium-high",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_e8793e187cddc0e8c353"
@@ -88,8 +108,13 @@
       "range": "C3:2B6F..C3:2BFF",
       "kind": "code_owner",
       "label": "ct_c3_2b00_branch_fed_arithmetic_pocket_hw_div_mul_3_rtl_9_jsr__residual_2b6f_2bff",
-      "confidence": "medium-high",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_e8793e187cddc0e8c353"

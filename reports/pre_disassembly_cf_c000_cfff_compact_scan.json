@@ -1,0 +1,122 @@
+{
+  "start": "CF:C000",
+  "pages_requested": 16,
+  "minimum_score": 6,
+  "page_family_counts": {
+    "text_ascii_heavy": 12,
+    "mixed_command_data": 4
+  },
+  "review_posture_counts": {
+    "manual_owner_boundary_review": 2,
+    "local_control_only": 8,
+    "mixed_lane_continue": 5,
+    "bad_start_or_dead_lane_reject": 1
+  },
+  "review_pages": 4,
+  "candidate_count": 1,
+  "cluster_count": 2,
+  "pages": [
+    {
+      "range": "CF:C000..CF:C0FF",
+      "page_family": "text_ascii_heavy",
+      "review_posture": "manual_owner_boundary_review",
+      "targets": [],
+      "candidates": [
+        {
+          "candidate_start": "CF:C0B0",
+          "target": "CF:C0C0",
+          "score": 6,
+          "distance_to_target": 16,
+          "start_byte": "A0",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.39,
+          "zero_ff_ratio": 0.0,
+          "repeated_pair_score": 0.25,
+          "candidate_range": "CF:C0B0..CF:C0D8"
+        }
+      ],
+      "clusters": []
+    },
+    {
+      "range": "CF:C300..CF:C3FF",
+      "page_family": "text_ascii_heavy",
+      "review_posture": "local_control_only",
+      "targets": [],
+      "candidates": [],
+      "clusters": [
+        {
+          "range": "CF:C396..CF:C3C6",
+          "cluster_score": 7,
+          "child_count": 3,
+          "child_ranges": [
+            "CF:C396..CF:C3AE",
+            "CF:C3AC..CF:C3C4",
+            "CF:C3AE..CF:C3C6"
+          ],
+          "width": 49,
+          "call_count": 6,
+          "branch_count": 9,
+          "stackish_count": 1,
+          "return_count": 3,
+          "ascii_ratio": 0.878,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        }
+      ]
+    },
+    {
+      "range": "CF:C600..CF:C6FF",
+      "page_family": "mixed_command_data",
+      "review_posture": "mixed_lane_continue",
+      "targets": [
+        {
+          "target": "CF:C6A6",
+          "best_strength": "weak",
+          "hit_count": 8,
+          "callers": [
+            "CF:F063",
+            "CF:F0B2",
+            "CF:F130",
+            "CF:F322",
+            "CF:F4D7",
+            "CF:F52E",
+            "CF:F5AC",
+            "CF:F7C0"
+          ],
+          "boundary_bait": false
+        }
+      ],
+      "candidates": [],
+      "clusters": []
+    },
+    {
+      "range": "CF:CD00..CF:CDFF",
+      "page_family": "text_ascii_heavy",
+      "review_posture": "local_control_only",
+      "targets": [],
+      "candidates": [],
+      "clusters": [
+        {
+          "range": "CF:CD30..CF:CD6A",
+          "cluster_score": 8,
+          "child_count": 5,
+          "child_ranges": [
+            "CF:CD30..CF:CD48",
+            "CF:CD32..CF:CD4A",
+            "CF:CD49..CF:CD61",
+            "CF:CD50..CF:CD68",
+            "CF:CD52..CF:CD6A"
+          ],
+          "width": 59,
+          "call_count": 3,
+          "branch_count": 4,
+          "stackish_count": 0,
+          "return_count": 5,
+          "ascii_ratio": 0.542,
+          "repeated_pair_score": 0.034,
+          "data_misread_flags": []
+        }
+      ]
+    }
+  ]
+}

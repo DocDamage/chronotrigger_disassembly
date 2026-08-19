@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:27D3..D1:27F5",
-      "kind": "code_owner",
-      "label": "ct_d1_27d3_php_handler",
+      "kind": "data",
+      "label": "ct_d1_27d3_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "08 80 80 08 0E 01 2E 1E 00 22 C0 C0",
+        "reasoning": "Repeated plane pairs and terminal fill bytes contradict a callable handler.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_27d3_php_handler"
+    "ct_d1_27d3_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

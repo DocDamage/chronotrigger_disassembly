@@ -106,12 +106,22 @@ def validate_range_adjudications(path: Path | None = None) -> List[str]:
         pass_number = manifest.get("pass_number")
         for item in manifest.get("closed_ranges", []):
             canonical_identities.add((pass_number, item.get("range"), item.get("label")))
+    correction_document = _load(REPO_ROOT / "tools" / "config" / "manifest_corrections.json")
+    from tools.ctrepo.manifest_corrections import iter_manifest_corrections
+    pre_correction_identities = {
+        (
+            correction.get("subject", {}).get("pass_number"),
+            correction.get("subject", {}).get("range"),
+            correction.get("subject", {}).get("label"),
+        )
+        for correction in iter_manifest_corrections(correction_document)
+    }
     for decision in decisions:
         decision_id = decision.get("decision_id", "<unknown>")
         for role in ("subject", "winner"):
             identity = decision.get(role, {})
             key = (identity.get("pass_number"), identity.get("range"), identity.get("label"))
-            if key not in canonical_identities:
+            if key not in canonical_identities and key not in pre_correction_identities:
                 errors.append(f"adjudication {decision_id} {role} is absent from canonical manifests: {key}")
         rank = decision.get("rank", {})
         if rank.get("winner", []) < rank.get("subject", []):
@@ -141,6 +151,53 @@ def validate_project_state(path: Path | None = None) -> List[str]:
     return errors
 
 
+def validate_candidate_dispositions(path: Path | None = None) -> List[str]:
+    target = path or REPO_ROOT / "tools" / "config" / "candidate_dispositions.json"
+    document = _load(target)
+    errors = _schema_errors(document, "candidate_dispositions.schema.json")
+    candidates = document.get("candidates", [])
+    if document.get("candidate_count") != len(candidates):
+        errors.append("candidate_count does not equal disposition entry count")
+    candidate_ids = [candidate.get("candidate_id") for candidate in candidates]
+    if len(candidate_ids) != len(set(candidate_ids)):
+        errors.append("candidate disposition IDs are not unique")
+    if not _commit_exists(document.get("source_commit", "")):
+        errors.append("candidate disposition source_commit is not reachable")
+    for candidate in candidates:
+        candidate_id = candidate.get("candidate_id", "<unknown>")
+        for evidence in candidate.get("evidence", []):
+            if not (REPO_ROOT / evidence).exists():
+                errors.append(f"candidate {candidate_id} evidence path does not exist: {evidence}")
+        for manifest in candidate.get("related_manifests", []):
+            if not (REPO_ROOT / manifest).exists():
+                errors.append(f"candidate {candidate_id} manifest does not exist: {manifest}")
+    return errors
+
+
+def validate_manifest_corrections(path: Path | None = None) -> List[str]:
+    target = path or REPO_ROOT / "tools" / "config" / "manifest_corrections.json"
+    document = _load(target)
+    errors = _schema_errors(document, "manifest_corrections.schema.json")
+    from tools.ctrepo.manifest_corrections import iter_manifest_corrections
+    corrections = document.get("corrections", [])
+    bulk_corrections = document.get("bulk_corrections", [])
+    expanded = list(iter_manifest_corrections(document))
+    if document.get("correction_count") != len(expanded):
+        errors.append("correction_count does not equal correction entry count")
+    correction_ids = [correction.get("correction_id") for correction in corrections]
+    correction_ids.extend(batch.get("correction_id") for batch in bulk_corrections)
+    if len(correction_ids) != len(set(correction_ids)):
+        errors.append("manifest correction IDs are not unique")
+    if not _commit_exists(document.get("source_commit", "")):
+        errors.append("manifest correction source_commit is not reachable")
+    for correction in [*corrections, *bulk_corrections]:
+        correction_id = correction.get("correction_id", "<unknown>")
+        for evidence in correction.get("evidence", []):
+            if not (REPO_ROOT / evidence).exists():
+                errors.append(f"correction {correction_id} evidence path does not exist: {evidence}")
+    return errors
+
+
 def validate_report_provenance(provenance: Dict[str, Any]) -> List[str]:
     return _schema_errors(provenance, "report_provenance.schema.json")
 
@@ -153,6 +210,8 @@ def validate_all_policy_registries() -> List[str]:
         ("migration", validate_migration_ledger),
         ("range_adjudications", validate_range_adjudications),
         ("project_state", validate_project_state),
+        ("candidate_dispositions", validate_candidate_dispositions),
+        ("manifest_corrections", validate_manifest_corrections),
     ):
         try:
             errors.extend(f"{name}: {error}" for error in validator())

@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:E90F..D1:E930",
-      "kind": "code_owner",
-      "label": "ct_d1_e90f_score8_cluster",
+      "kind": "tail_fragment",
+      "label": "ct_d1_e90f_loop_tail_fragment",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "mid_function_fragment",
+        "byte_prefix": "C6 47 D0 EF 7B E2 20 C2 10 AB 6B C2",
+        "reasoning": "DEC $47; BNE -17 enters earlier code, proving that D1:E90F is a loop tail rather than an entry.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_e90f_score8_cluster"
+    "ct_d1_e90f_loop_tail_fragment"
   ],
   "confidence": {
     "structural": "medium",

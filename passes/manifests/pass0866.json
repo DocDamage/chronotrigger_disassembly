@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:0A2F..D4:0A46",
-      "kind": "code_owner",
-      "label": "ct_d4_0a2f_phd_handler",
+      "kind": "data",
+      "label": "ct_d4_0a2f_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "0B 23 2C 22 29 32 28 20 21 17 10 0B",
+        "reasoning": "The range is a compact array of bounded pixel-row values, not a coherent instruction stream.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_0a2f_phd_handler"
+    "ct_d4_0a2f_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:45BB..D4:45EB",
-      "kind": "code_owner",
-      "label": "ct_d4_45bb_score9_cluster",
+      "kind": "data",
+      "label": "ct_d4_45bb_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "04 0C 0C 1C 14 0B 0E 15 0F 06 0C 08",
+        "reasoning": "Pixel-row values followed by mirrored masks and no strong caller disprove the score-nine cluster.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_45bb_score9_cluster"
+    "ct_d4_45bb_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

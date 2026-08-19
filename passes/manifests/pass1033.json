@@ -8,14 +8,14 @@
   "closed_ranges": [
     {
       "range": "C1:4375..C1:438D",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c1_4375",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
       "evidence": {
-        "reasoning": null,
-        "findings": null,
-        "score": 6
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Instruction-aligned code is present, while caller and enclosing-owner analysis shows that score windows frequently begin at fall-through or operand offsets; ownership is therefore deferred to disassembly.",
+        "review_source": "pre-disassembly review 2026-08-19"
       },
       "legacy_metadata": {
         "raw_single_function": true

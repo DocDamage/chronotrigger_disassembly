@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:0509..D1:053C",
-      "kind": "code_owner",
-      "label": "ct_d1_0509_score7_cluster",
+      "kind": "data",
+      "label": "ct_d1_0509_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "09 10 C0 09 18 C2 80 E2 80 C5 12 10",
+        "reasoning": "Repeated row records and masks have no coherent aligned entry or return path.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_0509_score7_cluster"
+    "ct_d1_0509_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

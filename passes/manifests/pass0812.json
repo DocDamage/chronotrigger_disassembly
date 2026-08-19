@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:160A..D1:1630",
-      "kind": "code_owner",
-      "label": "ct_d1_160a_jsl_handler",
+      "kind": "data",
+      "label": "ct_d1_160a_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "22 01 24 C8 01 26 01 0D 08 22 00 23",
+        "reasoning": "Opcode-valued bytes recur as row fields and do not supply coherent long-call operands.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_160a_jsl_handler"
+    "ct_d1_160a_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

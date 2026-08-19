@@ -1,0 +1,162 @@
+{
+  "start": "C5:D000",
+  "pages_requested": 16,
+  "minimum_score": 6,
+  "page_family_counts": {
+    "branch_fed_control_pocket": 9,
+    "candidate_code_lane": 5,
+    "mixed_command_data": 2
+  },
+  "review_posture_counts": {
+    "bad_start_or_dead_lane_reject": 5,
+    "local_control_only": 9,
+    "mixed_lane_continue": 2
+  },
+  "review_pages": 5,
+  "candidate_count": 2,
+  "cluster_count": 4,
+  "pages": [
+    {
+      "range": "C5:D500..C5:D5FF",
+      "page_family": "branch_fed_control_pocket",
+      "review_posture": "local_control_only",
+      "targets": [],
+      "candidates": [],
+      "clusters": [
+        {
+          "range": "C5:D5A9..C5:D5B8",
+          "cluster_score": 6,
+          "child_count": 3,
+          "child_ranges": [
+            "C5:D5A9..C5:D5AD",
+            "C5:D5A9..C5:D5B7",
+            "C5:D5A9..C5:D5B8"
+          ],
+          "width": 16,
+          "call_count": 1,
+          "branch_count": 6,
+          "stackish_count": 0,
+          "return_count": 3,
+          "ascii_ratio": 0.438,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        }
+      ]
+    },
+    {
+      "range": "C5:DA00..C5:DAFF",
+      "page_family": "branch_fed_control_pocket",
+      "review_posture": "bad_start_or_dead_lane_reject",
+      "targets": [],
+      "candidates": [],
+      "clusters": [
+        {
+          "range": "C5:DAB2..C5:DABC",
+          "cluster_score": 6,
+          "child_count": 1,
+          "child_ranges": [
+            "C5:DAB2..C5:DABC"
+          ],
+          "width": 11,
+          "call_count": 1,
+          "branch_count": 3,
+          "stackish_count": 0,
+          "return_count": 1,
+          "ascii_ratio": 0.273,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        }
+      ]
+    },
+    {
+      "range": "C5:DB00..C5:DBFF",
+      "page_family": "branch_fed_control_pocket",
+      "review_posture": "local_control_only",
+      "targets": [],
+      "candidates": [],
+      "clusters": [
+        {
+          "range": "C5:DB2B..C5:DB3D",
+          "cluster_score": 7,
+          "child_count": 4,
+          "child_ranges": [
+            "C5:DB2B..C5:DB32",
+            "C5:DB2B..C5:DB35",
+            "C5:DB2B..C5:DB38",
+            "C5:DB2B..C5:DB3D"
+          ],
+          "width": 19,
+          "call_count": 1,
+          "branch_count": 4,
+          "stackish_count": 0,
+          "return_count": 5,
+          "ascii_ratio": 0.474,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        }
+      ]
+    },
+    {
+      "range": "C5:DC00..C5:DCFF",
+      "page_family": "branch_fed_control_pocket",
+      "review_posture": "bad_start_or_dead_lane_reject",
+      "targets": [],
+      "candidates": [
+        {
+          "candidate_start": "C5:DCB6",
+          "target": "C5:DCBC",
+          "score": 6,
+          "distance_to_target": 6,
+          "start_byte": "20",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.355,
+          "zero_ff_ratio": 0.129,
+          "repeated_pair_score": 0.133,
+          "candidate_range": "C5:DCB6..C5:DCD4"
+        }
+      ],
+      "clusters": [
+        {
+          "range": "C5:DC49..C5:DC55",
+          "cluster_score": 8,
+          "child_count": 4,
+          "child_ranges": [
+            "C5:DC49..C5:DC4E",
+            "C5:DC49..C5:DC4F",
+            "C5:DC49..C5:DC52",
+            "C5:DC49..C5:DC55"
+          ],
+          "width": 13,
+          "call_count": 2,
+          "branch_count": 1,
+          "stackish_count": 1,
+          "return_count": 5,
+          "ascii_ratio": 0.692,
+          "repeated_pair_score": 0.0,
+          "data_misread_flags": []
+        }
+      ]
+    },
+    {
+      "range": "C5:DF00..C5:DFFF",
+      "page_family": "branch_fed_control_pocket",
+      "review_posture": "bad_start_or_dead_lane_reject",
+      "targets": [],
+      "candidates": [
+        {
+          "candidate_start": "C5:DF2E",
+          "target": "C5:DF38",
+          "score": 6,
+          "distance_to_target": 10,
+          "start_byte": "20",
+          "start_class": "clean_start",
+          "ascii_ratio": 0.4,
+          "zero_ff_ratio": 0.114,
+          "repeated_pair_score": 0.0,
+          "candidate_range": "C5:DF2E..C5:DF50"
+        }
+      ],
+      "clusters": []
+    }
+  ]
+}

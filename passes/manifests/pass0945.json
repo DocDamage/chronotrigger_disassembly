@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D5:497D..D5:4994",
-      "kind": "code_owner",
-      "label": "ct_d5_497d_score9_cluster",
+      "kind": "data",
+      "label": "ct_d5_497d_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "13 04 07 B8 B0 90 90 B0 A0 20 E0 A0",
+        "reasoning": "Mirrored mask values form a graphics record, not a callable routine.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d5_497d_score9_cluster"
+    "ct_d5_497d_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

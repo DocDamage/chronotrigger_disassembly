@@ -22,10 +22,16 @@
     },
     {
       "range": "D1:0E7C..D1:0E86",
-      "kind": "code_owner",
-      "label": "ct_d1_0e59_score9_cluster__residual_0e7c_0e86",
+      "kind": "data",
+      "label": "ct_d1_0e7c_graphics_data",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "01 20 41 20 81 20 34 18 0E 47 60",
+        "reasoning": "Plane variants continue directly from D1:0E59 and the apparent RTS is a table terminator byte.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_879dbbb7b74f8610ae9d"
@@ -37,7 +43,7 @@
   ],
   "new_labels": [
     "ct_d1_0e59_score9_cluster",
-    "ct_d1_0e59_score9_cluster__residual_0e7c_0e86"
+    "ct_d1_0e7c_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

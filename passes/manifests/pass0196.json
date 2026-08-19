@@ -8,25 +8,19 @@
   "closed_ranges": [
     {
       "range": "C7:C193..C7:C1B2",
-      "kind": "code_owner",
-      "label": "ct_c7_c193_unknown_function_cluster_entry",
+      "kind": "data",
+      "label": "ct_c7_c193_compressed_asset_data",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
       "evidence": {
-        "cluster_score": 7,
-        "cluster_width": 32,
-        "cluster_children": 2,
-        "branches": 5,
-        "returns": 2,
-        "backtrack_candidate": "C7:C1EF->C7:C1FF",
-        "backtrack_score": 4,
-        "start_byte": "0xC0 (CPY #imm)",
-        "note": "Strongest cluster evidence in upper C7 - score 7 exceeds backtrack scores"
+        "classification": "compressed_asset_data",
+        "reasoning": "Regular framing bytes recur through long ranges, while apparent JSR, REP, and return opcodes occur only as unaligned fields without coherent instruction flow.",
+        "review_source": "pre-disassembly review 2026-08-19"
       }
     }
   ],
   "new_labels": [
-    "ct_c7_c193_unknown_function_cluster_entry"
+    "ct_c7_c193_compressed_asset_data"
   ],
   "confidence": {
     "structural": "medium",

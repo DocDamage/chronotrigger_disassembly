@@ -11,7 +11,12 @@
       "kind": "code_owner",
       "label": "ct_c3_0026_php_handler",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [

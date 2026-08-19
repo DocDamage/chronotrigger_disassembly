@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D9:9AF4..D9:9B02",
-      "kind": "code_owner",
-      "label": "ct_d9_9af4_score7_cluster",
+      "kind": "data",
+      "label": "ct_d9_9af4_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "D0 20 90 81 EA 10 C0 08 90 08 A0 20",
+        "reasoning": "Plane masks and bounded values do not form coherent callable execution.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d9_9af4_score7_cluster"
+    "ct_d9_9af4_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

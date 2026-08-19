@@ -26,21 +26,36 @@
       "kind": "veneer",
       "label": "ct_c3_tiny_long_wrapper_calling_c30d0e_then_returning",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     },
     {
       "range": "C3:1ADB..C3:1AEF",
       "kind": "data",
       "label": "ct_c3_inline_table_like_data_block_after_0d0e_wrapper_before_unproven_rtl_stub_candidate",
-      "confidence": "medium-high",
-      "verification_status": "pending"
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     },
     {
       "range": "C3:1A71..C3:1AD5",
       "kind": "data",
       "label": "ct_c3_inline_mixed_opcode_cluster_with_resolved_low_bank_call_targets_before_confirmed_0d0e_wrapper__residual_1a71_1ad5",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_b36ed73bb295fc27277e"

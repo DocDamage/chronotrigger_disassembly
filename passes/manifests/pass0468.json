@@ -33,10 +33,15 @@
     },
     {
       "range": "C0:74ED..C0:74FF",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "CT_C0_74E2_GFX_HANDLER_SC6__residual_74ed_74ff",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "raw_target": {
           "addr": "C0:74E2",

@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:00E0..D6:00FC",
-      "kind": "code_owner",
-      "label": "ct_d6_00e0_hub_entry",
+      "kind": "data",
+      "label": "ct_d6_00e0_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "08 70 14 08 28 1C 81 16 70 1C 1C 22",
+        "reasoning": "Bounded row fields and masks have no coherent call boundary.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_00e0_hub_entry"
+    "ct_d6_00e0_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -27,6 +27,8 @@ Use the unified `tools.ctrepo` CLI for all standard workflow tasks:
 | `python -m tools.ctrepo doctor` | Run comprehensive repository health checks |
 | `python -m tools.ctrepo coverage` | Rebuild coverage reports from canonical manifests |
 | `python -m tools.ctrepo verify-rom` | Verify local ROM checksum without copying bytes |
+| `python tools/scripts/audit_toolkit_entrypoints.py` | Validate local imports and smoke-test every active toolkit CLI |
+| `python tools/scripts/audit_pre_disassembly_readiness.py --strict` | Enforce evidence readiness before source reconstruction |
 
 ## 3. Pass Lifecycle & Manifest Contract
 
@@ -36,3 +38,5 @@ Every new pass:
 3. Must define `closed_ranges` with uppercase hex `BB:AAAA..BB:EEEE` format.
 4. Closed ranges must not introduce unreviewed collisions or overlaps with existing active code owners.
 5. All tests and strict doctor checks must pass before opening a Pull Request.
+6. Score alone is never promotion evidence; record every reviewed candidate in `tools/config/candidate_dispositions.json`.
+7. Preserve legacy manifests and express reviewed factual changes through `tools/config/manifest_corrections.json` so migration remains reproducible.

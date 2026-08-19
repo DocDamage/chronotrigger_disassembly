@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:118D..D1:11B0",
-      "kind": "code_owner",
-      "label": "ct_d1_118d_php_handler",
+      "kind": "data",
+      "label": "ct_d1_118d_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "08 EA 40 E8 18 10 20 EC 40 EE 55 27",
+        "reasoning": "The leading opcode-valued byte is a table field and neighboring records repeat the same format.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_118d_php_handler"
+    "ct_d1_118d_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

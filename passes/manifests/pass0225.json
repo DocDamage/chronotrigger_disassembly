@@ -26,7 +26,12 @@
       "kind": "code_owner",
       "label": "ct_c3_a396_unknown_function_score6_cluster__residual_a396_a3e1",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_5af81f894fcd46a16b01",

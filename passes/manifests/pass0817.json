@@ -22,10 +22,16 @@
     },
     {
       "range": "D4:4027..D4:4030",
-      "kind": "code_owner",
-      "label": "ct_d4_4008_score6_cluster__residual_4027_4030",
+      "kind": "data",
+      "label": "ct_d4_4027_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "40 00 00 80 80 80 A0 90 B0 68",
+        "reasoning": "High-bit mask values directly continue the graphics range at D4:4008.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_05dbf26a12913f812acc"
@@ -37,7 +43,7 @@
   ],
   "new_labels": [
     "ct_d4_4008_score6_cluster",
-    "ct_d4_4008_score6_cluster__residual_4027_4030"
+    "ct_d4_4027_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:8BC8..D6:8BE0",
-      "kind": "code_owner",
-      "label": "ct_d6_8bc8_score7_cluster",
+      "kind": "data",
+      "label": "ct_d6_8bc8_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "05 01 0B 01 34 20 05 06 04 07 04 07",
+        "reasoning": "Small bounded values and row repetition contradict code.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_8bc8_score7_cluster"
+    "ct_d6_8bc8_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

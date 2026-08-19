@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:F1CC..D4:F1EC",
-      "kind": "code_owner",
-      "label": "ct_d4_f1cc_score8_cluster",
+      "kind": "data",
+      "label": "ct_d4_f1cc_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "B1 97 C9 CB CE 31 80 7F B4 43 AA 41",
+        "reasoning": "The sequence ends in progressive 20/5F, 40/3F, 30/0F and F8/08 masks and has no aligned caller.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_f1cc_score8_cluster"
+    "ct_d4_f1cc_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

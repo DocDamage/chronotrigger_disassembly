@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D2:8096..D2:80AE",
-      "kind": "code_owner",
-      "label": "ct_d2_8096_score6_cluster",
+      "kind": "data",
+      "label": "ct_d2_8096_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "04 03 17 10 01 06 17 10 0B 08 C8 30",
+        "reasoning": "Bounded pixel rows and symmetric masks contradict an aligned callable range.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d2_8096_score6_cluster"
+    "ct_d2_8096_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

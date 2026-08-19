@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:763A..D6:7660",
-      "kind": "code_owner",
-      "label": "ct_d6_763a_rep_handler",
+      "kind": "data",
+      "label": "ct_d6_763a_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "C2 87 1A A0 54 88 08 80 A0 64 6E C8",
+        "reasoning": "Plane masks and row values have no coherent status-width flow or caller.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_763a_rep_handler"
+    "ct_d6_763a_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

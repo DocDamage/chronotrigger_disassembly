@@ -1,6 +1,6 @@
 # Chrono Trigger Disassembly Progress Report
 
-**Last Updated**: 2026-04-09 (Session 46 Complete)
+**Last Updated**: 2026-08-19 (Pre-disassembly reconciliation complete)
 **Working Branch**: `live-work-from-pass166`
 **Latest Manifest Pass**: 1229 (Session 46: C4:9D10 + C3:CB47 dual promotion)
 
@@ -18,6 +18,9 @@ The canonical repository state is reconstructed from the complete historical man
 - **46 Agent Swarm Sessions** completed
 - **59,050 unique bytes** covered after active-interval union (1.4079% of the 4 MiB ROM)
 - **Current frontier**: `C3:D000.. / C4:A000..`
+- **Pre-disassembly readiness**: READY (1,061/1,061 active ranges reviewed; no missing evidence or provenance)
+- **Classification audit**: 137 code owners, 20 helpers/wrappers/veneers, 489 executable fragments, 413 data ranges, and 2 text markers
+- **Current byte split**: 28,189 executable bytes and 30,861 classified-data bytes; total unique coverage is unchanged
 
 ---
 
@@ -43,6 +46,14 @@ These are canonical active-interval metrics from `reports/coverage.json`; older 
 ---
 
 ## Recent Major Achievements
+
+### Pre-disassembly reconciliation and toolkit hardening (2026-08-18–19)
+
+- Re-ran the named C1–C7, CF, D1–D9, and DA–DF candidate pools using instruction alignment and regional structure rather than score alone.
+- Corrected 282 false executable records to data and conservatively changed 489 unproven owner windows to executable fragments.
+- Added schema-validated candidate dispositions and reproducible manifest corrections, including exact-count selection batches.
+- Added readiness and toolkit-entrypoint audits, repaired stale wrapper imports, hardened verification-aware xrefs, and added CLI/migration regression tests.
+- Final gates: readiness READY, 1,105/1,105 historical ranges conserved, zero ownership conflicts, toolkit doctor 9/9, 48 tests, and strict acceptance 12/12.
 
 ### Session 46: Major Breakthrough - C4:9800 Exceptional Density (2026-04-09)
 Scanned C3:C800-CFFF and C4:9800-9FFF with major C4 discovery:

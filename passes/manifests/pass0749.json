@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:0E59..D1:0E7B",
-      "kind": "code_owner",
-      "label": "ct_d1_0e59_score7_cluster",
+      "kind": "data",
+      "label": "ct_d1_0e59_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "C1 0D 10 0A 40 01 0A 41 0A 81 0A 0D",
+        "reasoning": "Regular 40/41/81 plane variants repeat across the range and contradict control flow.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_0e59_score7_cluster"
+    "ct_d1_0e59_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -1,26 +1,26 @@
 {
   "provenance": {
     "generator": "generate_coverage.py",
-    "generation_command": "python tools/scripts/generate_coverage.py --strict --output-json 'C:\\Users\\dferr\\AppData\\Local\\Temp\\ct-clean-reports-996e56ff463a47169a10facf64e1641f\\coverage.json' --output-md 'C:\\Users\\dferr\\AppData\\Local\\Temp\\ct-clean-reports-996e56ff463a47169a10facf64e1641f\\coverage.md'",
-    "generated_at_utc": "2026-08-18T22:59:59.929807+00:00",
-    "source_commit": "8779214587ea05fc52a1ecbd448a8387f5628c19",
-    "source_tree": "87dfb974665f8d9eb23523ed951b29bac02fcf2c",
-    "git_commit": "8779214587ea05fc52a1ecbd448a8387f5628c19",
+    "generation_command": "python tools/scripts/generate_coverage.py --strict --output-json reports/coverage.json --output-md reports/coverage.md",
+    "generated_at_utc": "2026-08-19T01:57:26.835370+00:00",
+    "source_commit": "d01e39a467f0e46661d9459006396b2b8b42aea0",
+    "source_tree": "b9fe03860fdfa2e309dd9f8cc7c5e1d72bd9de61",
+    "git_commit": "d01e39a467f0e46661d9459006396b2b8b42aea0",
     "git_branch": "live-work-from-pass166",
-    "is_dirty_worktree": false,
-    "worktree_clean_before_generation": true,
+    "is_dirty_worktree": true,
+    "worktree_clean_before_generation": false,
     "report_schema_version": 2,
     "generator_source_digest": "932873e3e14efe2b1de49f9ccbdcb42d5ed95ec9308a5f5647d15f75deab0649",
     "manifest_count": 961,
-    "manifest_set_digest": "17de258695a30716e919b9def75dab8887c52b534cc72e7a7bb0d8da40b6d0bd"
+    "manifest_set_digest": "a1d259a513630f7aebcddabeeb478d70218aef013aa30291937d299f88619979"
   },
   "metrics": {
     "total_canonical_manifests_count": 961,
     "total_closed_ranges_count": 1289,
     "raw_claimed_bytes_before_union": 80879,
     "uniquely_closed_bytes_after_union": 59050,
-    "executable_closed_bytes": 38079,
-    "classified_data_closed_bytes": 20971,
+    "executable_closed_bytes": 28189,
+    "classified_data_closed_bytes": 30861,
     "whole_rom_capacity_bytes": 4194304,
     "whole_rom_coverage_pct": 1.4079,
     "active_banks_count": 23

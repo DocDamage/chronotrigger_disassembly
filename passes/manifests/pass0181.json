@@ -25,8 +25,13 @@
       "range": "C3:1AF0..C3:1BF4",
       "kind": "data",
       "label": "ct_c3_inline_mixed_opcode_cluster_with_weak_rtl_stub_and_unstable_multi_target_pocket_before_1c00_candidate__residual_1af0_1bf4",
-      "confidence": "medium-high",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_24c85955a82764c9b7ac"

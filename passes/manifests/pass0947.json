@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D5:CE2D..D5:CE5C",
-      "kind": "code_owner",
-      "label": "ct_d5_ce2d_score8_cluster",
+      "kind": "data",
+      "label": "ct_d5_ce2d_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "5E 4E 12 3E E0 97 F6 8B 3C 20 73 7C",
+        "reasoning": "Asset masks and absent aligned caller support disprove the historical cluster.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d5_ce2d_score8_cluster"
+    "ct_d5_ce2d_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -71,6 +71,7 @@ def load_effective_closed_ranges(
                         label=item.label,
                         confidence=item.confidence,
                         pass_number=10000 + item.note_number,
+                        verification_status='historical',
                     )
                 )
     ranges.sort(key=lambda item: (item.bank, item.start, item.end, item.pass_number))
@@ -101,6 +102,7 @@ def export_closed_ranges_snapshot(
                 'label': item.label,
                 'confidence': item.confidence,
                 'pass_number': item.pass_number,
+                'verification_status': item.verification_status,
             }
             for item in ranges
         ],
@@ -122,6 +124,7 @@ def load_closed_ranges_snapshot(snapshot_path: str | Path) -> list[ClosedRange]:
                 label=str(item.get('label', '')),
                 confidence=str(item.get('confidence', 'unknown')),
                 pass_number=int(item.get('pass_number', 0)),
+                verification_status=str(item.get('verification_status', 'pending')),
             )
         )
     return out

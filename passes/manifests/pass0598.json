@@ -22,10 +22,15 @@
     },
     {
       "range": "C2:82C1..C2:82D5",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c2_8249_8000_region_fn__residual_82c1_82d5",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Coherent 65816 execution is present, including the NMI/VBlank lane, but the legacy score windows do not uniformly prove complete function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_2ce289010f6f7cbf48d3"

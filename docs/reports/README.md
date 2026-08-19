@@ -1,6 +1,13 @@
 # `docs/reports/` Status
 
-This directory is mostly **historical report material**.
+This directory is mostly **historical report material**, plus the dated pre-disassembly audit reports.
+
+Current pre-disassembly authority:
+
+- `pre_disassembly_completion_2026-08-19.md` — final outcome, validation, risks, and the approval boundary
+- `pre_disassembly_baseline_2026-08-18.md` — immutable starting metrics
+- `pre_disassembly_priority_regions_2026-08-18.md` — C1–C4 priority review
+- `pre_disassembly_secondary_regions_2026-08-18.md` — C5–C7, CF, D1–D9, and upper-ROM review
 
 What it contains:
 - older toolkit doctor / release audit / workspace / completion reports

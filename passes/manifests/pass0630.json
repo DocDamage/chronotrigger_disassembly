@@ -22,10 +22,15 @@
     },
     {
       "range": "C0:CAD6..C0:CAD8",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c0_cab5_score7_fn__residual_cad6_cad8",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_53436ca351a6cd43a39c"

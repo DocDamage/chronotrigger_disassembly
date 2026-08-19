@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:7EEF..D6:7F0B",
-      "kind": "code_owner",
-      "label": "ct_d6_7eef_score6_cluster",
+      "kind": "data",
+      "label": "ct_d6_7eef_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "0B 06 05 02 02 60 64 16 11 3F 24 3D",
+        "reasoning": "Bounded graphic fields do not provide executable flow.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_7eef_score6_cluster"
+    "ct_d6_7eef_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

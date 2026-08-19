@@ -22,10 +22,15 @@
     },
     {
       "range": "C4:46B2..C4:46B6",
-      "kind": "code_owner",
-      "label": "ct_c4_46b2_score6_cluster__residual_46b2_46b6",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "kind": "data",
+      "label": "ct_c4_46b2_graphics_asset_data",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_asset_data",
+        "reasoning": "Repeated planes, masks, bounded indices, and record fields continue across claimed entries; opcode-count callers land inside those records.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_2b4c7e2d727ea52ebe1f"
@@ -36,10 +41,15 @@
     },
     {
       "range": "C4:46D0..C4:46D1",
-      "kind": "code_owner",
-      "label": "ct_c4_46b2_score6_cluster__residual_46d0_46d1",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "kind": "data",
+      "label": "ct_c4_46d0_graphics_asset_data",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_asset_data",
+        "reasoning": "Repeated planes, masks, bounded indices, and record fields continue across claimed entries; opcode-count callers land inside those records.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_2b4c7e2d727ea52ebe1f"
@@ -51,8 +61,8 @@
   ],
   "new_labels": [
     "ct_c4_46b2_score6_cluster",
-    "ct_c4_46b2_score6_cluster__residual_46b2_46b6",
-    "ct_c4_46b2_score6_cluster__residual_46d0_46d1"
+    "ct_c4_46b2_graphics_asset_data",
+    "ct_c4_46d0_graphics_asset_data"
   ],
   "confidence": {
     "structural": "medium",

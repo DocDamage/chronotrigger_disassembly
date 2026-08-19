@@ -29,16 +29,14 @@
     },
     {
       "range": "C7:BD30..C7:BD4E",
-      "kind": "code_owner",
-      "label": "ct_c7_bd2d_extended_with_bd36_cluster__residual_bd30_bd4e",
+      "kind": "data",
+      "label": "ct_c7_bd30_compressed_asset_data",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
       "evidence": {
-        "original": "BD2D-BD2F (pass 205, 3 bytes, strong anchor)",
-        "extension": "BD36-BD4E (score 4 cluster, 25 bytes)",
-        "gap": "9 bytes (BD2F-BD36)",
-        "combined_width": 34,
-        "note": "Extended minimal promotion with adjacent cluster"
+        "classification": "compressed_asset_data",
+        "reasoning": "Regular framing bytes recur through long ranges, while apparent JSR, REP, and return opcodes occur only as unaligned fields without coherent instruction flow.",
+        "review_source": "pre-disassembly review 2026-08-19"
       },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
@@ -51,7 +49,7 @@
   ],
   "new_labels": [
     "ct_c7_bd2d_extended_with_bd36_cluster",
-    "ct_c7_bd2d_extended_with_bd36_cluster__residual_bd30_bd4e"
+    "ct_c7_bd30_compressed_asset_data"
   ],
   "confidence": {
     "structural": "medium",

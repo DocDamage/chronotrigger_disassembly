@@ -8,14 +8,14 @@
   "closed_ranges": [
     {
       "range": "C4:9D10..C4:9D2A",
-      "kind": "code_owner",
-      "label": "ct_c4_9D10",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "kind": "data",
+      "label": "ct_c4_9d10_graphics_asset_data",
+      "confidence": "high",
+      "verification_status": "reviewed",
       "evidence": {
-        "reason": null,
-        "source": "backtrack",
-        "score": 6
+        "classification": "graphics_asset_data",
+        "reasoning": "Repeated planes, masks, bounded indices, and record fields continue across claimed entries; opcode-count callers land inside those records.",
+        "review_source": "pre-disassembly review 2026-08-19"
       },
       "legacy_metadata": {
         "raw_promotion": {
@@ -53,7 +53,7 @@
     }
   ],
   "new_labels": [
-    "ct_c4_9D10"
+    "ct_c4_9d10_graphics_asset_data"
   ],
   "confidence": {
     "structural": "medium",

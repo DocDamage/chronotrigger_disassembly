@@ -8,14 +8,19 @@
   "closed_ranges": [
     {
       "range": "DB:2190..DB:21A8",
-      "kind": "code_owner",
-      "label": "ct_db_2190_phb_handler",
+      "kind": "data",
+      "label": "ct_db_2190_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "reasoning": "Repeated bounded fields and plane masks do not form coherent callable execution.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_db_2190_phb_handler"
+    "ct_db_2190_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

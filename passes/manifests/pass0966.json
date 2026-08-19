@@ -22,10 +22,15 @@
     },
     {
       "range": "CF:1051..CF:1057",
-      "kind": "code_owner",
-      "label": "ct_cf_102f_phb_handler__residual_1051_1057",
+      "kind": "data",
+      "label": "ct_cf_1051_table_asset_data",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "table_asset_data",
+        "reasoning": "Regular little-endian words and repeating table fields persist across the claims; apparent calls and returns are unaligned values without coherent flow.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_34cb4188cbf1b0350230"
@@ -37,7 +42,7 @@
   ],
   "new_labels": [
     "ct_cf_102f_phb_handler",
-    "ct_cf_102f_phb_handler__residual_1051_1057"
+    "ct_cf_1051_table_asset_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -33,10 +33,15 @@
     },
     {
       "range": "C0:38A8..C0:38B2",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "CT_C0_3885_CROSS_BANK_LOADER_SCORE26__residual_38a8_38b2",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "raw_target": {
           "addr": "C0:3885",

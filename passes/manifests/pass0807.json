@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:68D3..D6:68F0",
-      "kind": "code_owner",
-      "label": "ct_d6_68d3_score6_cluster",
+      "kind": "data",
+      "label": "ct_d6_68d3_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "A2 0A 7F BC 16 C4 29 F8 C8 76 1B 04",
+        "reasoning": "Dense masks and pixel fields lack coherent execution or a strong caller.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_68d3_score6_cluster"
+    "ct_d6_68d3_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

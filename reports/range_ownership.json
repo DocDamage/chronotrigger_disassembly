@@ -1,18 +1,18 @@
 {
   "provenance": {
     "generator": "tools/scripts/validate_range_ownership.py",
-    "generation_command": "python tools/scripts/validate_range_ownership.py --strict --output-json 'C:\\Users\\dferr\\AppData\\Local\\Temp\\ct-clean-reports-996e56ff463a47169a10facf64e1641f\\range_ownership.json' --output-md 'C:\\Users\\dferr\\AppData\\Local\\Temp\\ct-clean-reports-996e56ff463a47169a10facf64e1641f\\range_ownership.md'",
-    "generated_at_utc": "2026-08-18T23:00:00.253344+00:00",
-    "source_commit": "8779214587ea05fc52a1ecbd448a8387f5628c19",
-    "source_tree": "87dfb974665f8d9eb23523ed951b29bac02fcf2c",
-    "git_commit": "8779214587ea05fc52a1ecbd448a8387f5628c19",
+    "generation_command": "python tools/scripts/validate_range_ownership.py --strict",
+    "generated_at_utc": "2026-08-19T01:57:27.454108+00:00",
+    "source_commit": "d01e39a467f0e46661d9459006396b2b8b42aea0",
+    "source_tree": "b9fe03860fdfa2e309dd9f8cc7c5e1d72bd9de61",
+    "git_commit": "d01e39a467f0e46661d9459006396b2b8b42aea0",
     "git_branch": "live-work-from-pass166",
-    "is_dirty_worktree": false,
-    "worktree_clean_before_generation": true,
+    "is_dirty_worktree": true,
+    "worktree_clean_before_generation": false,
     "report_schema_version": 2,
     "generator_source_digest": "8a8e5667ad5bf05674598cd81b83be73d4c47ff6b7929312f9039049e30be1a1",
     "manifest_count": 961,
-    "manifest_set_digest": "17de258695a30716e919b9def75dab8887c52b534cc72e7a7bb0d8da40b6d0bd"
+    "manifest_set_digest": "a1d259a513630f7aebcddabeeb478d70218aef013aa30291937d299f88619979"
   },
   "total_ranges": 1289,
   "total_manifests": 961,

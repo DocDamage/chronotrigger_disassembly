@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D5:933C..D5:9370",
-      "kind": "code_owner",
-      "label": "ct_d5_933c_score10_cluster",
+      "kind": "data",
+      "label": "ct_d5_933c_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "68 18 A0 80 E0 40 E0 40 D8 B0 20 B0",
+        "reasoning": "Symmetric mask fields and bounded asset values produced accidental opcode counts.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d5_933c_score10_cluster"
+    "ct_d5_933c_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

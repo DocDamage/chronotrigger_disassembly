@@ -5,7 +5,13 @@ import json
 from pathlib import Path
 from typing import Iterable
 
-from snes_utils import hirom_to_file_offset, parse_snes_range, slice_rom_range
+from snes_utils import (
+    format_snes_range as _format_snes_range,
+    hirom_to_file_offset,
+    parse_snes_address as _parse_snes_address,
+    parse_snes_range,
+    slice_rom_range,
+)
 
 BAD_START_HARD = {
     0x00: 'brk_or_barrier',
@@ -31,6 +37,16 @@ RETURNS = {0x60, 0x6B, 0x40}
 CALLS = {0x20, 0x22, 0x4C, 0x5C}
 STACKISH = {0x08, 0x28, 0x48, 0x68, 0xDA, 0xFA, 0x5A, 0x7A}
 BARRIERS = {0x00, 0x02, 0x42, 0xFF}
+
+
+def parse_snes_address(text: str) -> tuple[int, int]:
+    """Compatibility wrapper for legacy seam-analysis imports."""
+    return _parse_snes_address(text)
+
+
+def format_snes_range(bank: int, start: int, end: int) -> str:
+    """Compatibility wrapper for legacy seam-analysis imports."""
+    return _format_snes_range(bank, start, end)
 
 def snes_to_offset(bank: int, addr: int) -> int:
     return hirom_to_file_offset(bank, addr)

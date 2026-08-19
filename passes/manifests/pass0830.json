@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:5848..D4:5878",
-      "kind": "code_owner",
-      "label": "ct_d4_5848_jsr_handler",
+      "kind": "data",
+      "label": "ct_d4_5848_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "20 60 D0 F0 A8 D0 E8 10 E0 20 E0 20",
+        "reasoning": "Mirrored plane masks transition to compact pixel-row values; no coherent JSR operand or caller exists.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_5848_jsr_handler"
+    "ct_d4_5848_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

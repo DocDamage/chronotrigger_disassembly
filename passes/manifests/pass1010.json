@@ -10,24 +10,12 @@
       "range": "C3:1627..C3:1642",
       "kind": "code_owner",
       "label": "ct_c3_1627_multi_return_handler",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
       "evidence": {
-        "reasoning": [
-          "Cluster score 6 - highest confidence in remaining candidates",
-          "1 call reference, 4 branches, 3 returns",
-          "28-byte multi-path function with complex flow",
-          "ASCII ratio 0.286 - low data content",
-          "3 child islands merged - well-structured routine"
-        ],
-        "findings": {
-          "calls": 1,
-          "branches": 4,
-          "stack_ops": 0,
-          "returns": 3,
-          "first_return": "C3:162F"
-        },
-        "score": 6
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
       },
       "legacy_metadata": {
         "raw_single_function": true
@@ -35,14 +23,14 @@
     },
     {
       "range": "C1:3FC5..C1:3FDE",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c1_3fc5_score7_s29",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
       "evidence": {
-        "reasoning": null,
-        "findings": null,
-        "score": 7
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Instruction-aligned code is present, while caller and enclosing-owner analysis shows that score windows frequently begin at fall-through or operand offsets; ownership is therefore deferred to disassembly.",
+        "review_source": "pre-disassembly review 2026-08-19"
       },
       "legacy_metadata": {
         "raw_single_function": true

@@ -11,6 +11,8 @@ from snes_utils import load_manifest, manifest_closed_ranges, manifest_pass_numb
 
 
 EXECUTABLE_KINDS = {
+    'code_owner',
+    'code_helper',
     'owner',
     'helper',
     'veneer',
@@ -41,6 +43,7 @@ class ClosedRange:
     label: str
     confidence: str
     pass_number: int
+    verification_status: str = 'pending'
 
     @property
     def width(self) -> int:
@@ -70,6 +73,8 @@ def load_closed_ranges(manifests_dir: str | Path) -> list[ClosedRange]:
         data = load_manifest(path)
         pass_number = manifest_pass_number(data, path)
         for item in manifest_closed_ranges(data):
+            if item.get('kind') == 'superseded':
+                continue
             bank, start, end = parse_snes_range(item['range'])
             ranges.append(
                 ClosedRange(
@@ -80,6 +85,7 @@ def load_closed_ranges(manifests_dir: str | Path) -> list[ClosedRange]:
                     label=item.get('label', ''),
                     confidence=item.get('confidence', 'unknown'),
                     pass_number=pass_number,
+                    verification_status=item.get('verification_status', 'pending'),
                 )
             )
     ranges.sort(key=lambda item: (item.bank, item.start, item.end, item.pass_number))
@@ -104,12 +110,13 @@ def classify_caller_context(closed_ranges: Iterable[ClosedRange], caller_text: s
             'caller_kind_family': 'unknown',
             'caller_label': '',
             'caller_confidence': 'unknown',
+            'caller_verification_status': 'unknown',
         }
     family = classify_kind(match.kind)
     if family == 'code':
-        status = 'resolved_code'
+        status = 'resolved_code' if match.verification_status in {'reviewed', 'accepted'} else 'pending_code'
     elif family == 'data':
-        status = 'resolved_data'
+        status = 'resolved_data' if match.verification_status in {'reviewed', 'accepted'} else 'pending_data'
     else:
         status = 'resolved_unknown'
     return {
@@ -118,6 +125,7 @@ def classify_caller_context(closed_ranges: Iterable[ClosedRange], caller_text: s
         'caller_kind_family': family,
         'caller_label': match.label,
         'caller_confidence': match.confidence,
+        'caller_verification_status': match.verification_status,
     }
 
 
@@ -126,9 +134,9 @@ def anchor_strength(validity: str, caller_status: str) -> str:
         return 'invalid'
     if caller_status == 'resolved_code':
         return 'strong'
-    if caller_status == 'unresolved':
+    if caller_status in {'unresolved', 'pending_code'}:
         return 'weak'
-    if caller_status == 'resolved_data':
+    if caller_status in {'resolved_data', 'pending_data'}:
         return 'suspect'
     return 'weak'
 

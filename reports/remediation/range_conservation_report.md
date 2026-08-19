@@ -1,11 +1,12 @@
 # Manifest and Range Conservation Report
 
-- **Baseline Sources Count**: 1000
-- **Accounted Sources Count**: 1000
-- **Missing Sources Count**: 0
-- **Canonical Closed Ranges Count**: 1105
-- **Missing Ranges Count**: 0
+- Baseline sources: **1000**
+- Accounted source path/hash pairs: **1000**
+- Baseline range records: **1105**
+- Canonical range records: **1289**
+- Missing sources: **0**
+- Missing ranges: **0**
+- Range-bearing parse errors: **0**
+- Archived non-range artifacts: **1**
 
-## Discrepancy Summary
-
-✅ **Zero Loss**: All 1,000 baseline sources and all closed ranges are strictly conserved.
+Zero unexplained source or range loss.

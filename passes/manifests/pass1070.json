@@ -24,10 +24,15 @@
     },
     {
       "range": "C0:6F02..C0:6F07",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c0_6ef9_score6_s27__residual_6f02_6f07",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_4c31b08bcb93bd45fb3a",
@@ -40,10 +45,15 @@
     },
     {
       "range": "C0:6F0C..C0:6F0C",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c0_6ef9_score6_s27__residual_6f0c_6f0c",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_4c31b08bcb93bd45fb3a",

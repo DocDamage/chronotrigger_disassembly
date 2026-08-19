@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D5:AE41..D5:AE63",
-      "kind": "code_owner",
-      "label": "ct_d5_ae41_score8_cluster",
+      "kind": "data",
+      "label": "ct_d5_ae41_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "FA 1E E2 44 1E C0 E3 01 90 F0 80 0C",
+        "reasoning": "Mask progression and absent caller support contradict a callable range.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d5_ae41_score8_cluster"
+    "ct_d5_ae41_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

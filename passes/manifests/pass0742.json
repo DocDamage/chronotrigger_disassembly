@@ -8,10 +8,15 @@
   "closed_ranges": [
     {
       "range": "CF:E777..CF:E799",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_cf_e777_ldy_handler",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Upper-bank ranges contain coherent aligned 65816 execution, but legacy score windows do not uniformly prove complete owner boundaries; lower-bank false positives are subsequently corrected to data.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [

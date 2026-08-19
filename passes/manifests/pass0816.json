@@ -11,9 +11,9 @@
       "kind": "superseded",
       "label": "ct_cf_c0b0_score6_cluster",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "superseded",
       "parent_range": "CF:C0B4..CF:C0D8",
-      "parent_label": "ct_cf_c0b4_score6_cluster",
+      "parent_label": "ct_cf_c0b4_tilemap_data",
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_b5fc9be5613730cd0e6f"
@@ -22,10 +22,15 @@
     },
     {
       "range": "CF:C0B0..CF:C0B3",
-      "kind": "code_owner",
-      "label": "ct_cf_c0b0_score6_cluster__residual_c0b0_c0b3",
+      "kind": "tail_fragment",
+      "label": "ct_cf_c0b0_tilemap_data_residual",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Upper-bank ranges contain coherent aligned 65816 execution, but legacy score windows do not uniformly prove complete owner boundaries; lower-bank false positives are subsequently corrected to data.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_b5fc9be5613730cd0e6f"
@@ -37,7 +42,7 @@
   ],
   "new_labels": [
     "ct_cf_c0b0_score6_cluster",
-    "ct_cf_c0b0_score6_cluster__residual_c0b0_c0b3"
+    "ct_cf_c0b0_tilemap_data_residual"
   ],
   "confidence": {
     "structural": "medium",

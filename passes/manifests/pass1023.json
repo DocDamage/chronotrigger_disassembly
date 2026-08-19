@@ -41,27 +41,14 @@
     },
     {
       "range": "C0:20A0..C0:20BC",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c0_20a0_data_processor__residual_20a0_20bc",
-      "confidence": "medium",
-      "verification_status": "pending",
+      "confidence": "high",
+      "verification_status": "reviewed",
       "evidence": {
-        "reasoning": [
-          "Score 5 cluster following high-confidence 206D region",
-          "Multiple branch instructions detected",
-          "Located immediately after score-7 cluster at 206D",
-          "33 bytes - suggests related processing function",
-          "May be continuation or related handler to 206D",
-          "Pattern consistent with data processing routine"
-        ],
-        "findings": {
-          "calls": 1,
-          "branches": 3,
-          "stack_ops": 0,
-          "returns": 2,
-          "first_return": "C0:20B8"
-        },
-        "score": 5
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
       },
       "legacy_metadata": {
         "raw_single_function": true,

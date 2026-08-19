@@ -22,10 +22,15 @@
     },
     {
       "range": "C0:7F57..C0:7FC8",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c0_7f43_strong_target__residual_7f57_7fc8",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_10a73dbfedf99dda4fb7"

@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:0430..D4:0446",
-      "kind": "code_owner",
-      "label": "ct_d4_0430_php_handler",
+      "kind": "data",
+      "label": "ct_d4_0430_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "08 08 08 0C 06 05 04 07 08 0C 08 09",
+        "reasoning": "Repeated pixel-row values and paired masks contradict instruction-aligned execution.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_0430_php_handler"
+    "ct_d4_0430_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -23,6 +23,7 @@ from tools.ctrepo.manifest_discovery import discover_manifest_candidates
 from tools.ctrepo.manifest_validation import validate_manifest
 from tools.ctrepo.policy_validation import validate_all_policy_registries, validate_waiver_registry
 from tools.ctrepo.range_model import detect_range_conflicts
+from tools.scripts.audit_toolkit_entrypoints import run_audit
 
 
 def stable_pytest_summary(output: str) -> str:
@@ -83,7 +84,17 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
             "reason": str(e)
         })
 
-    # 3. Canonical Manifest Integrity Check
+    # 3. Toolkit import surfaces and executable CLI entrypoints
+    entrypoint_report, entrypoint_ok = run_audit()
+    if not entrypoint_ok:
+        has_failures = True
+    checks.append({
+        "name": "toolkit_entrypoint_integrity",
+        "status": "pass" if entrypoint_ok else "fail",
+        **entrypoint_report,
+    })
+
+    # 4. Canonical Manifest Integrity Check
     manifest_candidates = discover_manifest_candidates(manifests_dir=str(root / "passes/manifests"))
     manifest_errors = []
     duplicate_passes = {}
@@ -115,7 +126,7 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
         "errors": manifest_errors[:20]
     })
 
-    # 4. Range Ownership & Conflict Check
+    # 5. Range Ownership & Conflict Check
     ranges_with_meta = []
     for c in manifest_candidates:
         if c.manifest:
@@ -143,7 +154,7 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
         "waiver_registry_errors": waiver_errors,
     })
 
-    # 5. Branch State & Gaps Check
+    # 6. Branch State & Gaps Check
     try:
         res = subprocess.run(
             [sys.executable, str(root / "tools/scripts/audit_branch_state_v1.py"), "--strict-gaps"],
@@ -165,7 +176,7 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
             "error": str(e)
         })
 
-    # 6. Policy registries and their evidence
+    # 7. Policy registries and their evidence
     policy_errors = validate_all_policy_registries()
     policy_ok = not policy_errors
     if not policy_ok:
@@ -176,7 +187,7 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
         "errors": policy_errors,
     })
 
-    # 7. Pytest Unit Tests
+    # 8. Pytest Unit Tests
     try:
         res = subprocess.run(
             [sys.executable, "-m", "pytest", "-q"],
@@ -198,7 +209,7 @@ def run_doctor(strict: bool = False) -> Tuple[Dict[str, Any], bool]:
             "error": str(e)
         })
 
-    # 8. Prohibited binaries and generated caches in Git tracking
+    # 9. Prohibited binaries and generated caches in Git tracking
     try:
         res = subprocess.run(
             [sys.executable, str(root / "tools/scripts/validate_binary_policy.py")],

@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:0F3F..D4:0F42",
-      "kind": "code_owner",
-      "label": "ct_d4_0f3f_php_short",
+      "kind": "data",
+      "label": "ct_d4_0f3f_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "08 34 E8 60",
+        "reasoning": "The apparent PHP/RTS pair is an unaligned four-byte slice with no caller and graphics-like neighbors.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_0f3f_php_short"
+    "ct_d4_0f3f_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

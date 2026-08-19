@@ -11,15 +11,25 @@
       "range": "C3:1318..C3:13F7",
       "kind": "data",
       "label": "ct_c3_inline_mixed_control_dispatch_and_dma_setup_blob_preceding_tiny_eb7b_wrapper",
-      "confidence": "medium",
-      "verification_status": "pending"
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     },
     {
       "range": "C3:13F8..C3:13FB",
       "kind": "veneer",
       "label": "ct_c3_tiny_local_wrapper_calling_eb7b_then_returning",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [

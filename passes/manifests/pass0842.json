@@ -8,14 +8,19 @@
   "closed_ranges": [
     {
       "range": "DF:6497..DF:64C0",
-      "kind": "code_owner",
-      "label": "ct_df_6497_score12_cluster",
+      "kind": "data",
+      "label": "ct_df_6497_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "reasoning": "Dense masks and bounded asset fields lack coherent aligned control flow or verified callers.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_df_6497_score12_cluster"
+    "ct_df_6497_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -1,0 +1,854 @@
+{
+  "$schema": "tools/config/schemas/manifest_corrections.schema.json",
+  "schema_version": 1,
+  "source_commit": "d01e39a467f0e46661d9459006396b2b8b42aea0",
+  "description": "Reviewed factual corrections applied after immutable legacy sources are migrated and ownership overlaps are adjudicated.",
+  "correction_count": 1115,
+  "corrections": [
+    {
+      "correction_id": "corr_c3_8912_data",
+      "subject": { "pass_number": 998, "range": "C3:8912..C3:8939", "label": "ct_c3_8912_php_prologue" },
+      "reason": "Instruction-aligned review disproved the historical function claim while preserving the original source manifest unchanged.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0998.json"],
+      "updates": {
+        "kind": "data",
+        "label": "ct_c3_8912_structured_data",
+        "confidence": "high",
+        "verification_status": "reviewed",
+        "evidence": {
+          "classification": "structured_data",
+          "byte_prefix": "08 6B EB 7F 7F EF 80 EF",
+          "contradictions": ["PHP is followed immediately by RTL with no balancing PLP", "no incoming call or jump targets C3:8912", "the prior score counted opcode-valued bytes without instruction alignment"],
+          "review_source": "pre-disassembly review 2026-08-18"
+        }
+      }
+    },
+    {
+      "correction_id": "corr_c3_8912_duplicate",
+      "subject": { "pass_number": 1223, "range": "C3:8912..C3:8939", "label": "ct_c3_8912" },
+      "reason": "The duplicate remains superseded provenance and now points to the corrected active data classification.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1223.json"],
+      "updates": { "verification_status": "superseded", "parent_label": "ct_c3_8912_structured_data" }
+    },
+    {
+      "correction_id": "corr_c3_8c8e_data",
+      "subject": { "pass_number": 230, "range": "C3:8C8E..C3:8CFF", "label": "ct_c3_8c8e_unknown_function_score6_cluster" },
+      "reason": "Record structure and the absence of an aligned entry disprove the historical executable classification.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0230.json"],
+      "updates": {
+        "kind": "data",
+        "label": "ct_c3_8c8e_command_data_stream",
+        "confidence": "high",
+        "verification_status": "reviewed",
+        "evidence": {
+          "classification": "structured_command_data",
+          "byte_prefix": "22 12 07 01 12 22 51 00 07 01 13 22",
+          "contradictions": ["repeating short records continue across the claimed range", "apparent calls and returns occur at unaligned record-field positions", "no defensible entry boundary or caller exists at C3:8C8E"],
+          "review_source": "pre-disassembly review 2026-08-18"
+        }
+      }
+    },
+    {
+      "correction_id": "corr_c4_6bda_data",
+      "subject": { "pass_number": 737, "range": "C4:6BDA..C4:6BE1", "label": "ct_c4_6bda_handler_score6" },
+      "reason": "Patterned neighbors and lack of any incoming caller disprove the isolated apparent long-jump function.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0737.json"],
+      "updates": {
+        "kind": "data",
+        "label": "ct_c4_6bda_pattern_table_fragment",
+        "confidence": "high",
+        "verification_status": "reviewed",
+        "evidence": {
+          "classification": "pattern_table",
+          "byte_prefix": "5C FC EC FC FA 04 B8 40",
+          "contradictions": ["the apparent JML is embedded in a patterned table", "no incoming call or jump targets C4:6BDA", "bytes following the four-byte opcode do not form a supported executable continuation"],
+          "review_source": "pre-disassembly review 2026-08-18"
+        }
+      }
+    },
+    {
+      "correction_id": "corr_c4_772e_data",
+      "subject": { "pass_number": 731, "range": "C4:772E..C4:774A", "label": "ct_c4_772e_cluster_score10" },
+      "reason": "Bitplane and mask patterns, overlapping offset windows, and the absence of an aligned caller disprove the historical executable supercluster.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0731.json"],
+      "updates": {
+        "kind": "data",
+        "label": "ct_c4_772e_graphics_bitplane_data",
+        "confidence": "high",
+        "verification_status": "reviewed",
+        "evidence": {
+          "classification": "graphics_bitplane_data",
+          "byte_prefix": "81 28 70 01 FA C0 80 8B C0 C0 8F 04",
+          "contradictions": ["bit-mask and plane-like patterns continue across the region", "the overlapping score windows begin at different offsets inside the same data", "no instruction-aligned caller supports C4:772E, C4:7730, or C4:7732"],
+          "review_source": "pre-disassembly review 2026-08-18"
+        }
+      }
+    },
+    {
+      "correction_id": "corr_c4_7730_superseded",
+      "subject": { "pass_number": 732, "range": "C4:7730..C4:7748", "label": "ct_c4_7730_handler_score7" },
+      "reason": "The overlapping score-seven window is provenance for the corrected graphics-data range, not a separate executable owner.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0732.json"],
+      "updates": { "verification_status": "superseded", "parent_label": "ct_c4_772e_graphics_bitplane_data" }
+    },
+    {
+      "correction_id": "corr_c4_7732_superseded",
+      "subject": { "pass_number": 733, "range": "C4:7732..C4:774A", "label": "ct_c4_7732_handler_score7" },
+      "reason": "The nested score-seven window is superseded provenance inside the same reviewed graphics-data block.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0733.json"],
+      "updates": { "verification_status": "superseded" }
+    },
+    {
+      "correction_id": "corr_d4_0037_data",
+      "subject": { "pass_number": 864, "range": "D4:0037..D4:004E", "label": "ct_d4_0037_php_handler" },
+      "reason": "Symmetric plane and mask bytes disprove the PHP-handler interpretation.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0864.json"],
+      "updates": { "kind": "data", "label": "ct_d4_0037_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "08 1F 10 1F 10 1D 12 19 14 C0 E0 20", "reasoning": "Mirrored low-bit plane values and mask-like high bytes continue through the range; opcode-valued bytes are table fields.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_0430_data",
+      "subject": { "pass_number": 865, "range": "D4:0430..D4:0446", "label": "ct_d4_0430_php_handler" },
+      "reason": "Repeated low-nibble rows and final mask bytes identify graphics data, not a handler.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0865.json"],
+      "updates": { "kind": "data", "label": "ct_d4_0430_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "08 08 08 0C 06 05 04 07 08 0C 08 09", "reasoning": "Repeated pixel-row values and paired masks contradict instruction-aligned execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_0897_data",
+      "subject": { "pass_number": 878, "range": "D4:0897..D4:089B", "label": "ct_d4_0897_pha_rts" },
+      "reason": "The five-byte PHA/RTS interpretation is an accidental opcode reading inside graphics data.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0878.json"],
+      "updates": { "kind": "data", "label": "ct_d4_0897_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "48 DF A0 7F 40", "reasoning": "The bytes form mask values consistent with neighboring D4 graphics records and have no aligned caller.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_0a2f_data",
+      "subject": { "pass_number": 866, "range": "D4:0A2F..D4:0A46", "label": "ct_d4_0a2f_phd_handler" },
+      "reason": "Pixel-row values and a terminal mask byte disprove the PHD-handler interpretation.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0866.json"],
+      "updates": { "kind": "data", "label": "ct_d4_0a2f_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "0B 23 2C 22 29 32 28 20 21 17 10 0B", "reasoning": "The range is a compact array of bounded pixel-row values, not a coherent instruction stream.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_0f3f_data",
+      "subject": { "pass_number": 880, "range": "D4:0F3F..D4:0F42", "label": "ct_d4_0f3f_php_short" },
+      "reason": "A four-byte score window is insufficient and is consistent with adjacent graphics masks.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0880.json"],
+      "updates": { "kind": "data", "label": "ct_d4_0f3f_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "08 34 E8 60", "reasoning": "The apparent PHP/RTS pair is an unaligned four-byte slice with no caller and graphics-like neighbors.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_0ff5_data",
+      "subject": { "pass_number": 867, "range": "D4:0FF5..D4:100A", "label": "ct_d4_0ff5_php_handler" },
+      "reason": "Repeated mirrored rows and high-bit masks identify graphics data.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0867.json"],
+      "updates": { "kind": "data", "label": "ct_d4_0ff5_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "08 0F 08 17 18 17 18 1B 14 1B 14 80", "reasoning": "Mirrored row pairs followed by 80/00 masks contradict executable control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_4008_data",
+      "subject": { "pass_number": 787, "range": "D4:4008..D4:4026", "label": "ct_d4_4008_score7_cluster" },
+      "reason": "Bounded repeated rows and mask bytes disprove the score-seven code cluster.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0787.json"],
+      "updates": { "kind": "data", "label": "ct_d4_4008_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "0B 0B 0C 0C 0C 0C 08 08 1B 14 1B 14", "reasoning": "Repeated pixel rows and terminal plane masks form graphics records rather than aligned instructions.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_4027_data",
+      "subject": { "pass_number": 817, "range": "D4:4027..D4:4030", "label": "ct_d4_4008_score6_cluster__residual_4027_4030" },
+      "reason": "The adjudicated residual continues the same graphics mask record.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0817.json"],
+      "updates": { "kind": "data", "label": "ct_d4_4027_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "40 00 00 80 80 80 A0 90 B0 68", "reasoning": "High-bit mask values directly continue the graphics range at D4:4008.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_40ad_data",
+      "subject": { "pass_number": 818, "range": "D4:40AD..D4:40D0", "label": "ct_d4_40ad_ldy_handler" },
+      "reason": "Mirrored mask pairs and bounded rows identify bitplane data, not an LDY handler.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0818.json"],
+      "updates": { "kind": "data", "label": "ct_d4_40ad_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "A0 90 B0 D8 28 D8 28 D0 30 D0 30 A0", "reasoning": "Symmetric high/low mask pairs transition into compact pixel-row indices, contradicting execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_45bb_data",
+      "subject": { "pass_number": 786, "range": "D4:45BB..D4:45EB", "label": "ct_d4_45bb_score9_cluster" },
+      "reason": "The bank's highest historical score is still a graphics record composed of bounded rows and plane masks.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0786.json"],
+      "updates": { "kind": "data", "label": "ct_d4_45bb_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "04 0C 0C 1C 14 0B 0E 15 0F 06 0C 08", "reasoning": "Pixel-row values followed by mirrored masks and no strong caller disprove the score-nine cluster.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_4831_data",
+      "subject": { "pass_number": 819, "range": "D4:4831..D4:4860", "label": "ct_d4_4831_score6_cluster" },
+      "reason": "Repeated words and progressive masks identify graphics bitplanes.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0819.json"],
+      "updates": { "kind": "data", "label": "ct_d4_4831_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "20 3F 20 3F 20 3F 20 DB C2 F1 01 70", "reasoning": "Repeated 20/3F words and progressive F8/08 through FF/0F masks are graphic planes, not calls and branches.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_5014_data",
+      "subject": { "pass_number": 820, "range": "D4:5014..D4:5040", "label": "ct_d4_5014_score6_cluster" },
+      "reason": "Paired masks followed by bounded pixel rows disprove the code-cluster interpretation.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0820.json"],
+      "updates": { "kind": "data", "label": "ct_d4_5014_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "A0 20 60 20 E0 60 B0 B0 28 28 B0 B0", "reasoning": "The sequence is structured plane/mask data and lacks an instruction-aligned caller.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_5451_data",
+      "subject": { "pass_number": 821, "range": "D4:5451..D4:5480", "label": "ct_d4_5451_jsl_handler" },
+      "reason": "Repeated row and mask structures disprove the accidental JSL-start interpretation.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0821.json"],
+      "updates": { "kind": "data", "label": "ct_d4_5451_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "22 2D 22 32 2D 4D 60 82 91 C3 AC 96", "reasoning": "The leading 22 byte is a graphics value; plane pairs and masks continue without coherent call operands.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_5691_data",
+      "subject": { "pass_number": 829, "range": "D4:5691..D4:56C0", "label": "ct_d4_5691_jsl_handler" },
+      "reason": "The range repeats the same graphics header as D4:5451 and continues as masks.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0829.json"],
+      "updates": { "kind": "data", "label": "ct_d4_5691_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "22 2D 22 32 2D 4D 60 82 91 C3 AC 96", "reasoning": "An identical non-code header recurs at D4:5451; the remaining bytes are symmetric plane masks.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_5848_data",
+      "subject": { "pass_number": 830, "range": "D4:5848..D4:5878", "label": "ct_d4_5848_jsr_handler" },
+      "reason": "Progressive masks and bounded rows disprove the accidental JSR-start interpretation.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0830.json"],
+      "updates": { "kind": "data", "label": "ct_d4_5848_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "20 60 D0 F0 A8 D0 E8 10 E0 20 E0 20", "reasoning": "Mirrored plane masks transition to compact pixel-row values; no coherent JSR operand or caller exists.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d4_f1cc_data",
+      "subject": { "pass_number": 843, "range": "D4:F1CC..D4:F1EC", "label": "ct_d4_f1cc_score8_cluster" },
+      "reason": "Mask pairs at the end of the claimed score-eight window identify graphics data.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass0843.json"],
+      "updates": { "kind": "data", "label": "ct_d4_f1cc_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "B1 97 C9 CB CE 31 80 7F B4 43 AA 41", "reasoning": "The sequence ends in progressive 20/5F, 40/3F, 30/0F and F8/08 masks and has no aligned caller.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_002a_data", "subject": { "pass_number": 848, "range": "D6:002A..D6:0043", "label": "ct_d6_002a_hub_entry" }, "reason": "The claimed hub entry is compressed graphics data, not coherent aligned execution.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_002a_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "08 C0 60 80 3C 30 78 78 18 48 B0 0C", "reasoning": "Plane masks and bounded row fields contradict the historical opcode-count interpretation.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_00e0_data", "subject": { "pass_number": 858, "range": "D6:00E0..D6:00FC", "label": "ct_d6_00e0_hub_entry" }, "reason": "The claimed hub entry is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_00e0_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "08 70 14 08 28 1C 81 16 70 1C 1C 22", "reasoning": "Bounded row fields and masks have no coherent call boundary.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_0cd8_data", "subject": { "pass_number": 873, "range": "D6:0CD8..D6:0CF0", "label": "ct_d6_0cd8_score7_cluster" }, "reason": "The score-seven cluster is compressed asset data, not executable code.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_0cd8_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "28 18 48 A8 8B 1C 0C A0 60 80 05 83", "reasoning": "The bytes are graphics fields rather than a balanced instruction stream.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_15db_data", "subject": { "pass_number": 860, "range": "D6:15DB..D6:15FA", "label": "ct_d6_15db_score8_cluster" }, "reason": "The score-eight cluster is mask and graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_15db_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "5C FA FB F4 57 E8 B8 47 40 CE 30 D0", "reasoning": "Mask-like values continue without coherent long-jump operands or caller support.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_3af0_data", "subject": { "pass_number": 839, "range": "D6:3AF0..D6:3B1E", "label": "ct_d6_3af0_score8_cluster" }, "reason": "The historical cluster is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_3af0_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "E8 08 4F 01 F0 92 A2 1C D0 36 40 03", "reasoning": "Dense bounded fields and masks contradict aligned control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_3c35_data", "subject": { "pass_number": 874, "range": "D6:3C35..D6:3C4D", "label": "ct_d6_3c35_score7_cluster" }, "reason": "The historical cluster is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_3c35_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "80 E0 7C C0 E8 80 A1 06 82 56 80 46", "reasoning": "Plane masks and asset fields have no defensible entry or return path.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_6165_data", "subject": { "pass_number": 806, "range": "D6:6165..D6:6186", "label": "ct_d6_6165_score6_cluster" }, "reason": "The score-six window is a graphics record.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_6165_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "A0 56 40 80 80 40 C0 20 40 C0 20 A0", "reasoning": "Symmetric masks followed by bounded row indices disprove code.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_62b0_data", "subject": { "pass_number": 822, "range": "D6:62B0..D6:62CD", "label": "ct_d6_62b0_score6_cluster" }, "reason": "The score-six window is a graphics record.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_62b0_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "A0 60 50 30 C8 00 38 00 F0 04 7C 1C", "reasoning": "Mask values transition into bounded row fields without coherent execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_6404_data", "subject": { "pass_number": 823, "range": "D6:6404..D6:641D", "label": "ct_d6_6404_score6_cluster" }, "reason": "The score-six window is compressed asset data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_6404_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "0B 1E 1B 04 20 00 0F 60 47 C0 83 82", "reasoning": "Bounded fields and plane values do not form an aligned subroutine.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_68d3_data", "subject": { "pass_number": 807, "range": "D6:68D3..D6:68F0", "label": "ct_d6_68d3_score6_cluster" }, "reason": "The score-six window is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_68d3_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "A2 0A 7F BC 16 C4 29 F8 C8 76 1B 04", "reasoning": "Dense masks and pixel fields lack coherent execution or a strong caller.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_68fb_data", "subject": { "pass_number": 785, "range": "D6:68FB..D6:692F", "label": "ct_d6_68fb_score8_cluster" }, "reason": "The score-eight window is a composite graphics record.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_68fb_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "06 04 0C 08 80 0F 08 0B 0C 04 07 03", "reasoning": "Pixel rows and masks, including the flagged RTI/RTS proximity, disprove aligned code.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_6c2d_data", "subject": { "pass_number": 808, "range": "D6:6C2D..D6:6C48", "label": "ct_d6_6c2d_php_prologue" }, "reason": "The apparent PHP is a graphics field rather than a callable prologue.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_6c2d_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "08 7C 9F C0 80 40 E0 F9 72 FE 10 F1", "reasoning": "Mask progression and absent caller contradict a function prologue.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_72ef_data", "subject": { "pass_number": 831, "range": "D6:72EF..D6:7314", "label": "ct_d6_72ef_phx_handler" }, "reason": "The apparent PHX is a graphics field rather than a callable handler.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_72ef_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "DA FA 76 BC B4 B8 08 A8 B0 B0 40 05", "reasoning": "Mask bytes followed by bounded pixel rows do not form a handler.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_763a_data", "subject": { "pass_number": 809, "range": "D6:763A..D6:7660", "label": "ct_d6_763a_rep_handler" }, "reason": "The apparent REP is a compressed graphics byte.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_763a_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "C2 87 1A A0 54 88 08 80 A0 64 6E C8", "reasoning": "Plane masks and row values have no coherent status-width flow or caller.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_7bfe_data", "subject": { "pass_number": 824, "range": "D6:7BFE..D6:7C1F", "label": "ct_d6_7bfe_score6_cluster" }, "reason": "The score-six window is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_7bfe_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "A0 03 B4 2B 01 26 11 10 1F 00 60 00", "reasoning": "Asset fields and masks contradict an aligned owner boundary.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_7eef_data", "subject": { "pass_number": 832, "range": "D6:7EEF..D6:7F0B", "label": "ct_d6_7eef_score6_cluster" }, "reason": "The score-six window is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_7eef_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "0B 06 05 02 02 60 64 16 11 3F 24 3D", "reasoning": "Bounded graphic fields do not provide executable flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_8bc8_data", "subject": { "pass_number": 875, "range": "D6:8BC8..D6:8BE0", "label": "ct_d6_8bc8_score7_cluster" }, "reason": "The score-seven window is pixel-row data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_8bc8_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "05 01 0B 01 34 20 05 06 04 07 04 07", "reasoning": "Small bounded values and row repetition contradict code.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_973f_data", "subject": { "pass_number": 835, "range": "D6:973F..D6:976A", "label": "ct_d6_973f_score9_cluster" }, "reason": "The score-nine window is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_973f_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "09 0F 13 1D E6 FA C6 3A C0 18 E0 60", "reasoning": "Masks and pixel rows lack a coherent entry, call, or return path.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_a412_data", "subject": { "pass_number": 876, "range": "D6:A412..D6:A433", "label": "ct_d6_a412_score7_cluster" }, "reason": "The score-seven window is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_a412_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "80 AC 3F 6B 2F DB 10 5E DE F0 F0 D9", "reasoning": "High-bit masks and asset fields contradict executable flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_b384_data", "subject": { "pass_number": 877, "range": "D6:B384..D6:B3A1", "label": "ct_d6_b384_score7_cluster" }, "reason": "The score-seven window is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_b384_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "71 20 72 43 81 97 0E 04 10 38 81 14", "reasoning": "Plane fields and masks do not establish an aligned subroutine.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_be65_data", "subject": { "pass_number": 834, "range": "D6:BE65..D6:BE8A", "label": "ct_d6_be65_score10_cluster" }, "reason": "The bank's score-ten cluster is a false positive in graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_be65_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "05 9D 07 03 20 10 F4 C0 FE 80 C0 FA", "reasoning": "Progressive plane masks and bounded fields produced accidental calls and returns.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_c0ef_data", "subject": { "pass_number": 859, "range": "D6:C0EF..D6:C10B", "label": "ct_d6_c0ef_hub_entry" }, "reason": "The claimed hub entry is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_c0ef_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "0B 1F A1 1B FD 06 06 1D AB 37 04 16", "reasoning": "Asset fields and coincidental return bytes lack a strong aligned caller.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_d47b_data", "subject": { "pass_number": 840, "range": "D6:D47B..D6:D4A4", "label": "ct_d6_d47b_score8_cluster" }, "reason": "The score-eight window is compressed graphics data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_d47b_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "04 01 7A 0C 01 01 0E 0F 19 15 1C 80", "reasoning": "Bounded rows and masks do not form a coherent callable range.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d6_d94c_data", "subject": { "pass_number": 863, "range": "D6:D94C..D6:D96A", "label": "ct_d6_d94c_score8_cluster" }, "reason": "The score-eight window is graphics plane data.", "evidence": ["reports/pre_disassembly_d6_compact_scan.json"], "updates": { "kind": "data", "label": "ct_d6_d94c_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "E0 20 19 E6 4D C0 60 0A 10 80 20 10", "reasoning": "Symmetric plane values and masks contradict aligned control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d2_8096_data", "subject": { "pass_number": 794, "range": "D2:8096..D2:80AE", "label": "ct_d2_8096_score6_cluster" }, "reason": "The score-six window is a compact graphics and mask record rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d2_8096_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "04 03 17 10 01 06 17 10 0B 08 C8 30", "reasoning": "Bounded pixel rows and symmetric masks contradict an aligned callable range.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d3_888a_data", "subject": { "pass_number": 788, "range": "D3:888A..D3:88A2", "label": "ct_d3_888a_score7_cluster" }, "reason": "The score-seven window is graphics row data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d3_888a_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "19 04 24 12 05 2E 11 16 08 0B 08 0F", "reasoning": "Bounded row fields terminate in masks without coherent control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d3_8ed6_data", "subject": { "pass_number": 789, "range": "D3:8ED6..D3:8EEE", "label": "ct_d3_8ed6_score7_cluster" }, "reason": "The score-seven window is compressed asset data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d3_8ed6_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "34 11 F3 88 E0 9F D2 AD 01 1E 44 38", "reasoning": "Mask fields and the absence of an aligned caller disprove the code cluster.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_497d_data", "subject": { "pass_number": 945, "range": "D5:497D..D5:4994", "label": "ct_d5_497d_score9_cluster" }, "reason": "The score-nine window is symmetric graphics mask data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_497d_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "13 04 07 B8 B0 90 90 B0 A0 20 E0 A0", "reasoning": "Mirrored mask values form a graphics record, not a callable routine.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_69ad_data", "subject": { "pass_number": 959, "range": "D5:69AD..D5:69E3", "label": "ct_d5_69ad_score7_cluster" }, "reason": "The score-seven window is pixel-row and mask data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_69ad_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "04 0E 0E 23 21 0F 09 07 07 08 0F 0A", "reasoning": "Bounded rows transition into mirrored plane masks without coherent execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_6fde_data", "subject": { "pass_number": 960, "range": "D5:6FDE..D5:700C", "label": "ct_d5_6fde_score7_cluster" }, "reason": "The score-seven window is graphics and mask data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_6fde_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "7E 82 4C 4C 1C 1C 33 3B 0C 15 3C 34", "reasoning": "Repeated plane pairs and bounded rows contradict an aligned code path.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_933c_data", "subject": { "pass_number": 937, "range": "D5:933C..D5:9370", "label": "ct_d5_933c_score10_cluster" }, "reason": "The score-ten window is compressed graphics data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_933c_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "68 18 A0 80 E0 40 E0 40 D8 B0 20 B0", "reasoning": "Symmetric mask fields and bounded asset values produced accidental opcode counts.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_ae41_data", "subject": { "pass_number": 948, "range": "D5:AE41..D5:AE63", "label": "ct_d5_ae41_score8_cluster" }, "reason": "The score-eight window is compressed graphics mask data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_ae41_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "FA 1E E2 44 1E C0 E3 01 90 F0 80 0C", "reasoning": "Mask progression and absent caller support contradict a callable range.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_b253_data", "subject": { "pass_number": 946, "range": "D5:B253..D5:B267", "label": "ct_d5_b253_score9_cluster" }, "reason": "The score-nine window is a compact graphics record rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_b253_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "C3 08 08 1F 20 C6 20 84 40 E8 15 DE", "reasoning": "Plane values and masks lack an aligned entry and return path.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_ba86_data", "subject": { "pass_number": 938, "range": "D5:BA86..D5:BAB4", "label": "ct_d5_ba86_score9_cluster" }, "reason": "The score-nine window is compressed graphics data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_ba86_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "3C 31 C4 08 FD DF FC A0 36 27 17 60", "reasoning": "Dense masks and asset fields do not form coherent aligned execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_ce2d_data", "subject": { "pass_number": 947, "range": "D5:CE2D..D5:CE5C", "label": "ct_d5_ce2d_score8_cluster" }, "reason": "The score-eight window is compressed graphics data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_ce2d_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "5E 4E 12 3E E0 97 F6 8B 3C 20 73 7C", "reasoning": "Asset masks and absent aligned caller support disprove the historical cluster.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_d87b_data", "subject": { "pass_number": 939, "range": "D5:D87B..D5:D8A7", "label": "ct_d5_d87b_score9_cluster" }, "reason": "The score-nine window is compressed graphics data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_d87b_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "08 69 0A 20 FE 18 40 FC 80 D5 1F D7", "reasoning": "Progressive plane masks and asset fields produced accidental prologue bytes.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_ec5a_data", "subject": { "pass_number": 964, "range": "D5:EC5A..D5:EC6E", "label": "ct_d5_ec5a_score8_cluster" }, "reason": "The score-eight window is a compact graphics mask record rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_ec5a_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "71 11 11 B1 0E FE 20 FE 01 F4 2A 08", "reasoning": "Paired mask values and bounded fields contradict aligned execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_eca6_data", "subject": { "pass_number": 965, "range": "D5:ECA6..D5:ECD1", "label": "ct_d5_eca6_score7_cluster" }, "reason": "The score-seven window is compressed graphics data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_eca6_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "88 08 48 8C CD D7 A5 3B 99 3D C8 0B", "reasoning": "Dense asset fields and masks have no coherent entry or return path.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d5_fcdb_data", "subject": { "pass_number": 949, "range": "D5:FCDB..D5:FCF6", "label": "ct_d5_fcdb_score8_cluster" }, "reason": "The score-eight window is compressed graphics data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d5_fcdb_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "AD 12 94 2B 14 08 01 3E 13 48 30 88", "reasoning": "Mask and row fields lack aligned control flow and caller evidence.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d7_77a2_data", "subject": { "pass_number": 793, "range": "D7:77A2..D7:77B4", "label": "ct_d7_77a2_score6_cluster" }, "reason": "The score-six window is a compact graphics mask record rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d7_77a2_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "01 BA BA FA 40 04 20 12 80 41 15 48", "reasoning": "Plane masks and bounded values contradict an aligned subroutine.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d8_888f_data", "subject": { "pass_number": 791, "range": "D8:888F..D8:889D", "label": "ct_d8_888f_score7_cluster" }, "reason": "The score-seven window is a compact graphics mask record rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d8_888f_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "10 20 08 92 10 A0 04 C0 04 30 B0 83", "reasoning": "Symmetric plane values and no aligned caller disprove the cluster.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d9_9af4_data", "subject": { "pass_number": 792, "range": "D9:9AF4..D9:9B02", "label": "ct_d9_9af4_score7_cluster" }, "reason": "The score-seven window is a compact graphics mask record rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d9_9af4_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "D0 20 90 81 EA 10 C0 08 90 08 A0 20", "reasoning": "Plane masks and bounded values do not form coherent callable execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_0350_data", "subject": { "pass_number": 781, "range": "D1:0350..D1:0374", "label": "ct_d1_0350_score8_cluster" }, "reason": "The score-eight window is graphics plane and mask data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_0350_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "C0 80 80 4C 81 4E 81 4A 28 81 68 C1", "reasoning": "Repeated plane fields and masks contradict a callable instruction stream.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_0509_data", "subject": { "pass_number": 748, "range": "D1:0509..D1:053C", "label": "ct_d1_0509_score7_cluster" }, "reason": "The score-seven window is graphics row and mask data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_0509_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "09 10 C0 09 18 C2 80 E2 80 C5 12 10", "reasoning": "Repeated row records and masks have no coherent aligned entry or return path.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_0d28_data", "subject": { "pass_number": 776, "range": "D1:0D28..D1:0D42", "label": "ct_d1_0d28_score12_cluster" }, "reason": "The score-twelve supercluster is graphics data whose repeated mask bytes mimicked returns.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_0d28_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "CE 81 39 08 40 40 C0 40 C2 40 09 10", "reasoning": "The eight counted returns are mask-valued table bytes, not aligned exits.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_0e59_data", "subject": { "pass_number": 749, "range": "D1:0E59..D1:0E7B", "label": "ct_d1_0e59_score7_cluster" }, "reason": "The score-seven window is a repeating graphics-row table rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_0e59_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "C1 0D 10 0A 40 01 0A 41 0A 81 0A 0D", "reasoning": "Regular 40/41/81 plane variants repeat across the range and contradict control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_0e7c_data", "subject": { "pass_number": 777, "range": "D1:0E7C..D1:0E86", "label": "ct_d1_0e59_score9_cluster__residual_0e7c_0e86" }, "reason": "The adjudicated residual continues the same repeating graphics-row table.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_0e7c_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "01 20 41 20 81 20 34 18 0E 47 60", "reasoning": "Plane variants continue directly from D1:0E59 and the apparent RTS is a table terminator byte.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_10c0_data", "subject": { "pass_number": 810, "range": "D1:10C0..D1:10DA", "label": "ct_d1_10c0_score6_cluster" }, "reason": "The score-six window is graphics row and plane data rather than executable code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_10c0_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "48 06 10 6E 0C 10 44 12 10 46 18 00", "reasoning": "Repeated row formats and plane variants do not form aligned control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_118d_data", "subject": { "pass_number": 811, "range": "D1:118D..D1:11B0", "label": "ct_d1_118d_php_handler" }, "reason": "The apparent PHP handler is a graphics record with repeated row fields.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_118d_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "08 EA 40 E8 18 10 20 EC 40 EE 55 27", "reasoning": "The leading opcode-valued byte is a table field and neighboring records repeat the same format.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_160a_data", "subject": { "pass_number": 812, "range": "D1:160A..D1:1630", "label": "ct_d1_160a_jsl_handler" }, "reason": "The apparent JSL handler is a graphics record with bounded plane fields.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_160a_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "22 01 24 C8 01 26 01 0D 08 22 00 23", "reasoning": "Opcode-valued bytes recur as row fields and do not supply coherent long-call operands.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_27d3_data", "subject": { "pass_number": 833, "range": "D1:27D3..D1:27F5", "label": "ct_d1_27d3_php_handler" }, "reason": "The apparent PHP handler is a graphics row and mask record rather than code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_27d3_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "08 80 80 08 0E 01 2E 1E 00 22 C0 C0", "reasoning": "Repeated plane pairs and terminal fill bytes contradict a callable handler.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_2bf5_data", "subject": { "pass_number": 825, "range": "D1:2BF5..D1:2C20", "label": "ct_d1_2bf5_rep_handler" }, "reason": "The apparent REP handler is structured graphics record data rather than code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_2bf5_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "C2 4B 10 C4 51 10 AA C6 57 10 C8 5D", "reasoning": "Regular triplets and fill markers contradict processor-width flow and aligned execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_2ffa_data", "subject": { "pass_number": 826, "range": "D1:2FFA..D1:3020", "label": "ct_d1_2ffa_jsr_handler" }, "reason": "The apparent JSR handler is a repeating graphics plane table rather than code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_2ffa_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "20 01 22 01 20 41 40 00 81 02 81 00", "reasoning": "Regular 01/41/81 plane variants repeat and the apparent JSR byte lacks a callable operand context.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_3a8f_data", "subject": { "pass_number": 750, "range": "D1:3A8F..D1:3AE2", "label": "ct_d1_3a8f_score7_cluster" }, "reason": "The score-seven window is unmistakable mirrored bitplane graphics data rather than code.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "data", "label": "ct_d1_3a8f_graphics_bitplane_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_bitplane_data", "byte_prefix": "03 20 20 70 70 78 78 3C 3C 1E 1E 0F", "reasoning": "Mirrored powers-of-two masks and repeated rows directly encode bitplanes.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_e721_fragment", "subject": { "pass_number": 778, "range": "D1:E721..D1:E763", "label": "ct_d1_e721_score8_cluster" }, "reason": "The range contains real unrolled transfer code but begins without a proven entry and ends mid-instruction.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "tail_fragment", "label": "ct_d1_e721_unrolled_transfer_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "executable_boundary_fragment", "byte_prefix": "BC 20 23 BD A0 23 9D 20 23 98 9D A0", "reasoning": "Aligned loads and stores repeat coherently, but the historical range ends at BC 60 without the operand and cannot own a routine.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_e90f_fragment", "subject": { "pass_number": 779, "range": "D1:E90F..D1:E930", "label": "ct_d1_e90f_score8_cluster" }, "reason": "The range is real code but starts at a loop tail and does not establish an independent owner boundary.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "tail_fragment", "label": "ct_d1_e90f_loop_tail_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "mid_function_fragment", "byte_prefix": "C6 47 D0 EF 7B E2 20 C2 10 AB 6B C2", "reasoning": "DEC $47; BNE -17 enters earlier code, proving that D1:E90F is a loop tail rather than an entry.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_ebe7_fragment", "subject": { "pass_number": 801, "range": "D1:EBE7..D1:EBFE", "label": "ct_d1_ebe7_score6_cluster" }, "reason": "The range is a real indexed-copy loop tail whose historical start is not a callable entry.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "tail_fragment", "label": "ct_d1_ebe7_copy_loop_tail_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "mid_function_fragment", "byte_prefix": "85 45 BD CC CD 99 A2 20 99 A2 22 E8", "reasoning": "The bytes end with loop cleanup and RTS but begin after setup, so the score window cannot own the function.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_f43a_fragment", "subject": { "pass_number": 800, "range": "D1:F43A..D1:F452", "label": "ct_d1_f43a_score6_cluster" }, "reason": "The range contains real conditional code but starts mid-expression and ends without a return boundary.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "tail_fragment", "label": "ct_d1_f43a_conditional_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "mid_function_fragment", "byte_prefix": "11 F4 7B AA BD 20 05 30 06 29 F0 C9", "reasoning": "The opening ORA indirect is context-dependent and the range ends at CPX immediate, so neither boundary owns a routine.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_f661_fragment", "subject": { "pass_number": 780, "range": "D1:F661..D1:F69B", "label": "ct_d1_f661_score8_cluster" }, "reason": "The historical supercluster combines a loop tail, an RTL boundary, and subsequent helper or table material.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "tail_fragment", "label": "ct_d1_f661_composite_executable_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "composite_executable_fragment", "byte_prefix": "81 C7 9D 03 C4 BD F1 C7 9D 73 C4 E8", "reasoning": "A backward loop reaches code before the claim, RTL appears internally, and later bytes form a separate helper/table sequence.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_f8f1_fragment", "subject": { "pass_number": 751, "range": "D1:F8F1..D1:F971", "label": "ct_d1_f8f1_score7_cluster" }, "reason": "The historical range contains the tail of one routine and a second routine, so it is not one owner.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "tail_fragment", "label": "ct_d1_f8f1_composite_executable_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "composite_executable_fragment", "byte_prefix": "15 90 08 A6 12 A4 14 86 14 84 12 A5", "reasoning": "An RTS occurs at D1:F91F and another coherent routine continues through D1:F971; the window starts mid-loop.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_d1_fa67_fragment", "subject": { "pass_number": 752, "range": "D1:FA67..D1:FAE7", "label": "ct_d1_fa67_score6_cluster" }, "reason": "The historical range begins on the previous routine's RTS and the next routine starts at D1:FA68.", "evidence": ["tools/config/candidate_dispositions.json"], "updates": { "kind": "tail_fragment", "label": "ct_d1_fa67_boundary_spanning_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "boundary_spanning_executable_fragment", "byte_prefix": "60 A5 0F 22 B2 38 CD A5 15 38 E5 13", "reasoning": "D1:FA67 is RTS; aligned execution for the following code starts at D1:FA68, so the historical owner is off by one.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c5_dc49_data",
+      "subject": { "pass_number": 783, "range": "C5:DC49..C5:DC80", "label": "ct_c5_dc49_score8_cluster" },
+      "reason": "The score-eight window is compressed graphics data with dense mask fields, not aligned code.",
+      "evidence": ["reports/pre_disassembly_c5_d000_dfff_compact_scan.json", "passes/manifests/pass0783.json"],
+      "updates": { "kind": "data", "label": "ct_c5_dc49_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "40 00 4A 04 42 00 44 6E 00 40 20 16", "reasoning": "Dense mask values and bounded row fields continue through neighboring candidates without a strong aligned caller.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c5_db2b_data",
+      "subject": { "pass_number": 799, "range": "C5:DB2B..C5:DB4E", "label": "ct_c5_db2b_score7_cluster" },
+      "reason": "The score-seven window is embedded in compressed graphics records and lacks coherent control flow.",
+      "evidence": ["reports/pre_disassembly_c5_d000_dfff_compact_scan.json", "passes/manifests/pass0799.json"],
+      "updates": { "kind": "data", "label": "ct_c5_db2b_compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "byte_prefix": "90 40 30 45 00 60 00 CF 48 87 30 40", "reasoning": "The window is embedded in dense plane masks and compressed asset fields, not coherent control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_cf_c0b4_data",
+      "subject": { "pass_number": 716, "range": "CF:C0B4..CF:C0D8", "label": "ct_cf_c0b4_score6_cluster" },
+      "reason": "The claimed cluster is a sliding window inside a long patterned word table, not instruction-aligned execution.",
+      "evidence": ["reports/pre_disassembly_cf_c000_cfff_compact_scan.json", "passes/manifests/pass0716.json"],
+      "updates": {
+        "kind": "data",
+        "label": "ct_cf_c0b4_tilemap_data",
+        "confidence": "high",
+        "verification_status": "reviewed",
+        "evidence": {
+          "classification": "tilemap_or_graphics_index_data",
+          "byte_prefix": "6B 21 D7 27 AF 2E D7 27 B1 2E B3 2E",
+          "contradictions": ["the range is embedded in a long stream of little-endian patterned words", "the apparent return byte is a low byte in the repeating table structure", "the repaired scan found no strong instruction-aligned caller"],
+          "review_source": "pre-disassembly review 2026-08-18"
+        }
+      }
+    },
+    {
+      "correction_id": "corr_cf_c0b0_superseded",
+      "subject": { "pass_number": 816, "range": "CF:C0B0..CF:C0D0", "label": "ct_cf_c0b0_score6_cluster" },
+      "reason": "The overlapping historical score window remains superseded provenance for the reviewed table data.",
+      "evidence": ["reports/pre_disassembly_cf_c000_cfff_compact_scan.json", "passes/manifests/pass0816.json"],
+      "updates": { "verification_status": "superseded", "parent_label": "ct_cf_c0b4_tilemap_data" }
+    },
+    {
+      "correction_id": "corr_cf_c0b0_residual_data",
+      "subject": { "pass_number": 816, "range": "CF:C0B0..CF:C0B3", "label": "ct_cf_c0b0_score6_cluster__residual_c0b0_c0b3" },
+      "reason": "The adjudicated residual consists of the preceding two words in the same patterned data stream.",
+      "evidence": ["reports/pre_disassembly_cf_c000_cfff_compact_scan.json", "passes/manifests/pass0816.json"],
+      "updates": {
+        "kind": "data",
+        "label": "ct_cf_c0b0_tilemap_data_residual",
+        "confidence": "high",
+        "verification_status": "reviewed",
+        "evidence": {
+          "classification": "tilemap_or_graphics_index_data",
+          "byte_prefix": "A0 0E A3 0E",
+          "contradictions": ["four bytes are the leading words of the same patterned table continued by pass 716", "the historical owner was a sliding score window rather than an aligned entry"],
+          "review_source": "pre-disassembly review 2026-08-18"
+        }
+      }
+    },
+    {
+      "correction_id": "corr_c1_431b_fragment",
+      "subject": { "pass_number": 1036, "range": "C1:431B..C1:432B", "label": "ct_c1_431B" },
+      "reason": "The claimed owner starts mid-routine and omits both the aligned entry and terminating RTS.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1036.json"],
+      "updates": { "kind": "tail_fragment", "verification_status": "reviewed", "evidence": { "score": 5, "classification": "mid_function_fragment", "owner_start": "C1:4310", "owner_end": "C1:432C", "reasoning": "The claimed start is mid-function; aligned execution begins at C1:4310 and terminates with RTS at C1:432C.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c1_434a_fragment",
+      "subject": { "pass_number": 1032, "range": "C1:434A..C1:4362", "label": "ct_c1_434A" },
+      "reason": "The score-seventeen cluster is real code but C1:434A is fall-through inside the larger C1:432D routine.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1032.json"],
+      "updates": { "kind": "tail_fragment", "verification_status": "reviewed", "evidence": { "score": 6, "classification": "mid_function_fragment", "owner_start": "C1:432D", "reasoning": "C1:434A decodes as STA $A4E7 inside continuous fall-through from C1:432D; it is not an entry boundary.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c1_4375_fragment",
+      "subject": { "pass_number": 1033, "range": "C1:4375..C1:438D", "label": "ct_c1_4375" },
+      "reason": "The historical child window starts in an operand field and belongs to the enclosing C1:432D routine.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1033.json"],
+      "updates": { "kind": "tail_fragment", "verification_status": "reviewed", "evidence": { "score": 6, "classification": "mid_function_fragment", "owner_start": "C1:432D", "reasoning": "C1:4375 is an operand-field offset inside the table-loading path begun at C1:432D, not an entry boundary.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c1_4351_superseded",
+      "subject": { "pass_number": 1034, "range": "C1:4351..C1:4369", "label": "ct_c1_4351" },
+      "reason": "The overlapping historical window remains superseded provenance after instruction-aligned review.",
+      "evidence": ["tools/config/candidate_dispositions.json"],
+      "updates": { "verification_status": "superseded" }
+    },
+    {
+      "correction_id": "corr_c1_4363_fragment",
+      "subject": { "pass_number": 1034, "range": "C1:4363..C1:4369", "label": "ct_c1_4351__residual_4363_4369" },
+      "reason": "The residual is executable fall-through but cannot own a separate function boundary.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1034.json"],
+      "updates": { "kind": "tail_fragment", "verification_status": "reviewed", "evidence": { "score": 5, "classification": "mid_function_fragment", "owner_start": "C1:432D", "reasoning": "Residual bytes continue the same C1:432D routine and do not define an independent owner.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c1_4358_superseded",
+      "subject": { "pass_number": 1035, "range": "C1:4358..C1:4370", "label": "ct_c1_4358" },
+      "reason": "The overlapping historical window remains superseded provenance after instruction-aligned review.",
+      "evidence": ["tools/config/candidate_dispositions.json"],
+      "updates": { "verification_status": "superseded" }
+    },
+    {
+      "correction_id": "corr_c1_436a_fragment",
+      "subject": { "pass_number": 1035, "range": "C1:436A..C1:4370", "label": "ct_c1_4358__residual_436a_4370" },
+      "reason": "The residual is executable fall-through but cannot own a separate function boundary.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1035.json"],
+      "updates": { "kind": "tail_fragment", "verification_status": "reviewed", "evidence": { "score": 5, "classification": "mid_function_fragment", "owner_start": "C1:432D", "reasoning": "Residual bytes continue the same C1:432D routine and do not define an independent owner.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c1_435f_superseded",
+      "subject": { "pass_number": 1037, "range": "C1:435F..C1:4377", "label": "ct_c1_435F" },
+      "reason": "The overlapping historical window remains superseded provenance after instruction-aligned review.",
+      "evidence": ["tools/config/candidate_dispositions.json"],
+      "updates": { "verification_status": "superseded" }
+    },
+    {
+      "correction_id": "corr_c1_4371_fragment",
+      "subject": { "pass_number": 1037, "range": "C1:4371..C1:4374", "label": "ct_c1_435F__residual_4371_4374" },
+      "reason": "The residual is executable fall-through but cannot own a separate function boundary.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1037.json"],
+      "updates": { "kind": "tail_fragment", "verification_status": "reviewed", "evidence": { "score": 4, "classification": "mid_function_fragment", "owner_start": "C1:432D", "reasoning": "Residual bytes continue the same C1:432D routine and do not define an independent owner.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c1_4383_superseded",
+      "subject": { "pass_number": 1038, "range": "C1:4383..C1:439B", "label": "ct_c1_4383" },
+      "reason": "The overlapping historical window remains superseded provenance after instruction-aligned review.",
+      "evidence": ["tools/config/candidate_dispositions.json"],
+      "updates": { "verification_status": "superseded" }
+    },
+    {
+      "correction_id": "corr_c1_438e_fragment",
+      "subject": { "pass_number": 1038, "range": "C1:438E..C1:439B", "label": "ct_c1_4383__residual_438e_439b" },
+      "reason": "The residual is executable fall-through but cannot own a separate function boundary.",
+      "evidence": ["tools/config/candidate_dispositions.json", "passes/manifests/pass1038.json"],
+      "updates": { "kind": "tail_fragment", "verification_status": "reviewed", "evidence": { "score": 4, "classification": "mid_function_fragment", "owner_start": "C1:432D", "reasoning": "Residual bytes continue the same C1:432D routine and do not define an independent owner.", "review_source": "pre-disassembly review 2026-08-18" } }
+    }
+  ],
+  "bulk_corrections": [
+    {
+      "correction_id": "corr_c0_executable_fragment_review",
+      "selection": { "bank": "C0", "exclude_kinds": ["superseded"], "expected_count": 398 },
+      "reason": "C0 is coherent engine code, but the historical score windows do not independently prove owner boundaries and are retained conservatively as executable fragments.",
+      "evidence": ["reports/bank_c0_coverage_report.md", "tools/config/range_adjudications.json", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "tail_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "executable_boundary_fragment", "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_c1_executable_fragment_review",
+      "selection": { "bank": "C1", "exclude_kinds": ["superseded"], "expected_count": 55 },
+      "reason": "C1 claims contain real executable material, but their legacy scoring and overlapping windows do not consistently establish independent owner boundaries.",
+      "evidence": ["AGENT_SWARM_SESSION_31_SUMMARY.md", "C1_434A_MEGA_CLUSTER_GAP_ANALYSIS.md", "tools/config/range_adjudications.json", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "tail_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "executable_boundary_fragment", "reasoning": "Instruction-aligned code is present, while caller and enclosing-owner analysis shows that score windows frequently begin at fall-through or operand offsets; ownership is therefore deferred to disassembly.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_c2_executable_fragment_review",
+      "selection": { "bank": "C2", "exclude_kinds": ["superseded"], "expected_count": 12 },
+      "reason": "C2 claims cover genuine initialization and battle-engine code, but several starts and ends are demonstrably inside larger routines or adjacent entries.",
+      "evidence": ["AGENT_SWARM_SESSION_31_REPORT.md", "tools/config/range_adjudications.json", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "tail_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "executable_boundary_fragment", "reasoning": "Coherent 65816 execution is present, including the NMI/VBlank lane, but the legacy score windows do not uniformly prove complete function ownership.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_c3_canonical_mapping_review",
+      "selection": { "bank": "C3", "exclude_kinds": ["superseded"], "expected_count": 292 },
+      "reason": "The active C3 partition is the repository's authoritative, overlap-adjudicated mapping and has region-specific semantic analysis and preserved source provenance.",
+      "evidence": ["C3_8000_HIGH_BANK_REPORT.md", "tools/config/bank_c3_progress.json", "tools/config/range_adjudications.json"],
+      "updates": { "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "canonical_range_adjudication", "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_cf_active_range_review",
+      "selection": { "bank": "CF", "exclude_kinds": ["superseded"], "expected_count": 52 },
+      "reason": "CF was reviewed as two distinct lanes: table and graphics material below E000, and coherent executable fragments in the E000-FFFF engine region.",
+      "evidence": ["reports/pre_disassembly_cf_c000_cfff_compact_scan.json", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "tail_fragment", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "executable_boundary_fragment", "reasoning": "Upper-bank ranges contain coherent aligned 65816 execution, but legacy score windows do not uniformly prove complete owner boundaries; lower-bank false positives are subsequently corrected to data.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_da_graphics_pool",
+      "subjects": [
+        { "pass_number": 845, "range": "DA:B148..DA:B180", "label": "ct_da_b148_score9_cluster" }
+      ],
+      "reason": "The reviewed DA score pool consists of compressed graphics and mask records, not executable owners.",
+      "evidence": ["tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "data", "label_suffix": "compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "reasoning": "Dense mask fields and bounded asset values lack coherent aligned control flow.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_db_graphics_pool",
+      "subjects": [
+        { "pass_number": 882, "range": "DB:00AC..DB:00C4", "label": "ct_db_00ac_score6_cluster" },
+        { "pass_number": 883, "range": "DB:027D..DB:0295", "label": "ct_db_027d_score6_cluster" },
+        { "pass_number": 901, "range": "DB:1B7E..DB:1B96", "label": "ct_db_1b7e_phb_handler" },
+        { "pass_number": 955, "range": "DB:1D81..DB:1D95", "label": "ct_db_1d81_score7_cluster" },
+        { "pass_number": 900, "range": "DB:2190..DB:21A8", "label": "ct_db_2190_phb_handler" },
+        { "pass_number": 953, "range": "DB:5090..DB:50AC", "label": "ct_db_5090_score8_cluster" },
+        { "pass_number": 884, "range": "DB:5E2B..DB:5E43", "label": "ct_db_5e2b_cross_bank_hub" },
+        { "pass_number": 899, "range": "DB:60FB..DB:6113", "label": "ct_db_60fb_cross_bank_hub" },
+        { "pass_number": 898, "range": "DB:6A11..DB:6A29", "label": "ct_db_6a11_cross_bank_hub" },
+        { "pass_number": 954, "range": "DB:7551..DB:7568", "label": "ct_db_7551_score8_cluster" }
+      ],
+      "reason": "The reviewed DB score and hub pool consists of graphics records whose opcode-valued fields created false callers.",
+      "evidence": ["tools/config/candidate_dispositions.json", "reports/Bank_DB_Assessment_Report.md"],
+      "updates": { "kind": "data", "label_suffix": "compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "reasoning": "Repeated bounded fields and plane masks do not form coherent callable execution.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_dd_word_table_pool",
+      "subjects": [
+        { "pass_number": 910, "range": "DD:07B8..DD:07D0", "label": "ct_dd_07b8_score8_cluster" },
+        { "pass_number": 912, "range": "DD:0E00..DD:0E50", "label": "ct_dd_0e00_score6_cluster" },
+        { "pass_number": 913, "range": "DD:0F04..DD:0F52", "label": "ct_dd_0f04_score6_cluster" },
+        { "pass_number": 903, "range": "DD:1027..DD:1037", "label": "ct_dd_1027_score10_cluster" },
+        { "pass_number": 902, "range": "DD:1EF8..DD:1F0F", "label": "ct_dd_1ef8_score11_cluster" },
+        { "pass_number": 914, "range": "DD:1F10..DD:1F40", "label": "ct_dd_1efc_score6_cluster__residual_1f10_1f40" },
+        { "pass_number": 915, "range": "DD:1F41..DD:1F80", "label": "ct_dd_1f30_score6_cluster__residual_1f41_1f80" },
+        { "pass_number": 916, "range": "DD:1F81..DD:1F81", "label": "ct_dd_1f34_score6_cluster__residual_1f81_1f81" },
+        { "pass_number": 841, "range": "DD:3407..DD:3440", "label": "ct_dd_3407_score13_cluster" },
+        { "pass_number": 918, "range": "DD:3B04..DD:3B11", "label": "ct_dd_3b04_score5_cluster" },
+        { "pass_number": 885, "range": "DD:45FD..DD:4619", "label": "ct_dd_45fd_score14_cluster" },
+        { "pass_number": 911, "range": "DD:469D..DD:46B5", "label": "ct_dd_469d_score8_cluster" },
+        { "pass_number": 891, "range": "DD:4B4D..DD:4B69", "label": "ct_dd_4b4d_score13_cluster" },
+        { "pass_number": 921, "range": "DD:62E0..DD:62E9", "label": "ct_dd_62e0_score5_cluster" },
+        { "pass_number": 890, "range": "DD:6567..DD:6587", "label": "ct_dd_6567_score13_cluster" },
+        { "pass_number": 892, "range": "DD:6597..DD:65AF", "label": "ct_dd_6597_score13_cluster" },
+        { "pass_number": 957, "range": "DD:6A00..DD:6A20", "label": "ct_dd_6a00_score6_cluster" },
+        { "pass_number": 917, "range": "DD:6A36..DD:6A56", "label": "ct_dd_6a36_score6_cluster" },
+        { "pass_number": 920, "range": "DD:6C18..DD:6C21", "label": "ct_dd_6c18_score6_cluster" },
+        { "pass_number": 868, "range": "DD:8000..DD:8030", "label": "ct_dd_8000_score14_cluster" },
+        { "pass_number": 869, "range": "DD:8200..DD:8230", "label": "ct_dd_8200_score14_cluster" },
+        { "pass_number": 931, "range": "DD:8AD4..DD:8AE0", "label": "ct_dd_8ad4_score4_cluster" },
+        { "pass_number": 932, "range": "DD:8BB8..DD:8BC4", "label": "ct_dd_8bb8_score4_cluster" },
+        { "pass_number": 933, "range": "DD:9698..DD:96A4", "label": "ct_dd_9698_score4_cluster" },
+        { "pass_number": 836, "range": "DD:973D..DD:9770", "label": "ct_dd_973d_score19_cluster" },
+        { "pass_number": 888, "range": "DD:980F..DD:9827", "label": "ct_dd_980f_score14_cluster" },
+        { "pass_number": 886, "range": "DD:982D..DD:984F", "label": "ct_dd_982d_score14_cluster" },
+        { "pass_number": 934, "range": "DD:9AA8..DD:9AB4", "label": "ct_dd_9aa8_score4_cluster" },
+        { "pass_number": 837, "range": "DD:9B4D..DD:9B80", "label": "ct_dd_9b4d_score19_cluster" },
+        { "pass_number": 889, "range": "DD:9C1F..DD:9C37", "label": "ct_dd_9c1f_score14_cluster" },
+        { "pass_number": 887, "range": "DD:9C3D..DD:9C5F", "label": "ct_dd_9c3d_score14_cluster" },
+        { "pass_number": 935, "range": "DD:A483..DD:A48A", "label": "ct_dd_a483_score4_cluster" },
+        { "pass_number": 936, "range": "DD:ACA3..DD:ACAA", "label": "ct_dd_aca3_score4_cluster" },
+        { "pass_number": 922, "range": "DD:C2D0..DD:C2DB", "label": "ct_dd_c2d0_score5_cluster" },
+        { "pass_number": 929, "range": "DD:E376..DD:E383", "label": "ct_dd_e376_score4_cluster" },
+        { "pass_number": 925, "range": "DD:F345..DD:F349", "label": "ct_dd_f345_score5_cluster" },
+        { "pass_number": 930, "range": "DD:F919..DD:F91F", "label": "ct_dd_f919_score4_cluster" },
+        { "pass_number": 923, "range": "DD:FCA5..DD:FCAB", "label": "ct_dd_fca5_score5_cluster" },
+        { "pass_number": 924, "range": "DD:FCF5..DD:FCFB", "label": "ct_dd_fcf5_score5_cluster" }
+      ],
+      "reason": "The reviewed DD score pool is a little-endian word and tilemap table; repeated 40xx values mimicked opcodes.",
+      "evidence": ["tools/config/candidate_dispositions.json", "docs/bank_dd_deep_scan_report.md"],
+      "updates": { "kind": "data", "label_suffix": "word_table_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "little_endian_word_table", "reasoning": "Regular two-byte values, repeated 40 high bytes, and mirrored sequences directly contradict instruction alignment.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_de_word_table_pool",
+      "subjects": [
+        { "pass_number": 853, "range": "DE:8931..DE:894F", "label": "ct_de_8931_score13_cluster" },
+        { "pass_number": 855, "range": "DE:8A21..DE:8A3F", "label": "ct_de_8a21_score10_cluster" },
+        { "pass_number": 838, "range": "DE:8B35..DE:8B60", "label": "ct_de_8b35_score18_cluster" },
+        { "pass_number": 852, "range": "DE:8B61..DE:8B7F", "label": "ct_de_8b5d_score18_cluster__residual_8b61_8b7f" },
+        { "pass_number": 854, "range": "DE:8CF7..DE:8D0F", "label": "ct_de_8cf7_score12_cluster" }
+      ],
+      "reason": "The reviewed DE score pool is a regular little-endian tilemap word table, not executable code.",
+      "evidence": ["tools/config/candidate_dispositions.json", "reports/BANK_DE_DEEP_SCAN_REPORT.md"],
+      "updates": { "kind": "data", "label_suffix": "word_table_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "little_endian_word_table", "reasoning": "Alternating value and 40 high bytes form regular table words rather than aligned instructions.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_df_graphics_pool",
+      "subjects": [
+        { "pass_number": 870, "range": "DF:35A6..DF:35C6", "label": "ct_df_35a6_score7_cluster" },
+        { "pass_number": 842, "range": "DF:6497..DF:64C0", "label": "ct_df_6497_score12_cluster" },
+        { "pass_number": 871, "range": "DF:7CF3..DF:7D13", "label": "ct_df_7cf3_score7_cluster" },
+        { "pass_number": 872, "range": "DF:A343..DF:A363", "label": "ct_df_a343_score7_cluster" }
+      ],
+      "reason": "The reviewed DF score pool consists of compressed graphics and mask data, not executable owners.",
+      "evidence": ["tools/config/candidate_dispositions.json", "reports/bank_df_deep_scan_report.md"],
+      "updates": { "kind": "data", "label_suffix": "compressed_graphics_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_graphics_data", "reasoning": "Dense masks and bounded asset fields lack coherent aligned control flow or verified callers.", "review_source": "pre-disassembly review 2026-08-18" } }
+    },
+    {
+      "correction_id": "corr_c7_compressed_data_pool",
+      "subjects": [
+        { "pass_number": 192, "range": "C7:C300..C7:C4FF", "label": "C7_C300_C4FF_code_region" },
+        { "pass_number": 193, "range": "C7:B000..C7:B1FF", "label": "C7_B000_B1FF_code_region" },
+        { "pass_number": 194, "range": "C7:C5AC..C7:C5D0", "label": "ct_c7_c5ac_unknown_function_rep_prologue" },
+        { "pass_number": 195, "range": "C7:D363..C7:D37C", "label": "ct_c7_d363_unknown_function_phd_prologue" },
+        { "pass_number": 196, "range": "C7:C193..C7:C1B2", "label": "ct_c7_c193_unknown_function_cluster_entry" },
+        { "pass_number": 197, "range": "C7:C1B6..C7:C1CE", "label": "ct_c7_c1b6_unknown_function_cluster_extension" },
+        { "pass_number": 198, "range": "C7:C028..C7:C02C", "label": "ct_c7_c02a_jsr_to_b111" },
+        { "pass_number": 199, "range": "C7:924D..C7:9265", "label": "ct_c7_924d_unknown_function_score_7_cluster" },
+        { "pass_number": 200, "range": "C7:3C00..C7:3C16", "label": "ct_c7_3c00_unknown_function_cluster_jsr_c4f3" },
+        { "pass_number": 201, "range": "C7:C275..C7:C277", "label": "ct_c7_c275_jsr_to_c5b0" },
+        { "pass_number": 202, "range": "C7:AEDE..C7:AEE0", "label": "ct_c7_aede_jsr_to_c302" },
+        { "pass_number": 203, "range": "C7:4A6A..C7:4A6C", "label": "ct_c7_4a6a_jsr_to_c4eb" },
+        { "pass_number": 204, "range": "C7:7488..C7:748A", "label": "ct_c7_7488_jsr_to_b188" },
+        { "pass_number": 205, "range": "C7:BD2D..C7:BD2F", "label": "ct_c7_bd2d_jsr_to_d364" },
+        { "pass_number": 206, "range": "C7:CB1A..C7:CB1C", "label": "ct_c7_cb1a_jsr_to_b01f" },
+        { "pass_number": 207, "range": "C7:C1ED..C7:C206", "label": "ct_c7_c1ed_unknown_function_score_5_cluster" },
+        { "pass_number": 208, "range": "C7:CBAF..C7:CBC7", "label": "ct_c7_cbaf_unknown_function_score_4_cluster" },
+        { "pass_number": 209, "range": "C7:C20F..C7:C21A", "label": "ct_c7_c20f_unknown_function_score_4_extension" },
+        { "pass_number": 210, "range": "C7:C22A..C7:C230", "label": "ct_c7_c22a_unknown_function_score_4_extension" },
+        { "pass_number": 211, "range": "C7:C59D..C7:C5AB", "label": "ct_c7_c59d_unknown_function_score_4_extension" },
+        { "pass_number": 212, "range": "C7:CE1B..C7:CE33", "label": "ct_c7_ce1b_unknown_function_score_6_cluster" },
+        { "pass_number": 213, "range": "C7:CA7E..C7:CA96", "label": "ct_c7_ca7e_unknown_function_score_6_cluster" },
+        { "pass_number": 214, "range": "C7:CF61..C7:CF6F", "label": "ct_c7_cf61_unknown_function_score_6_cluster" },
+        { "pass_number": 215, "range": "C7:D269..C7:D27C", "label": "ct_c7_d269_unknown_function_score_4_extension" },
+        { "pass_number": 217, "range": "C7:BD30..C7:BD4E", "label": "ct_c7_bd2d_extended_with_bd36_cluster__residual_bd30_bd4e" }
+      ],
+      "reason": "The reviewed C7 claims are windows into one compressed asset stream, not executable owners or caller stubs.",
+      "evidence": ["reports/BANK_C7_COMPLETION_REPORT.md", "reports/c7_a800_b1ff_seam_block.md", "reports/c7_c300_ccff_seam_block.md", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "data", "label_suffix": "compressed_asset_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_asset_data", "reasoning": "Regular framing bytes recur through long ranges, while apparent JSR, REP, and return opcodes occur only as unaligned fields without coherent instruction flow.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_c4_graphics_pool",
+      "subjects": [
+        { "pass_number": 636, "range": "C4:01D2..C4:01EB", "label": "ct_c4_01d2_jsr_entry" },
+        { "pass_number": 637, "range": "C4:02BB..C4:02D8", "label": "ct_c4_02bb_phb_prologue" },
+        { "pass_number": 638, "range": "C4:0810..C4:0830", "label": "ct_c4_0810_multi_entry_hub" },
+        { "pass_number": 639, "range": "C4:4ABB..C4:4AE3", "label": "ct_c4_4abb_php_prologue" },
+        { "pass_number": 640, "range": "C4:C0DF..C4:C0F8", "label": "ct_c4_c0df_cross_bank_fn" },
+        { "pass_number": 643, "range": "C4:0347..C4:0369", "label": "ct_c4_0347_dual_target" },
+        { "pass_number": 644, "range": "C4:0A99..C4:0AB8", "label": "ct_c4_0a99_cross_bank_entry" },
+        { "pass_number": 645, "range": "C4:0ADB..C4:0AF8", "label": "ct_c4_0adb_cross_bank_handler" },
+        { "pass_number": 646, "range": "C4:0E8C..C4:0EB8", "label": "ct_c4_0e8c_php_stack_frame" },
+        { "pass_number": 647, "range": "C4:8010..C4:8038", "label": "ct_c4_8010_multi_entry_hub" },
+        { "pass_number": 664, "range": "C4:007B..C4:009C", "label": "ct_c4_007b_jsr_handler" },
+        { "pass_number": 665, "range": "C4:00F9..C4:011C", "label": "ct_c4_00f9_jsl_handler" },
+        { "pass_number": 666, "range": "C4:0E7A..C4:0E8B", "label": "ct_c4_0e7a_island_score7__residual_0e7a_0e8b" },
+        { "pass_number": 667, "range": "C4:C069..C4:C072", "label": "ct_c4_c069_dual_return_hub" },
+        { "pass_number": 668, "range": "C4:CE2F..C4:CE53", "label": "ct_c4_ce2f_score8_cluster" },
+        { "pass_number": 669, "range": "C4:C4DD..C4:C4F7", "label": "ct_c4_c4dd_phk_bank_mgmt" },
+        { "pass_number": 670, "range": "C4:C8C7..C4:C8E0", "label": "ct_c4_c8c7_rep_16bit_entry" },
+        { "pass_number": 671, "range": "C4:CDED..C4:CDFA", "label": "ct_c4_cded_stack_frame" },
+        { "pass_number": 680, "range": "C4:C600..C4:C62A", "label": "ct_c4_c600_handler" },
+        { "pass_number": 681, "range": "C4:C771..C4:C77C", "label": "ct_c4_c771_utility" },
+        { "pass_number": 685, "range": "C4:419F..C4:41B9", "label": "ct_c4_419f_score8_cluster" },
+        { "pass_number": 686, "range": "C4:46B2..C4:46B6", "label": "ct_c4_46b2_score6_cluster__residual_46b2_46b6" },
+        { "pass_number": 686, "range": "C4:46D0..C4:46D1", "label": "ct_c4_46b2_score6_cluster__residual_46d0_46d1" },
+        { "pass_number": 687, "range": "C4:4FBD..C4:4FCA", "label": "ct_c4_4fbd_score6_cluster" },
+        { "pass_number": 688, "range": "C4:41BA..C4:41E0", "label": "ct_c4_41ba_score6_handler" },
+        { "pass_number": 689, "range": "C4:481E..C4:4840", "label": "ct_c4_481e_score6_handler" },
+        { "pass_number": 690, "range": "C4:4AE4..C4:4AF0", "label": "ct_c4_4abb_score6_handler__residual_4ae4_4af0" },
+        { "pass_number": 691, "range": "C4:4062..C4:4080", "label": "ct_c4_4062_score4_handler" },
+        { "pass_number": 692, "range": "C4:4081..C4:4095", "label": "ct_c4_4074_score4_handler__residual_4081_4095" },
+        { "pass_number": 693, "range": "C4:46D9..C4:46F0", "label": "ct_c4_46d9_score4_handler" },
+        { "pass_number": 694, "range": "C4:48BB..C4:48D0", "label": "ct_c4_48bb_score4_handler" },
+        { "pass_number": 695, "range": "C4:4A94..C4:4AA0", "label": "ct_c4_4a94_score4_handler" },
+        { "pass_number": 696, "range": "C4:4ECD..C4:4EE0", "label": "ct_c4_4ecd_score4_handler" },
+        { "pass_number": 697, "range": "C4:4FB5..C4:4FBC", "label": "ct_c4_4fb5_score4_handler__residual_4fb5_4fbc" },
+        { "pass_number": 698, "range": "C4:4096..C4:40B0", "label": "ct_c4_4091_handler__residual_4096_40b0" },
+        { "pass_number": 699, "range": "C4:40D7..C4:40F0", "label": "ct_c4_40d7_handler" },
+        { "pass_number": 700, "range": "C4:41F5..C4:4210", "label": "ct_c4_41f5_handler" },
+        { "pass_number": 701, "range": "C4:42D5..C4:42F0", "label": "ct_c4_42d5_handler" },
+        { "pass_number": 702, "range": "C4:4330..C4:4350", "label": "ct_c4_4330_handler" },
+        { "pass_number": 703, "range": "C4:43CD..C4:43E0", "label": "ct_c4_43cd_handler" },
+        { "pass_number": 704, "range": "C4:44DF..C4:4500", "label": "ct_c4_44df_handler" },
+        { "pass_number": 705, "range": "C4:4DF9..C4:4E20", "label": "ct_c4_4df9_handler" },
+        { "pass_number": 706, "range": "C4:400F..C4:4030", "label": "ct_c4_400f_handler" },
+        { "pass_number": 707, "range": "C4:4290..C4:42A0", "label": "ct_c4_4290_handler" },
+        { "pass_number": 730, "range": "C4:5025..C4:5039", "label": "ct_c4_5025_handler_score7" },
+        { "pass_number": 734, "range": "C4:1701..C4:1717", "label": "ct_c4_1701_cluster_score6" },
+        { "pass_number": 735, "range": "C4:46B7..C4:46CF", "label": "ct_c4_46b7_handler_score6" },
+        { "pass_number": 736, "range": "C4:607A..C4:6086", "label": "ct_c4_607a_handler_score6" },
+        { "pass_number": 802, "range": "C4:807A..C4:8080", "label": "ct_c4_807a_subroutine" },
+        { "pass_number": 803, "range": "C4:846B..C4:8476", "label": "ct_c4_846b_handler" },
+        { "pass_number": 804, "range": "C4:8A0F..C4:8A1A", "label": "ct_c4_8a0f_branch_handler" },
+        { "pass_number": 1224, "range": "C4:714E..C4:7167", "label": "ct_c4_714E" },
+        { "pass_number": 1225, "range": "C4:7FAC..C4:7FCC", "label": "ct_c4_7FAC" },
+        { "pass_number": 1228, "range": "C4:9D10..C4:9D2A", "label": "ct_c4_9D10" }
+      ],
+      "reason": "Instruction-aligned review shows that the remaining historical C4 code claims are graphics and packed asset fields, not callable routines.",
+      "evidence": ["C4_BANK_PROGRESS_REPORT.md", "reports/C4_0000_1000_deep_scan_report.md", "reports/C4_8000_9000_DEEP_SCAN_REPORT.md", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "data", "label_suffix": "graphics_asset_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_asset_data", "reasoning": "Repeated planes, masks, bounded indices, and record fields continue across claimed entries; opcode-count callers land inside those records.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_c5_graphics_pool",
+      "subjects": [
+        { "pass_number": 576, "range": "C5:4206..C5:4280", "label": "ct_c5_4206_php_prologue" },
+        { "pass_number": 577, "range": "C5:C030..C5:C0A0", "label": "ct_c5_c030_c000_region" },
+        { "pass_number": 578, "range": "C5:C0B7..C5:C130", "label": "ct_c5_c0b7_jsl_prologue" },
+        { "pass_number": 619, "range": "C5:4767..C5:476F", "label": "ct_c5_4767_call_anchor" },
+        { "pass_number": 620, "range": "C5:4A00..C5:4A17", "label": "ct_c5_4a00_branch_handler" },
+        { "pass_number": 635, "range": "C5:C1E6..C5:C204", "label": "ct_c5_c1e6_jsr_prologue" },
+        { "pass_number": 709, "range": "C5:804F..C5:8068", "label": "ct_c5_804f_jsr_handler" },
+        { "pass_number": 728, "range": "C5:CEF2..C5:D10A", "label": "ct_c5_cef2_php_handler" },
+        { "pass_number": 782, "range": "C5:9BC1..C5:9C00", "label": "ct_c5_9bc1_score9_cluster" },
+        { "pass_number": 784, "range": "C5:0D1A..C5:0D45", "label": "ct_c5_0d1a_score7_cluster" },
+        { "pass_number": 795, "range": "C5:6272..C5:6295", "label": "ct_c5_6272_score7_cluster" },
+        { "pass_number": 796, "range": "C5:69F5..C5:6A18", "label": "ct_c5_69f5_score7_cluster" },
+        { "pass_number": 797, "range": "C5:9F66..C5:9F89", "label": "ct_c5_9f66_score7_cluster" },
+        { "pass_number": 798, "range": "C5:CB70..C5:CB93", "label": "ct_c5_cb70_score7_cluster" },
+        { "pass_number": 813, "range": "C5:9C25..C5:9C45", "label": "ct_c5_9c25_score6_cluster" },
+        { "pass_number": 814, "range": "C5:A052..C5:A080", "label": "ct_c5_a052_score6_cluster" },
+        { "pass_number": 815, "range": "C5:AB71..C5:AB90", "label": "ct_c5_ab71_rep_handler" },
+        { "pass_number": 827, "range": "C5:9F8A..C5:9F98", "label": "ct_c5_9f72_rep_handler__residual_9f8a_9f98" },
+        { "pass_number": 828, "range": "C5:A0F0..C5:A120", "label": "ct_c5_a0f0_score6_cluster" }
+      ],
+      "reason": "The remaining historical C5 code claims are embedded graphics or compressed asset records rather than instruction-aligned routines.",
+      "evidence": ["reports/C5_BANK_ANALYSIS_REPORT.md", "reports/C5_DEEP_SCAN_ANALYSIS_REPORT.md", "reports/C5_SCORE6_PLUS_MAPPING_REPORT.md", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "data", "label_suffix": "compressed_asset_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "compressed_asset_data", "reasoning": "Dense plane masks and bounded asset fields persist across the proposed starts and invalidate score-only opcode interpretations.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_c6_graphics_pool",
+      "subjects": [
+        { "pass_number": 653, "range": "C6:3026..C6:303D", "label": "ct_c6_3026_score7_island" },
+        { "pass_number": 654, "range": "C6:099E..C6:09AF", "label": "ct_c6_099e_php_prologue" },
+        { "pass_number": 655, "range": "C6:5B1B..C6:5B21", "label": "ct_c6_5b1b_php_handler" },
+        { "pass_number": 656, "range": "C6:A051..C6:A05F", "label": "ct_c6_a051_php_handler" },
+        { "pass_number": 657, "range": "C6:A0A8..C6:A0BF", "label": "ct_c6_a0a8_rep_handler" },
+        { "pass_number": 658, "range": "C6:E7B6..C6:E7D6", "label": "ct_c6_e7b6_score7_island" },
+        { "pass_number": 659, "range": "C6:D5EC..C6:D605", "label": "ct_c6_d5ec_score6_cluster" },
+        { "pass_number": 660, "range": "C6:D4FD..C6:D510", "label": "ct_c6_d4fd_score6_handler" },
+        { "pass_number": 661, "range": "C6:D6CC..C6:D6E8", "label": "ct_c6_d6cc_cross_bank_entry" },
+        { "pass_number": 662, "range": "C6:D42C..C6:D445", "label": "ct_c6_d42c_jsr_target" },
+        { "pass_number": 663, "range": "C6:D769..C6:D781", "label": "ct_c6_d769_score5_cluster" },
+        { "pass_number": 677, "range": "C6:D8B7..C6:D8BD", "label": "ct_c6_d8b7_cross_bank_util" },
+        { "pass_number": 678, "range": "C6:D864..C6:D86D", "label": "ct_c6_d864_jsl_handler" },
+        { "pass_number": 805, "range": "C6:68FB..C6:692F", "label": "ct_c6_68fb_score8_cluster" }
+      ],
+      "reason": "The reviewed C6 claims are graphical records and pointer-like asset fields whose opcode values created false routines.",
+      "evidence": ["reports/C6_D400_D800_analysis_report.md", "reports/bank_c6_d800_analysis_report.md", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "data", "label_suffix": "graphics_asset_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "graphics_asset_data", "reasoning": "Repeated low-bit shapes, masks, and little-endian values lack coherent status-width or control-flow continuity.", "review_source": "pre-disassembly review 2026-08-19" } }
+    },
+    {
+      "correction_id": "corr_cf_lower_data_pool",
+      "subjects": [
+        { "pass_number": 710, "range": "CF:D41E..CF:D47A", "label": "ct_cf_d41e_score10_cluster" },
+        { "pass_number": 711, "range": "CF:A16E..CF:A1A7", "label": "ct_cf_a16e_score9_cluster" },
+        { "pass_number": 712, "range": "CF:D284..CF:D2BE", "label": "ct_cf_d284_score8_cluster" },
+        { "pass_number": 720, "range": "CF:8AC1..CF:8AE0", "label": "ct_cf_8ac1_cross_bank_entry" },
+        { "pass_number": 721, "range": "CF:DA2F..CF:DA4D", "label": "ct_cf_da2f_c7_cross_bank" },
+        { "pass_number": 722, "range": "CF:D3B0..CF:D3E0", "label": "ct_cf_d3b0_score8_cluster" },
+        { "pass_number": 764, "range": "CF:D5A7..CF:D5D6", "label": "ct_cf_d5a7_score7_cluster" },
+        { "pass_number": 765, "range": "CF:DAF0..CF:DB2A", "label": "ct_cf_daf0_score8_cluster" },
+        { "pass_number": 766, "range": "CF:D7BC..CF:D7EA", "label": "ct_cf_d7bc_score5_cluster" },
+        { "pass_number": 767, "range": "CF:D8B9..CF:D8CA", "label": "ct_cf_d8b9_score5_cluster" },
+        { "pass_number": 768, "range": "CF:D0B0..CF:D0BA", "label": "ct_cf_d0b0_score5_cluster" },
+        { "pass_number": 769, "range": "CF:D8DF..CF:D8EA", "label": "ct_cf_d8df_score5_cluster" },
+        { "pass_number": 770, "range": "CF:DE2C..CF:DE44", "label": "ct_cf_de2c_score4_cluster" },
+        { "pass_number": 771, "range": "CF:D5DD..CF:D5F6", "label": "ct_cf_d5dd_score4_cluster" },
+        { "pass_number": 772, "range": "CF:DC49..CF:DC61", "label": "ct_cf_dc49_score4_cluster" },
+        { "pass_number": 773, "range": "CF:DE47..CF:DE58", "label": "ct_cf_de47_score4_cluster" },
+        { "pass_number": 774, "range": "CF:DDD2..CF:DDEA", "label": "ct_cf_ddd2_score3_cluster" },
+        { "pass_number": 775, "range": "CF:DFD2..CF:DFEA", "label": "ct_cf_dfd2_score3_cluster" },
+        { "pass_number": 846, "range": "CF:04C0..CF:04E0", "label": "ct_cf_04c0_score6_cluster" },
+        { "pass_number": 847, "range": "CF:102F..CF:1050", "label": "ct_cf_102f_phb_handler" },
+        { "pass_number": 966, "range": "CF:1051..CF:1057", "label": "ct_cf_102f_phb_handler__residual_1051_1057" },
+        { "pass_number": 967, "range": "CF:19FA..CF:1A13", "label": "ct_cf_19fa_php_handler" },
+        { "pass_number": 968, "range": "CF:1A82..CF:1A9C", "label": "ct_cf_1a82_phd_handler" },
+        { "pass_number": 969, "range": "CF:200B..CF:2024", "label": "ct_cf_200b_php_entry" },
+        { "pass_number": 970, "range": "CF:2025..CF:202E", "label": "ct_cf_2014_php_routine__residual_2025_202e" },
+        { "pass_number": 971, "range": "CF:202F..CF:2040", "label": "ct_cf_2027_jsl_longcall__residual_202f_2040" },
+        { "pass_number": 972, "range": "CF:2041..CF:205C", "label": "ct_cf_2040_phd_dispatch__residual_2041_205c" },
+        { "pass_number": 973, "range": "CF:20D7..CF:20F0", "label": "ct_cf_20d7_rep_handler" },
+        { "pass_number": 974, "range": "CF:21EB..CF:220C", "label": "ct_cf_21eb_rep_routine" },
+        { "pass_number": 975, "range": "CF:2285..CF:229E", "label": "ct_cf_2285_php_util" },
+        { "pass_number": 976, "range": "CF:2405..CF:2420", "label": "ct_cf_2405_php_manager" },
+        { "pass_number": 977, "range": "CF:2499..CF:24B3", "label": "ct_cf_2499_php_service" },
+        { "pass_number": 978, "range": "CF:3833..CF:3859", "label": "ct_cf_3833_pha_handler" },
+        { "pass_number": 979, "range": "CF:385A..CF:3861", "label": "ct_cf_383a_lda_init__residual_385a_3861" },
+        { "pass_number": 980, "range": "CF:3862..CF:3863", "label": "ct_cf_383d_ldx_handler__residual_3862_3863" }
+      ],
+      "reason": "CF ranges below E000 are tilemap, graphics-index, or compressed asset tables rather than executable routines.",
+      "evidence": ["reports/pre_disassembly_cf_c000_cfff_compact_scan.json", "tools/config/candidate_dispositions.json"],
+      "updates": { "kind": "data", "label_suffix": "table_asset_data", "confidence": "high", "verification_status": "reviewed", "evidence": { "classification": "table_asset_data", "reasoning": "Regular little-endian words and repeating table fields persist across the claims; apparent calls and returns are unaligned values without coherent flow.", "review_source": "pre-disassembly review 2026-08-19" } }
+    }
+  ]
+}

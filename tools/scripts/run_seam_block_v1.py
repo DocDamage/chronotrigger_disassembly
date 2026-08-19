@@ -58,6 +58,50 @@ def top_backtracks(candidates: list[dict[str, object]], limit: int = 5) -> list[
     return ranked[:limit]
 
 
+def compact_result(result: dict[str, object], minimum_score: int) -> dict[str, object]:
+    """Retain review-worthy evidence without serializing every noisy page hit."""
+    pages: list[dict[str, object]] = []
+    candidate_count = 0
+    cluster_count = 0
+    for page in result['pages']:
+        candidates = [
+            item for item in page['top_backtracks']
+            if int(item.get('score', 0)) >= minimum_score
+        ]
+        clusters = [
+            item for item in page['local_clusters']
+            if int(item.get('cluster_score', 0)) >= minimum_score
+        ]
+        targets = [
+            item for item in page['best_targets']
+            if item.get('best_strength') == 'strong'
+            or (item.get('best_strength') == 'weak' and int(item.get('hit_count', 0)) >= 4)
+        ]
+        if not (candidates or clusters or targets):
+            continue
+        candidate_count += len(candidates)
+        cluster_count += len(clusters)
+        pages.append({
+            'range': page['range'],
+            'page_family': page['page_family'],
+            'review_posture': page['review_posture'],
+            'targets': targets,
+            'candidates': candidates,
+            'clusters': clusters,
+        })
+    return {
+        'start': result['start'],
+        'pages_requested': result['pages_requested'],
+        'minimum_score': minimum_score,
+        'page_family_counts': result['page_family_counts'],
+        'review_posture_counts': result['review_posture_counts'],
+        'review_pages': len(pages),
+        'candidate_count': candidate_count,
+        'cluster_count': cluster_count,
+        'pages': pages,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description='Run the seam page flow over a contiguous block of pages with reusable caches.')
     parser.add_argument('--rom', required=True)
@@ -68,6 +112,9 @@ def main() -> int:
     parser.add_argument('--cache-dir', default='tools/cache')
     parser.add_argument('--dead-ranges-config', default='tools/config/c3_dead_ranges_v1.json')
     parser.add_argument('--json', action='store_true')
+    parser.add_argument('--compact', action='store_true', help='Emit only score-qualified candidates, clusters, and material targets')
+    parser.add_argument('--minimum-score', type=int, default=6, help='Minimum score retained by --compact')
+    parser.add_argument('--output-json', help='Write the selected JSON result to this path')
     args = parser.parse_args()
 
     start_bank, start_addr = parse_snes_address(args.start)
@@ -126,8 +173,14 @@ def main() -> int:
         'pages': pages,
     }
 
+    selected_result = compact_result(result, args.minimum_score) if args.compact else result
+    if args.output_json:
+        output_path = Path(args.output_json)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(selected_result, indent=2) + '\n', encoding='utf-8')
+
     if args.json:
-        print(json.dumps(result, indent=2))
+        print(json.dumps(selected_result, indent=2))
     else:
         print(f'start: {args.start}')
         print(f'pages_requested: {args.pages}')
@@ -135,6 +188,8 @@ def main() -> int:
         print(f'review_posture_counts: {json.dumps(posture_counts, sort_keys=True)}')
         for page in pages:
             print(f"{page['range']}: {page['page_family']} / {page['review_posture']}")
+        if args.output_json:
+            print(f'output_json: {args.output_json}')
     return 0
 
 

@@ -8,14 +8,19 @@
   "closed_ranges": [
     {
       "range": "DE:8A21..DE:8A3F",
-      "kind": "code_owner",
-      "label": "ct_de_8a21_score10_cluster",
+      "kind": "data",
+      "label": "ct_de_8a21_word_table_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "little_endian_word_table",
+        "reasoning": "Alternating value and 40 high bytes form regular table words rather than aligned instructions.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_de_8a21_score10_cluster"
+    "ct_de_8a21_word_table_data"
   ],
   "confidence": {
     "structural": "medium",

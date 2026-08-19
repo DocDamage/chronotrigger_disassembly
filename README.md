@@ -13,6 +13,8 @@ Repo-native workspace for the ongoing Chrono Trigger (SNES, USA) ROM disassembly
 - canonical pass manifests: 961 canonical manifests generated from 1,000 legacy source manifests
 - range inventory: 1,105 conserved historical claims normalized into 1,289 records (1,061 active, 228 superseded); active ownership is conflict-free
 - unique coverage: 59,050 bytes (1.4079% of the 4 MiB ROM)
+- pre-disassembly readiness: **READY** (1,061/1,061 active ranges reviewed; zero missing evidence, provenance, or deferred dispositions)
+- reviewed classification: 28,189 executable bytes and 30,861 data bytes; uncertain score windows are fragments, not speculative owners
 - conservation status: 100% verified zero-loss conservation (`tools/scripts/compare_manifest_range_inventory.py`)
 - source of truth: this GitHub repo, not chat exports or old toolkit zips
 - continuation notes remain important historical context for the earlier C7 seam
@@ -68,6 +70,10 @@ Key scripts now in use:
 - `tools/scripts/build_call_anchor_report_v3.py`
 - `tools/scripts/snes_utils_hirom_v2.py`
 - `tools/scripts/toolkit_doctor.py` — repo-native audit for compile health, low-bank mapping, and CLI compatibility entrypoints
+- `tools/scripts/audit_toolkit_entrypoints.py` — imports and smoke-checks every supported CLI entrypoint
+- `tools/scripts/audit_pre_disassembly_readiness.py` — verifies active-range evidence, provenance, dispositions, and review state
+- `tools/config/candidate_dispositions.json` — durable accepted/rejected/reclassified candidate decisions
+- `tools/config/manifest_corrections.json` — reproducible post-migration factual corrections and exact-count review batches
 - `tools/generate_coverage_report_v2.py` — coverage statistics with overlap handling
 - `tools/scripts/detect_data_patterns_v1.py` — identifies data vs code structures
 - `tools/scripts/validate_cross_bank_callers_v1.py` — validates cross-bank caller integrity

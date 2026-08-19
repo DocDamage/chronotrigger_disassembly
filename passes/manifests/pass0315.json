@@ -8,10 +8,15 @@
   "closed_ranges": [
     {
       "range": "C0:86A6..C0:86AA",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c0_86a6_wrapper_jsr_84a7_score6_cluster",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Aligned 65816 loads, stores, calls, branches, status-width transitions, and returns establish executable content; score-derived starts and ends remain insufficient for independent function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [

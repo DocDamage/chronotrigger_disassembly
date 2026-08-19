@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:72EF..D6:7314",
-      "kind": "code_owner",
-      "label": "ct_d6_72ef_phx_handler",
+      "kind": "data",
+      "label": "ct_d6_72ef_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "DA FA 76 BC B4 B8 08 A8 B0 B0 40 05",
+        "reasoning": "Mask bytes followed by bounded pixel rows do not form a handler.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_72ef_phx_handler"
+    "ct_d6_72ef_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

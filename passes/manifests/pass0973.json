@@ -8,14 +8,19 @@
   "closed_ranges": [
     {
       "range": "CF:20D7..CF:20F0",
-      "kind": "code_owner",
-      "label": "ct_cf_20d7_rep_handler",
+      "kind": "data",
+      "label": "ct_cf_20d7_table_asset_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "table_asset_data",
+        "reasoning": "Regular little-endian words and repeating table fields persist across the claims; apparent calls and returns are unaligned values without coherent flow.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [
-    "ct_cf_20d7_rep_handler"
+    "ct_cf_20d7_table_asset_data"
   ],
   "confidence": {
     "structural": "medium",

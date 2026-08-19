@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D8:888F..D8:889D",
-      "kind": "code_owner",
-      "label": "ct_d8_888f_score7_cluster",
+      "kind": "data",
+      "label": "ct_d8_888f_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "10 20 08 92 10 A0 04 C0 04 30 B0 83",
+        "reasoning": "Symmetric plane values and no aligned caller disprove the cluster.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d8_888f_score7_cluster"
+    "ct_d8_888f_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -21,6 +21,7 @@ from tools.ctrepo.manifest_models import CanonicalManifest, ClosedRange
 from tools.ctrepo.manifest_discovery import discover_manifest_candidates
 from tools.ctrepo.manifest_validation import validate_manifest
 from tools.ctrepo.range_adjudication import apply_adjudications, load_adjudications
+from tools.ctrepo.manifest_corrections import apply_manifest_corrections, load_manifest_corrections
 
 
 def sha256_file(filepath: str) -> str:
@@ -56,6 +57,7 @@ def plan_migration(
     adjudications_path: str = "tools/config/range_adjudications.json",
     apply_ownership_adjudications: bool = True,
     project_state_path: str = "tools/config/project_state.json",
+    corrections_path: str = "tools/config/manifest_corrections.json",
 ) -> Tuple[Dict[int, CanonicalManifest], List[Dict[str, Any]]]:
     """Analyze all candidate source manifests and construct merged canonical manifests + migration ledger."""
     legacy_dir = os.path.join(manifests_dir, "legacy")
@@ -192,6 +194,8 @@ def plan_migration(
     if apply_ownership_adjudications:
         adjudications = load_adjudications(adjudications_path)
         apply_adjudications(canonical_manifests, adjudications, strict=True)
+        corrections = load_manifest_corrections(corrections_path)
+        apply_manifest_corrections(canonical_manifests, corrections, strict=True)
         state_path = Path(project_state_path)
         if state_path.exists():
             project_state = json.loads(state_path.read_text(encoding="utf-8"))
@@ -211,6 +215,7 @@ def main() -> int:
     parser.add_argument("--apply", action="store_true", help="Execute the migration and write canonical files")
     parser.add_argument("--allow-corrective-apply", action="store_true", help="Override Phase 0 safety guard for Phase 3 apply")
     parser.add_argument("--adjudications", default="tools/config/range_adjudications.json", help="Durable ownership adjudication ledger")
+    parser.add_argument("--corrections", default="tools/config/manifest_corrections.json", help="Reviewed post-migration factual corrections")
     parser.add_argument("--skip-adjudications", action="store_true", help="Generate source-normalized manifests before ownership adjudication")
     parser.add_argument("--report", default="reports/remediation/manifest_migration_plan.json", help="Path to write migration JSON report")
     args = parser.parse_args()
@@ -220,6 +225,7 @@ def main() -> int:
     canon_manifests, mig_map = plan_migration(
         manifests_dir,
         adjudications_path=args.adjudications,
+        corrections_path=args.corrections,
         apply_ownership_adjudications=not args.skip_adjudications,
     )
 

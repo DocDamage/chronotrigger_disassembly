@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:7BFE..D6:7C1F",
-      "kind": "code_owner",
-      "label": "ct_d6_7bfe_score6_cluster",
+      "kind": "data",
+      "label": "ct_d6_7bfe_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "A0 03 B4 2B 01 26 11 10 1F 00 60 00",
+        "reasoning": "Asset fields and masks contradict an aligned owner boundary.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_7bfe_score6_cluster"
+    "ct_d6_7bfe_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

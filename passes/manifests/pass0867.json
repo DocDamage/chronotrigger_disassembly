@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:0FF5..D4:100A",
-      "kind": "code_owner",
-      "label": "ct_d4_0ff5_php_handler",
+      "kind": "data",
+      "label": "ct_d4_0ff5_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "08 0F 08 17 18 17 18 1B 14 1B 14 80",
+        "reasoning": "Mirrored row pairs followed by 80/00 masks contradict executable control flow.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_0ff5_php_handler"
+    "ct_d4_0ff5_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

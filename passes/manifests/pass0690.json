@@ -22,10 +22,15 @@
     },
     {
       "range": "C4:4AE4..C4:4AF0",
-      "kind": "code_owner",
-      "label": "ct_c4_4abb_score6_handler__residual_4ae4_4af0",
+      "kind": "data",
+      "label": "ct_c4_4ae4_graphics_asset_data",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_asset_data",
+        "reasoning": "Repeated planes, masks, bounded indices, and record fields continue across claimed entries; opcode-count callers land inside those records.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_292599a9bdb14a485496"
@@ -37,7 +42,7 @@
   ],
   "new_labels": [
     "ct_c4_4abb_score6_handler",
-    "ct_c4_4abb_score6_handler__residual_4ae4_4af0"
+    "ct_c4_4ae4_graphics_asset_data"
   ],
   "confidence": {
     "structural": "medium",

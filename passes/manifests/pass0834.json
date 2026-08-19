@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:BE65..D6:BE8A",
-      "kind": "code_owner",
-      "label": "ct_d6_be65_score10_cluster",
+      "kind": "data",
+      "label": "ct_d6_be65_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "05 9D 07 03 20 10 F4 C0 FE 80 C0 FA",
+        "reasoning": "Progressive plane masks and bounded fields produced accidental calls and returns.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_be65_score10_cluster"
+    "ct_d6_be65_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

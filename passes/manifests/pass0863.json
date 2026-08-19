@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D6:D94C..D6:D96A",
-      "kind": "code_owner",
-      "label": "ct_d6_d94c_score8_cluster",
+      "kind": "data",
+      "label": "ct_d6_d94c_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "byte_prefix": "E0 20 19 E6 4D C0 60 0A 10 80 20 10",
+        "reasoning": "Symmetric plane values and masks contradict aligned control flow.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d6_d94c_score8_cluster"
+    "ct_d6_d94c_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -8,14 +8,19 @@
   "closed_ranges": [
     {
       "range": "DA:B148..DA:B180",
-      "kind": "code_owner",
-      "label": "ct_da_b148_score9_cluster",
+      "kind": "data",
+      "label": "ct_da_b148_compressed_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_graphics_data",
+        "reasoning": "Dense mask fields and bounded asset values lack coherent aligned control flow.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_da_b148_score9_cluster"
+    "ct_da_b148_compressed_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

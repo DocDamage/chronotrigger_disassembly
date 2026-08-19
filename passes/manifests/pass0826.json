@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:2FFA..D1:3020",
-      "kind": "code_owner",
-      "label": "ct_d1_2ffa_jsr_handler",
+      "kind": "data",
+      "label": "ct_d1_2ffa_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "20 01 22 01 20 41 40 00 81 02 81 00",
+        "reasoning": "Regular 01/41/81 plane variants repeat and the apparent JSR byte lacks a callable operand context.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_2ffa_jsr_handler"
+    "ct_d1_2ffa_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

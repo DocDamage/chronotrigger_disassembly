@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D5:69AD..D5:69E3",
-      "kind": "code_owner",
-      "label": "ct_d5_69ad_score7_cluster",
+      "kind": "data",
+      "label": "ct_d5_69ad_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "04 0E 0E 23 21 0F 09 07 07 08 0F 0A",
+        "reasoning": "Bounded rows transition into mirrored plane masks without coherent execution.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d5_69ad_score7_cluster"
+    "ct_d5_69ad_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

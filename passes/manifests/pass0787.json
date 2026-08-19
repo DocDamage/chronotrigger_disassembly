@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:4008..D4:4026",
-      "kind": "code_owner",
-      "label": "ct_d4_4008_score7_cluster",
+      "kind": "data",
+      "label": "ct_d4_4008_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "0B 0B 0C 0C 0C 0C 08 08 1B 14 1B 14",
+        "reasoning": "Repeated pixel rows and terminal plane masks form graphics records rather than aligned instructions.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_4008_score7_cluster"
+    "ct_d4_4008_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

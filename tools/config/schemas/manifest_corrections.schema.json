@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ManifestCorrectionLedger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schema_version", "source_commit", "description", "correction_count", "corrections"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "source_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "description": { "type": "string", "minLength": 20 },
+    "correction_count": { "type": "integer", "minimum": 0 },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["correction_id", "subject", "reason", "evidence", "updates"],
+        "properties": {
+          "correction_id": { "type": "string", "pattern": "^corr_[a-z0-9_]+$" },
+          "subject": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["pass_number", "range", "label"],
+            "properties": {
+              "pass_number": { "type": "integer", "minimum": 1 },
+              "range": { "type": "string", "pattern": "^[A-F0-9]{2}:[A-F0-9]{4}\\.\\.[A-F0-9]{2}:[A-F0-9]{4}$" },
+              "label": { "type": "string", "minLength": 1 }
+            }
+          },
+          "reason": { "type": "string", "minLength": 40 },
+          "evidence": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+          "updates": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "kind": { "enum": ["code_owner", "code_helper", "wrapper", "veneer", "data", "text_marker", "tail_fragment", "superseded"] },
+              "label": { "type": "string", "minLength": 1 },
+              "confidence": { "type": "string", "minLength": 1 },
+              "verification_status": { "enum": ["pending", "reviewed", "accepted", "superseded"] },
+              "parent_range": { "type": ["string", "null"] },
+              "parent_label": { "type": ["string", "null"] },
+              "evidence": { "type": "object" }
+            }
+          }
+        }
+      }
+    },
+    "bulk_corrections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["correction_id", "reason", "evidence", "updates"],
+        "oneOf": [
+          { "required": ["subjects"], "not": { "required": ["selection"] } },
+          { "required": ["selection"], "not": { "required": ["subjects"] } }
+        ],
+        "properties": {
+          "correction_id": { "type": "string", "pattern": "^corr_[a-z0-9_]+$" },
+          "subjects": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["pass_number", "range", "label"],
+              "properties": {
+                "pass_number": { "type": "integer", "minimum": 1 },
+                "range": { "type": "string", "pattern": "^[A-F0-9]{2}:[A-F0-9]{4}\\.\\.[A-F0-9]{2}:[A-F0-9]{4}$" },
+                "label": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "selection": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["bank", "exclude_kinds", "expected_count"],
+            "properties": {
+              "bank": { "type": "string", "pattern": "^[A-F0-9]{2}$" },
+              "kinds": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+              "exclude_kinds": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+              "expected_count": { "type": "integer", "minimum": 1 }
+            }
+          },
+          "reason": { "type": "string", "minLength": 40 },
+          "evidence": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+          "updates": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["confidence", "verification_status", "evidence"],
+            "properties": {
+              "kind": { "enum": ["code_owner", "code_helper", "wrapper", "veneer", "data", "text_marker", "tail_fragment", "superseded"] },
+              "label_suffix": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+              "confidence": { "type": "string", "minLength": 1 },
+              "verification_status": { "enum": ["pending", "reviewed", "accepted", "superseded"] },
+              "evidence": { "type": "object" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

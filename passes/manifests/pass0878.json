@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D4:0897..D4:089B",
-      "kind": "code_owner",
-      "label": "ct_d4_0897_pha_rts",
+      "kind": "data",
+      "label": "ct_d4_0897_graphics_bitplane_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "48 DF A0 7F 40",
+        "reasoning": "The bytes form mask values consistent with neighboring D4 graphics records and have no aligned caller.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d4_0897_pha_rts"
+    "ct_d4_0897_graphics_bitplane_data"
   ],
   "confidence": {
     "structural": "medium",

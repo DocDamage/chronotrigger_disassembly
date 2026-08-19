@@ -22,10 +22,15 @@
     },
     {
       "range": "C5:9F8A..C5:9F98",
-      "kind": "code_owner",
-      "label": "ct_c5_9f72_rep_handler__residual_9f8a_9f98",
+      "kind": "data",
+      "label": "ct_c5_9f8a_compressed_asset_data",
       "confidence": "high",
-      "verification_status": "pending",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "compressed_asset_data",
+        "reasoning": "Dense plane masks and bounded asset fields persist across the proposed starts and invalidate score-only opcode interpretations.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      },
       "legacy_metadata": {
         "ownership_adjudication_ids": [
           "adj_9700580ac4595e08914f"
@@ -37,7 +42,7 @@
   ],
   "new_labels": [
     "ct_c5_9f72_rep_handler",
-    "ct_c5_9f72_rep_handler__residual_9f8a_9f98"
+    "ct_c5_9f8a_compressed_asset_data"
   ],
   "confidence": {
     "structural": "medium",

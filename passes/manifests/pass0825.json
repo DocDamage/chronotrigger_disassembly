@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D1:2BF5..D1:2C20",
-      "kind": "code_owner",
-      "label": "ct_d1_2bf5_rep_handler",
+      "kind": "data",
+      "label": "ct_d1_2bf5_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "C2 4B 10 C4 51 10 AA C6 57 10 C8 5D",
+        "reasoning": "Regular triplets and fill markers contradict processor-width flow and aligned execution.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d1_2bf5_rep_handler"
+    "ct_d1_2bf5_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

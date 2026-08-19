@@ -8,14 +8,20 @@
   "closed_ranges": [
     {
       "range": "D5:B253..D5:B267",
-      "kind": "code_owner",
-      "label": "ct_d5_b253_score9_cluster",
+      "kind": "data",
+      "label": "ct_d5_b253_graphics_data",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "graphics_bitplane_data",
+        "byte_prefix": "C3 08 08 1F 20 C6 20 84 40 E8 15 DE",
+        "reasoning": "Plane values and masks lack an aligned entry and return path.",
+        "review_source": "pre-disassembly review 2026-08-18"
+      }
     }
   ],
   "new_labels": [
-    "ct_d5_b253_score9_cluster"
+    "ct_d5_b253_graphics_data"
   ],
   "confidence": {
     "structural": "medium",

@@ -8,10 +8,15 @@
   "closed_ranges": [
     {
       "range": "C2:B716..C2:B7A0",
-      "kind": "code_owner",
+      "kind": "tail_fragment",
       "label": "ct_c2_b716_score8_cluster",
       "confidence": "high",
-      "verification_status": "pending"
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "executable_boundary_fragment",
+        "reasoning": "Coherent 65816 execution is present, including the NMI/VBlank lane, but the legacy score windows do not uniformly prove complete function ownership.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [

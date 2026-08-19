@@ -11,8 +11,13 @@
       "range": "C3:2500..C3:25FF",
       "kind": "data",
       "label": "ct_c3_inline_mixed_weak_single_caller_page_with_unsupported_2523_helper_stub_and_late_pointer_table_cluster_before_2600_candidate",
-      "confidence": "medium-high",
-      "verification_status": "pending"
+      "confidence": "high",
+      "verification_status": "reviewed",
+      "evidence": {
+        "classification": "canonical_range_adjudication",
+        "reasoning": "Ranges are drawn from the authoritative C3 mapping frontier, reconciled against overlaps and continuation records, and retain their executable, data, wrapper, helper, veneer, or marker classifications.",
+        "review_source": "pre-disassembly review 2026-08-19"
+      }
     }
   ],
   "new_labels": [

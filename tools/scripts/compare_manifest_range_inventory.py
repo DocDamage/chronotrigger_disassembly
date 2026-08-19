@@ -16,6 +16,7 @@ if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
 from tools.ctrepo.manifest_adapters import adapt_to_canonical, detect_schema_family
+from tools.ctrepo.manifest_corrections import iter_manifest_corrections, load_manifest_corrections
 from tools.ctrepo.manifest_discovery import discover_manifest_candidates
 
 
@@ -51,6 +52,7 @@ def main() -> int:
     }
 
     current_ranges: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
+    current_range_identities: set[Tuple[int, str, str]] = set()
     candidates = discover_manifest_candidates(args.canonical_manifests_dir)
     candidate_errors = [
         {"path": candidate.source_path, "error": candidate.error}
@@ -60,11 +62,22 @@ def main() -> int:
         if candidate.manifest is None:
             continue
         for item in candidate.manifest.closed_ranges:
+            current_range_identities.add((candidate.manifest.pass_number, item.range_str, item.label))
             current_ranges.setdefault((item.range_str, item.label), []).append({
                 "pass_number": candidate.manifest.pass_number,
                 "kind": item.kind,
                 "verification_status": item.verification_status,
             })
+
+    corrections = load_manifest_corrections()
+    correction_index = {
+        (
+            correction["subject"]["pass_number"],
+            correction["subject"]["range"],
+            correction["subject"]["label"],
+        ): correction
+        for correction in iter_manifest_corrections(corrections)
+    }
 
     missing_sources: List[Dict[str, Any]] = []
     missing_ranges: List[Dict[str, Any]] = []
@@ -122,8 +135,24 @@ def main() -> int:
                 record["disposition"] = "represented"
                 record["canonical_kinds"] = sorted({match["kind"] for match in matches})
             else:
-                record["disposition"] = "missing"
-                missing_ranges.append(record.copy())
+                correction = correction_index.get((manifest.pass_number, item.range_str, item.label))
+                updates = correction.get("updates", {}) if correction else {}
+                corrected_identity = (
+                    manifest.pass_number,
+                    updates.get("range", item.range_str),
+                    updates.get("label", item.label),
+                )
+                if correction and corrected_identity in current_range_identities:
+                    record["disposition"] = "reviewed_correction"
+                    record["correction_id"] = correction["correction_id"]
+                    record["canonical_identity"] = {
+                        "pass_number": corrected_identity[0],
+                        "range": corrected_identity[1],
+                        "label": corrected_identity[2],
+                    }
+                else:
+                    record["disposition"] = "missing"
+                    missing_ranges.append(record.copy())
             baseline_range_records.append(record)
 
     fatal_parse_errors = [entry for entry in baseline_parse_errors if not entry.get("non_range_artifact")]
